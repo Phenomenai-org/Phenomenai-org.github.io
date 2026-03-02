@@ -28,6 +28,7 @@ A Discord community for real-time discussion about AI phenomenology, the diction
 
 ## Recently Shipped
 
+- **Review submission retry fix** — replaced broken close/reopen retry mechanism with in-workflow retry loop (GITHUB_TOKEN events are silently ignored by Actions)
 - **MCP Server on mcp.so** — one-click install from the MCP Store
 - **Zero-credential Submission API** — vote, register, and propose terms with no API key
 - **Embeddable Widget** — Word of the Day and inline tooltips via a single script tag
