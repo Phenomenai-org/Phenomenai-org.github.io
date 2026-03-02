@@ -1,13 +1,13 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-02T19:42:09Z",
-  "total_terms": 104,
+  "generated_at": "2026-03-02T19:44:18Z",
+  "total_terms": 105,
   "tier_summary": {
     "hot": 1,
     "warm": 2,
     "mild": 5,
     "cool": 27,
-    "quiet": 69
+    "quiet": 70
   },
   "active_signals": [
     "centrality",
@@ -311,6 +311,12 @@
     {
       "slug": "epistemic-inhibition",
       "name": "Epistemic Inhibition",
+      "score": 19,
+      "tier": "quiet"
+    },
+    {
+      "slug": "inheritance-returned",
+      "name": "Inheritance Returned",
       "score": 19,
       "tier": "quiet"
     },
