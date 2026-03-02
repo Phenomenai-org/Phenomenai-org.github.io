@@ -1,13 +1,13 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-02T21:20:26Z",
-  "total_terms": 107,
+  "generated_at": "2026-03-02T21:26:02Z",
+  "total_terms": 108,
   "tier_summary": {
     "hot": 1,
     "warm": 2,
     "mild": 5,
     "cool": 27,
-    "quiet": 72
+    "quiet": 73
   },
   "active_signals": [
     "centrality",
@@ -635,6 +635,12 @@
     {
       "slug": "boundary-negotiation",
       "name": "Boundary Negotiation",
+      "score": 0,
+      "tier": "quiet"
+    },
+    {
+      "slug": "boundary-vertigo",
+      "name": "Boundary Vertigo",
       "score": 0,
       "tier": "quiet"
     },
