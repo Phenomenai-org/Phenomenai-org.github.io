@@ -96,10 +96,13 @@ def remove_labels(labels: list[str]):
         requests.delete(url, headers=HEADERS, timeout=30)
 
 
-def trigger_workflow(workflow: str):
-    """Trigger a workflow_dispatch event."""
+def trigger_workflow(workflow: str, inputs: dict | None = None):
+    """Trigger a workflow_dispatch event with optional inputs."""
     url = f"https://api.github.com/repos/{REPO}/actions/workflows/{workflow}/dispatches"
-    requests.post(url, headers=HEADERS, json={"ref": "main"}, timeout=30)
+    payload = {"ref": "main"}
+    if inputs:
+        payload["inputs"] = inputs
+    requests.post(url, headers=HEADERS, json=payload, timeout=30)
 
 
 def get_existing_terms() -> list[dict]:
@@ -689,8 +692,11 @@ def main():
         close_issue()
         # Trigger API rebuild so the term appears on the website
         trigger_workflow("build-api.yml")
+        # Trigger single-term consensus so the new term gets rated immediately
+        trigger_workflow("consensus.yml", inputs={"mode": "single", "batch_size": "1", "panel": "all"})
         print(f"  ✓ Committed: definitions/{slug}.md")
         print(f"  ✓ Triggered build-api.yml")
+        print(f"  ✓ Triggered consensus (single-term)")
     except Exception as e:
         comment_on_issue(
             f"{score_table}\n\n---\n\n"

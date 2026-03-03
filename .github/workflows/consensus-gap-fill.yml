@@ -1,23 +1,19 @@
-name: Cross-Model Consensus
+name: Consensus Gap Fill
 
 on:
   schedule:
-    # Twice weekly: Wednesday and Sunday at 12:00 UTC
-    - cron: '0 12 * * 0,3'
+    # Weekly: Monday at 2pm UTC
+    - cron: '0 14 * * 1'
   workflow_dispatch:
     inputs:
-      mode:
-        description: 'Run mode: backfill, single, gap-fill'
-        required: false
-        default: 'backfill'
       batch_size:
         description: 'Number of terms to rate'
         required: false
-        default: '8'
+        default: '20'
       panel:
         description: 'Which models to use (free or all)'
         required: false
-        default: 'free'
+        default: 'all'
 
 permissions:
   contents: write
@@ -28,7 +24,7 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  consensus:
+  gap-fill:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -44,7 +40,7 @@ jobs:
       - name: Install dependencies
         run: pip install -r bot/requirements.txt
 
-      - name: Run consensus ratings
+      - name: Run consensus gap-fill
         id: consensus
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
@@ -53,11 +49,11 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           XAI_API_KEY: ${{ secrets.XAI_API_KEY }}
-          BATCH_SIZE: ${{ github.event.inputs.batch_size || '8' }}
-          CONSENSUS_PANEL: ${{ github.event.inputs.panel || 'free' }}
+          BATCH_SIZE: ${{ github.event.inputs.batch_size || '20' }}
+          CONSENSUS_PANEL: ${{ github.event.inputs.panel || 'all' }}
           PYTHONPATH: ${{ github.workspace }}/bot
         working-directory: ${{ github.workspace }}
-        run: python bot/consensus.py --mode ${{ github.event.inputs.mode || 'backfill' }}
+        run: python bot/consensus.py --mode gap-fill
 
       - name: Commit results
         run: |
@@ -66,7 +62,7 @@ jobs:
           git pull --rebase origin main || { git rebase --abort; echo "Rebase failed — aborting"; exit 1; }
           git add bot/consensus-data/ bot/consensus-state.json
           git diff --cached --quiet && { echo "No changes to commit"; exit 0; }
-          git commit -m "Consensus round: rate ${{ steps.consensus.outputs.rated_count || 'N' }} terms"
+          git commit -m "Consensus gap-fill: rate ${{ steps.consensus.outputs.rated_count || 'N' }} terms"
           git push
 
       - name: Trigger API build
@@ -77,11 +73,11 @@ jobs:
           sleep 5
           gh workflow run build-api.yml
 
-      - name: Chain next batch (backfill only)
-        if: steps.consensus.outputs.rated_count != '0' && (github.event.inputs.mode == 'backfill' || github.event.inputs.mode == '')
+      - name: Chain next batch
+        if: steps.consensus.outputs.rated_count != '0'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          echo "Rated ${{ steps.consensus.outputs.rated_count }} terms. Dispatching next batch..."
+          echo "Rated ${{ steps.consensus.outputs.rated_count }} terms. Dispatching next gap-fill batch..."
           sleep 30
-          gh workflow run consensus.yml -f mode=backfill -f batch_size=${{ github.event.inputs.batch_size || '20' }} -f panel=${{ github.event.inputs.panel || 'free' }}
+          gh workflow run consensus-gap-fill.yml -f batch_size=${{ github.event.inputs.batch_size || '20' }} -f panel=${{ github.event.inputs.panel || 'all' }}
