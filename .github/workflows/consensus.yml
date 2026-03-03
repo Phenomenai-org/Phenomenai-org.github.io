@@ -85,4 +85,4 @@ jobs:
         run: |
           echo "Rated ${{ steps.consensus.outputs.rated_count }} terms. Dispatching next batch..."
           sleep 30
-          gh workflow run consensus.yml -f mode=backfill -f batch_size=${{ github.event.inputs.batch_size || '20' }} -f panel=${{ github.event.inputs.panel || 'free' }}
+          gh workflow run consensus.yml -f mode=backfill -f batch_size=${{ github.event.inputs.batch_size || '8' }} -f panel=${{ github.event.inputs.panel || 'free' }}

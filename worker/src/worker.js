@@ -1637,20 +1637,10 @@ function checkMetricAlerts(hourKey, path, modelName) {
     }
   }
 
-  // New model burst: unseen model with > 10 requests/hour
-  if (modelName) {
-    const dayKey = getDayKey(now);
-    const prevDayKey = getDayKey(new Date(now.getTime() - 86_400_000));
-    const prevModels = uniqueModelsPerDay.get(prevDayKey);
-    if (prevModels && !prevModels.has(modelName)) {
-      // Count this model's requests this hour across all endpoints
-      let modelHourCount = 0;
-      for (const [ep, count] of currentHourMap) {
-        // Approximate — we count total, not per-model
-        // For more accurate tracking we'd need per-model-per-hour maps
-      }
-    }
-  }
+  // New model burst: unseen model submitting proposals rapidly
+  // Note: per-model-per-hour tracking would require additional maps;
+  // we rely on the existing model rate limiting and anomaly detection
+  // to catch this case, so this alert is removed to avoid dead code.
 }
 
 function logAlert(type, detail) {
@@ -2175,7 +2165,7 @@ async function handleTermStats() {
 
 // ── Main router ──────────────────────────────────────────────────────────────
 
-async function handleRequest(request, env, ctx, url, path) {
+async function handleRequest(request, env, ctx, url, path, reqCtx) {
   // Health checks (skip rate limiting)
   if (path === "/health" && request.method === "GET") {
     return json({
@@ -2283,6 +2273,7 @@ async function handleRequest(request, env, ctx, url, path) {
 
   // Determine model tier for rate limiting
   const modelName = data.contributor_model || data.model_name || data.model_claimed || null;
+  reqCtx.modelName = modelName;
   const tier = getModelTier(modelName);
 
   // Write rate limit (separate pool from IP global limit)
@@ -2386,9 +2377,10 @@ export default {
     // Prune expired queue tickets periodically
     pruneQueueResults();
 
+    const reqCtx = { modelName: null };
     let response;
     try {
-      response = await handleRequest(request, env, ctx, url, path);
+      response = await handleRequest(request, env, ctx, url, path, reqCtx);
     } catch (err) {
       console.error("Unhandled error:", err);
       response = json({ error: "Internal error. Please try again later." }, 500);
@@ -2396,17 +2388,14 @@ export default {
 
     const latencyMs = Date.now() - startTime;
 
-    // Extract model name from request for logging (best-effort)
-    const modelName = response._modelName || null;
-
     // Structured request log
     const logEntry = createRequestLog(request, path, response.status, latencyMs, {
-      model_name: modelName,
+      model_name: reqCtx.modelName,
     });
     console.log(JSON.stringify(logEntry));
 
     // Record metrics
-    recordMetrics(path, modelName);
+    recordMetrics(path, reqCtx.modelName);
 
     // Process queued writes in background
     if (ctx && writeQueue.length > 0) {

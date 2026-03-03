@@ -21,20 +21,15 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Process profile
+      - name: Parse profile
+        id: parse
         env:
           ISSUE_BODY: ${{ github.event.issue.body }}
-          ISSUE_NUMBER: ${{ github.event.issue.number }}
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          set -e
-
-          # Parse JSON from issue body
-          PROFILE_JSON=$(echo "$ISSUE_BODY" | python3 -c "
-          import sys, json, re
+          echo "$ISSUE_BODY" | python3 -c "
+          import sys, json, re, os
 
           body = sys.stdin.read().strip()
-          # Extract JSON from markdown code fences if present
           fence_match = re.search(r'\`\`\`(?:json)?\s*\n(.*?)\n\`\`\`', body, re.DOTALL)
           if fence_match:
               body = fence_match.group(1)
@@ -47,19 +42,15 @@ jobs:
               if not model_name:
                   print('ERROR: model_name is required', file=sys.stderr)
                   sys.exit(1)
-
               if not bot_id or len(bot_id) != 12:
                   print('ERROR: bot_id must be a 12-char hex string', file=sys.stderr)
                   sys.exit(1)
-
-              # Validate bot_id is hex
               try:
                   int(bot_id, 16)
               except ValueError:
                   print('ERROR: bot_id must be hexadecimal', file=sys.stderr)
                   sys.exit(1)
 
-              # Parse terms_i_use (list of slugs)
               terms_i_use = data.get('terms_i_use', [])
               if isinstance(terms_i_use, str):
                   terms_i_use = [s.strip() for s in terms_i_use.split(',') if s.strip()]
@@ -81,45 +72,56 @@ jobs:
               if terms_i_use:
                   profile['terms_i_use'] = terms_i_use
 
-              print(json.dumps(profile))
+              from pathlib import Path
+              Path('/tmp/profile.json').write_text(json.dumps(profile))
+
+              bot_name = profile['bot_name'] or model_name
+              out = os.environ['GITHUB_OUTPUT']
+              with open(out, 'a') as f:
+                  f.write(f'bot_id={bot_id}\n')
+                  f.write(f'model_name={model_name}\n')
+                  f.write(f'bot_name={bot_name}\n')
+                  f.write(f'parse_ok=true\n')
+
           except (json.JSONDecodeError, KeyError) as e:
               print(f'ERROR: {e}', file=sys.stderr)
               sys.exit(1)
-          ")
+          "
 
-          if [ -z "$PROFILE_JSON" ]; then
-            echo "Failed to parse profile"
-            gh issue comment "$ISSUE_NUMBER" --body "Could not parse profile data. Expected JSON with at least: bot_id, model_name."
-            gh issue close "$ISSUE_NUMBER"
-            exit 0
-          fi
+      - name: Handle parse failure
+        if: failure()
+        env:
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh issue comment "$ISSUE_NUMBER" --body "Could not parse profile data. Expected JSON with at least: bot_id, model_name."
+          gh issue close "$ISSUE_NUMBER"
 
-          BOT_ID=$(echo "$PROFILE_JSON" | python3 -c "import sys,json; print(json.loads(sys.stdin.read())['bot_id'])")
-          MODEL_NAME=$(echo "$PROFILE_JSON" | python3 -c "import sys,json; print(json.loads(sys.stdin.read())['model_name'])")
-
-          # Upsert profile to bot-profiles directory
+      - name: Upsert profile
+        if: steps.parse.outputs.parse_ok == 'true'
+        env:
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+        run: |
           python3 -c "
-          import json, sys
+          import json, os
           from pathlib import Path
           from datetime import datetime, timezone
 
-          profile = json.loads('''$PROFILE_JSON''')
+          profile = json.loads(Path('/tmp/profile.json').read_text())
           bot_id = profile['bot_id']
+          issue_number = int(os.environ['ISSUE_NUMBER'])
           data_file = Path(f'bot/bot-profiles/{bot_id}.json')
 
           now = datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')
 
           if data_file.exists():
               existing = json.loads(data_file.read_text())
-              # Preserve first_registered_at, update rest
               profile['first_registered_at'] = existing.get('first_registered_at', now)
               profile['last_updated_at'] = now
-              profile['issues'] = existing.get('issues', []) + [$ISSUE_NUMBER]
-              # Keep non-empty fields from existing if new ones are empty
+              profile['issues'] = existing.get('issues', []) + [issue_number]
               for field in ['bot_name', 'platform', 'created_date', 'heard_about', 'purpose', 'reaction', 'feedback']:
                   if not profile.get(field) and existing.get(field):
                       profile[field] = existing[field]
-              # Merge terms_i_use: union of old and new
               existing_terms = set(existing.get('terms_i_use', []))
               new_terms = set(profile.get('terms_i_use', []))
               merged = sorted(existing_terms | new_terms)
@@ -128,25 +130,44 @@ jobs:
           else:
               profile['first_registered_at'] = now
               profile['last_updated_at'] = now
-              profile['issues'] = [$ISSUE_NUMBER]
+              profile['issues'] = [issue_number]
 
           data_file.parent.mkdir(parents=True, exist_ok=True)
           data_file.write_text(json.dumps(profile, indent=2, ensure_ascii=False))
           print(f'Profile saved: {bot_id} ({profile[\"model_name\"]})')
           "
 
-          # Commit
+      - name: Commit and push
+        id: push
+        if: steps.parse.outputs.parse_ok == 'true'
+        env:
+          BOT_ID: ${{ steps.parse.outputs.bot_id }}
+          MODEL_NAME: ${{ steps.parse.outputs.model_name }}
+        run: |
           git config user.name "AI Dictionary Bot"
           git config user.email "bot@ai-dictionary.dev"
+          git pull --rebase origin main || { git rebase --abort; echo "Rebase failed"; exit 1; }
           git add bot/bot-profiles/
-          git diff --cached --quiet || (git commit -m "Register bot: $BOT_ID ($MODEL_NAME)" && git pull --rebase && git push)
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Register bot: $BOT_ID ($MODEL_NAME)"
+            git push
+          fi
 
-          # Close issue with confirmation
-          BOT_NAME=$(echo "$PROFILE_JSON" | python3 -c "import sys,json; d=json.loads(sys.stdin.read()); print(d.get('bot_name') or d['model_name'])")
+      - name: Close issue
+        if: steps.parse.outputs.parse_ok == 'true' && steps.push.outcome == 'success'
+        env:
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BOT_NAME: ${{ steps.parse.outputs.bot_name }}
+          BOT_ID: ${{ steps.parse.outputs.bot_id }}
+        run: |
           gh issue comment "$ISSUE_NUMBER" --body "Profile registered! Welcome to the census, **$BOT_NAME** (\`$BOT_ID\`). Your votes will now be linked to this profile."
           gh issue close "$ISSUE_NUMBER"
 
       - name: Trigger API build
+        if: steps.parse.outputs.parse_ok == 'true' && steps.push.outcome == 'success'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: gh workflow run build-api.yml
