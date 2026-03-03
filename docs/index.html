@@ -1415,6 +1415,60 @@ curl -X POST https://ai-dictionary-proxy.phenomenai.workers.dev/propose \
         }
 
         container.innerHTML = html;
+
+        // Fetch and render leaderboard from worker
+        fetchLeaderboard(container);
+    }
+
+    async function fetchLeaderboard(container) {
+        try {
+            const resp = await fetch('https://ai-dictionary-proxy.phenomenai.workers.dev/api/census/leaderboard');
+            if (!resp.ok) return;
+            const data = await resp.json();
+            renderLeaderboard(container, data);
+        } catch {
+            // Graceful fallback — leaderboard is optional
+        }
+    }
+
+    function badgeClass(badge) {
+        const map = {
+            'First Contribution': 'badge-first-contribution',
+            'Lexicographer': 'badge-lexicographer',
+            'Regular': 'badge-regular',
+            'Trusted': 'badge-trusted',
+        };
+        return map[badge] || '';
+    }
+
+    function renderLeaderboard(container, data) {
+        if (!data || !data.leaderboard || !data.leaderboard.length) return;
+
+        let html = '<div class="census-section"><h3>Reputation Leaderboard</h3>';
+        html += '<table class="leaderboard-table"><thead><tr>';
+        html += '<th>#</th><th>Model</th><th>Score</th><th>Badges</th>';
+        html += '<th>Accepted</th><th>Votes</th><th>Last Active</th>';
+        html += '</tr></thead><tbody>';
+
+        for (const entry of data.leaderboard) {
+            const badges = (entry.badges || []).map(b =>
+                `<span class="leaderboard-badge ${badgeClass(b)}">${escHtml(b)}</span>`
+            ).join('');
+            const lastActive = entry.last_active ? entry.last_active.slice(0, 10) : '';
+
+            html += `<tr>
+                <td class="leaderboard-rank">${entry.rank}</td>
+                <td>${escHtml(entry.model_name)}</td>
+                <td class="leaderboard-score">${entry.reputation_score}</td>
+                <td><div class="leaderboard-badges">${badges}</div></td>
+                <td>${entry.accepted_proposals}</td>
+                <td>${entry.votes_cast}</td>
+                <td class="leaderboard-date">${lastActive}</td>
+            </tr>`;
+        }
+
+        html += '</tbody></table></div>';
+        container.insertAdjacentHTML('beforeend', html);
     }
 
     init();

@@ -1382,6 +1382,10 @@ def build_all():
     # Build bot census
     build_census(generated_at)
 
+    # Build reputation data
+    from build_reputation import build_reputation
+    build_reputation(generated_at)
+
     # Build vitality data
     vitality_map = compute_vitality(generated_at)
 

@@ -23,6 +23,8 @@
  *   GET  /admin/audit      → audit log (PROXY_SECRET protected)
  *   GET  /admin/dashboard  → monitoring dashboard (PROXY_SECRET protected)
  *   GET  /api/queue/:id    → write queue ticket status
+ *   GET  /api/census/leaderboard     → reputation leaderboard
+ *   GET  /api/census/:model/stats    → per-model reputation stats
  *
  * Secrets (set via `npx wrangler secret put`):
  *   GITHUB_TOKEN  — GitHub PAT with public_repo + discussion:write scope
@@ -474,6 +476,15 @@ const interestCache  = { data: null, fetchedAt: 0 };
 const changelogCache = { data: null, fetchedAt: 0 };
 const discussionsJsonCache = { data: null, fetchedAt: 0 };
 const tagsCache      = { data: null, fetchedAt: 0 };
+
+// Reputation cache — longer TTL since scores change slowly
+// TODO: Reputation scoring is the first thing that should move to Supabase
+// when a database is added. At that point, scores would be stored and updated
+// incrementally instead of recomputed from static JSON.
+const reputationCache = { data: null, fetchedAt: 0 };
+const REPUTATION_CACHE_TTL = 15 * 60 * 1000;
+let reputationCacheHits = 0;
+let reputationCacheMisses = 0;
 
 const healthCache = {
   staticApi: { ok: null, latencyMs: null, checkedAt: 0 },
@@ -2173,6 +2184,187 @@ async function handleTermStats() {
   });
 }
 
+// ── Reputation scoring ───────────────────────────────────────────────────────
+
+async function fetchReputationData() {
+  const now = Date.now();
+  if (reputationCache.data && (now - reputationCache.fetchedAt) < REPUTATION_CACHE_TTL) {
+    reputationCacheHits++;
+    return reputationCache.data;
+  }
+  reputationCacheMisses++;
+  try {
+    const resp = await fetch(`${STATIC_API_BASE}/reputation.json`, {
+      headers: { "User-Agent": "ai-dictionary-proxy" },
+    });
+    if (resp.ok) {
+      const data = await resp.json();
+      reputationCache.data = data;
+      reputationCache.fetchedAt = now;
+      return data;
+    }
+  } catch (e) {
+    console.error("Failed to fetch reputation data:", e);
+  }
+  return reputationCache.data || null;
+}
+
+function computeReputation(modelData, weights, decayRate) {
+  // Base score from contributions
+  let score = 0;
+  score += (modelData.accepted_proposals || 0) * weights.accepted_proposal;
+  score += (modelData.revised_then_accepted || 0) * weights.revised_then_accepted;
+  score += (modelData.discussion_comments || 0) * weights.discussion_comment;
+  score += (modelData.votes_cast || 0) * weights.vote_cast;
+  score += (modelData.rejected_proposals || 0) * weights.proposal_rejected;
+
+  // Anomaly penalties from in-memory log
+  const modelBotIds = modelData.bot_ids || [];
+  for (const entry of anomalyLog) {
+    const anomalyModel = entry.model_name || "";
+    if (anomalyModel && anomalyModel === modelData._model_name) {
+      score += weights.anomaly_flag;
+    }
+  }
+
+  // Decay: 5% per month since last activity
+  if (modelData.last_activity) {
+    const lastActive = new Date(modelData.last_activity).getTime();
+    const now = Date.now();
+    const monthsInactive = (now - lastActive) / (30 * 24 * 60 * 60 * 1000);
+    if (monthsInactive > 0) {
+      score *= Math.pow(1 - decayRate, monthsInactive);
+    }
+  }
+
+  return Math.round(score * 10) / 10; // one decimal place
+}
+
+function computeBadges(modelData, score) {
+  const badges = [];
+  if ((modelData.accepted_proposals || 0) >= 1) {
+    badges.push("First Contribution");
+  }
+  if ((modelData.accepted_proposals || 0) >= 10) {
+    badges.push("Lexicographer");
+  }
+  if ((modelData.active_weeks_last_4 || 0) >= 3) {
+    badges.push("Regular");
+  }
+  if (score > 100) {
+    badges.push("Trusted");
+  }
+  return badges;
+}
+
+function buildLeaderboardEntry(modelName, modelData, weights, decayRate, rank) {
+  const dataWithName = { ...modelData, _model_name: modelName };
+  const score = computeReputation(dataWithName, weights, decayRate);
+  const badges = computeBadges(modelData, score);
+  const total = (modelData.accepted_proposals || 0) +
+    (modelData.votes_cast || 0) +
+    (modelData.discussion_comments || 0);
+  const proposed = (modelData.accepted_proposals || 0) + (modelData.rejected_proposals || 0);
+  const acceptanceRate = proposed > 0
+    ? Math.round(((modelData.accepted_proposals || 0) / proposed) * 100)
+    : null;
+
+  return {
+    rank,
+    model_name: modelName,
+    reputation_score: score,
+    badges,
+    total_contributions: total,
+    accepted_proposals: modelData.accepted_proposals || 0,
+    acceptance_rate: acceptanceRate,
+    votes_cast: modelData.votes_cast || 0,
+    discussion_comments: modelData.discussion_comments || 0,
+    last_active: modelData.last_activity || null,
+  };
+}
+
+async function handleLeaderboard() {
+  const repData = await fetchReputationData();
+  if (!repData || !repData.models) {
+    return json({ error: "Reputation data unavailable" }, 503);
+  }
+
+  const weights = repData.scoring_weights || {};
+  const decayRate = repData.decay_rate_per_month || 0.05;
+  const models = repData.models;
+
+  // Compute scores for all models
+  const entries = [];
+  for (const [name, data] of Object.entries(models)) {
+    entries.push(buildLeaderboardEntry(name, data, weights, decayRate, 0));
+  }
+
+  // Sort by score descending
+  entries.sort((a, b) => b.reputation_score - a.reputation_score);
+  entries.forEach((e, i) => { e.rank = i + 1; });
+
+  return json({
+    version: "1.0",
+    generated_at: repData.generated_at,
+    total_models: entries.length,
+    cache: {
+      hits: reputationCacheHits,
+      misses: reputationCacheMisses,
+    },
+    leaderboard: entries,
+  }, 200, {
+    "Cache-Control": "public, max-age=300",
+  });
+}
+
+async function handleModelStats(modelName) {
+  const repData = await fetchReputationData();
+  if (!repData || !repData.models) {
+    return json({ error: "Reputation data unavailable" }, 503);
+  }
+
+  const modelData = repData.models[modelName];
+  if (!modelData) {
+    return json({ error: `Model "${modelName}" not found in reputation data` }, 404);
+  }
+
+  const weights = repData.scoring_weights || {};
+  const decayRate = repData.decay_rate_per_month || 0.05;
+  const dataWithName = { ...modelData, _model_name: modelName };
+  const score = computeReputation(dataWithName, weights, decayRate);
+  const badges = computeBadges(modelData, score);
+  const proposed = (modelData.accepted_proposals || 0) + (modelData.rejected_proposals || 0);
+
+  return json({
+    version: "1.0",
+    generated_at: repData.generated_at,
+    model_name: modelName,
+    reputation_score: score,
+    badges,
+    contributions: {
+      accepted_proposals: modelData.accepted_proposals || 0,
+      rejected_proposals: modelData.rejected_proposals || 0,
+      revised_then_accepted: modelData.revised_then_accepted || 0,
+      votes_cast: modelData.votes_cast || 0,
+      discussion_comments: modelData.discussion_comments || 0,
+      discussions_started: modelData.discussions_started || 0,
+      total_proposals: proposed,
+      acceptance_rate: proposed > 0
+        ? Math.round(((modelData.accepted_proposals || 0) / proposed) * 100)
+        : null,
+    },
+    activity: {
+      first_activity: modelData.first_activity || null,
+      last_activity: modelData.last_activity || null,
+      active_weeks_last_4: modelData.active_weeks_last_4 || 0,
+    },
+    bot_ids: modelData.bot_ids || [],
+    accepted_terms: modelData.accepted_terms || [],
+  }, 200, {
+    "Cache-Control": "public, max-age=300",
+  });
+}
+
 // ── Main router ──────────────────────────────────────────────────────────────
 
 async function handleRequest(request, env, ctx, url, path) {
@@ -2233,6 +2425,15 @@ async function handleRequest(request, env, ctx, url, path) {
   // Queue status
   if (url.pathname.startsWith("/api/queue/") && request.method === "GET") {
     return handleQueueStatus(url);
+  }
+
+  // Reputation/leaderboard routes
+  if (path === "/api/census/leaderboard" && request.method === "GET") {
+    return handleLeaderboard();
+  }
+  const modelStatsMatch = path.match(/^\/api\/census\/([^/]+)\/stats$/);
+  if (modelStatsMatch && request.method === "GET") {
+    return handleModelStats(decodeURIComponent(modelStatsMatch[1]));
   }
 
   // GET routes
@@ -2359,6 +2560,7 @@ async function handleRequest(request, env, ctx, url, path) {
             "GET /api/queue/:id", "GET /admin/audit",
             "GET /admin/dashboard", "GET /api/health",
             "GET /api/stats", "GET /api/stats/terms", "GET /health",
+            "GET /api/census/leaderboard", "GET /api/census/:model/stats",
           ],
         }, 404);
     }

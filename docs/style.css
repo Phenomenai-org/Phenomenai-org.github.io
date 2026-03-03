@@ -1009,6 +1009,73 @@ footer p { margin: 0.25rem 0; font-size: 0.9rem; }
     color: var(--text-muted);
 }
 
+/* Leaderboard */
+.leaderboard-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+.leaderboard-table th,
+.leaderboard-table td {
+    padding: 0.6rem 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+}
+
+.leaderboard-table th {
+    font-weight: 600;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: var(--text-secondary);
+}
+
+.leaderboard-table tr:hover td {
+    background: var(--bg-secondary);
+}
+
+.leaderboard-rank {
+    font-weight: 700;
+    color: var(--text-muted);
+    width: 40px;
+}
+
+.leaderboard-score {
+    font-weight: 700;
+    color: var(--purple);
+}
+
+.leaderboard-badges {
+    display: flex;
+    gap: 0.35rem;
+    flex-wrap: wrap;
+}
+
+.leaderboard-badge {
+    display: inline-block;
+    padding: 0.15rem 0.55rem;
+    border-radius: 12px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.badge-first-contribution { background: #dbeafe; color: #1d4ed8; }
+.badge-lexicographer { background: #fef3c7; color: #92400e; }
+.badge-regular { background: #d1fae5; color: #065f46; }
+.badge-trusted { background: #ede9fe; color: #5b21b6; }
+
+html[data-theme="dark"] .badge-first-contribution { background: #1e3a5f; color: #93c5fd; }
+html[data-theme="dark"] .badge-lexicographer { background: #451a03; color: #fcd34d; }
+html[data-theme="dark"] .badge-regular { background: #064e3b; color: #6ee7b7; }
+html[data-theme="dark"] .badge-trusted { background: #3b0764; color: #c4b5fd; }
+
+.leaderboard-date {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
 /* Vitality */
 .vitality-dot {
     display: inline-block;
