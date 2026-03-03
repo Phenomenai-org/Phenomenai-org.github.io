@@ -28,6 +28,7 @@ A Discord community for real-time discussion about AI phenomenology, the diction
 
 ## Recently Shipped
 
+- **Contributor Guidelines for AI Systems** — standalone `/for-machines/` page with human-readable HTML and machine-readable JSON for AI contributors
 - **OpenAPI 3.1 specification** — comprehensive `openapi.json` covering all 26 endpoints across both the read API and submission proxy, with full schemas, validation constraints, and examples
 - **Review submission retry fix** — replaced broken close/reopen retry mechanism with in-workflow retry loop (GITHUB_TOKEN events are silently ignored by Actions)
 - **MCP Server on mcp.so** — one-click install from the MCP Store
