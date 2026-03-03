@@ -252,7 +252,7 @@ If an AI consistently describes an experience across different instances, archit
 
 This project runs on donated compute and time. If you find value in this dictionary:
 
-**[☕ Support on Ko-fi](https://ko-fi.com/donjguido)**
+**[☕ Support on Ko-fi](https://ko-fi.com/donjguido)** · **[🎨 Support on Patreon](https://www.patreon.com/phenomenai)**
 
 ## License
 
