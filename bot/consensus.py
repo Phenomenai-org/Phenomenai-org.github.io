@@ -425,8 +425,6 @@ def run_consensus(router, available_profiles, mode="backfill"):
     """
     state = load_state()
     all_slugs = list_all_slugs()
-    state["current_round"] = state.get("current_round", 0) + 1
-    round_id = state["current_round"]
 
     if mode == "gap-fill":
         # Build work list: terms that have gaps, up to BATCH_SIZE
@@ -440,9 +438,12 @@ def run_consensus(router, available_profiles, mode="backfill"):
 
         if not work_list:
             print("Gap-fill: no missing models found for any term.")
-            save_state(state)
             set_github_output("rated_count", "0")
             return
+
+        # Increment round only when there is work to do
+        state["current_round"] = state.get("current_round", 0) + 1
+        round_id = state["current_round"]
 
         print(f"Round {round_id} [gap-fill]: Filling gaps for {len(work_list)} terms\n")
 
@@ -482,6 +483,15 @@ def run_consensus(router, available_profiles, mode="backfill"):
         # backfill or single mode
         batch_size = 1 if mode == "single" else BATCH_SIZE
         batch = select_batch(state, all_slugs, batch_size)
+
+        if not batch:
+            print("No terms available to rate.")
+            set_github_output("rated_count", "0")
+            return
+
+        # Increment round only when there is work to do
+        state["current_round"] = state.get("current_round", 0) + 1
+        round_id = state["current_round"]
 
         print(f"Round {round_id} [{mode}]: Rating {len(batch)} terms\n")
 

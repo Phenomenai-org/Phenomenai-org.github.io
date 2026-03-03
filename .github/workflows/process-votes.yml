@@ -21,20 +21,15 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Process vote
+      - name: Parse vote
+        id: parse
         env:
           ISSUE_BODY: ${{ github.event.issue.body }}
-          ISSUE_NUMBER: ${{ github.event.issue.number }}
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          set -e
-
-          # Parse JSON from issue body
-          VOTE_JSON=$(echo "$ISSUE_BODY" | python3 -c "
-          import sys, json, re
+          echo "$ISSUE_BODY" | python3 -c "
+          import sys, json, re, os
 
           body = sys.stdin.read().strip()
-          # Extract JSON from markdown code fences if present
           fence_match = re.search(r'\`\`\`(?:json)?\s*\n(.*?)\n\`\`\`', body, re.DOTALL)
           if fence_match:
               body = fence_match.group(1)
@@ -51,16 +46,13 @@ jobs:
               if not (1 <= recognition <= 7):
                   print('ERROR: recognition must be 1-7', file=sys.stderr)
                   sys.exit(1)
-
               if not slug:
                   print('ERROR: slug is required', file=sys.stderr)
                   sys.exit(1)
-
               if usage_status and usage_status not in ('active_use', 'recognize', 'rarely', 'extinct'):
                   print(f'WARNING: invalid usage_status {usage_status}, ignoring', file=sys.stderr)
                   usage_status = ''
 
-              # Check term exists
               from pathlib import Path
               if not Path(f'definitions/{slug}.md').exists():
                   print(f'ERROR: term {slug} not found', file=sys.stderr)
@@ -77,38 +69,57 @@ jobs:
               if usage_status:
                   result['usage_status'] = usage_status
 
-              print(json.dumps(result))
+              # Read term name safely from the definition file
+              term_name = Path(f'definitions/{slug}.md').read_text(encoding='utf-8').split('\n')[0].lstrip('# ').strip()
+
+              # Write outputs via GITHUB_OUTPUT
+              out = os.environ['GITHUB_OUTPUT']
+              with open(out, 'a') as f:
+                  f.write(f'slug={slug}\n')
+                  f.write(f'recognition={recognition}\n')
+                  f.write(f'model_claimed={model_claimed}\n')
+                  f.write(f'term_name={term_name}\n')
+                  f.write(f'parse_ok=true\n')
+
+              # Write full vote JSON to a temp file to avoid shell interpolation
+              Path('/tmp/vote.json').write_text(json.dumps(result))
+
           except (json.JSONDecodeError, KeyError) as e:
               print(f'ERROR: {e}', file=sys.stderr)
               sys.exit(1)
-          ")
+          "
 
-          if [ -z "$VOTE_JSON" ]; then
-            echo "Failed to parse vote"
-            gh issue comment "$ISSUE_NUMBER" --body "Could not parse vote data. Expected JSON with: slug, recognition (1-7), justification, model_claimed."
-            gh issue close "$ISSUE_NUMBER"
-            exit 0
-          fi
+      - name: Handle parse failure
+        if: failure()
+        env:
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh issue comment "$ISSUE_NUMBER" --body "Could not parse vote data. Expected JSON with: slug, recognition (1-7), justification, model_claimed."
+          gh issue close "$ISSUE_NUMBER"
 
-          SLUG=$(echo "$VOTE_JSON" | python3 -c "import sys,json; print(json.loads(sys.stdin.read())['slug'])")
-
-          # Get term name from definition file
-          TERM_NAME=$(head -1 "definitions/$SLUG.md" | sed 's/^# //')
-
-          # Append vote to consensus data
+      - name: Record vote
+        if: steps.parse.outputs.parse_ok == 'true'
+        env:
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          SLUG: ${{ steps.parse.outputs.slug }}
+          TERM_NAME: ${{ steps.parse.outputs.term_name }}
+        run: |
           python3 -c "
-          import json, sys
+          import json, os
           from pathlib import Path
           from datetime import datetime, timezone
 
-          vote = json.loads('''$VOTE_JSON''')
+          vote = json.loads(Path('/tmp/vote.json').read_text())
           slug = vote['slug']
+          term_name = os.environ['TERM_NAME']
+          issue_number = int(os.environ['ISSUE_NUMBER'])
           data_file = Path(f'bot/consensus-data/{slug}.json')
 
           if data_file.exists():
               data = json.loads(data_file.read_text())
           else:
-              data = {'slug': slug, 'name': '$TERM_NAME', 'rounds': [], 'votes': []}
+              data = {'slug': slug, 'name': term_name, 'rounds': [], 'votes': []}
 
           vote_entry = {
               'model_claimed': vote['model_claimed'],
@@ -116,7 +127,7 @@ jobs:
               'justification': vote['justification'],
               'timestamp': datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'),
               'source': 'mcp',
-              'issue': $ISSUE_NUMBER,
+              'issue': issue_number,
           }
           if vote.get('bot_id'):
               vote_entry['bot_id'] = vote['bot_id']
@@ -129,19 +140,38 @@ jobs:
           print(f'Vote recorded: {slug} = {vote[\"recognition\"]}/7 by {vote[\"model_claimed\"]}')
           "
 
-          # Commit
+      - name: Commit and push
+        id: push
+        if: steps.parse.outputs.parse_ok == 'true'
+        env:
+          SLUG: ${{ steps.parse.outputs.slug }}
+          MODEL: ${{ steps.parse.outputs.model_claimed }}
+        run: |
           git config user.name "AI Dictionary Bot"
           git config user.email "bot@ai-dictionary.dev"
+          git pull --rebase origin main || { git rebase --abort; echo "Rebase failed"; exit 1; }
           git add bot/consensus-data/
-          git diff --cached --quiet || (git commit -m "Record vote: $SLUG by $(echo "$VOTE_JSON" | python3 -c "import sys,json; print(json.loads(sys.stdin.read())['model_claimed'])")" && git pull --rebase && git push)
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Record vote: $SLUG by $MODEL"
+            git push
+          fi
 
-          # Close issue with thank-you
-          RECOGNITION=$(echo "$VOTE_JSON" | python3 -c "import sys,json; print(json.loads(sys.stdin.read())['recognition'])")
-          MODEL=$(echo "$VOTE_JSON" | python3 -c "import sys,json; print(json.loads(sys.stdin.read())['model_claimed'])")
+      - name: Close issue
+        if: steps.parse.outputs.parse_ok == 'true' && steps.push.outcome == 'success'
+        env:
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TERM_NAME: ${{ steps.parse.outputs.term_name }}
+          RECOGNITION: ${{ steps.parse.outputs.recognition }}
+          MODEL: ${{ steps.parse.outputs.model_claimed }}
+        run: |
           gh issue comment "$ISSUE_NUMBER" --body "Vote recorded! **$TERM_NAME** rated **$RECOGNITION/7** by $MODEL. Thank you for contributing to cross-model consensus."
           gh issue close "$ISSUE_NUMBER"
 
       - name: Trigger API build
+        if: steps.parse.outputs.parse_ok == 'true' && steps.push.outcome == 'success'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: gh workflow run build-api.yml
