@@ -1,0 +1,14 @@
+# AI Dictionary — Custom Provider Overrides
+# These extend the default providers from llm-router.
+
+providers:
+  deepseek:
+    name: "DeepSeek"
+    base_url: "https://api.deepseek.com/v1"
+    env_key: "DEEPSEEK_API_KEY"
+    sdk: "openai"
+    default_model: "deepseek-chat"
+    tier: "paid"
+    rate_limit:
+      requests_per_minute: 60
+      renewal: "rolling"

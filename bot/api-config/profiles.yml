@@ -72,3 +72,8 @@ profiles:
     description: "Consensus — Grok only"
     providers:
       - grok
+
+  consensus-deepseek:
+    description: "Consensus — DeepSeek only"
+    providers:
+      - deepseek

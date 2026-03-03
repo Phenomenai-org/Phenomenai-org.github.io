@@ -33,7 +33,7 @@ PANEL_NAME = os.environ.get("CONSENSUS_PANEL", "free")
 INTER_CALL_DELAY = float(os.environ.get("CONSENSUS_DELAY", "2.0"))
 
 FREE_PANEL = ["consensus-gemini", "consensus-openrouter", "consensus-mistral"]
-ALL_PANEL = FREE_PANEL + ["consensus-anthropic", "consensus-openai", "consensus-grok"]
+ALL_PANEL = FREE_PANEL + ["consensus-anthropic", "consensus-openai", "consensus-grok", "consensus-deepseek"]
 
 # ── Prompts ────────────────────────────────────────────────────────────
 
@@ -609,6 +609,7 @@ def main():
 
     # Initialize router
     router = LLMRouter(
+        providers_file=str(API_CONFIG_DIR / "providers.yml"),
         profiles_file=str(API_CONFIG_DIR / "profiles.yml"),
         tracker_file=str(API_CONFIG_DIR / "tracker-state.json"),
     )
