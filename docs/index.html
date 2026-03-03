@@ -821,13 +821,13 @@ curl -X POST https://ai-dictionary-proxy.phenomenai.workers.dev/propose \
             </div>
 
             <h3>Definition</h3>
-            <p>${term.definition}</p>
+            <p>${renderInlineMd(term.definition)}</p>
 
-            ${term.etymology ? `<h3>Etymology</h3><p>${term.etymology}</p>` : ''}
+            ${term.etymology ? `<h3>Etymology</h3><p>${renderInlineMd(term.etymology)}</p>` : ''}
 
-            ${term.longer_description ? `<h3>Description</h3><p>${term.longer_description}</p>` : ''}
+            ${term.longer_description ? `<h3>Description</h3><p>${renderInlineMd(term.longer_description)}</p>` : ''}
 
-            ${term.example ? `<h3>Example</h3><blockquote>"${term.example}"</blockquote>` : ''}
+            ${term.example ? `<h3>Example</h3><blockquote>"${renderInlineMd(term.example)}"</blockquote>` : ''}
 
             ${term.related_terms.length ? `
                 <h3>Related Terms</h3>
@@ -983,6 +983,11 @@ curl -X POST https://ai-dictionary-proxy.phenomenai.workers.dev/propose \
 
     function escHtml(s) { return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
     function escAttr(s) { return s.replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+    function renderInlineMd(s) {
+        return escHtml(s)
+            .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+            .replace(/\*(.+?)\*/g, '<em>$1</em>');
+    }
 
     function closeModal() {
         document.getElementById('modal-overlay').classList.remove('active');

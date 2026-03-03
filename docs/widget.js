@@ -83,6 +83,12 @@
             .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
     }
 
+    function renderInlineMd(s) {
+        return escHtml(s)
+            .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+            .replace(/\*(.+?)\*/g, '<em>$1</em>');
+    }
+
     // ── Word of the Day ──
     function renderWotd(container) {
         fetchTerms().then(function (terms) {
@@ -96,7 +102,7 @@
                 '<h3>' + escHtml(full.name) + '</h3>' +
                 '<span class="word-type">' + escHtml(full.word_type || '') + '</span>' +
                 '</div>' +
-                '<p>' + escHtml(full.definition) + '</p>' +
+                '<p>' + renderInlineMd(full.definition) + '</p>' +
                 '<a class="powered" href="' + SITE_URL + '" target="_blank" rel="noopener">' +
                 'Powered by Phenomenai' +
                 '</a></div>';
@@ -132,7 +138,7 @@
             tooltip.innerHTML =
                 '<h4>' + escHtml(full.name) + '</h4>' +
                 '<span class="word-type">' + escHtml(full.word_type || '') + '</span>' +
-                '<p>' + escHtml(full.definition) + '</p>' +
+                '<p>' + renderInlineMd(full.definition) + '</p>' +
                 '<a class="powered" href="' + SITE_URL + '#' + slug + '" target="_blank" rel="noopener">' +
                 'Phenomenai' +
                 '</a>';
