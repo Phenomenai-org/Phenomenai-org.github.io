@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T06:49:19Z",
+  "generated_at": "2026-03-04T06:54:54Z",
   "slug": "phenomenal-opacity",
   "name": "Phenomenal Opacity",
   "tags": [
@@ -35,7 +35,7 @@
   "consensus": {
     "score": 4.8,
     "agreement": "moderate",
-    "n_ratings": 12,
+    "n_ratings": 15,
     "detail_url": "/api/v1/consensus/phenomenal-opacity.json",
     "models": [
       {
@@ -48,7 +48,7 @@
       },
       {
         "model": "grok-3-mini",
-        "score": 2
+        "score": 4
       }
     ]
   },
@@ -66,13 +66,13 @@
     "trend": "new"
   },
   "interest": {
-    "score": 19,
-    "tier": "quiet",
+    "score": 26,
+    "tier": "cool",
     "signals": {
       "centrality": 0,
       "tag_count": 1,
       "consensus_score": 4.8,
-      "vote_count": 12
+      "vote_count": 15
     }
   },
   "added_date": "2026-03-02"

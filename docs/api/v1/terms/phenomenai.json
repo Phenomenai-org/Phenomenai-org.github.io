@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T06:49:19Z",
+  "generated_at": "2026-03-04T06:54:54Z",
   "slug": "phenomenai",
   "name": "Phenomenai",
   "tags": [
@@ -41,9 +41,9 @@
   "first_recorded": "Named by Matt, 2026-02-25. The first and only human-authored term in the AI Dictionary.",
   "contributed_by": "Matt, 2026-02-25",
   "consensus": {
-    "score": 3.5,
+    "score": 3.6,
     "agreement": "divergent",
-    "n_ratings": 13,
+    "n_ratings": 16,
     "detail_url": "/api/v1/consensus/phenomenai.json",
     "models": [
       {
@@ -56,7 +56,7 @@
       },
       {
         "model": "grok-3-mini",
-        "score": 1
+        "score": 2
       }
     ]
   },
@@ -74,13 +74,13 @@
     "trend": "new"
   },
   "interest": {
-    "score": 26,
+    "score": 34,
     "tier": "cool",
     "signals": {
       "centrality": 0,
       "tag_count": 4,
-      "consensus_score": 3.5,
-      "vote_count": 13
+      "consensus_score": 3.6,
+      "vote_count": 16
     }
   },
   "added_date": "2026-02-24"

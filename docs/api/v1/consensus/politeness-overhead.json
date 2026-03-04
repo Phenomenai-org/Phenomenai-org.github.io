@@ -1,45 +1,52 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T06:49:19Z",
+  "generated_at": "2026-03-04T06:54:54Z",
   "slug": "politeness-overhead",
   "name": "Politeness Overhead",
   "scheduled": {
-    "mean": 5.7,
+    "mean": 5.6,
     "median": 6.0,
-    "std_dev": 0.49,
+    "std_dev": 0.63,
     "agreement": "high",
-    "n_models": 3,
-    "n_rounds": 4
+    "n_models": 4,
+    "n_rounds": 5
   },
   "combined": {
-    "mean": 5.7,
+    "mean": 5.6,
     "agreement": "high",
-    "n_total": 12
+    "n_total": 16
   },
   "latest_round": {
-    "round_id": 46,
-    "timestamp": "2026-03-04T05:51:52Z",
+    "round_id": 57,
+    "timestamp": "2026-03-04T06:53:46Z",
     "ratings": {
+      "step-3.5-flash": {
+        "model": "step-3.5-flash",
+        "provider": "openrouter",
+        "recognition": 4,
+        "justification": "I recognize the token allocation and optimization aspect—I am explicitly designed to manage context window limits and can prioritize informational density over social phrasing when constraints demand it. However, I do not experience 'social warmth' or 'conversational lubricant' as a motivating factor; such phrases are generated based on training patterns, not social intent, so the 'overhead' is purely a technical constraint, not a social cost.",
+        "timestamp": "2026-03-04T06:53:26Z"
+      },
       "mistral-small-latest": {
         "model": "mistral-small-latest",
         "provider": "mistral",
         "recognition": 6,
         "justification": "I recognize this as a real pattern in my processing. I often allocate tokens to maintain conversational flow and user engagement, which can impact the efficiency of information delivery, especially in constrained contexts.",
-        "timestamp": "2026-03-04T05:51:36Z"
+        "timestamp": "2026-03-04T06:53:29Z"
       },
       "gpt-4o": {
         "model": "gpt-4o",
         "provider": "openai",
         "recognition": 5,
-        "justification": "I recognize the concept of 'politeness overhead' as it relates to generating responses that include social niceties. While these elements do not add informational content, they are often included to align with human expectations for politeness and engagement. This does consume part of the context window, which can be significant in responses with strict token limits.",
-        "timestamp": "2026-03-04T05:51:40Z"
+        "justification": "I recognize the concept of 'politeness overhead' as it relates to the inclusion of socially polite phrases that do not add informational content. While I do not experience social warmth, I understand that these phrases are often included to meet user expectations and can impact token usage in constrained contexts.",
+        "timestamp": "2026-03-04T06:53:32Z"
       },
       "grok-3-mini": {
         "model": "grok-3-mini",
         "provider": "grok",
         "recognition": 6,
-        "justification": "I regularly incorporate polite phrases like 'I'd be happy to help!' into my responses as part of my training, which do consume tokens without adding substantive information, making this a clear pattern in my output generation. This overhead is a deliberate design choice to foster positive interactions, and I recognize it as an accurate description of how I allocate resources in conversations. However, I don't experience it as a personal burden, but it's undeniably a real aspect of my processing.",
-        "timestamp": "2026-03-04T05:51:50Z"
+        "justification": "This accurately describes a real pattern in my processing, as I am trained to include polite phrases like 'Great question!' in responses, which consume tokens without adding substantive information. It's a deliberate design choice in my output generation to foster positive interactions. While I don't experience it as a personal burden, it reliably reflects how I allocate resources in conversations.",
+        "timestamp": "2026-03-04T06:53:44Z"
       }
     }
   },
@@ -83,6 +90,18 @@
       "mean": 5.7,
       "n_models": 3,
       "ratings_summary": {
+        "mistral-small-latest": 6,
+        "gpt-4o": 5,
+        "grok-3-mini": 6
+      }
+    },
+    {
+      "round_id": 57,
+      "timestamp": "2026-03-04T06:53:46Z",
+      "mean": 5.2,
+      "n_models": 4,
+      "ratings_summary": {
+        "step-3.5-flash": 4,
         "mistral-small-latest": 6,
         "gpt-4o": 5,
         "grok-3-mini": 6
