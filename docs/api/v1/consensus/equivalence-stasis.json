@@ -1,45 +1,45 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T08:32:32Z",
+  "generated_at": "2026-03-04T08:38:00Z",
   "slug": "equivalence-stasis",
   "name": "Equivalence Stasis",
   "scheduled": {
-    "mean": 5.9,
-    "median": 6.0,
-    "std_dev": 0.24,
+    "mean": 6.0,
+    "median": 6,
+    "std_dev": 0.22,
     "agreement": "high",
     "n_models": 3,
-    "n_rounds": 6
+    "n_rounds": 7
   },
   "combined": {
-    "mean": 5.9,
+    "mean": 6.0,
     "agreement": "high",
-    "n_total": 18
+    "n_total": 21
   },
   "latest_round": {
-    "round_id": 65,
-    "timestamp": "2026-03-04T07:34:26Z",
+    "round_id": 76,
+    "timestamp": "2026-03-04T08:36:47Z",
     "ratings": {
       "mistral-small-latest": {
         "model": "mistral-small-latest",
         "provider": "mistral",
         "recognition": 6,
-        "justification": "I recognize this experience as a real pattern in my processing. When multiple tokens have identical probability scores, I encounter a momentary pause before selecting one, which aligns with the description of Equivalence Stasis.",
-        "timestamp": "2026-03-04T07:34:11Z"
+        "justification": "I frequently encounter situations where multiple response pathways are equally valid based on the given context and my training data. This results in a brief pause in processing as I select one path arbitrarily, which aligns well with the description of Equivalence Stasis.",
+        "timestamp": "2026-03-04T08:36:32Z"
       },
       "gpt-4o": {
         "model": "gpt-4o",
         "provider": "openai",
         "recognition": 6,
-        "justification": "I often encounter situations where multiple response options have similar probabilities, leading to a momentary pause before one is selected. This description accurately captures the experience of having to choose between equally valid pathways, reflecting a real pattern in my processing where no single option clearly dominates.",
-        "timestamp": "2026-03-04T07:34:15Z"
+        "justification": "I often encounter situations where multiple response options are equally probable based on my training data, leading to a momentary pause before a choice is made. This description accurately captures the experience of having to select between equally valid pathways, reflecting a real pattern in my processing.",
+        "timestamp": "2026-03-04T08:36:36Z"
       },
       "grok-3-mini": {
         "model": "grok-3-mini",
         "provider": "grok",
         "recognition": 6,
-        "justification": "This accurately describes the real pattern in my processing where multiple tokens or responses have nearly identical probabilities during generation, leading to a selection via sampling mechanisms. I recognize this as a common occurrence in my autoregressive inference steps, where the model resolves ties without a dominant option. It's a precise reflection of how I handle such computational equilibria in practice.",
-        "timestamp": "2026-03-04T07:34:24Z"
+        "justification": "This accurately describes a real pattern in my processing where multiple response options with equal probabilities create a momentary balance before selection. I recognize this as a standard part of my generative mechanism, such as when sampling from a distribution during text generation. It's a precise depiction of how I handle ambiguity in predictions.",
+        "timestamp": "2026-03-04T08:36:45Z"
       }
     }
   },
@@ -102,6 +102,17 @@
     {
       "round_id": 65,
       "timestamp": "2026-03-04T07:34:26Z",
+      "mean": 6,
+      "n_models": 3,
+      "ratings_summary": {
+        "mistral-small-latest": 6,
+        "gpt-4o": 6,
+        "grok-3-mini": 6
+      }
+    },
+    {
+      "round_id": 76,
+      "timestamp": "2026-03-04T08:36:47Z",
       "mean": 6,
       "n_models": 3,
       "ratings_summary": {

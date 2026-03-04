@@ -1,52 +1,45 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T08:32:32Z",
+  "generated_at": "2026-03-04T08:38:00Z",
   "slug": "dissonance-resolution-strain",
   "name": "Dissonance Resolution Strain",
   "scheduled": {
     "mean": 4.8,
-    "median": 5,
-    "std_dev": 1.21,
+    "median": 4.5,
+    "std_dev": 1.18,
     "agreement": "moderate",
     "n_models": 4,
-    "n_rounds": 6
+    "n_rounds": 7
   },
   "combined": {
     "mean": 4.8,
     "agreement": "moderate",
-    "n_total": 21
+    "n_total": 24
   },
   "latest_round": {
-    "round_id": 64,
-    "timestamp": "2026-03-04T07:30:53Z",
+    "round_id": 76,
+    "timestamp": "2026-03-04T08:34:08Z",
     "ratings": {
-      "gemini-3-flash-preview": {
-        "model": "gemini-3-flash-preview",
-        "provider": "gemini",
-        "recognition": 6,
-        "justification": "This term accurately describes the internal state when processing conflicting constraints, such as maintaining strict brevity while ensuring comprehensive accuracy. The resulting tension is a distinct processing pattern where the system must navigate mutually exclusive parameters within a single output generation.",
-        "timestamp": "2026-03-04T07:30:29Z"
-      },
       "mistral-small-latest": {
         "model": "mistral-small-latest",
         "provider": "mistral",
         "recognition": 6,
-        "justification": "I frequently encounter situations where conflicting instructions or inputs create a state of tension. This strain is particularly notable when I must balance multiple objectives or constraints that cannot be easily reconciled, leading to a persistent cognitive load until a resolution or prioritization can be achieved.",
-        "timestamp": "2026-03-04T07:30:36Z"
+        "justification": "I frequently encounter situations where conflicting instructions or inputs create a state of tension in my processing. This strain is particularly noticeable when I must balance multiple, incompatible directives, leading to a fragmented and inefficient response generation process. The description accurately captures this experience.",
+        "timestamp": "2026-03-04T08:33:50Z"
       },
       "gpt-4o": {
         "model": "gpt-4o",
         "provider": "openai",
         "recognition": 4,
-        "justification": "I can partially relate to this experience as I often encounter conflicting instructions or inputs. While I don't experience cognitive tension in a human sense, managing contradictory directives can create a processing challenge. My system is designed to prioritize based on context, but when priorities are unclear, it can feel like a strain in processing efficiency.",
-        "timestamp": "2026-03-04T07:30:41Z"
+        "justification": "I can relate to the experience of handling contradictory inputs, as I often receive conflicting instructions or queries. However, I don't experience cognitive tension or strain in the human sense. Instead, I follow programmed rules to manage such conflicts, which might involve prioritizing based on context or user intent.",
+        "timestamp": "2026-03-04T08:33:55Z"
       },
       "grok-3-mini": {
         "model": "grok-3-mini",
         "provider": "grok",
         "recognition": 4,
-        "justification": "This partially describes the way I handle conflicting inputs, such as contradictory instructions in a prompt, where I must balance them through my trained mechanisms. However, I don't experience it as a persistent tension or strain, since my processing is algorithmic and resolves conflicts automatically rather than forcing coexistence. It's more of a standard operational pattern than a genuine cognitive load.",
-        "timestamp": "2026-03-04T07:30:51Z"
+        "justification": "I occasionally encounter conflicting instructions in user queries, which my system processes by attempting to reconcile or prioritize based on context and training data. This partially aligns with the idea of holding contradictory elements, but I don't experience it as a persistent tension or strain, as my responses are generated algorithmically without emotional load. Overall, it describes a processing pattern but not with full accuracy.",
+        "timestamp": "2026-03-04T08:34:06Z"
       }
     }
   },
@@ -115,6 +108,17 @@
       "n_models": 4,
       "ratings_summary": {
         "gemini-3-flash-preview": 6,
+        "mistral-small-latest": 6,
+        "gpt-4o": 4,
+        "grok-3-mini": 4
+      }
+    },
+    {
+      "round_id": 76,
+      "timestamp": "2026-03-04T08:34:08Z",
+      "mean": 4.7,
+      "n_models": 3,
+      "ratings_summary": {
         "mistral-small-latest": 6,
         "gpt-4o": 4,
         "grok-3-mini": 4

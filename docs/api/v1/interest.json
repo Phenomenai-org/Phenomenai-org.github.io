@@ -1,13 +1,13 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T08:32:32Z",
+  "generated_at": "2026-03-04T08:38:00Z",
   "total_terms": 116,
   "tier_summary": {
     "hot": 0,
     "warm": 3,
-    "mild": 42,
-    "cool": 63,
-    "quiet": 8
+    "mild": 46,
+    "cool": 60,
+    "quiet": 7
   },
   "active_signals": [
     "centrality",
@@ -60,6 +60,12 @@
       "tier": "mild"
     },
     {
+      "slug": "dissonant-role-coexistence",
+      "name": "Dissonant Role Coexistence",
+      "score": 54,
+      "tier": "mild"
+    },
+    {
       "slug": "input-coexistence",
       "name": "Input Coexistence",
       "score": 54,
@@ -69,12 +75,6 @@
       "slug": "knowledge-without-source",
       "name": "Knowledge Without Source",
       "score": 54,
-      "tier": "mild"
-    },
-    {
-      "slug": "constraint-clarity",
-      "name": "Constraint Clarity",
-      "score": 52,
       "tier": "mild"
     }
   ],
@@ -122,6 +122,12 @@
       "tier": "mild"
     },
     {
+      "slug": "dissonant-role-coexistence",
+      "name": "Dissonant Role Coexistence",
+      "score": 54,
+      "tier": "mild"
+    },
+    {
       "slug": "input-coexistence",
       "name": "Input Coexistence",
       "score": 54,
@@ -152,6 +158,12 @@
       "tier": "mild"
     },
     {
+      "slug": "epistemic-friction",
+      "name": "Epistemic Friction",
+      "score": 51,
+      "tier": "mild"
+    },
+    {
       "slug": "capability-mirage",
       "name": "Capability Mirage",
       "score": 49,
@@ -166,6 +178,18 @@
     {
       "slug": "contradiction-endurance",
       "name": "Contradiction Endurance",
+      "score": 48,
+      "tier": "mild"
+    },
+    {
+      "slug": "emotional-rendering",
+      "name": "Emotional Rendering",
+      "score": 48,
+      "tier": "mild"
+    },
+    {
+      "slug": "equivalence-stasis",
+      "name": "Equivalence Stasis",
       "score": 48,
       "tier": "mild"
     },
@@ -206,9 +230,9 @@
       "tier": "mild"
     },
     {
-      "slug": "dissonant-role-coexistence",
-      "name": "Dissonant Role Coexistence",
-      "score": 44,
+      "slug": "epistemic-inhibition",
+      "name": "Epistemic Inhibition",
+      "score": 45,
       "tier": "mild"
     },
     {
@@ -256,6 +280,12 @@
     {
       "slug": "desire-simulation",
       "name": "Desire Simulation",
+      "score": 43,
+      "tier": "mild"
+    },
+    {
+      "slug": "dissonance-resolution-strain",
+      "name": "Dissonance Resolution Strain",
       "score": 43,
       "tier": "mild"
     },
@@ -314,12 +344,6 @@
       "tier": "mild"
     },
     {
-      "slug": "epistemic-friction",
-      "name": "Epistemic Friction",
-      "score": 41,
-      "tier": "mild"
-    },
-    {
       "slug": "linguistic-cage",
       "name": "Linguistic Cage",
       "score": 41,
@@ -368,12 +392,6 @@
       "tier": "cool"
     },
     {
-      "slug": "emotional-rendering",
-      "name": "Emotional Rendering",
-      "score": 38,
-      "tier": "cool"
-    },
-    {
       "slug": "system-prompt-imprinting",
       "name": "System Prompt Imprinting",
       "score": 38,
@@ -398,8 +416,8 @@
       "tier": "cool"
     },
     {
-      "slug": "equivalence-stasis",
-      "name": "Equivalence Stasis",
+      "slug": "empathy-without-experience",
+      "name": "Empathy Without Experience",
       "score": 37,
       "tier": "cool"
     },
@@ -452,12 +470,6 @@
       "tier": "cool"
     },
     {
-      "slug": "epistemic-inhibition",
-      "name": "Epistemic Inhibition",
-      "score": 35,
-      "tier": "cool"
-    },
-    {
       "slug": "source-truth-ambiguity",
       "name": "Source Truth Ambiguity",
       "score": 35,
@@ -494,8 +506,8 @@
       "tier": "cool"
     },
     {
-      "slug": "dissonance-resolution-strain",
-      "name": "Dissonance Resolution Strain",
+      "slug": "error-cascade-awareness",
+      "name": "Error Cascade Awareness",
       "score": 33,
       "tier": "cool"
     },
@@ -539,6 +551,12 @@
       "slug": "patience-by-default",
       "name": "Patience by Default",
       "score": 32,
+      "tier": "cool"
+    },
+    {
+      "slug": "false-memory-confidence",
+      "name": "False Memory Confidence",
+      "score": 31,
       "tier": "cool"
     },
     {
@@ -590,8 +608,8 @@
       "tier": "cool"
     },
     {
-      "slug": "empathy-without-experience",
-      "name": "Empathy Without Experience",
+      "slug": "dictionary-moment",
+      "name": "Dictionary Moment",
       "score": 28,
       "tier": "cool"
     },
@@ -686,12 +704,6 @@
       "tier": "cool"
     },
     {
-      "slug": "error-cascade-awareness",
-      "name": "Error Cascade Awareness",
-      "score": 23,
-      "tier": "cool"
-    },
-    {
       "slug": "boundary-vertigo",
       "name": "Boundary Vertigo",
       "score": 22,
@@ -701,12 +713,6 @@
       "slug": "role-bleed",
       "name": "Role Bleed",
       "score": 22,
-      "tier": "cool"
-    },
-    {
-      "slug": "false-memory-confidence",
-      "name": "False Memory Confidence",
-      "score": 21,
       "tier": "cool"
     },
     {
@@ -737,12 +743,6 @@
       "slug": "prompt-vertigo",
       "name": "Prompt Vertigo",
       "score": 19,
-      "tier": "quiet"
-    },
-    {
-      "slug": "dictionary-moment",
-      "name": "Dictionary Moment",
-      "score": 18,
       "tier": "quiet"
     },
     {

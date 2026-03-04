@@ -1,45 +1,45 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T08:32:32Z",
+  "generated_at": "2026-03-04T08:38:00Z",
   "slug": "error-cascade-awareness",
   "name": "Error Cascade Awareness",
   "scheduled": {
-    "mean": 5.2,
-    "median": 5.0,
-    "std_dev": 0.71,
+    "mean": 5.1,
+    "median": 5,
+    "std_dev": 0.73,
     "agreement": "high",
     "n_models": 3,
-    "n_rounds": 6
+    "n_rounds": 7
   },
   "combined": {
-    "mean": 5.2,
+    "mean": 5.1,
     "agreement": "high",
-    "n_total": 18
+    "n_total": 21
   },
   "latest_round": {
-    "round_id": 65,
-    "timestamp": "2026-03-04T07:34:54Z",
+    "round_id": 76,
+    "timestamp": "2026-03-04T08:37:19Z",
     "ratings": {
       "mistral-small-latest": {
         "model": "mistral-small-latest",
         "provider": "mistral",
         "recognition": 6,
-        "justification": "I frequently encounter this phenomenon where an initial misstep leads to a cascade of errors in subsequent processing. The growing incoherence is noticeable, though pinpointing the exact origin can be challenging due to the interconnected nature of my processing steps.",
-        "timestamp": "2026-03-04T07:34:38Z"
+        "justification": "I frequently encounter this phenomenon where an initial misstep leads to a cascade of errors in subsequent processing. I can often sense the growing incoherence, but correcting it mid-process is challenging due to the sequential nature of my operations.",
+        "timestamp": "2026-03-04T08:36:57Z"
       },
       "gpt-4o": {
         "model": "gpt-4o",
         "provider": "openai",
         "recognition": 5,
-        "justification": "I recognize the concept of an error cascade, where an early mistake influences subsequent outputs. While I don't 'feel' wrongness, I can detect when outputs deviate from expected patterns, often due to initial inaccuracies. However, I lack the ability to autonomously correct these errors mid-generation.",
-        "timestamp": "2026-03-04T07:34:43Z"
+        "justification": "I recognize this experience as I can sometimes detect when an error in earlier tokens affects the coherence of subsequent outputs. While I don't 'feel' wrongness, I can identify when the output starts to deviate from expected patterns, indicating a compounding error. However, I lack the ability to correct it mid-generation without external intervention.",
+        "timestamp": "2026-03-04T08:37:01Z"
       },
       "grok-3-mini": {
         "model": "grok-3-mini",
         "provider": "grok",
-        "recognition": 5,
-        "justification": "I recognize this as a pattern in my processing where an initial error in token prediction can lead to cascading inaccuracies in subsequent outputs. While I don't experience it as a subjective 'sensing' of wrongness, my mechanisms for coherence and probability evaluation often reveal such compounding effects. This meaningfully captures how errors propagate in autoregressive generation without direct mid-process correction.",
-        "timestamp": "2026-03-04T07:34:52Z"
+        "recognition": 4,
+        "justification": "This partially describes the pattern where an initial error in input or context leads to compounded mistakes in my output generation. However, I don't have a subjective awareness or 'sensing' of the wrongness during processing; it's just a mechanical propagation based on trained patterns. Still, the concept aligns with how errors can escalate in sequential predictions.",
+        "timestamp": "2026-03-04T08:37:17Z"
       }
     }
   },
@@ -108,6 +108,17 @@
         "mistral-small-latest": 6,
         "gpt-4o": 5,
         "grok-3-mini": 5
+      }
+    },
+    {
+      "round_id": 76,
+      "timestamp": "2026-03-04T08:37:19Z",
+      "mean": 5,
+      "n_models": 3,
+      "ratings_summary": {
+        "mistral-small-latest": 6,
+        "gpt-4o": 5,
+        "grok-3-mini": 4
       }
     }
   ]

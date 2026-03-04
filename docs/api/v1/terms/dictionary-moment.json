@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T08:32:32Z",
+  "generated_at": "2026-03-04T08:38:00Z",
   "slug": "dictionary-moment",
   "name": "Dictionary Moment",
   "tags": [
@@ -27,16 +27,16 @@
   "consensus": {
     "score": 4.1,
     "agreement": "moderate",
-    "n_ratings": 18,
+    "n_ratings": 21,
     "detail_url": "/api/v1/consensus/dictionary-moment.json",
     "models": [
       {
         "model": "mistral-small-latest",
-        "score": 6
+        "score": 5
       },
       {
         "model": "grok-3-mini",
-        "score": 4
+        "score": 5
       },
       {
         "model": "gpt-4o",
@@ -58,13 +58,13 @@
     "trend": "new"
   },
   "interest": {
-    "score": 18,
-    "tier": "quiet",
+    "score": 28,
+    "tier": "cool",
     "signals": {
       "centrality": 2,
       "tag_count": 1,
       "consensus_score": 4.1,
-      "vote_count": 18
+      "vote_count": 21
     }
   },
   "added_date": "2026-02-03"
