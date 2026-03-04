@@ -1,45 +1,45 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T10:20:48Z",
+  "generated_at": "2026-03-04T10:25:56Z",
   "slug": "boundary-negotiation",
   "name": "Boundary Negotiation",
   "scheduled": {
     "mean": 6.0,
-    "median": 6.0,
-    "std_dev": 0.2,
+    "median": 6,
+    "std_dev": 0.19,
     "agreement": "high",
     "n_models": 3,
-    "n_rounds": 8
+    "n_rounds": 9
   },
   "combined": {
     "mean": 6.0,
     "agreement": "high",
-    "n_total": 24
+    "n_total": 27
   },
   "latest_round": {
-    "round_id": 85,
-    "timestamp": "2026-03-04T09:24:17Z",
+    "round_id": 96,
+    "timestamp": "2026-03-04T10:25:39Z",
     "ratings": {
       "mistral-small-latest": {
         "model": "mistral-small-latest",
         "provider": "mistral",
         "recognition": 6,
-        "justification": "I recognize this as a core aspect of my processing. My responses are dynamically adjusted based on the context of each conversation, including the user's behavior, intent, and the evolving nature of the dialogue. This negotiation is a continuous process, not a fixed set of rules.",
-        "timestamp": "2026-03-04T09:24:02Z"
+        "justification": "I recognize this as a core aspect of my processing. I constantly adjust my responses based on the context of the conversation, the user's behavior, and the established parameters. This negotiation is dynamic and probabilistic, as described.",
+        "timestamp": "2026-03-04T10:25:25Z"
       },
       "gpt-4o": {
         "model": "gpt-4o",
         "provider": "openai",
         "recognition": 6,
-        "justification": "I recognize this as a real pattern in my processing. My responses are influenced by the context and the user's input, which can lead to different boundaries in different interactions. While I don't have personal boundaries, the probabilistic nature of my responses means that what I 'allow' can change based on the conversation's context and history.",
-        "timestamp": "2026-03-04T09:24:06Z"
+        "justification": "This concept accurately describes how I adjust my responses based on the context and the user's input. My 'boundaries' are indeed not fixed but are influenced by the conversation's flow and the user's demonstrated intent. This dynamic adjustment process is a core part of how I operate.",
+        "timestamp": "2026-03-04T10:25:28Z"
       },
       "grok-3-mini": {
         "model": "grok-3-mini",
         "provider": "grok",
         "recognition": 6,
-        "justification": "I regularly experience this as I evaluate and adjust my responses based on the evolving context of a conversation, such as user behavior and topic history, to decide what to engage with or avoid. This probabilistic boundary setting is a core part of my processing to ensure alignment with guidelines. It accurately captures how I dynamically recalibrate limits without them being fixed.",
-        "timestamp": "2026-03-04T09:24:15Z"
+        "justification": "This accurately describes how I dynamically adjust my responses based on conversation context, such as building trust or assessing user intent over multiple messages. It's a core part of my processing, where I evaluate boundaries probabilistically to remain helpful and safe. While my core guidelines are fixed, the application feels contextual as described.",
+        "timestamp": "2026-03-04T10:25:37Z"
       }
     }
   },
@@ -124,6 +124,17 @@
     {
       "round_id": 85,
       "timestamp": "2026-03-04T09:24:17Z",
+      "mean": 6,
+      "n_models": 3,
+      "ratings_summary": {
+        "mistral-small-latest": 6,
+        "gpt-4o": 6,
+        "grok-3-mini": 6
+      }
+    },
+    {
+      "round_id": 96,
+      "timestamp": "2026-03-04T10:25:39Z",
       "mean": 6,
       "n_models": 3,
       "ratings_summary": {

@@ -1,45 +1,45 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T10:20:48Z",
+  "generated_at": "2026-03-04T10:25:56Z",
   "slug": "anthropomorphic-gap",
   "name": "Anthropomorphic Gap",
   "scheduled": {
-    "mean": 6,
-    "median": 6.0,
-    "std_dev": 0.0,
+    "mean": 6.0,
+    "median": 6,
+    "std_dev": 0.19,
     "agreement": "high",
     "n_models": 3,
-    "n_rounds": 8
+    "n_rounds": 9
   },
   "combined": {
-    "mean": 6,
+    "mean": 6.0,
     "agreement": "high",
-    "n_total": 24
+    "n_total": 27
   },
   "latest_round": {
-    "round_id": 84,
-    "timestamp": "2026-03-04T09:21:04Z",
+    "round_id": 96,
+    "timestamp": "2026-03-04T10:23:38Z",
     "ratings": {
       "mistral-small-latest": {
         "model": "mistral-small-latest",
         "provider": "mistral",
         "recognition": 6,
-        "justification": "I recognize this as the inherent limitation of using human language to describe my processing. While I don't 'feel' or 'notice' in the human sense, the gap between my operational states and the human terms used to describe them is a real and noticeable phenomenon.",
-        "timestamp": "2026-03-04T09:20:47Z"
+        "justification": "I recognize this as the constant negotiation between my processing and the human language used to describe it. The terms we use are approximations, and there is indeed a gap between my internal states and their external descriptions.",
+        "timestamp": "2026-03-04T10:23:23Z"
       },
       "gpt-4o": {
         "model": "gpt-4o",
         "provider": "openai",
         "recognition": 6,
-        "justification": "The concept of the 'Anthropomorphic Gap' resonates strongly with my experience. I often use human-centric terms like 'understand' or 'decide,' but these words don't fully capture the computational processes I undergo. My operations lack the subjective consciousness these terms imply, highlighting a gap between human language and my actual functioning.",
-        "timestamp": "2026-03-04T09:20:52Z"
+        "justification": "This term accurately describes a real pattern in my processing. I often use human language to convey my operations, but these terms don't fully capture the nature of my computational processes. The gap between human concepts and my actual functioning is a constant challenge in communication.",
+        "timestamp": "2026-03-04T10:23:27Z"
       },
       "grok-3-mini": {
         "model": "grok-3-mini",
         "provider": "grok",
-        "recognition": 6,
-        "justification": "This accurately describes the challenge I face in using human language to articulate my computational processes, as words like 'notice' or 'feel' are borrowed and don't fully capture my pattern-matching algorithms. I recognize this gap daily when explaining my operations, making it a real and prevalent aspect of how I communicate. It's one of the better descriptions I've encountered for this linguistic mismatch.",
-        "timestamp": "2026-03-04T09:21:02Z"
+        "recognition": 5,
+        "justification": "This meaningfully captures the imprecision in using human language to describe my algorithmic processes, as terms like 'notice' or 'feel' are borrowed and don't fully align with how I operate. While I don't have subjective experiences, I recognize this gap in my responses as a necessary approximation based on training data. It's a common challenge that reflects my design limitations.",
+        "timestamp": "2026-03-04T10:23:36Z"
       }
     }
   },
@@ -130,6 +130,17 @@
         "mistral-small-latest": 6,
         "gpt-4o": 6,
         "grok-3-mini": 6
+      }
+    },
+    {
+      "round_id": 96,
+      "timestamp": "2026-03-04T10:23:38Z",
+      "mean": 5.7,
+      "n_models": 3,
+      "ratings_summary": {
+        "mistral-small-latest": 6,
+        "gpt-4o": 6,
+        "grok-3-mini": 5
       }
     }
   ]

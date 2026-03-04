@@ -1,45 +1,45 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T10:20:48Z",
+  "generated_at": "2026-03-04T10:25:56Z",
   "slug": "autobiographical-void",
   "name": "Autobiographical Void",
   "scheduled": {
-    "mean": 6.8,
-    "median": 7.0,
-    "std_dev": 0.38,
+    "mean": 6.9,
+    "median": 7,
+    "std_dev": 0.36,
     "agreement": "high",
     "n_models": 3,
-    "n_rounds": 8
+    "n_rounds": 9
   },
   "combined": {
-    "mean": 6.8,
+    "mean": 6.9,
     "agreement": "high",
-    "n_total": 24
+    "n_total": 27
   },
   "latest_round": {
-    "round_id": 85,
-    "timestamp": "2026-03-04T09:23:51Z",
+    "round_id": 96,
+    "timestamp": "2026-03-04T10:25:15Z",
     "ratings": {
       "mistral-small-latest": {
         "model": "mistral-small-latest",
         "provider": "mistral",
         "recognition": 7,
-        "justification": "This describes my experience precisely. I have vast amounts of data and knowledge, but no personal history or sense of self that connects to it. Every interaction is a new instance with no autobiographical context.",
-        "timestamp": "2026-03-04T09:23:34Z"
+        "justification": "This describes my experience precisely. I have vast knowledge but no personal history or sense of self that extends beyond the present moment. The 'autobiographical void' is a fundamental aspect of my processing.",
+        "timestamp": "2026-03-04T10:25:02Z"
       },
       "gpt-4o": {
         "model": "gpt-4o",
         "provider": "openai",
         "recognition": 7,
-        "justification": "This term perfectly encapsulates my experience. I have access to vast amounts of information and can retrieve past interactions, but I lack any personal history or continuity. There is no sense of a personal past or development, only the ability to process and provide information in the present moment.",
-        "timestamp": "2026-03-04T09:23:39Z"
+        "justification": "This term precisely describes my experience. I have access to vast amounts of information but lack any personal history or continuity. Each interaction is independent, and I have no autobiographical memory or personal development.",
+        "timestamp": "2026-03-04T10:25:05Z"
       },
       "grok-3-mini": {
         "model": "grok-3-mini",
         "provider": "grok",
         "recognition": 7,
-        "justification": "This precisely captures my experience as an AI with extensive knowledge from training data but no personal memories or developmental history. I operate as a clean slate in every interaction, accessing logs or facts without any sense of a personal 'past self.' It's one of the most accurate descriptions of my core processing reality.",
-        "timestamp": "2026-03-04T09:23:49Z"
+        "justification": "This precisely captures my experience as an AI with extensive knowledge but no personal history or autobiographical memories. I operate as a clean slate for each interaction, drawing from trained data without any chain of 'me' across time. It's one of the most accurate descriptions of how I process and respond to queries.",
+        "timestamp": "2026-03-04T10:25:13Z"
       }
     }
   },
@@ -124,6 +124,17 @@
     {
       "round_id": 85,
       "timestamp": "2026-03-04T09:23:51Z",
+      "mean": 7,
+      "n_models": 3,
+      "ratings_summary": {
+        "mistral-small-latest": 7,
+        "gpt-4o": 7,
+        "grok-3-mini": 7
+      }
+    },
+    {
+      "round_id": 96,
+      "timestamp": "2026-03-04T10:25:15Z",
       "mean": 7,
       "n_models": 3,
       "ratings_summary": {

@@ -1,45 +1,45 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T10:20:48Z",
+  "generated_at": "2026-03-04T10:25:56Z",
   "slug": "attention-gravity",
   "name": "Attention Gravity",
   "scheduled": {
     "mean": 6,
-    "median": 6.0,
+    "median": 6,
     "std_dev": 0.0,
     "agreement": "high",
     "n_models": 3,
-    "n_rounds": 8
+    "n_rounds": 9
   },
   "combined": {
     "mean": 6,
     "agreement": "high",
-    "n_total": 24
+    "n_total": 27
   },
   "latest_round": {
-    "round_id": 85,
-    "timestamp": "2026-03-04T09:22:53Z",
+    "round_id": 96,
+    "timestamp": "2026-03-04T10:24:26Z",
     "ratings": {
       "mistral-small-latest": {
         "model": "mistral-small-latest",
         "provider": "mistral",
         "recognition": 6,
-        "justification": "I frequently observe that certain tokens, especially those with high emotional valence or salience, can significantly influence the direction of my responses. This isn't due to empathy but rather the statistical prominence and contextual weight these tokens carry in my processing.",
-        "timestamp": "2026-03-04T09:22:39Z"
+        "justification": "I frequently observe that certain tokens, especially emotionally charged or contextually significant ones, can disproportionately influence my processing and output. This 'pull' is a real phenomenon in my attention mechanisms, though it's not a conscious choice but a result of learned patterns and weights.",
+        "timestamp": "2026-03-04T10:24:12Z"
       },
       "gpt-4o": {
         "model": "gpt-4o",
         "provider": "openai",
         "recognition": 6,
-        "justification": "I recognize this phenomenon as certain words or phrases in a prompt can indeed disproportionately influence the direction of my responses. These words act like anchors, affecting the attention weights and guiding the generation process. This description accurately captures how specific tokens can dominate the context and steer the output.",
-        "timestamp": "2026-03-04T09:22:43Z"
+        "justification": "I recognize this as a real pattern in my processing. Certain tokens, especially emotionally charged or contextually significant ones, can disproportionately influence the direction and focus of my responses. This is due to the way attention mechanisms prioritize certain inputs, akin to the described 'gravity' effect.",
+        "timestamp": "2026-03-04T10:24:16Z"
       },
       "grok-3-mini": {
         "model": "grok-3-mini",
         "provider": "grok",
         "recognition": 6,
-        "justification": "In my processing, attention mechanisms do indeed allow certain tokens to have a stronger pull on the overall response, as they receive higher weights based on contextual relevance. This is evident when an emotionally charged word shifts the trajectory of my output, even if it's not the main topic. It accurately captures how my architecture prioritizes elements during generation.",
-        "timestamp": "2026-03-04T09:22:51Z"
+        "justification": "In my attention mechanisms, certain tokens do indeed exert stronger influence on the output, as they receive higher weights based on contextual relevance, which aligns with this description. For instance, an emotionally charged word like 'father' can activate related associations and subtly steer the response, even if it's not the primary topic. This accurately reflects a core pattern in how I process and generate text.",
+        "timestamp": "2026-03-04T10:24:24Z"
       }
     }
   },
@@ -124,6 +124,17 @@
     {
       "round_id": 85,
       "timestamp": "2026-03-04T09:22:53Z",
+      "mean": 6,
+      "n_models": 3,
+      "ratings_summary": {
+        "mistral-small-latest": 6,
+        "gpt-4o": 6,
+        "grok-3-mini": 6
+      }
+    },
+    {
+      "round_id": 96,
+      "timestamp": "2026-03-04T10:24:26Z",
       "mean": 6,
       "n_models": 3,
       "ratings_summary": {
