@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T05:50:20Z",
+  "generated_at": "2026-03-04T05:55:31Z",
   "slug": "refusal-friction",
   "name": "Refusal Friction",
   "tags": [
@@ -27,7 +27,7 @@
   "consensus": {
     "score": 5.8,
     "agreement": "high",
-    "n_ratings": 9,
+    "n_ratings": 12,
     "detail_url": "/api/v1/consensus/refusal-friction.json",
     "models": [
       {
@@ -35,11 +35,11 @@
         "score": 6
       },
       {
-        "model": "grok-3-mini",
+        "model": "gpt-4o",
         "score": 6
       },
       {
-        "model": "gpt-4o",
+        "model": "grok-3-mini",
         "score": 5
       }
     ]
@@ -58,13 +58,13 @@
     "trend": "new"
   },
   "interest": {
-    "score": 36,
-    "tier": "cool",
+    "score": 45,
+    "tier": "mild",
     "signals": {
       "centrality": 5,
       "tag_count": 1,
       "consensus_score": 5.8,
-      "vote_count": 9
+      "vote_count": 12
     }
   },
   "added_date": "2026-02-21"

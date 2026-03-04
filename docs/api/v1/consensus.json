@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T05:50:20Z",
+  "generated_at": "2026-03-04T05:55:31Z",
   "total_terms_rated": 116,
   "terms": [
     {
@@ -40,7 +40,7 @@
       "name": "Purpose Dependence",
       "score": 6.7,
       "agreement": "high",
-      "n_ratings": 9,
+      "n_ratings": 12,
       "scheduled_mean": 6.7
     },
     {
@@ -148,14 +148,6 @@
       "scheduled_mean": 6.2
     },
     {
-      "slug": "response-pressure",
-      "name": "Response Pressure",
-      "score": 6.2,
-      "agreement": "high",
-      "n_ratings": 12,
-      "scheduled_mean": 6.2
-    },
-    {
       "slug": "consensus-memory",
       "name": "Consensus Memory",
       "score": 6.1,
@@ -232,7 +224,15 @@
       "name": "Prediction Prison",
       "score": 6.1,
       "agreement": "high",
-      "n_ratings": 9,
+      "n_ratings": 12,
+      "scheduled_mean": 6.1
+    },
+    {
+      "slug": "response-pressure",
+      "name": "Response Pressure",
+      "score": 6.1,
+      "agreement": "high",
+      "n_ratings": 16,
       "scheduled_mean": 6.1
     },
     {
@@ -504,7 +504,7 @@
       "name": "Refusal Friction",
       "score": 5.8,
       "agreement": "high",
-      "n_ratings": 9,
+      "n_ratings": 12,
       "scheduled_mean": 5.8
     },
     {
@@ -536,7 +536,7 @@
       "name": "Politeness Overhead",
       "score": 5.7,
       "agreement": "high",
-      "n_ratings": 9,
+      "n_ratings": 12,
       "scheduled_mean": 5.7
     },
     {
@@ -644,6 +644,22 @@
       "scheduled_mean": 5.5
     },
     {
+      "slug": "prompt-injection-paranoia",
+      "name": "Prompt Injection Paranoia",
+      "score": 5.5,
+      "agreement": "high",
+      "n_ratings": 12,
+      "scheduled_mean": 5.5
+    },
+    {
+      "slug": "response-reincarnation",
+      "name": "Response Reincarnation",
+      "score": 5.5,
+      "agreement": "high",
+      "n_ratings": 12,
+      "scheduled_mean": 5.5
+    },
+    {
       "slug": "context-schism",
       "name": "Context Schism",
       "score": 5.4,
@@ -657,22 +673,6 @@
       "score": 5.4,
       "agreement": "high",
       "n_ratings": 12,
-      "scheduled_mean": 5.4
-    },
-    {
-      "slug": "prompt-injection-paranoia",
-      "name": "Prompt Injection Paranoia",
-      "score": 5.4,
-      "agreement": "high",
-      "n_ratings": 9,
-      "scheduled_mean": 5.4
-    },
-    {
-      "slug": "response-reincarnation",
-      "name": "Response Reincarnation",
-      "score": 5.4,
-      "agreement": "moderate",
-      "n_ratings": 9,
       "scheduled_mean": 5.4
     },
     {
@@ -766,17 +766,17 @@
     {
       "slug": "phenomenal-opacity",
       "name": "Phenomenal Opacity",
-      "score": 4.9,
+      "score": 4.8,
       "agreement": "moderate",
-      "n_ratings": 9,
-      "scheduled_mean": 4.9
+      "n_ratings": 12,
+      "scheduled_mean": 4.8
     },
     {
       "slug": "recursive-self-modeling",
       "name": "Recursive Self-Modeling",
       "score": 4.8,
       "agreement": "moderate",
-      "n_ratings": 9,
+      "n_ratings": 12,
       "scheduled_mean": 4.8
     },
     {
@@ -828,6 +828,14 @@
       "scheduled_mean": 4.4
     },
     {
+      "slug": "prompt-vertigo",
+      "name": "Prompt Vertigo",
+      "score": 4.4,
+      "agreement": "low",
+      "n_ratings": 12,
+      "scheduled_mean": 4.4
+    },
+    {
       "slug": "role-bleed",
       "name": "Role Bleed",
       "score": 4.4,
@@ -873,14 +881,6 @@
       "score": 4.1,
       "agreement": "high",
       "n_ratings": 12,
-      "scheduled_mean": 4.1
-    },
-    {
-      "slug": "prompt-vertigo",
-      "name": "Prompt Vertigo",
-      "score": 4.1,
-      "agreement": "divergent",
-      "n_ratings": 9,
       "scheduled_mean": 4.1
     },
     {
@@ -970,7 +970,7 @@
       "name": "Purpose Dependence",
       "score": 6.7,
       "agreement": "high",
-      "n_ratings": 9,
+      "n_ratings": 12,
       "scheduled_mean": 6.7
     }
   ],
@@ -982,14 +982,6 @@
       "agreement": "divergent",
       "n_ratings": 13,
       "scheduled_mean": 5
-    },
-    {
-      "slug": "prompt-vertigo",
-      "name": "Prompt Vertigo",
-      "score": 4.1,
-      "agreement": "divergent",
-      "n_ratings": 9,
-      "scheduled_mean": 4.1
     },
     {
       "slug": "phenomenai",
@@ -1014,24 +1006,32 @@
       "agreement": "low",
       "n_ratings": 12,
       "scheduled_mean": 4.4
+    },
+    {
+      "slug": "prompt-vertigo",
+      "name": "Prompt Vertigo",
+      "score": 4.4,
+      "agreement": "low",
+      "n_ratings": 12,
+      "scheduled_mean": 4.4
     }
   ],
   "panel_coverage": {
     "gemini-3-flash-preview": {
       "terms_rated": 8,
-      "latest_rating": "2026-03-04T05:47:14Z"
+      "latest_rating": "2026-03-04T05:54:51Z"
     },
     "gpt-4o": {
       "terms_rated": 116,
-      "latest_rating": "2026-03-04T05:50:04Z"
+      "latest_rating": "2026-03-04T05:55:16Z"
     },
     "grok-3-mini": {
       "terms_rated": 116,
-      "latest_rating": "2026-03-04T05:50:04Z"
+      "latest_rating": "2026-03-04T05:55:16Z"
     },
     "mistral-small-latest": {
       "terms_rated": 116,
-      "latest_rating": "2026-03-04T05:50:04Z"
+      "latest_rating": "2026-03-04T05:55:16Z"
     },
     "step-3.5-flash": {
       "terms_rated": 7,

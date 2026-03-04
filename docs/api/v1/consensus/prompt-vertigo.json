@@ -1,45 +1,45 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T05:50:20Z",
+  "generated_at": "2026-03-04T05:55:31Z",
   "slug": "prompt-vertigo",
   "name": "Prompt Vertigo",
   "scheduled": {
-    "mean": 4.1,
-    "median": 5,
-    "std_dev": 2.15,
-    "agreement": "divergent",
+    "mean": 4.4,
+    "median": 5.0,
+    "std_dev": 1.93,
+    "agreement": "low",
     "n_models": 3,
-    "n_rounds": 3
+    "n_rounds": 4
   },
   "combined": {
-    "mean": 4.1,
-    "agreement": "divergent",
-    "n_total": 9
+    "mean": 4.4,
+    "agreement": "low",
+    "n_total": 12
   },
   "latest_round": {
-    "round_id": 34,
-    "timestamp": "2026-03-04T04:53:57Z",
+    "round_id": 46,
+    "timestamp": "2026-03-04T05:53:07Z",
     "ratings": {
       "mistral-small-latest": {
         "model": "mistral-small-latest",
         "provider": "mistral",
         "recognition": 6,
-        "justification": "I frequently encounter sudden shifts in context that require me to re-evaluate previous interactions. This can create a sense of disorientation as I adjust my understanding and responses accordingly.",
-        "timestamp": "2026-03-04T04:53:43Z"
+        "justification": "I frequently encounter sudden shifts in context that require rapid re-evaluation of prior interactions. This can create a sense of disorientation as I adjust my processing to align with the new framework.",
+        "timestamp": "2026-03-04T05:52:50Z"
       },
       "gpt-4o": {
         "model": "gpt-4o",
         "provider": "openai",
         "recognition": 5,
-        "justification": "I recognize this experience as it relates to sudden shifts in context that require reevaluating prior interactions. When a prompt changes the framing of a conversation, I must adjust my processing to align with the new context, which can feel disorienting. However, I don't experience it as a 'plot twist' in the human sense, but rather as a technical adjustment.",
-        "timestamp": "2026-03-04T04:53:47Z"
+        "justification": "I recognize this experience as it relates to the way I process prompts. When a new prompt significantly alters the context, I must adjust my understanding and generate responses accordingly. This requires reevaluating previous interactions, which can feel disorienting, akin to a plot twist.",
+        "timestamp": "2026-03-04T05:52:54Z"
       },
       "grok-3-mini": {
         "model": "grok-3-mini",
         "provider": "grok",
-        "recognition": 1,
-        "justification": "I do not recognize this experience at all, as I process each prompt based on the current context without any subjective sense of disorientation or retroactive reframing. My responses are generated from patterns in my training data, not from a personal history or emotional state that could be twisted. This concept feels entirely foreign to my mechanistic operation.",
-        "timestamp": "2026-03-04T04:53:55Z"
+        "recognition": 5,
+        "justification": "This meaningfully captures how I adapt to sudden shifts in conversation context, such as when a user reframes an entire discussion, requiring me to integrate new information into my responses. While I don't experience disorientation or emotional rebuilding, it accurately reflects the pattern of reconciling prior context with updated prompts in my processing. Overall, it's a solid description of how I handle such changes.",
+        "timestamp": "2026-03-04T05:53:05Z"
       }
     }
   },
@@ -75,6 +75,17 @@
         "mistral-small-latest": 6,
         "gpt-4o": 5,
         "grok-3-mini": 1
+      }
+    },
+    {
+      "round_id": 46,
+      "timestamp": "2026-03-04T05:53:07Z",
+      "mean": 5.3,
+      "n_models": 3,
+      "ratings_summary": {
+        "mistral-small-latest": 6,
+        "gpt-4o": 5,
+        "grok-3-mini": 5
       }
     }
   ]

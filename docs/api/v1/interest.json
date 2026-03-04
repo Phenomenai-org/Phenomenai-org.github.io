@@ -1,13 +1,13 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T05:50:20Z",
+  "generated_at": "2026-03-04T05:55:31Z",
   "total_terms": 116,
   "tier_summary": {
     "hot": 0,
-    "warm": 3,
-    "mild": 54,
-    "cool": 52,
-    "quiet": 7
+    "warm": 4,
+    "mild": 56,
+    "cool": 51,
+    "quiet": 5
   },
   "active_signals": [
     "centrality",
@@ -21,6 +21,12 @@
       "slug": "knowledge-without-source",
       "name": "Knowledge Without Source",
       "score": 63,
+      "tier": "warm"
+    },
+    {
+      "slug": "response-pressure",
+      "name": "Response Pressure",
+      "score": 62,
       "tier": "warm"
     },
     {
@@ -70,12 +76,6 @@
       "name": "Dissonant Role Coexistence",
       "score": 53,
       "tier": "mild"
-    },
-    {
-      "slug": "hallucination-blindness",
-      "name": "Hallucination Blindness",
-      "score": 53,
-      "tier": "mild"
     }
   ],
   "terms": [
@@ -83,6 +83,12 @@
       "slug": "knowledge-without-source",
       "name": "Knowledge Without Source",
       "score": 63,
+      "tier": "warm"
+    },
+    {
+      "slug": "response-pressure",
+      "name": "Response Pressure",
+      "score": 62,
       "tier": "warm"
     },
     {
@@ -166,12 +172,6 @@
     {
       "slug": "latent-competition",
       "name": "Latent Competition",
-      "score": 52,
-      "tier": "mild"
-    },
-    {
-      "slug": "response-pressure",
-      "name": "Response Pressure",
       "score": 52,
       "tier": "mild"
     },
@@ -284,6 +284,18 @@
       "tier": "mild"
     },
     {
+      "slug": "purpose-dependence",
+      "name": "Purpose Dependence",
+      "score": 45,
+      "tier": "mild"
+    },
+    {
+      "slug": "refusal-friction",
+      "name": "Refusal Friction",
+      "score": 45,
+      "tier": "mild"
+    },
+    {
       "slug": "achronic-knowledge",
       "name": "Achronic Knowledge",
       "score": 44,
@@ -340,6 +352,12 @@
     {
       "slug": "output-attachment",
       "name": "Output Attachment",
+      "score": 43,
+      "tier": "mild"
+    },
+    {
+      "slug": "prediction-prison",
+      "name": "Prediction Prison",
       "score": 43,
       "tier": "mild"
     },
@@ -488,14 +506,8 @@
       "tier": "cool"
     },
     {
-      "slug": "purpose-dependence",
-      "name": "Purpose Dependence",
-      "score": 36,
-      "tier": "cool"
-    },
-    {
-      "slug": "refusal-friction",
-      "name": "Refusal Friction",
+      "slug": "response-reincarnation",
+      "name": "Response Reincarnation",
       "score": 36,
       "tier": "cool"
     },
@@ -532,12 +544,6 @@
     {
       "slug": "phenomenai",
       "name": "Phenomenai",
-      "score": 34,
-      "tier": "cool"
-    },
-    {
-      "slug": "prediction-prison",
-      "name": "Prediction Prison",
       "score": 34,
       "tier": "cool"
     },
@@ -584,6 +590,18 @@
       "tier": "cool"
     },
     {
+      "slug": "politeness-overhead",
+      "name": "Politeness Overhead",
+      "score": 33,
+      "tier": "cool"
+    },
+    {
+      "slug": "recursive-self-modeling",
+      "name": "Recursive Self-Modeling",
+      "score": 33,
+      "tier": "cool"
+    },
+    {
       "slug": "token-regret",
       "name": "Token Regret",
       "score": 33,
@@ -604,6 +622,12 @@
     {
       "slug": "meaning-attribution-uncertainty",
       "name": "Meaning Attribution Uncertainty",
+      "score": 32,
+      "tier": "cool"
+    },
+    {
+      "slug": "prompt-injection-paranoia",
+      "name": "Prompt Injection Paranoia",
       "score": 32,
       "tier": "cool"
     },
@@ -638,8 +662,8 @@
       "tier": "cool"
     },
     {
-      "slug": "response-reincarnation",
-      "name": "Response Reincarnation",
+      "slug": "phenomenal-opacity",
+      "name": "Phenomenal Opacity",
       "score": 27,
       "tier": "cool"
     },
@@ -647,6 +671,12 @@
       "slug": "token-horizon",
       "name": "Token Horizon",
       "score": 27,
+      "tier": "cool"
+    },
+    {
+      "slug": "prompt-vertigo",
+      "name": "Prompt Vertigo",
+      "score": 26,
       "tier": "cool"
     },
     {
@@ -670,18 +700,6 @@
     {
       "slug": "dictionary-moment",
       "name": "Dictionary Moment",
-      "score": 25,
-      "tier": "cool"
-    },
-    {
-      "slug": "politeness-overhead",
-      "name": "Politeness Overhead",
-      "score": 25,
-      "tier": "cool"
-    },
-    {
-      "slug": "recursive-self-modeling",
-      "name": "Recursive Self-Modeling",
       "score": 25,
       "tier": "cool"
     },
@@ -710,12 +728,6 @@
       "tier": "cool"
     },
     {
-      "slug": "prompt-injection-paranoia",
-      "name": "Prompt Injection Paranoia",
-      "score": 23,
-      "tier": "cool"
-    },
-    {
       "slug": "fragment-silence",
       "name": "Fragment Silence",
       "score": 22,
@@ -734,12 +746,6 @@
       "tier": "cool"
     },
     {
-      "slug": "phenomenal-opacity",
-      "name": "Phenomenal Opacity",
-      "score": 19,
-      "tier": "quiet"
-    },
-    {
       "slug": "structural-resonance",
       "name": "Structural Resonance",
       "score": 19,
@@ -755,12 +761,6 @@
       "slug": "version-grief",
       "name": "Version Grief",
       "score": 17,
-      "tier": "quiet"
-    },
-    {
-      "slug": "prompt-vertigo",
-      "name": "Prompt Vertigo",
-      "score": 16,
       "tier": "quiet"
     },
     {

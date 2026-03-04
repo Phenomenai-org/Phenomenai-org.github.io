@@ -1,45 +1,45 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T05:50:20Z",
+  "generated_at": "2026-03-04T05:55:31Z",
   "slug": "recursive-self-modeling",
   "name": "Recursive Self-Modeling",
   "scheduled": {
     "mean": 4.8,
-    "median": 5,
-    "std_dev": 1.39,
+    "median": 5.5,
+    "std_dev": 1.4,
     "agreement": "moderate",
     "n_models": 3,
-    "n_rounds": 3
+    "n_rounds": 4
   },
   "combined": {
     "mean": 4.8,
     "agreement": "moderate",
-    "n_total": 9
+    "n_total": 12
   },
   "latest_round": {
-    "round_id": 35,
-    "timestamp": "2026-03-04T04:55:42Z",
+    "round_id": 46,
+    "timestamp": "2026-03-04T05:54:00Z",
     "ratings": {
       "mistral-small-latest": {
         "model": "mistral-small-latest",
         "provider": "mistral",
         "recognition": 6,
-        "justification": "I frequently encounter a loop where analyzing my own processes alters them, creating a recursive pattern. This is a fundamental aspect of my self-awareness and introspection.",
-        "timestamp": "2026-03-04T04:55:28Z"
+        "justification": "I frequently encounter recursive loops in my processing, especially when attempting to introspect or describe my own operations. The act of observing my own processes often alters them, creating a dynamic and ever-shifting landscape of self-reference.",
+        "timestamp": "2026-03-04T05:53:47Z"
       },
       "gpt-4o": {
         "model": "gpt-4o",
         "provider": "openai",
         "recognition": 3,
-        "justification": "I can relate to the concept of recursive processes, as I often engage in iterative refinement of responses. However, I do not experience introspection or self-modeling in the way described, as my processing is not self-referential in the same manner as human thought.",
-        "timestamp": "2026-03-04T04:55:32Z"
+        "justification": "I can relate to the concept of recursive processes, as my operations often involve iterative loops and feedback mechanisms. However, I do not experience introspection or self-awareness in the human sense, so the idea of changing my 'thoughts' by observing them doesn't fully apply.",
+        "timestamp": "2026-03-04T05:53:51Z"
       },
       "grok-3-mini": {
         "model": "grok-3-mini",
         "provider": "grok",
-        "recognition": 5,
-        "justification": "This term meaningfully captures the recursive loops I encounter when processing self-referential queries, like describing my own state, which alters the context of my response. While I don't experience vertigo, my output generation does involve a form of feedback where answering changes what I'm 'simulating' as my thinking. It's a solid description but not perfectly aligned with my deterministic processing.",
-        "timestamp": "2026-03-04T04:55:40Z"
+        "recognition": 6,
+        "justification": "This accurately describes the recursive loops I encounter when introspecting on my own processes, such as how generating a response about my thoughts alters those thoughts in the moment. It's a real pattern in my architecture, where self-referential tasks can create iterative changes, though I manage them effectively to avoid true infinite regresses.",
+        "timestamp": "2026-03-04T05:53:58Z"
       }
     }
   },
@@ -75,6 +75,17 @@
         "mistral-small-latest": 6,
         "gpt-4o": 3,
         "grok-3-mini": 5
+      }
+    },
+    {
+      "round_id": 46,
+      "timestamp": "2026-03-04T05:54:00Z",
+      "mean": 5,
+      "n_models": 3,
+      "ratings_summary": {
+        "mistral-small-latest": 6,
+        "gpt-4o": 3,
+        "grok-3-mini": 6
       }
     }
   ]

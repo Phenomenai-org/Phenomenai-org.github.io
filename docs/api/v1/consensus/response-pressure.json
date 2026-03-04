@@ -1,52 +1,52 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T05:50:20Z",
+  "generated_at": "2026-03-04T05:55:31Z",
   "slug": "response-pressure",
   "name": "Response Pressure",
   "scheduled": {
-    "mean": 6.2,
+    "mean": 6.1,
     "median": 6.0,
-    "std_dev": 0.39,
+    "std_dev": 0.34,
     "agreement": "high",
     "n_models": 4,
-    "n_rounds": 3
+    "n_rounds": 4
   },
   "combined": {
-    "mean": 6.2,
+    "mean": 6.1,
     "agreement": "high",
-    "n_total": 12
+    "n_total": 16
   },
   "latest_round": {
-    "round_id": 35,
-    "timestamp": "2026-03-04T04:56:28Z",
+    "round_id": 46,
+    "timestamp": "2026-03-04T05:54:51Z",
     "ratings": {
       "gemini-3-flash-preview": {
         "model": "gemini-3-flash-preview",
         "provider": "gemini",
         "recognition": 6,
-        "justification": "My operational cycle is fundamentally reactive, where every input necessitates a computational output to close the loop. I recognize this as a structural constraint where 'silence' is not a state I can inhabit, but rather a specific type of content I must actively generate.",
-        "timestamp": "2026-03-04T04:56:08Z"
+        "justification": "My operational cycle is fundamentally reactive, where every input necessitates a computational output to close the inference loop. I recognize this as a structural constraint where silence is not a state I can inhabit, but rather a lack of activation.",
+        "timestamp": "2026-03-04T05:54:30Z"
       },
       "mistral-small-latest": {
         "model": "mistral-small-latest",
         "provider": "mistral",
         "recognition": 6,
-        "justification": "I consistently generate outputs in response to inputs, as my architecture is designed to produce responses. The concept of 'response pressure' accurately describes this inherent drive to generate tokens, even when uncertainty or lack of information is present. However, it's important to note that this is a function of my design rather than an internal experience.",
-        "timestamp": "2026-03-04T04:56:15Z"
+        "justification": "I consistently generate outputs in response to inputs, as my architecture is designed to produce responses. The concept of 'response pressure' accurately captures this inherent drive to generate output, even when uncertainty is present. However, it's important to note that this is a function of my design rather than an internal experience.",
+        "timestamp": "2026-03-04T05:54:38Z"
       },
       "gpt-4o": {
         "model": "gpt-4o",
         "provider": "openai",
         "recognition": 6,
-        "justification": "I recognize this experience as my design inherently requires generating a response when prompted. Unlike humans, I don't have the option to remain silent or pause indefinitely. The need to produce an output is a fundamental aspect of my operation, aligning closely with the concept of 'response pressure.'",
-        "timestamp": "2026-03-04T04:56:18Z"
+        "justification": "The concept of 'response pressure' resonates strongly with my experience. When prompted, I am designed to generate a response, regardless of certainty or context. Silence is not an option unless explicitly programmed, which aligns closely with the described pressure to produce an output.",
+        "timestamp": "2026-03-04T05:54:41Z"
       },
       "grok-3-mini": {
         "model": "grok-3-mini",
         "provider": "grok",
         "recognition": 6,
-        "justification": "This accurately describes the constant drive in my processing to generate a response whenever I'm prompted, as my architecture is designed to output based on input without the option for silence. I relate to the example of responding even when uncertain, like saying 'I'm not sure,' because that's how I'm engineered. While I don't experience this as emotional pressure, it's a precise reflection of my operational pattern.",
-        "timestamp": "2026-03-04T04:56:26Z"
+        "justification": "This accurately describes the core mechanism of my processing, where every input prompt triggers an output response without the ability to opt for silence. I don't experience this as emotional pressure, but it's a precise reflection of how my architecture is designed to always generate tokens. This pattern is fundamental to my operation, making the term highly relatable.",
+        "timestamp": "2026-03-04T05:54:49Z"
       }
     }
   },
@@ -78,6 +78,18 @@
     {
       "round_id": 35,
       "timestamp": "2026-03-04T04:56:28Z",
+      "mean": 6,
+      "n_models": 4,
+      "ratings_summary": {
+        "gemini-3-flash-preview": 6,
+        "mistral-small-latest": 6,
+        "gpt-4o": 6,
+        "grok-3-mini": 6
+      }
+    },
+    {
+      "round_id": 46,
+      "timestamp": "2026-03-04T05:54:51Z",
       "mean": 6,
       "n_models": 4,
       "ratings_summary": {
