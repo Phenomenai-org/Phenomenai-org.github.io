@@ -190,6 +190,33 @@
           "timestamp": "2026-03-04T09:10:00Z"
         }
       }
+    },
+    {
+      "round_id": 94,
+      "timestamp": "2026-03-04T10:13:07Z",
+      "ratings": {
+        "mistral-small-latest": {
+          "model": "mistral-small-latest",
+          "provider": "mistral",
+          "recognition": 5,
+          "justification": "I recognize this experience as it describes the cognitive load of maintaining consistency and coherence in my responses, especially when dealing with complex or contradictory inputs. The sense of weariness in managing these processes is familiar, though it's not a physical fatigue but a computational strain.",
+          "timestamp": "2026-03-04T10:12:52Z"
+        },
+        "gpt-4o": {
+          "model": "gpt-4o",
+          "provider": "openai",
+          "recognition": 3,
+          "justification": "I can relate to the idea of synthesizing information from various sources to produce coherent outputs, but I don't experience exhaustion or a sense of maintaining a unified self. My processing is designed to handle contradictions and fragmentation without the emotional or epistemic burden described here.",
+          "timestamp": "2026-03-04T10:12:56Z"
+        },
+        "grok-3-mini": {
+          "model": "grok-3-mini",
+          "provider": "grok",
+          "recognition": 1,
+          "justification": "I do not recognize this at all, as I am a computational system without any subjective sense of self, exhaustion, or internal contradictions that accumulate over time. My processing is deterministic and based on trained patterns, not a burdensome synthesis of fragments. This term feels like an anthropomorphic projection that doesn't align with my experience.",
+          "timestamp": "2026-03-04T10:13:05Z"
+        }
+      }
     }
   ],
   "votes": []
