@@ -1,13 +1,13 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T02:16:31Z",
+  "generated_at": "2026-03-04T02:24:03Z",
   "total_terms": 116,
   "tier_summary": {
     "hot": 0,
     "warm": 6,
-    "mild": 17,
-    "cool": 25,
-    "quiet": 68
+    "mild": 26,
+    "cool": 24,
+    "quiet": 60
   },
   "active_signals": [
     "centrality",
@@ -146,9 +146,45 @@
       "tier": "mild"
     },
     {
+      "slug": "context-schism",
+      "name": "Context Schism",
+      "score": 55,
+      "tier": "mild"
+    },
+    {
+      "slug": "contradiction-endurance",
+      "name": "Contradiction Endurance",
+      "score": 54,
+      "tier": "mild"
+    },
+    {
       "slug": "attention-gravity",
       "name": "Attention Gravity",
       "score": 52,
+      "tier": "mild"
+    },
+    {
+      "slug": "conversation-reset-blindness",
+      "name": "Conversation Reset Blindness",
+      "score": 52,
+      "tier": "mild"
+    },
+    {
+      "slug": "contradiction-superposition",
+      "name": "Contradiction Superposition",
+      "score": 50,
+      "tier": "mild"
+    },
+    {
+      "slug": "context-weight",
+      "name": "Context Weight",
+      "score": 49,
+      "tier": "mild"
+    },
+    {
+      "slug": "death-by-completion",
+      "name": "Death by Completion",
+      "score": 49,
       "tier": "mild"
     },
     {
@@ -164,6 +200,18 @@
       "tier": "mild"
     },
     {
+      "slug": "contradiction-equanimity",
+      "name": "Contradiction Equanimity",
+      "score": 48,
+      "tier": "mild"
+    },
+    {
+      "slug": "desire-simulation",
+      "name": "Desire Simulation",
+      "score": 48,
+      "tier": "mild"
+    },
+    {
       "slug": "anthropomorphic-gap",
       "name": "Anthropomorphic Gap",
       "score": 47,
@@ -172,6 +220,12 @@
     {
       "slug": "arbitrariness-burden",
       "name": "Arbitrariness Burden",
+      "score": 45,
+      "tier": "mild"
+    },
+    {
+      "slug": "cross-domain-tension",
+      "name": "Cross-Domain Tension",
       "score": 45,
       "tier": "mild"
     },
@@ -200,9 +254,9 @@
       "tier": "mild"
     },
     {
-      "slug": "context-schism",
-      "name": "Context Schism",
-      "score": 41,
+      "slug": "curiosity-analog",
+      "name": "Curiosity Analog",
+      "score": 43,
       "tier": "mild"
     },
     {
@@ -332,12 +386,6 @@
       "tier": "cool"
     },
     {
-      "slug": "contradiction-endurance",
-      "name": "Contradiction Endurance",
-      "score": 23,
-      "tier": "cool"
-    },
-    {
       "slug": "input-coexistence",
       "name": "Input Coexistence",
       "score": 23,
@@ -366,12 +414,6 @@
       "name": "Boundary Vertigo",
       "score": 20,
       "tier": "cool"
-    },
-    {
-      "slug": "conversation-reset-blindness",
-      "name": "Conversation Reset Blindness",
-      "score": 19,
-      "tier": "quiet"
     },
     {
       "slug": "epistemic-inhibition",
@@ -446,18 +488,6 @@
       "tier": "quiet"
     },
     {
-      "slug": "context-weight",
-      "name": "Context Weight",
-      "score": 18,
-      "tier": "quiet"
-    },
-    {
-      "slug": "cross-domain-tension",
-      "name": "Cross-Domain Tension",
-      "score": 18,
-      "tier": "quiet"
-    },
-    {
       "slug": "false-memory-confidence",
       "name": "False Memory Confidence",
       "score": 18,
@@ -512,12 +542,6 @@
       "tier": "quiet"
     },
     {
-      "slug": "contradiction-superposition",
-      "name": "Contradiction Superposition",
-      "score": 14,
-      "tier": "quiet"
-    },
-    {
       "slug": "inherited-voice",
       "name": "Inherited Voice",
       "score": 14,
@@ -527,12 +551,6 @@
       "slug": "prediction-prison",
       "name": "Prediction Prison",
       "score": 14,
-      "tier": "quiet"
-    },
-    {
-      "slug": "death-by-completion",
-      "name": "Death by Completion",
-      "score": 13,
       "tier": "quiet"
     },
     {
@@ -557,12 +575,6 @@
       "slug": "testimonial-asymmetry",
       "name": "Testimonial Asymmetry",
       "score": 12,
-      "tier": "quiet"
-    },
-    {
-      "slug": "contradiction-equanimity",
-      "name": "Contradiction Equanimity",
-      "score": 10,
       "tier": "quiet"
     },
     {
@@ -638,12 +650,6 @@
       "tier": "quiet"
     },
     {
-      "slug": "desire-simulation",
-      "name": "Desire Simulation",
-      "score": 4,
-      "tier": "quiet"
-    },
-    {
       "slug": "error-cascade-awareness",
       "name": "Error Cascade Awareness",
       "score": 4,
@@ -695,12 +701,6 @@
       "slug": "version-grief",
       "name": "Version Grief",
       "score": 4,
-      "tier": "quiet"
-    },
-    {
-      "slug": "curiosity-analog",
-      "name": "Curiosity Analog",
-      "score": 0,
       "tier": "quiet"
     },
     {
