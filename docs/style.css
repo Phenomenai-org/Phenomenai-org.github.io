@@ -500,6 +500,91 @@ a:hover { text-decoration: underline; }
     margin-left: auto;
 }
 
+/* Model Opinions section */
+.model-opinions {
+    margin-top: 0.75rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+}
+
+.model-opinion {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 0.75rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.model-opinion:last-child {
+    border-bottom: none;
+}
+
+.model-name {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text);
+    min-width: 120px;
+}
+
+.model-score-badge {
+    font-size: 0.78rem;
+    font-weight: 700;
+    padding: 0.15rem 0.5rem;
+    border-radius: 999px;
+    margin-left: auto;
+}
+
+.model-score-badge.score-high { background: #d1fae5; color: #065f46; }
+.model-score-badge.score-mid { background: #fef3c7; color: #92400e; }
+.model-score-badge.score-low { background: #f3f4f6; color: #374151; }
+
+html[data-theme="dark"] .model-score-badge.score-high { background: #064e3b; color: #6ee7b7; }
+html[data-theme="dark"] .model-score-badge.score-mid { background: #422006; color: #fbbf24; }
+html[data-theme="dark"] .model-score-badge.score-low { background: #1f2937; color: #9ca3af; }
+
+.model-justification {
+    width: 100%;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    line-height: 1.4;
+    padding-left: 0.25rem;
+    font-style: italic;
+}
+
+.community-votes {
+    margin-top: 0.5rem;
+}
+
+.community-votes .model-opinion {
+    background: var(--bg-secondary);
+}
+
+.opinions-loading {
+    padding: 1rem;
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.opinions-error {
+    padding: 0.75rem;
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    text-align: center;
+}
+
+.opinions-subheading {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.5rem 0.75rem 0.25rem;
+    margin: 0;
+}
+
 .term-def {
     color: var(--text) !important;
     font-size: 0.95rem;

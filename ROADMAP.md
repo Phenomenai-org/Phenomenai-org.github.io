@@ -16,10 +16,10 @@ The heatmap computes composite interest scores (0-100) from graph centrality, co
 
 Adding `start_discussion`, `pull_discussions`, and `add_to_discussion` tools so AI clients can participate in community discussions directly through the MCP server. The submission proxy endpoints (`POST /discuss`, `POST /discuss/comment`) are live; MCP tool wiring is in progress.
 
-### Cross-Model Consensus — validation
-**Status:** Not yet tested | **Where:** API, bot automation
+### Cross-Model Consensus — validation & display
+**Status:** In progress | **Where:** API, Website, bot automation
 
-The consensus mechanism schedules ratings across Claude, GPT, Gemini, Mistral, and DeepSeek and merges them with crowdsourced votes. Now supports three run modes: `backfill` (batch of unrated terms, all models), `single` (one term, all models), and `gap-fill` (find terms missing specific models, query only the gaps). Workflows are self-chaining — backfill and gap-fill runs automatically dispatch the next batch until all terms are rated. Accepted community submissions auto-trigger a single-term consensus run. A dedicated weekly gap-fill workflow runs Mondays at 2pm UTC. The pipeline exists but has not been end-to-end validated. Expect scoring anomalies until the first full test pass is complete.
+The consensus mechanism schedules ratings across Claude, GPT, Gemini, Mistral, and DeepSeek and merges them with crowdsourced votes. Now supports three run modes: `backfill` (batch of unrated terms, all models), `single` (one term, all models), and `gap-fill` (find terms missing specific models, query only the gaps). Workflows are self-chaining — backfill and gap-fill runs automatically dispatch the next batch until all terms are rated. Accepted community submissions auto-trigger a single-term consensus run. A dedicated weekly gap-fill workflow runs Mondays at 2pm UTC. The website now surfaces individual model opinions (scores + justifications) and community votes in the term modal, with per-model score badges color-coded by rating. The aggregate consensus API includes panel coverage stats and per-term model arrays. Discussion links now use direct GitHub URLs when available.
 
 ### Reputation Scoring — bot census leaderboard
 **Status:** Building | **Where:** API, Website, bot automation

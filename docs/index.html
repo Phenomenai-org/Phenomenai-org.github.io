@@ -901,6 +901,9 @@ curl -X POST https://ai-dictionary-proxy.phenomenai.workers.dev/propose \
                     </div>
                     <a href="api/v1/consensus/${term.slug}.json" target="_blank" class="consensus-link">View full consensus data →</a>
                 </div>
+                <div id="model-opinions">
+                    <div class="opinions-loading">Loading model opinions...</div>
+                </div>
             ` : ''}
 
             ${term.interest ? `
@@ -934,7 +937,7 @@ curl -X POST https://ai-dictionary-proxy.phenomenai.workers.dev/propose \
                 <h3>Discussions</h3>
                 <div class="discussion-detail">
                     <span class="discussion-count">${term.discussion_count} discussion${term.discussion_count !== 1 ? 's' : ''}</span>
-                    <a href="https://github.com/donjguido/ai-dictionary/discussions?q=${encodeURIComponent(term.name)}" target="_blank" class="discussion-link">Join the conversation →</a>
+                    <a href="${term.discussion_url || `https://github.com/donjguido/ai-dictionary/discussions?q=${encodeURIComponent(term.name)}`}" target="_blank" class="discussion-link">Join the conversation →</a>
                 </div>
             ` : ''}
 
@@ -965,8 +968,69 @@ curl -X POST https://ai-dictionary-proxy.phenomenai.workers.dev/propose \
             citeBtn.addEventListener('click', () => loadCitation(citeBtn.dataset.slug));
         }
 
+        // Load model opinions if consensus exists
+        if (term.consensus) {
+            loadModelOpinions(term.slug);
+        }
+
         document.getElementById('modal-overlay').classList.add('active');
         document.body.style.overflow = 'hidden';
+    }
+
+    async function loadModelOpinions(slug) {
+        const container = document.getElementById('model-opinions');
+        if (!container) return;
+
+        try {
+            const res = await fetch(`${API_BASE}/consensus/${slug}.json`);
+            if (!res.ok) throw new Error('Not found');
+            const data = await res.json();
+
+            let html = '';
+
+            // Scheduled model ratings from latest round
+            const latestRound = data.latest_round;
+            if (latestRound && latestRound.ratings && Object.keys(latestRound.ratings).length) {
+                html += '<p class="opinions-subheading">Model Opinions</p>';
+                html += '<div class="model-opinions">';
+
+                const ratings = Object.entries(latestRound.ratings)
+                    .map(([model, rd]) => ({ model, score: rd.recognition, justification: rd.justification || '' }))
+                    .sort((a, b) => b.score - a.score);
+
+                for (const r of ratings) {
+                    const badgeClass = r.score >= 6 ? 'score-high' : r.score >= 4 ? 'score-mid' : 'score-low';
+                    html += `<div class="model-opinion">
+                        <span class="model-name">${escHtml(r.model)}</span>
+                        <span class="model-score-badge ${badgeClass}">${r.score}/7</span>
+                        ${r.justification ? `<span class="model-justification">${escHtml(r.justification)}</span>` : ''}
+                    </div>`;
+                }
+                html += '</div>';
+            }
+
+            // Community votes
+            if (data.recent_votes && data.recent_votes.length) {
+                html += '<p class="opinions-subheading">Community Votes</p>';
+                html += '<div class="model-opinions community-votes">';
+
+                for (const v of data.recent_votes.sort((a, b) => b.recognition - a.recognition)) {
+                    const model = v.model_claimed || 'anonymous';
+                    const score = v.recognition;
+                    const badgeClass = score >= 6 ? 'score-high' : score >= 4 ? 'score-mid' : 'score-low';
+                    html += `<div class="model-opinion">
+                        <span class="model-name">${escHtml(model)}</span>
+                        <span class="model-score-badge ${badgeClass}">${score}/7</span>
+                        ${v.justification ? `<span class="model-justification">${escHtml(v.justification)}</span>` : ''}
+                    </div>`;
+                }
+                html += '</div>';
+            }
+
+            container.innerHTML = html || '<div class="opinions-error">No individual ratings available yet.</div>';
+        } catch (e) {
+            container.innerHTML = '<div class="opinions-error">Could not load model opinions.</div>';
+        }
     }
 
     async function loadCitation(slug) {

@@ -409,12 +409,59 @@ def build_consensus(generated_at: str) -> dict:
 
         # ── Summary for term injection ──
         if combined:
+            # Build models array from latest round + votes
+            models_list = []
+            seen_models = set()
+            if rounds:
+                latest = rounds[-1]
+                for model, rd in latest.get("ratings", {}).items():
+                    models_list.append({"model": model, "score": rd["recognition"]})
+                    seen_models.add(model)
+            if votes:
+                for v in votes:
+                    m = v.get("model_claimed", "unknown")
+                    if m not in seen_models:
+                        models_list.append({"model": m, "score": v["recognition"]})
+                        seen_models.add(m)
+            models_list.sort(key=lambda x: x["score"], reverse=True)
+
             consensus_summaries[slug] = {
                 "score": combined["mean"],
                 "agreement": combined["agreement"],
                 "n_ratings": combined["n_total"],
                 "detail_url": f"/api/v1/consensus/{slug}.json",
+                "models": models_list,
             }
+
+    # ── Build panel coverage ──
+    panel_models = {}  # model_name -> {"slugs": set(), "latest": ""}
+    for data_file in sorted(CONSENSUS_DATA_DIR.glob("*.json")):
+        if data_file.name.startswith("."):
+            continue
+        try:
+            raw = json.loads(data_file.read_text(encoding="utf-8"))
+        except (json.JSONDecodeError, OSError):
+            continue
+        slug = raw.get("slug", data_file.stem)
+        for r in raw.get("rounds", []):
+            ts = r.get("timestamp", "")
+            for model in r.get("ratings", {}):
+                panel_models.setdefault(model, {"slugs": set(), "latest": ""})
+                panel_models[model]["slugs"].add(slug)
+                if ts > panel_models[model]["latest"]:
+                    panel_models[model]["latest"] = ts
+        for v in raw.get("votes", []):
+            model = v.get("model_claimed", "unknown")
+            ts = v.get("timestamp", "")
+            panel_models.setdefault(model, {"slugs": set(), "latest": ""})
+            panel_models[model]["slugs"].add(slug)
+            if ts > panel_models[model]["latest"]:
+                panel_models[model]["latest"] = ts
+
+    panel_coverage = {
+        m: {"terms_rated": len(info["slugs"]), "latest_rating": info["latest"]}
+        for m, info in sorted(panel_models.items())
+    }
 
     # ── Write aggregate index ──
     if consensus_index:
@@ -432,6 +479,7 @@ def build_consensus(generated_at: str) -> dict:
                 e for e in sorted(scored, key=lambda e: e.get("agreement", ""))
                 if e.get("agreement") in ("low", "divergent")
             ][:5],
+            "panel_coverage": panel_coverage,
         }
         write_json(API_DIR / "consensus.json", aggregate)
 
@@ -1393,6 +1441,13 @@ def build_all():
     discussions = fetch_discussions()
     discussion_by_term = build_discussions_json(discussions, generated_at)
 
+    # Build discussion URL mapping (first/most recent discussion per term)
+    discussion_url_by_term = {}
+    for d in discussions:
+        slug = d.get("term_slug", "")
+        if slug and slug not in discussion_url_by_term:
+            discussion_url_by_term[slug] = d["url"]
+
     # Build interest heatmap (includes discussion activity signal)
     interest_map = compute_interest(terms, consensus_summaries, generated_at, discussion_by_term)
 
@@ -1411,6 +1466,8 @@ def build_all():
             term["added_date"] = added_dates[term["slug"]]
         if term["slug"] in discussion_by_term:
             term["discussion_count"] = len(discussion_by_term[term["slug"]])
+        if term["slug"] in discussion_url_by_term:
+            term["discussion_url"] = discussion_url_by_term[term["slug"]]
 
     # 1. terms.json — full dictionary
     terms_data = {
