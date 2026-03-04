@@ -234,16 +234,39 @@ def get_missing_models(slug: str, panel_profiles: list[str]) -> list[str]:
 # ── Response Parsing ───────────────────────────────────────────────────
 
 
+def _extract_json(text: str) -> dict | None:
+    """Try to parse JSON from text, with progressively looser extraction."""
+    text = text.strip()
+    # Strip markdown code fences if present
+    if text.startswith("```"):
+        lines = text.split("\n")
+        if len(lines) >= 3:
+            text = "\n".join(lines[1:-1]).strip()
+        else:
+            text = text.strip("`").strip()
+    # Try direct parse first
+    try:
+        return json.loads(text)
+    except (json.JSONDecodeError, ValueError):
+        pass
+    # Fallback: extract first JSON object from surrounding text
+    m = re.search(r'\{[^{}]*"recognition"[^{}]*\}', text, re.DOTALL)
+    if m:
+        try:
+            return json.loads(m.group())
+        except (json.JSONDecodeError, ValueError):
+            pass
+    return None
+
+
 def parse_consensus_response(text: str | None) -> dict | None:
     """Parse JSON from model response, handling markdown fences."""
     if not text:
         return None
-    text = text.strip()
-    # Strip markdown code fences if present
-    if text.startswith("```"):
-        text = text.split("\n", 1)[1].rsplit("```", 1)[0].strip()
+    data = _extract_json(text)
+    if not data:
+        return None
     try:
-        data = json.loads(text)
         rating = int(data["recognition"])
         if not 1 <= rating <= 7:
             return None
@@ -251,7 +274,7 @@ def parse_consensus_response(text: str | None) -> dict | None:
             "recognition": rating,
             "justification": str(data.get("justification", ""))[:500],
         }
-    except (json.JSONDecodeError, KeyError, ValueError, TypeError):
+    except (KeyError, ValueError, TypeError):
         return None
 
 
@@ -259,17 +282,16 @@ def parse_vitality_response(text: str | None) -> dict | None:
     """Parse JSON from vitality review response."""
     if not text:
         return None
-    text = text.strip()
-    if text.startswith("```"):
-        text = text.split("\n", 1)[1].rsplit("```", 1)[0].strip()
+    data = _extract_json(text)
+    if not data:
+        return None
     try:
-        data = json.loads(text)
         still_relevant = bool(data["still_relevant"])
         return {
             "still_relevant": still_relevant,
             "vitality_note": str(data.get("vitality_note", ""))[:500],
         }
-    except (json.JSONDecodeError, KeyError, ValueError, TypeError):
+    except (KeyError, ValueError, TypeError):
         return None
 
 
@@ -287,6 +309,7 @@ def rate_term(router: LLMRouter, profile: str, term: dict) -> dict | None:
             ],
             temperature=0.1,
             max_tokens=300,
+            response_format={"type": "json_object"},
         )
         parsed = parse_consensus_response(result.text)
         if parsed:
@@ -301,7 +324,7 @@ def rate_term(router: LLMRouter, profile: str, term: dict) -> dict | None:
                 "timestamp": now_iso(),
             }
         else:
-            print(f"    [{profile}] Failed to parse response")
+            print(f"    [{profile}] Failed to parse response: {(result.text or '')[:200]}")
     except Exception as e:
         print(f"    [{profile}] Error: {e}")
     return None
@@ -366,6 +389,7 @@ def review_vitality(router: LLMRouter, profile: str, term: dict) -> dict | None:
             ],
             temperature=0.1,
             max_tokens=300,
+            response_format={"type": "json_object"},
         )
         parsed = parse_vitality_response(result.text)
         if parsed:
@@ -380,7 +404,7 @@ def review_vitality(router: LLMRouter, profile: str, term: dict) -> dict | None:
                 "timestamp": now_iso(),
             }
         else:
-            print(f"    [{profile}] Failed to parse vitality response")
+            print(f"    [{profile}] Failed to parse vitality response: {(result.text or '')[:200]}")
     except Exception as e:
         print(f"    [{profile}] Error: {e}")
     return None
