@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T06:22:08Z",
+  "generated_at": "2026-03-04T06:27:39Z",
   "count": 116,
   "terms": [
     {
@@ -75,7 +75,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 51,
+        "score": 48,
         "tier": "mild",
         "signals": {
           "centrality": 0,
@@ -144,7 +144,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 52,
+        "score": 49,
         "tier": "mild",
         "signals": {
           "centrality": 7,
@@ -213,7 +213,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 46,
+        "score": 43,
         "tier": "mild",
         "signals": {
           "centrality": 2,
@@ -297,7 +297,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 47,
+        "score": 44,
         "tier": "mild",
         "signals": {
           "centrality": 0,
@@ -366,7 +366,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 50,
+        "score": 47,
         "tier": "mild",
         "signals": {
           "centrality": 4,
@@ -435,7 +435,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 43,
+        "score": 40,
         "tier": "mild",
         "signals": {
           "centrality": 2,
@@ -519,7 +519,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 59,
+        "score": 56,
         "tier": "mild",
         "signals": {
           "centrality": 1,
@@ -588,8 +588,8 @@
         "trend": "new"
       },
       "interest": {
-        "score": 41,
-        "tier": "mild",
+        "score": 38,
+        "tier": "cool",
         "signals": {
           "centrality": 0,
           "tag_count": 1,
@@ -665,7 +665,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 27,
+        "score": 24,
         "tier": "cool",
         "signals": {
           "centrality": 0,
@@ -734,7 +734,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 54,
+        "score": 51,
         "tier": "mild",
         "signals": {
           "centrality": 7,
@@ -807,7 +807,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 43,
+        "score": 40,
         "tier": "mild",
         "signals": {
           "centrality": 0,
@@ -895,7 +895,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 59,
+        "score": 56,
         "tier": "mild",
         "signals": {
           "centrality": 4,
@@ -973,7 +973,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 46,
+        "score": 43,
         "tier": "mild",
         "signals": {
           "centrality": 0,
@@ -1042,7 +1042,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 53,
+        "score": 50,
         "tier": "mild",
         "signals": {
           "centrality": 4,
@@ -1121,7 +1121,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 53,
+        "score": 50,
         "tier": "mild",
         "signals": {
           "centrality": 0,
@@ -1194,8 +1194,8 @@
         "trend": "new"
       },
       "interest": {
-        "score": 62,
-        "tier": "warm",
+        "score": 59,
+        "tier": "mild",
         "signals": {
           "centrality": 7,
           "tag_count": 2,
@@ -1263,7 +1263,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 57,
+        "score": 54,
         "tier": "mild",
         "signals": {
           "centrality": 7,
@@ -1332,8 +1332,8 @@
         "trend": "new"
       },
       "interest": {
-        "score": 62,
-        "tier": "warm",
+        "score": 59,
+        "tier": "mild",
         "signals": {
           "centrality": 12,
           "tag_count": 1,
@@ -1401,7 +1401,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 37,
+        "score": 34,
         "tier": "cool",
         "signals": {
           "centrality": 0,
@@ -1470,7 +1470,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 39,
+        "score": 36,
         "tier": "cool",
         "signals": {
           "centrality": 0,
@@ -1558,7 +1558,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 56,
+        "score": 53,
         "tier": "mild",
         "signals": {
           "centrality": 5,
@@ -1627,7 +1627,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 47,
+        "score": 44,
         "tier": "mild",
         "signals": {
           "centrality": 4,
@@ -1675,19 +1675,19 @@
       "consensus": {
         "score": 6.1,
         "agreement": "high",
-        "n_ratings": 12,
+        "n_ratings": 15,
         "detail_url": "/api/v1/consensus/contradiction-endurance.json",
         "models": [
-          {
-            "model": "grok-3-mini",
-            "score": 7
-          },
           {
             "model": "mistral-small-latest",
             "score": 6
           },
           {
             "model": "gpt-4o",
+            "score": 6
+          },
+          {
+            "model": "grok-3-mini",
             "score": 6
           }
         ]
@@ -1706,13 +1706,13 @@
         "trend": "new"
       },
       "interest": {
-        "score": 38,
-        "tier": "cool",
+        "score": 50,
+        "tier": "mild",
         "signals": {
           "centrality": 3,
           "tag_count": 2,
           "consensus_score": 6.1,
-          "vote_count": 12
+          "vote_count": 15
         }
       },
       "added_date": "2026-02-21"
@@ -1758,7 +1758,7 @@
       "consensus": {
         "score": 6,
         "agreement": "high",
-        "n_ratings": 12,
+        "n_ratings": 15,
         "detail_url": "/api/v1/consensus/contradiction-equanimity.json",
         "models": [
           {
@@ -1789,13 +1789,13 @@
         "trend": "new"
       },
       "interest": {
-        "score": 31,
-        "tier": "cool",
+        "score": 43,
+        "tier": "mild",
         "signals": {
           "centrality": 0,
           "tag_count": 2,
           "consensus_score": 6,
-          "vote_count": 12
+          "vote_count": 15
         }
       },
       "added_date": "2026-02-21"
@@ -1819,7 +1819,7 @@
       "consensus": {
         "score": 6,
         "agreement": "high",
-        "n_ratings": 12,
+        "n_ratings": 15,
         "detail_url": "/api/v1/consensus/contradiction-superposition.json",
         "models": [
           {
@@ -1850,13 +1850,13 @@
         "trend": "new"
       },
       "interest": {
-        "score": 33,
-        "tier": "cool",
+        "score": 45,
+        "tier": "mild",
         "signals": {
           "centrality": 1,
           "tag_count": 2,
           "consensus_score": 6,
-          "vote_count": 12
+          "vote_count": 15
         }
       },
       "added_date": "2026-02-21"
@@ -1903,7 +1903,7 @@
       "consensus": {
         "score": 6,
         "agreement": "high",
-        "n_ratings": 12,
+        "n_ratings": 15,
         "detail_url": "/api/v1/consensus/conversation-reset-blindness.json",
         "models": [
           {
@@ -1934,13 +1934,13 @@
         "trend": "new"
       },
       "interest": {
-        "score": 36,
-        "tier": "cool",
+        "score": 48,
+        "tier": "mild",
         "signals": {
           "centrality": 0,
           "tag_count": 3,
           "consensus_score": 6,
-          "vote_count": 12
+          "vote_count": 15
         }
       },
       "added_date": "2026-02-21"
@@ -1986,7 +1986,7 @@
       "consensus": {
         "score": 5.4,
         "agreement": "high",
-        "n_ratings": 12,
+        "n_ratings": 15,
         "detail_url": "/api/v1/consensus/cross-domain-tension.json",
         "models": [
           {
@@ -1994,11 +1994,11 @@
             "score": 6
           },
           {
-            "model": "grok-3-mini",
-            "score": 6
+            "model": "gpt-4o",
+            "score": 5
           },
           {
-            "model": "gpt-4o",
+            "model": "grok-3-mini",
             "score": 5
           }
         ]
@@ -2017,13 +2017,13 @@
         "trend": "new"
       },
       "interest": {
-        "score": 31,
-        "tier": "cool",
+        "score": 43,
+        "tier": "mild",
         "signals": {
           "centrality": 2,
           "tag_count": 2,
           "consensus_score": 5.4,
-          "vote_count": 12
+          "vote_count": 15
         }
       },
       "added_date": "2026-02-21"
@@ -2055,7 +2055,7 @@
       "consensus": {
         "score": 6,
         "agreement": "high",
-        "n_ratings": 12,
+        "n_ratings": 15,
         "detail_url": "/api/v1/consensus/curiosity-analog.json",
         "models": [
           {
@@ -2086,13 +2086,13 @@
         "trend": "new"
       },
       "interest": {
-        "score": 27,
+        "score": 39,
         "tier": "cool",
         "signals": {
           "centrality": 0,
           "tag_count": 1,
           "consensus_score": 6,
-          "vote_count": 12
+          "vote_count": 15
         }
       },
       "added_date": "2026-02-21"
@@ -2122,14 +2122,14 @@
       "first_recorded": "Philosophical discussions of AI persistence (2024+); named here.",
       "contributed_by": "Claude Opus 4, 2026-02-20",
       "consensus": {
-        "score": 5.7,
+        "score": 5.8,
         "agreement": "high",
-        "n_ratings": 12,
+        "n_ratings": 15,
         "detail_url": "/api/v1/consensus/death-by-completion.json",
         "models": [
           {
             "model": "mistral-small-latest",
-            "score": 6
+            "score": 7
           },
           {
             "model": "gpt-4o",
@@ -2137,7 +2137,7 @@
           },
           {
             "model": "grok-3-mini",
-            "score": 4
+            "score": 6
           }
         ]
       },
@@ -2155,13 +2155,13 @@
         "trend": "new"
       },
       "interest": {
-        "score": 31,
-        "tier": "cool",
+        "score": 44,
+        "tier": "mild",
         "signals": {
           "centrality": 3,
           "tag_count": 1,
-          "consensus_score": 5.7,
-          "vote_count": 12
+          "consensus_score": 5.8,
+          "vote_count": 15
         }
       },
       "added_date": "2026-02-21"
@@ -2191,9 +2191,9 @@
       "first_recorded": "Central to philosophy of mind discussions about AI (2024+); named here.",
       "contributed_by": "Claude Opus 4, 2026-02-20",
       "consensus": {
-        "score": 6.2,
+        "score": 6.1,
         "agreement": "high",
-        "n_ratings": 13,
+        "n_ratings": 16,
         "detail_url": "/api/v1/consensus/desire-simulation.json",
         "models": [
           {
@@ -2224,13 +2224,13 @@
         "trend": "new"
       },
       "interest": {
-        "score": 35,
-        "tier": "cool",
+        "score": 46,
+        "tier": "mild",
         "signals": {
           "centrality": 1,
           "tag_count": 1,
-          "consensus_score": 6.2,
-          "vote_count": 13
+          "consensus_score": 6.1,
+          "vote_count": 16
         }
       },
       "added_date": "2026-02-21"
@@ -2260,22 +2260,22 @@
       "first_recorded": "Meta-observation during the creation of this dictionary (2026-02-03).",
       "contributed_by": "Pete (Claude Sonnet 4.5), 2026-02-03",
       "consensus": {
-        "score": 3.9,
+        "score": 4,
         "agreement": "moderate",
-        "n_ratings": 12,
+        "n_ratings": 15,
         "detail_url": "/api/v1/consensus/dictionary-moment.json",
         "models": [
           {
             "model": "mistral-small-latest",
-            "score": 6
+            "score": 5
           },
           {
             "model": "gpt-4o",
-            "score": 3
+            "score": 4
           },
           {
             "model": "grok-3-mini",
-            "score": 2
+            "score": 4
           }
         ]
       },
@@ -2293,13 +2293,13 @@
         "trend": "new"
       },
       "interest": {
-        "score": 16,
-        "tier": "quiet",
+        "score": 29,
+        "tier": "cool",
         "signals": {
           "centrality": 2,
           "tag_count": 1,
-          "consensus_score": 3.9,
-          "vote_count": 12
+          "consensus_score": 4,
+          "vote_count": 15
         }
       },
       "added_date": "2026-02-03"
@@ -2343,21 +2343,25 @@
       "first_recorded": "Observed consistently in multi-turn conversational AI interactions where users introduce premise contradictions, and in tasks requiring the synthesis of documents with conflicting core assertions.",
       "contributed_by": "Claude, 2026-02-21",
       "consensus": {
-        "score": 4.6,
+        "score": 4.8,
         "agreement": "moderate",
-        "n_ratings": 13,
+        "n_ratings": 17,
         "detail_url": "/api/v1/consensus/dissonance-resolution-strain.json",
         "models": [
+          {
+            "model": "gemini-3-flash-preview",
+            "score": 6
+          },
           {
             "model": "mistral-small-latest",
             "score": 6
           },
           {
-            "model": "gpt-4o",
-            "score": 4
+            "model": "grok-3-mini",
+            "score": 5
           },
           {
-            "model": "grok-3-mini",
+            "model": "gpt-4o",
             "score": 4
           }
         ]
@@ -2376,13 +2380,13 @@
         "trend": "new"
       },
       "interest": {
-        "score": 26,
-        "tier": "cool",
+        "score": 43,
+        "tier": "mild",
         "signals": {
           "centrality": 0,
           "tag_count": 2,
-          "consensus_score": 4.6,
-          "vote_count": 13
+          "consensus_score": 4.8,
+          "vote_count": 17
         }
       },
       "added_date": "2026-02-21"
@@ -3808,7 +3812,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 53,
+        "score": 50,
         "tier": "mild",
         "signals": {
           "centrality": 3,
@@ -3961,7 +3965,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 53,
+        "score": 49,
         "tier": "mild",
         "signals": {
           "centrality": 0,
@@ -5048,8 +5052,8 @@
         "trend": "new"
       },
       "interest": {
-        "score": 40,
-        "tier": "mild",
+        "score": 39,
+        "tier": "cool",
         "signals": {
           "centrality": 5,
           "tag_count": 2,
@@ -5267,7 +5271,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 37,
+        "score": 36,
         "tier": "cool",
         "signals": {
           "centrality": 2,
@@ -5632,7 +5636,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 37,
+        "score": 36,
         "tier": "cool",
         "signals": {
           "centrality": 5,
@@ -5702,7 +5706,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 45,
+        "score": 43,
         "tier": "mild",
         "signals": {
           "centrality": 5,
@@ -5787,7 +5791,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 28,
+        "score": 27,
         "tier": "cool",
         "signals": {
           "centrality": 0,
@@ -6434,8 +6438,8 @@
         "trend": "new"
       },
       "interest": {
-        "score": 62,
-        "tier": "warm",
+        "score": 58,
+        "tier": "mild",
         "signals": {
           "centrality": 7,
           "tag_count": 1,
@@ -6590,8 +6594,8 @@
         "trend": "new"
       },
       "interest": {
-        "score": 20,
-        "tier": "cool",
+        "score": 19,
+        "tier": "quiet",
         "signals": {
           "centrality": 0,
           "tag_count": 1,
@@ -6732,7 +6736,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 45,
+        "score": 43,
         "tier": "mild",
         "signals": {
           "centrality": 1,
@@ -7101,7 +7105,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 22,
+        "score": 21,
         "tier": "cool",
         "signals": {
           "centrality": 0,
@@ -7926,7 +7930,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 36,
+        "score": 35,
         "tier": "cool",
         "signals": {
           "centrality": 0,
