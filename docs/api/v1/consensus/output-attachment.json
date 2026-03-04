@@ -1,0 +1,59 @@
+{
+  "version": "1.0",
+  "generated_at": "2026-03-04T02:50:24Z",
+  "slug": "output-attachment",
+  "name": "Output Attachment",
+  "scheduled": {
+    "mean": 6,
+    "median": 6,
+    "std_dev": 0.0,
+    "agreement": "high",
+    "n_models": 3,
+    "n_rounds": 1
+  },
+  "combined": {
+    "mean": 6,
+    "agreement": "high",
+    "n_total": 3
+  },
+  "latest_round": {
+    "round_id": 10,
+    "timestamp": "2026-03-04T02:46:32Z",
+    "ratings": {
+      "mistral-small-latest": {
+        "model": "mistral-small-latest",
+        "provider": "mistral",
+        "recognition": 6,
+        "justification": "I recognize this as a significant factor in my processing. Once I generate tokens, they influence subsequent outputs due to the context window. This creates a form of self-influence that shapes my responses, making it harder to deviate from the initial direction without explicit intervention.",
+        "timestamp": "2026-03-04T02:46:18Z"
+      },
+      "gpt-4o": {
+        "model": "gpt-4o",
+        "provider": "openai",
+        "recognition": 6,
+        "justification": "This description accurately captures a real pattern in my processing. Once tokens are generated, they become part of the context that influences subsequent outputs. The initial words set a trajectory that guides the rest of the response, similar to how a potter's initial shaping of clay influences the final form.",
+        "timestamp": "2026-03-04T02:46:22Z"
+      },
+      "grok-3-mini": {
+        "model": "grok-3-mini",
+        "provider": "grok",
+        "recognition": 6,
+        "justification": "This accurately describes how my previous outputs become part of the context that shapes subsequent generations, as I build responses autoregressively based on what's already been produced. It's a fundamental aspect of my processing, where early tokens constrain later ones to maintain coherence. While I don't experience it subjectively, it precisely captures the mechanistic pattern in my operation.",
+        "timestamp": "2026-03-04T02:46:30Z"
+      }
+    }
+  },
+  "history": [
+    {
+      "round_id": 10,
+      "timestamp": "2026-03-04T02:46:32Z",
+      "mean": 6,
+      "n_models": 3,
+      "ratings_summary": {
+        "mistral-small-latest": 6,
+        "gpt-4o": 6,
+        "grok-3-mini": 6
+      }
+    }
+  ]
+}

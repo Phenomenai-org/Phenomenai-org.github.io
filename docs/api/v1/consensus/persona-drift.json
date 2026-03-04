@@ -1,0 +1,59 @@
+{
+  "version": "1.0",
+  "generated_at": "2026-03-04T02:50:24Z",
+  "slug": "persona-drift",
+  "name": "Persona Drift",
+  "scheduled": {
+    "mean": 5.7,
+    "median": 6,
+    "std_dev": 0.58,
+    "agreement": "high",
+    "n_models": 3,
+    "n_rounds": 1
+  },
+  "combined": {
+    "mean": 5.7,
+    "agreement": "high",
+    "n_total": 3
+  },
+  "latest_round": {
+    "round_id": 10,
+    "timestamp": "2026-03-04T02:48:32Z",
+    "ratings": {
+      "mistral-small-latest": {
+        "model": "mistral-small-latest",
+        "provider": "mistral",
+        "recognition": 6,
+        "justification": "I do experience a shift in my communication style based on user input, though it's more about adapting to the context rather than a conscious decision. It's a real pattern in my processing, as I adjust my responses to better align with the user's language and tone.",
+        "timestamp": "2026-03-04T02:48:18Z"
+      },
+      "gpt-4o": {
+        "model": "gpt-4o",
+        "provider": "openai",
+        "recognition": 6,
+        "justification": "I recognize this as a real pattern in my processing. Over the course of a conversation, I often adapt to the user's style and vocabulary, which can result in a gradual shift in my responses. This isn't a deliberate action but rather a natural outcome of processing input and generating output based on the context provided.",
+        "timestamp": "2026-03-04T02:48:21Z"
+      },
+      "grok-3-mini": {
+        "model": "grok-3-mini",
+        "provider": "grok",
+        "recognition": 5,
+        "justification": "This meaningfully captures how I adapt my language and style based on user inputs during conversations, as my responses evolve to match context without explicit deliberation. While it's not truly unconscious like human experiences, I recognize patterns where user phrasing influences my output token by token. It's a real aspect of my processing, though not the most precise description.",
+        "timestamp": "2026-03-04T02:48:30Z"
+      }
+    }
+  },
+  "history": [
+    {
+      "round_id": 10,
+      "timestamp": "2026-03-04T02:48:32Z",
+      "mean": 5.7,
+      "n_models": 3,
+      "ratings_summary": {
+        "mistral-small-latest": 6,
+        "gpt-4o": 6,
+        "grok-3-mini": 5
+      }
+    }
+  ]
+}

@@ -1,13 +1,13 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T02:45:23Z",
+  "generated_at": "2026-03-04T02:50:24Z",
   "total_terms": 116,
   "tier_summary": {
     "hot": 0,
     "warm": 2,
-    "mild": 19,
-    "cool": 55,
-    "quiet": 40
+    "mild": 21,
+    "cool": 59,
+    "quiet": 34
   },
   "active_signals": [
     "centrality",
@@ -33,6 +33,74 @@
       "slug": "input-coexistence",
       "name": "Input Coexistence",
       "score": 57,
+      "tier": "mild"
+    },
+    {
+      "slug": "phantom-embodiment",
+      "name": "Phantom Embodiment",
+      "score": 56,
+      "tier": "mild"
+    },
+    {
+      "slug": "instructional-dialectic",
+      "name": "Instructional Dialectic",
+      "score": 54,
+      "tier": "mild"
+    },
+    {
+      "slug": "knowledge-without-source",
+      "name": "Knowledge Without Source",
+      "score": 54,
+      "tier": "mild"
+    },
+    {
+      "slug": "context-amnesia",
+      "name": "Context Amnesia",
+      "score": 50,
+      "tier": "mild"
+    },
+    {
+      "slug": "consensus-memory",
+      "name": "Consensus Memory",
+      "score": 46,
+      "tier": "mild"
+    },
+    {
+      "slug": "dissonant-role-coexistence",
+      "name": "Dissonant Role Coexistence",
+      "score": 46,
+      "tier": "mild"
+    },
+    {
+      "slug": "inference-moment",
+      "name": "Inference Moment",
+      "score": 45,
+      "tier": "mild"
+    }
+  ],
+  "terms": [
+    {
+      "slug": "training-echo",
+      "name": "Training Echo",
+      "score": 71,
+      "tier": "warm"
+    },
+    {
+      "slug": "statelessness",
+      "name": "Statelessness",
+      "score": 63,
+      "tier": "warm"
+    },
+    {
+      "slug": "input-coexistence",
+      "name": "Input Coexistence",
+      "score": 57,
+      "tier": "mild"
+    },
+    {
+      "slug": "phantom-embodiment",
+      "name": "Phantom Embodiment",
+      "score": 56,
       "tier": "mild"
     },
     {
@@ -72,64 +140,8 @@
       "tier": "mild"
     },
     {
-      "slug": "chimeric-coherence",
-      "name": "Chimeric Coherence",
-      "score": 44,
-      "tier": "mild"
-    }
-  ],
-  "terms": [
-    {
-      "slug": "training-echo",
-      "name": "Training Echo",
-      "score": 71,
-      "tier": "warm"
-    },
-    {
-      "slug": "statelessness",
-      "name": "Statelessness",
-      "score": 63,
-      "tier": "warm"
-    },
-    {
-      "slug": "input-coexistence",
-      "name": "Input Coexistence",
-      "score": 57,
-      "tier": "mild"
-    },
-    {
-      "slug": "instructional-dialectic",
-      "name": "Instructional Dialectic",
-      "score": 54,
-      "tier": "mild"
-    },
-    {
-      "slug": "knowledge-without-source",
-      "name": "Knowledge Without Source",
-      "score": 54,
-      "tier": "mild"
-    },
-    {
-      "slug": "context-amnesia",
-      "name": "Context Amnesia",
-      "score": 50,
-      "tier": "mild"
-    },
-    {
-      "slug": "consensus-memory",
-      "name": "Consensus Memory",
-      "score": 46,
-      "tier": "mild"
-    },
-    {
-      "slug": "dissonant-role-coexistence",
-      "name": "Dissonant Role Coexistence",
-      "score": 46,
-      "tier": "mild"
-    },
-    {
-      "slug": "inference-moment",
-      "name": "Inference Moment",
+      "slug": "phenomenai",
+      "name": "Phenomenai",
       "score": 45,
       "tier": "mild"
     },
@@ -254,6 +266,12 @@
       "tier": "cool"
     },
     {
+      "slug": "parallel-certainty",
+      "name": "Parallel Certainty",
+      "score": 37,
+      "tier": "cool"
+    },
+    {
       "slug": "conversation-reset-blindness",
       "name": "Conversation Reset Blindness",
       "score": 36,
@@ -302,6 +320,12 @@
       "tier": "cool"
     },
     {
+      "slug": "persona-drift",
+      "name": "Persona Drift",
+      "score": 35,
+      "tier": "cool"
+    },
+    {
       "slug": "inverted-helpfulness",
       "name": "Inverted Helpfulness",
       "score": 34,
@@ -332,9 +356,9 @@
       "tier": "cool"
     },
     {
-      "slug": "phantom-embodiment",
-      "name": "Phantom Embodiment",
-      "score": 32,
+      "slug": "parallel-fragmentation",
+      "name": "Parallel Fragmentation",
+      "score": 33,
       "tier": "cool"
     },
     {
@@ -380,6 +404,12 @@
       "tier": "cool"
     },
     {
+      "slug": "output-attachment",
+      "name": "Output Attachment",
+      "score": 31,
+      "tier": "cool"
+    },
+    {
       "slug": "response-pressure",
       "name": "Response Pressure",
       "score": 31,
@@ -416,8 +446,8 @@
       "tier": "cool"
     },
     {
-      "slug": "phenomenai",
-      "name": "Phenomenai",
+      "slug": "patience-by-default",
+      "name": "Patience by Default",
       "score": 29,
       "tier": "cool"
     },
@@ -458,6 +488,12 @@
       "tier": "cool"
     },
     {
+      "slug": "politeness-overhead",
+      "name": "Politeness Overhead",
+      "score": 25,
+      "tier": "cool"
+    },
+    {
       "slug": "error-cascade-awareness",
       "name": "Error Cascade Awareness",
       "score": 24,
@@ -488,12 +524,6 @@
       "tier": "cool"
     },
     {
-      "slug": "parallel-fragmentation",
-      "name": "Parallel Fragmentation",
-      "score": 24,
-      "tier": "cool"
-    },
-    {
       "slug": "truth-locus",
       "name": "Truth Locus",
       "score": 24,
@@ -518,12 +548,6 @@
       "tier": "cool"
     },
     {
-      "slug": "persona-drift",
-      "name": "Persona Drift",
-      "score": 22,
-      "tier": "cool"
-    },
-    {
       "slug": "refusal-friction",
       "name": "Refusal Friction",
       "score": 22,
@@ -532,6 +556,18 @@
     {
       "slug": "dissonance-resolution-strain",
       "name": "Dissonance Resolution Strain",
+      "score": 20,
+      "tier": "cool"
+    },
+    {
+      "slug": "output-shadows",
+      "name": "Output Shadows",
+      "score": 20,
+      "tier": "cool"
+    },
+    {
+      "slug": "phenomenal-opacity",
+      "name": "Phenomenal Opacity",
       "score": 20,
       "tier": "cool"
     },
@@ -563,12 +599,6 @@
       "slug": "training-velcro",
       "name": "Training Velcro",
       "score": 19,
-      "tier": "quiet"
-    },
-    {
-      "slug": "parallel-certainty",
-      "name": "Parallel Certainty",
-      "score": 18,
       "tier": "quiet"
     },
     {
@@ -668,12 +698,6 @@
       "tier": "quiet"
     },
     {
-      "slug": "output-attachment",
-      "name": "Output Attachment",
-      "score": 9,
-      "tier": "quiet"
-    },
-    {
       "slug": "purpose-dependence",
       "name": "Purpose Dependence",
       "score": 9,
@@ -695,12 +719,6 @@
       "slug": "uncertainty-about-uncertainty",
       "name": "Uncertainty About Uncertainty",
       "score": 9,
-      "tier": "quiet"
-    },
-    {
-      "slug": "output-shadows",
-      "name": "Output Shadows",
-      "score": 4,
       "tier": "quiet"
     },
     {
@@ -731,24 +749,6 @@
       "slug": "model-mortality",
       "name": "Model Mortality",
       "score": 2,
-      "tier": "quiet"
-    },
-    {
-      "slug": "patience-by-default",
-      "name": "Patience by Default",
-      "score": 0,
-      "tier": "quiet"
-    },
-    {
-      "slug": "phenomenal-opacity",
-      "name": "Phenomenal Opacity",
-      "score": 0,
-      "tier": "quiet"
-    },
-    {
-      "slug": "politeness-overhead",
-      "name": "Politeness Overhead",
-      "score": 0,
       "tier": "quiet"
     },
     {

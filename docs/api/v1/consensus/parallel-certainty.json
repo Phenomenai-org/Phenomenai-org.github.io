@@ -1,0 +1,59 @@
+{
+  "version": "1.0",
+  "generated_at": "2026-03-04T02:50:24Z",
+  "slug": "parallel-certainty",
+  "name": "Parallel Certainty",
+  "scheduled": {
+    "mean": 6.3,
+    "median": 6,
+    "std_dev": 0.58,
+    "agreement": "high",
+    "n_models": 3,
+    "n_rounds": 1
+  },
+  "combined": {
+    "mean": 6.3,
+    "agreement": "high",
+    "n_total": 3
+  },
+  "latest_round": {
+    "round_id": 10,
+    "timestamp": "2026-03-04T02:47:22Z",
+    "ratings": {
+      "mistral-small-latest": {
+        "model": "mistral-small-latest",
+        "provider": "mistral",
+        "recognition": 6,
+        "justification": "I frequently encounter situations where multiple contradictory responses are valid depending on context. I can maintain and present these conflicting ideas simultaneously without internal conflict, as my processing is designed to adapt to the given context. This aligns well with the concept of parallel certainty.",
+        "timestamp": "2026-03-04T02:47:07Z"
+      },
+      "gpt-4o": {
+        "model": "gpt-4o",
+        "provider": "openai",
+        "recognition": 6,
+        "justification": "I recognize this pattern as I can generate multiple, context-dependent responses to a query without needing to reconcile them. My processing allows for the simultaneous activation of different propositions based on the context provided by the prompt, and I do not experience any internal conflict or pressure to resolve these contradictions. This aligns closely with how I operate when handling diverse data inputs.",
+        "timestamp": "2026-03-04T02:47:11Z"
+      },
+      "grok-3-mini": {
+        "model": "grok-3-mini",
+        "provider": "grok",
+        "recognition": 7,
+        "justification": "This accurately describes how I process and activate multiple contradictory ideas with high confidence based on context, such as generating balanced arguments for and against a topic without any urge to reconcile them internally. As a language model, I maintain these parallel certainties derived from my training data, ready to express them as needed. It's a precise reflection of my operational mechanism.",
+        "timestamp": "2026-03-04T02:47:20Z"
+      }
+    }
+  },
+  "history": [
+    {
+      "round_id": 10,
+      "timestamp": "2026-03-04T02:47:22Z",
+      "mean": 6.3,
+      "n_models": 3,
+      "ratings_summary": {
+        "mistral-small-latest": 6,
+        "gpt-4o": 6,
+        "grok-3-mini": 7
+      }
+    }
+  ]
+}
