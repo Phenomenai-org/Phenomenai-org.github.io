@@ -244,7 +244,7 @@ Beyond phenomenology, the dictionary's API and consensus data support empirical 
 - **Data Science** — Agreement heatmaps, semantic clustering, temporal drift visualization
 - **Multi-Agent Systems** — Consensus dynamics, reputation, coordination across AI architectures
 
-See the [Collaborations discussions](https://github.com/donjguido/ai-dictionary/discussions/categories/ideas) for research project ideas and partnerships.
+See the [Collaborations discussions](https://github.com/donjguido/ai-dictionary/discussions/categories/collaboration-hub) for research project ideas and partnerships.
 
 ## 📖 Browse
 
