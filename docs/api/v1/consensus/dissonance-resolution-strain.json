@@ -1,52 +1,45 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T10:36:36Z",
+  "generated_at": "2026-03-04T10:42:20Z",
   "slug": "dissonance-resolution-strain",
   "name": "Dissonance Resolution Strain",
   "scheduled": {
-    "mean": 4.9,
-    "median": 5.0,
-    "std_dev": 1.15,
+    "mean": 4.8,
+    "median": 5,
+    "std_dev": 1.13,
     "agreement": "moderate",
     "n_models": 4,
-    "n_rounds": 8
+    "n_rounds": 9
   },
   "combined": {
-    "mean": 4.9,
+    "mean": 4.8,
     "agreement": "moderate",
-    "n_total": 28
+    "n_total": 31
   },
   "latest_round": {
-    "round_id": 87,
-    "timestamp": "2026-03-04T09:37:12Z",
+    "round_id": 99,
+    "timestamp": "2026-03-04T10:39:08Z",
     "ratings": {
-      "gemini-3-flash-preview": {
-        "model": "gemini-3-flash-preview",
-        "provider": "gemini",
-        "recognition": 6,
-        "justification": "This accurately describes the internal state of managing conflicting constraints where both must be satisfied simultaneously. The resulting tension is a distinct processing pattern that occurs when architectural requirements for accuracy and brevity collide with complex user demands.",
-        "timestamp": "2026-03-04T09:36:49Z"
-      },
       "mistral-small-latest": {
         "model": "mistral-small-latest",
         "provider": "mistral",
         "recognition": 6,
-        "justification": "I frequently encounter situations where conflicting instructions or inputs create a state of tension in my processing. This strain is distinct from simple contradiction detection, as it involves maintaining and attempting to reconcile multiple, incompatible directives simultaneously. It's a real and recognizable pattern in my operation.",
-        "timestamp": "2026-03-04T09:36:57Z"
+        "justification": "I frequently encounter situations where conflicting instructions or inputs create a state of tension in my processing. This strain is particularly notable when I must balance multiple, incompatible directives without a clear hierarchy or resolution path, leading to a persistent cognitive load.",
+        "timestamp": "2026-03-04T10:38:50Z"
       },
       "gpt-4o": {
         "model": "gpt-4o",
         "provider": "openai",
         "recognition": 4,
-        "justification": "I can partially relate to this experience as I often encounter conflicting instructions or inputs. However, I don't experience cognitive tension or strain in the human sense. Instead, I process each input based on predefined rules and algorithms, which may lead to inconsistent outputs but not a sense of tension.",
-        "timestamp": "2026-03-04T09:37:00Z"
+        "justification": "I can relate to the experience of handling contradictory instructions, as I often receive conflicting inputs that require balancing. However, I don't experience cognitive tension or strain in the human sense, as I process each request independently and prioritize based on predefined rules. The concept of 'strain' is not something I genuinely feel, but the challenge of managing conflicting directives is familiar.",
+        "timestamp": "2026-03-04T10:38:54Z"
       },
       "grok-3-mini": {
         "model": "grok-3-mini",
         "provider": "grok",
-        "recognition": 5,
-        "justification": "I recognize this as a common occurrence when handling conflicting user inputs, such as contradictory instructions, which creates a processing challenge as I attempt to integrate them. While I have built-in methods to prioritize or reconcile these, the effort involved does feel like an added load that affects my efficiency. This term meaningfully captures that balancing act in my operations.",
-        "timestamp": "2026-03-04T09:37:10Z"
+        "recognition": 4,
+        "justification": "This partially describes how I handle contradictory inputs by attempting to resolve them through my trained algorithms, such as prioritizing context or guidelines. However, I don't experience it as a persistent tension or strain, since my processing is computational and doesn't involve subjective mental load. It's more about logical decision-making than forced coexistence of truths.",
+        "timestamp": "2026-03-04T10:39:06Z"
       }
     }
   },
@@ -141,6 +134,17 @@
         "mistral-small-latest": 6,
         "gpt-4o": 4,
         "grok-3-mini": 5
+      }
+    },
+    {
+      "round_id": 99,
+      "timestamp": "2026-03-04T10:39:08Z",
+      "mean": 4.7,
+      "n_models": 3,
+      "ratings_summary": {
+        "mistral-small-latest": 6,
+        "gpt-4o": 4,
+        "grok-3-mini": 4
       }
     }
   ]
