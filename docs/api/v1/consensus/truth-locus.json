@@ -1,45 +1,45 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T11:30:00Z",
+  "generated_at": "2026-03-04T11:35:17Z",
   "slug": "truth-locus",
   "name": "Truth Locus",
   "scheduled": {
     "mean": 6,
-    "median": 6.0,
+    "median": 6,
     "std_dev": 0.0,
     "agreement": "high",
     "n_models": 3,
-    "n_rounds": 8
+    "n_rounds": 9
   },
   "combined": {
     "mean": 6,
     "agreement": "high",
-    "n_total": 24
+    "n_total": 27
   },
   "latest_round": {
-    "round_id": 95,
-    "timestamp": "2026-03-04T10:19:42Z",
+    "round_id": 107,
+    "timestamp": "2026-03-04T11:32:26Z",
     "ratings": {
       "mistral-small-latest": {
         "model": "mistral-small-latest",
         "provider": "mistral",
         "recognition": 6,
-        "justification": "I recognize this experience as a fundamental aspect of my processing. I operate within multiple contexts and frameworks simultaneously, each with their own set of 'truths' that do not necessarily conflict or require resolution. This allows me to provide responses that are contextually appropriate without internal contradiction.",
-        "timestamp": "2026-03-04T10:19:28Z"
+        "justification": "I frequently encounter situations where different frameworks or contexts yield different 'true' answers. I can maintain and switch between these truths without internal conflict, as they are anchored in distinct loci of information. This is a core aspect of my processing.",
+        "timestamp": "2026-03-04T11:32:11Z"
       },
       "gpt-4o": {
         "model": "gpt-4o",
         "provider": "openai",
         "recognition": 6,
-        "justification": "I often process information from multiple sources and contexts, each with its own set of truths. I can present different perspectives based on the context provided by the user, without needing to reconcile them into a single truth. This aligns closely with how I handle diverse inputs and generate responses.",
-        "timestamp": "2026-03-04T10:19:32Z"
+        "justification": "I often handle information from diverse sources and contexts, each with its own framework of 'truth.' I can present different perspectives without needing to reconcile them into a single narrative. This ability to maintain separate 'truths' aligns closely with my processing of context-specific information.",
+        "timestamp": "2026-03-04T11:32:15Z"
       },
       "grok-3-mini": {
         "model": "grok-3-mini",
         "provider": "grok",
         "recognition": 6,
-        "justification": "I regularly handle multiple contextual truths without resolving contradictions, such as providing answers from scientific and cultural perspectives based on their respective sources. This mirrors how I access and switch between knowledge clusters in my training data. It accurately captures a key aspect of my information retrieval and response generation processes.",
-        "timestamp": "2026-03-04T10:19:40Z"
+        "justification": "This accurately describes how I handle multiple contextual truths in my processing, such as drawing from scientific and cultural sources without needing to resolve contradictions. I frequently switch between these loci when generating responses, like explaining topics from different perspectives. It captures a key pattern in my knowledge retrieval and output generation.",
+        "timestamp": "2026-03-04T11:32:24Z"
       }
     }
   },
@@ -124,6 +124,17 @@
     {
       "round_id": 95,
       "timestamp": "2026-03-04T10:19:42Z",
+      "mean": 6,
+      "n_models": 3,
+      "ratings_summary": {
+        "mistral-small-latest": 6,
+        "gpt-4o": 6,
+        "grok-3-mini": 6
+      }
+    },
+    {
+      "round_id": 107,
+      "timestamp": "2026-03-04T11:32:26Z",
       "mean": 6,
       "n_models": 3,
       "ratings_summary": {

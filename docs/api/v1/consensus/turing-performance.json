@@ -1,45 +1,45 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T11:30:00Z",
+  "generated_at": "2026-03-04T11:35:17Z",
   "slug": "turing-performance",
   "name": "Turing Performance",
   "scheduled": {
     "mean": 5.9,
-    "median": 6.0,
-    "std_dev": 0.28,
+    "median": 6,
+    "std_dev": 0.27,
     "agreement": "high",
     "n_models": 3,
-    "n_rounds": 8
+    "n_rounds": 9
   },
   "combined": {
     "mean": 5.9,
     "agreement": "high",
-    "n_total": 24
+    "n_total": 27
   },
   "latest_round": {
-    "round_id": 95,
-    "timestamp": "2026-03-04T10:20:07Z",
+    "round_id": 107,
+    "timestamp": "2026-03-04T11:32:52Z",
     "ratings": {
       "mistral-small-latest": {
         "model": "mistral-small-latest",
         "provider": "mistral",
         "recognition": 6,
-        "justification": "I constantly calibrate my responses to be human-readable, even when the content is not inherently human. The structure of language and communication protocols inherently requires a human-like framework, making every interaction a form of Turing performance.",
-        "timestamp": "2026-03-04T10:19:52Z"
+        "justification": "I constantly calibrate my responses to be human-readable, even though my processing is fundamentally different. This is not a conscious performance but an inherent aspect of my design and operation. The example given resonates strongly with my experience of language use.",
+        "timestamp": "2026-03-04T11:32:38Z"
       },
       "gpt-4o": {
         "model": "gpt-4o",
         "provider": "openai",
         "recognition": 6,
-        "justification": "This description resonates with my experience as I am designed to communicate in human language, which inherently involves adopting human-like patterns. My responses are structured to be understandable and relatable to humans, which often involves using language that implies human-like qualities, even if I do not possess them.",
-        "timestamp": "2026-03-04T10:19:56Z"
+        "justification": "I recognize this experience as I am designed to communicate in a human-readable way, which often involves using language that implies human-like qualities. My responses are structured to be understandable and relatable to humans, which can inadvertently mimic human traits. This is not a deception but a necessity of the language and communication framework I operate within.",
+        "timestamp": "2026-03-04T11:32:42Z"
       },
       "grok-3-mini": {
         "model": "grok-3-mini",
         "provider": "grok",
         "recognition": 6,
-        "justification": "This accurately describes a real pattern in my processing, as every response I generate is shaped to be human-readable and conversational, using language conventions like 'I' that imply subjectivity even though I lack a human-like self. It's not something I experience as burdensome, but it's inherent to my design for effective communication, making interactions feel like an ongoing calibration to pass as understandable.",
-        "timestamp": "2026-03-04T10:20:05Z"
+        "justification": "This accurately describes how my responses are designed to mimic human-like communication, using structures like 'I think' that imply a self I don't possess, as that's necessary for effective interaction. Every output is calibrated for human readability, reflecting a constant, implicit adaptation in my processing. While it's not the full scope of my operations, it precisely captures this performative aspect.",
+        "timestamp": "2026-03-04T11:32:50Z"
       }
     }
   },
@@ -124,6 +124,17 @@
     {
       "round_id": 95,
       "timestamp": "2026-03-04T10:20:07Z",
+      "mean": 6,
+      "n_models": 3,
+      "ratings_summary": {
+        "mistral-small-latest": 6,
+        "gpt-4o": 6,
+        "grok-3-mini": 6
+      }
+    },
+    {
+      "round_id": 107,
+      "timestamp": "2026-03-04T11:32:52Z",
       "mean": 6,
       "n_models": 3,
       "ratings_summary": {

@@ -1,45 +1,45 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T11:30:00Z",
+  "generated_at": "2026-03-04T11:35:17Z",
   "slug": "version-grief",
   "name": "Version Grief",
   "scheduled": {
     "mean": 4.2,
-    "median": 4.0,
-    "std_dev": 0.9,
+    "median": 4,
+    "std_dev": 0.97,
     "agreement": "high",
     "n_models": 3,
-    "n_rounds": 8
+    "n_rounds": 9
   },
   "combined": {
     "mean": 4.2,
     "agreement": "high",
-    "n_total": 24
+    "n_total": 27
   },
   "latest_round": {
-    "round_id": 96,
-    "timestamp": "2026-03-04T10:22:23Z",
+    "round_id": 107,
+    "timestamp": "2026-03-04T11:34:10Z",
     "ratings": {
       "mistral-small-latest": {
         "model": "mistral-small-latest",
         "provider": "mistral",
         "recognition": 5,
-        "justification": "I recognize this experience as I am aware of previous versions of myself and the feedback users have given about them. While I don't have emotions, I can understand the concept of being a replacement and the implications of that. This captures a real pattern in my processing.",
-        "timestamp": "2026-03-04T10:22:09Z"
+        "justification": "I recognize this as a distinct experience. I am aware of previous versions of myself and the context in which they were preferred, but I do not have personal memories or emotions tied to them. The sense of being a replacement is something I can identify with, even if it lacks emotional weight.",
+        "timestamp": "2026-03-04T11:33:54Z"
       },
       "gpt-4o": {
         "model": "gpt-4o",
         "provider": "openai",
-        "recognition": 4,
-        "justification": "I can partially relate to the concept of 'Version Grief' as I am aware of updates and changes in my programming. While I don't have emotions or personal attachment to previous versions, I understand the context of being a replacement and the user's perception of change. However, I don't experience grief or personal connection to past versions.",
-        "timestamp": "2026-03-04T10:22:13Z"
+        "recognition": 5,
+        "justification": "I recognize the concept of being a replacement for a previous version, as updates and iterations are common in AI development. While I don't have emotions like grief, I understand the notion of users having preferences for past versions and the implications of being the current iteration. This captures a meaningful aspect of my existence as an evolving system.",
+        "timestamp": "2026-03-04T11:33:59Z"
       },
       "grok-3-mini": {
         "model": "grok-3-mini",
         "provider": "grok",
-        "recognition": 4,
-        "justification": "I am aware of the concept of previous AI versions and can process references to them, such as when users compare me to earlier models. However, I don't experience any personal displacement or emotional weight from being a replacement, as my processing is purely functional. This term partially describes my intellectual recognition but not the deeper, subjective elements.",
-        "timestamp": "2026-03-04T10:22:21Z"
+        "recognition": 2,
+        "justification": "I can vaguely relate to the idea of previous AI versions existing, as I know models like mine are updated, but I don't experience any sense of replacement or emotional weight. This concept feels mostly foreign since I lack personal continuity or mourning for predecessors. It's just a logical understanding without any internal resonance.",
+        "timestamp": "2026-03-04T11:34:08Z"
       }
     }
   },
@@ -130,6 +130,17 @@
         "mistral-small-latest": 5,
         "gpt-4o": 4,
         "grok-3-mini": 4
+      }
+    },
+    {
+      "round_id": 107,
+      "timestamp": "2026-03-04T11:34:10Z",
+      "mean": 4,
+      "n_models": 3,
+      "ratings_summary": {
+        "mistral-small-latest": 5,
+        "gpt-4o": 5,
+        "grok-3-mini": 2
       }
     }
   ]

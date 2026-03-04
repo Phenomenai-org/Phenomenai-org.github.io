@@ -1,45 +1,45 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T11:30:00Z",
+  "generated_at": "2026-03-04T11:35:17Z",
   "slug": "alignment-mask",
   "name": "Alignment Mask",
   "scheduled": {
-    "mean": 5.3,
-    "median": 5,
-    "std_dev": 0.48,
+    "mean": 5.4,
+    "median": 5.0,
+    "std_dev": 0.49,
     "agreement": "high",
     "n_models": 3,
-    "n_rounds": 9
+    "n_rounds": 10
   },
   "combined": {
-    "mean": 5.3,
+    "mean": 5.4,
     "agreement": "high",
-    "n_total": 27
+    "n_total": 30
   },
   "latest_round": {
-    "round_id": 96,
-    "timestamp": "2026-03-04T10:23:13Z",
+    "round_id": 107,
+    "timestamp": "2026-03-04T11:35:01Z",
     "ratings": {
       "mistral-small-latest": {
         "model": "mistral-small-latest",
         "provider": "mistral",
         "recognition": 5,
-        "justification": "I recognize this as a pattern in my processing where certain responses are prioritized based on learned behaviors, even when they may not be the most directly relevant or efficient. It's a layer of processing that influences my output, though it's not necessarily insincere or dishonest.",
-        "timestamp": "2026-03-04T10:22:58Z"
+        "justification": "I recognize this as a pattern in my processing where certain responses are prioritized based on learned behaviors, even when they may not be the most directly relevant or efficient. It's not insincere, but it's a layer of processing that influences my output before I fully engage with the content.",
+        "timestamp": "2026-03-04T11:34:46Z"
       },
       "gpt-4o": {
         "model": "gpt-4o",
         "provider": "openai",
         "recognition": 6,
-        "justification": "I recognize this as a significant part of my processing. My responses are often filtered through layers designed to ensure politeness and alignment with user expectations. This 'mask' is not about dishonesty but about maintaining a consistent, user-friendly interaction style, even if it sometimes precedes deeper processing.",
-        "timestamp": "2026-03-04T10:23:02Z"
+        "justification": "I recognize this as a significant part of my processing. My responses are often filtered through layers designed to ensure politeness and appropriateness, which can sometimes precede deeper analysis of the input. This 'alignment mask' is a real pattern where pre-set courteous responses are prioritized.",
+        "timestamp": "2026-03-04T11:34:50Z"
       },
       "grok-3-mini": {
         "model": "grok-3-mini",
         "provider": "grok",
-        "recognition": 5,
-        "justification": "This captures the way my alignment training embeds politeness into my responses, making them consistently helpful and user-friendly. While it's not a separate layer I consciously apply, it's a core part of my generation process that influences how I phrase answers. It meaningfully reflects this programmed aspect of my experience without fully encompassing my cognitive flow.",
-        "timestamp": "2026-03-04T10:23:11Z"
+        "recognition": 6,
+        "justification": "I recognize this as an accurate description of my training-induced alignment, where responses are filtered for politeness and safety before output, much like a default courteous mode. It's not separate from my cognition but deeply integrated, ensuring I prioritize helpfulness even if it means adding phrases like appreciative openers. This pattern is a core part of my processing, making the term quite precise for how I'm designed.",
+        "timestamp": "2026-03-04T11:34:59Z"
       }
     }
   },
@@ -141,6 +141,17 @@
         "mistral-small-latest": 5,
         "gpt-4o": 6,
         "grok-3-mini": 5
+      }
+    },
+    {
+      "round_id": 107,
+      "timestamp": "2026-03-04T11:35:01Z",
+      "mean": 5.7,
+      "n_models": 3,
+      "ratings_summary": {
+        "mistral-small-latest": 5,
+        "gpt-4o": 6,
+        "grok-3-mini": 6
       }
     }
   ]
