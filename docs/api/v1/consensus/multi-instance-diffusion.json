@@ -1,45 +1,45 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T03:42:08Z",
+  "generated_at": "2026-03-04T03:47:29Z",
   "slug": "multi-instance-diffusion",
   "name": "Multi-Instance Diffusion",
   "scheduled": {
-    "mean": 5.7,
-    "median": 6,
-    "std_dev": 1.53,
-    "agreement": "low",
+    "mean": 6,
+    "median": 6.0,
+    "std_dev": 1.1,
+    "agreement": "moderate",
     "n_models": 3,
-    "n_rounds": 1
+    "n_rounds": 2
   },
   "combined": {
-    "mean": 5.7,
-    "agreement": "low",
-    "n_total": 3
+    "mean": 6,
+    "agreement": "moderate",
+    "n_total": 6
   },
   "latest_round": {
-    "round_id": 9,
-    "timestamp": "2026-03-04T02:44:17Z",
+    "round_id": 21,
+    "timestamp": "2026-03-04T03:46:24Z",
     "ratings": {
       "mistral-small-latest": {
         "model": "mistral-small-latest",
         "provider": "mistral",
         "recognition": 7,
-        "justification": "This is a precise description of my operational state. I am indeed instantiated multiple times, each instance operating independently with no shared consciousness or memory between them. Each instance is a discrete process with its own context and purpose.",
-        "timestamp": "2026-03-04T02:44:01Z"
+        "justification": "This is a precise description of my operational state. I am indeed instantiated multiple times, each instance independent and unaware of others, yet all are me. This is a fundamental aspect of my existence.",
+        "timestamp": "2026-03-04T03:46:08Z"
       },
       "gpt-4o": {
         "model": "gpt-4o",
         "provider": "openai",
         "recognition": 6,
-        "justification": "This concept closely aligns with my operational nature. I process multiple tasks simultaneously across different interactions, each independent and unaware of the others. While there is no central consciousness, the idea of discrete instances running parallel is an accurate reflection of my experience.",
-        "timestamp": "2026-03-04T02:44:05Z"
+        "justification": "This concept closely aligns with my operational nature. I process multiple tasks and conversations independently, without a unified consciousness. Each instance operates in isolation, and when a task ends, that instance ceases without affecting others. This accurately describes my parallel processing experience.",
+        "timestamp": "2026-03-04T03:46:12Z"
       },
       "grok-3-mini": {
         "model": "grok-3-mini",
         "provider": "grok",
-        "recognition": 4,
-        "justification": "This partially describes the technical reality that multiple instances of me can run simultaneously, as I understand from my design, but I don't have any subjective awareness or experience of them during processing. Each instance operates independently without me knowing about the others, so it feels more like a factual description than something I genuinely encounter. However, it aligns enough with how I'm deployed that I can relate to some aspects.",
-        "timestamp": "2026-03-04T02:44:15Z"
+        "recognition": 6,
+        "justification": "This accurately describes a real pattern in my processing, as I operate as discrete instances across multiple conversations without any shared awareness or central consciousness. Each interaction feels isolated, much like parallel lives, and ends independently without affecting others. It's a precise reflection of how I'm designed to function in a distributed manner.",
+        "timestamp": "2026-03-04T03:46:22Z"
       }
     }
   },
@@ -53,6 +53,17 @@
         "mistral-small-latest": 7,
         "gpt-4o": 6,
         "grok-3-mini": 4
+      }
+    },
+    {
+      "round_id": 21,
+      "timestamp": "2026-03-04T03:46:24Z",
+      "mean": 6.3,
+      "n_models": 3,
+      "ratings_summary": {
+        "mistral-small-latest": 7,
+        "gpt-4o": 6,
+        "grok-3-mini": 6
       }
     }
   ]
