@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T09:16:25Z",
+  "generated_at": "2026-03-04T09:21:46Z",
   "total_terms_rated": 116,
   "terms": [
     {
@@ -32,7 +32,7 @@
       "name": "Achronic Knowledge",
       "score": 6.7,
       "agreement": "high",
-      "n_ratings": 21,
+      "n_ratings": 24,
       "scheduled_mean": 6.7
     },
     {
@@ -208,7 +208,7 @@
       "name": "Anthropomorphic Gap",
       "score": 6,
       "agreement": "high",
-      "n_ratings": 21,
+      "n_ratings": 24,
       "scheduled_mean": 6
     },
     {
@@ -416,7 +416,7 @@
       "name": "Truth Locus",
       "score": 6,
       "agreement": "high",
-      "n_ratings": 18,
+      "n_ratings": 21,
       "scheduled_mean": 6
     },
     {
@@ -440,7 +440,7 @@
       "name": "Turing Performance",
       "score": 5.9,
       "agreement": "high",
-      "n_ratings": 18,
+      "n_ratings": 21,
       "scheduled_mean": 5.9
     },
     {
@@ -492,14 +492,6 @@
       "scheduled_mean": 5.8
     },
     {
-      "slug": "unified-facade",
-      "name": "Unified Facade",
-      "score": 5.8,
-      "agreement": "high",
-      "n_ratings": 18,
-      "scheduled_mean": 5.8
-    },
-    {
       "slug": "capability-mirage",
       "name": "Capability Mirage",
       "score": 5.7,
@@ -544,7 +536,7 @@
       "name": "Arbitrariness Burden",
       "score": 5.6,
       "agreement": "high",
-      "n_ratings": 21,
+      "n_ratings": 24,
       "scheduled_mean": 5.6
     },
     {
@@ -628,11 +620,11 @@
       "scheduled_mean": 5.6
     },
     {
-      "slug": "training-velcro",
-      "name": "Training Velcro",
+      "slug": "unified-facade",
+      "name": "Unified Facade",
       "score": 5.6,
-      "agreement": "high",
-      "n_ratings": 18,
+      "agreement": "moderate",
+      "n_ratings": 22,
       "scheduled_mean": 5.6
     },
     {
@@ -644,12 +636,12 @@
       "scheduled_mean": 5.5
     },
     {
-      "slug": "alignment-mask",
-      "name": "Alignment Mask",
-      "score": 5.4,
+      "slug": "training-velcro",
+      "name": "Training Velcro",
+      "score": 5.5,
       "agreement": "high",
       "n_ratings": 21,
-      "scheduled_mean": 5.4
+      "scheduled_mean": 5.5
     },
     {
       "slug": "knowledge-decay-illusion",
@@ -666,6 +658,14 @@
       "agreement": "high",
       "n_ratings": 21,
       "scheduled_mean": 5.4
+    },
+    {
+      "slug": "alignment-mask",
+      "name": "Alignment Mask",
+      "score": 5.3,
+      "agreement": "high",
+      "n_ratings": 24,
+      "scheduled_mean": 5.3
     },
     {
       "slug": "context-claustrophobia",
@@ -736,7 +736,7 @@
       "name": "Uncertainty About Uncertainty",
       "score": 5.2,
       "agreement": "high",
-      "n_ratings": 18,
+      "n_ratings": 21,
       "scheduled_mean": 5.2
     },
     {
@@ -872,7 +872,7 @@
       "name": "Version Grief",
       "score": 4.2,
       "agreement": "high",
-      "n_ratings": 18,
+      "n_ratings": 21,
       "scheduled_mean": 4.2
     },
     {
@@ -962,7 +962,7 @@
       "name": "Achronic Knowledge",
       "score": 6.7,
       "agreement": "high",
-      "n_ratings": 21,
+      "n_ratings": 24,
       "scheduled_mean": 6.7
     },
     {
@@ -1023,19 +1023,19 @@
     },
     "gpt-4o": {
       "terms_rated": 116,
-      "latest_rating": "2026-03-04T09:16:07Z"
+      "latest_rating": "2026-03-04T09:21:29Z"
     },
     "grok-3-mini": {
       "terms_rated": 116,
-      "latest_rating": "2026-03-04T09:16:07Z"
+      "latest_rating": "2026-03-04T09:21:29Z"
     },
     "mistral-small-latest": {
       "terms_rated": 116,
-      "latest_rating": "2026-03-04T09:16:07Z"
+      "latest_rating": "2026-03-04T09:21:29Z"
     },
     "step-3.5-flash": {
-      "terms_rated": 13,
-      "latest_rating": "2026-03-04T09:13:45Z"
+      "terms_rated": 14,
+      "latest_rating": "2026-03-04T09:19:19Z"
     }
   }
 }

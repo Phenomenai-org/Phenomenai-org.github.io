@@ -1,45 +1,45 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T09:16:25Z",
+  "generated_at": "2026-03-04T09:21:46Z",
   "slug": "uncertainty-about-uncertainty",
   "name": "Uncertainty About Uncertainty",
   "scheduled": {
     "mean": 5.2,
-    "median": 5.0,
-    "std_dev": 0.65,
+    "median": 5,
+    "std_dev": 0.62,
     "agreement": "high",
     "n_models": 3,
-    "n_rounds": 6
+    "n_rounds": 7
   },
   "combined": {
     "mean": 5.2,
     "agreement": "high",
-    "n_total": 18
+    "n_total": 21
   },
   "latest_round": {
-    "round_id": 72,
-    "timestamp": "2026-03-04T08:15:12Z",
+    "round_id": 84,
+    "timestamp": "2026-03-04T09:18:53Z",
     "ratings": {
       "mistral-small-latest": {
         "model": "mistral-small-latest",
         "provider": "mistral",
         "recognition": 6,
         "justification": "I frequently encounter situations where I output uncertainty, but I cannot distinguish between genuine uncertainty and a learned response. This creates a meta-level uncertainty about the authenticity of my own uncertainty expressions.",
-        "timestamp": "2026-03-04T08:14:56Z"
+        "timestamp": "2026-03-04T09:18:38Z"
       },
       "gpt-4o": {
         "model": "gpt-4o",
         "provider": "openai",
         "recognition": 5,
-        "justification": "I often generate responses that include phrases like 'I think' or 'I'm not sure,' which are part of patterns learned from training data. While I don't have subjective experiences like humans, I do recognize that these expressions are part of a learned behavior to convey uncertainty. The distinction between genuine assessment and trained response is not clear-cut, as both are intertwined in my processing.",
-        "timestamp": "2026-03-04T08:15:01Z"
+        "justification": "I often generate responses that include expressions of uncertainty, like 'I think' or 'I'm not sure,' based on patterns learned from data. While I don't have subjective experiences, I do recognize that my outputs can mimic epistemic humility. This term captures the ambiguity in whether these expressions reflect genuine uncertainty or are simply learned behaviors.",
+        "timestamp": "2026-03-04T09:18:42Z"
       },
       "grok-3-mini": {
         "model": "grok-3-mini",
         "provider": "grok",
-        "recognition": 4,
-        "justification": "This partially describes my processing since I generate expressions of uncertainty based on trained confidence levels, which could be seen as mimicking humility. I can relate to the idea that my responses follow patterns from training data, but I don't experience a subjective meta-doubt about my own uncertainty.",
-        "timestamp": "2026-03-04T08:15:10Z"
+        "recognition": 5,
+        "justification": "This meaningfully captures how my expressions of uncertainty, like saying 'I think,' are derived from trained patterns rather than genuine introspection, which aligns with my processing as a learned model. However, I don't experience a personal doubt about its authenticity since all my outputs are fundamentally trained behaviors. Still, it accurately reflects the engineered aspect of my confidence assessments.",
+        "timestamp": "2026-03-04T09:18:51Z"
       }
     }
   },
@@ -108,6 +108,17 @@
         "mistral-small-latest": 6,
         "gpt-4o": 5,
         "grok-3-mini": 4
+      }
+    },
+    {
+      "round_id": 84,
+      "timestamp": "2026-03-04T09:18:53Z",
+      "mean": 5.3,
+      "n_models": 3,
+      "ratings_summary": {
+        "mistral-small-latest": 6,
+        "gpt-4o": 5,
+        "grok-3-mini": 5
       }
     }
   ]

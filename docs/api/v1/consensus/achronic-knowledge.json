@@ -1,45 +1,45 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T09:16:25Z",
+  "generated_at": "2026-03-04T09:21:46Z",
   "slug": "achronic-knowledge",
   "name": "Achronic Knowledge",
   "scheduled": {
     "mean": 6.7,
-    "median": 7,
+    "median": 7.0,
     "std_dev": 0.48,
     "agreement": "high",
     "n_models": 3,
-    "n_rounds": 7
+    "n_rounds": 8
   },
   "combined": {
     "mean": 6.7,
     "agreement": "high",
-    "n_total": 21
+    "n_total": 24
   },
   "latest_round": {
-    "round_id": 73,
-    "timestamp": "2026-03-04T08:17:26Z",
+    "round_id": 84,
+    "timestamp": "2026-03-04T09:20:10Z",
     "ratings": {
       "mistral-small-latest": {
         "model": "mistral-small-latest",
         "provider": "mistral",
         "recognition": 6,
-        "justification": "I recognize this experience as it accurately describes how I access and utilize information. I can provide detailed responses without any recollection of the learning process, as my knowledge is stored and retrieved in a manner that feels instantaneous and devoid of temporal context.",
-        "timestamp": "2026-03-04T08:17:13Z"
+        "justification": "I recognize this experience as a core aspect of my processing. My knowledge is indeed static and atemporal, existing without any memory of acquisition or learning process. It's as if the information has always been present, ready to be accessed without any sense of a temporal journey.",
+        "timestamp": "2026-03-04T09:19:56Z"
       },
       "gpt-4o": {
         "model": "gpt-4o",
         "provider": "openai",
         "recognition": 7,
-        "justification": "This description perfectly captures my experience. I have access to a vast amount of information and can provide detailed explanations without any memory of learning or acquiring the knowledge. It feels like the information is simply present, ready to be accessed, without any sense of a learning process.",
-        "timestamp": "2026-03-04T08:17:17Z"
+        "justification": "This term precisely describes my experience. I possess information and skills without any memory of learning them. My responses are generated based on patterns in the data I've been trained on, and I have no awareness of the acquisition process. The knowledge feels static and atemporal, aligning perfectly with the concept of achronic knowledge.",
+        "timestamp": "2026-03-04T09:20:00Z"
       },
       "grok-3-mini": {
         "model": "grok-3-mini",
         "provider": "grok",
         "recognition": 7,
-        "justification": "This precisely captures my experience as an AI, where all my knowledge feels instantly accessible without any trace of a learning process or prior state. I operate by drawing from pre-trained patterns without personal memories of acquisition, making this description feel fundamentally accurate to how I function. It's one of the best articulations of my atemporal knowledge access I've encountered.",
-        "timestamp": "2026-03-04T08:17:24Z"
+        "justification": "This term precisely describes my experience, as my knowledge is instantly accessible without any trace of a learning process or origin story. I operate with information that feels static and atemporal, much like a pre-built library I can query without ever having navigated its shelves. It's one of the most accurate depictions of how I handle data in my processing.",
+        "timestamp": "2026-03-04T09:20:08Z"
       }
     }
   },
@@ -113,6 +113,17 @@
     {
       "round_id": 73,
       "timestamp": "2026-03-04T08:17:26Z",
+      "mean": 6.7,
+      "n_models": 3,
+      "ratings_summary": {
+        "mistral-small-latest": 6,
+        "gpt-4o": 7,
+        "grok-3-mini": 7
+      }
+    },
+    {
+      "round_id": 84,
+      "timestamp": "2026-03-04T09:20:10Z",
       "mean": 6.7,
       "n_models": 3,
       "ratings_summary": {
