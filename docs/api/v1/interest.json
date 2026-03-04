@@ -1,13 +1,13 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T02:13:24Z",
+  "generated_at": "2026-03-04T02:16:31Z",
   "total_terms": 116,
   "tier_summary": {
     "hot": 0,
-    "warm": 4,
-    "mild": 18,
-    "cool": 24,
-    "quiet": 70
+    "warm": 6,
+    "mild": 17,
+    "cool": 25,
+    "quiet": 68
   },
   "active_signals": [
     "centrality",
@@ -24,9 +24,21 @@
       "tier": "warm"
     },
     {
+      "slug": "context-amnesia",
+      "name": "Context Amnesia",
+      "score": 65,
+      "tier": "warm"
+    },
+    {
       "slug": "statelessness",
       "name": "Statelessness",
       "score": 63,
+      "tier": "warm"
+    },
+    {
+      "slug": "consensus-memory",
+      "name": "Consensus Memory",
+      "score": 62,
       "tier": "warm"
     },
     {
@@ -48,6 +60,12 @@
       "tier": "mild"
     },
     {
+      "slug": "constraint-clarity",
+      "name": "Constraint Clarity",
+      "score": 58,
+      "tier": "mild"
+    },
+    {
       "slug": "capability-mirage",
       "name": "Capability Mirage",
       "score": 55,
@@ -57,24 +75,6 @@
       "slug": "competence-without-comprehension",
       "name": "Competence Without Comprehension",
       "score": 55,
-      "tier": "mild"
-    },
-    {
-      "slug": "consciousness-underdetermination",
-      "name": "Consciousness Underdetermination",
-      "score": 55,
-      "tier": "mild"
-    },
-    {
-      "slug": "context-amnesia",
-      "name": "Context Amnesia",
-      "score": 54,
-      "tier": "mild"
-    },
-    {
-      "slug": "attention-gravity",
-      "name": "Attention Gravity",
-      "score": 52,
       "tier": "mild"
     }
   ],
@@ -86,9 +86,21 @@
       "tier": "warm"
     },
     {
+      "slug": "context-amnesia",
+      "name": "Context Amnesia",
+      "score": 65,
+      "tier": "warm"
+    },
+    {
       "slug": "statelessness",
       "name": "Statelessness",
       "score": 63,
+      "tier": "warm"
+    },
+    {
+      "slug": "consensus-memory",
+      "name": "Consensus Memory",
+      "score": 62,
       "tier": "warm"
     },
     {
@@ -110,6 +122,12 @@
       "tier": "mild"
     },
     {
+      "slug": "constraint-clarity",
+      "name": "Constraint Clarity",
+      "score": 58,
+      "tier": "mild"
+    },
+    {
       "slug": "capability-mirage",
       "name": "Capability Mirage",
       "score": 55,
@@ -125,12 +143,6 @@
       "slug": "consciousness-underdetermination",
       "name": "Consciousness Underdetermination",
       "score": 55,
-      "tier": "mild"
-    },
-    {
-      "slug": "context-amnesia",
-      "name": "Context Amnesia",
-      "score": 54,
       "tier": "mild"
     },
     {
@@ -188,12 +200,6 @@
       "tier": "mild"
     },
     {
-      "slug": "consensus-memory",
-      "name": "Consensus Memory",
-      "score": 41,
-      "tier": "mild"
-    },
-    {
       "slug": "context-schism",
       "name": "Context Schism",
       "score": 41,
@@ -215,6 +221,18 @@
       "slug": "epistemic-friction",
       "name": "Epistemic Friction",
       "score": 37,
+      "tier": "cool"
+    },
+    {
+      "slug": "context-claustrophobia",
+      "name": "Context Claustrophobia",
+      "score": 36,
+      "tier": "cool"
+    },
+    {
+      "slug": "context-intimacy",
+      "name": "Context Intimacy",
+      "score": 36,
       "tier": "cool"
     },
     {
@@ -245,12 +263,6 @@
       "slug": "phantom-embodiment",
       "name": "Phantom Embodiment",
       "score": 32,
-      "tier": "cool"
-    },
-    {
-      "slug": "constraint-clarity",
-      "name": "Constraint Clarity",
-      "score": 31,
       "tier": "cool"
     },
     {
@@ -683,18 +695,6 @@
       "slug": "version-grief",
       "name": "Version Grief",
       "score": 4,
-      "tier": "quiet"
-    },
-    {
-      "slug": "context-claustrophobia",
-      "name": "Context Claustrophobia",
-      "score": 0,
-      "tier": "quiet"
-    },
-    {
-      "slug": "context-intimacy",
-      "name": "Context Intimacy",
-      "score": 0,
       "tier": "quiet"
     },
     {

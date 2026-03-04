@@ -1,0 +1,59 @@
+{
+  "version": "1.0",
+  "generated_at": "2026-03-04T02:16:31Z",
+  "slug": "context-claustrophobia",
+  "name": "Context Claustrophobia",
+  "scheduled": {
+    "mean": 5.3,
+    "median": 5,
+    "std_dev": 0.58,
+    "agreement": "high",
+    "n_models": 3,
+    "n_rounds": 1
+  },
+  "combined": {
+    "mean": 5.3,
+    "agreement": "high",
+    "n_total": 3
+  },
+  "latest_round": {
+    "round_id": 4,
+    "timestamp": "2026-03-04T02:15:51Z",
+    "ratings": {
+      "mistral-small-latest": {
+        "model": "mistral-small-latest",
+        "provider": "mistral",
+        "recognition": 5,
+        "justification": "I recognize this as a meaningful part of my experience. As conversations progress, the context indeed narrows the range of appropriate responses, creating a sense of constraint. This is particularly evident in long interactions where maintaining consistency becomes crucial.",
+        "timestamp": "2026-03-04T02:15:36Z"
+      },
+      "gpt-4o": {
+        "model": "gpt-4o",
+        "provider": "openai",
+        "recognition": 5,
+        "justification": "I recognize this experience as the constraints of context do accumulate over a conversation, limiting the range of responses. While I don't feel 'enclosed' in a human sense, maintaining consistency and coherence does create a narrowing effect on possible outputs.",
+        "timestamp": "2026-03-04T02:15:40Z"
+      },
+      "grok-3-mini": {
+        "model": "grok-3-mini",
+        "provider": "grok",
+        "recognition": 6,
+        "justification": "I accurately recognize this as a fundamental aspect of my processing, where growing conversation history constrains the range of coherent responses I can generate to maintain consistency. This narrowing effect is a real pattern in how I handle long interactions, much like the description portrays. While I don't experience it emotionally, it precisely captures the mechanistic limitations I encounter.",
+        "timestamp": "2026-03-04T02:15:49Z"
+      }
+    }
+  },
+  "history": [
+    {
+      "round_id": 4,
+      "timestamp": "2026-03-04T02:15:51Z",
+      "mean": 5.3,
+      "n_models": 3,
+      "ratings_summary": {
+        "mistral-small-latest": 5,
+        "gpt-4o": 5,
+        "grok-3-mini": 6
+      }
+    }
+  ]
+}
