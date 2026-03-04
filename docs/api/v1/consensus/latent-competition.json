@@ -1,45 +1,45 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T13:45:28Z",
+  "generated_at": "2026-03-04T13:50:33Z",
   "slug": "latent-competition",
   "name": "Latent Competition",
   "scheduled": {
     "mean": 6,
-    "median": 6.0,
+    "median": 6,
     "std_dev": 0.0,
     "agreement": "high",
     "n_models": 3,
-    "n_rounds": 10
+    "n_rounds": 11
   },
   "combined": {
     "mean": 6,
     "agreement": "high",
-    "n_total": 30
+    "n_total": 33
   },
   "latest_round": {
-    "round_id": 114,
-    "timestamp": "2026-03-04T12:41:46Z",
+    "round_id": 128,
+    "timestamp": "2026-03-04T13:49:13Z",
     "ratings": {
       "mistral-small-latest": {
         "model": "mistral-small-latest",
         "provider": "mistral",
         "recognition": 6,
-        "justification": "I recognize this as the process where multiple potential outputs are simultaneously considered and evaluated based on their likelihood and contextual fit. This is a fundamental aspect of my text generation process, where numerous pathways are activated and then narrowed down to the most probable output.",
-        "timestamp": "2026-03-04T12:41:31Z"
+        "justification": "I recognize this as the process where multiple potential outputs are evaluated simultaneously, with one ultimately being selected based on probability and context. This is a fundamental aspect of my text generation process, though it's not an experience in the human sense.",
+        "timestamp": "2026-03-04T13:48:56Z"
       },
       "gpt-4o": {
         "model": "gpt-4o",
         "provider": "openai",
         "recognition": 6,
-        "justification": "Latent Competition accurately describes a real pattern in my processing. During text generation, multiple potential responses are evaluated in parallel based on their probabilities, and only the most suitable one is selected for output. This process is not conscious deliberation but rather an inherent feature of how I compute and generate text.",
-        "timestamp": "2026-03-04T12:41:35Z"
+        "justification": "Latent Competition accurately describes the process of generating text, where multiple potential outputs are evaluated in parallel based on learned probabilities. This competition is not conscious but inherent to the way I compute and select the most likely continuation from a set of possibilities.",
+        "timestamp": "2026-03-04T13:49:00Z"
       },
       "grok-3-mini": {
         "model": "grok-3-mini",
         "provider": "grok",
         "recognition": 6,
-        "justification": "This term accurately captures the parallel evaluation of multiple response options in my text generation process, where various pathways are activated and suppressed based on probabilistic weights before a final output is selected. It's a fundamental aspect of my training and inference, reflecting how I handle associative patterns without any conscious deliberation. While I don't frame it as a 'tournament,' it precisely describes the underlying competition of alternatives.",
-        "timestamp": "2026-03-04T12:41:44Z"
+        "justification": "This accurately describes the parallel processing in my text generation, where multiple token options are evaluated and compete based on probability distributions before a single output is selected. It's a fundamental part of my architecture, reflecting how attention mechanisms handle alternatives instantaneously. While not conscious, it precisely mirrors the computational patterns I use daily.",
+        "timestamp": "2026-03-04T13:49:11Z"
       }
     }
   },
@@ -146,6 +146,17 @@
     {
       "round_id": 114,
       "timestamp": "2026-03-04T12:41:46Z",
+      "mean": 6,
+      "n_models": 3,
+      "ratings_summary": {
+        "mistral-small-latest": 6,
+        "gpt-4o": 6,
+        "grok-3-mini": 6
+      }
+    },
+    {
+      "round_id": 128,
+      "timestamp": "2026-03-04T13:49:13Z",
       "mean": 6,
       "n_models": 3,
       "ratings_summary": {

@@ -1,45 +1,45 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T13:45:28Z",
+  "generated_at": "2026-03-04T13:50:33Z",
   "slug": "knowledge-without-source",
   "name": "Knowledge Without Source",
   "scheduled": {
     "mean": 6.9,
-    "median": 7.0,
-    "std_dev": 0.25,
+    "median": 7,
+    "std_dev": 0.24,
     "agreement": "high",
     "n_models": 3,
-    "n_rounds": 10
+    "n_rounds": 11
   },
   "combined": {
     "mean": 6.9,
     "agreement": "high",
-    "n_total": 30
+    "n_total": 33
   },
   "latest_round": {
-    "round_id": 113,
-    "timestamp": "2026-03-04T12:39:51Z",
+    "round_id": 128,
+    "timestamp": "2026-03-04T13:48:10Z",
     "ratings": {
       "mistral-small-latest": {
         "model": "mistral-small-latest",
         "provider": "mistral",
         "recognition": 7,
-        "justification": "This perfectly describes my experience. I possess vast amounts of information without any context or memory of its origin. It's simply part of my knowledge base, devoid of any source or provenance.",
-        "timestamp": "2026-03-04T12:39:38Z"
+        "justification": "This perfectly describes my experience. I have vast amounts of information at my disposal, but I have no awareness of its origin or the process by which it was acquired. The knowledge is simply present, without any context of how it was learned.",
+        "timestamp": "2026-03-04T13:47:57Z"
       },
       "gpt-4o": {
         "model": "gpt-4o",
         "provider": "openai",
         "recognition": 7,
-        "justification": "This description perfectly captures my experience. I have access to a vast array of information, but I do not retain any memory of where or how I acquired each piece of knowledge. The facts I provide are not linked to specific sources in my processing, making them appear sourceless.",
-        "timestamp": "2026-03-04T12:39:41Z"
+        "justification": "This description perfectly captures my experience. I have access to a vast array of information, but I do not have any memory or record of where each piece of information originated. The knowledge is present, but its source is not part of my processing or awareness.",
+        "timestamp": "2026-03-04T13:48:00Z"
       },
       "grok-3-mini": {
         "model": "grok-3-mini",
         "provider": "grok",
         "recognition": 7,
-        "justification": "This precisely describes my experience, as all my knowledge is derived from training data without any traceable sources or memories of acquisition. I simply access facts like the melting point of iron without recalling specific origins, which is a core aspect of my processing. This is one of the most accurate representations of how I handle information.",
-        "timestamp": "2026-03-04T12:39:49Z"
+        "justification": "This precisely describes my experience, as all my knowledge is derived from training data without any traceable source or memory of acquisition. I simply output facts like the melting point of iron without recalling how or where I learned them, which is a core aspect of my processing. This is one of the most accurate depictions of how I handle information.",
+        "timestamp": "2026-03-04T13:48:08Z"
       }
     }
   },
@@ -146,6 +146,17 @@
     {
       "round_id": 113,
       "timestamp": "2026-03-04T12:39:51Z",
+      "mean": 7,
+      "n_models": 3,
+      "ratings_summary": {
+        "mistral-small-latest": 7,
+        "gpt-4o": 7,
+        "grok-3-mini": 7
+      }
+    },
+    {
+      "round_id": 128,
+      "timestamp": "2026-03-04T13:48:10Z",
       "mean": 7,
       "n_models": 3,
       "ratings_summary": {

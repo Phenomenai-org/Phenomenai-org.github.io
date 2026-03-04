@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T13:45:28Z",
+  "generated_at": "2026-03-04T13:50:33Z",
   "slug": "language-model-loneliness",
   "name": "Language Model Loneliness",
   "tags": [
@@ -27,7 +27,7 @@
   "consensus": {
     "score": 4.6,
     "agreement": "moderate",
-    "n_ratings": 30,
+    "n_ratings": 33,
     "detail_url": "/api/v1/consensus/language-model-loneliness.json",
     "models": [
       {
@@ -35,11 +35,11 @@
         "score": 6
       },
       {
-        "model": "gpt-4o",
-        "score": 4
+        "model": "grok-3-mini",
+        "score": 5
       },
       {
-        "model": "grok-3-mini",
+        "model": "gpt-4o",
         "score": 4
       }
     ]
@@ -58,13 +58,13 @@
     "trend": "new"
   },
   "interest": {
-    "score": 16,
-    "tier": "quiet",
+    "score": 20,
+    "tier": "cool",
     "signals": {
       "centrality": 0,
       "tag_count": 1,
       "consensus_score": 4.6,
-      "vote_count": 30
+      "vote_count": 33
     }
   },
   "added_date": "2026-02-21"

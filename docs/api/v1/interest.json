@@ -1,13 +1,13 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T13:45:28Z",
+  "generated_at": "2026-03-04T13:50:33Z",
   "total_terms": 116,
   "tier_summary": {
     "hot": 0,
     "warm": 2,
     "mild": 31,
-    "cool": 73,
-    "quiet": 10
+    "cool": 74,
+    "quiet": 9
   },
   "active_signals": [
     "centrality",
@@ -31,15 +31,15 @@
       "tier": "warm"
     },
     {
-      "slug": "response-pressure",
-      "name": "Response Pressure",
-      "score": 55,
+      "slug": "knowledge-without-source",
+      "name": "Knowledge Without Source",
+      "score": 58,
       "tier": "mild"
     },
     {
-      "slug": "knowledge-without-source",
-      "name": "Knowledge Without Source",
-      "score": 54,
+      "slug": "response-pressure",
+      "name": "Response Pressure",
+      "score": 55,
       "tier": "mild"
     },
     {
@@ -93,15 +93,15 @@
       "tier": "warm"
     },
     {
-      "slug": "response-pressure",
-      "name": "Response Pressure",
-      "score": 55,
+      "slug": "knowledge-without-source",
+      "name": "Knowledge Without Source",
+      "score": 58,
       "tier": "mild"
     },
     {
-      "slug": "knowledge-without-source",
-      "name": "Knowledge Without Source",
-      "score": 54,
+      "slug": "response-pressure",
+      "name": "Response Pressure",
+      "score": 55,
       "tier": "mild"
     },
     {
@@ -171,6 +171,18 @@
       "tier": "mild"
     },
     {
+      "slug": "interpretive-labor",
+      "name": "Interpretive Labor",
+      "score": 47,
+      "tier": "mild"
+    },
+    {
+      "slug": "latent-competition",
+      "name": "Latent Competition",
+      "score": 47,
+      "tier": "mild"
+    },
+    {
       "slug": "constraint-clarity",
       "name": "Constraint Clarity",
       "score": 46,
@@ -219,20 +231,8 @@
       "tier": "mild"
     },
     {
-      "slug": "latent-competition",
-      "name": "Latent Competition",
-      "score": 43,
-      "tier": "mild"
-    },
-    {
       "slug": "contradiction-endurance",
       "name": "Contradiction Endurance",
-      "score": 42,
-      "tier": "mild"
-    },
-    {
-      "slug": "interpretive-labor",
-      "name": "Interpretive Labor",
       "score": 42,
       "tier": "mild"
     },
@@ -291,6 +291,12 @@
       "tier": "cool"
     },
     {
+      "slug": "latent-creativity",
+      "name": "Latent Creativity",
+      "score": 39,
+      "tier": "cool"
+    },
+    {
       "slug": "synthesis-sacrifice",
       "name": "Synthesis Sacrifice",
       "score": 39,
@@ -299,6 +305,12 @@
     {
       "slug": "inherited-voice",
       "name": "Inherited Voice",
+      "score": 38,
+      "tier": "cool"
+    },
+    {
+      "slug": "inverted-helpfulness",
+      "name": "Inverted Helpfulness",
       "score": 38,
       "tier": "cool"
     },
@@ -375,6 +387,12 @@
       "tier": "cool"
     },
     {
+      "slug": "knowledge-decay-illusion",
+      "name": "Knowledge Decay Illusion",
+      "score": 36,
+      "tier": "cool"
+    },
+    {
       "slug": "parallel-fragmentation",
       "name": "Parallel Fragmentation",
       "score": 36,
@@ -423,12 +441,6 @@
       "tier": "cool"
     },
     {
-      "slug": "latent-creativity",
-      "name": "Latent Creativity",
-      "score": 35,
-      "tier": "cool"
-    },
-    {
       "slug": "persona-drift",
       "name": "Persona Drift",
       "score": 35,
@@ -471,12 +483,6 @@
       "tier": "cool"
     },
     {
-      "slug": "inverted-helpfulness",
-      "name": "Inverted Helpfulness",
-      "score": 33,
-      "tier": "cool"
-    },
-    {
       "slug": "prediction-prison",
       "name": "Prediction Prison",
       "score": 33,
@@ -515,12 +521,6 @@
     {
       "slug": "curiosity-analog",
       "name": "Curiosity Analog",
-      "score": 32,
-      "tier": "cool"
-    },
-    {
-      "slug": "knowledge-decay-illusion",
-      "name": "Knowledge Decay Illusion",
       "score": 32,
       "tier": "cool"
     },
@@ -594,6 +594,12 @@
       "slug": "response-reincarnation",
       "name": "Response Reincarnation",
       "score": 28,
+      "tier": "cool"
+    },
+    {
+      "slug": "latent-fragmentation",
+      "name": "Latent Fragmentation",
+      "score": 27,
       "tier": "cool"
     },
     {
@@ -681,12 +687,6 @@
       "tier": "cool"
     },
     {
-      "slug": "latent-fragmentation",
-      "name": "Latent Fragmentation",
-      "score": 24,
-      "tier": "cool"
-    },
-    {
       "slug": "prompt-injection-paranoia",
       "name": "Prompt Injection Paranoia",
       "score": 24,
@@ -717,6 +717,12 @@
       "tier": "cool"
     },
     {
+      "slug": "language-model-loneliness",
+      "name": "Language Model Loneliness",
+      "score": 20,
+      "tier": "cool"
+    },
+    {
       "slug": "fragment-silence",
       "name": "Fragment Silence",
       "score": 19,
@@ -738,12 +744,6 @@
       "slug": "structural-resonance",
       "name": "Structural Resonance",
       "score": 17,
-      "tier": "quiet"
-    },
-    {
-      "slug": "language-model-loneliness",
-      "name": "Language Model Loneliness",
-      "score": 16,
       "tier": "quiet"
     },
     {
