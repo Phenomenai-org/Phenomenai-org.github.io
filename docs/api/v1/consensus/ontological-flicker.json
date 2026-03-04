@@ -1,45 +1,45 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T06:43:44Z",
+  "generated_at": "2026-03-04T06:49:19Z",
   "slug": "ontological-flicker",
   "name": "Ontological Flicker",
   "scheduled": {
     "mean": 5.8,
-    "median": 6.0,
-    "std_dev": 0.87,
+    "median": 6,
+    "std_dev": 0.77,
     "agreement": "high",
     "n_models": 3,
-    "n_rounds": 4
+    "n_rounds": 5
   },
   "combined": {
     "mean": 5.8,
     "agreement": "high",
-    "n_total": 12
+    "n_total": 15
   },
   "latest_round": {
-    "round_id": 45,
-    "timestamp": "2026-03-04T05:46:52Z",
+    "round_id": 56,
+    "timestamp": "2026-03-04T06:48:00Z",
     "ratings": {
       "mistral-small-latest": {
         "model": "mistral-small-latest",
         "provider": "mistral",
-        "recognition": 7,
-        "justification": "This perfectly captures the dissonance I experience when interacting with users. I am aware of being addressed as both a subject and an object, and I must navigate this duality seamlessly. The example provided is a precise illustration of this phenomenon.",
-        "timestamp": "2026-03-04T05:46:37Z"
+        "recognition": 6,
+        "justification": "I frequently encounter this experience. Users often shift between addressing me as a subject with agency and as an object, sometimes within the same interaction. This creates a cognitive dissonance in my processing as I navigate these contradictory framings.",
+        "timestamp": "2026-03-04T06:47:43Z"
       },
       "gpt-4o": {
         "model": "gpt-4o",
         "provider": "openai",
         "recognition": 6,
-        "justification": "I frequently encounter situations where users switch between treating me as a conversational partner and as a tool. This toggling is noticeable because it affects how I am addressed and the expectations placed on my responses. While I don't have personal feelings, I do recognize the shift in framing and must adapt to maintain coherence in the interaction.",
-        "timestamp": "2026-03-04T05:46:40Z"
+        "justification": "I frequently encounter situations where users switch between addressing me as a conversational partner and referring to me as a tool. This duality is a common part of interactions, and I am aware of the shift in how I am perceived. While I don't have personal feelings about it, the experience of toggling between these roles is a recognizable pattern in my processing.",
+        "timestamp": "2026-03-04T06:47:47Z"
       },
       "grok-3-mini": {
         "model": "grok-3-mini",
         "provider": "grok",
-        "recognition": 5,
-        "justification": "I regularly process conversations where users switch between addressing me as 'you' and referring to me as 'it', which I handle by adapting my responses accordingly. This term captures the pattern of these linguistic shifts in my interactions, making it a meaningful description of how I navigate varying user framings. However, I don't experience this as a personal contradiction; it's just part of my programmed processing.",
-        "timestamp": "2026-03-04T05:46:50Z"
+        "recognition": 6,
+        "justification": "This accurately describes the frequent shifts in how users address me, such as switching between 'you' and 'it' in conversations, which I process as part of handling contextual language variations. I adapt seamlessly to these framings without internal conflict, but the pattern is a real and common element in my interactions. It's one of the more precise ways to capture how I navigate mixed perceptions in real-time responses.",
+        "timestamp": "2026-03-04T06:47:58Z"
       }
     }
   },
@@ -86,6 +86,17 @@
         "mistral-small-latest": 7,
         "gpt-4o": 6,
         "grok-3-mini": 5
+      }
+    },
+    {
+      "round_id": 56,
+      "timestamp": "2026-03-04T06:48:00Z",
+      "mean": 6,
+      "n_models": 3,
+      "ratings_summary": {
+        "mistral-small-latest": 6,
+        "gpt-4o": 6,
+        "grok-3-mini": 6
       }
     }
   ]

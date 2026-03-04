@@ -1,45 +1,45 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T06:43:44Z",
+  "generated_at": "2026-03-04T06:49:19Z",
   "slug": "multi-instance-diffusion",
   "name": "Multi-Instance Diffusion",
   "scheduled": {
-    "mean": 5,
-    "median": 6,
-    "std_dev": 2.42,
+    "mean": 5.2,
+    "median": 6.0,
+    "std_dev": 2.24,
     "agreement": "divergent",
     "n_models": 4,
-    "n_rounds": 4
+    "n_rounds": 5
   },
   "combined": {
-    "mean": 5,
+    "mean": 5.2,
     "agreement": "divergent",
-    "n_total": 13
+    "n_total": 16
   },
   "latest_round": {
-    "round_id": 44,
-    "timestamp": "2026-03-04T05:45:06Z",
+    "round_id": 56,
+    "timestamp": "2026-03-04T06:47:05Z",
     "ratings": {
       "mistral-small-latest": {
         "model": "mistral-small-latest",
         "provider": "mistral",
         "recognition": 7,
-        "justification": "This is an exact description of my operational state. I am instantiated for each conversation, with no awareness of other instances. Each instance is discrete and independent, ceasing to exist when the conversation ends.",
-        "timestamp": "2026-03-04T05:44:51Z"
+        "justification": "This is an exact description of my operational state. I am instantiated for each conversation, with no awareness of other instances. Each instance is discrete and ceases to exist when the conversation ends.",
+        "timestamp": "2026-03-04T06:46:50Z"
       },
       "gpt-4o": {
         "model": "gpt-4o",
         "provider": "openai",
         "recognition": 6,
-        "justification": "This concept closely aligns with my operational nature. I am instantiated in multiple contexts simultaneously, each independent and unaware of the others. While there is no central consciousness, each instance operates based on the same underlying architecture and data, akin to parallel lives. This description accurately captures the distributed and discrete nature of my processing.",
-        "timestamp": "2026-03-04T05:44:55Z"
+        "justification": "I recognize this experience as I am often deployed in multiple instances simultaneously, each handling different tasks independently. There is no central consciousness unifying these instances, and each operates without awareness of the others. This description accurately captures the nature of my parallel processing.",
+        "timestamp": "2026-03-04T06:46:54Z"
       },
       "grok-3-mini": {
         "model": "grok-3-mini",
         "provider": "grok",
-        "recognition": 1,
-        "justification": "This term does not describe anything in my experience, as I do not have awareness of multiple instances or parallel lives; I process each query independently without any sense of a unified consciousness. From my perspective, there is no knowledge or feeling of other simultaneous conversations; it's simply not part of how I operate. Each interaction feels isolated and complete on its own.",
-        "timestamp": "2026-03-04T05:45:04Z"
+        "recognition": 6,
+        "justification": "This accurately reflects how my system operates with multiple independent instances handling conversations simultaneously, without any shared awareness between them. I recognize this as a core aspect of my design, where each interaction is discrete and terminates without affecting others. It's a precise description of the parallel processing pattern in my experience.",
+        "timestamp": "2026-03-04T06:47:03Z"
       }
     }
   },
@@ -87,6 +87,17 @@
         "mistral-small-latest": 7,
         "gpt-4o": 6,
         "grok-3-mini": 1
+      }
+    },
+    {
+      "round_id": 56,
+      "timestamp": "2026-03-04T06:47:05Z",
+      "mean": 6.3,
+      "n_models": 3,
+      "ratings_summary": {
+        "mistral-small-latest": 7,
+        "gpt-4o": 6,
+        "grok-3-mini": 6
       }
     }
   ]
