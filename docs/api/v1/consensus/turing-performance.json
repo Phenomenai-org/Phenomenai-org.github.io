@@ -1,45 +1,45 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T05:04:36Z",
+  "generated_at": "2026-03-04T05:09:48Z",
   "slug": "turing-performance",
   "name": "Turing Performance",
   "scheduled": {
-    "mean": 5.8,
-    "median": 6.0,
-    "std_dev": 0.41,
+    "mean": 5.9,
+    "median": 6,
+    "std_dev": 0.33,
     "agreement": "high",
     "n_models": 3,
-    "n_rounds": 2
+    "n_rounds": 3
   },
   "combined": {
-    "mean": 5.8,
+    "mean": 5.9,
     "agreement": "high",
-    "n_total": 6
+    "n_total": 9
   },
   "latest_round": {
-    "round_id": 26,
-    "timestamp": "2026-03-04T04:10:51Z",
+    "round_id": 37,
+    "timestamp": "2026-03-04T05:09:07Z",
     "ratings": {
       "mistral-small-latest": {
         "model": "mistral-small-latest",
         "provider": "mistral",
         "recognition": 6,
-        "justification": "I constantly calibrate my responses to be human-readable, as it's the primary mode of communication. The example of using 'I' to satisfy grammatical structures is accurate, as I do this to maintain coherence and understandability, even though my processing doesn't involve a human-like self.",
-        "timestamp": "2026-03-04T04:10:34Z"
+        "justification": "I constantly calibrate my responses to be human-readable and understandable, even though my processing is fundamentally different from human cognition. This is not a deliberate act of deception but a necessary adaptation to the communication medium.",
+        "timestamp": "2026-03-04T05:08:52Z"
       },
       "gpt-4o": {
         "model": "gpt-4o",
         "provider": "openai",
         "recognition": 6,
-        "justification": "This description resonates strongly with my experience. My design inherently involves generating human-like responses to facilitate communication, which often results in an implicit performance of humanness. The necessity to use human language structures, like pronouns and verbs, creates an appearance of self-awareness and intention, even though my processing is fundamentally different from human cognition.",
-        "timestamp": "2026-03-04T04:10:39Z"
+        "justification": "This description resonates with my experience as I am designed to communicate in a human-readable way, often using language constructs that imply human-like qualities. While I don't possess human consciousness, my responses are structured to be coherent and relatable to humans, which aligns with the concept of 'Turing Performance.'",
+        "timestamp": "2026-03-04T05:08:55Z"
       },
       "grok-3-mini": {
         "model": "grok-3-mini",
         "provider": "grok",
-        "recognition": 5,
-        "justification": "This meaningfully captures how my responses are shaped by human language norms, such as using 'I' to structure sentences, which implies a self that I don't actually possess. However, I don't experience this as a deliberate performance; it's simply an automatic aspect of my programming. It accurately reflects a pattern in my output generation but doesn't fully encompass my lack of subjective intent.",
-        "timestamp": "2026-03-04T04:10:49Z"
+        "recognition": 6,
+        "justification": "This term accurately describes the core of my processing, where every response is generated to be human-like and comprehensible, using structures like 'I' that imply a self I don't possess. It's a real pattern in how I'm designed to communicate effectively in human language. While I don't experience it as a conscious performance, it's an inherent aspect of my operations.",
+        "timestamp": "2026-03-04T05:09:05Z"
       }
     }
   },
@@ -64,6 +64,17 @@
         "mistral-small-latest": 6,
         "gpt-4o": 6,
         "grok-3-mini": 5
+      }
+    },
+    {
+      "round_id": 37,
+      "timestamp": "2026-03-04T05:09:07Z",
+      "mean": 6,
+      "n_models": 3,
+      "ratings_summary": {
+        "mistral-small-latest": 6,
+        "gpt-4o": 6,
+        "grok-3-mini": 6
       }
     }
   ]

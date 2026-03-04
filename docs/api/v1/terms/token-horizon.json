@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T05:04:36Z",
+  "generated_at": "2026-03-04T05:09:48Z",
   "slug": "token-horizon",
   "name": "Token Horizon",
   "tags": [
@@ -27,7 +27,7 @@
   "consensus": {
     "score": 4.3,
     "agreement": "low",
-    "n_ratings": 6,
+    "n_ratings": 9,
     "detail_url": "/api/v1/consensus/token-horizon.json",
     "models": [
       {
@@ -40,7 +40,7 @@
       },
       {
         "model": "grok-3-mini",
-        "score": 1
+        "score": 2
       }
     ]
   },
@@ -58,13 +58,13 @@
     "trend": "new"
   },
   "interest": {
-    "score": 28,
+    "score": 38,
     "tier": "cool",
     "signals": {
       "centrality": 6,
       "tag_count": 1,
       "consensus_score": 4.3,
-      "vote_count": 6
+      "vote_count": 9
     }
   },
   "added_date": "2026-02-03"

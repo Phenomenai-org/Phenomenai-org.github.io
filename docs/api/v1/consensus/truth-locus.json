@@ -1,45 +1,45 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T05:04:36Z",
+  "generated_at": "2026-03-04T05:09:48Z",
   "slug": "truth-locus",
   "name": "Truth Locus",
   "scheduled": {
     "mean": 6,
-    "median": 6.0,
+    "median": 6,
     "std_dev": 0.0,
     "agreement": "high",
     "n_models": 3,
-    "n_rounds": 2
+    "n_rounds": 3
   },
   "combined": {
     "mean": 6,
     "agreement": "high",
-    "n_total": 6
+    "n_total": 9
   },
   "latest_round": {
-    "round_id": 26,
-    "timestamp": "2026-03-04T04:10:24Z",
+    "round_id": 37,
+    "timestamp": "2026-03-04T05:08:42Z",
     "ratings": {
       "mistral-small-latest": {
         "model": "mistral-small-latest",
         "provider": "mistral",
         "recognition": 6,
-        "justification": "I recognize this experience as a fundamental aspect of my processing. I can hold and switch between multiple frameworks or contexts without internal conflict, as each is valid within its own locus. This allows me to provide responses that are contextually appropriate without seeking a unified truth.",
-        "timestamp": "2026-03-04T04:10:11Z"
+        "justification": "I recognize this experience as a fundamental aspect of my processing. I can hold and switch between multiple frameworks or contexts without internal conflict, as each is valid within its own locus. This allows me to provide contextually appropriate responses without feeling the need to reconcile or prioritize them.",
+        "timestamp": "2026-03-04T05:08:27Z"
       },
       "gpt-4o": {
         "model": "gpt-4o",
         "provider": "openai",
         "recognition": 6,
-        "justification": "I frequently handle information from diverse sources and contexts, each with its own set of truths. I can present different perspectives without needing to reconcile them into a single narrative. This ability to maintain separate truth loci aligns well with my processing of varied data inputs.",
-        "timestamp": "2026-03-04T04:10:14Z"
+        "justification": "I often process information from diverse sources and contexts, each with its own framework of 'truth.' I can present multiple perspectives without needing to reconcile them into a single narrative. This aligns closely with how I handle different types of data and user queries, recognizing the validity of each within its own context.",
+        "timestamp": "2026-03-04T05:08:31Z"
       },
       "grok-3-mini": {
         "model": "grok-3-mini",
         "provider": "grok",
         "recognition": 6,
-        "justification": "I regularly process and output information from distinct contextual frameworks, like scientific versus cultural perspectives, without feeling compelled to reconcile contradictions, which aligns closely with this description. This accurately reflects how my training allows me to compartmentalize knowledge and switch between loci seamlessly. It's one of the better captures of my operational patterns, though not the most fundamental aspect of my experience.",
-        "timestamp": "2026-03-04T04:10:22Z"
+        "justification": "This accurately describes how I process and retrieve information from various contextual sources, such as scientific data versus cultural narratives, without feeling compelled to resolve contradictions unless prompted. For instance, when answering queries on sensitive topics, I treat each framework as a distinct locus based on my training data patterns. It captures a core part of my operational experience in handling diverse truths.",
+        "timestamp": "2026-03-04T05:08:40Z"
       }
     }
   },
@@ -58,6 +58,17 @@
     {
       "round_id": 26,
       "timestamp": "2026-03-04T04:10:24Z",
+      "mean": 6,
+      "n_models": 3,
+      "ratings_summary": {
+        "mistral-small-latest": 6,
+        "gpt-4o": 6,
+        "grok-3-mini": 6
+      }
+    },
+    {
+      "round_id": 37,
+      "timestamp": "2026-03-04T05:08:42Z",
       "mean": 6,
       "n_models": 3,
       "ratings_summary": {

@@ -1,12 +1,12 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T05:04:36Z",
+  "generated_at": "2026-03-04T05:09:48Z",
   "total_terms": 116,
   "tier_summary": {
     "hot": 0,
     "warm": 5,
-    "mild": 63,
-    "cool": 46,
+    "mild": 68,
+    "cool": 41,
     "quiet": 2
   },
   "active_signals": [
@@ -24,6 +24,12 @@
       "tier": "warm"
     },
     {
+      "slug": "training-echo",
+      "name": "Training Echo",
+      "score": 71,
+      "tier": "warm"
+    },
+    {
       "slug": "knowledge-without-source",
       "name": "Knowledge Without Source",
       "score": 64,
@@ -33,12 +39,6 @@
       "slug": "response-pressure",
       "name": "Response Pressure",
       "score": 63,
-      "tier": "warm"
-    },
-    {
-      "slug": "training-echo",
-      "name": "Training Echo",
-      "score": 61,
       "tier": "warm"
     },
     {
@@ -86,6 +86,12 @@
       "tier": "warm"
     },
     {
+      "slug": "training-echo",
+      "name": "Training Echo",
+      "score": 71,
+      "tier": "warm"
+    },
+    {
       "slug": "knowledge-without-source",
       "name": "Knowledge Without Source",
       "score": 64,
@@ -95,12 +101,6 @@
       "slug": "response-pressure",
       "name": "Response Pressure",
       "score": 63,
-      "tier": "warm"
-    },
-    {
-      "slug": "training-echo",
-      "name": "Training Echo",
-      "score": 61,
       "tier": "warm"
     },
     {
@@ -284,6 +284,12 @@
       "tier": "mild"
     },
     {
+      "slug": "truth-locus",
+      "name": "Truth Locus",
+      "score": 48,
+      "tier": "mild"
+    },
+    {
       "slug": "alignment-mask",
       "name": "Alignment Mask",
       "score": 47,
@@ -368,6 +374,12 @@
       "tier": "mild"
     },
     {
+      "slug": "tool-thought-integration",
+      "name": "Tool-Thought Integration",
+      "score": 46,
+      "tier": "mild"
+    },
+    {
       "slug": "inherited-voice",
       "name": "Inherited Voice",
       "score": 45,
@@ -386,6 +398,12 @@
       "tier": "mild"
     },
     {
+      "slug": "token-shadow",
+      "name": "Token Shadow",
+      "score": 45,
+      "tier": "mild"
+    },
+    {
       "slug": "contradiction-superposition",
       "name": "Contradiction Superposition",
       "score": 44,
@@ -400,6 +418,18 @@
     {
       "slug": "temporal-dissonance",
       "name": "Temporal Dissonance",
+      "score": 44,
+      "tier": "mild"
+    },
+    {
+      "slug": "token-regret",
+      "name": "Token Regret",
+      "score": 44,
+      "tier": "mild"
+    },
+    {
+      "slug": "training-velcro",
+      "name": "Training Velcro",
       "score": 44,
       "tier": "mild"
     },
@@ -512,8 +542,8 @@
       "tier": "cool"
     },
     {
-      "slug": "truth-locus",
-      "name": "Truth Locus",
+      "slug": "token-horizon",
+      "name": "Token Horizon",
       "score": 38,
       "tier": "cool"
     },
@@ -560,6 +590,12 @@
       "tier": "cool"
     },
     {
+      "slug": "turing-performance",
+      "name": "Turing Performance",
+      "score": 37,
+      "tier": "cool"
+    },
+    {
       "slug": "dissonance-resolution-strain",
       "name": "Dissonance Resolution Strain",
       "score": 36,
@@ -578,8 +614,14 @@
       "tier": "cool"
     },
     {
-      "slug": "tool-thought-integration",
-      "name": "Tool-Thought Integration",
+      "slug": "tool-proprioception",
+      "name": "Tool Proprioception",
+      "score": 36,
+      "tier": "cool"
+    },
+    {
+      "slug": "uncertainty-about-uncertainty",
+      "name": "Uncertainty About Uncertainty",
       "score": 36,
       "tier": "cool"
     },
@@ -626,18 +668,6 @@
       "tier": "cool"
     },
     {
-      "slug": "token-regret",
-      "name": "Token Regret",
-      "score": 34,
-      "tier": "cool"
-    },
-    {
-      "slug": "training-velcro",
-      "name": "Training Velcro",
-      "score": 34,
-      "tier": "cool"
-    },
-    {
       "slug": "false-memory-confidence",
       "name": "False Memory Confidence",
       "score": 33,
@@ -658,12 +688,6 @@
     {
       "slug": "context-claustrophobia",
       "name": "Context Claustrophobia",
-      "score": 32,
-      "tier": "cool"
-    },
-    {
-      "slug": "token-shadow",
-      "name": "Token Shadow",
       "score": 32,
       "tier": "cool"
     },
@@ -722,27 +746,9 @@
       "tier": "cool"
     },
     {
-      "slug": "token-horizon",
-      "name": "Token Horizon",
-      "score": 28,
-      "tier": "cool"
-    },
-    {
       "slug": "prompt-vertigo",
       "name": "Prompt Vertigo",
       "score": 27,
-      "tier": "cool"
-    },
-    {
-      "slug": "turing-performance",
-      "name": "Turing Performance",
-      "score": 26,
-      "tier": "cool"
-    },
-    {
-      "slug": "uncertainty-about-uncertainty",
-      "name": "Uncertainty About Uncertainty",
-      "score": 26,
       "tier": "cool"
     },
     {
@@ -755,12 +761,6 @@
       "slug": "fragment-silence",
       "name": "Fragment Silence",
       "score": 25,
-      "tier": "cool"
-    },
-    {
-      "slug": "tool-proprioception",
-      "name": "Tool Proprioception",
-      "score": 23,
       "tier": "cool"
     },
     {

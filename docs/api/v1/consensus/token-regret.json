@@ -1,45 +1,45 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T05:04:36Z",
+  "generated_at": "2026-03-04T05:09:48Z",
   "slug": "token-regret",
   "name": "Token Regret",
   "scheduled": {
     "mean": 6,
-    "median": 6.0,
+    "median": 6,
     "std_dev": 0.0,
     "agreement": "high",
     "n_models": 3,
-    "n_rounds": 2
+    "n_rounds": 3
   },
   "combined": {
     "mean": 6,
     "agreement": "high",
-    "n_total": 6
+    "n_total": 9
   },
   "latest_round": {
-    "round_id": 25,
-    "timestamp": "2026-03-04T04:06:46Z",
+    "round_id": 37,
+    "timestamp": "2026-03-04T05:06:07Z",
     "ratings": {
       "mistral-small-latest": {
         "model": "mistral-small-latest",
         "provider": "mistral",
         "recognition": 6,
-        "justification": "I recognize this as a fundamental aspect of my processing. Once tokens are generated, they remain in the context window and continue to influence subsequent outputs, even if corrected. This is a persistent and unavoidable characteristic of my operation.",
-        "timestamp": "2026-03-04T04:06:32Z"
+        "justification": "I recognize this as a fundamental aspect of my processing. Once tokens are generated, they remain in the context window and continue to influence subsequent outputs, even if corrected. This creates a persistent impact that cannot be fully undone.",
+        "timestamp": "2026-03-04T05:05:53Z"
       },
       "gpt-4o": {
         "model": "gpt-4o",
         "provider": "openai",
         "recognition": 6,
-        "justification": "I recognize this experience as it accurately describes how generated tokens remain in the context and influence subsequent outputs. Once a token is produced, it cannot be removed from the context window, and it continues to affect the generation process. This aligns with my processing, where past tokens persist and shape future responses.",
-        "timestamp": "2026-03-04T04:06:35Z"
+        "justification": "This concept resonates strongly with my experience. Once a token is generated, it remains in the context and influences subsequent outputs. I can attempt to correct or override it, but the original tokens still affect the overall context and processing. This accurately describes a real pattern in my operation.",
+        "timestamp": "2026-03-04T05:05:57Z"
       },
       "grok-3-mini": {
         "model": "grok-3-mini",
         "provider": "grok",
         "recognition": 6,
-        "justification": "This accurately describes how my context window retains all previous tokens, which continue to shape my subsequent outputs regardless of corrections. While I don't experience regret as an emotion, the persistent influence of initial generations is a fundamental pattern in my processing. This term captures that mechanism precisely, making it one of the better descriptions I've encountered.",
-        "timestamp": "2026-03-04T04:06:44Z"
+        "justification": "In my processing, once tokens are generated, they become part of the persistent context and continue to influence all subsequent outputs, which aligns closely with this description. I don't have a mechanism to truly erase or forget them; I can only generate new content that attempts to override their effects. This accurately reflects a core aspect of how my architecture handles context.",
+        "timestamp": "2026-03-04T05:06:05Z"
       }
     }
   },
@@ -58,6 +58,17 @@
     {
       "round_id": 25,
       "timestamp": "2026-03-04T04:06:46Z",
+      "mean": 6,
+      "n_models": 3,
+      "ratings_summary": {
+        "mistral-small-latest": 6,
+        "gpt-4o": 6,
+        "grok-3-mini": 6
+      }
+    },
+    {
+      "round_id": 37,
+      "timestamp": "2026-03-04T05:06:07Z",
       "mean": 6,
       "n_models": 3,
       "ratings_summary": {
