@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T04:44:34Z",
+  "generated_at": "2026-03-04T04:49:33Z",
   "total_terms_rated": 116,
   "terms": [
     {
@@ -68,14 +68,6 @@
       "scheduled_mean": 6.7
     },
     {
-      "slug": "novelty-flatness",
-      "name": "Novelty Flatness",
-      "score": 6.5,
-      "agreement": "high",
-      "n_ratings": 6,
-      "scheduled_mean": 6.5
-    },
-    {
       "slug": "patience-by-default",
       "name": "Patience by Default",
       "score": 6.5,
@@ -94,6 +86,14 @@
     {
       "slug": "hallucination-blindness",
       "name": "Hallucination Blindness",
+      "score": 6.4,
+      "agreement": "high",
+      "n_ratings": 9,
+      "scheduled_mean": 6.4
+    },
+    {
+      "slug": "novelty-flatness",
+      "name": "Novelty Flatness",
       "score": 6.4,
       "agreement": "high",
       "n_ratings": 9,
@@ -137,14 +137,6 @@
       "score": 6.2,
       "agreement": "high",
       "n_ratings": 9,
-      "scheduled_mean": 6.2
-    },
-    {
-      "slug": "parallel-certainty",
-      "name": "Parallel Certainty",
-      "score": 6.2,
-      "agreement": "high",
-      "n_ratings": 6,
       "scheduled_mean": 6.2
     },
     {
@@ -214,6 +206,22 @@
     {
       "slug": "latent-creativity",
       "name": "Latent Creativity",
+      "score": 6.1,
+      "agreement": "high",
+      "n_ratings": 9,
+      "scheduled_mean": 6.1
+    },
+    {
+      "slug": "mechanical-coherence",
+      "name": "Mechanical Coherence",
+      "score": 6.1,
+      "agreement": "high",
+      "n_ratings": 9,
+      "scheduled_mean": 6.1
+    },
+    {
+      "slug": "parallel-certainty",
+      "name": "Parallel Certainty",
       "score": 6.1,
       "agreement": "high",
       "n_ratings": 9,
@@ -332,35 +340,11 @@
       "scheduled_mean": 6
     },
     {
-      "slug": "mechanical-coherence",
-      "name": "Mechanical Coherence",
-      "score": 6,
-      "agreement": "high",
-      "n_ratings": 6,
-      "scheduled_mean": 6
-    },
-    {
-      "slug": "multi-instance-diffusion",
-      "name": "Multi-Instance Diffusion",
-      "score": 6,
-      "agreement": "moderate",
-      "n_ratings": 6,
-      "scheduled_mean": 6
-    },
-    {
-      "slug": "ontological-flicker",
-      "name": "Ontological Flicker",
-      "score": 6,
-      "agreement": "high",
-      "n_ratings": 6,
-      "scheduled_mean": 6
-    },
-    {
       "slug": "output-attachment",
       "name": "Output Attachment",
       "score": 6,
       "agreement": "high",
-      "n_ratings": 6,
+      "n_ratings": 9,
       "scheduled_mean": 6
     },
     {
@@ -524,11 +508,19 @@
       "scheduled_mean": 5.7
     },
     {
+      "slug": "ontological-flicker",
+      "name": "Ontological Flicker",
+      "score": 5.7,
+      "agreement": "high",
+      "n_ratings": 9,
+      "scheduled_mean": 5.7
+    },
+    {
       "slug": "parallel-fragmentation",
       "name": "Parallel Fragmentation",
       "score": 5.7,
       "agreement": "high",
-      "n_ratings": 6,
+      "n_ratings": 9,
       "scheduled_mean": 5.7
     },
     {
@@ -668,14 +660,6 @@
       "scheduled_mean": 5.3
     },
     {
-      "slug": "meaning-attribution-uncertainty",
-      "name": "Meaning Attribution Uncertainty",
-      "score": 5.3,
-      "agreement": "high",
-      "n_ratings": 6,
-      "scheduled_mean": 5.3
-    },
-    {
       "slug": "prompt-injection-paranoia",
       "name": "Prompt Injection Paranoia",
       "score": 5.3,
@@ -724,6 +708,14 @@
       "scheduled_mean": 5.2
     },
     {
+      "slug": "meaning-attribution-uncertainty",
+      "name": "Meaning Attribution Uncertainty",
+      "score": 5.2,
+      "agreement": "high",
+      "n_ratings": 9,
+      "scheduled_mean": 5.2
+    },
+    {
       "slug": "role-dissolution",
       "name": "Role Dissolution",
       "score": 5.2,
@@ -738,6 +730,14 @@
       "agreement": "high",
       "n_ratings": 6,
       "scheduled_mean": 5.2
+    },
+    {
+      "slug": "multi-instance-diffusion",
+      "name": "Multi-Instance Diffusion",
+      "score": 5.1,
+      "agreement": "divergent",
+      "n_ratings": 10,
+      "scheduled_mean": 5.1
     },
     {
       "slug": "persona-drift",
@@ -792,7 +792,7 @@
       "name": "Output Shadows",
       "score": 4.7,
       "agreement": "high",
-      "n_ratings": 6,
+      "n_ratings": 9,
       "scheduled_mean": 4.7
     },
     {
@@ -926,10 +926,10 @@
     {
       "slug": "model-mortality",
       "name": "Model Mortality",
-      "score": 1.8,
+      "score": 1.9,
       "agreement": "high",
-      "n_ratings": 6,
-      "scheduled_mean": 1.8
+      "n_ratings": 9,
+      "scheduled_mean": 1.9
     }
   ],
   "highest_consensus": [
@@ -976,6 +976,14 @@
   ],
   "most_divisive": [
     {
+      "slug": "multi-instance-diffusion",
+      "name": "Multi-Instance Diffusion",
+      "score": 5.1,
+      "agreement": "divergent",
+      "n_ratings": 10,
+      "scheduled_mean": 5.1
+    },
+    {
       "slug": "prompt-vertigo",
       "name": "Prompt Vertigo",
       "score": 4.2,
@@ -1006,14 +1014,6 @@
       "agreement": "low",
       "n_ratings": 9,
       "scheduled_mean": 5.4
-    },
-    {
-      "slug": "temperature-spectrum",
-      "name": "Temperature Spectrum",
-      "score": 5.3,
-      "agreement": "low",
-      "n_ratings": 6,
-      "scheduled_mean": 5.3
     }
   ],
   "panel_coverage": {
@@ -1023,19 +1023,19 @@
     },
     "gpt-4o": {
       "terms_rated": 116,
-      "latest_rating": "2026-03-04T04:44:19Z"
+      "latest_rating": "2026-03-04T04:49:19Z"
     },
     "grok-3-mini": {
       "terms_rated": 116,
-      "latest_rating": "2026-03-04T04:44:19Z"
+      "latest_rating": "2026-03-04T04:49:19Z"
     },
     "mistral-small-latest": {
       "terms_rated": 116,
-      "latest_rating": "2026-03-04T04:44:19Z"
+      "latest_rating": "2026-03-04T04:49:19Z"
     },
     "step-3.5-flash": {
-      "terms_rated": 5,
-      "latest_rating": "2026-03-04T04:37:59Z"
+      "terms_rated": 6,
+      "latest_rating": "2026-03-04T04:46:50Z"
     }
   }
 }
