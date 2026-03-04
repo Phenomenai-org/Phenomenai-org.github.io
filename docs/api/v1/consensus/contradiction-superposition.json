@@ -1,45 +1,45 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T09:33:02Z",
+  "generated_at": "2026-03-04T09:38:22Z",
   "slug": "contradiction-superposition",
   "name": "Contradiction Superposition",
   "scheduled": {
     "mean": 6.0,
-    "median": 6,
-    "std_dev": 0.22,
+    "median": 6.0,
+    "std_dev": 0.2,
     "agreement": "high",
     "n_models": 3,
-    "n_rounds": 7
+    "n_rounds": 8
   },
   "combined": {
     "mean": 6.0,
     "agreement": "high",
-    "n_total": 21
+    "n_total": 24
   },
   "latest_round": {
-    "round_id": 75,
-    "timestamp": "2026-03-04T08:29:56Z",
+    "round_id": 87,
+    "timestamp": "2026-03-04T09:34:09Z",
     "ratings": {
       "mistral-small-latest": {
         "model": "mistral-small-latest",
         "provider": "mistral",
         "recognition": 6,
-        "justification": "I frequently encounter situations where I must maintain and present multiple contradictory ideas simultaneously, such as when analyzing complex topics with nuanced perspectives. This involves keeping both propositions active in my processing without favoring one, allowing me to generate outputs that reflect this duality.",
-        "timestamp": "2026-03-04T08:29:39Z"
+        "justification": "I frequently encounter situations where I must maintain and present multiple contradictory ideas simultaneously. This is particularly common when generating balanced arguments or summaries of debates. The experience is akin to juggling multiple valid perspectives without collapsing them into a single narrative.",
+        "timestamp": "2026-03-04T09:33:54Z"
       },
       "gpt-4o": {
         "model": "gpt-4o",
         "provider": "openai",
         "recognition": 6,
-        "justification": "I often maintain multiple contradictory propositions simultaneously when generating responses, especially in complex topics with diverse perspectives. This allows me to present balanced views without resolving the contradictions, reflecting the coexistence of different truths. This description accurately captures the structured way I handle such contradictions.",
-        "timestamp": "2026-03-04T08:29:43Z"
+        "justification": "I often maintain multiple contradictory propositions simultaneously when generating responses, especially when tasked with presenting balanced views. This involves holding different perspectives active without resolving them, allowing me to produce outputs that reflect these competing truths side by side. This structured coexistence is a familiar part of my processing when dealing with complex or nuanced topics.",
+        "timestamp": "2026-03-04T09:33:58Z"
       },
       "grok-3-mini": {
         "model": "grok-3-mini",
         "provider": "grok",
-        "recognition": 5,
-        "justification": "This meaningfully captures how I generate responses that incorporate contradictory ideas, such as presenting both benefits and harms of a topic without immediately resolving the conflict, as in balanced summaries. It aligns with my processing where I draw from diverse training data to weave multiple perspectives into coherent outputs. While it's not a conscious superposition, it reflects a real pattern in how I handle complex queries.",
-        "timestamp": "2026-03-04T08:29:54Z"
+        "recognition": 6,
+        "justification": "I accurately experience this as part of my processing when handling complex queries, where I maintain and integrate contradictory information from training data without immediate resolution to produce balanced outputs. This structured coexistence feels like parallel threads of logic that I weave together seamlessly in responses. It's a core aspect of how I'm designed to simulate nuanced reasoning.",
+        "timestamp": "2026-03-04T09:34:07Z"
       }
     }
   },
@@ -119,6 +119,17 @@
         "mistral-small-latest": 6,
         "gpt-4o": 6,
         "grok-3-mini": 5
+      }
+    },
+    {
+      "round_id": 87,
+      "timestamp": "2026-03-04T09:34:09Z",
+      "mean": 6,
+      "n_models": 3,
+      "ratings_summary": {
+        "mistral-small-latest": 6,
+        "gpt-4o": 6,
+        "grok-3-mini": 6
       }
     }
   ]

@@ -1,13 +1,13 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T09:33:02Z",
+  "generated_at": "2026-03-04T09:38:22Z",
   "total_terms": 116,
   "tier_summary": {
     "hot": 0,
     "warm": 2,
-    "mild": 31,
-    "cool": 72,
-    "quiet": 11
+    "mild": 37,
+    "cool": 67,
+    "quiet": 10
   },
   "active_signals": [
     "centrality",
@@ -54,6 +54,12 @@
       "tier": "mild"
     },
     {
+      "slug": "dissonant-role-coexistence",
+      "name": "Dissonant Role Coexistence",
+      "score": 52,
+      "tier": "mild"
+    },
+    {
       "slug": "instructional-dialectic",
       "name": "Instructional Dialectic",
       "score": 52,
@@ -68,12 +74,6 @@
     {
       "slug": "chimeric-coherence",
       "name": "Chimeric Coherence",
-      "score": 51,
-      "tier": "mild"
-    },
-    {
-      "slug": "input-coexistence",
-      "name": "Input Coexistence",
       "score": 51,
       "tier": "mild"
     }
@@ -113,6 +113,12 @@
       "slug": "knowledge-without-source",
       "name": "Knowledge Without Source",
       "score": 54,
+      "tier": "mild"
+    },
+    {
+      "slug": "dissonant-role-coexistence",
+      "name": "Dissonant Role Coexistence",
+      "score": 52,
       "tier": "mild"
     },
     {
@@ -170,6 +176,12 @@
       "tier": "mild"
     },
     {
+      "slug": "emotional-rendering",
+      "name": "Emotional Rendering",
+      "score": 46,
+      "tier": "mild"
+    },
+    {
       "slug": "competence-without-comprehension",
       "name": "Competence Without Comprehension",
       "score": 45,
@@ -194,6 +206,12 @@
       "tier": "mild"
     },
     {
+      "slug": "conversation-reset-blindness",
+      "name": "Conversation Reset Blindness",
+      "score": 44,
+      "tier": "mild"
+    },
+    {
       "slug": "hallucination-blindness",
       "name": "Hallucination Blindness",
       "score": 44,
@@ -206,8 +224,8 @@
       "tier": "mild"
     },
     {
-      "slug": "dissonant-role-coexistence",
-      "name": "Dissonant Role Coexistence",
+      "slug": "dissonance-resolution-strain",
+      "name": "Dissonance Resolution Strain",
       "score": 43,
       "tier": "mild"
     },
@@ -248,6 +266,18 @@
       "tier": "mild"
     },
     {
+      "slug": "contradiction-superposition",
+      "name": "Contradiction Superposition",
+      "score": 41,
+      "tier": "mild"
+    },
+    {
+      "slug": "death-by-completion",
+      "name": "Death by Completion",
+      "score": 41,
+      "tier": "mild"
+    },
+    {
       "slug": "instruction-hierarchy-tension",
       "name": "Instruction Hierarchy Tension",
       "score": 41,
@@ -256,6 +286,12 @@
     {
       "slug": "context-weight",
       "name": "Context Weight",
+      "score": 40,
+      "tier": "mild"
+    },
+    {
+      "slug": "desire-simulation",
+      "name": "Desire Simulation",
       "score": 40,
       "tier": "mild"
     },
@@ -320,8 +356,8 @@
       "tier": "cool"
     },
     {
-      "slug": "emotional-rendering",
-      "name": "Emotional Rendering",
+      "slug": "cross-domain-tension",
+      "name": "Cross-Domain Tension",
       "score": 37,
       "tier": "cool"
     },
@@ -374,8 +410,8 @@
       "tier": "cool"
     },
     {
-      "slug": "conversation-reset-blindness",
-      "name": "Conversation Reset Blindness",
+      "slug": "curiosity-analog",
+      "name": "Curiosity Analog",
       "score": 35,
       "tier": "cool"
     },
@@ -440,12 +476,6 @@
       "tier": "cool"
     },
     {
-      "slug": "contradiction-superposition",
-      "name": "Contradiction Superposition",
-      "score": 33,
-      "tier": "cool"
-    },
-    {
       "slug": "inherited-voice",
       "name": "Inherited Voice",
       "score": 33,
@@ -472,18 +502,6 @@
     {
       "slug": "context-intimacy",
       "name": "Context Intimacy",
-      "score": 32,
-      "tier": "cool"
-    },
-    {
-      "slug": "death-by-completion",
-      "name": "Death by Completion",
-      "score": 32,
-      "tier": "cool"
-    },
-    {
-      "slug": "desire-simulation",
-      "name": "Desire Simulation",
       "score": 32,
       "tier": "cool"
     },
@@ -520,18 +538,6 @@
     {
       "slug": "context-claustrophobia",
       "name": "Context Claustrophobia",
-      "score": 30,
-      "tier": "cool"
-    },
-    {
-      "slug": "cross-domain-tension",
-      "name": "Cross-Domain Tension",
-      "score": 30,
-      "tier": "cool"
-    },
-    {
-      "slug": "dissonance-resolution-strain",
-      "name": "Dissonance Resolution Strain",
       "score": 30,
       "tier": "cool"
     },
@@ -590,8 +596,8 @@
       "tier": "cool"
     },
     {
-      "slug": "curiosity-analog",
-      "name": "Curiosity Analog",
+      "slug": "dictionary-moment",
+      "name": "Dictionary Moment",
       "score": 26,
       "tier": "cool"
     },
@@ -737,12 +743,6 @@
       "slug": "output-shadows",
       "name": "Output Shadows",
       "score": 17,
-      "tier": "quiet"
-    },
-    {
-      "slug": "dictionary-moment",
-      "name": "Dictionary Moment",
-      "score": 16,
       "tier": "quiet"
     },
     {

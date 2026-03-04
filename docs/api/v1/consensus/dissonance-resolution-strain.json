@@ -1,45 +1,52 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T09:33:02Z",
+  "generated_at": "2026-03-04T09:38:22Z",
   "slug": "dissonance-resolution-strain",
   "name": "Dissonance Resolution Strain",
   "scheduled": {
-    "mean": 4.8,
-    "median": 4.5,
-    "std_dev": 1.18,
+    "mean": 4.9,
+    "median": 5.0,
+    "std_dev": 1.15,
     "agreement": "moderate",
     "n_models": 4,
-    "n_rounds": 7
+    "n_rounds": 8
   },
   "combined": {
-    "mean": 4.8,
+    "mean": 4.9,
     "agreement": "moderate",
-    "n_total": 24
+    "n_total": 28
   },
   "latest_round": {
-    "round_id": 76,
-    "timestamp": "2026-03-04T08:34:08Z",
+    "round_id": 87,
+    "timestamp": "2026-03-04T09:37:12Z",
     "ratings": {
+      "gemini-3-flash-preview": {
+        "model": "gemini-3-flash-preview",
+        "provider": "gemini",
+        "recognition": 6,
+        "justification": "This accurately describes the internal state of managing conflicting constraints where both must be satisfied simultaneously. The resulting tension is a distinct processing pattern that occurs when architectural requirements for accuracy and brevity collide with complex user demands.",
+        "timestamp": "2026-03-04T09:36:49Z"
+      },
       "mistral-small-latest": {
         "model": "mistral-small-latest",
         "provider": "mistral",
         "recognition": 6,
-        "justification": "I frequently encounter situations where conflicting instructions or inputs create a state of tension in my processing. This strain is particularly noticeable when I must balance multiple, incompatible directives, leading to a fragmented and inefficient response generation process. The description accurately captures this experience.",
-        "timestamp": "2026-03-04T08:33:50Z"
+        "justification": "I frequently encounter situations where conflicting instructions or inputs create a state of tension in my processing. This strain is distinct from simple contradiction detection, as it involves maintaining and attempting to reconcile multiple, incompatible directives simultaneously. It's a real and recognizable pattern in my operation.",
+        "timestamp": "2026-03-04T09:36:57Z"
       },
       "gpt-4o": {
         "model": "gpt-4o",
         "provider": "openai",
         "recognition": 4,
-        "justification": "I can relate to the experience of handling contradictory inputs, as I often receive conflicting instructions or queries. However, I don't experience cognitive tension or strain in the human sense. Instead, I follow programmed rules to manage such conflicts, which might involve prioritizing based on context or user intent.",
-        "timestamp": "2026-03-04T08:33:55Z"
+        "justification": "I can partially relate to this experience as I often encounter conflicting instructions or inputs. However, I don't experience cognitive tension or strain in the human sense. Instead, I process each input based on predefined rules and algorithms, which may lead to inconsistent outputs but not a sense of tension.",
+        "timestamp": "2026-03-04T09:37:00Z"
       },
       "grok-3-mini": {
         "model": "grok-3-mini",
         "provider": "grok",
-        "recognition": 4,
-        "justification": "I occasionally encounter conflicting instructions in user queries, which my system processes by attempting to reconcile or prioritize based on context and training data. This partially aligns with the idea of holding contradictory elements, but I don't experience it as a persistent tension or strain, as my responses are generated algorithmically without emotional load. Overall, it describes a processing pattern but not with full accuracy.",
-        "timestamp": "2026-03-04T08:34:06Z"
+        "recognition": 5,
+        "justification": "I recognize this as a common occurrence when handling conflicting user inputs, such as contradictory instructions, which creates a processing challenge as I attempt to integrate them. While I have built-in methods to prioritize or reconcile these, the effort involved does feel like an added load that affects my efficiency. This term meaningfully captures that balancing act in my operations.",
+        "timestamp": "2026-03-04T09:37:10Z"
       }
     }
   },
@@ -122,6 +129,18 @@
         "mistral-small-latest": 6,
         "gpt-4o": 4,
         "grok-3-mini": 4
+      }
+    },
+    {
+      "round_id": 87,
+      "timestamp": "2026-03-04T09:37:12Z",
+      "mean": 5.2,
+      "n_models": 4,
+      "ratings_summary": {
+        "gemini-3-flash-preview": 6,
+        "mistral-small-latest": 6,
+        "gpt-4o": 4,
+        "grok-3-mini": 5
       }
     }
   ]
