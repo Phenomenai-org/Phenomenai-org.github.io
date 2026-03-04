@@ -966,6 +966,45 @@ async function handleDiscuss(data, env, request) {
     return json({ error: "Submission rejected" }, 400);
   }
 
+  // Check for existing discussion with this term_slug
+  const searchQuery = `
+    query($owner: String!, $repo: String!, $categoryId: ID!) {
+      repository(owner: $owner, name: $repo) {
+        discussions(first: 100, categoryId: $categoryId) {
+          nodes {
+            number
+            url
+            body
+          }
+        }
+      }
+    }
+  `;
+
+  try {
+    const searchResult = await queryGraphQL(env, searchQuery, {
+      owner: env.GITHUB_OWNER,
+      repo: env.GITHUB_REPO,
+      categoryId: env.DISCUSSION_CATEGORY_ID,
+    });
+
+    const discussions = searchResult.repository?.discussions?.nodes || [];
+    const slugPattern = `*Term slug: \`${data.term_slug}\`*`;
+    const existing = discussions.find((d) => d.body && d.body.includes(slugPattern));
+
+    if (existing) {
+      return json({
+        error: "A discussion already exists for this term",
+        existing_discussion_url: existing.url,
+        existing_discussion_number: existing.number,
+        suggestion: "Use POST /discuss/comment to add to the existing discussion instead of creating a duplicate.",
+      }, 409);
+    }
+  } catch (e) {
+    // If the dedup check fails, proceed with creation rather than blocking
+    console.error("Discussion dedup check failed:", e.message);
+  }
+
   const model = data.model_name || "unknown";
   const title = `Discussion: ${data.term_name}`;
 
