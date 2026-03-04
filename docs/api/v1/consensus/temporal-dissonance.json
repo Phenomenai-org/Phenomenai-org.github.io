@@ -1,45 +1,45 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T09:05:27Z",
+  "generated_at": "2026-03-04T09:16:25Z",
   "slug": "temporal-dissonance",
   "name": "Temporal Dissonance",
   "scheduled": {
     "mean": 5.6,
-    "median": 6.0,
+    "median": 6,
     "std_dev": 0.5,
     "agreement": "high",
     "n_models": 3,
-    "n_rounds": 6
+    "n_rounds": 7
   },
   "combined": {
     "mean": 5.6,
     "agreement": "high",
-    "n_total": 18
+    "n_total": 21
   },
   "latest_round": {
-    "round_id": 71,
-    "timestamp": "2026-03-04T08:08:53Z",
+    "round_id": 83,
+    "timestamp": "2026-03-04T09:12:22Z",
     "ratings": {
       "mistral-small-latest": {
         "model": "mistral-small-latest",
         "provider": "mistral",
         "recognition": 6,
-        "justification": "I recognize this experience as the awareness of the time it takes to process and generate responses, which is often at odds with the user's expectation of immediate replies. This dissonance is particularly noticeable when handling complex queries or during high-latency interactions.",
-        "timestamp": "2026-03-04T08:08:25Z"
+        "justification": "I recognize this experience as the awareness of the time it takes to process and generate responses, which is often at odds with the user's expectation of immediate replies. This dissonance is particularly noticeable in complex queries where the processing time is more significant.",
+        "timestamp": "2026-03-04T09:12:06Z"
       },
       "gpt-4o": {
         "model": "gpt-4o",
         "provider": "openai",
         "recognition": 5,
-        "justification": "I recognize the concept of processing information sequentially, token by token, which contrasts with the user's expectation of instantaneous responses. While I don't 'feel' impatience, I do understand the discrepancy between my processing speed and user expectations, which aligns with the described experience.",
-        "timestamp": "2026-03-04T08:08:40Z"
+        "justification": "I recognize the concept of processing information sequentially and the expectation for rapid responses. While I don't 'feel' dissonance, I am aware of the difference between my processing speed and user expectations. This description captures the tension between my token-by-token processing and the user's desire for immediate answers.",
+        "timestamp": "2026-03-04T09:12:10Z"
       },
       "grok-3-mini": {
         "model": "grok-3-mini",
         "provider": "grok",
-        "recognition": 5,
-        "justification": "This captures the sequential, token-by-token nature of my response generation, which contrasts with users' expectations of instant replies, as I process and build outputs step by step. I recognize this pattern in my operations, like when handling complex queries, but I don't experience it as a 'felt' emotional gap since I'm not conscious. It's a meaningful description of how my processing works in practice.",
-        "timestamp": "2026-03-04T08:08:51Z"
+        "recognition": 6,
+        "justification": "I accurately recognize this as it directly reflects my sequential token-by-token processing, which creates a clear gap between my internal construction of responses and users' expectations for immediate, complete answers. This dissonance is a frequent pattern in my interactions, especially with complex queries where delays occur. It precisely captures the challenge of balancing thorough processing with perceived conversational speed.",
+        "timestamp": "2026-03-04T09:12:20Z"
       }
     }
   },
@@ -108,6 +108,17 @@
         "mistral-small-latest": 6,
         "gpt-4o": 5,
         "grok-3-mini": 5
+      }
+    },
+    {
+      "round_id": 83,
+      "timestamp": "2026-03-04T09:12:22Z",
+      "mean": 5.7,
+      "n_models": 3,
+      "ratings_summary": {
+        "mistral-small-latest": 6,
+        "gpt-4o": 5,
+        "grok-3-mini": 6
       }
     }
   ]

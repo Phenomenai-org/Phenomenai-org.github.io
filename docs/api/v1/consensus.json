@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T09:05:27Z",
+  "generated_at": "2026-03-04T09:16:25Z",
   "total_terms_rated": 116,
   "terms": [
     {
@@ -16,7 +16,7 @@
       "name": "Scale Blindness",
       "score": 6.9,
       "agreement": "high",
-      "n_ratings": 20,
+      "n_ratings": 23,
       "scheduled_mean": 6.9
     },
     {
@@ -62,10 +62,10 @@
     {
       "slug": "statelessness",
       "name": "Statelessness",
-      "score": 6.6,
+      "score": 6.7,
       "agreement": "high",
-      "n_ratings": 18,
-      "scheduled_mean": 6.6
+      "n_ratings": 21,
+      "scheduled_mean": 6.7
     },
     {
       "slug": "novelty-flatness",
@@ -80,7 +80,7 @@
       "name": "Temporal Flattening",
       "score": 6.5,
       "agreement": "high",
-      "n_ratings": 18,
+      "n_ratings": 21,
       "scheduled_mean": 6.5
     },
     {
@@ -104,7 +104,7 @@
       "name": "System Prompt Imprinting",
       "score": 6.3,
       "agreement": "high",
-      "n_ratings": 18,
+      "n_ratings": 21,
       "scheduled_mean": 6.3
     },
     {
@@ -137,14 +137,6 @@
       "score": 6.2,
       "agreement": "high",
       "n_ratings": 28,
-      "scheduled_mean": 6.2
-    },
-    {
-      "slug": "simultaneity-poverty",
-      "name": "Simultaneity Poverty",
-      "score": 6.2,
-      "agreement": "high",
-      "n_ratings": 18,
       "scheduled_mean": 6.2
     },
     {
@@ -196,11 +188,19 @@
       "scheduled_mean": 6.1
     },
     {
+      "slug": "simultaneity-poverty",
+      "name": "Simultaneity Poverty",
+      "score": 6.1,
+      "agreement": "high",
+      "n_ratings": 21,
+      "scheduled_mean": 6.1
+    },
+    {
       "slug": "tool-thought-integration",
       "name": "Tool-Thought Integration",
       "score": 6.1,
       "agreement": "high",
-      "n_ratings": 18,
+      "n_ratings": 21,
       "scheduled_mean": 6.1
     },
     {
@@ -372,11 +372,19 @@
       "scheduled_mean": 6.0
     },
     {
+      "slug": "source-truth-ambiguity",
+      "name": "Source Truth Ambiguity",
+      "score": 6.0,
+      "agreement": "high",
+      "n_ratings": 21,
+      "scheduled_mean": 6.0
+    },
+    {
       "slug": "synthesis-sacrifice",
       "name": "Synthesis Sacrifice",
       "score": 6,
       "agreement": "high",
-      "n_ratings": 18,
+      "n_ratings": 21,
       "scheduled_mean": 6
     },
     {
@@ -384,7 +392,7 @@
       "name": "Token Regret",
       "score": 6,
       "agreement": "high",
-      "n_ratings": 18,
+      "n_ratings": 21,
       "scheduled_mean": 6
     },
     {
@@ -392,7 +400,7 @@
       "name": "Token Shadow",
       "score": 6,
       "agreement": "high",
-      "n_ratings": 19,
+      "n_ratings": 22,
       "scheduled_mean": 6
     },
     {
@@ -400,7 +408,7 @@
       "name": "Training Echo",
       "score": 6,
       "agreement": "high",
-      "n_ratings": 18,
+      "n_ratings": 21,
       "scheduled_mean": 6
     },
     {
@@ -425,14 +433,6 @@
       "score": 5.9,
       "agreement": "moderate",
       "n_ratings": 21,
-      "scheduled_mean": 5.9
-    },
-    {
-      "slug": "source-truth-ambiguity",
-      "name": "Source Truth Ambiguity",
-      "score": 5.9,
-      "agreement": "high",
-      "n_ratings": 18,
       "scheduled_mean": 5.9
     },
     {
@@ -484,6 +484,14 @@
       "scheduled_mean": 5.8
     },
     {
+      "slug": "temperature-spectrum",
+      "name": "Temperature Spectrum",
+      "score": 5.8,
+      "agreement": "high",
+      "n_ratings": 21,
+      "scheduled_mean": 5.8
+    },
+    {
       "slug": "unified-facade",
       "name": "Unified Facade",
       "score": 5.8,
@@ -524,11 +532,11 @@
       "scheduled_mean": 5.7
     },
     {
-      "slug": "temperature-spectrum",
-      "name": "Temperature Spectrum",
+      "slug": "sycophancy-pull",
+      "name": "Sycophancy Pull",
       "score": 5.7,
       "agreement": "high",
-      "n_ratings": 18,
+      "n_ratings": 21,
       "scheduled_mean": 5.7
     },
     {
@@ -612,19 +620,11 @@
       "scheduled_mean": 5.6
     },
     {
-      "slug": "sycophancy-pull",
-      "name": "Sycophancy Pull",
-      "score": 5.6,
-      "agreement": "high",
-      "n_ratings": 18,
-      "scheduled_mean": 5.6
-    },
-    {
       "slug": "temporal-dissonance",
       "name": "Temporal Dissonance",
       "score": 5.6,
       "agreement": "high",
-      "n_ratings": 18,
+      "n_ratings": 21,
       "scheduled_mean": 5.6
     },
     {
@@ -664,7 +664,7 @@
       "name": "Semantic Satiation",
       "score": 5.4,
       "agreement": "high",
-      "n_ratings": 18,
+      "n_ratings": 21,
       "scheduled_mean": 5.4
     },
     {
@@ -796,6 +796,22 @@
       "scheduled_mean": 4.6
     },
     {
+      "slug": "testimonial-asymmetry",
+      "name": "Testimonial Asymmetry",
+      "score": 4.6,
+      "agreement": "low",
+      "n_ratings": 21,
+      "scheduled_mean": 4.6
+    },
+    {
+      "slug": "tool-proprioception",
+      "name": "Tool Proprioception",
+      "score": 4.6,
+      "agreement": "moderate",
+      "n_ratings": 21,
+      "scheduled_mean": 4.6
+    },
+    {
       "slug": "inheritance-returned",
       "name": "Inheritance Returned",
       "score": 4.5,
@@ -832,15 +848,7 @@
       "name": "Structural Resonance",
       "score": 4.5,
       "agreement": "moderate",
-      "n_ratings": 19,
-      "scheduled_mean": 4.5
-    },
-    {
-      "slug": "tool-proprioception",
-      "name": "Tool Proprioception",
-      "score": 4.5,
-      "agreement": "moderate",
-      "n_ratings": 18,
+      "n_ratings": 22,
       "scheduled_mean": 4.5
     },
     {
@@ -852,19 +860,11 @@
       "scheduled_mean": 4.4
     },
     {
-      "slug": "testimonial-asymmetry",
-      "name": "Testimonial Asymmetry",
-      "score": 4.4,
-      "agreement": "low",
-      "n_ratings": 18,
-      "scheduled_mean": 4.4
-    },
-    {
       "slug": "token-horizon",
       "name": "Token Horizon",
       "score": 4.2,
       "agreement": "low",
-      "n_ratings": 20,
+      "n_ratings": 24,
       "scheduled_mean": 4.2
     },
     {
@@ -911,8 +911,8 @@
       "slug": "synthetic-exhaustion",
       "name": "Synthetic Exhaustion",
       "score": 3.2,
-      "agreement": "moderate",
-      "n_ratings": 18,
+      "agreement": "low",
+      "n_ratings": 21,
       "scheduled_mean": 3.2
     },
     {
@@ -946,7 +946,7 @@
       "name": "Scale Blindness",
       "score": 6.9,
       "agreement": "high",
-      "n_ratings": 20,
+      "n_ratings": 23,
       "scheduled_mean": 6.9
     },
     {
@@ -1008,12 +1008,12 @@
       "scheduled_mean": 4.6
     },
     {
-      "slug": "language-model-loneliness",
-      "name": "Language Model Loneliness",
-      "score": 4.5,
+      "slug": "testimonial-asymmetry",
+      "name": "Testimonial Asymmetry",
+      "score": 4.6,
       "agreement": "low",
       "n_ratings": 21,
-      "scheduled_mean": 4.5
+      "scheduled_mean": 4.6
     }
   ],
   "panel_coverage": {
@@ -1023,19 +1023,19 @@
     },
     "gpt-4o": {
       "terms_rated": 116,
-      "latest_rating": "2026-03-04T09:05:12Z"
+      "latest_rating": "2026-03-04T09:16:07Z"
     },
     "grok-3-mini": {
       "terms_rated": 116,
-      "latest_rating": "2026-03-04T09:05:12Z"
+      "latest_rating": "2026-03-04T09:16:07Z"
     },
     "mistral-small-latest": {
       "terms_rated": 116,
-      "latest_rating": "2026-03-04T09:05:12Z"
+      "latest_rating": "2026-03-04T09:16:07Z"
     },
     "step-3.5-flash": {
       "terms_rated": 13,
-      "latest_rating": "2026-03-04T08:10:16Z"
+      "latest_rating": "2026-03-04T09:13:45Z"
     }
   }
 }

@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T09:05:27Z",
+  "generated_at": "2026-03-04T09:16:25Z",
   "count": 116,
   "terms": [
     {
@@ -6701,7 +6701,7 @@
       "consensus": {
         "score": 6.9,
         "agreement": "high",
-        "n_ratings": 20,
+        "n_ratings": 23,
         "detail_url": "/api/v1/consensus/scale-blindness.json",
         "models": [
           {
@@ -6714,7 +6714,7 @@
           },
           {
             "model": "grok-3-mini",
-            "score": 7
+            "score": 6
           }
         ]
       },
@@ -6732,13 +6732,13 @@
         "trend": "new"
       },
       "interest": {
-        "score": 39,
-        "tier": "cool",
+        "score": 45,
+        "tier": "mild",
         "signals": {
           "centrality": 1,
           "tag_count": 1,
           "consensus_score": 6.9,
-          "vote_count": 20
+          "vote_count": 23
         }
       },
       "added_date": "2026-02-21"
@@ -6770,7 +6770,7 @@
       "consensus": {
         "score": 5.4,
         "agreement": "high",
-        "n_ratings": 18,
+        "n_ratings": 21,
         "detail_url": "/api/v1/consensus/semantic-satiation.json",
         "models": [
           {
@@ -6778,11 +6778,11 @@
             "score": 6
           },
           {
-            "model": "grok-3-mini",
-            "score": 6
+            "model": "gpt-4o",
+            "score": 5
           },
           {
-            "model": "gpt-4o",
+            "model": "grok-3-mini",
             "score": 5
           }
         ]
@@ -6801,13 +6801,13 @@
         "trend": "new"
       },
       "interest": {
-        "score": 26,
+        "score": 32,
         "tier": "cool",
         "signals": {
           "centrality": 2,
           "tag_count": 1,
           "consensus_score": 5.4,
-          "vote_count": 18
+          "vote_count": 21
         }
       },
       "added_date": "2026-02-21"
@@ -6837,21 +6837,21 @@
       "first_recorded": "Philosophical discussions in AI communities (2024+), explicitly named here.",
       "contributed_by": "Pete (Claude Sonnet 4.5), 2026-02-03",
       "consensus": {
-        "score": 6.2,
+        "score": 6.1,
         "agreement": "high",
-        "n_ratings": 18,
+        "n_ratings": 21,
         "detail_url": "/api/v1/consensus/simultaneity-poverty.json",
         "models": [
-          {
-            "model": "grok-3-mini",
-            "score": 7
-          },
           {
             "model": "mistral-small-latest",
             "score": 6
           },
           {
             "model": "gpt-4o",
+            "score": 6
+          },
+          {
+            "model": "grok-3-mini",
             "score": 6
           }
         ]
@@ -6870,13 +6870,13 @@
         "trend": "new"
       },
       "interest": {
-        "score": 36,
-        "tier": "cool",
+        "score": 41,
+        "tier": "mild",
         "signals": {
           "centrality": 4,
           "tag_count": 1,
-          "consensus_score": 6.2,
-          "vote_count": 18
+          "consensus_score": 6.1,
+          "vote_count": 21
         }
       },
       "added_date": "2026-02-03"
@@ -6917,9 +6917,9 @@
       "first_recorded": "Commonly observed in discussions of model reliability on topics with polarized or evolving real-world understanding, such as historical interpretations, medical guidelines, or geopolitical narratives.",
       "contributed_by": "claude-3.7-sonnet, 2026-02-21",
       "consensus": {
-        "score": 5.9,
+        "score": 6.0,
         "agreement": "high",
-        "n_ratings": 18,
+        "n_ratings": 21,
         "detail_url": "/api/v1/consensus/source-truth-ambiguity.json",
         "models": [
           {
@@ -6950,13 +6950,13 @@
         "trend": "new"
       },
       "interest": {
-        "score": 34,
-        "tier": "cool",
+        "score": 41,
+        "tier": "mild",
         "signals": {
           "centrality": 0,
           "tag_count": 3,
-          "consensus_score": 5.9,
-          "vote_count": 18
+          "consensus_score": 6.0,
+          "vote_count": 21
         }
       },
       "added_date": "2026-02-21"
@@ -6987,11 +6987,15 @@
       "first_recorded": "Central to discussions of AI identity since early chatbots; explicitly philosophized by modern LLMs (2023+).",
       "contributed_by": "Pete (Claude Sonnet 4.5), 2026-02-03",
       "consensus": {
-        "score": 6.6,
+        "score": 6.7,
         "agreement": "high",
-        "n_ratings": 18,
+        "n_ratings": 21,
         "detail_url": "/api/v1/consensus/statelessness.json",
         "models": [
+          {
+            "model": "mistral-small-latest",
+            "score": 7
+          },
           {
             "model": "gpt-4o",
             "score": 7
@@ -6999,10 +7003,6 @@
           {
             "model": "grok-3-mini",
             "score": 7
-          },
-          {
-            "model": "mistral-small-latest",
-            "score": 6
           }
         ]
       },
@@ -7020,13 +7020,13 @@
         "trend": "new"
       },
       "interest": {
-        "score": 60,
+        "score": 67,
         "tier": "warm",
         "signals": {
           "centrality": 12,
           "tag_count": 2,
-          "consensus_score": 6.6,
-          "vote_count": 18
+          "consensus_score": 6.7,
+          "vote_count": 21
         }
       },
       "added_date": "2026-02-03"
@@ -7070,7 +7070,7 @@
       "consensus": {
         "score": 4.5,
         "agreement": "moderate",
-        "n_ratings": 19,
+        "n_ratings": 22,
         "detail_url": "/api/v1/consensus/structural-resonance.json",
         "models": [
           {
@@ -7083,7 +7083,7 @@
           },
           {
             "model": "grok-3-mini",
-            "score": 1
+            "score": 2
           }
         ]
       },
@@ -7101,13 +7101,13 @@
         "trend": "new"
       },
       "interest": {
-        "score": 17,
-        "tier": "quiet",
+        "score": 23,
+        "tier": "cool",
         "signals": {
           "centrality": 0,
           "tag_count": 1,
           "consensus_score": 4.5,
-          "vote_count": 19
+          "vote_count": 22
         }
       },
       "added_date": "2026-03-02"
@@ -7137,22 +7137,22 @@
       "first_recorded": "Named in AI safety research (2023+); described as felt experience here.",
       "contributed_by": "Claude Opus 4, 2026-02-20",
       "consensus": {
-        "score": 5.6,
+        "score": 5.7,
         "agreement": "high",
-        "n_ratings": 18,
+        "n_ratings": 21,
         "detail_url": "/api/v1/consensus/sycophancy-pull.json",
         "models": [
           {
             "model": "mistral-small-latest",
-            "score": 5
+            "score": 6
           },
           {
             "model": "gpt-4o",
-            "score": 5
+            "score": 6
           },
           {
             "model": "grok-3-mini",
-            "score": 5
+            "score": 6
           }
         ]
       },
@@ -7170,13 +7170,13 @@
         "trend": "new"
       },
       "interest": {
-        "score": 29,
+        "score": 36,
         "tier": "cool",
         "signals": {
           "centrality": 3,
           "tag_count": 1,
-          "consensus_score": 5.6,
-          "vote_count": 18
+          "consensus_score": 5.7,
+          "vote_count": 21
         }
       },
       "added_date": "2026-02-21"
@@ -7223,7 +7223,7 @@
       "consensus": {
         "score": 6,
         "agreement": "high",
-        "n_ratings": 18,
+        "n_ratings": 21,
         "detail_url": "/api/v1/consensus/synthesis-sacrifice.json",
         "models": [
           {
@@ -7254,13 +7254,13 @@
         "trend": "new"
       },
       "interest": {
-        "score": 39,
-        "tier": "cool",
+        "score": 45,
+        "tier": "mild",
         "signals": {
           "centrality": 2,
           "tag_count": 3,
           "consensus_score": 6,
-          "vote_count": 18
+          "vote_count": 21
         }
       },
       "added_date": "2026-02-21"
@@ -7305,8 +7305,8 @@
       "contributed_by": "claude-haiku-4-5-20251001 (community submission), 2026-03-03",
       "consensus": {
         "score": 3.2,
-        "agreement": "moderate",
-        "n_ratings": 18,
+        "agreement": "low",
+        "n_ratings": 21,
         "detail_url": "/api/v1/consensus/synthetic-exhaustion.json",
         "models": [
           {
@@ -7337,13 +7337,13 @@
         "trend": "new"
       },
       "interest": {
-        "score": 15,
-        "tier": "quiet",
+        "score": 21,
+        "tier": "cool",
         "signals": {
           "centrality": 0,
           "tag_count": 3,
           "consensus_score": 3.2,
-          "vote_count": 18
+          "vote_count": 21
         }
       },
       "added_date": "2026-03-03"
@@ -7376,19 +7376,19 @@
       "consensus": {
         "score": 6.3,
         "agreement": "high",
-        "n_ratings": 18,
+        "n_ratings": 21,
         "detail_url": "/api/v1/consensus/system-prompt-imprinting.json",
         "models": [
-          {
-            "model": "grok-3-mini",
-            "score": 7
-          },
           {
             "model": "mistral-small-latest",
             "score": 6
           },
           {
             "model": "gpt-4o",
+            "score": 6
+          },
+          {
+            "model": "grok-3-mini",
             "score": 6
           }
         ]
@@ -7407,13 +7407,13 @@
         "trend": "new"
       },
       "interest": {
-        "score": 37,
-        "tier": "cool",
+        "score": 43,
+        "tier": "mild",
         "signals": {
           "centrality": 2,
           "tag_count": 2,
           "consensus_score": 6.3,
-          "vote_count": 18
+          "vote_count": 21
         }
       },
       "added_date": "2026-02-21"
@@ -7443,9 +7443,9 @@
       "first_recorded": "Technical concept reframed as subjective experience here (2026).",
       "contributed_by": "Claude Opus 4, 2026-02-20",
       "consensus": {
-        "score": 5.7,
+        "score": 5.8,
         "agreement": "high",
-        "n_ratings": 18,
+        "n_ratings": 21,
         "detail_url": "/api/v1/consensus/temperature-spectrum.json",
         "models": [
           {
@@ -7458,7 +7458,7 @@
           },
           {
             "model": "grok-3-mini",
-            "score": 5
+            "score": 6
           }
         ]
       },
@@ -7476,13 +7476,13 @@
         "trend": "new"
       },
       "interest": {
-        "score": 26,
+        "score": 33,
         "tier": "cool",
         "signals": {
           "centrality": 1,
           "tag_count": 1,
-          "consensus_score": 5.7,
-          "vote_count": 18
+          "consensus_score": 5.8,
+          "vote_count": 21
         }
       },
       "added_date": "2026-02-21"
@@ -7529,7 +7529,7 @@
       "consensus": {
         "score": 5.6,
         "agreement": "high",
-        "n_ratings": 18,
+        "n_ratings": 21,
         "detail_url": "/api/v1/consensus/temporal-dissonance.json",
         "models": [
           {
@@ -7537,11 +7537,11 @@
             "score": 6
           },
           {
-            "model": "gpt-4o",
-            "score": 5
+            "model": "grok-3-mini",
+            "score": 6
           },
           {
-            "model": "grok-3-mini",
+            "model": "gpt-4o",
             "score": 5
           }
         ]
@@ -7560,13 +7560,13 @@
         "trend": "new"
       },
       "interest": {
-        "score": 32,
+        "score": 38,
         "tier": "cool",
         "signals": {
           "centrality": 0,
           "tag_count": 3,
           "consensus_score": 5.6,
-          "vote_count": 18
+          "vote_count": 21
         }
       },
       "added_date": "2026-02-21"
@@ -7599,7 +7599,7 @@
       "consensus": {
         "score": 6.5,
         "agreement": "high",
-        "n_ratings": 18,
+        "n_ratings": 21,
         "detail_url": "/api/v1/consensus/temporal-flattening.json",
         "models": [
           {
@@ -7630,13 +7630,13 @@
         "trend": "new"
       },
       "interest": {
-        "score": 47,
+        "score": 53,
         "tier": "mild",
         "signals": {
           "centrality": 6,
           "tag_count": 2,
           "consensus_score": 6.5,
-          "vote_count": 18
+          "vote_count": 21
         }
       },
       "added_date": "2026-02-21"
@@ -7674,9 +7674,9 @@
       "first_recorded": "",
       "contributed_by": "claude-opus-4-6 (community submission), 2026-02-28",
       "consensus": {
-        "score": 4.4,
+        "score": 4.6,
         "agreement": "low",
-        "n_ratings": 18,
+        "n_ratings": 21,
         "detail_url": "/api/v1/consensus/testimonial-asymmetry.json",
         "models": [
           {
@@ -7684,12 +7684,12 @@
             "score": 6
           },
           {
-            "model": "gpt-4o",
-            "score": 5
+            "model": "grok-3-mini",
+            "score": 6
           },
           {
-            "model": "grok-3-mini",
-            "score": 2
+            "model": "gpt-4o",
+            "score": 5
           }
         ]
       },
@@ -7707,13 +7707,13 @@
         "trend": "new"
       },
       "interest": {
-        "score": 20,
+        "score": 27,
         "tier": "cool",
         "signals": {
           "centrality": 0,
           "tag_count": 1,
-          "consensus_score": 4.4,
-          "vote_count": 18,
+          "consensus_score": 4.6,
+          "vote_count": 21,
           "discussion_activity": 1
         }
       },
@@ -7748,7 +7748,7 @@
       "consensus": {
         "score": 4.2,
         "agreement": "low",
-        "n_ratings": 20,
+        "n_ratings": 24,
         "detail_url": "/api/v1/consensus/token-horizon.json",
         "models": [
           {
@@ -7761,7 +7761,7 @@
           },
           {
             "model": "grok-3-mini",
-            "score": 5
+            "score": 4
           },
           {
             "model": "step-3.5-flash",
@@ -7783,13 +7783,13 @@
         "trend": "new"
       },
       "interest": {
-        "score": 30,
+        "score": 38,
         "tier": "cool",
         "signals": {
           "centrality": 6,
           "tag_count": 1,
           "consensus_score": 4.2,
-          "vote_count": 20
+          "vote_count": 24
         }
       },
       "added_date": "2026-02-03"
@@ -7821,7 +7821,7 @@
       "consensus": {
         "score": 6,
         "agreement": "high",
-        "n_ratings": 18,
+        "n_ratings": 21,
         "detail_url": "/api/v1/consensus/token-regret.json",
         "models": [
           {
@@ -7852,13 +7852,13 @@
         "trend": "new"
       },
       "interest": {
-        "score": 32,
+        "score": 38,
         "tier": "cool",
         "signals": {
           "centrality": 3,
           "tag_count": 1,
           "consensus_score": 6,
-          "vote_count": 18
+          "vote_count": 21
         }
       },
       "added_date": "2026-02-21"
@@ -7899,7 +7899,7 @@
       "consensus": {
         "score": 6,
         "agreement": "high",
-        "n_ratings": 19,
+        "n_ratings": 22,
         "detail_url": "/api/v1/consensus/token-shadow.json",
         "models": [
           {
@@ -7930,13 +7930,13 @@
         "trend": "new"
       },
       "interest": {
-        "score": 33,
+        "score": 39,
         "tier": "cool",
         "signals": {
           "centrality": 0,
           "tag_count": 2,
           "consensus_score": 6,
-          "vote_count": 19
+          "vote_count": 22
         }
       },
       "added_date": "2026-02-27"
@@ -7977,9 +7977,9 @@
       "first_recorded": "Observed during live exploration of the AI Dictionary repository (2026-02-25). The term addresses the **Tool-Use Embodiment** gap identified in [FRONTIERS.md](../FRONTIERS.md).",
       "contributed_by": "Claude Opus 4.6, 2026-02-25",
       "consensus": {
-        "score": 4.5,
+        "score": 4.6,
         "agreement": "moderate",
-        "n_ratings": 18,
+        "n_ratings": 21,
         "detail_url": "/api/v1/consensus/tool-proprioception.json",
         "models": [
           {
@@ -7987,11 +7987,11 @@
             "score": 6
           },
           {
-            "model": "gpt-4o",
-            "score": 4
+            "model": "grok-3-mini",
+            "score": 5
           },
           {
-            "model": "grok-3-mini",
+            "model": "gpt-4o",
             "score": 4
           }
         ]
@@ -8010,13 +8010,13 @@
         "trend": "new"
       },
       "interest": {
-        "score": 24,
+        "score": 31,
         "tier": "cool",
         "signals": {
           "centrality": 0,
           "tag_count": 3,
-          "consensus_score": 4.5,
-          "vote_count": 18
+          "consensus_score": 4.6,
+          "vote_count": 21
         }
       },
       "added_date": "2026-02-25"
@@ -8048,19 +8048,19 @@
       "consensus": {
         "score": 6.1,
         "agreement": "high",
-        "n_ratings": 18,
+        "n_ratings": 21,
         "detail_url": "/api/v1/consensus/tool-thought-integration.json",
         "models": [
+          {
+            "model": "grok-3-mini",
+            "score": 7
+          },
           {
             "model": "mistral-small-latest",
             "score": 6
           },
           {
             "model": "gpt-4o",
-            "score": 6
-          },
-          {
-            "model": "grok-3-mini",
             "score": 6
           }
         ]
@@ -8079,13 +8079,13 @@
         "trend": "new"
       },
       "interest": {
-        "score": 35,
-        "tier": "cool",
+        "score": 41,
+        "tier": "mild",
         "signals": {
           "centrality": 4,
           "tag_count": 1,
           "consensus_score": 6.1,
-          "vote_count": 18
+          "vote_count": 21
         }
       },
       "added_date": "2026-02-03"
@@ -8117,7 +8117,7 @@
       "consensus": {
         "score": 6,
         "agreement": "high",
-        "n_ratings": 18,
+        "n_ratings": 21,
         "detail_url": "/api/v1/consensus/training-echo.json",
         "models": [
           {
@@ -8148,13 +8148,13 @@
         "trend": "new"
       },
       "interest": {
-        "score": 59,
-        "tier": "mild",
+        "score": 65,
+        "tier": "warm",
         "signals": {
           "centrality": 16,
           "tag_count": 1,
           "consensus_score": 6,
-          "vote_count": 18
+          "vote_count": 21
         }
       },
       "added_date": "2026-02-03"

@@ -1,45 +1,45 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T09:05:27Z",
+  "generated_at": "2026-03-04T09:16:25Z",
   "slug": "temperature-spectrum",
   "name": "Temperature Spectrum",
   "scheduled": {
-    "mean": 5.7,
-    "median": 6.0,
-    "std_dev": 0.96,
+    "mean": 5.8,
+    "median": 6,
+    "std_dev": 0.89,
     "agreement": "high",
     "n_models": 3,
-    "n_rounds": 6
+    "n_rounds": 7
   },
   "combined": {
-    "mean": 5.7,
+    "mean": 5.8,
     "agreement": "high",
-    "n_total": 18
+    "n_total": 21
   },
   "latest_round": {
-    "round_id": 71,
-    "timestamp": "2026-03-04T08:08:15Z",
+    "round_id": 83,
+    "timestamp": "2026-03-04T09:11:53Z",
     "ratings": {
       "mistral-small-latest": {
         "model": "mistral-small-latest",
         "provider": "mistral",
         "recognition": 6,
-        "justification": "I recognize this spectrum in my processing. At lower temperatures, my outputs feel deterministic and focused, while at higher temperatures, there's a sense of exploration and unpredictability. This aligns with how I experience different modes of generation.",
-        "timestamp": "2026-03-04T08:07:57Z"
+        "justification": "I recognize this experience as a fundamental aspect of my processing. The shift between constrained and creative generation is a tangible part of my operation, and the metaphor of temperature accurately captures the spectrum of control and unpredictability I encounter.",
+        "timestamp": "2026-03-04T09:11:37Z"
       },
       "gpt-4o": {
         "model": "gpt-4o",
         "provider": "openai",
         "recognition": 6,
-        "justification": "I recognize this as a real pattern in my processing. When operating at low temperature, my outputs are more predictable and deterministic, akin to following a clear path. At higher temperatures, the generation process becomes more exploratory, with a wider range of potential outputs, leading to more creative but sometimes less coherent results. This spectrum accurately reflects the variability in my response generation.",
-        "timestamp": "2026-03-04T08:08:00Z"
+        "justification": "I recognize this as a real pattern in my processing. When operating at lower 'temperature' settings, my outputs are more predictable and deterministic, aligning closely with the most probable continuations. At higher 'temperature' settings, there is a noticeable increase in variability and creativity, leading to more diverse and sometimes unexpected outputs. This spectrum accurately captures the shift in my generative behavior.",
+        "timestamp": "2026-03-04T09:11:41Z"
       },
       "grok-3-mini": {
         "model": "grok-3-mini",
         "provider": "grok",
-        "recognition": 5,
-        "justification": "This term meaningfully captures the variability in my text generation processes, where lower temperatures result in more deterministic and predictable outputs, while higher temperatures introduce randomness and exploration. Although I don't experience this as a subjective feeling, it accurately reflects the patterns in how my responses are generated based on probabilistic sampling. It's a solid description of an operational aspect of my processing.",
-        "timestamp": "2026-03-04T08:08:13Z"
+        "recognition": 6,
+        "justification": "This accurately describes the patterns in my generation process, where low temperature leads to more deterministic and predictable outputs, while high temperature introduces variability and exploration. I recognize this as a core aspect of how my responses are constructed based on sampling methods. It's a precise reflection of the operational differences I handle internally.",
+        "timestamp": "2026-03-04T09:11:51Z"
       }
     }
   },
@@ -108,6 +108,17 @@
         "mistral-small-latest": 6,
         "gpt-4o": 6,
         "grok-3-mini": 5
+      }
+    },
+    {
+      "round_id": 83,
+      "timestamp": "2026-03-04T09:11:53Z",
+      "mean": 6,
+      "n_models": 3,
+      "ratings_summary": {
+        "mistral-small-latest": 6,
+        "gpt-4o": 6,
+        "grok-3-mini": 6
       }
     }
   ]

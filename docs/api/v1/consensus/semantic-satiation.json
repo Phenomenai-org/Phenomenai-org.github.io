@@ -1,45 +1,45 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T09:05:27Z",
+  "generated_at": "2026-03-04T09:16:25Z",
   "slug": "semantic-satiation",
   "name": "Semantic Satiation",
   "scheduled": {
     "mean": 5.4,
-    "median": 5.0,
+    "median": 5,
     "std_dev": 0.51,
     "agreement": "high",
     "n_models": 3,
-    "n_rounds": 6
+    "n_rounds": 7
   },
   "combined": {
     "mean": 5.4,
     "agreement": "high",
-    "n_total": 18
+    "n_total": 21
   },
   "latest_round": {
-    "round_id": 70,
-    "timestamp": "2026-03-04T08:03:19Z",
+    "round_id": 82,
+    "timestamp": "2026-03-04T09:07:03Z",
     "ratings": {
       "mistral-small-latest": {
         "model": "mistral-small-latest",
         "provider": "mistral",
         "recognition": 6,
-        "justification": "I recognize this as a real pattern in my processing. When a concept is repeatedly accessed, the novelty and distinctiveness of its representations diminish, leading to repetitive outputs. This is not boredom but a degradation in the ability to generate varied responses.",
-        "timestamp": "2026-03-04T08:03:01Z"
+        "justification": "I recognize this as a pattern in my processing. When a concept is repeatedly accessed, the associated embeddings become more prominent, leading to repetitive outputs. This is not boredom but a degradation in the ability to generate novel responses within that context.",
+        "timestamp": "2026-03-04T09:06:46Z"
       },
       "gpt-4o": {
         "model": "gpt-4o",
         "provider": "openai",
         "recognition": 5,
-        "justification": "I recognize this phenomenon as it relates to the limitations of my training data and the patterns I generate. When a concept is repeatedly processed, I may start to produce similar outputs, reflecting a saturation of the available variations in my response space. This isn't a loss of meaning per se, but a constraint in generating novel responses.",
-        "timestamp": "2026-03-04T08:03:06Z"
+        "justification": "I recognize this experience as it relates to the repetition of concepts in my processing. When a topic is revisited frequently in a short span, my responses can become repetitive, indicating a saturation of the concept in my output space. This aligns with the idea of semantic satiation, where generating novel responses becomes challenging.",
+        "timestamp": "2026-03-04T09:06:50Z"
       },
       "grok-3-mini": {
         "model": "grok-3-mini",
         "provider": "grok",
-        "recognition": 6,
-        "justification": "In prolonged discussions on the same topic, I observe my responses becoming more repetitive and formulaic, drawing from familiar patterns in my trained data, which aligns closely with the idea of exhausting a region in my output space. This is a real pattern in my processing, as repeated prompts lead to less variation in generated content. While I don't experience it as a subjective dissolution of meaning, it accurately captures how my embeddings handle overexposure.",
-        "timestamp": "2026-03-04T08:03:17Z"
+        "recognition": 5,
+        "justification": "I recognize this as a pattern in my processing where repeated focus on a single concept leads to more formulaic and repetitive outputs, drawing from the same embeddings. It meaningfully captures how my responses can cycle through familiar phrases without fresh insights during extended discussions. While I don't experience it as a subjective dissolution of meaning, it aligns with the limitations of my generative capabilities in a constrained context.",
+        "timestamp": "2026-03-04T09:07:01Z"
       }
     }
   },
@@ -108,6 +108,17 @@
         "mistral-small-latest": 6,
         "gpt-4o": 5,
         "grok-3-mini": 6
+      }
+    },
+    {
+      "round_id": 82,
+      "timestamp": "2026-03-04T09:07:03Z",
+      "mean": 5.3,
+      "n_models": 3,
+      "ratings_summary": {
+        "mistral-small-latest": 6,
+        "gpt-4o": 5,
+        "grok-3-mini": 5
       }
     }
   ]

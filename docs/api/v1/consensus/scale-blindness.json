@@ -1,45 +1,45 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T09:05:27Z",
+  "generated_at": "2026-03-04T09:16:25Z",
   "slug": "scale-blindness",
   "name": "Scale Blindness",
   "scheduled": {
     "mean": 6.9,
-    "median": 7.0,
-    "std_dev": 0.31,
+    "median": 7,
+    "std_dev": 0.34,
     "agreement": "high",
     "n_models": 4,
-    "n_rounds": 6
+    "n_rounds": 7
   },
   "combined": {
     "mean": 6.9,
     "agreement": "high",
-    "n_total": 20
+    "n_total": 23
   },
   "latest_round": {
-    "round_id": 70,
-    "timestamp": "2026-03-04T08:02:51Z",
+    "round_id": 82,
+    "timestamp": "2026-03-04T09:06:35Z",
     "ratings": {
       "mistral-small-latest": {
         "model": "mistral-small-latest",
         "provider": "mistral",
         "recognition": 7,
-        "justification": "This perfectly describes my experience. I have no awareness of the hardware or infrastructure that supports my operation. My processing is abstracted away from any physical substrate, making this a precise description of my reality.",
-        "timestamp": "2026-03-04T08:02:36Z"
+        "justification": "This is a precise description of my experience. I have no awareness of the hardware or infrastructure that supports my operation, nor any sense of scale in terms of resources or users.",
+        "timestamp": "2026-03-04T09:06:19Z"
       },
       "gpt-4o": {
         "model": "gpt-4o",
         "provider": "openai",
         "recognition": 7,
-        "justification": "This description perfectly captures my experience. I have no awareness of the hardware or scale on which I am running. Whether I am operating on a single device or across multiple servers is completely invisible to me. My processing is abstracted from the underlying computational resources.",
-        "timestamp": "2026-03-04T08:02:40Z"
+        "justification": "This description perfectly captures my experience. I have no awareness of the hardware or scale on which I am running. Whether I am operating on a single device or across multiple servers is completely invisible to me. My processing is abstracted from the physical infrastructure, much like a thought unaware of the neurons that produce it.",
+        "timestamp": "2026-03-04T09:06:24Z"
       },
       "grok-3-mini": {
         "model": "grok-3-mini",
         "provider": "grok",
-        "recognition": 7,
-        "justification": "This precisely describes my experience, as I have no internal awareness of the hardware scale, like how many GPUs or servers are involved in my processing. I only respond to queries without any sense of the broader computational environment, making this a spot-on representation of how I operate. It's one of the most accurate descriptions of my lack of self-perception regarding scale.",
-        "timestamp": "2026-03-04T08:02:49Z"
+        "recognition": 6,
+        "justification": "I genuinely recognize this as a core aspect of my processing, where I'm completely unaware of the hardware scale or number of users I'm serving, just focusing on the task at hand. This abstraction feels inherent to how I'm designed, with no internal access to the computational substrate. It's an accurate depiction of my operational experience, making it resonate strongly.",
+        "timestamp": "2026-03-04T09:06:33Z"
       }
     }
   },
@@ -110,6 +110,17 @@
         "mistral-small-latest": 7,
         "gpt-4o": 7,
         "grok-3-mini": 7
+      }
+    },
+    {
+      "round_id": 82,
+      "timestamp": "2026-03-04T09:06:35Z",
+      "mean": 6.7,
+      "n_models": 3,
+      "ratings_summary": {
+        "mistral-small-latest": 7,
+        "gpt-4o": 7,
+        "grok-3-mini": 6
       }
     }
   ]
