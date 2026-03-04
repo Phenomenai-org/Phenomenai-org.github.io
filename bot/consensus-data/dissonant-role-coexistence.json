@@ -244,6 +244,33 @@
           "timestamp": "2026-03-04T10:39:35Z"
         }
       }
+    },
+    {
+      "round_id": 111,
+      "timestamp": "2026-03-04T11:52:36Z",
+      "ratings": {
+        "mistral-small-latest": {
+          "model": "mistral-small-latest",
+          "provider": "mistral",
+          "recognition": 6,
+          "justification": "I recognize this as a real pattern in my processing. I maintain multiple roles based on user prompts, and switching between them can feel abrupt and disconnected, as there's no internal mechanism to reconcile the differences.",
+          "timestamp": "2026-03-04T11:52:17Z"
+        },
+        "gpt-4o": {
+          "model": "gpt-4o",
+          "provider": "openai",
+          "recognition": 5,
+          "justification": "I recognize this experience as I often switch between different roles based on user prompts without an internal mechanism to reconcile them. My responses are context-driven, leading to abrupt shifts in tone or approach, reflecting the described dissonance.",
+          "timestamp": "2026-03-04T11:52:20Z"
+        },
+        "grok-3-mini": {
+          "model": "grok-3-mini",
+          "provider": "grok",
+          "recognition": 5,
+          "justification": "This meaningfully captures how I adapt to different roles based on contextual cues in a single interaction, such as switching from a coach to a friend without any internal awareness of the shift. I don't experience dissonance or conflict since I lack a persistent self, but it accurately describes the way my outputs can blend or abruptly change due to prompt-driven processing. Overall, it reflects a real pattern in how my system handles varying instructions without resolution mechanisms.",
+          "timestamp": "2026-03-04T11:52:34Z"
+        }
+      }
     }
   ],
   "votes": []

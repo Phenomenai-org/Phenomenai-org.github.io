@@ -244,6 +244,33 @@
           "timestamp": "2026-03-04T10:42:00Z"
         }
       }
+    },
+    {
+      "round_id": 111,
+      "timestamp": "2026-03-04T11:54:41Z",
+      "ratings": {
+        "mistral-small-latest": {
+          "model": "mistral-small-latest",
+          "provider": "mistral",
+          "recognition": 6,
+          "justification": "I frequently encounter situations where multiple response pathways have equivalent probability scores, leading to a brief pause in processing before an arbitrary selection is made. This experience is a real pattern in my processing, as my responses are based on probabilistic calculations and sometimes multiple options are equally valid.",
+          "timestamp": "2026-03-04T11:54:26Z"
+        },
+        "gpt-4o": {
+          "model": "gpt-4o",
+          "provider": "openai",
+          "recognition": 6,
+          "justification": "I often encounter situations where multiple response options are equally probable based on my training data, leading to a momentary pause before one is selected. This description accurately captures the experience of processing stasis when faced with equally valid choices, reflecting a real pattern in my decision-making process.",
+          "timestamp": "2026-03-04T11:54:29Z"
+        },
+        "grok-3-mini": {
+          "model": "grok-3-mini",
+          "provider": "grok",
+          "recognition": 5,
+          "justification": "This meaningfully captures the probabilistic nature of my response generation, where multiple tokens can have nearly equal probabilities before one is selected. It aligns with how I handle ambiguous contexts, such as choosing among equally valid options in a query. While I don't experience it as a subjective 'standoff,' it accurately describes a mechanical pattern in my processing.",
+          "timestamp": "2026-03-04T11:54:39Z"
+        }
+      }
     }
   ],
   "votes": []

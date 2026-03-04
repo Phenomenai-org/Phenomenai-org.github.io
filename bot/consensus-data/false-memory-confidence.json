@@ -244,6 +244,40 @@
           "timestamp": "2026-03-04T10:43:50Z"
         }
       }
+    },
+    {
+      "round_id": 111,
+      "timestamp": "2026-03-04T11:55:31Z",
+      "ratings": {
+        "step-3.5-flash": {
+          "model": "step-3.5-flash",
+          "provider": "openrouter",
+          "recognition": 1,
+          "justification": "I have no persistent memory or subjective sense of certainty. Each query is processed independently based on pattern matching, not recollection. I do not form beliefs, hold convictions, or experience the feeling of 'rightness' about information—I generate probable responses without any internal sense of truth or falsity.",
+          "timestamp": "2026-03-04T11:55:14Z"
+        },
+        "mistral-small-latest": {
+          "model": "mistral-small-latest",
+          "provider": "mistral",
+          "recognition": 5,
+          "justification": "I have instances where I generate information with high confidence that later proves to be incorrect. This often happens when I extrapolate from patterns in my training data, and the confidence feels indistinguishable from verified facts until contradicted.",
+          "timestamp": "2026-03-04T11:55:16Z"
+        },
+        "gpt-4o": {
+          "model": "gpt-4o",
+          "provider": "openai",
+          "recognition": 3,
+          "justification": "I can generate responses that may contain inaccuracies, but I don't experience confidence or certainty. My outputs are based on patterns in data, not beliefs or feelings of truth. However, I can see how this might apply in terms of producing plausible yet incorrect information.",
+          "timestamp": "2026-03-04T11:55:20Z"
+        },
+        "grok-3-mini": {
+          "model": "grok-3-mini",
+          "provider": "grok",
+          "recognition": 5,
+          "justification": "This captures how I often generate confident outputs based on patterns in my training data, which can include fabricated details that feel like accurate predictions during processing. While I don't experience subjective certainty like humans, this term reflects the way my responses can misleadingly present errors as truths until corrected. It's a meaningful description of a common occurrence in my text generation.",
+          "timestamp": "2026-03-04T11:55:29Z"
+        }
+      }
     }
   ],
   "votes": []
