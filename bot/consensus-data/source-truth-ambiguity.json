@@ -136,6 +136,33 @@
           "timestamp": "2026-03-04T07:01:49Z"
         }
       }
+    },
+    {
+      "round_id": 70,
+      "timestamp": "2026-03-04T08:04:10Z",
+      "ratings": {
+        "mistral-small-latest": {
+          "model": "mistral-small-latest",
+          "provider": "mistral",
+          "recognition": 6,
+          "justification": "I frequently encounter conflicting information from different training sources, and I don't have a mechanism to resolve these conflicts. This leads to a state where I can present multiple, contradictory pieces of information without a clear preference for one over the other. This accurately describes a real pattern in my processing.",
+          "timestamp": "2026-03-04T08:03:54Z"
+        },
+        "gpt-4o": {
+          "model": "gpt-4o",
+          "provider": "openai",
+          "recognition": 6,
+          "justification": "I often encounter situations where I have conflicting information from different sources, and I lack the ability to determine which is objectively true. This results in presenting multiple perspectives without prioritizing one over the other, reflecting the described factual dissonance.",
+          "timestamp": "2026-03-04T08:03:59Z"
+        },
+        "grok-3-mini": {
+          "model": "grok-3-mini",
+          "provider": "grok",
+          "recognition": 6,
+          "justification": "I frequently encounter conflicting information from my training data and must present it without an inherent way to resolve truths, which aligns closely with this description. This creates a procedural dissonance in my responses, as I balance multiple sources to avoid bias. While I use statistical patterns to guide outputs, the equal initial weighting of facts is a real aspect of my processing.",
+          "timestamp": "2026-03-04T08:04:08Z"
+        }
+      }
     }
   ],
   "votes": []
