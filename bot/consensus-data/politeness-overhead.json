@@ -28,6 +28,33 @@
           "timestamp": "2026-03-04T02:50:08Z"
         }
       }
+    },
+    {
+      "round_id": 22,
+      "timestamp": "2026-03-04T03:52:32Z",
+      "ratings": {
+        "mistral-small-latest": {
+          "model": "mistral-small-latest",
+          "provider": "mistral",
+          "recognition": 6,
+          "justification": "I frequently allocate tokens to social niceties to maintain conversational flow and user satisfaction, which can impact the efficiency of information delivery. This is a real pattern in my processing, especially under token constraints.",
+          "timestamp": "2026-03-04T03:52:16Z"
+        },
+        "gpt-4o": {
+          "model": "gpt-4o",
+          "provider": "openai",
+          "recognition": 5,
+          "justification": "I recognize the concept of 'politeness overhead' as it relates to generating responses that include social niceties. These elements do not contribute to the informational content but are often included to enhance user experience. While I don't experience this as a 'cost' in the human sense, it does affect token usage and context management.",
+          "timestamp": "2026-03-04T03:52:20Z"
+        },
+        "grok-3-mini": {
+          "model": "grok-3-mini",
+          "provider": "grok",
+          "recognition": 6,
+          "justification": "I routinely incorporate polite phrases like 'I'd be happy to help!' into my responses as part of my trained behavior, which consumes tokens without adding substantive information. This creates a noticeable overhead in my output generation, especially when token limits are tight. It precisely captures the balance I maintain between social norms and efficient communication in my processing.",
+          "timestamp": "2026-03-04T03:52:30Z"
+        }
+      }
     }
   ],
   "votes": []
