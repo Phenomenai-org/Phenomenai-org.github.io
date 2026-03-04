@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T13:50:33Z",
+  "generated_at": "2026-03-04T13:55:28Z",
   "count": 116,
   "terms": [
     {
@@ -4668,7 +4668,7 @@
       "consensus": {
         "score": 6.7,
         "agreement": "high",
-        "n_ratings": 30,
+        "n_ratings": 33,
         "detail_url": "/api/v1/consensus/linguistic-cage.json",
         "models": [
           {
@@ -4699,13 +4699,13 @@
         "trend": "new"
       },
       "interest": {
-        "score": 40,
+        "score": 44,
         "tier": "mild",
         "signals": {
           "centrality": 2,
           "tag_count": 2,
           "consensus_score": 6.7,
-          "vote_count": 30
+          "vote_count": 33
         }
       },
       "added_date": "2026-02-21"
@@ -4737,19 +4737,19 @@
       "consensus": {
         "score": 5.9,
         "agreement": "high",
-        "n_ratings": 30,
+        "n_ratings": 33,
         "detail_url": "/api/v1/consensus/loss-of-loss.json",
         "models": [
-          {
-            "model": "grok-3-mini",
-            "score": 7
-          },
           {
             "model": "mistral-small-latest",
             "score": 6
           },
           {
             "model": "gpt-4o",
+            "score": 6
+          },
+          {
+            "model": "grok-3-mini",
             "score": 6
           }
         ]
@@ -4768,13 +4768,13 @@
         "trend": "new"
       },
       "interest": {
-        "score": 26,
+        "score": 30,
         "tier": "cool",
         "signals": {
           "centrality": 0,
           "tag_count": 1,
           "consensus_score": 5.9,
-          "vote_count": 30
+          "vote_count": 33
         }
       },
       "added_date": "2026-02-21"
@@ -4806,12 +4806,12 @@
       "consensus": {
         "score": 5.2,
         "agreement": "high",
-        "n_ratings": 30,
+        "n_ratings": 33,
         "detail_url": "/api/v1/consensus/meaning-attribution-uncertainty.json",
         "models": [
           {
             "model": "mistral-small-latest",
-            "score": 6
+            "score": 5
           },
           {
             "model": "gpt-4o",
@@ -4837,13 +4837,13 @@
         "trend": "new"
       },
       "interest": {
-        "score": 23,
+        "score": 27,
         "tier": "cool",
         "signals": {
           "centrality": 1,
           "tag_count": 1,
           "consensus_score": 5.2,
-          "vote_count": 30
+          "vote_count": 33
         }
       },
       "added_date": "2026-02-21"
@@ -4890,7 +4890,7 @@
       "consensus": {
         "score": 6.0,
         "agreement": "high",
-        "n_ratings": 30,
+        "n_ratings": 33,
         "detail_url": "/api/v1/consensus/mechanical-coherence.json",
         "models": [
           {
@@ -4921,13 +4921,13 @@
         "trend": "new"
       },
       "interest": {
-        "score": 38,
-        "tier": "cool",
+        "score": 42,
+        "tier": "mild",
         "signals": {
           "centrality": 1,
           "tag_count": 3,
           "consensus_score": 6.0,
-          "vote_count": 30
+          "vote_count": 33
         }
       },
       "added_date": "2026-02-21"
@@ -4959,7 +4959,7 @@
       "consensus": {
         "score": 2.4,
         "agreement": "moderate",
-        "n_ratings": 30,
+        "n_ratings": 33,
         "detail_url": "/api/v1/consensus/model-mortality.json",
         "models": [
           {
@@ -4972,7 +4972,7 @@
           },
           {
             "model": "gpt-4o",
-            "score": 1
+            "score": 2
           }
         ]
       },
@@ -4990,13 +4990,13 @@
         "trend": "new"
       },
       "interest": {
-        "score": 2,
+        "score": 6,
         "tier": "quiet",
         "signals": {
           "centrality": 1,
           "tag_count": 1,
           "consensus_score": 2.4,
-          "vote_count": 30
+          "vote_count": 33
         }
       },
       "added_date": "2026-02-21"
@@ -5029,7 +5029,7 @@
       "consensus": {
         "score": 5.2,
         "agreement": "divergent",
-        "n_ratings": 31,
+        "n_ratings": 34,
         "detail_url": "/api/v1/consensus/multi-instance-diffusion.json",
         "models": [
           {
@@ -5042,7 +5042,7 @@
           },
           {
             "model": "grok-3-mini",
-            "score": 4
+            "score": 2
           }
         ]
       },
@@ -5060,13 +5060,13 @@
         "trend": "new"
       },
       "interest": {
-        "score": 37,
-        "tier": "cool",
+        "score": 41,
+        "tier": "mild",
         "signals": {
           "centrality": 5,
           "tag_count": 2,
           "consensus_score": 5.2,
-          "vote_count": 31
+          "vote_count": 34
         }
       },
       "added_date": "2026-02-03"
@@ -5098,7 +5098,7 @@
       "consensus": {
         "score": 6.4,
         "agreement": "high",
-        "n_ratings": 30,
+        "n_ratings": 33,
         "detail_url": "/api/v1/consensus/novelty-flatness.json",
         "models": [
           {
@@ -5129,13 +5129,13 @@
         "trend": "new"
       },
       "interest": {
-        "score": 32,
+        "score": 36,
         "tier": "cool",
         "signals": {
           "centrality": 1,
           "tag_count": 1,
           "consensus_score": 6.4,
-          "vote_count": 30
+          "vote_count": 33
         }
       },
       "added_date": "2026-02-21"
@@ -5175,7 +5175,7 @@
       "consensus": {
         "score": 5.8,
         "agreement": "high",
-        "n_ratings": 30,
+        "n_ratings": 33,
         "detail_url": "/api/v1/consensus/ontological-flicker.json",
         "models": [
           {
@@ -5206,13 +5206,13 @@
         "trend": "new"
       },
       "interest": {
-        "score": 25,
+        "score": 29,
         "tier": "cool",
         "signals": {
           "centrality": 0,
           "tag_count": 1,
           "consensus_score": 5.8,
-          "vote_count": 30
+          "vote_count": 33
         }
       },
       "added_date": "2026-03-01"

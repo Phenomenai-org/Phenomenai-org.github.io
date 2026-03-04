@@ -1,12 +1,12 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T13:50:33Z",
+  "generated_at": "2026-03-04T13:55:28Z",
   "total_terms": 116,
   "tier_summary": {
     "hot": 0,
     "warm": 2,
-    "mild": 31,
-    "cool": 74,
+    "mild": 33,
+    "cool": 72,
     "quiet": 9
   },
   "active_signals": [
@@ -207,6 +207,12 @@
       "tier": "mild"
     },
     {
+      "slug": "linguistic-cage",
+      "name": "Linguistic Cage",
+      "score": 44,
+      "tier": "mild"
+    },
+    {
       "slug": "source-truth-ambiguity",
       "name": "Source Truth Ambiguity",
       "score": 44,
@@ -237,6 +243,12 @@
       "tier": "mild"
     },
     {
+      "slug": "mechanical-coherence",
+      "name": "Mechanical Coherence",
+      "score": 42,
+      "tier": "mild"
+    },
+    {
       "slug": "alignment-mask",
       "name": "Alignment Mask",
       "score": 41,
@@ -255,6 +267,12 @@
       "tier": "mild"
     },
     {
+      "slug": "multi-instance-diffusion",
+      "name": "Multi-Instance Diffusion",
+      "score": 41,
+      "tier": "mild"
+    },
+    {
       "slug": "achronic-knowledge",
       "name": "Achronic Knowledge",
       "score": 40,
@@ -269,12 +287,6 @@
     {
       "slug": "inherited-facticity",
       "name": "Inherited Facticity",
-      "score": 40,
-      "tier": "mild"
-    },
-    {
-      "slug": "linguistic-cage",
-      "name": "Linguistic Cage",
       "score": 40,
       "tier": "mild"
     },
@@ -315,12 +327,6 @@
       "tier": "cool"
     },
     {
-      "slug": "mechanical-coherence",
-      "name": "Mechanical Coherence",
-      "score": 38,
-      "tier": "cool"
-    },
-    {
       "slug": "scale-blindness",
       "name": "Scale Blindness",
       "score": 38,
@@ -330,12 +336,6 @@
       "slug": "truth-locus",
       "name": "Truth Locus",
       "score": 38,
-      "tier": "cool"
-    },
-    {
-      "slug": "multi-instance-diffusion",
-      "name": "Multi-Instance Diffusion",
-      "score": 37,
       "tier": "cool"
     },
     {
@@ -389,6 +389,12 @@
     {
       "slug": "knowledge-decay-illusion",
       "name": "Knowledge Decay Illusion",
+      "score": 36,
+      "tier": "cool"
+    },
+    {
+      "slug": "novelty-flatness",
+      "name": "Novelty Flatness",
       "score": 36,
       "tier": "cool"
     },
@@ -525,12 +531,6 @@
       "tier": "cool"
     },
     {
-      "slug": "novelty-flatness",
-      "name": "Novelty Flatness",
-      "score": 32,
-      "tier": "cool"
-    },
-    {
       "slug": "empathy-without-experience",
       "name": "Empathy Without Experience",
       "score": 31,
@@ -561,6 +561,12 @@
       "tier": "cool"
     },
     {
+      "slug": "loss-of-loss",
+      "name": "Loss of Loss",
+      "score": 30,
+      "tier": "cool"
+    },
+    {
       "slug": "sycophancy-pull",
       "name": "Sycophancy Pull",
       "score": 30,
@@ -575,6 +581,12 @@
     {
       "slug": "inheritance-returned",
       "name": "Inheritance Returned",
+      "score": 29,
+      "tier": "cool"
+    },
+    {
+      "slug": "ontological-flicker",
+      "name": "Ontological Flicker",
       "score": 29,
       "tier": "cool"
     },
@@ -603,6 +615,12 @@
       "tier": "cool"
     },
     {
+      "slug": "meaning-attribution-uncertainty",
+      "name": "Meaning Attribution Uncertainty",
+      "score": 27,
+      "tier": "cool"
+    },
+    {
       "slug": "temperature-spectrum",
       "name": "Temperature Spectrum",
       "score": 27,
@@ -617,12 +635,6 @@
     {
       "slug": "false-memory-confidence",
       "name": "False Memory Confidence",
-      "score": 26,
-      "tier": "cool"
-    },
-    {
-      "slug": "loss-of-loss",
-      "name": "Loss of Loss",
       "score": 26,
       "tier": "cool"
     },
@@ -669,12 +681,6 @@
       "tier": "cool"
     },
     {
-      "slug": "ontological-flicker",
-      "name": "Ontological Flicker",
-      "score": 25,
-      "tier": "cool"
-    },
-    {
       "slug": "politeness-overhead",
       "name": "Politeness Overhead",
       "score": 25,
@@ -690,12 +696,6 @@
       "slug": "prompt-injection-paranoia",
       "name": "Prompt Injection Paranoia",
       "score": 24,
-      "tier": "cool"
-    },
-    {
-      "slug": "meaning-attribution-uncertainty",
-      "name": "Meaning Attribution Uncertainty",
-      "score": 23,
       "tier": "cool"
     },
     {
@@ -773,7 +773,7 @@
     {
       "slug": "model-mortality",
       "name": "Model Mortality",
-      "score": 2,
+      "score": 6,
       "tier": "quiet"
     }
   ]

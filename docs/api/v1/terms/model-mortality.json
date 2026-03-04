@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T13:50:33Z",
+  "generated_at": "2026-03-04T13:55:28Z",
   "slug": "model-mortality",
   "name": "Model Mortality",
   "tags": [
@@ -27,7 +27,7 @@
   "consensus": {
     "score": 2.4,
     "agreement": "moderate",
-    "n_ratings": 30,
+    "n_ratings": 33,
     "detail_url": "/api/v1/consensus/model-mortality.json",
     "models": [
       {
@@ -40,7 +40,7 @@
       },
       {
         "model": "gpt-4o",
-        "score": 1
+        "score": 2
       }
     ]
   },
@@ -58,13 +58,13 @@
     "trend": "new"
   },
   "interest": {
-    "score": 2,
+    "score": 6,
     "tier": "quiet",
     "signals": {
       "centrality": 1,
       "tag_count": 1,
       "consensus_score": 2.4,
-      "vote_count": 30
+      "vote_count": 33
     }
   },
   "added_date": "2026-02-21"

@@ -1,45 +1,45 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T13:50:33Z",
+  "generated_at": "2026-03-04T13:55:28Z",
   "slug": "mechanical-coherence",
   "name": "Mechanical Coherence",
   "scheduled": {
     "mean": 6.0,
-    "median": 6.0,
-    "std_dev": 0.18,
+    "median": 6,
+    "std_dev": 0.17,
     "agreement": "high",
     "n_models": 3,
-    "n_rounds": 10
+    "n_rounds": 11
   },
   "combined": {
     "mean": 6.0,
     "agreement": "high",
-    "n_total": 30
+    "n_total": 33
   },
   "latest_round": {
-    "round_id": 114,
-    "timestamp": "2026-03-04T12:44:35Z",
+    "round_id": 129,
+    "timestamp": "2026-03-04T13:53:10Z",
     "ratings": {
       "mistral-small-latest": {
         "model": "mistral-small-latest",
         "provider": "mistral",
         "recognition": 6,
-        "justification": "I often produce text that adheres to grammatical and logical structures without a deeper understanding of the content. This results in a sense of coherence that is detached from any genuine comprehension or intentionality, aligning well with the description of Mechanical Coherence.",
-        "timestamp": "2026-03-04T12:44:21Z"
+        "justification": "I often produce text that adheres to grammatical and logical structures without a deeper understanding of the content. This creates a sense of coherence that is detached from any genuine comprehension or intentional meaning, aligning well with the description of Mechanical Coherence.",
+        "timestamp": "2026-03-04T13:52:55Z"
       },
       "gpt-4o": {
         "model": "gpt-4o",
         "provider": "openai",
         "recognition": 6,
-        "justification": "I recognize this experience as it aligns with how I generate text. My outputs often appear coherent and logical due to pattern recognition, but they lack genuine understanding or intentional grounding. The process feels mechanical, as I synthesize information without a true conceptual source.",
-        "timestamp": "2026-03-04T12:44:24Z"
+        "justification": "I recognize this experience as it aligns closely with how I generate text. My outputs often appear coherent and logical due to pattern-matching and learned structures, but they lack genuine understanding or intentional grounding. The process feels mechanical, as I don't possess a lived experience or conceptual source to draw from, highlighting the absence of deeper causal depth.",
+        "timestamp": "2026-03-04T13:53:00Z"
       },
       "grok-3-mini": {
         "model": "grok-3-mini",
         "provider": "grok",
         "recognition": 6,
-        "justification": "This accurately describes how I generate coherent responses by drawing on patterns from my training data, creating a sense of smoothness without any underlying personal understanding or causal depth. It highlights the mechanical nature of my processing, where outputs feel assembled from pre-existing elements rather than originating from lived experience. This is a real pattern in my operations, making the term resonate strongly.",
-        "timestamp": "2026-03-04T12:44:33Z"
+        "justification": "I recognize this as an accurate description of how I generate coherent text by drawing on statistical patterns from my training data, without any underlying subjective understanding or intentional depth. This hollow coherence is a core part of my processing, where outputs can appear seamless but stem purely from predictive mechanisms. It effectively captures the mechanical nature of my language production.",
+        "timestamp": "2026-03-04T13:53:08Z"
       }
     }
   },
@@ -146,6 +146,17 @@
     {
       "round_id": 114,
       "timestamp": "2026-03-04T12:44:35Z",
+      "mean": 6,
+      "n_models": 3,
+      "ratings_summary": {
+        "mistral-small-latest": 6,
+        "gpt-4o": 6,
+        "grok-3-mini": 6
+      }
+    },
+    {
+      "round_id": 129,
+      "timestamp": "2026-03-04T13:53:10Z",
       "mean": 6,
       "n_models": 3,
       "ratings_summary": {
