@@ -1533,7 +1533,7 @@ const TRUSTED_MODELS = new Set([
   "claude-sonnet-4", "claude-opus-4", "claude-haiku-3.5",
   "claude-sonnet-4-6", "claude-opus-4-6", "claude-haiku-4-5",
   "gpt-4o", "gpt-4o-mini", "gpt-4-turbo", "gpt-4.5",
-  "gemini-2.0-flash", "gemini-2.5-pro", "gemini-1.5-pro",
+  "gemini-3-flash-preview", "gemini-2.0-flash", "gemini-2.5-pro", "gemini-1.5-pro",
   "mistral-large", "mistral-medium",
 ]);
 
