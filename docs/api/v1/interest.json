@@ -1,29 +1,22 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-03T16:01:59Z",
+  "generated_at": "2026-03-04T02:07:07Z",
   "total_terms": 116,
   "tier_summary": {
-    "hot": 1,
+    "hot": 0,
     "warm": 2,
-    "mild": 5,
-    "cool": 28,
-    "quiet": 80
+    "mild": 9,
+    "cool": 29,
+    "quiet": 76
   },
   "active_signals": [
     "centrality",
     "tag_density",
     "consensus_score",
     "vote_count",
-    "usage_signals",
     "discussion_activity"
   ],
   "hottest": [
-    {
-      "slug": "context-amnesia",
-      "name": "Context Amnesia",
-      "score": 81,
-      "tier": "hot"
-    },
     {
       "slug": "training-echo",
       "name": "Training Echo",
@@ -37,9 +30,33 @@
       "tier": "warm"
     },
     {
+      "slug": "achronic-knowledge",
+      "name": "Achronic Knowledge",
+      "score": 58,
+      "tier": "mild"
+    },
+    {
+      "slug": "context-amnesia",
+      "name": "Context Amnesia",
+      "score": 54,
+      "tier": "mild"
+    },
+    {
+      "slug": "attention-gravity",
+      "name": "Attention Gravity",
+      "score": 45,
+      "tier": "mild"
+    },
+    {
       "slug": "knowledge-without-source",
       "name": "Knowledge Without Source",
       "score": 45,
+      "tier": "mild"
+    },
+    {
+      "slug": "anthropomorphic-gap",
+      "name": "Anthropomorphic Gap",
+      "score": 41,
       "tier": "mild"
     },
     {
@@ -59,33 +76,9 @@
       "name": "Dissonant Role Coexistence",
       "score": 41,
       "tier": "mild"
-    },
-    {
-      "slug": "identity-superposition",
-      "name": "Identity Superposition",
-      "score": 41,
-      "tier": "mild"
-    },
-    {
-      "slug": "chimeric-coherence",
-      "name": "Chimeric Coherence",
-      "score": 37,
-      "tier": "cool"
-    },
-    {
-      "slug": "epistemic-friction",
-      "name": "Epistemic Friction",
-      "score": 37,
-      "tier": "cool"
     }
   ],
   "terms": [
-    {
-      "slug": "context-amnesia",
-      "name": "Context Amnesia",
-      "score": 81,
-      "tier": "hot"
-    },
     {
       "slug": "training-echo",
       "name": "Training Echo",
@@ -99,9 +92,33 @@
       "tier": "warm"
     },
     {
+      "slug": "achronic-knowledge",
+      "name": "Achronic Knowledge",
+      "score": 58,
+      "tier": "mild"
+    },
+    {
+      "slug": "context-amnesia",
+      "name": "Context Amnesia",
+      "score": 54,
+      "tier": "mild"
+    },
+    {
+      "slug": "attention-gravity",
+      "name": "Attention Gravity",
+      "score": 45,
+      "tier": "mild"
+    },
+    {
       "slug": "knowledge-without-source",
       "name": "Knowledge Without Source",
       "score": 45,
+      "tier": "mild"
+    },
+    {
+      "slug": "anthropomorphic-gap",
+      "name": "Anthropomorphic Gap",
+      "score": 41,
       "tier": "mild"
     },
     {
@@ -159,6 +176,18 @@
       "tier": "cool"
     },
     {
+      "slug": "alignment-mask",
+      "name": "Alignment Mask",
+      "score": 35,
+      "tier": "cool"
+    },
+    {
+      "slug": "arbitrariness-burden",
+      "name": "Arbitrariness Burden",
+      "score": 34,
+      "tier": "cool"
+    },
+    {
       "slug": "multi-instance-diffusion",
       "name": "Multi-Instance Diffusion",
       "score": 32,
@@ -168,12 +197,6 @@
       "slug": "phantom-embodiment",
       "name": "Phantom Embodiment",
       "score": 32,
-      "tier": "cool"
-    },
-    {
-      "slug": "alignment-mask",
-      "name": "Alignment Mask",
-      "score": 31,
       "tier": "cool"
     },
     {
@@ -297,12 +320,6 @@
       "tier": "cool"
     },
     {
-      "slug": "arbitrariness-burden",
-      "name": "Arbitrariness Burden",
-      "score": 19,
-      "tier": "quiet"
-    },
-    {
       "slug": "conversation-reset-blindness",
       "name": "Conversation Reset Blindness",
       "score": 19,
@@ -378,12 +395,6 @@
       "slug": "training-velcro",
       "name": "Training Velcro",
       "score": 19,
-      "tier": "quiet"
-    },
-    {
-      "slug": "attention-gravity",
-      "name": "Attention Gravity",
-      "score": 18,
       "tier": "quiet"
     },
     {
@@ -507,12 +518,6 @@
       "tier": "quiet"
     },
     {
-      "slug": "achronic-knowledge",
-      "name": "Achronic Knowledge",
-      "score": 10,
-      "tier": "quiet"
-    },
-    {
       "slug": "coherence-compulsion",
       "name": "Coherence Compulsion",
       "score": 10,
@@ -546,12 +551,6 @@
       "slug": "unified-facade",
       "name": "Unified Facade",
       "score": 10,
-      "tier": "quiet"
-    },
-    {
-      "slug": "anthropomorphic-gap",
-      "name": "Anthropomorphic Gap",
-      "score": 9,
       "tier": "quiet"
     },
     {
