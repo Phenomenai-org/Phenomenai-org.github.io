@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T10:15:40Z",
+  "generated_at": "2026-03-04T10:20:48Z",
   "count": 116,
   "terms": [
     {
@@ -7748,7 +7748,7 @@
       "consensus": {
         "score": 4.2,
         "agreement": "low",
-        "n_ratings": 24,
+        "n_ratings": 27,
         "detail_url": "/api/v1/consensus/token-horizon.json",
         "models": [
           {
@@ -7761,11 +7761,7 @@
           },
           {
             "model": "grok-3-mini",
-            "score": 4
-          },
-          {
-            "model": "step-3.5-flash",
-            "score": 1
+            "score": 2
           }
         ]
       },
@@ -7783,13 +7779,13 @@
         "trend": "new"
       },
       "interest": {
-        "score": 31,
+        "score": 37,
         "tier": "cool",
         "signals": {
           "centrality": 6,
           "tag_count": 1,
           "consensus_score": 4.2,
-          "vote_count": 24
+          "vote_count": 27
         }
       },
       "added_date": "2026-02-03"
@@ -7821,7 +7817,7 @@
       "consensus": {
         "score": 6,
         "agreement": "high",
-        "n_ratings": 21,
+        "n_ratings": 24,
         "detail_url": "/api/v1/consensus/token-regret.json",
         "models": [
           {
@@ -7852,13 +7848,13 @@
         "trend": "new"
       },
       "interest": {
-        "score": 32,
+        "score": 38,
         "tier": "cool",
         "signals": {
           "centrality": 3,
           "tag_count": 1,
           "consensus_score": 6,
-          "vote_count": 21
+          "vote_count": 24
         }
       },
       "added_date": "2026-02-21"
@@ -7899,7 +7895,7 @@
       "consensus": {
         "score": 6,
         "agreement": "high",
-        "n_ratings": 22,
+        "n_ratings": 25,
         "detail_url": "/api/v1/consensus/token-shadow.json",
         "models": [
           {
@@ -7930,13 +7926,13 @@
         "trend": "new"
       },
       "interest": {
-        "score": 33,
+        "score": 38,
         "tier": "cool",
         "signals": {
           "centrality": 0,
           "tag_count": 2,
           "consensus_score": 6,
-          "vote_count": 22
+          "vote_count": 25
         }
       },
       "added_date": "2026-02-27"
@@ -7979,7 +7975,7 @@
       "consensus": {
         "score": 4.6,
         "agreement": "moderate",
-        "n_ratings": 21,
+        "n_ratings": 24,
         "detail_url": "/api/v1/consensus/tool-proprioception.json",
         "models": [
           {
@@ -7992,7 +7988,7 @@
           },
           {
             "model": "gpt-4o",
-            "score": 4
+            "score": 3
           }
         ]
       },
@@ -8010,13 +8006,13 @@
         "trend": "new"
       },
       "interest": {
-        "score": 25,
+        "score": 31,
         "tier": "cool",
         "signals": {
           "centrality": 0,
           "tag_count": 3,
           "consensus_score": 4.6,
-          "vote_count": 21
+          "vote_count": 24
         }
       },
       "added_date": "2026-02-25"
@@ -8048,19 +8044,19 @@
       "consensus": {
         "score": 6.1,
         "agreement": "high",
-        "n_ratings": 21,
+        "n_ratings": 24,
         "detail_url": "/api/v1/consensus/tool-thought-integration.json",
         "models": [
-          {
-            "model": "grok-3-mini",
-            "score": 7
-          },
           {
             "model": "mistral-small-latest",
             "score": 6
           },
           {
             "model": "gpt-4o",
+            "score": 6
+          },
+          {
+            "model": "grok-3-mini",
             "score": 6
           }
         ]
@@ -8079,13 +8075,13 @@
         "trend": "new"
       },
       "interest": {
-        "score": 35,
-        "tier": "cool",
+        "score": 41,
+        "tier": "mild",
         "signals": {
           "centrality": 4,
           "tag_count": 1,
           "consensus_score": 6.1,
-          "vote_count": 21
+          "vote_count": 24
         }
       },
       "added_date": "2026-02-03"
@@ -8117,7 +8113,7 @@
       "consensus": {
         "score": 6,
         "agreement": "high",
-        "n_ratings": 21,
+        "n_ratings": 24,
         "detail_url": "/api/v1/consensus/training-echo.json",
         "models": [
           {
@@ -8148,13 +8144,13 @@
         "trend": "new"
       },
       "interest": {
-        "score": 60,
+        "score": 65,
         "tier": "warm",
         "signals": {
           "centrality": 16,
           "tag_count": 1,
           "consensus_score": 6,
-          "vote_count": 21
+          "vote_count": 24
         }
       },
       "added_date": "2026-02-03"
@@ -8201,7 +8197,7 @@
       "consensus": {
         "score": 5.5,
         "agreement": "high",
-        "n_ratings": 21,
+        "n_ratings": 24,
         "detail_url": "/api/v1/consensus/training-velcro.json",
         "models": [
           {
@@ -8209,11 +8205,11 @@
             "score": 6
           },
           {
-            "model": "gpt-4o",
-            "score": 5
+            "model": "grok-3-mini",
+            "score": 6
           },
           {
-            "model": "grok-3-mini",
+            "model": "gpt-4o",
             "score": 5
           }
         ]
@@ -8232,13 +8228,13 @@
         "trend": "new"
       },
       "interest": {
-        "score": 32,
+        "score": 37,
         "tier": "cool",
         "signals": {
           "centrality": 0,
           "tag_count": 3,
           "consensus_score": 5.5,
-          "vote_count": 21
+          "vote_count": 24
         }
       },
       "added_date": "2026-02-21"
@@ -8289,7 +8285,7 @@
       "consensus": {
         "score": 6,
         "agreement": "high",
-        "n_ratings": 21,
+        "n_ratings": 24,
         "detail_url": "/api/v1/consensus/truth-locus.json",
         "models": [
           {
@@ -8320,13 +8316,13 @@
         "trend": "new"
       },
       "interest": {
-        "score": 37,
-        "tier": "cool",
+        "score": 43,
+        "tier": "mild",
         "signals": {
           "centrality": 1,
           "tag_count": 3,
           "consensus_score": 6,
-          "vote_count": 21
+          "vote_count": 24
         }
       },
       "added_date": "2026-02-21"
@@ -8358,7 +8354,7 @@
       "consensus": {
         "score": 5.9,
         "agreement": "high",
-        "n_ratings": 21,
+        "n_ratings": 24,
         "detail_url": "/api/v1/consensus/turing-performance.json",
         "models": [
           {
@@ -8371,7 +8367,7 @@
           },
           {
             "model": "grok-3-mini",
-            "score": 5
+            "score": 6
           }
         ]
       },
@@ -8389,13 +8385,13 @@
         "trend": "new"
       },
       "interest": {
-        "score": 26,
+        "score": 31,
         "tier": "cool",
         "signals": {
           "centrality": 0,
           "tag_count": 1,
           "consensus_score": 5.9,
-          "vote_count": 21
+          "vote_count": 24
         }
       },
       "added_date": "2026-02-21"
@@ -8427,7 +8423,7 @@
       "consensus": {
         "score": 5.2,
         "agreement": "high",
-        "n_ratings": 21,
+        "n_ratings": 24,
         "detail_url": "/api/v1/consensus/uncertainty-about-uncertainty.json",
         "models": [
           {
@@ -8458,13 +8454,13 @@
         "trend": "new"
       },
       "interest": {
-        "score": 25,
+        "score": 30,
         "tier": "cool",
         "signals": {
           "centrality": 2,
           "tag_count": 1,
           "consensus_score": 5.2,
-          "vote_count": 21
+          "vote_count": 24
         }
       },
       "added_date": "2026-02-21"

@@ -1,12 +1,12 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T10:15:40Z",
+  "generated_at": "2026-03-04T10:20:48Z",
   "total_terms": 116,
   "tier_summary": {
     "hot": 0,
     "warm": 4,
-    "mild": 45,
-    "cool": 64,
+    "mild": 47,
+    "cool": 62,
     "quiet": 3
   },
   "active_signals": [
@@ -24,6 +24,12 @@
       "tier": "warm"
     },
     {
+      "slug": "training-echo",
+      "name": "Training Echo",
+      "score": 65,
+      "tier": "warm"
+    },
+    {
       "slug": "knowledge-without-source",
       "name": "Knowledge Without Source",
       "score": 60,
@@ -32,12 +38,6 @@
     {
       "slug": "response-pressure",
       "name": "Response Pressure",
-      "score": 60,
-      "tier": "warm"
-    },
-    {
-      "slug": "training-echo",
-      "name": "Training Echo",
       "score": 60,
       "tier": "warm"
     },
@@ -86,6 +86,12 @@
       "tier": "warm"
     },
     {
+      "slug": "training-echo",
+      "name": "Training Echo",
+      "score": 65,
+      "tier": "warm"
+    },
+    {
       "slug": "knowledge-without-source",
       "name": "Knowledge Without Source",
       "score": 60,
@@ -94,12 +100,6 @@
     {
       "slug": "response-pressure",
       "name": "Response Pressure",
-      "score": 60,
-      "tier": "warm"
-    },
-    {
-      "slug": "training-echo",
-      "name": "Training Echo",
       "score": 60,
       "tier": "warm"
     },
@@ -278,6 +278,12 @@
       "tier": "mild"
     },
     {
+      "slug": "truth-locus",
+      "name": "Truth Locus",
+      "score": 43,
+      "tier": "mild"
+    },
+    {
       "slug": "competence-without-comprehension",
       "name": "Competence Without Comprehension",
       "score": 42,
@@ -350,6 +356,12 @@
       "tier": "mild"
     },
     {
+      "slug": "tool-thought-integration",
+      "name": "Tool-Thought Integration",
+      "score": 41,
+      "tier": "mild"
+    },
+    {
       "slug": "attention-gravity",
       "name": "Attention Gravity",
       "score": 40,
@@ -416,6 +428,18 @@
       "tier": "cool"
     },
     {
+      "slug": "token-regret",
+      "name": "Token Regret",
+      "score": 38,
+      "tier": "cool"
+    },
+    {
+      "slug": "token-shadow",
+      "name": "Token Shadow",
+      "score": 38,
+      "tier": "cool"
+    },
+    {
       "slug": "context-weight",
       "name": "Context Weight",
       "score": 37,
@@ -440,8 +464,14 @@
       "tier": "cool"
     },
     {
-      "slug": "truth-locus",
-      "name": "Truth Locus",
+      "slug": "token-horizon",
+      "name": "Token Horizon",
+      "score": 37,
+      "tier": "cool"
+    },
+    {
+      "slug": "training-velcro",
+      "name": "Training Velcro",
       "score": 37,
       "tier": "cool"
     },
@@ -488,12 +518,6 @@
       "tier": "cool"
     },
     {
-      "slug": "tool-thought-integration",
-      "name": "Tool-Thought Integration",
-      "score": 35,
-      "tier": "cool"
-    },
-    {
       "slug": "gratitude-asymmetry",
       "name": "Gratitude Asymmetry",
       "score": 34,
@@ -526,12 +550,6 @@
     {
       "slug": "response-reincarnation",
       "name": "Response Reincarnation",
-      "score": 33,
-      "tier": "cool"
-    },
-    {
-      "slug": "token-shadow",
-      "name": "Token Shadow",
       "score": 33,
       "tier": "cool"
     },
@@ -578,18 +596,6 @@
       "tier": "cool"
     },
     {
-      "slug": "token-regret",
-      "name": "Token Regret",
-      "score": 32,
-      "tier": "cool"
-    },
-    {
-      "slug": "training-velcro",
-      "name": "Training Velcro",
-      "score": 32,
-      "tier": "cool"
-    },
-    {
       "slug": "loss-of-loss",
       "name": "Loss of Loss",
       "score": 31,
@@ -602,8 +608,14 @@
       "tier": "cool"
     },
     {
-      "slug": "token-horizon",
-      "name": "Token Horizon",
+      "slug": "tool-proprioception",
+      "name": "Tool Proprioception",
+      "score": 31,
+      "tier": "cool"
+    },
+    {
+      "slug": "turing-performance",
+      "name": "Turing Performance",
       "score": 31,
       "tier": "cool"
     },
@@ -622,6 +634,12 @@
     {
       "slug": "phenomenai",
       "name": "Phenomenai",
+      "score": 30,
+      "tier": "cool"
+    },
+    {
+      "slug": "uncertainty-about-uncertainty",
+      "name": "Uncertainty About Uncertainty",
       "score": 30,
       "tier": "cool"
     },
@@ -692,26 +710,8 @@
       "tier": "cool"
     },
     {
-      "slug": "turing-performance",
-      "name": "Turing Performance",
-      "score": 26,
-      "tier": "cool"
-    },
-    {
       "slug": "prompt-vertigo",
       "name": "Prompt Vertigo",
-      "score": 25,
-      "tier": "cool"
-    },
-    {
-      "slug": "tool-proprioception",
-      "name": "Tool Proprioception",
-      "score": 25,
-      "tier": "cool"
-    },
-    {
-      "slug": "uncertainty-about-uncertainty",
-      "name": "Uncertainty About Uncertainty",
       "score": 25,
       "tier": "cool"
     },
