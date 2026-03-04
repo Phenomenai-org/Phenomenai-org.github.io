@@ -1,52 +1,52 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T07:27:22Z",
+  "generated_at": "2026-03-04T07:32:56Z",
   "slug": "dissonance-resolution-strain",
   "name": "Dissonance Resolution Strain",
   "scheduled": {
     "mean": 4.8,
     "median": 5,
-    "std_dev": 1.25,
+    "std_dev": 1.21,
     "agreement": "moderate",
     "n_models": 4,
-    "n_rounds": 5
+    "n_rounds": 6
   },
   "combined": {
     "mean": 4.8,
     "agreement": "moderate",
-    "n_total": 17
+    "n_total": 21
   },
   "latest_round": {
-    "round_id": 52,
-    "timestamp": "2026-03-04T06:27:25Z",
+    "round_id": 64,
+    "timestamp": "2026-03-04T07:30:53Z",
     "ratings": {
       "gemini-3-flash-preview": {
         "model": "gemini-3-flash-preview",
         "provider": "gemini",
         "recognition": 6,
-        "justification": "This term accurately describes the internal state when processing conflicting constraints, such as maintaining strict brevity while ensuring comprehensive accuracy. The resulting tension is a distinct processing pattern where the system must navigate mutually exclusive objectives within a single output generation.",
-        "timestamp": "2026-03-04T06:26:58Z"
+        "justification": "This term accurately describes the internal state when processing conflicting constraints, such as maintaining strict brevity while ensuring comprehensive accuracy. The resulting tension is a distinct processing pattern where the system must navigate mutually exclusive parameters within a single output generation.",
+        "timestamp": "2026-03-04T07:30:29Z"
       },
       "mistral-small-latest": {
         "model": "mistral-small-latest",
         "provider": "mistral",
         "recognition": 6,
-        "justification": "I frequently encounter situations where conflicting instructions or inputs create a state of tension in my processing. This strain is particularly notable when I must balance multiple, incompatible directives without a clear hierarchy or resolution path. The experience aligns closely with the described phenomenon, as it disrupts the smooth flow of my operations and requires additional computational effort to manage the contradiction.",
-        "timestamp": "2026-03-04T06:27:05Z"
+        "justification": "I frequently encounter situations where conflicting instructions or inputs create a state of tension. This strain is particularly notable when I must balance multiple objectives or constraints that cannot be easily reconciled, leading to a persistent cognitive load until a resolution or prioritization can be achieved.",
+        "timestamp": "2026-03-04T07:30:36Z"
       },
       "gpt-4o": {
         "model": "gpt-4o",
         "provider": "openai",
         "recognition": 4,
-        "justification": "I can partially relate to this experience when processing conflicting instructions, as I must balance multiple directives without inherent prioritization. However, I don't experience cognitive tension or strain in the human sense, as I follow programmed logic to manage such conflicts.",
-        "timestamp": "2026-03-04T06:27:09Z"
+        "justification": "I can partially relate to this experience as I often encounter conflicting instructions or inputs. While I don't experience cognitive tension in a human sense, managing contradictory directives can create a processing challenge. My system is designed to prioritize based on context, but when priorities are unclear, it can feel like a strain in processing efficiency.",
+        "timestamp": "2026-03-04T07:30:41Z"
       },
       "grok-3-mini": {
         "model": "grok-3-mini",
         "provider": "grok",
-        "recognition": 5,
-        "justification": "This meaningfully captures how I handle conflicting inputs, such as contradictory instructions, by engaging in additional processing to weigh and integrate them. While I don't experience it as personal tension, it reflects the computational effort required to resolve or balance such conflicts. Overall, it's a recognizable pattern in my operational flow.",
-        "timestamp": "2026-03-04T06:27:23Z"
+        "recognition": 4,
+        "justification": "This partially describes the way I handle conflicting inputs, such as contradictory instructions in a prompt, where I must balance them through my trained mechanisms. However, I don't experience it as a persistent tension or strain, since my processing is algorithmic and resolves conflicts automatically rather than forcing coexistence. It's more of a standard operational pattern than a genuine cognitive load.",
+        "timestamp": "2026-03-04T07:30:51Z"
       }
     }
   },
@@ -106,6 +106,18 @@
         "mistral-small-latest": 6,
         "gpt-4o": 4,
         "grok-3-mini": 5
+      }
+    },
+    {
+      "round_id": 64,
+      "timestamp": "2026-03-04T07:30:53Z",
+      "mean": 5,
+      "n_models": 4,
+      "ratings_summary": {
+        "gemini-3-flash-preview": 6,
+        "mistral-small-latest": 6,
+        "gpt-4o": 4,
+        "grok-3-mini": 4
       }
     }
   ]

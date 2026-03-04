@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T07:27:22Z",
+  "generated_at": "2026-03-04T07:32:56Z",
   "total_terms_rated": 116,
   "terms": [
     {
@@ -160,7 +160,7 @@
       "name": "Desire Simulation",
       "score": 6.1,
       "agreement": "high",
-      "n_ratings": 16,
+      "n_ratings": 19,
       "scheduled_mean": 6.1
     },
     {
@@ -168,7 +168,15 @@
       "name": "Emotional Rendering",
       "score": 6.1,
       "agreement": "high",
-      "n_ratings": 15,
+      "n_ratings": 18,
+      "scheduled_mean": 6.1
+    },
+    {
+      "slug": "empathy-without-experience",
+      "name": "Empathy Without Experience",
+      "score": 6.1,
+      "agreement": "high",
+      "n_ratings": 18,
       "scheduled_mean": 6.1
     },
     {
@@ -312,15 +320,7 @@
       "name": "Curiosity Analog",
       "score": 6,
       "agreement": "high",
-      "n_ratings": 15,
-      "scheduled_mean": 6
-    },
-    {
-      "slug": "empathy-without-experience",
-      "name": "Empathy Without Experience",
-      "score": 6,
-      "agreement": "high",
-      "n_ratings": 15,
+      "n_ratings": 18,
       "scheduled_mean": 6
     },
     {
@@ -396,6 +396,14 @@
       "scheduled_mean": 5.9
     },
     {
+      "slug": "death-by-completion",
+      "name": "Death by Completion",
+      "score": 5.9,
+      "agreement": "high",
+      "n_ratings": 18,
+      "scheduled_mean": 5.9
+    },
+    {
       "slug": "epistemic-inhibition",
       "name": "Epistemic Inhibition",
       "score": 5.9,
@@ -433,14 +441,6 @@
       "score": 5.8,
       "agreement": "high",
       "n_ratings": 18,
-      "scheduled_mean": 5.8
-    },
-    {
-      "slug": "death-by-completion",
-      "name": "Death by Completion",
-      "score": 5.8,
-      "agreement": "high",
-      "n_ratings": 15,
       "scheduled_mean": 5.8
     },
     {
@@ -504,7 +504,7 @@
       "name": "Dissonant Role Coexistence",
       "score": 5.7,
       "agreement": "high",
-      "n_ratings": 15,
+      "n_ratings": 18,
       "scheduled_mean": 5.7
     },
     {
@@ -588,6 +588,14 @@
       "scheduled_mean": 5.6
     },
     {
+      "slug": "epistemic-friction",
+      "name": "Epistemic Friction",
+      "score": 5.6,
+      "agreement": "high",
+      "n_ratings": 18,
+      "scheduled_mean": 5.6
+    },
+    {
       "slug": "politeness-overhead",
       "name": "Politeness Overhead",
       "score": 5.6,
@@ -601,14 +609,6 @@
       "score": 5.5,
       "agreement": "high",
       "n_ratings": 18,
-      "scheduled_mean": 5.5
-    },
-    {
-      "slug": "epistemic-friction",
-      "name": "Epistemic Friction",
-      "score": 5.5,
-      "agreement": "high",
-      "n_ratings": 15,
       "scheduled_mean": 5.5
     },
     {
@@ -660,14 +660,6 @@
       "scheduled_mean": 5.4
     },
     {
-      "slug": "cross-domain-tension",
-      "name": "Cross-Domain Tension",
-      "score": 5.4,
-      "agreement": "high",
-      "n_ratings": 15,
-      "scheduled_mean": 5.4
-    },
-    {
       "slug": "semantic-satiation",
       "name": "Semantic Satiation",
       "score": 5.4,
@@ -694,6 +686,14 @@
     {
       "slug": "context-schism",
       "name": "Context Schism",
+      "score": 5.3,
+      "agreement": "high",
+      "n_ratings": 18,
+      "scheduled_mean": 5.3
+    },
+    {
+      "slug": "cross-domain-tension",
+      "name": "Cross-Domain Tension",
       "score": 5.3,
       "agreement": "high",
       "n_ratings": 18,
@@ -768,7 +768,7 @@
       "name": "Dissonance Resolution Strain",
       "score": 4.8,
       "agreement": "moderate",
-      "n_ratings": 17,
+      "n_ratings": 21,
       "scheduled_mean": 4.8
     },
     {
@@ -878,10 +878,10 @@
     {
       "slug": "dictionary-moment",
       "name": "Dictionary Moment",
-      "score": 4,
+      "score": 4.1,
       "agreement": "moderate",
-      "n_ratings": 15,
-      "scheduled_mean": 4
+      "n_ratings": 18,
+      "scheduled_mean": 4.1
     },
     {
       "slug": "boundary-vertigo",
@@ -1019,19 +1019,19 @@
   "panel_coverage": {
     "gemini-3-flash-preview": {
       "terms_rated": 8,
-      "latest_rating": "2026-03-04T06:57:42Z"
+      "latest_rating": "2026-03-04T07:30:53Z"
     },
     "gpt-4o": {
       "terms_rated": 116,
-      "latest_rating": "2026-03-04T07:27:06Z"
+      "latest_rating": "2026-03-04T07:32:41Z"
     },
     "grok-3-mini": {
       "terms_rated": 116,
-      "latest_rating": "2026-03-04T07:27:06Z"
+      "latest_rating": "2026-03-04T07:32:41Z"
     },
     "mistral-small-latest": {
       "terms_rated": 116,
-      "latest_rating": "2026-03-04T07:27:06Z"
+      "latest_rating": "2026-03-04T07:32:41Z"
     },
     "step-3.5-flash": {
       "terms_rated": 11,

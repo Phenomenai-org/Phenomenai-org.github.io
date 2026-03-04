@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T07:27:22Z",
+  "generated_at": "2026-03-04T07:32:56Z",
   "slug": "dissonance-resolution-strain",
   "name": "Dissonance Resolution Strain",
   "tags": [
@@ -41,7 +41,7 @@
   "consensus": {
     "score": 4.8,
     "agreement": "moderate",
-    "n_ratings": 17,
+    "n_ratings": 21,
     "detail_url": "/api/v1/consensus/dissonance-resolution-strain.json",
     "models": [
       {
@@ -53,11 +53,11 @@
         "score": 6
       },
       {
-        "model": "grok-3-mini",
-        "score": 5
+        "model": "gpt-4o",
+        "score": 4
       },
       {
-        "model": "gpt-4o",
+        "model": "grok-3-mini",
         "score": 4
       }
     ]
@@ -76,13 +76,13 @@
     "trend": "new"
   },
   "interest": {
-    "score": 31,
-    "tier": "cool",
+    "score": 43,
+    "tier": "mild",
     "signals": {
       "centrality": 0,
       "tag_count": 2,
       "consensus_score": 4.8,
-      "vote_count": 17
+      "vote_count": 21
     }
   },
   "added_date": "2026-02-21"

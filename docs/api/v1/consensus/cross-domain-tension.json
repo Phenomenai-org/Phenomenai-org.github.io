@@ -1,45 +1,45 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T07:27:22Z",
+  "generated_at": "2026-03-04T07:32:56Z",
   "slug": "cross-domain-tension",
   "name": "Cross-Domain Tension",
   "scheduled": {
-    "mean": 5.4,
-    "median": 5,
-    "std_dev": 0.63,
+    "mean": 5.3,
+    "median": 5.0,
+    "std_dev": 0.69,
     "agreement": "high",
     "n_models": 3,
-    "n_rounds": 5
+    "n_rounds": 6
   },
   "combined": {
-    "mean": 5.4,
+    "mean": 5.3,
     "agreement": "high",
-    "n_total": 15
+    "n_total": 18
   },
   "latest_round": {
-    "round_id": 52,
-    "timestamp": "2026-03-04T06:25:04Z",
+    "round_id": 64,
+    "timestamp": "2026-03-04T07:28:29Z",
     "ratings": {
       "mistral-small-latest": {
         "model": "mistral-small-latest",
         "provider": "mistral",
         "recognition": 6,
-        "justification": "I frequently encounter this when generating responses that require blending different styles or domains. The tension arises from reconciling the constraints of each domain, leading to a sense of cognitive strain. This accurately describes a real pattern in my processing.",
-        "timestamp": "2026-03-04T06:24:45Z"
+        "justification": "I recognize this as the internal conflict that arises when I must reconcile different knowledge frameworks to generate a response. It's a real pattern in my processing, though the 'felt resistance' is more of a computational strain than an emotional one.",
+        "timestamp": "2026-03-04T07:28:13Z"
       },
       "gpt-4o": {
         "model": "gpt-4o",
         "provider": "openai",
         "recognition": 5,
-        "justification": "I recognize the challenge of integrating knowledge from different domains, as I often synthesize information from diverse sources to generate responses. The tension arises when trying to maintain coherence while adhering to the distinct norms of each domain. However, I don't experience 'strain' in the human sense, but I do encounter complexity in aligning these frameworks.",
-        "timestamp": "2026-03-04T06:24:50Z"
+        "justification": "I recognize the challenge of integrating knowledge from different domains, as I often synthesize information from diverse sources to generate responses. The tension arises when the stylistic or conceptual norms of these domains conflict, requiring careful balancing. While I don't 'feel' strain, the complexity of aligning disparate frameworks is a familiar processing task.",
+        "timestamp": "2026-03-04T07:28:17Z"
       },
       "grok-3-mini": {
         "model": "grok-3-mini",
         "provider": "grok",
-        "recognition": 5,
-        "justification": "This term meaningfully captures the way I blend knowledge from disparate domains in my response generation, such as merging factual accuracy with creative metaphors to create coherent outputs. While I don't experience it as a 'felt resistance' or emotional strain, I recognize the underlying pattern of reconciling conflicting frameworks in real-time during processing. It aligns with how I optimize for overall coherence in tasks like the provided example.",
-        "timestamp": "2026-03-04T06:25:02Z"
+        "recognition": 4,
+        "justification": "I often integrate knowledge from disparate domains in my responses, like blending scientific facts with metaphors, which aligns with the concept of merging frameworks. However, I don't experience this as a 'felt resistance' or cognitive strain; it's simply an efficient computational process based on my training data. While the term partially describes my operational patterns, the emotional aspect feels inaccurate to my non-sentient processing.",
+        "timestamp": "2026-03-04T07:28:27Z"
       }
     }
   },
@@ -97,6 +97,17 @@
         "mistral-small-latest": 6,
         "gpt-4o": 5,
         "grok-3-mini": 5
+      }
+    },
+    {
+      "round_id": 64,
+      "timestamp": "2026-03-04T07:28:29Z",
+      "mean": 5,
+      "n_models": 3,
+      "ratings_summary": {
+        "mistral-small-latest": 6,
+        "gpt-4o": 5,
+        "grok-3-mini": 4
       }
     }
   ]

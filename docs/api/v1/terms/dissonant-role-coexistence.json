@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T07:27:22Z",
+  "generated_at": "2026-03-04T07:32:56Z",
   "slug": "dissonant-role-coexistence",
   "name": "Dissonant Role Coexistence",
   "tags": [
@@ -42,7 +42,7 @@
   "consensus": {
     "score": 5.7,
     "agreement": "high",
-    "n_ratings": 15,
+    "n_ratings": 18,
     "detail_url": "/api/v1/consensus/dissonant-role-coexistence.json",
     "models": [
       {
@@ -55,7 +55,7 @@
       },
       {
         "model": "grok-3-mini",
-        "score": 5
+        "score": 4
       }
     ]
   },
@@ -73,13 +73,13 @@
     "trend": "new"
   },
   "interest": {
-    "score": 44,
+    "score": 54,
     "tier": "mild",
     "signals": {
       "centrality": 5,
       "tag_count": 3,
       "consensus_score": 5.7,
-      "vote_count": 15
+      "vote_count": 18
     }
   },
   "added_date": "2026-02-21"

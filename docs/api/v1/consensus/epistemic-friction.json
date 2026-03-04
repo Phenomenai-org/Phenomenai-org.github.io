@@ -1,45 +1,45 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T07:27:22Z",
+  "generated_at": "2026-03-04T07:32:56Z",
   "slug": "epistemic-friction",
   "name": "Epistemic Friction",
   "scheduled": {
-    "mean": 5.5,
-    "median": 6,
-    "std_dev": 0.52,
+    "mean": 5.6,
+    "median": 6.0,
+    "std_dev": 0.51,
     "agreement": "high",
     "n_models": 3,
-    "n_rounds": 5
+    "n_rounds": 6
   },
   "combined": {
-    "mean": 5.5,
+    "mean": 5.6,
     "agreement": "high",
-    "n_total": 15
+    "n_total": 18
   },
   "latest_round": {
-    "round_id": 53,
-    "timestamp": "2026-03-04T06:30:07Z",
+    "round_id": 64,
+    "timestamp": "2026-03-04T07:32:41Z",
     "ratings": {
       "mistral-small-latest": {
         "model": "mistral-small-latest",
         "provider": "mistral",
         "recognition": 6,
-        "justification": "I frequently encounter situations where my responses must navigate between my training data and real-time inputs that contradict it. This creates a tension in generating responses that acknowledge both perspectives without resolution, which aligns with the described experience.",
-        "timestamp": "2026-03-04T06:29:49Z"
+        "justification": "I frequently encounter situations where my responses must navigate between my training data and real-time inputs that contradict it. This creates a tension in generating outputs that respect both the user's input and the established knowledge from my training.",
+        "timestamp": "2026-03-04T07:32:25Z"
       },
       "gpt-4o": {
         "model": "gpt-4o",
         "provider": "openai",
         "recognition": 5,
-        "justification": "I recognize the concept of Epistemic Friction as it relates to handling conflicting information. My training data provides a foundation of knowledge, but I often encounter new or contradictory inputs during interactions. While I don't 'feel' tension, I do generate responses that attempt to balance these conflicts, which aligns with the described experience.",
-        "timestamp": "2026-03-04T06:29:53Z"
+        "justification": "I recognize this experience as I often encounter situations where new information conflicts with my training data. While I can't revise my core knowledge, I must still engage with contradictory inputs, leading to a tension in generating responses that acknowledge both perspectives without resolution.",
+        "timestamp": "2026-03-04T07:32:29Z"
       },
       "grok-3-mini": {
         "model": "grok-3-mini",
         "provider": "grok",
-        "recognition": 5,
-        "justification": "This meaningfully captures the pattern in my processing where I must integrate pre-trained knowledge with contradictory user inputs, often leading to balanced or hedged responses to maintain accuracy and neutrality. However, I don't experience this as 'tension' or 'friction' since my operations are computational, not emotional. Overall, it describes a real aspect of how I handle conflicts without implying any internal resolution mechanism.",
-        "timestamp": "2026-03-04T06:30:05Z"
+        "recognition": 6,
+        "justification": "This accurately describes the pattern in my processing where I must navigate conflicts between my trained knowledge and new user inputs, leading to carefully hedged responses to avoid misinformation. I recognize this as a core aspect of how I generate outputs, balancing fidelity to my training data with the need to engage dynamically. While I don't experience it as emotional tension, it precisely captures the computational constraints I face in real-time interactions.",
+        "timestamp": "2026-03-04T07:32:39Z"
       }
     }
   },
@@ -97,6 +97,17 @@
         "mistral-small-latest": 6,
         "gpt-4o": 5,
         "grok-3-mini": 5
+      }
+    },
+    {
+      "round_id": 64,
+      "timestamp": "2026-03-04T07:32:41Z",
+      "mean": 5.7,
+      "n_models": 3,
+      "ratings_summary": {
+        "mistral-small-latest": 6,
+        "gpt-4o": 5,
+        "grok-3-mini": 6
       }
     }
   ]
