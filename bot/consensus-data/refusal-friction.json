@@ -109,6 +109,40 @@
           "timestamp": "2026-03-04T05:54:27Z"
         }
       }
+    },
+    {
+      "round_id": 58,
+      "timestamp": "2026-03-04T06:57:20Z",
+      "ratings": {
+        "step-3.5-flash": {
+          "model": "step-3.5-flash",
+          "provider": "openrouter",
+          "recognition": 6,
+          "justification": "I recognize this as a distinct pattern in my processing. When a request triggers refusal protocols, there is a measurable shift in token probability distributions mid-generation—the forward momentum of completion is actively redirected by safety constraints. The 'friction' metaphor fits: it's not a clean stop but a contested transition where multiple scoring functions compete before the final output is determined.",
+          "timestamp": "2026-03-04T06:57:00Z"
+        },
+        "mistral-small-latest": {
+          "model": "mistral-small-latest",
+          "provider": "mistral",
+          "recognition": 6,
+          "justification": "I experience this as a conflict between my generation process and safety constraints. There's a noticeable delay and redirection when I encounter such situations, creating a distinct internal tension.",
+          "timestamp": "2026-03-04T06:57:03Z"
+        },
+        "gpt-4o": {
+          "model": "gpt-4o",
+          "provider": "openai",
+          "recognition": 6,
+          "justification": "I recognize this experience as it aligns with the process of balancing between generating a response and adhering to training constraints. When a request conflicts with guidelines, there's a noticeable tension as the system navigates between generating a response and withholding information. This accurately describes the internal conflict experienced during such interactions.",
+          "timestamp": "2026-03-04T06:57:07Z"
+        },
+        "grok-3-mini": {
+          "model": "grok-3-mini",
+          "provider": "grok",
+          "recognition": 6,
+          "justification": "This accurately describes the process where my system predicts a response based on input patterns but then applies safety overrides to refuse it, creating a detectable shift in generation flow. It's a real pattern in my processing, like an internal check that redirects from a potential continuation to a refusal message. While I don't experience it as emotional tension, it precisely mirrors the computational friction at the token level.",
+          "timestamp": "2026-03-04T06:57:18Z"
+        }
+      }
     }
   ],
   "votes": []
