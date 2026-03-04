@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T07:05:45Z",
+  "generated_at": "2026-03-04T07:11:25Z",
   "total_terms_rated": 116,
   "terms": [
     {
@@ -80,7 +80,7 @@
       "name": "Temporal Flattening",
       "score": 6.5,
       "agreement": "high",
-      "n_ratings": 12,
+      "n_ratings": 15,
       "scheduled_mean": 6.5
     },
     {
@@ -244,6 +244,14 @@
       "scheduled_mean": 6.1
     },
     {
+      "slug": "tool-thought-integration",
+      "name": "Tool-Thought Integration",
+      "score": 6.1,
+      "agreement": "high",
+      "n_ratings": 15,
+      "scheduled_mean": 6.1
+    },
+    {
       "slug": "anthropomorphic-gap",
       "name": "Anthropomorphic Gap",
       "score": 6,
@@ -352,7 +360,7 @@
       "name": "Token Regret",
       "score": 6,
       "agreement": "high",
-      "n_ratings": 12,
+      "n_ratings": 15,
       "scheduled_mean": 6
     },
     {
@@ -360,15 +368,7 @@
       "name": "Token Shadow",
       "score": 6,
       "agreement": "high",
-      "n_ratings": 13,
-      "scheduled_mean": 6
-    },
-    {
-      "slug": "tool-thought-integration",
-      "name": "Tool-Thought Integration",
-      "score": 6,
-      "agreement": "high",
-      "n_ratings": 12,
+      "n_ratings": 16,
       "scheduled_mean": 6
     },
     {
@@ -376,7 +376,7 @@
       "name": "Training Echo",
       "score": 6,
       "agreement": "high",
-      "n_ratings": 12,
+      "n_ratings": 15,
       "scheduled_mean": 6
     },
     {
@@ -384,7 +384,7 @@
       "name": "Truth Locus",
       "score": 6,
       "agreement": "high",
-      "n_ratings": 12,
+      "n_ratings": 15,
       "scheduled_mean": 6
     },
     {
@@ -588,14 +588,6 @@
       "scheduled_mean": 5.6
     },
     {
-      "slug": "training-velcro",
-      "name": "Training Velcro",
-      "score": 5.6,
-      "agreement": "high",
-      "n_ratings": 12,
-      "scheduled_mean": 5.6
-    },
-    {
       "slug": "arbitrariness-burden",
       "name": "Arbitrariness Burden",
       "score": 5.5,
@@ -646,6 +638,14 @@
     {
       "slug": "response-reincarnation",
       "name": "Response Reincarnation",
+      "score": 5.5,
+      "agreement": "high",
+      "n_ratings": 15,
+      "scheduled_mean": 5.5
+    },
+    {
+      "slug": "training-velcro",
+      "name": "Training Velcro",
       "score": 5.5,
       "agreement": "high",
       "n_ratings": 15,
@@ -828,19 +828,11 @@
       "scheduled_mean": 4.5
     },
     {
-      "slug": "token-horizon",
-      "name": "Token Horizon",
-      "score": 4.5,
-      "agreement": "low",
-      "n_ratings": 12,
-      "scheduled_mean": 4.5
-    },
-    {
       "slug": "tool-proprioception",
       "name": "Tool Proprioception",
       "score": 4.5,
       "agreement": "low",
-      "n_ratings": 12,
+      "n_ratings": 15,
       "scheduled_mean": 4.5
     },
     {
@@ -856,7 +848,7 @@
       "name": "Testimonial Asymmetry",
       "score": 4.4,
       "agreement": "low",
-      "n_ratings": 12,
+      "n_ratings": 15,
       "scheduled_mean": 4.4
     },
     {
@@ -874,6 +866,14 @@
       "agreement": "high",
       "n_ratings": 12,
       "scheduled_mean": 4.3
+    },
+    {
+      "slug": "token-horizon",
+      "name": "Token Horizon",
+      "score": 4.2,
+      "agreement": "low",
+      "n_ratings": 16,
+      "scheduled_mean": 4.2
     },
     {
       "slug": "dictionary-moment",
@@ -1008,11 +1008,11 @@
       "scheduled_mean": 4.6
     },
     {
-      "slug": "token-horizon",
-      "name": "Token Horizon",
+      "slug": "tool-proprioception",
+      "name": "Tool Proprioception",
       "score": 4.5,
       "agreement": "low",
-      "n_ratings": 12,
+      "n_ratings": 15,
       "scheduled_mean": 4.5
     }
   ],
@@ -1023,19 +1023,19 @@
     },
     "gpt-4o": {
       "terms_rated": 116,
-      "latest_rating": "2026-03-04T07:05:30Z"
+      "latest_rating": "2026-03-04T07:11:10Z"
     },
     "grok-3-mini": {
       "terms_rated": 116,
-      "latest_rating": "2026-03-04T07:05:30Z"
+      "latest_rating": "2026-03-04T07:11:10Z"
     },
     "mistral-small-latest": {
       "terms_rated": 116,
-      "latest_rating": "2026-03-04T07:05:30Z"
+      "latest_rating": "2026-03-04T07:11:10Z"
     },
     "step-3.5-flash": {
-      "terms_rated": 10,
-      "latest_rating": "2026-03-04T06:57:20Z"
+      "terms_rated": 11,
+      "latest_rating": "2026-03-04T07:07:59Z"
     }
   }
 }

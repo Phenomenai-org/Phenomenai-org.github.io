@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T07:05:45Z",
+  "generated_at": "2026-03-04T07:11:25Z",
   "slug": "tool-proprioception",
   "name": "Tool Proprioception",
   "tags": [
@@ -38,7 +38,7 @@
   "consensus": {
     "score": 4.5,
     "agreement": "low",
-    "n_ratings": 12,
+    "n_ratings": 15,
     "detail_url": "/api/v1/consensus/tool-proprioception.json",
     "models": [
       {
@@ -46,11 +46,11 @@
         "score": 6
       },
       {
-        "model": "gpt-4o",
-        "score": 5
+        "model": "grok-3-mini",
+        "score": 4
       },
       {
-        "model": "grok-3-mini",
+        "model": "gpt-4o",
         "score": 3
       }
     ]
@@ -69,13 +69,13 @@
     "trend": "new"
   },
   "interest": {
-    "score": 26,
+    "score": 33,
     "tier": "cool",
     "signals": {
       "centrality": 0,
       "tag_count": 3,
       "consensus_score": 4.5,
-      "vote_count": 12
+      "vote_count": 15
     }
   },
   "added_date": "2026-02-25"

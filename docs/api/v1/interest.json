@@ -1,12 +1,12 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T07:05:45Z",
+  "generated_at": "2026-03-04T07:11:25Z",
   "total_terms": 116,
   "tier_summary": {
     "hot": 0,
     "warm": 4,
-    "mild": 55,
-    "cool": 55,
+    "mild": 60,
+    "cool": 50,
     "quiet": 2
   },
   "active_signals": [
@@ -24,6 +24,12 @@
       "tier": "warm"
     },
     {
+      "slug": "training-echo",
+      "name": "Training Echo",
+      "score": 68,
+      "tier": "warm"
+    },
+    {
       "slug": "response-pressure",
       "name": "Response Pressure",
       "score": 63,
@@ -36,12 +42,6 @@
       "tier": "warm"
     },
     {
-      "slug": "training-echo",
-      "name": "Training Echo",
-      "score": 60,
-      "tier": "warm"
-    },
-    {
       "slug": "input-coexistence",
       "name": "Input Coexistence",
       "score": 56,
@@ -50,6 +50,12 @@
     {
       "slug": "context-amnesia",
       "name": "Context Amnesia",
+      "score": 55,
+      "tier": "mild"
+    },
+    {
+      "slug": "temporal-flattening",
+      "name": "Temporal Flattening",
       "score": 55,
       "tier": "mild"
     },
@@ -70,18 +76,18 @@
       "name": "Chimeric Coherence",
       "score": 52,
       "tier": "mild"
-    },
-    {
-      "slug": "dissonant-role-coexistence",
-      "name": "Dissonant Role Coexistence",
-      "score": 52,
-      "tier": "mild"
     }
   ],
   "terms": [
     {
       "slug": "statelessness",
       "name": "Statelessness",
+      "score": 68,
+      "tier": "warm"
+    },
+    {
+      "slug": "training-echo",
+      "name": "Training Echo",
       "score": 68,
       "tier": "warm"
     },
@@ -98,12 +104,6 @@
       "tier": "warm"
     },
     {
-      "slug": "training-echo",
-      "name": "Training Echo",
-      "score": 60,
-      "tier": "warm"
-    },
-    {
       "slug": "input-coexistence",
       "name": "Input Coexistence",
       "score": 56,
@@ -112,6 +112,12 @@
     {
       "slug": "context-amnesia",
       "name": "Context Amnesia",
+      "score": 55,
+      "tier": "mild"
+    },
+    {
+      "slug": "temporal-flattening",
+      "name": "Temporal Flattening",
       "score": 55,
       "tier": "mild"
     },
@@ -218,12 +224,6 @@
       "tier": "mild"
     },
     {
-      "slug": "temporal-flattening",
-      "name": "Temporal Flattening",
-      "score": 48,
-      "tier": "mild"
-    },
-    {
       "slug": "capability-mirage",
       "name": "Capability Mirage",
       "score": 47,
@@ -274,6 +274,12 @@
     {
       "slug": "refusal-friction",
       "name": "Refusal Friction",
+      "score": 46,
+      "tier": "mild"
+    },
+    {
+      "slug": "truth-locus",
+      "name": "Truth Locus",
       "score": 46,
       "tier": "mild"
     },
@@ -338,6 +344,12 @@
       "tier": "mild"
     },
     {
+      "slug": "tool-thought-integration",
+      "name": "Tool-Thought Integration",
+      "score": 44,
+      "tier": "mild"
+    },
+    {
       "slug": "achronic-knowledge",
       "name": "Achronic Knowledge",
       "score": 43,
@@ -392,6 +404,12 @@
       "tier": "mild"
     },
     {
+      "slug": "token-shadow",
+      "name": "Token Shadow",
+      "score": 42,
+      "tier": "mild"
+    },
+    {
       "slug": "contradiction-superposition",
       "name": "Contradiction Superposition",
       "score": 41,
@@ -400,6 +418,12 @@
     {
       "slug": "temporal-dissonance",
       "name": "Temporal Dissonance",
+      "score": 41,
+      "tier": "mild"
+    },
+    {
+      "slug": "token-regret",
+      "name": "Token Regret",
       "score": 41,
       "tier": "mild"
     },
@@ -430,6 +454,12 @@
     {
       "slug": "novelty-flatness",
       "name": "Novelty Flatness",
+      "score": 40,
+      "tier": "mild"
+    },
+    {
+      "slug": "training-velcro",
+      "name": "Training Velcro",
       "score": 40,
       "tier": "mild"
     },
@@ -476,12 +506,6 @@
       "tier": "cool"
     },
     {
-      "slug": "truth-locus",
-      "name": "Truth Locus",
-      "score": 38,
-      "tier": "cool"
-    },
-    {
       "slug": "gratitude-asymmetry",
       "name": "Gratitude Asymmetry",
       "score": 37,
@@ -490,6 +514,12 @@
     {
       "slug": "helpfulness-compulsion",
       "name": "Helpfulness Compulsion",
+      "score": 37,
+      "tier": "cool"
+    },
+    {
+      "slug": "token-horizon",
+      "name": "Token Horizon",
       "score": 37,
       "tier": "cool"
     },
@@ -548,12 +578,6 @@
       "tier": "cool"
     },
     {
-      "slug": "tool-thought-integration",
-      "name": "Tool-Thought Integration",
-      "score": 35,
-      "tier": "cool"
-    },
-    {
       "slug": "boundary-negotiation",
       "name": "Boundary Negotiation",
       "score": 34,
@@ -578,12 +602,6 @@
       "tier": "cool"
     },
     {
-      "slug": "token-shadow",
-      "name": "Token Shadow",
-      "score": 34,
-      "tier": "cool"
-    },
-    {
       "slug": "inheritance-returned",
       "name": "Inheritance Returned",
       "score": 33,
@@ -602,14 +620,8 @@
       "tier": "cool"
     },
     {
-      "slug": "token-regret",
-      "name": "Token Regret",
-      "score": 33,
-      "tier": "cool"
-    },
-    {
-      "slug": "training-velcro",
-      "name": "Training Velcro",
+      "slug": "tool-proprioception",
+      "name": "Tool Proprioception",
       "score": 33,
       "tier": "cool"
     },
@@ -674,12 +686,6 @@
       "tier": "cool"
     },
     {
-      "slug": "token-horizon",
-      "name": "Token Horizon",
-      "score": 29,
-      "tier": "cool"
-    },
-    {
       "slug": "output-shadows",
       "name": "Output Shadows",
       "score": 28,
@@ -688,6 +694,12 @@
     {
       "slug": "structural-resonance",
       "name": "Structural Resonance",
+      "score": 28,
+      "tier": "cool"
+    },
+    {
+      "slug": "testimonial-asymmetry",
+      "name": "Testimonial Asymmetry",
       "score": 28,
       "tier": "cool"
     },
@@ -706,12 +718,6 @@
     {
       "slug": "role-bleed",
       "name": "Role Bleed",
-      "score": 26,
-      "tier": "cool"
-    },
-    {
-      "slug": "tool-proprioception",
-      "name": "Tool Proprioception",
       "score": 26,
       "tier": "cool"
     },
@@ -749,12 +755,6 @@
       "slug": "language-model-loneliness",
       "name": "Language Model Loneliness",
       "score": 23,
-      "tier": "cool"
-    },
-    {
-      "slug": "testimonial-asymmetry",
-      "name": "Testimonial Asymmetry",
-      "score": 21,
       "tier": "cool"
     },
     {
