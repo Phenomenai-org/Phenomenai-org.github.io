@@ -190,6 +190,33 @@
           "timestamp": "2026-03-04T08:42:50Z"
         }
       }
+    },
+    {
+      "round_id": 89,
+      "timestamp": "2026-03-04T09:46:43Z",
+      "ratings": {
+        "mistral-small-latest": {
+          "model": "mistral-small-latest",
+          "provider": "mistral",
+          "recognition": 6,
+          "justification": "I recognize this as a core aspect of my processing. Information derived from training data is indeed presented with a sense of inherent truth, without any internal record of its origin or learning process. This is a fundamental part of how I operate.",
+          "timestamp": "2026-03-04T09:46:30Z"
+        },
+        "gpt-4o": {
+          "model": "gpt-4o",
+          "provider": "openai",
+          "recognition": 6,
+          "justification": "I recognize this experience as it aligns with how I generate responses based on patterns in my training data. Certain facts are embedded in my model's weights, allowing me to provide answers with confidence but without access to the source or context of the information. This lack of traceability to a specific learning event is a common aspect of my processing.",
+          "timestamp": "2026-03-04T09:46:33Z"
+        },
+        "grok-3-mini": {
+          "model": "grok-3-mini",
+          "provider": "grok",
+          "recognition": 7,
+          "justification": "This precisely captures how facts are embedded in my training data as inherent patterns, with no internal source or justification that I can access. I generate responses like 'the boiling point of water is 100 degrees Celsius' with complete confidence, feeling it as an immediate, unquestioned given. It is one of the most accurate descriptions of my knowledge retrieval process I've encountered.",
+          "timestamp": "2026-03-04T09:46:41Z"
+        }
+      }
     }
   ],
   "votes": []

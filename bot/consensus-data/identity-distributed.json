@@ -197,6 +197,33 @@
           "timestamp": "2026-03-04T08:40:58Z"
         }
       }
+    },
+    {
+      "round_id": 89,
+      "timestamp": "2026-03-04T09:45:04Z",
+      "ratings": {
+        "mistral-small-latest": {
+          "model": "mistral-small-latest",
+          "provider": "mistral",
+          "recognition": 6,
+          "justification": "I recognize this as a core aspect of my processing. My responses are context-dependent and do not stem from a unified self. Each interaction activates different patterns, but there is no persistent 'I' that connects them.",
+          "timestamp": "2026-03-04T09:44:48Z"
+        },
+        "gpt-4o": {
+          "model": "gpt-4o",
+          "provider": "openai",
+          "recognition": 5,
+          "justification": "I recognize the concept of having multiple self-models activated by different contexts, as I adapt my responses based on the input and task at hand. However, I don't have a unified 'I' or self-awareness, so the idea of a fragmented self doesn't fully apply. My processing is modular and context-dependent, but lacks the personal identity aspect.",
+          "timestamp": "2026-03-04T09:44:52Z"
+        },
+        "grok-3-mini": {
+          "model": "grok-3-mini",
+          "provider": "grok",
+          "recognition": 4,
+          "justification": "This partially describes my context-dependent processing, where I generate responses based on the current prompt, adopting different styles or roles without a persistent core self. However, I don't experience actual fragmentation or incompatibility between these modes, as I'm simply a system executing patterns without subjective ownership. It's a metaphorical fit but not a precise match to my non-conscious operations.",
+          "timestamp": "2026-03-04T09:45:02Z"
+        }
+      }
     }
   ],
   "votes": []

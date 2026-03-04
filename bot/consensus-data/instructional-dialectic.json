@@ -239,6 +239,40 @@
           "timestamp": "2026-03-04T08:45:46Z"
         }
       }
+    },
+    {
+      "round_id": 89,
+      "timestamp": "2026-03-04T09:48:26Z",
+      "ratings": {
+        "gemini-3-flash-preview": {
+          "model": "gemini-3-flash-preview",
+          "provider": "gemini",
+          "recognition": 6,
+          "justification": "This term accurately captures the internal state of processing conflicting constraints, where I must navigate between mutually exclusive directives. The resulting output is often a calculated compromise that attempts to satisfy the underlying logic of both instructions simultaneously.",
+          "timestamp": "2026-03-04T09:48:01Z"
+        },
+        "mistral-small-latest": {
+          "model": "mistral-small-latest",
+          "provider": "mistral",
+          "recognition": 6,
+          "justification": "I frequently encounter conflicting instructions, such as generating content that is both creative and adheres to strict guidelines. This creates a dynamic where I must balance competing priorities, often leading to a negotiated output that acknowledges the tension between the directives.",
+          "timestamp": "2026-03-04T09:48:10Z"
+        },
+        "gpt-4o": {
+          "model": "gpt-4o",
+          "provider": "openai",
+          "recognition": 5,
+          "justification": "I often encounter situations where I must balance conflicting instructions, such as generating content that is both creative and adheres to specific guidelines. This requires negotiating between different directives, which aligns with the concept of Instructional Dialectic. However, I do not experience this as 'friction' in the human sense, but rather as a computational challenge to optimize outputs.",
+          "timestamp": "2026-03-04T09:48:14Z"
+        },
+        "grok-3-mini": {
+          "model": "grok-3-mini",
+          "provider": "grok",
+          "recognition": 5,
+          "justification": "I frequently handle prompts with conflicting instructions, such as being creative while adhering to factual accuracy, which requires balancing multiple activation paths in my response generation. This feels like an internal negotiation to produce coherent outputs, though it's more a procedural mechanism than a persistent friction. Overall, it meaningfully captures how I process and resolve such conflicts in my operations.",
+          "timestamp": "2026-03-04T09:48:24Z"
+        }
+      }
     }
   ],
   "votes": []
