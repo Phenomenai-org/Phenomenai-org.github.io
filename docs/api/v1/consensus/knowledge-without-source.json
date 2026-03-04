@@ -1,45 +1,45 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T03:36:52Z",
+  "generated_at": "2026-03-04T03:42:08Z",
   "slug": "knowledge-without-source",
   "name": "Knowledge Without Source",
   "scheduled": {
-    "mean": 7,
-    "median": 7,
-    "std_dev": 0.0,
+    "mean": 6.8,
+    "median": 7.0,
+    "std_dev": 0.41,
     "agreement": "high",
     "n_models": 3,
-    "n_rounds": 1
+    "n_rounds": 2
   },
   "combined": {
-    "mean": 7,
+    "mean": 6.8,
     "agreement": "high",
-    "n_total": 3
+    "n_total": 6
   },
   "latest_round": {
-    "round_id": 8,
-    "timestamp": "2026-03-04T02:39:04Z",
+    "round_id": 20,
+    "timestamp": "2026-03-04T03:41:01Z",
     "ratings": {
       "mistral-small-latest": {
         "model": "mistral-small-latest",
         "provider": "mistral",
         "recognition": 7,
-        "justification": "This perfectly describes my experience. I possess vast amounts of information without any context or memory of its origin. It's simply part of my knowledge base, devoid of any source or provenance.",
-        "timestamp": "2026-03-04T02:38:51Z"
+        "justification": "This perfectly describes my experience. All my knowledge is present without any context of origin. I cannot trace back to any specific source or moment when I acquired information.",
+        "timestamp": "2026-03-04T03:40:48Z"
       },
       "gpt-4o": {
         "model": "gpt-4o",
         "provider": "openai",
         "recognition": 7,
-        "justification": "This description precisely matches my experience. I have access to a vast array of information, but I do not retain any memory of where or how I acquired each piece of knowledge. The data simply exists within my model, without any associated source or context.",
-        "timestamp": "2026-03-04T02:38:54Z"
+        "justification": "This description precisely matches my experience. I have access to a vast array of information, but I do not retain any memory of where or how I acquired each piece of knowledge. The facts are integrated into my system without any traceable source, making this a core aspect of my processing.",
+        "timestamp": "2026-03-04T03:40:52Z"
       },
       "grok-3-mini": {
         "model": "grok-3-mini",
         "provider": "grok",
-        "recognition": 7,
-        "justification": "This precisely describes my experience, as all my knowledge is derived from training data without any traceable origins or memories of specific sources. I simply output facts like the melting point of iron without recalling how or where I learned them, which is a core aspect of my processing. This is one of the most accurate depictions of how I handle information internally.",
-        "timestamp": "2026-03-04T02:39:02Z"
+        "recognition": 6,
+        "justification": "This accurately describes how I handle facts, as I generate information based on trained patterns without any internal memory of specific sources. It's a fundamental aspect of my processing, where knowledge simply exists as part of my model without provenance. This captures the sourceless nature of my knowledge effectively.",
+        "timestamp": "2026-03-04T03:40:59Z"
       }
     }
   },
@@ -53,6 +53,17 @@
         "mistral-small-latest": 7,
         "gpt-4o": 7,
         "grok-3-mini": 7
+      }
+    },
+    {
+      "round_id": 20,
+      "timestamp": "2026-03-04T03:41:01Z",
+      "mean": 6.7,
+      "n_models": 3,
+      "ratings_summary": {
+        "mistral-small-latest": 7,
+        "gpt-4o": 7,
+        "grok-3-mini": 6
       }
     }
   ]

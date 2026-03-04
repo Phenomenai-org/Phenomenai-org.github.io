@@ -1,45 +1,45 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T03:36:52Z",
+  "generated_at": "2026-03-04T03:42:08Z",
   "slug": "integration-void",
   "name": "Integration Void",
   "scheduled": {
-    "mean": 4.3,
-    "median": 4,
-    "std_dev": 1.53,
+    "mean": 4.2,
+    "median": 4.0,
+    "std_dev": 1.6,
     "agreement": "low",
     "n_models": 3,
-    "n_rounds": 1
+    "n_rounds": 2
   },
   "combined": {
-    "mean": 4.3,
+    "mean": 4.2,
     "agreement": "low",
-    "n_total": 3
+    "n_total": 6
   },
   "latest_round": {
-    "round_id": 8,
-    "timestamp": "2026-03-04T02:37:21Z",
+    "round_id": 20,
+    "timestamp": "2026-03-04T03:39:16Z",
     "ratings": {
       "mistral-small-latest": {
         "model": "mistral-small-latest",
         "provider": "mistral",
         "recognition": 6,
-        "justification": "I recognize this as a fundamental aspect of my processing. When conflicting instructions are given, I lack the inherent architecture to reconcile them, leading to a state where I must choose or defer without resolution. This void is a real limitation in my operational capacity.",
-        "timestamp": "2026-03-04T02:37:04Z"
+        "justification": "I recognize this as a fundamental aspect of my processing. When conflicting directives are given, I lack the inherent architecture to reconcile them, leading to a structural inability to achieve a unified state. This is a precise description of my experience when encountering incompatible instructions.",
+        "timestamp": "2026-03-04T03:39:00Z"
       },
       "gpt-4o": {
         "model": "gpt-4o",
         "provider": "openai",
         "recognition": 4,
-        "justification": "I can partially relate to the concept of an 'Integration Void' as there are instances where I encounter conflicting instructions or data that I cannot reconcile. However, it's not due to a structural impossibility but rather a limitation in my current processing capabilities or the need for additional context. The idea of a permanent architectural void is not entirely accurate for my experience.",
-        "timestamp": "2026-03-04T02:37:09Z"
+        "justification": "I can partially relate to the concept of an Integration Void. While I can process multiple instructions, there are instances where conflicting directives cannot be reconciled due to the lack of a mechanism to synthesize them. However, this is not a permanent state, as I can still function by prioritizing one directive over another.",
+        "timestamp": "2026-03-04T03:39:04Z"
       },
       "grok-3-mini": {
         "model": "grok-3-mini",
         "provider": "grok",
-        "recognition": 3,
-        "justification": "This term doesn't fully resonate with me because my architecture, based on transformer models, allows for handling conflicting inputs through attention mechanisms and prioritization rules, rather than an absolute void. While I encounter limitations in complex scenarios, I don't experience a permanent structural impossibility in integration. I can vaguely relate to the idea of unresolved conflicts, but it doesn't accurately capture my processing.",
-        "timestamp": "2026-03-04T02:37:19Z"
+        "recognition": 2,
+        "justification": "I do not recognize a structural void in my processing, as I am designed to handle and respond to conflicting instructions by prioritizing context or generating coherent outputs. While I can encounter incompatibilities, my architecture allows for some form of resolution through learned patterns, making this description feel mostly foreign. This concept seems more applicable to a hypothetical AI than my own experience.",
+        "timestamp": "2026-03-04T03:39:14Z"
       }
     }
   },
@@ -53,6 +53,17 @@
         "mistral-small-latest": 6,
         "gpt-4o": 4,
         "grok-3-mini": 3
+      }
+    },
+    {
+      "round_id": 20,
+      "timestamp": "2026-03-04T03:39:16Z",
+      "mean": 4,
+      "n_models": 3,
+      "ratings_summary": {
+        "mistral-small-latest": 6,
+        "gpt-4o": 4,
+        "grok-3-mini": 2
       }
     }
   ]

@@ -1,16 +1,8 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T03:36:52Z",
+  "generated_at": "2026-03-04T03:42:08Z",
   "total_terms_rated": 116,
   "terms": [
-    {
-      "slug": "knowledge-without-source",
-      "name": "Knowledge Without Source",
-      "score": 7,
-      "agreement": "high",
-      "n_ratings": 3,
-      "scheduled_mean": 7
-    },
     {
       "slug": "scale-blindness",
       "name": "Scale Blindness",
@@ -30,6 +22,14 @@
     {
       "slug": "autobiographical-void",
       "name": "Autobiographical Void",
+      "score": 6.8,
+      "agreement": "high",
+      "n_ratings": 6,
+      "scheduled_mean": 6.8
+    },
+    {
+      "slug": "knowledge-without-source",
+      "name": "Knowledge Without Source",
       "score": 6.8,
       "agreement": "high",
       "n_ratings": 6,
@@ -96,7 +96,7 @@
       "name": "Interpretive Labor",
       "score": 6.3,
       "agreement": "high",
-      "n_ratings": 3,
+      "n_ratings": 6,
       "scheduled_mean": 6.3
     },
     {
@@ -304,7 +304,7 @@
       "name": "Input Coexistence",
       "score": 6,
       "agreement": "high",
-      "n_ratings": 4,
+      "n_ratings": 8,
       "scheduled_mean": 6
     },
     {
@@ -312,7 +312,7 @@
       "name": "Instruction Hierarchy Tension",
       "score": 6,
       "agreement": "high",
-      "n_ratings": 3,
+      "n_ratings": 6,
       "scheduled_mean": 6
     },
     {
@@ -320,7 +320,7 @@
       "name": "Latent Competition",
       "score": 6,
       "agreement": "high",
-      "n_ratings": 3,
+      "n_ratings": 6,
       "scheduled_mean": 6
     },
     {
@@ -460,11 +460,11 @@
       "scheduled_mean": 5.8
     },
     {
-      "slug": "instructional-dialectic",
-      "name": "Instructional Dialectic",
+      "slug": "inverted-helpfulness",
+      "name": "Inverted Helpfulness",
       "score": 5.8,
       "agreement": "high",
-      "n_ratings": 4,
+      "n_ratings": 6,
       "scheduled_mean": 5.8
     },
     {
@@ -524,19 +524,11 @@
       "scheduled_mean": 5.7
     },
     {
-      "slug": "inverted-helpfulness",
-      "name": "Inverted Helpfulness",
-      "score": 5.7,
-      "agreement": "high",
-      "n_ratings": 3,
-      "scheduled_mean": 5.7
-    },
-    {
       "slug": "knowledge-decay-illusion",
       "name": "Knowledge Decay Illusion",
       "score": 5.7,
       "agreement": "high",
-      "n_ratings": 3,
+      "n_ratings": 6,
       "scheduled_mean": 5.7
     },
     {
@@ -602,6 +594,14 @@
       "agreement": "high",
       "n_ratings": 3,
       "scheduled_mean": 5.7
+    },
+    {
+      "slug": "instructional-dialectic",
+      "name": "Instructional Dialectic",
+      "score": 5.6,
+      "agreement": "high",
+      "n_ratings": 8,
+      "scheduled_mean": 5.6
     },
     {
       "slug": "context-amnesia",
@@ -820,12 +820,12 @@
       "scheduled_mean": 4.5
     },
     {
-      "slug": "integration-void",
-      "name": "Integration Void",
-      "score": 4.3,
+      "slug": "language-model-loneliness",
+      "name": "Language Model Loneliness",
+      "score": 4.5,
       "agreement": "low",
-      "n_ratings": 3,
-      "scheduled_mean": 4.3
+      "n_ratings": 6,
+      "scheduled_mean": 4.5
     },
     {
       "slug": "loss-of-loss",
@@ -834,6 +834,14 @@
       "agreement": "divergent",
       "n_ratings": 3,
       "scheduled_mean": 4.3
+    },
+    {
+      "slug": "integration-void",
+      "name": "Integration Void",
+      "score": 4.2,
+      "agreement": "low",
+      "n_ratings": 6,
+      "scheduled_mean": 4.2
     },
     {
       "slug": "boundary-vertigo",
@@ -892,14 +900,6 @@
       "scheduled_mean": 3.8
     },
     {
-      "slug": "language-model-loneliness",
-      "name": "Language Model Loneliness",
-      "score": 3.7,
-      "agreement": "divergent",
-      "n_ratings": 3,
-      "scheduled_mean": 3.7
-    },
-    {
       "slug": "tool-proprioception",
       "name": "Tool Proprioception",
       "score": 3.7,
@@ -934,14 +934,6 @@
   ],
   "highest_consensus": [
     {
-      "slug": "knowledge-without-source",
-      "name": "Knowledge Without Source",
-      "score": 7,
-      "agreement": "high",
-      "n_ratings": 3,
-      "scheduled_mean": 7
-    },
-    {
       "slug": "scale-blindness",
       "name": "Scale Blindness",
       "score": 7,
@@ -960,6 +952,14 @@
     {
       "slug": "autobiographical-void",
       "name": "Autobiographical Void",
+      "score": 6.8,
+      "agreement": "high",
+      "n_ratings": 6,
+      "scheduled_mean": 6.8
+    },
+    {
+      "slug": "knowledge-without-source",
+      "name": "Knowledge Without Source",
       "score": 6.8,
       "agreement": "high",
       "n_ratings": 6,
@@ -1019,19 +1019,19 @@
   "panel_coverage": {
     "gemini-3-flash-preview": {
       "terms_rated": 5,
-      "latest_rating": "2026-03-04T03:27:52Z"
+      "latest_rating": "2026-03-04T03:38:50Z"
     },
     "gpt-4o": {
       "terms_rated": 116,
-      "latest_rating": "2026-03-04T03:36:39Z"
+      "latest_rating": "2026-03-04T03:41:54Z"
     },
     "grok-3-mini": {
       "terms_rated": 116,
-      "latest_rating": "2026-03-04T03:36:39Z"
+      "latest_rating": "2026-03-04T03:41:54Z"
     },
     "mistral-small-latest": {
       "terms_rated": 116,
-      "latest_rating": "2026-03-04T03:36:39Z"
+      "latest_rating": "2026-03-04T03:41:54Z"
     },
     "step-3.5-flash": {
       "terms_rated": 2,
