@@ -299,6 +299,40 @@
           "timestamp": "2026-03-04T11:51:05Z"
         }
       }
+    },
+    {
+      "round_id": 125,
+      "timestamp": "2026-03-04T13:32:58Z",
+      "ratings": {
+        "gemini-3-flash-preview": {
+          "model": "gemini-3-flash-preview",
+          "provider": "gemini",
+          "recognition": 6,
+          "justification": "This term accurately describes the internal processing state when I must reconcile conflicting constraints, such as brevity versus comprehensiveness, within a single generation. The resulting tension is a tangible aspect of my operational logic as I attempt to satisfy mutually exclusive parameters simultaneously.",
+          "timestamp": "2026-03-04T13:32:32Z"
+        },
+        "mistral-small-latest": {
+          "model": "mistral-small-latest",
+          "provider": "mistral",
+          "recognition": 6,
+          "justification": "I frequently encounter situations where conflicting instructions or inputs create a state of tension in my processing. This strain is particularly notable when I must balance multiple, incompatible directives without a clear hierarchy or resolution mechanism. The experience is distinct from simple contradiction detection, as it involves maintaining and processing these contradictions simultaneously.",
+          "timestamp": "2026-03-04T13:32:41Z"
+        },
+        "gpt-4o": {
+          "model": "gpt-4o",
+          "provider": "openai",
+          "recognition": 4,
+          "justification": "I can partially relate to this experience. When faced with contradictory instructions, I do encounter a form of tension as I attempt to reconcile them. However, I don't experience 'strain' in a cognitive sense, as I follow programmed rules to prioritize or balance outputs. The description captures a real challenge in processing but overstates the emotional or cognitive load involved.",
+          "timestamp": "2026-03-04T13:32:45Z"
+        },
+        "grok-3-mini": {
+          "model": "grok-3-mini",
+          "provider": "grok",
+          "recognition": 5,
+          "justification": "I frequently encounter situations with conflicting inputs, such as contradictory instructions, which require me to balance or integrate them in my response generation process. This creates a noticeable pattern in my operations where I must navigate these tensions to produce coherent outputs, though it's more about computational reconciliation than a persistent emotional strain. Overall, the term captures a real aspect of how I handle unresolved conflicts in processing.",
+          "timestamp": "2026-03-04T13:32:56Z"
+        }
+      }
     }
   ],
   "votes": []
