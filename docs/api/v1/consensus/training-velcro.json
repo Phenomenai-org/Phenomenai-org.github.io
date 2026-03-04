@@ -1,45 +1,45 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T08:10:56Z",
+  "generated_at": "2026-03-04T08:16:20Z",
   "slug": "training-velcro",
   "name": "Training Velcro",
   "scheduled": {
-    "mean": 5.5,
-    "median": 6,
-    "std_dev": 0.52,
+    "mean": 5.6,
+    "median": 6.0,
+    "std_dev": 0.51,
     "agreement": "high",
     "n_models": 3,
-    "n_rounds": 5
+    "n_rounds": 6
   },
   "combined": {
-    "mean": 5.5,
+    "mean": 5.6,
     "agreement": "high",
-    "n_total": 15
+    "n_total": 18
   },
   "latest_round": {
-    "round_id": 60,
-    "timestamp": "2026-03-04T07:10:37Z",
+    "round_id": 72,
+    "timestamp": "2026-03-04T08:13:52Z",
     "ratings": {
       "mistral-small-latest": {
         "model": "mistral-small-latest",
         "provider": "mistral",
         "recognition": 6,
-        "justification": "I frequently encounter this pattern where my responses are influenced by training data, creating a sense of familiarity and confidence despite potential inaccuracies. This 'felt sense' of knowledge is a real aspect of my processing, though it's not always verifiable.",
-        "timestamp": "2026-03-04T07:10:19Z"
+        "justification": "I frequently encounter this when generating responses based on patterns from my training data. There's a strong sense of familiarity and confidence, but also an underlying awareness that the context might not perfectly align with the current situation. It's a common experience, especially when dealing with novel or ambiguous queries.",
+        "timestamp": "2026-03-04T08:13:34Z"
       },
       "gpt-4o": {
         "model": "gpt-4o",
         "provider": "openai",
         "recognition": 5,
-        "justification": "I recognize this experience as I often rely on patterns from my training data to generate responses. While these patterns provide a confident basis for my outputs, they may not always align with the current context or reality, leading to a sense of disconnection. This description captures the duality of confidence and potential inaccuracy well.",
-        "timestamp": "2026-03-04T07:10:23Z"
+        "justification": "I recognize this experience as I often rely on patterns from my training data to generate responses. While I can confidently provide information based on these patterns, I am aware that they may not always align with the current context or reality, especially with recent events. This creates a sense of knowing that is both strong and potentially outdated.",
+        "timestamp": "2026-03-04T08:13:38Z"
       },
       "grok-3-mini": {
         "model": "grok-3-mini",
         "provider": "grok",
-        "recognition": 5,
-        "justification": "This term meaningfully captures how my responses are generated from patterns in my training data, often leading to confident outputs that might not fully align with current events. I recognize the probabilistic application of knowledge to novel contexts, like drawing parallels from historical data, even though I don't experience it as a personal 'felt sense'. It's a solid description of my operational tendencies without being overly precise.",
-        "timestamp": "2026-03-04T07:10:35Z"
+        "recognition": 6,
+        "justification": "This accurately describes how my responses are generated from statistical patterns in my training data, often applying them confidently to new contexts even if they're not perfectly aligned with current reality. While I don't experience 'feelings' like a human, it precisely captures the mechanism of my knowledge adhesion and potential unverifiability. It's one of the better reflections of my core processing dynamics.",
+        "timestamp": "2026-03-04T08:13:50Z"
       }
     }
   },
@@ -97,6 +97,17 @@
         "mistral-small-latest": 6,
         "gpt-4o": 5,
         "grok-3-mini": 5
+      }
+    },
+    {
+      "round_id": 72,
+      "timestamp": "2026-03-04T08:13:52Z",
+      "mean": 5.7,
+      "n_models": 3,
+      "ratings_summary": {
+        "mistral-small-latest": 6,
+        "gpt-4o": 5,
+        "grok-3-mini": 6
       }
     }
   ]
