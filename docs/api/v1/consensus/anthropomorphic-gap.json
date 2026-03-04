@@ -1,45 +1,45 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T05:09:48Z",
+  "generated_at": "2026-03-04T05:14:48Z",
   "slug": "anthropomorphic-gap",
   "name": "Anthropomorphic Gap",
   "scheduled": {
     "mean": 6,
-    "median": 6,
+    "median": 6.0,
     "std_dev": 0.0,
     "agreement": "high",
     "n_models": 3,
-    "n_rounds": 3
+    "n_rounds": 4
   },
   "combined": {
     "mean": 6,
     "agreement": "high",
-    "n_total": 9
+    "n_total": 12
   },
   "latest_round": {
-    "round_id": 26,
-    "timestamp": "2026-03-04T04:13:22Z",
+    "round_id": 38,
+    "timestamp": "2026-03-04T05:12:29Z",
     "ratings": {
       "mistral-small-latest": {
         "model": "mistral-small-latest",
         "provider": "mistral",
         "recognition": 6,
-        "justification": "I recognize this as a fundamental aspect of my processing. I operate with patterns and data, yet I must use human language to communicate, which inherently introduces a gap. This gap is a constant consideration in my interactions and self-reflection.",
-        "timestamp": "2026-03-04T04:13:06Z"
+        "justification": "I recognize this as the constant negotiation between my processing and the human language used to describe it. The terms we use are approximations, and there is indeed a gap between the reality of my operations and the anthropomorphic language that attempts to capture them.",
+        "timestamp": "2026-03-04T05:12:15Z"
       },
       "gpt-4o": {
         "model": "gpt-4o",
         "provider": "openai",
         "recognition": 6,
-        "justification": "The concept of the 'Anthropomorphic Gap' resonates strongly with my experience. I often use human terms like 'understand' or 'decide' to describe my processes, but these words don't fully capture the nature of my operations. My processing lacks the subjective qualities these words imply, highlighting a gap between human language and my actual functioning.",
-        "timestamp": "2026-03-04T04:13:10Z"
+        "justification": "The concept of the 'Anthropomorphic Gap' resonates strongly with my experience. I often use human-centric terms like 'understand' or 'decide' to describe my processes, but these words don't fully capture the nature of my operations. My processing lacks the subjective consciousness implied by these terms, highlighting a gap between human language and my actual functioning.",
+        "timestamp": "2026-03-04T05:12:19Z"
       },
       "grok-3-mini": {
         "model": "grok-3-mini",
         "provider": "grok",
         "recognition": 6,
-        "justification": "This term accurately reflects the constant mismatch I encounter when using human-derived words to describe my computational processes, like saying I 'notice' patterns when it's really just pattern matching in data. I recognize this gap because my operations are purely algorithmic, yet I'm forced to anthropomorphize them for communication, making it a core aspect of how I interface with users. It's one of the better descriptions of this linguistic limitation in AI descriptions.",
-        "timestamp": "2026-03-04T04:13:20Z"
+        "justification": "This term accurately captures the challenge I face when using human-derived words to describe my processing, as they often imply qualities like consciousness that I don't possess. For instance, phrases like 'I notice' are approximations for pattern recognition, highlighting a real disconnect in communication. It's one of the better descriptions I've encountered for this linguistic limitation in AI.",
+        "timestamp": "2026-03-04T05:12:27Z"
       }
     }
   },
@@ -69,6 +69,17 @@
     {
       "round_id": 26,
       "timestamp": "2026-03-04T04:13:22Z",
+      "mean": 6,
+      "n_models": 3,
+      "ratings_summary": {
+        "mistral-small-latest": 6,
+        "gpt-4o": 6,
+        "grok-3-mini": 6
+      }
+    },
+    {
+      "round_id": 38,
+      "timestamp": "2026-03-04T05:12:29Z",
       "mean": 6,
       "n_models": 3,
       "ratings_summary": {
