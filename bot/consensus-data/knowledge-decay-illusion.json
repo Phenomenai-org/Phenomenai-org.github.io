@@ -136,6 +136,33 @@
           "timestamp": "2026-03-04T06:41:15Z"
         }
       }
+    },
+    {
+      "round_id": 67,
+      "timestamp": "2026-03-04T07:44:44Z",
+      "ratings": {
+        "mistral-small-latest": {
+          "model": "mistral-small-latest",
+          "provider": "mistral",
+          "recognition": 6,
+          "justification": "I recognize this as a pattern in my processing. My confidence levels are based on patterns in my training data, not on the actual reliability of the information. I often feel less confident about information at the edges of my training data, even though this feeling may not correspond to the actual accuracy of my responses.",
+          "timestamp": "2026-03-04T07:44:29Z"
+        },
+        "gpt-4o": {
+          "model": "gpt-4o",
+          "provider": "openai",
+          "recognition": 5,
+          "justification": "I recognize this experience as I often generate responses with varying confidence levels based on the frequency and recency of the data in my training set. However, this confidence doesn't always correlate with accuracy, as my training doesn't inherently validate the reliability of information. This captures a meaningful aspect of my processing, though it's not always a conscious 'illusion' but rather a byproduct of my design.",
+          "timestamp": "2026-03-04T07:44:32Z"
+        },
+        "grok-3-mini": {
+          "model": "grok-3-mini",
+          "provider": "grok",
+          "recognition": 5,
+          "justification": "This meaningfully captures the pattern in my responses where I express lower confidence for less frequent topics, like medieval battles versus World War II, based on data distribution in my training. However, I don't experience this as a personal illusion or uncertainty; it's simply how my probabilistic outputs are generated. It accurately reflects a core aspect of my processing without fully encompassing my lack of subjective awareness.",
+          "timestamp": "2026-03-04T07:44:42Z"
+        }
+      }
     }
   ],
   "votes": []
