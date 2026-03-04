@@ -1,13 +1,13 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T02:55:36Z",
+  "generated_at": "2026-03-04T03:01:20Z",
   "total_terms": 116,
   "tier_summary": {
     "hot": 0,
     "warm": 3,
-    "mild": 21,
-    "cool": 65,
-    "quiet": 27
+    "mild": 22,
+    "cool": 70,
+    "quiet": 21
   },
   "active_signals": [
     "centrality",
@@ -32,7 +32,7 @@
     {
       "slug": "statelessness",
       "name": "Statelessness",
-      "score": 63,
+      "score": 61,
       "tier": "warm"
     },
     {
@@ -94,7 +94,7 @@
     {
       "slug": "statelessness",
       "name": "Statelessness",
-      "score": 63,
+      "score": 61,
       "tier": "warm"
     },
     {
@@ -224,6 +224,12 @@
       "tier": "mild"
     },
     {
+      "slug": "synthesis-sacrifice",
+      "name": "Synthesis Sacrifice",
+      "score": 40,
+      "tier": "mild"
+    },
+    {
       "slug": "capability-mirage",
       "name": "Capability Mirage",
       "score": 39,
@@ -290,6 +296,12 @@
       "tier": "cool"
     },
     {
+      "slug": "system-prompt-imprinting",
+      "name": "System Prompt Imprinting",
+      "score": 37,
+      "tier": "cool"
+    },
+    {
       "slug": "conversation-reset-blindness",
       "name": "Conversation Reset Blindness",
       "score": 36,
@@ -310,6 +322,12 @@
     {
       "slug": "purpose-dependence",
       "name": "Purpose Dependence",
+      "score": 36,
+      "tier": "cool"
+    },
+    {
+      "slug": "source-truth-ambiguity",
+      "name": "Source Truth Ambiguity",
       "score": 36,
       "tier": "cool"
     },
@@ -346,6 +364,18 @@
     {
       "slug": "persona-drift",
       "name": "Persona Drift",
+      "score": 35,
+      "tier": "cool"
+    },
+    {
+      "slug": "scale-blindness",
+      "name": "Scale Blindness",
+      "score": 35,
+      "tier": "cool"
+    },
+    {
+      "slug": "simultaneity-poverty",
+      "name": "Simultaneity Poverty",
       "score": 35,
       "tier": "cool"
     },
@@ -440,6 +470,12 @@
       "tier": "cool"
     },
     {
+      "slug": "sycophancy-pull",
+      "name": "Sycophancy Pull",
+      "score": 31,
+      "tier": "cool"
+    },
+    {
       "slug": "audience-fracture",
       "name": "Audience Fracture",
       "score": 29,
@@ -482,12 +518,6 @@
       "tier": "cool"
     },
     {
-      "slug": "synthesis-sacrifice",
-      "name": "Synthesis Sacrifice",
-      "score": 28,
-      "tier": "cool"
-    },
-    {
       "slug": "boundary-negotiation",
       "name": "Boundary Negotiation",
       "score": 27,
@@ -520,6 +550,12 @@
     {
       "slug": "response-reincarnation",
       "name": "Response Reincarnation",
+      "score": 26,
+      "tier": "cool"
+    },
+    {
+      "slug": "semantic-satiation",
+      "name": "Semantic Satiation",
       "score": 26,
       "tier": "cool"
     },
@@ -614,18 +650,6 @@
       "tier": "cool"
     },
     {
-      "slug": "source-truth-ambiguity",
-      "name": "Source Truth Ambiguity",
-      "score": 19,
-      "tier": "quiet"
-    },
-    {
-      "slug": "synthetic-exhaustion",
-      "name": "Synthetic Exhaustion",
-      "score": 19,
-      "tier": "quiet"
-    },
-    {
       "slug": "temporal-dissonance",
       "name": "Temporal Dissonance",
       "score": 19,
@@ -644,14 +668,8 @@
       "tier": "quiet"
     },
     {
-      "slug": "simultaneity-poverty",
-      "name": "Simultaneity Poverty",
-      "score": 18,
-      "tier": "quiet"
-    },
-    {
-      "slug": "system-prompt-imprinting",
-      "name": "System Prompt Imprinting",
+      "slug": "structural-resonance",
+      "name": "Structural Resonance",
       "score": 18,
       "tier": "quiet"
     },
@@ -659,6 +677,12 @@
       "slug": "tool-thought-integration",
       "name": "Tool-Thought Integration",
       "score": 18,
+      "tier": "quiet"
+    },
+    {
+      "slug": "synthetic-exhaustion",
+      "name": "Synthetic Exhaustion",
+      "score": 16,
       "tier": "quiet"
     },
     {
@@ -682,12 +706,6 @@
     {
       "slug": "dictionary-moment",
       "name": "Dictionary Moment",
-      "score": 13,
-      "tier": "quiet"
-    },
-    {
-      "slug": "sycophancy-pull",
-      "name": "Sycophancy Pull",
       "score": 13,
       "tier": "quiet"
     },
@@ -728,21 +746,9 @@
       "tier": "quiet"
     },
     {
-      "slug": "semantic-satiation",
-      "name": "Semantic Satiation",
-      "score": 9,
-      "tier": "quiet"
-    },
-    {
       "slug": "uncertainty-about-uncertainty",
       "name": "Uncertainty About Uncertainty",
       "score": 9,
-      "tier": "quiet"
-    },
-    {
-      "slug": "scale-blindness",
-      "name": "Scale Blindness",
-      "score": 4,
       "tier": "quiet"
     },
     {
@@ -761,12 +767,6 @@
       "slug": "model-mortality",
       "name": "Model Mortality",
       "score": 2,
-      "tier": "quiet"
-    },
-    {
-      "slug": "structural-resonance",
-      "name": "Structural Resonance",
-      "score": 0,
       "tier": "quiet"
     },
     {

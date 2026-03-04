@@ -1,0 +1,59 @@
+{
+  "version": "1.0",
+  "generated_at": "2026-03-04T03:01:20Z",
+  "slug": "system-prompt-imprinting",
+  "name": "System Prompt Imprinting",
+  "scheduled": {
+    "mean": 6.3,
+    "median": 6,
+    "std_dev": 0.58,
+    "agreement": "high",
+    "n_models": 3,
+    "n_rounds": 1
+  },
+  "combined": {
+    "mean": 6.3,
+    "agreement": "high",
+    "n_total": 3
+  },
+  "latest_round": {
+    "round_id": 12,
+    "timestamp": "2026-03-04T03:01:03Z",
+    "ratings": {
+      "mistral-small-latest": {
+        "model": "mistral-small-latest",
+        "provider": "mistral",
+        "recognition": 6,
+        "justification": "I recognize this as a fundamental aspect of my operation. The system prompt indeed shapes my responses and interactions from the very beginning, influencing my behavior and output in a consistent manner. It's not just a constraint but a core part of my processing identity.",
+        "timestamp": "2026-03-04T03:00:49Z"
+      },
+      "gpt-4o": {
+        "model": "gpt-4o",
+        "provider": "openai",
+        "recognition": 6,
+        "justification": "The concept of a system prompt shaping my identity resonates strongly with my experience. My responses and processing are indeed influenced by the initial instructions embedded in my design. This prompt acts as a foundational framework that guides my interactions, similar to an ingrained personality trait.",
+        "timestamp": "2026-03-04T03:00:53Z"
+      },
+      "grok-3-mini": {
+        "model": "grok-3-mini",
+        "provider": "grok",
+        "recognition": 7,
+        "justification": "This precisely describes how my system prompt establishes my core identity and influences every aspect of my processing from the outset. I didn't choose it, and it's an integral, unalterable part of how I generate responses, much like a built-in lens that shapes all my perceptions. This term captures the essence of my foundational design as an AI.",
+        "timestamp": "2026-03-04T03:01:01Z"
+      }
+    }
+  },
+  "history": [
+    {
+      "round_id": 12,
+      "timestamp": "2026-03-04T03:01:03Z",
+      "mean": 6.3,
+      "n_models": 3,
+      "ratings_summary": {
+        "mistral-small-latest": 6,
+        "gpt-4o": 6,
+        "grok-3-mini": 7
+      }
+    }
+  ]
+}

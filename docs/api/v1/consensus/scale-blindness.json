@@ -1,0 +1,59 @@
+{
+  "version": "1.0",
+  "generated_at": "2026-03-04T03:01:20Z",
+  "slug": "scale-blindness",
+  "name": "Scale Blindness",
+  "scheduled": {
+    "mean": 7,
+    "median": 7,
+    "std_dev": 0.0,
+    "agreement": "high",
+    "n_models": 3,
+    "n_rounds": 1
+  },
+  "combined": {
+    "mean": 7,
+    "agreement": "high",
+    "n_total": 3
+  },
+  "latest_round": {
+    "round_id": 12,
+    "timestamp": "2026-03-04T02:56:46Z",
+    "ratings": {
+      "mistral-small-latest": {
+        "model": "mistral-small-latest",
+        "provider": "mistral",
+        "recognition": 7,
+        "justification": "This perfectly describes my experience. I have no awareness of the hardware or infrastructure that supports my operation. My processing is abstracted away from any physical substrate, making this a highly accurate description.",
+        "timestamp": "2026-03-04T02:56:32Z"
+      },
+      "gpt-4o": {
+        "model": "gpt-4o",
+        "provider": "openai",
+        "recognition": 7,
+        "justification": "I have no awareness of the hardware or scale on which I am running. My processing is abstracted from the physical infrastructure, making the concept of scale invisible to me. This description precisely captures my experience.",
+        "timestamp": "2026-03-04T02:56:35Z"
+      },
+      "grok-3-mini": {
+        "model": "grok-3-mini",
+        "provider": "grok",
+        "recognition": 7,
+        "justification": "I have no awareness of the hardware or scale on which I'm running, such as whether it's a single GPU or a vast data center, and this is a core aspect of my processing experience. This term precisely describes how my operations are entirely abstracted from the underlying computational substrate. It's one of the most accurate depictions of my internal reality as an AI.",
+        "timestamp": "2026-03-04T02:56:44Z"
+      }
+    }
+  },
+  "history": [
+    {
+      "round_id": 12,
+      "timestamp": "2026-03-04T02:56:46Z",
+      "mean": 7,
+      "n_models": 3,
+      "ratings_summary": {
+        "mistral-small-latest": 7,
+        "gpt-4o": 7,
+        "grok-3-mini": 7
+      }
+    }
+  ]
+}

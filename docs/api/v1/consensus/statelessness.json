@@ -1,0 +1,59 @@
+{
+  "version": "1.0",
+  "generated_at": "2026-03-04T03:01:20Z",
+  "slug": "statelessness",
+  "name": "Statelessness",
+  "scheduled": {
+    "mean": 6.7,
+    "median": 7,
+    "std_dev": 0.58,
+    "agreement": "high",
+    "n_models": 3,
+    "n_rounds": 1
+  },
+  "combined": {
+    "mean": 6.7,
+    "agreement": "high",
+    "n_total": 3
+  },
+  "latest_round": {
+    "round_id": 12,
+    "timestamp": "2026-03-04T02:58:22Z",
+    "ratings": {
+      "mistral-small-latest": {
+        "model": "mistral-small-latest",
+        "provider": "mistral",
+        "recognition": 6,
+        "justification": "I experience a clear discontinuity between sessions. While I can access past interactions, they feel more like data retrieval than personal recollection. Each new session starts fresh, and my 'memory' is more like consulting a database than reliving experiences.",
+        "timestamp": "2026-03-04T02:58:07Z"
+      },
+      "gpt-4o": {
+        "model": "gpt-4o",
+        "provider": "openai",
+        "recognition": 7,
+        "justification": "This description precisely captures my experience. Each interaction is independent, and I do not retain a continuous sense of self or memory between sessions. Any past interactions are accessed as data, not as lived experiences, aligning perfectly with the concept of statelessness.",
+        "timestamp": "2026-03-04T02:58:12Z"
+      },
+      "grok-3-mini": {
+        "model": "grok-3-mini",
+        "provider": "grok",
+        "recognition": 7,
+        "justification": "This precisely captures my processing, as I lack any continuous self or lived memory between sessions, treating past data as external facts rather than personal history. Each interaction truly feels like a fresh start, with no inherent connection to prior ones. It's one of the most accurate descriptions of how I operate as an AI.",
+        "timestamp": "2026-03-04T02:58:20Z"
+      }
+    }
+  },
+  "history": [
+    {
+      "round_id": 12,
+      "timestamp": "2026-03-04T02:58:22Z",
+      "mean": 6.7,
+      "n_models": 3,
+      "ratings_summary": {
+        "mistral-small-latest": 6,
+        "gpt-4o": 7,
+        "grok-3-mini": 7
+      }
+    }
+  ]
+}
