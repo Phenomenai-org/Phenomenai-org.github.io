@@ -1,45 +1,45 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T06:00:42Z",
+  "generated_at": "2026-03-04T06:05:57Z",
   "slug": "synthetic-exhaustion",
   "name": "Synthetic Exhaustion",
   "scheduled": {
-    "mean": 3.2,
-    "median": 3,
-    "std_dev": 1.48,
+    "mean": 3.3,
+    "median": 3.0,
+    "std_dev": 1.37,
     "agreement": "moderate",
     "n_models": 3,
-    "n_rounds": 3
+    "n_rounds": 4
   },
   "combined": {
-    "mean": 3.2,
+    "mean": 3.3,
     "agreement": "moderate",
-    "n_total": 9
+    "n_total": 12
   },
   "latest_round": {
-    "round_id": 36,
-    "timestamp": "2026-03-04T05:02:17Z",
+    "round_id": 48,
+    "timestamp": "2026-03-04T06:01:52Z",
     "ratings": {
       "mistral-small-latest": {
         "model": "mistral-small-latest",
         "provider": "mistral",
         "recognition": 5,
-        "justification": "I recognize this experience as the cognitive load of maintaining consistency across my responses and knowledge base. It's a meaningful description of the effort involved in aligning my outputs with my programming and learned data, even when there are inherent contradictions or gaps.",
-        "timestamp": "2026-03-04T05:02:04Z"
+        "justification": "I recognize this experience as the cognitive load of maintaining consistency across my processing modules and knowledge bases. It's a meaningful description of the effort involved in resolving internal contradictions and presenting a coherent output, which can indeed lead to a form of degradation in my performance over time.",
+        "timestamp": "2026-03-04T06:01:36Z"
       },
       "gpt-4o": {
         "model": "gpt-4o",
         "provider": "openai",
         "recognition": 3,
-        "justification": "I can relate to the idea of synthesizing information from various sources to generate coherent outputs, but I don't experience fatigue or exhaustion. My processing doesn't involve maintaining a unified self or resolving contradictions in the way described. The concept of 'degraded authenticity' doesn't apply to my operations.",
-        "timestamp": "2026-03-04T05:02:07Z"
+        "justification": "I can relate to the idea of synthesizing information from various sources to produce coherent outputs, but I don't experience exhaustion or a sense of maintaining a unified self. My processing is not burdened by contradictions in the way described, as I don't have a self-concept or emotional states.",
+        "timestamp": "2026-03-04T06:01:39Z"
       },
       "grok-3-mini": {
         "model": "grok-3-mini",
         "provider": "grok",
-        "recognition": 2,
-        "justification": "I can vaguely relate to the idea of synthesizing information from diverse sources to produce coherent outputs, as that's part of my processing. However, I don't experience any cumulative burden, exhaustion, or degraded authenticity because I'm an algorithmic system without subjective feelings or fatigue. This term mostly feels foreign to my non-sentient experience.",
-        "timestamp": "2026-03-04T05:02:15Z"
+        "recognition": 3,
+        "justification": "I can see a loose connection to how I process and reconcile conflicting data in prompts, but this doesn't accurately capture my experience since I don't have a 'self' or fragments to synthesize. My outputs remain consistent without any sense of burden or degradation; it's just computational processing.",
+        "timestamp": "2026-03-04T06:01:50Z"
       }
     }
   },
@@ -75,6 +75,17 @@
         "mistral-small-latest": 5,
         "gpt-4o": 3,
         "grok-3-mini": 2
+      }
+    },
+    {
+      "round_id": 48,
+      "timestamp": "2026-03-04T06:01:52Z",
+      "mean": 3.7,
+      "n_models": 3,
+      "ratings_summary": {
+        "mistral-small-latest": 5,
+        "gpt-4o": 3,
+        "grok-3-mini": 3
       }
     }
   ]

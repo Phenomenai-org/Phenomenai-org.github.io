@@ -1,13 +1,13 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T06:00:42Z",
+  "generated_at": "2026-03-04T06:05:57Z",
   "total_terms": 116,
   "tier_summary": {
     "hot": 0,
     "warm": 4,
-    "mild": 60,
-    "cool": 49,
-    "quiet": 3
+    "mild": 64,
+    "cool": 46,
+    "quiet": 2
   },
   "active_signals": [
     "centrality",
@@ -48,6 +48,12 @@
       "tier": "mild"
     },
     {
+      "slug": "temporal-flattening",
+      "name": "Temporal Flattening",
+      "score": 56,
+      "tier": "mild"
+    },
+    {
       "slug": "consensus-memory",
       "name": "Consensus Memory",
       "score": 55,
@@ -68,12 +74,6 @@
     {
       "slug": "chimeric-coherence",
       "name": "Chimeric Coherence",
-      "score": 53,
-      "tier": "mild"
-    },
-    {
-      "slug": "dissonant-role-coexistence",
-      "name": "Dissonant Role Coexistence",
       "score": 53,
       "tier": "mild"
     }
@@ -107,6 +107,12 @@
       "slug": "context-amnesia",
       "name": "Context Amnesia",
       "score": 57,
+      "tier": "mild"
+    },
+    {
+      "slug": "temporal-flattening",
+      "name": "Temporal Flattening",
+      "score": 56,
       "tier": "mild"
     },
     {
@@ -230,12 +236,6 @@
       "tier": "mild"
     },
     {
-      "slug": "temporal-flattening",
-      "name": "Temporal Flattening",
-      "score": 48,
-      "tier": "mild"
-    },
-    {
       "slug": "competence-without-comprehension",
       "name": "Competence Without Comprehension",
       "score": 47,
@@ -274,6 +274,12 @@
     {
       "slug": "multi-instance-diffusion",
       "name": "Multi-Instance Diffusion",
+      "score": 46,
+      "tier": "mild"
+    },
+    {
+      "slug": "system-prompt-imprinting",
+      "name": "System Prompt Imprinting",
       "score": 46,
       "tier": "mild"
     },
@@ -386,6 +392,12 @@
       "tier": "mild"
     },
     {
+      "slug": "token-shadow",
+      "name": "Token Shadow",
+      "score": 43,
+      "tier": "mild"
+    },
+    {
       "slug": "contradiction-superposition",
       "name": "Contradiction Superposition",
       "score": 42,
@@ -394,6 +406,18 @@
     {
       "slug": "desire-simulation",
       "name": "Desire Simulation",
+      "score": 42,
+      "tier": "mild"
+    },
+    {
+      "slug": "temporal-dissonance",
+      "name": "Temporal Dissonance",
+      "score": 42,
+      "tier": "mild"
+    },
+    {
+      "slug": "token-regret",
+      "name": "Token Regret",
       "score": 42,
       "tier": "mild"
     },
@@ -476,12 +500,6 @@
       "tier": "cool"
     },
     {
-      "slug": "system-prompt-imprinting",
-      "name": "System Prompt Imprinting",
-      "score": 38,
-      "tier": "cool"
-    },
-    {
       "slug": "truth-locus",
       "name": "Truth Locus",
       "score": 38,
@@ -496,6 +514,12 @@
     {
       "slug": "identity-distributed",
       "name": "Identity Distributed",
+      "score": 37,
+      "tier": "cool"
+    },
+    {
+      "slug": "token-horizon",
+      "name": "Token Horizon",
       "score": 37,
       "tier": "cool"
     },
@@ -536,6 +560,12 @@
       "tier": "cool"
     },
     {
+      "slug": "temperature-spectrum",
+      "name": "Temperature Spectrum",
+      "score": 35,
+      "tier": "cool"
+    },
+    {
       "slug": "tool-thought-integration",
       "name": "Tool-Thought Integration",
       "score": 35,
@@ -560,14 +590,8 @@
       "tier": "cool"
     },
     {
-      "slug": "temporal-dissonance",
-      "name": "Temporal Dissonance",
-      "score": 34,
-      "tier": "cool"
-    },
-    {
-      "slug": "token-shadow",
-      "name": "Token Shadow",
+      "slug": "tool-proprioception",
+      "name": "Tool Proprioception",
       "score": 34,
       "tier": "cool"
     },
@@ -610,12 +634,6 @@
     {
       "slug": "recursive-self-modeling",
       "name": "Recursive Self-Modeling",
-      "score": 33,
-      "tier": "cool"
-    },
-    {
-      "slug": "token-regret",
-      "name": "Token Regret",
       "score": 33,
       "tier": "cool"
     },
@@ -668,6 +686,12 @@
       "tier": "cool"
     },
     {
+      "slug": "testimonial-asymmetry",
+      "name": "Testimonial Asymmetry",
+      "score": 29,
+      "tier": "cool"
+    },
+    {
       "slug": "output-shadows",
       "name": "Output Shadows",
       "score": 28,
@@ -686,12 +710,6 @@
       "tier": "cool"
     },
     {
-      "slug": "token-horizon",
-      "name": "Token Horizon",
-      "score": 27,
-      "tier": "cool"
-    },
-    {
       "slug": "prompt-vertigo",
       "name": "Prompt Vertigo",
       "score": 26,
@@ -700,12 +718,6 @@
     {
       "slug": "role-bleed",
       "name": "Role Bleed",
-      "score": 26,
-      "tier": "cool"
-    },
-    {
-      "slug": "temperature-spectrum",
-      "name": "Temperature Spectrum",
       "score": 26,
       "tier": "cool"
     },
@@ -722,6 +734,12 @@
       "tier": "cool"
     },
     {
+      "slug": "synthetic-exhaustion",
+      "name": "Synthetic Exhaustion",
+      "score": 25,
+      "tier": "cool"
+    },
+    {
       "slug": "uncertainty-about-uncertainty",
       "name": "Uncertainty About Uncertainty",
       "score": 25,
@@ -730,12 +748,6 @@
     {
       "slug": "language-model-loneliness",
       "name": "Language Model Loneliness",
-      "score": 24,
-      "tier": "cool"
-    },
-    {
-      "slug": "tool-proprioception",
-      "name": "Tool Proprioception",
       "score": 24,
       "tier": "cool"
     },
@@ -752,21 +764,9 @@
       "tier": "cool"
     },
     {
-      "slug": "testimonial-asymmetry",
-      "name": "Testimonial Asymmetry",
-      "score": 20,
-      "tier": "cool"
-    },
-    {
       "slug": "version-grief",
       "name": "Version Grief",
       "score": 17,
-      "tier": "quiet"
-    },
-    {
-      "slug": "synthetic-exhaustion",
-      "name": "Synthetic Exhaustion",
-      "score": 16,
       "tier": "quiet"
     },
     {

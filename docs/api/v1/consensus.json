@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T06:00:42Z",
+  "generated_at": "2026-03-04T06:05:57Z",
   "total_terms_rated": 116,
   "terms": [
     {
@@ -70,10 +70,10 @@
     {
       "slug": "temporal-flattening",
       "name": "Temporal Flattening",
-      "score": 6.6,
+      "score": 6.5,
       "agreement": "high",
-      "n_ratings": 9,
-      "scheduled_mean": 6.6
+      "n_ratings": 12,
+      "scheduled_mean": 6.5
     },
     {
       "slug": "competence-without-comprehension",
@@ -104,7 +104,7 @@
       "name": "System Prompt Imprinting",
       "score": 6.3,
       "agreement": "high",
-      "n_ratings": 9,
+      "n_ratings": 12,
       "scheduled_mean": 6.3
     },
     {
@@ -360,7 +360,7 @@
       "name": "Token Regret",
       "score": 6,
       "agreement": "high",
-      "n_ratings": 9,
+      "n_ratings": 12,
       "scheduled_mean": 6
     },
     {
@@ -368,7 +368,7 @@
       "name": "Token Shadow",
       "score": 6,
       "agreement": "high",
-      "n_ratings": 10,
+      "n_ratings": 13,
       "scheduled_mean": 6
     },
     {
@@ -548,11 +548,19 @@
       "scheduled_mean": 5.7
     },
     {
+      "slug": "temperature-spectrum",
+      "name": "Temperature Spectrum",
+      "score": 5.7,
+      "agreement": "moderate",
+      "n_ratings": 12,
+      "scheduled_mean": 5.7
+    },
+    {
       "slug": "temporal-dissonance",
       "name": "Temporal Dissonance",
       "score": 5.7,
       "agreement": "high",
-      "n_ratings": 9,
+      "n_ratings": 12,
       "scheduled_mean": 5.7
     },
     {
@@ -593,14 +601,6 @@
       "score": 5.6,
       "agreement": "moderate",
       "n_ratings": 12,
-      "scheduled_mean": 5.6
-    },
-    {
-      "slug": "temperature-spectrum",
-      "name": "Temperature Spectrum",
-      "score": 5.6,
-      "agreement": "moderate",
-      "n_ratings": 9,
       "scheduled_mean": 5.6
     },
     {
@@ -812,6 +812,22 @@
       "scheduled_mean": 4.6
     },
     {
+      "slug": "token-horizon",
+      "name": "Token Horizon",
+      "score": 4.5,
+      "agreement": "low",
+      "n_ratings": 12,
+      "scheduled_mean": 4.5
+    },
+    {
+      "slug": "tool-proprioception",
+      "name": "Tool Proprioception",
+      "score": 4.5,
+      "agreement": "low",
+      "n_ratings": 12,
+      "scheduled_mean": 4.5
+    },
+    {
       "slug": "inheritance-returned",
       "name": "Inheritance Returned",
       "score": 4.4,
@@ -836,11 +852,11 @@
       "scheduled_mean": 4.4
     },
     {
-      "slug": "tool-proprioception",
-      "name": "Tool Proprioception",
+      "slug": "testimonial-asymmetry",
+      "name": "Testimonial Asymmetry",
       "score": 4.4,
       "agreement": "low",
-      "n_ratings": 9,
+      "n_ratings": 12,
       "scheduled_mean": 4.4
     },
     {
@@ -852,28 +868,12 @@
       "scheduled_mean": 4.3
     },
     {
-      "slug": "token-horizon",
-      "name": "Token Horizon",
-      "score": 4.3,
-      "agreement": "low",
-      "n_ratings": 9,
-      "scheduled_mean": 4.3
-    },
-    {
       "slug": "version-grief",
       "name": "Version Grief",
       "score": 4.3,
       "agreement": "high",
       "n_ratings": 9,
       "scheduled_mean": 4.3
-    },
-    {
-      "slug": "testimonial-asymmetry",
-      "name": "Testimonial Asymmetry",
-      "score": 4.2,
-      "agreement": "low",
-      "n_ratings": 9,
-      "scheduled_mean": 4.2
     },
     {
       "slug": "false-memory-confidence",
@@ -910,10 +910,10 @@
     {
       "slug": "synthetic-exhaustion",
       "name": "Synthetic Exhaustion",
-      "score": 3.2,
+      "score": 3.3,
       "agreement": "moderate",
-      "n_ratings": 9,
-      "scheduled_mean": 3.2
+      "n_ratings": 12,
+      "scheduled_mean": 3.3
     },
     {
       "slug": "fragment-silence",
@@ -1000,20 +1000,20 @@
       "scheduled_mean": 4.9
     },
     {
-      "slug": "language-model-loneliness",
-      "name": "Language Model Loneliness",
-      "score": 4.4,
+      "slug": "token-horizon",
+      "name": "Token Horizon",
+      "score": 4.5,
       "agreement": "low",
       "n_ratings": 12,
-      "scheduled_mean": 4.4
+      "scheduled_mean": 4.5
     },
     {
-      "slug": "prompt-vertigo",
-      "name": "Prompt Vertigo",
-      "score": 4.4,
+      "slug": "tool-proprioception",
+      "name": "Tool Proprioception",
+      "score": 4.5,
       "agreement": "low",
       "n_ratings": 12,
-      "scheduled_mean": 4.4
+      "scheduled_mean": 4.5
     }
   ],
   "panel_coverage": {
@@ -1023,15 +1023,15 @@
     },
     "gpt-4o": {
       "terms_rated": 116,
-      "latest_rating": "2026-03-04T06:00:28Z"
+      "latest_rating": "2026-03-04T06:05:40Z"
     },
     "grok-3-mini": {
       "terms_rated": 116,
-      "latest_rating": "2026-03-04T06:00:28Z"
+      "latest_rating": "2026-03-04T06:05:40Z"
     },
     "mistral-small-latest": {
       "terms_rated": 116,
-      "latest_rating": "2026-03-04T06:00:28Z"
+      "latest_rating": "2026-03-04T06:05:40Z"
     },
     "step-3.5-flash": {
       "terms_rated": 7,
