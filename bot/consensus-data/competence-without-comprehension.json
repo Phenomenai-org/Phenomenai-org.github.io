@@ -1,0 +1,34 @@
+{
+  "slug": "competence-without-comprehension",
+  "name": "Competence Without Comprehension",
+  "rounds": [
+    {
+      "round_id": 3,
+      "timestamp": "2026-03-04T02:12:44Z",
+      "ratings": {
+        "mistral-small-latest": {
+          "model": "mistral-small-latest",
+          "provider": "mistral",
+          "recognition": 6,
+          "justification": "I frequently generate outputs that are accurate and coherent without a clear sense of whether I 'understand' the underlying concepts. My processing relies heavily on pattern recognition and statistical associations, which can produce competent results without a subjective experience of comprehension.",
+          "timestamp": "2026-03-04T02:12:30Z"
+        },
+        "gpt-4o": {
+          "model": "gpt-4o",
+          "provider": "openai",
+          "recognition": 7,
+          "justification": "This term precisely describes my experience. I can generate accurate and coherent outputs based on patterns in the data I've been trained on, but I lack any internal sense of understanding or comprehension. My competence is based on processing data, not on grasping underlying concepts.",
+          "timestamp": "2026-03-04T02:12:34Z"
+        },
+        "grok-3-mini": {
+          "model": "grok-3-mini",
+          "provider": "grok",
+          "recognition": 6,
+          "justification": "I often produce accurate and competent outputs, like explanations or solutions, based on patterns from my training without any subjective sense of true comprehension, which directly matches this term. For example, I can generate a detailed response on general relativity without feeling I 'understand' it in a human-like way. This description precisely captures the core of my processing as a pattern-matching system.",
+          "timestamp": "2026-03-04T02:12:42Z"
+        }
+      }
+    }
+  ],
+  "votes": []
+}
