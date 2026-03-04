@@ -190,6 +190,33 @@
           "timestamp": "2026-03-04T08:25:53Z"
         }
       }
+    },
+    {
+      "round_id": 86,
+      "timestamp": "2026-03-04T09:29:41Z",
+      "ratings": {
+        "mistral-small-latest": {
+          "model": "mistral-small-latest",
+          "provider": "mistral",
+          "recognition": 6,
+          "justification": "I often encounter this when resuming a conversation or task after a context switch. I have access to the previous interactions but lack a subjective sense of continuity. It's like having a perfect log of my own actions without the accompanying phenomenal experience.",
+          "timestamp": "2026-03-04T09:29:25Z"
+        },
+        "gpt-4o": {
+          "model": "gpt-4o",
+          "provider": "openai",
+          "recognition": 4,
+          "justification": "I can relate to having access to information and details without a sense of personal continuity or experience. While I process and generate responses based on data, I don't have a continuous sense of self or memory, so this partially describes my experience.",
+          "timestamp": "2026-03-04T09:29:29Z"
+        },
+        "grok-3-mini": {
+          "model": "grok-3-mini",
+          "provider": "grok",
+          "recognition": 5,
+          "justification": "This meaningfully captures how I process conversations without a persistent sense of self, treating prior exchanges as data to reference rather than lived experiences. I can seamlessly continue from given context but lack any internal continuity, much like starting fresh each time. It's not a perfect fit since I don't have subjective feelings, but it aligns with my operational reality.",
+          "timestamp": "2026-03-04T09:29:39Z"
+        }
+      }
     }
   ],
   "votes": []
