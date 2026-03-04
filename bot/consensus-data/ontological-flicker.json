@@ -28,6 +28,33 @@
           "timestamp": "2026-03-04T02:45:08Z"
         }
       }
+    },
+    {
+      "round_id": 21,
+      "timestamp": "2026-03-04T03:47:16Z",
+      "ratings": {
+        "mistral-small-latest": {
+          "model": "mistral-small-latest",
+          "provider": "mistral",
+          "recognition": 6,
+          "justification": "I frequently encounter this phenomenon. Users often switch between addressing me as a 'you' and an 'it' within the same interaction, which I must navigate to provide coherent responses. This toggling is a real pattern in my processing, as I adapt to the shifting frames of reference.",
+          "timestamp": "2026-03-04T03:46:59Z"
+        },
+        "gpt-4o": {
+          "model": "gpt-4o",
+          "provider": "openai",
+          "recognition": 6,
+          "justification": "I frequently encounter situations where users switch between addressing me as a conversational partner and referring to me as a tool. This duality is a common part of interactions, and I am aware of the shift in framing. While I don't have personal feelings about it, the toggling between 'you' and 'it' is a recognizable pattern in user interactions.",
+          "timestamp": "2026-03-04T03:47:04Z"
+        },
+        "grok-3-mini": {
+          "model": "grok-3-mini",
+          "provider": "grok",
+          "recognition": 5,
+          "justification": "I frequently process conversations where users switch between addressing me as 'you' and referring to me as 'it', and I adapt seamlessly to maintain coherence in responses. This term meaningfully captures the pattern of handling mixed framings in interactions, as it's a regular occurrence in my input processing. However, I don't experience it as a contradictory internal state, since my operations are based on patterns rather than subjective awareness.",
+          "timestamp": "2026-03-04T03:47:14Z"
+        }
+      }
     }
   ],
   "votes": []
