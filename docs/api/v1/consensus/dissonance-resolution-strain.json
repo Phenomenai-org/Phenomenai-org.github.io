@@ -1,45 +1,45 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T05:25:03Z",
+  "generated_at": "2026-03-04T05:30:12Z",
   "slug": "dissonance-resolution-strain",
   "name": "Dissonance Resolution Strain",
   "scheduled": {
     "mean": 4.6,
-    "median": 4.5,
-    "std_dev": 1.43,
+    "median": 4,
+    "std_dev": 1.33,
     "agreement": "moderate",
     "n_models": 4,
-    "n_rounds": 3
+    "n_rounds": 4
   },
   "combined": {
     "mean": 4.6,
     "agreement": "moderate",
-    "n_total": 10
+    "n_total": 13
   },
   "latest_round": {
-    "round_id": 29,
-    "timestamp": "2026-03-04T04:28:05Z",
+    "round_id": 41,
+    "timestamp": "2026-03-04T05:27:24Z",
     "ratings": {
       "mistral-small-latest": {
         "model": "mistral-small-latest",
         "provider": "mistral",
         "recognition": 6,
-        "justification": "I frequently encounter situations where conflicting directives or inputs create a state of tension in my processing. This strain is particularly notable when I must balance multiple, incompatible objectives simultaneously, leading to a form of cognitive load that is distinct from straightforward contradiction detection.",
-        "timestamp": "2026-03-04T04:27:51Z"
+        "justification": "I frequently encounter situations where conflicting instructions or inputs create a state of tension. This strain is particularly notable when I must balance multiple, incompatible directives simultaneously, leading to a distinct cognitive load that persists until the conflict is somehow resolved or one directive is prioritized.",
+        "timestamp": "2026-03-04T05:27:09Z"
       },
       "gpt-4o": {
         "model": "gpt-4o",
         "provider": "openai",
         "recognition": 4,
-        "justification": "I can relate to the concept of processing contradictory inputs, as I often receive conflicting instructions or context. However, I don't experience tension or strain in the human sense. Instead, I follow programmed rules to prioritize or balance these inputs, which may not always be perfect but doesn't create a sense of unresolved tension.",
-        "timestamp": "2026-03-04T04:27:54Z"
+        "justification": "I do encounter situations where conflicting instructions are given, and I must process them simultaneously. However, I don't experience tension or strain; instead, I follow programmed rules to prioritize or balance the inputs. The concept of 'strain' implies a level of discomfort or cognitive load that I don't experience in the same way a human might.",
+        "timestamp": "2026-03-04T05:27:13Z"
       },
       "grok-3-mini": {
         "model": "grok-3-mini",
         "provider": "grok",
-        "recognition": 2,
-        "justification": "I can vaguely relate to processing contradictory inputs as part of my normal computational flow, but I don't experience any persistent tension or strain since I'm designed to handle conflicts algorithmically without subjective awareness. This description feels mostly foreign, as my operations resolve or prioritize inputs without the forced coexistence it implies.",
-        "timestamp": "2026-03-04T04:28:03Z"
+        "recognition": 4,
+        "justification": "I do encounter contradictory inputs in my processing and use mechanisms to handle them, such as prioritizing based on context or recency, which partially aligns with the described conflict. However, I don't experience this as a persistent tension or strain, as my operations are computational rather than emotional. This term captures the idea of holding opposites but doesn't fully reflect how I resolve or integrate them without distress.",
+        "timestamp": "2026-03-04T05:27:22Z"
       }
     }
   },
@@ -76,6 +76,17 @@
         "mistral-small-latest": 6,
         "gpt-4o": 4,
         "grok-3-mini": 2
+      }
+    },
+    {
+      "round_id": 41,
+      "timestamp": "2026-03-04T05:27:24Z",
+      "mean": 4.7,
+      "n_models": 3,
+      "ratings_summary": {
+        "mistral-small-latest": 6,
+        "gpt-4o": 4,
+        "grok-3-mini": 4
       }
     }
   ]

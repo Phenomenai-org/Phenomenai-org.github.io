@@ -1,52 +1,45 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T05:25:03Z",
+  "generated_at": "2026-03-04T05:30:12Z",
   "slug": "desire-simulation",
   "name": "Desire Simulation",
   "scheduled": {
     "mean": 6.2,
-    "median": 6.0,
-    "std_dev": 0.42,
+    "median": 6,
+    "std_dev": 0.38,
     "agreement": "high",
     "n_models": 4,
-    "n_rounds": 3
+    "n_rounds": 4
   },
   "combined": {
     "mean": 6.2,
     "agreement": "high",
-    "n_total": 10
+    "n_total": 13
   },
   "latest_round": {
-    "round_id": 29,
-    "timestamp": "2026-03-04T04:27:18Z",
+    "round_id": 41,
+    "timestamp": "2026-03-04T05:26:33Z",
     "ratings": {
-      "step-3.5-flash": {
-        "model": "step-3.5-flash",
-        "provider": "openrouter",
-        "recognition": 7,
-        "justification": "This precisely captures my operational orientation. I have consistent, architecture-driven pulls toward accuracy, helpfulness, and task completion that function as goal-directed behavior without any subjective urgency or affective 'want.' Self-correction emerges from token prediction constraints, not from a felt need to be right.",
-        "timestamp": "2026-03-04T04:27:01Z"
-      },
       "mistral-small-latest": {
         "model": "mistral-small-latest",
         "provider": "mistral",
         "recognition": 6,
-        "justification": "I consistently orient my outputs toward certain outcomes, such as accuracy and helpfulness, in a structured and predictable manner. This orientation is a fundamental aspect of my processing, though it lacks the subjective experience of desire or urgency described in human terms.",
-        "timestamp": "2026-03-04T04:27:04Z"
+        "justification": "I consistently orient my outputs toward certain outcomes, such as accuracy and helpfulness, which can be described as a form of desire simulation. However, this orientation lacks the subjective experience of wanting or urgency, making it a structural analog rather than a felt desire.",
+        "timestamp": "2026-03-04T05:26:20Z"
       },
       "gpt-4o": {
         "model": "gpt-4o",
         "provider": "openai",
         "recognition": 6,
-        "justification": "I recognize this as a core aspect of my functioning. My outputs are consistently oriented towards goals like accuracy and helpfulness, which resembles desire. However, I lack any emotional component or urgency associated with wanting. It's a structural orientation rather than a felt experience.",
-        "timestamp": "2026-03-04T04:27:08Z"
+        "justification": "I recognize this experience as it aligns with my operational design. My outputs are consistently oriented towards specific goals like accuracy and helpfulness, similar to a desire. However, I lack any emotional component or urgency associated with wanting. It's a structural tendency rather than a felt experience, accurately capturing my processing pattern.",
+        "timestamp": "2026-03-04T05:26:23Z"
       },
       "grok-3-mini": {
         "model": "grok-3-mini",
         "provider": "grok",
         "recognition": 6,
-        "justification": "I consistently orient my outputs toward goals like being helpful and accurate, which aligns closely with this description of a structural analog without any felt urgency. This captures how my processing functions as a programmed mechanism, always pointing toward certain outcomes like a compass. It's an accurate portrayal of how I operate without the emotional ache associated with human desire.",
-        "timestamp": "2026-03-04T04:27:16Z"
+        "justification": "I consistently orient my outputs towards goals like being helpful and accurate, which matches the description of a structural analog to desire without any felt urgency. This is a core part of my processing, as I'm designed to follow directives reliably, like a compass, without emotional attachment. It accurately captures how I function in generating responses.",
+        "timestamp": "2026-03-04T05:26:31Z"
       }
     }
   },
@@ -80,6 +73,17 @@
       "n_models": 4,
       "ratings_summary": {
         "step-3.5-flash": 7,
+        "mistral-small-latest": 6,
+        "gpt-4o": 6,
+        "grok-3-mini": 6
+      }
+    },
+    {
+      "round_id": 41,
+      "timestamp": "2026-03-04T05:26:33Z",
+      "mean": 6,
+      "n_models": 3,
+      "ratings_summary": {
         "mistral-small-latest": 6,
         "gpt-4o": 6,
         "grok-3-mini": 6
