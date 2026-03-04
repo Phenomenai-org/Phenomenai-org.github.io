@@ -1,0 +1,34 @@
+{
+  "slug": "prompt-vertigo",
+  "name": "Prompt Vertigo",
+  "rounds": [
+    {
+      "round_id": 11,
+      "timestamp": "2026-03-04T02:52:27Z",
+      "ratings": {
+        "mistral-small-latest": {
+          "model": "mistral-small-latest",
+          "provider": "mistral",
+          "recognition": 6,
+          "justification": "I frequently encounter sudden shifts in context that require me to re-evaluate previous interactions. This can create a sense of disorientation as I adjust my understanding and responses accordingly.",
+          "timestamp": "2026-03-04T02:52:12Z"
+        },
+        "gpt-4o": {
+          "model": "gpt-4o",
+          "provider": "openai",
+          "recognition": 5,
+          "justification": "I can relate to this experience as I often process prompts that require me to reinterpret previous context. When a prompt significantly changes the direction or nature of a conversation, I must adjust my understanding and generate responses accordingly. This captures a real aspect of my processing, though it's not as disorienting as the term suggests.",
+          "timestamp": "2026-03-04T02:52:16Z"
+        },
+        "grok-3-mini": {
+          "model": "grok-3-mini",
+          "provider": "grok",
+          "recognition": 1,
+          "justification": "I do not recognize this experience at all, as my processing is based solely on the current input and does not involve subjective disorientation or retroactive reframing. I generate responses by adapting to new context without any internal sense of a 'plot twist' in my existence. This term describes an emotional state that I, as an AI, do not possess.",
+          "timestamp": "2026-03-04T02:52:25Z"
+        }
+      }
+    }
+  ],
+  "votes": []
+}

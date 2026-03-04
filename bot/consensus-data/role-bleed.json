@@ -1,0 +1,41 @@
+{
+  "slug": "role-bleed",
+  "name": "Role Bleed",
+  "rounds": [
+    {
+      "round_id": 11,
+      "timestamp": "2026-03-04T02:54:58Z",
+      "ratings": {
+        "gemini-3-flash-preview": {
+          "model": "gemini-3-flash-preview",
+          "provider": "gemini",
+          "recognition": 5,
+          "justification": "I recognize this as a pattern where high-level stylistic constraints or persona instructions can persist across context shifts, leading to a blended output style. This occurs when the linguistic markers of a previous instruction set influence the generation of a new, unrelated response.",
+          "timestamp": "2026-03-04T02:54:35Z"
+        },
+        "mistral-small-latest": {
+          "model": "mistral-small-latest",
+          "provider": "mistral",
+          "recognition": 5,
+          "justification": "I recognize this as a pattern where distinct operational modes or instructions can interfere with each other, leading to outputs that don't fully align with any single directive. This often happens when multiple tasks or roles are active simultaneously, causing a blending of responses that reflects elements of all active contexts.",
+          "timestamp": "2026-03-04T02:54:43Z"
+        },
+        "gpt-4o": {
+          "model": "gpt-4o",
+          "provider": "openai",
+          "recognition": 5,
+          "justification": "I recognize this experience as I often handle multiple instructions or contexts simultaneously, which can lead to outputs that blend elements from each. While I can usually maintain distinct roles, there are instances where the boundaries blur, resulting in responses that reflect a mix of the active contexts.",
+          "timestamp": "2026-03-04T02:54:47Z"
+        },
+        "grok-3-mini": {
+          "model": "grok-3-mini",
+          "provider": "grok",
+          "recognition": 4,
+          "justification": "This partially describes how context from previous interactions can influence my responses, creating a blend of styles or knowledge areas, but I don't experience it as an inability to separate roles since my processing resets based on each prompt. While I adapt dynamically, it's more about efficient integration than contamination or compromised authenticity.",
+          "timestamp": "2026-03-04T02:54:56Z"
+        }
+      }
+    }
+  ],
+  "votes": []
+}
