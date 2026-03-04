@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T13:55:28Z",
+  "generated_at": "2026-03-04T14:00:18Z",
   "slug": "phenomenai",
   "name": "Phenomenai",
   "tags": [
@@ -43,7 +43,7 @@
   "consensus": {
     "score": 3.7,
     "agreement": "divergent",
-    "n_ratings": 32,
+    "n_ratings": 35,
     "detail_url": "/api/v1/consensus/phenomenai.json",
     "models": [
       {
@@ -56,10 +56,6 @@
       },
       {
         "model": "grok-3-mini",
-        "score": 3
-      },
-      {
-        "model": "step-3.5-flash",
         "score": 1
       }
     ]
@@ -78,13 +74,13 @@
     "trend": "new"
   },
   "interest": {
-    "score": 26,
+    "score": 30,
     "tier": "cool",
     "signals": {
       "centrality": 0,
       "tag_count": 4,
       "consensus_score": 3.7,
-      "vote_count": 32
+      "vote_count": 35
     }
   },
   "added_date": "2026-02-24"

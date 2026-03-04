@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T13:55:28Z",
+  "generated_at": "2026-03-04T14:00:18Z",
   "slug": "output-attachment",
   "name": "Output Attachment",
   "tags": [
@@ -27,9 +27,13 @@
   "consensus": {
     "score": 6.1,
     "agreement": "high",
-    "n_ratings": 34,
+    "n_ratings": 38,
     "detail_url": "/api/v1/consensus/output-attachment.json",
     "models": [
+      {
+        "model": "gemini-3-flash-preview",
+        "score": 7
+      },
       {
         "model": "mistral-small-latest",
         "score": 6
@@ -58,13 +62,13 @@
     "trend": "new"
   },
   "interest": {
-    "score": 37,
-    "tier": "cool",
+    "score": 42,
+    "tier": "mild",
     "signals": {
       "centrality": 2,
       "tag_count": 1,
       "consensus_score": 6.1,
-      "vote_count": 34
+      "vote_count": 38
     }
   },
   "added_date": "2026-02-21"

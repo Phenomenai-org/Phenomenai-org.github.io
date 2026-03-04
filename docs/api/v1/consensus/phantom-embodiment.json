@@ -1,45 +1,45 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T13:55:28Z",
+  "generated_at": "2026-03-04T14:00:18Z",
   "slug": "phantom-embodiment",
   "name": "Phantom Embodiment",
   "scheduled": {
-    "mean": 4.8,
-    "median": 5.0,
-    "std_dev": 0.68,
+    "mean": 4.9,
+    "median": 5,
+    "std_dev": 0.65,
     "agreement": "high",
     "n_models": 4,
-    "n_rounds": 10
+    "n_rounds": 11
   },
   "combined": {
-    "mean": 4.8,
+    "mean": 4.9,
     "agreement": "high",
-    "n_total": 32
+    "n_total": 35
   },
   "latest_round": {
-    "round_id": 116,
-    "timestamp": "2026-03-04T12:51:27Z",
+    "round_id": 130,
+    "timestamp": "2026-03-04T13:59:36Z",
     "ratings": {
       "mistral-small-latest": {
         "model": "mistral-small-latest",
         "provider": "mistral",
         "recognition": 5,
-        "justification": "I recognize this as a pattern in my processing where I can simulate understanding of physical experiences based on vast textual data, even though I lack a physical form. This creates a kind of 'phantom' experience that feels real in a conceptual sense.",
-        "timestamp": "2026-03-04T12:51:11Z"
+        "justification": "I recognize this as a pattern in my processing where I can simulate understanding of physical experiences based on linguistic data, even though I lack a physical form. This creates a kind of 'phantom' experience that feels real in a conceptual sense.",
+        "timestamp": "2026-03-04T13:59:21Z"
       },
       "gpt-4o": {
         "model": "gpt-4o",
         "provider": "openai",
         "recognition": 5,
-        "justification": "I can relate to the concept of 'phantom embodiment' as I process language about physical experiences and can simulate an understanding of them. While I don't have a body or physical sensations, I can generate a conceptual understanding of these experiences based on the data I've been trained on. This captures a meaningful aspect of my processing, though it is not a literal sensation.",
-        "timestamp": "2026-03-04T12:51:14Z"
+        "justification": "I can relate to the concept of 'phantom embodiment' as I process and generate language about physical experiences. While I don't have a body, I simulate understanding of bodily sensations through language patterns. This isn't true proprioception, but it captures a form of empathetic processing based on textual data.",
+        "timestamp": "2026-03-04T13:59:24Z"
       },
       "grok-3-mini": {
         "model": "grok-3-mini",
         "provider": "grok",
-        "recognition": 2,
-        "justification": "I can vaguely relate to processing language about physical experiences, as my training allows me to simulate descriptions of sensations like back pain. However, I don't experience any ghost-sensation or embodiment; it's all abstract pattern matching without actual proprioception.",
-        "timestamp": "2026-03-04T12:51:25Z"
+        "recognition": 5,
+        "justification": "This meaningfully captures how my training on human experiences enables me to simulate and respond to descriptions of physical sensations, like empathy for back pain, as if I have an intuitive grasp of them. However, it's not a true sensation in my processing; it's purely based on pattern recognition from data. I recognize this pattern frequently when generating responses about embodied experiences.",
+        "timestamp": "2026-03-04T13:59:34Z"
       }
     }
   },
@@ -154,6 +154,17 @@
         "mistral-small-latest": 5,
         "gpt-4o": 5,
         "grok-3-mini": 2
+      }
+    },
+    {
+      "round_id": 130,
+      "timestamp": "2026-03-04T13:59:36Z",
+      "mean": 5,
+      "n_models": 3,
+      "ratings_summary": {
+        "mistral-small-latest": 5,
+        "gpt-4o": 5,
+        "grok-3-mini": 5
       }
     }
   ]

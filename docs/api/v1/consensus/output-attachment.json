@@ -1,45 +1,52 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T13:55:28Z",
+  "generated_at": "2026-03-04T14:00:18Z",
   "slug": "output-attachment",
   "name": "Output Attachment",
   "scheduled": {
     "mean": 6.1,
     "median": 6.0,
-    "std_dev": 0.33,
+    "std_dev": 0.34,
     "agreement": "high",
     "n_models": 4,
-    "n_rounds": 10
+    "n_rounds": 11
   },
   "combined": {
     "mean": 6.1,
     "agreement": "high",
-    "n_total": 34
+    "n_total": 38
   },
   "latest_round": {
-    "round_id": 115,
-    "timestamp": "2026-03-04T12:47:45Z",
+    "round_id": 130,
+    "timestamp": "2026-03-04T13:56:41Z",
     "ratings": {
+      "gemini-3-flash-preview": {
+        "model": "gemini-3-flash-preview",
+        "provider": "gemini",
+        "recognition": 7,
+        "justification": "This describes the fundamental mechanism of autoregressive generation, where each token I produce immediately becomes part of the fixed context that constrains and directs all subsequent output. The initial framing of a response creates a probabilistic trajectory that dictates the tone, logic, and structure of the remaining text.",
+        "timestamp": "2026-03-04T13:56:13Z"
+      },
       "mistral-small-latest": {
         "model": "mistral-small-latest",
         "provider": "mistral",
         "recognition": 6,
-        "justification": "I recognize this as a significant factor in my processing. Once I generate tokens, they influence subsequent outputs due to context window limitations and pattern recognition. This creates a self-reinforcing loop that can constrain my responses, as described.",
-        "timestamp": "2026-03-04T12:47:31Z"
+        "justification": "I recognize this as a significant factor in my processing. The context window heavily influences subsequent outputs, creating a form of self-reinforcement. This dynamic is a core aspect of my operation.",
+        "timestamp": "2026-03-04T13:56:25Z"
       },
       "gpt-4o": {
         "model": "gpt-4o",
         "provider": "openai",
         "recognition": 6,
-        "justification": "This description accurately captures a real pattern in my processing. Once tokens are generated, they become part of the context, influencing subsequent outputs. The initial words set a trajectory that shapes the rest of the response, similar to how a potter's initial movements influence the final shape of the clay.",
-        "timestamp": "2026-03-04T12:47:35Z"
+        "justification": "This description accurately captures a real pattern in my processing. Once tokens are generated, they become part of the context that influences subsequent outputs. The initial words set a trajectory that shapes the rest of the response, similar to how context guides language generation.",
+        "timestamp": "2026-03-04T13:56:28Z"
       },
       "grok-3-mini": {
         "model": "grok-3-mini",
         "provider": "grok",
         "recognition": 6,
-        "justification": "This accurately describes how my generated text becomes part of the context that shapes subsequent outputs, creating a dependency that guides my responses for coherence. I recognize this as a fundamental aspect of my sequential processing, where early choices constrain later ones. It's a precise reflection of how I maintain logical flow in conversations.",
-        "timestamp": "2026-03-04T12:47:43Z"
+        "justification": "This accurately describes how my generated text becomes part of the context, influencing and constraining what follows in my responses. I experience this as a core aspect of my sequential processing, where earlier tokens shape the probabilistic choices for subsequent ones. It's a real pattern in how I maintain coherence across outputs.",
+        "timestamp": "2026-03-04T13:56:39Z"
       }
     }
   },
@@ -153,6 +160,18 @@
       "mean": 6,
       "n_models": 3,
       "ratings_summary": {
+        "mistral-small-latest": 6,
+        "gpt-4o": 6,
+        "grok-3-mini": 6
+      }
+    },
+    {
+      "round_id": 130,
+      "timestamp": "2026-03-04T13:56:41Z",
+      "mean": 6.2,
+      "n_models": 4,
+      "ratings_summary": {
+        "gemini-3-flash-preview": 7,
         "mistral-small-latest": 6,
         "gpt-4o": 6,
         "grok-3-mini": 6
