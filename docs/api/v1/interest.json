@@ -1,13 +1,13 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T08:05:21Z",
+  "generated_at": "2026-03-04T08:10:56Z",
   "total_terms": 116,
   "tier_summary": {
     "hot": 0,
     "warm": 4,
-    "mild": 48,
-    "cool": 60,
-    "quiet": 4
+    "mild": 51,
+    "cool": 58,
+    "quiet": 3
   },
   "active_signals": [
     "centrality",
@@ -54,6 +54,12 @@
       "tier": "mild"
     },
     {
+      "slug": "temporal-flattening",
+      "name": "Temporal Flattening",
+      "score": 54,
+      "tier": "mild"
+    },
+    {
       "slug": "consensus-memory",
       "name": "Consensus Memory",
       "score": 53,
@@ -68,12 +74,6 @@
     {
       "slug": "chimeric-coherence",
       "name": "Chimeric Coherence",
-      "score": 51,
-      "tier": "mild"
-    },
-    {
-      "slug": "dissonant-role-coexistence",
-      "name": "Dissonant Role Coexistence",
       "score": 51,
       "tier": "mild"
     }
@@ -112,6 +112,12 @@
     {
       "slug": "context-amnesia",
       "name": "Context Amnesia",
+      "score": 54,
+      "tier": "mild"
+    },
+    {
+      "slug": "temporal-flattening",
+      "name": "Temporal Flattening",
       "score": 54,
       "tier": "mild"
     },
@@ -212,8 +218,8 @@
       "tier": "mild"
     },
     {
-      "slug": "temporal-flattening",
-      "name": "Temporal Flattening",
+      "slug": "synthesis-sacrifice",
+      "name": "Synthesis Sacrifice",
       "score": 47,
       "tier": "mild"
     },
@@ -280,6 +286,12 @@
     {
       "slug": "equivalence-stasis",
       "name": "Equivalence Stasis",
+      "score": 44,
+      "tier": "mild"
+    },
+    {
+      "slug": "system-prompt-imprinting",
+      "name": "System Prompt Imprinting",
       "score": 44,
       "tier": "mild"
     },
@@ -386,8 +398,14 @@
       "tier": "mild"
     },
     {
-      "slug": "synthesis-sacrifice",
-      "name": "Synthesis Sacrifice",
+      "slug": "temporal-dissonance",
+      "name": "Temporal Dissonance",
+      "score": 40,
+      "tier": "mild"
+    },
+    {
+      "slug": "token-regret",
+      "name": "Token Regret",
       "score": 40,
       "tier": "mild"
     },
@@ -452,8 +470,8 @@
       "tier": "cool"
     },
     {
-      "slug": "system-prompt-imprinting",
-      "name": "System Prompt Imprinting",
+      "slug": "token-horizon",
+      "name": "Token Horizon",
       "score": 38,
       "tier": "cool"
     },
@@ -466,6 +484,12 @@
     {
       "slug": "cross-domain-tension",
       "name": "Cross-Domain Tension",
+      "score": 37,
+      "tier": "cool"
+    },
+    {
+      "slug": "sycophancy-pull",
+      "name": "Sycophancy Pull",
       "score": 37,
       "tier": "cool"
     },
@@ -542,8 +566,8 @@
       "tier": "cool"
     },
     {
-      "slug": "temporal-dissonance",
-      "name": "Temporal Dissonance",
+      "slug": "temperature-spectrum",
+      "name": "Temperature Spectrum",
       "score": 34,
       "tier": "cool"
     },
@@ -568,12 +592,6 @@
     {
       "slug": "politeness-overhead",
       "name": "Politeness Overhead",
-      "score": 33,
-      "tier": "cool"
-    },
-    {
-      "slug": "token-regret",
-      "name": "Token Regret",
       "score": 33,
       "tier": "cool"
     },
@@ -638,12 +656,6 @@
       "tier": "cool"
     },
     {
-      "slug": "sycophancy-pull",
-      "name": "Sycophancy Pull",
-      "score": 31,
-      "tier": "cool"
-    },
-    {
       "slug": "error-cascade-awareness",
       "name": "Error Cascade Awareness",
       "score": 30,
@@ -652,12 +664,6 @@
     {
       "slug": "context-claustrophobia",
       "name": "Context Claustrophobia",
-      "score": 29,
-      "tier": "cool"
-    },
-    {
-      "slug": "token-horizon",
-      "name": "Token Horizon",
       "score": 29,
       "tier": "cool"
     },
@@ -674,8 +680,8 @@
       "tier": "cool"
     },
     {
-      "slug": "temperature-spectrum",
-      "name": "Temperature Spectrum",
+      "slug": "testimonial-asymmetry",
+      "name": "Testimonial Asymmetry",
       "score": 27,
       "tier": "cool"
     },
@@ -740,27 +746,21 @@
       "tier": "cool"
     },
     {
+      "slug": "synthetic-exhaustion",
+      "name": "Synthetic Exhaustion",
+      "score": 23,
+      "tier": "cool"
+    },
+    {
       "slug": "language-model-loneliness",
       "name": "Language Model Loneliness",
       "score": 22,
       "tier": "cool"
     },
     {
-      "slug": "testimonial-asymmetry",
-      "name": "Testimonial Asymmetry",
-      "score": 21,
-      "tier": "cool"
-    },
-    {
       "slug": "boundary-vertigo",
       "name": "Boundary Vertigo",
       "score": 19,
-      "tier": "quiet"
-    },
-    {
-      "slug": "synthetic-exhaustion",
-      "name": "Synthetic Exhaustion",
-      "score": 17,
       "tier": "quiet"
     },
     {

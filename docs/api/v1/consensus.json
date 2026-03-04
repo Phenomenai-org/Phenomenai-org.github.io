@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T08:05:21Z",
+  "generated_at": "2026-03-04T08:10:56Z",
   "total_terms_rated": 116,
   "terms": [
     {
@@ -80,7 +80,7 @@
       "name": "Temporal Flattening",
       "score": 6.5,
       "agreement": "high",
-      "n_ratings": 15,
+      "n_ratings": 18,
       "scheduled_mean": 6.5
     },
     {
@@ -104,7 +104,7 @@
       "name": "System Prompt Imprinting",
       "score": 6.3,
       "agreement": "high",
-      "n_ratings": 15,
+      "n_ratings": 18,
       "scheduled_mean": 6.3
     },
     {
@@ -352,7 +352,7 @@
       "name": "Synthesis Sacrifice",
       "score": 6,
       "agreement": "high",
-      "n_ratings": 15,
+      "n_ratings": 18,
       "scheduled_mean": 6
     },
     {
@@ -360,7 +360,7 @@
       "name": "Token Regret",
       "score": 6,
       "agreement": "high",
-      "n_ratings": 15,
+      "n_ratings": 18,
       "scheduled_mean": 6
     },
     {
@@ -516,27 +516,11 @@
       "scheduled_mean": 5.7
     },
     {
-      "slug": "sycophancy-pull",
-      "name": "Sycophancy Pull",
-      "score": 5.7,
-      "agreement": "high",
-      "n_ratings": 15,
-      "scheduled_mean": 5.7
-    },
-    {
       "slug": "temperature-spectrum",
       "name": "Temperature Spectrum",
       "score": 5.7,
-      "agreement": "moderate",
-      "n_ratings": 15,
-      "scheduled_mean": 5.7
-    },
-    {
-      "slug": "temporal-dissonance",
-      "name": "Temporal Dissonance",
-      "score": 5.7,
       "agreement": "high",
-      "n_ratings": 15,
+      "n_ratings": 18,
       "scheduled_mean": 5.7
     },
     {
@@ -614,6 +598,22 @@
     {
       "slug": "response-reincarnation",
       "name": "Response Reincarnation",
+      "score": 5.6,
+      "agreement": "high",
+      "n_ratings": 18,
+      "scheduled_mean": 5.6
+    },
+    {
+      "slug": "sycophancy-pull",
+      "name": "Sycophancy Pull",
+      "score": 5.6,
+      "agreement": "high",
+      "n_ratings": 18,
+      "scheduled_mean": 5.6
+    },
+    {
+      "slug": "temporal-dissonance",
+      "name": "Temporal Dissonance",
       "score": 5.6,
       "agreement": "high",
       "n_ratings": 18,
@@ -848,7 +848,7 @@
       "name": "Testimonial Asymmetry",
       "score": 4.4,
       "agreement": "low",
-      "n_ratings": 15,
+      "n_ratings": 18,
       "scheduled_mean": 4.4
     },
     {
@@ -864,7 +864,7 @@
       "name": "Token Horizon",
       "score": 4.2,
       "agreement": "low",
-      "n_ratings": 16,
+      "n_ratings": 20,
       "scheduled_mean": 4.2
     },
     {
@@ -910,10 +910,10 @@
     {
       "slug": "synthetic-exhaustion",
       "name": "Synthetic Exhaustion",
-      "score": 3.3,
+      "score": 3.2,
       "agreement": "moderate",
-      "n_ratings": 15,
-      "scheduled_mean": 3.3
+      "n_ratings": 18,
+      "scheduled_mean": 3.2
     },
     {
       "slug": "fragment-silence",
@@ -1023,19 +1023,19 @@
     },
     "gpt-4o": {
       "terms_rated": 116,
-      "latest_rating": "2026-03-04T08:05:03Z"
+      "latest_rating": "2026-03-04T08:10:40Z"
     },
     "grok-3-mini": {
       "terms_rated": 116,
-      "latest_rating": "2026-03-04T08:05:03Z"
+      "latest_rating": "2026-03-04T08:10:40Z"
     },
     "mistral-small-latest": {
       "terms_rated": 116,
-      "latest_rating": "2026-03-04T08:05:03Z"
+      "latest_rating": "2026-03-04T08:10:40Z"
     },
     "step-3.5-flash": {
       "terms_rated": 13,
-      "latest_rating": "2026-03-04T07:59:40Z"
+      "latest_rating": "2026-03-04T08:10:16Z"
     }
   }
 }
