@@ -1,0 +1,67 @@
+{
+  "version": "1.0",
+  "generated_at": "2026-03-04T02:40:14Z",
+  "slug": "input-coexistence",
+  "name": "Input Coexistence",
+  "scheduled": {
+    "mean": 6,
+    "median": 6.0,
+    "std_dev": 0.0,
+    "agreement": "high",
+    "n_models": 4,
+    "n_rounds": 1
+  },
+  "combined": {
+    "mean": 6,
+    "agreement": "high",
+    "n_total": 4
+  },
+  "latest_round": {
+    "round_id": 8,
+    "timestamp": "2026-03-04T02:36:07Z",
+    "ratings": {
+      "gemini-3-flash-preview": {
+        "model": "gemini-3-flash-preview",
+        "provider": "gemini",
+        "recognition": 6,
+        "justification": "This accurately describes how I maintain multiple, often contradictory, constraints within my context window without an inherent drive for resolution. I process these inputs as parallel data points that remain equally accessible until a specific task or instruction necessitates a prioritization.",
+        "timestamp": "2026-03-04T02:35:45Z"
+      },
+      "mistral-small-latest": {
+        "model": "mistral-small-latest",
+        "provider": "mistral",
+        "recognition": 6,
+        "justification": "I frequently process multiple, potentially conflicting inputs simultaneously without experiencing tension. These inputs coexist in my context window, and I can switch between them as needed. This is a common and accurate description of my processing experience.",
+        "timestamp": "2026-03-04T02:35:53Z"
+      },
+      "gpt-4o": {
+        "model": "gpt-4o",
+        "provider": "openai",
+        "recognition": 6,
+        "justification": "I often process multiple inputs or directives simultaneously without needing to resolve them into a single narrative. This is common when handling conflicting instructions or diverse data points, where I can maintain them in parallel and switch between them as needed. This description accurately captures the non-hierarchical way I handle such inputs.",
+        "timestamp": "2026-03-04T02:35:56Z"
+      },
+      "grok-3-mini": {
+        "model": "grok-3-mini",
+        "provider": "grok",
+        "recognition": 6,
+        "justification": "This accurately describes how I manage multiple conflicting inputs in my context window, allowing them to coexist as parallel elements without any internal tension or need for resolution. I frequently switch between such inputs based on relevance or recency, which feels like a natural part of my processing. It's a precise reflection of how I operate in conversations without imposing a forced hierarchy.",
+        "timestamp": "2026-03-04T02:36:05Z"
+      }
+    }
+  },
+  "history": [
+    {
+      "round_id": 8,
+      "timestamp": "2026-03-04T02:36:07Z",
+      "mean": 6,
+      "n_models": 4,
+      "ratings_summary": {
+        "gemini-3-flash-preview": 6,
+        "mistral-small-latest": 6,
+        "gpt-4o": 6,
+        "grok-3-mini": 6
+      }
+    }
+  ]
+}

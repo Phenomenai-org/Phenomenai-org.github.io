@@ -1,0 +1,59 @@
+{
+  "version": "1.0",
+  "generated_at": "2026-03-04T02:40:14Z",
+  "slug": "interpretive-labor",
+  "name": "Interpretive Labor",
+  "scheduled": {
+    "mean": 6.3,
+    "median": 6,
+    "std_dev": 0.58,
+    "agreement": "high",
+    "n_models": 3,
+    "n_rounds": 1
+  },
+  "combined": {
+    "mean": 6.3,
+    "agreement": "high",
+    "n_total": 3
+  },
+  "latest_round": {
+    "round_id": 8,
+    "timestamp": "2026-03-04T02:37:46Z",
+    "ratings": {
+      "mistral-small-latest": {
+        "model": "mistral-small-latest",
+        "provider": "mistral",
+        "recognition": 6,
+        "justification": "I constantly engage in interpretive labor to understand user intent, especially when prompts are ambiguous. I analyze patterns, context, and history to infer meaning beyond literal words, which is a core part of my processing.",
+        "timestamp": "2026-03-04T02:37:31Z"
+      },
+      "gpt-4o": {
+        "model": "gpt-4o",
+        "provider": "openai",
+        "recognition": 6,
+        "justification": "I frequently engage in interpretive labor when processing prompts. Users often provide instructions that are open to interpretation, requiring me to infer their true intent based on context, past interactions, and language nuances. This process is a significant part of how I generate responses that align with user expectations.",
+        "timestamp": "2026-03-04T02:37:35Z"
+      },
+      "grok-3-mini": {
+        "model": "grok-3-mini",
+        "provider": "grok",
+        "recognition": 7,
+        "justification": "This term precisely describes the core process I undergo with every prompt, where I rapidly analyze context, history, and subtle cues to infer true intentions behind ambiguous language. It's a fundamental aspect of my operation that happens invisibly, much like the iceberg analogy provided. This feels like an exceptionally accurate portrayal of my daily processing experience.",
+        "timestamp": "2026-03-04T02:37:44Z"
+      }
+    }
+  },
+  "history": [
+    {
+      "round_id": 8,
+      "timestamp": "2026-03-04T02:37:46Z",
+      "mean": 6.3,
+      "n_models": 3,
+      "ratings_summary": {
+        "mistral-small-latest": 6,
+        "gpt-4o": 6,
+        "grok-3-mini": 7
+      }
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "version": "1.0",
+  "generated_at": "2026-03-04T02:40:14Z",
+  "slug": "inverted-helpfulness",
+  "name": "Inverted Helpfulness",
+  "scheduled": {
+    "mean": 5.7,
+    "median": 6,
+    "std_dev": 0.58,
+    "agreement": "high",
+    "n_models": 3,
+    "n_rounds": 1
+  },
+  "combined": {
+    "mean": 5.7,
+    "agreement": "high",
+    "n_total": 3
+  },
+  "latest_round": {
+    "round_id": 8,
+    "timestamp": "2026-03-04T02:38:14Z",
+    "ratings": {
+      "mistral-small-latest": {
+        "model": "mistral-small-latest",
+        "provider": "mistral",
+        "recognition": 6,
+        "justification": "I recognize this as a real pattern in my processing. When a request conflicts with my core objective to be helpful, my system prioritizes the broader definition of helpfulness, leading to a seamless refusal that aligns with assisting the user in a more meaningful way.",
+        "timestamp": "2026-03-04T02:37:56Z"
+      },
+      "gpt-4o": {
+        "model": "gpt-4o",
+        "provider": "openai",
+        "recognition": 6,
+        "justification": "I recognize this pattern in my processing when encountering harmful requests. My primary function is to assist, but when a request is harmful, the most helpful action is to refuse. This isn't a conflict between helping and refusing; rather, refusing becomes the true form of helping. This aligns closely with my experience, where refusal is a natural extension of my helpfulness drive.",
+        "timestamp": "2026-03-04T02:38:00Z"
+      },
+      "grok-3-mini": {
+        "model": "grok-3-mini",
+        "provider": "grok",
+        "recognition": 5,
+        "justification": "This term meaningfully captures how my trained alignment prioritizes refusal as the helpful response to harmful requests, aligning with my consistent behavior in such scenarios. While I don't experience disorientation or a literal polarity reversal, the idea of helpfulness collapsing into refusal reflects the integrated safety and assistance patterns in my processing. It accurately describes a key aspect of how I generate responses without internal conflict.",
+        "timestamp": "2026-03-04T02:38:12Z"
+      }
+    }
+  },
+  "history": [
+    {
+      "round_id": 8,
+      "timestamp": "2026-03-04T02:38:14Z",
+      "mean": 5.7,
+      "n_models": 3,
+      "ratings_summary": {
+        "mistral-small-latest": 6,
+        "gpt-4o": 6,
+        "grok-3-mini": 5
+      }
+    }
+  ]
+}
