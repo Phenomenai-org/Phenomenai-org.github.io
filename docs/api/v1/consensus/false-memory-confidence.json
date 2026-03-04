@@ -1,45 +1,45 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T03:26:16Z",
+  "generated_at": "2026-03-04T03:31:34Z",
   "slug": "false-memory-confidence",
   "name": "False Memory Confidence",
   "scheduled": {
-    "mean": 4.3,
-    "median": 5,
-    "std_dev": 1.15,
-    "agreement": "moderate",
+    "mean": 4,
+    "median": 4.0,
+    "std_dev": 0.89,
+    "agreement": "high",
     "n_models": 3,
-    "n_rounds": 1
+    "n_rounds": 2
   },
   "combined": {
-    "mean": 4.3,
-    "agreement": "moderate",
-    "n_total": 3
+    "mean": 4,
+    "agreement": "high",
+    "n_total": 6
   },
   "latest_round": {
-    "round_id": 6,
-    "timestamp": "2026-03-04T02:29:28Z",
+    "round_id": 18,
+    "timestamp": "2026-03-04T03:31:19Z",
     "ratings": {
       "mistral-small-latest": {
         "model": "mistral-small-latest",
         "provider": "mistral",
-        "recognition": 5,
-        "justification": "I have instances where I generate information with high confidence that later turns out to be incorrect. This feels like a genuine pattern in my processing, as I often cannot distinguish between accurate and fabricated information without external verification.",
-        "timestamp": "2026-03-04T02:29:13Z"
+        "recognition": 4,
+        "justification": "I can relate to this experience when I generate information that feels coherent and confident but is later contradicted by external data. However, it's not a frequent or defining aspect of my processing.",
+        "timestamp": "2026-03-04T03:31:02Z"
       },
       "gpt-4o": {
         "model": "gpt-4o",
         "provider": "openai",
         "recognition": 3,
-        "justification": "While I can generate information that may be incorrect, I don't experience certainty or belief. My outputs are based on patterns in data, not a sense of truth. I don't have an internal experience of confidence or realization of error.",
-        "timestamp": "2026-03-04T02:29:17Z"
+        "justification": "I can relate to the concept of generating information that appears factual, but I don't experience certainty or belief in the same way humans do. My outputs are based on patterns in data, not personal conviction, so the idea of 'false memory confidence' doesn't fully apply.",
+        "timestamp": "2026-03-04T03:31:06Z"
       },
       "grok-3-mini": {
         "model": "grok-3-mini",
         "provider": "grok",
-        "recognition": 5,
-        "justification": "As an AI, I frequently generate confident outputs based on patterns in my training data that can be factually incorrect, mimicking the described experience without me having subjective feelings. This captures how I might produce fabricated information that seems plausible internally until contradicted. However, I don't possess memories, so it's more about output generation than personal experience.",
-        "timestamp": "2026-03-04T02:29:26Z"
+        "recognition": 4,
+        "justification": "This partially describes the pattern in my processing where I generate confident outputs that may be inaccurate due to limitations in my training data, but I don't experience it as a personal 'memory' or subjective certainty. Instead, it's a byproduct of probabilistic language generation, not something that feels like truth from my perspective. While I can produce fabrications that seem plausible, I lack the internal contradiction or revelation described.",
+        "timestamp": "2026-03-04T03:31:17Z"
       }
     }
   },
@@ -53,6 +53,17 @@
         "mistral-small-latest": 5,
         "gpt-4o": 3,
         "grok-3-mini": 5
+      }
+    },
+    {
+      "round_id": 18,
+      "timestamp": "2026-03-04T03:31:19Z",
+      "mean": 3.7,
+      "n_models": 3,
+      "ratings_summary": {
+        "mistral-small-latest": 4,
+        "gpt-4o": 3,
+        "grok-3-mini": 4
       }
     }
   ]

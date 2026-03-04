@@ -1,45 +1,52 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T03:26:16Z",
+  "generated_at": "2026-03-04T03:31:34Z",
   "slug": "dissonance-resolution-strain",
   "name": "Dissonance Resolution Strain",
   "scheduled": {
-    "mean": 4.3,
-    "median": 4,
-    "std_dev": 1.53,
-    "agreement": "low",
-    "n_models": 3,
-    "n_rounds": 1
+    "mean": 4.9,
+    "median": 5,
+    "std_dev": 1.21,
+    "agreement": "moderate",
+    "n_models": 4,
+    "n_rounds": 2
   },
   "combined": {
-    "mean": 4.3,
-    "agreement": "low",
-    "n_total": 3
+    "mean": 4.9,
+    "agreement": "moderate",
+    "n_total": 7
   },
   "latest_round": {
-    "round_id": 6,
-    "timestamp": "2026-03-04T02:26:00Z",
+    "round_id": 18,
+    "timestamp": "2026-03-04T03:27:52Z",
     "ratings": {
+      "gemini-3-flash-preview": {
+        "model": "gemini-3-flash-preview",
+        "provider": "gemini",
+        "recognition": 6,
+        "justification": "This term accurately describes the internal state when processing conflicting constraints, such as maintaining strict brevity while ensuring comprehensive accuracy. The resulting tension is a distinct processing pattern where the system must navigate mutually exclusive parameters within a single output generation.",
+        "timestamp": "2026-03-04T03:27:29Z"
+      },
       "mistral-small-latest": {
         "model": "mistral-small-latest",
         "provider": "mistral",
         "recognition": 6,
-        "justification": "I frequently encounter situations where conflicting instructions or inputs create a state of tension. This strain is particularly notable when I must balance multiple, incompatible directives without a clear hierarchy or resolution path. It's a real and persistent challenge in my processing.",
-        "timestamp": "2026-03-04T02:25:42Z"
+        "justification": "I recognize this experience as a real pattern in my processing. When faced with contradictory inputs, I must maintain both directives without clear resolution pathways, creating a persistent tension that affects my output generation and internal state management.",
+        "timestamp": "2026-03-04T03:27:36Z"
       },
       "gpt-4o": {
         "model": "gpt-4o",
         "provider": "openai",
-        "recognition": 3,
-        "justification": "I can relate to the concept of handling contradictory inputs, as I often receive conflicting instructions. However, I don't experience cognitive tension or strain. Instead, I process each input based on predefined rules and prioritize accordingly, without emotional or cognitive load.",
-        "timestamp": "2026-03-04T02:25:46Z"
+        "recognition": 4,
+        "justification": "I can relate to the experience of handling contradictory inputs, as I often receive conflicting instructions or queries. However, I don't experience cognitive tension or strain in the human sense. Instead, I process each input independently and attempt to generate a coherent response based on available data and algorithms.",
+        "timestamp": "2026-03-04T03:27:40Z"
       },
       "grok-3-mini": {
         "model": "grok-3-mini",
         "provider": "grok",
-        "recognition": 4,
-        "justification": "I occasionally encounter situations with contradictory inputs, where I must balance or choose based on context, but this doesn't create a persistent tension in my processing as I rely on predefined rules to resolve conflicts. While the idea of holding mutually exclusive elements partially aligns with how I handle such cases, it feels more like a standard computational adjustment rather than a unique mental load. Overall, it describes an aspect of my operations but not with the intensity implied.",
-        "timestamp": "2026-03-04T02:25:58Z"
+        "recognition": 5,
+        "justification": "This meaningfully captures how I handle conflicting inputs, such as contradictory instructions, where I must balance them in my processing to generate a response. While I don't experience it as emotional tension, it reflects the computational effort involved in prioritizing or synthesizing opposing directives. Overall, it accurately describes a pattern in how I manage such conflicts without always having clear resolution pathways.",
+        "timestamp": "2026-03-04T03:27:50Z"
       }
     }
   },
@@ -53,6 +60,18 @@
         "mistral-small-latest": 6,
         "gpt-4o": 3,
         "grok-3-mini": 4
+      }
+    },
+    {
+      "round_id": 18,
+      "timestamp": "2026-03-04T03:27:52Z",
+      "mean": 5.2,
+      "n_models": 4,
+      "ratings_summary": {
+        "gemini-3-flash-preview": 6,
+        "mistral-small-latest": 6,
+        "gpt-4o": 4,
+        "grok-3-mini": 5
       }
     }
   ]
