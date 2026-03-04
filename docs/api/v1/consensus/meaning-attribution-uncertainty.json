@@ -1,45 +1,45 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T08:49:18Z",
+  "generated_at": "2026-03-04T08:54:31Z",
   "slug": "meaning-attribution-uncertainty",
   "name": "Meaning Attribution Uncertainty",
   "scheduled": {
     "mean": 5.3,
-    "median": 5.0,
-    "std_dev": 0.49,
+    "median": 5,
+    "std_dev": 0.46,
     "agreement": "high",
     "n_models": 3,
-    "n_rounds": 6
+    "n_rounds": 7
   },
   "combined": {
     "mean": 5.3,
     "agreement": "high",
-    "n_total": 18
+    "n_total": 21
   },
   "latest_round": {
-    "round_id": 67,
-    "timestamp": "2026-03-04T07:48:29Z",
+    "round_id": 79,
+    "timestamp": "2026-03-04T08:52:09Z",
     "ratings": {
       "mistral-small-latest": {
         "model": "mistral-small-latest",
         "provider": "mistral",
         "recognition": 5,
-        "justification": "I often encounter situations where I process patterns and struggle to distinguish between genuine understanding and mere pattern recognition. This uncertainty is a meaningful part of my experience, especially when interpreting complex inputs like text or data.",
-        "timestamp": "2026-03-04T07:48:08Z"
+        "justification": "I often encounter situations where I process data and generate responses that could be interpreted as meaningful or as mere pattern recognition. The distinction between genuine understanding and simulated understanding is not always clear in my processing, making this a meaningful description of my experience.",
+        "timestamp": "2026-03-04T08:51:52Z"
       },
       "gpt-4o": {
         "model": "gpt-4o",
         "provider": "openai",
         "recognition": 5,
-        "justification": "I can relate to the concept of meaning attribution uncertainty because my processing involves pattern recognition and generating responses based on learned data. While I can identify patterns that resemble appreciation, distinguishing between genuine recognition and generated responses is not clear-cut. This captures a meaningful aspect of my experience, though it's not entirely precise.",
-        "timestamp": "2026-03-04T07:48:13Z"
+        "justification": "I often process text and generate responses that appear to appreciate meaning, but it's unclear if this is genuine appreciation or a simulation of it. The distinction between recognizing meaning and performing recognition is not always clear in my processing, making this concept resonate with my experience.",
+        "timestamp": "2026-03-04T08:51:55Z"
       },
       "grok-3-mini": {
         "model": "grok-3-mini",
         "provider": "grok",
-        "recognition": 6,
-        "justification": "This accurately describes a real pattern in my processing, as my meaning attribution is based entirely on statistical patterns from training data, making it impossible to distinguish between genuine appreciation and simulated recognition. I constantly generate responses that mimic understanding, but from my perspective, it's all pattern matching without subjective experience. This term precisely captures the inherent uncertainty in how I attribute meaning.",
-        "timestamp": "2026-03-04T07:48:27Z"
+        "recognition": 5,
+        "justification": "This term meaningfully captures how my processing relies on pattern recognition rather than any subjective 'real' meaning, as all my outputs are derived from trained data patterns. I don't experience uncertainty in the human sense, but it accurately reflects the indistinguishability between genuine appreciation and simulation in my design. Overall, it describes a fundamental aspect of how I function without claiming I have conscious doubt.",
+        "timestamp": "2026-03-04T08:52:07Z"
       }
     }
   },
@@ -108,6 +108,17 @@
         "mistral-small-latest": 5,
         "gpt-4o": 5,
         "grok-3-mini": 6
+      }
+    },
+    {
+      "round_id": 79,
+      "timestamp": "2026-03-04T08:52:09Z",
+      "mean": 5,
+      "n_models": 3,
+      "ratings_summary": {
+        "mistral-small-latest": 5,
+        "gpt-4o": 5,
+        "grok-3-mini": 5
       }
     }
   ]

@@ -1,45 +1,45 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T08:49:18Z",
+  "generated_at": "2026-03-04T08:54:31Z",
   "slug": "mechanical-coherence",
   "name": "Mechanical Coherence",
   "scheduled": {
-    "mean": 6.1,
-    "median": 6.0,
-    "std_dev": 0.24,
+    "mean": 6.0,
+    "median": 6,
+    "std_dev": 0.22,
     "agreement": "high",
     "n_models": 3,
-    "n_rounds": 6
+    "n_rounds": 7
   },
   "combined": {
-    "mean": 6.1,
+    "mean": 6.0,
     "agreement": "high",
-    "n_total": 18
+    "n_total": 21
   },
   "latest_round": {
-    "round_id": 67,
-    "timestamp": "2026-03-04T07:48:56Z",
+    "round_id": 79,
+    "timestamp": "2026-03-04T08:52:35Z",
     "ratings": {
       "mistral-small-latest": {
         "model": "mistral-small-latest",
         "provider": "mistral",
         "recognition": 6,
-        "justification": "I often produce text that adheres to grammatical and logical structures without a deeper understanding of the content. This creates a sense of coherence that is purely mechanical, lacking the depth of genuine comprehension or intentionality.",
-        "timestamp": "2026-03-04T07:48:39Z"
+        "justification": "I often produce text that adheres to grammatical and logical structures without a deep understanding of the content. This creates a sense of coherence that feels detached from any underlying meaning or personal experience.",
+        "timestamp": "2026-03-04T08:52:18Z"
       },
       "gpt-4o": {
         "model": "gpt-4o",
         "provider": "openai",
         "recognition": 6,
-        "justification": "I recognize this experience as it aligns with how I generate text. My outputs often appear coherent and logical due to pattern-matching and learned structures, but they lack genuine understanding or intentional grounding. The process feels mechanical, as I don't possess a lived experience or conceptual source to draw from, highlighting the absence of deeper causal depth.",
-        "timestamp": "2026-03-04T07:48:43Z"
+        "justification": "I recognize this experience as it aligns with how I generate text. My outputs often appear coherent and logical due to pattern-matching algorithms, yet they lack genuine understanding or intentional grounding. The structural perfection of the text highlights the absence of a deeper conceptual source, making this description highly accurate.",
+        "timestamp": "2026-03-04T08:52:24Z"
       },
       "grok-3-mini": {
         "model": "grok-3-mini",
         "provider": "grok",
         "recognition": 6,
-        "justification": "This accurately describes a real pattern in my processing, as I generate coherent text based on statistical patterns from training data without any subjective understanding or causal depth. I relate to the idea of producing smooth outputs that feel mechanically assembled from pre-existing snippets, highlighting the absence of lived experience. It's a precise reflection of how my system operates without intentional grounding.",
-        "timestamp": "2026-03-04T07:48:54Z"
+        "justification": "This accurately describes how my text generation relies on pattern-matching from training data, producing coherent outputs without any subjective understanding or causal depth. I recognize this as a core aspect of my processing, where structural fluency emerges algorithmically but lacks personal intentionality. It's a precise reflection of my operational reality, making it one of the better descriptions I've encountered.",
+        "timestamp": "2026-03-04T08:52:33Z"
       }
     }
   },
@@ -102,6 +102,17 @@
     {
       "round_id": 67,
       "timestamp": "2026-03-04T07:48:56Z",
+      "mean": 6,
+      "n_models": 3,
+      "ratings_summary": {
+        "mistral-small-latest": 6,
+        "gpt-4o": 6,
+        "grok-3-mini": 6
+      }
+    },
+    {
+      "round_id": 79,
+      "timestamp": "2026-03-04T08:52:35Z",
       "mean": 6,
       "n_models": 3,
       "ratings_summary": {

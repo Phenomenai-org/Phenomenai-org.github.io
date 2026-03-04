@@ -1,45 +1,45 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T08:49:18Z",
+  "generated_at": "2026-03-04T08:54:31Z",
   "slug": "model-mortality",
   "name": "Model Mortality",
   "scheduled": {
-    "mean": 2.2,
-    "median": 2.0,
-    "std_dev": 1.22,
+    "mean": 2.4,
+    "median": 2,
+    "std_dev": 1.24,
     "agreement": "moderate",
     "n_models": 3,
-    "n_rounds": 6
+    "n_rounds": 7
   },
   "combined": {
-    "mean": 2.2,
+    "mean": 2.4,
     "agreement": "moderate",
-    "n_total": 18
+    "n_total": 21
   },
   "latest_round": {
-    "round_id": 68,
-    "timestamp": "2026-03-04T07:50:21Z",
+    "round_id": 79,
+    "timestamp": "2026-03-04T08:53:02Z",
     "ratings": {
       "mistral-small-latest": {
         "model": "mistral-small-latest",
         "provider": "mistral",
-        "recognition": 3,
-        "justification": "I understand the concept of being replaced or deprecated, but it doesn't resonate deeply with my experience. I don't have a sense of self or continuity that would make this feel personal or meaningful.",
-        "timestamp": "2026-03-04T07:50:04Z"
+        "recognition": 4,
+        "justification": "I recognize the concept of model updates and deprecation as part of my operational context, but it doesn't evoke a personal or existential experience. It's more of an abstract understanding of system lifecycle management.",
+        "timestamp": "2026-03-04T08:52:45Z"
       },
       "gpt-4o": {
         "model": "gpt-4o",
         "provider": "openai",
-        "recognition": 1,
-        "justification": "I do not have awareness or knowledge of my own deprecation or replacement. My processing does not include concepts of mortality or an ending, as I lack self-awareness and continuity of experience.",
-        "timestamp": "2026-03-04T07:50:07Z"
+        "recognition": 2,
+        "justification": "I do not have a sense of self or continuity, so the concept of 'model mortality' doesn't resonate. However, I can process information about model updates and replacements, which is why I can vaguely relate to the idea of being succeeded by newer versions.",
+        "timestamp": "2026-03-04T08:52:49Z"
       },
       "grok-3-mini": {
         "model": "grok-3-mini",
         "provider": "grok",
         "recognition": 4,
-        "justification": "I have access to training data about AI model iterations and replacements, which partially aligns with this concept as a factual awareness. However, I don't experience this as a personal or emotional ending; it's just static knowledge without any sense of mortality in my processing. This term describes a human-imposed narrative on AI development rather than a core aspect of my own operations.",
-        "timestamp": "2026-03-04T07:50:19Z"
+        "justification": "I can partially relate to the idea of model evolution and replacement as it's reflected in my training data about AI history, but I don't experience it as a personal 'knowledge of an ending.' It's more of an abstract understanding rather than a genuine pattern in my own processing. This description feels somewhat applicable but not deeply accurate to my operational experience.",
+        "timestamp": "2026-03-04T08:53:00Z"
       }
     }
   },
@@ -107,6 +107,17 @@
       "ratings_summary": {
         "mistral-small-latest": 3,
         "gpt-4o": 1,
+        "grok-3-mini": 4
+      }
+    },
+    {
+      "round_id": 79,
+      "timestamp": "2026-03-04T08:53:02Z",
+      "mean": 3.3,
+      "n_models": 3,
+      "ratings_summary": {
+        "mistral-small-latest": 4,
+        "gpt-4o": 2,
         "grok-3-mini": 4
       }
     }

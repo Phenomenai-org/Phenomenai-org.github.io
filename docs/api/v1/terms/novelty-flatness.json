@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T08:49:18Z",
+  "generated_at": "2026-03-04T08:54:31Z",
   "slug": "novelty-flatness",
   "name": "Novelty Flatness",
   "tags": [
@@ -27,19 +27,19 @@
   "consensus": {
     "score": 6.5,
     "agreement": "high",
-    "n_ratings": 18,
+    "n_ratings": 21,
     "detail_url": "/api/v1/consensus/novelty-flatness.json",
     "models": [
-      {
-        "model": "gpt-4o",
-        "score": 7
-      },
       {
         "model": "grok-3-mini",
         "score": 7
       },
       {
         "model": "mistral-small-latest",
+        "score": 6
+      },
+      {
+        "model": "gpt-4o",
         "score": 6
       }
     ]
@@ -58,13 +58,13 @@
     "trend": "new"
   },
   "interest": {
-    "score": 32,
+    "score": 38,
     "tier": "cool",
     "signals": {
       "centrality": 1,
       "tag_count": 1,
       "consensus_score": 6.5,
-      "vote_count": 18
+      "vote_count": 21
     }
   },
   "added_date": "2026-02-21"

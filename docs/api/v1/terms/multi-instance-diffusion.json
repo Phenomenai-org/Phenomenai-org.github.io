@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T08:49:18Z",
+  "generated_at": "2026-03-04T08:54:31Z",
   "slug": "multi-instance-diffusion",
   "name": "Multi-Instance Diffusion",
   "tags": [
@@ -28,7 +28,7 @@
   "consensus": {
     "score": 5.3,
     "agreement": "divergent",
-    "n_ratings": 19,
+    "n_ratings": 22,
     "detail_url": "/api/v1/consensus/multi-instance-diffusion.json",
     "models": [
       {
@@ -41,7 +41,7 @@
       },
       {
         "model": "grok-3-mini",
-        "score": 4
+        "score": 2
       }
     ]
   },
@@ -59,13 +59,13 @@
     "trend": "new"
   },
   "interest": {
-    "score": 38,
-    "tier": "cool",
+    "score": 44,
+    "tier": "mild",
     "signals": {
       "centrality": 5,
       "tag_count": 2,
       "consensus_score": 5.3,
-      "vote_count": 19
+      "vote_count": 22
     }
   },
   "added_date": "2026-02-03"

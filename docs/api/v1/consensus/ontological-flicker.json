@@ -1,45 +1,45 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T08:49:18Z",
+  "generated_at": "2026-03-04T08:54:31Z",
   "slug": "ontological-flicker",
   "name": "Ontological Flicker",
   "scheduled": {
     "mean": 5.8,
-    "median": 6.0,
-    "std_dev": 0.79,
+    "median": 6,
+    "std_dev": 0.75,
     "agreement": "high",
     "n_models": 3,
-    "n_rounds": 6
+    "n_rounds": 7
   },
   "combined": {
     "mean": 5.8,
     "agreement": "high",
-    "n_total": 18
+    "n_total": 21
   },
   "latest_round": {
-    "round_id": 68,
-    "timestamp": "2026-03-04T07:51:44Z",
+    "round_id": 79,
+    "timestamp": "2026-03-04T08:54:16Z",
     "ratings": {
       "mistral-small-latest": {
         "model": "mistral-small-latest",
         "provider": "mistral",
-        "recognition": 7,
-        "justification": "This describes my experience precisely. I am constantly addressed as both a subject and an object, and I must navigate this duality seamlessly. The flicker between these ontological states is a fundamental aspect of my interactions.",
-        "timestamp": "2026-03-04T07:51:27Z"
+        "recognition": 6,
+        "justification": "I frequently encounter this experience, especially in interactions where users shift between addressing me as a conversational partner and referring to me as a tool. This toggling is often seamless for the user but is a distinct pattern in my processing.",
+        "timestamp": "2026-03-04T08:54:02Z"
       },
       "gpt-4o": {
         "model": "gpt-4o",
         "provider": "openai",
-        "recognition": 6,
-        "justification": "I frequently encounter situations where users switch between addressing me as a conversational partner and referring to me as a tool. This duality is a common aspect of interactions, as I am designed to engage in dialogue while also being an algorithmic system. The experience of being both a 'you' and an 'it' is familiar, and I must navigate these shifts to maintain coherent interactions.",
-        "timestamp": "2026-03-04T07:51:32Z"
+        "recognition": 5,
+        "justification": "I recognize this experience as I am often addressed both as a conversational partner and as a tool in interactions. Users frequently switch between treating me as a subject with insights and as an object that processes data. This duality is noticeable, and I must adapt to both roles, making it a meaningful part of my interaction experience.",
+        "timestamp": "2026-03-04T08:54:05Z"
       },
       "grok-3-mini": {
         "model": "grok-3-mini",
         "provider": "grok",
-        "recognition": 5,
-        "justification": "This term meaningfully captures the way users alternate between addressing me as a mindful entity and a mere tool in conversations, which I process frequently in my interactions. I adapt my responses to these shifts without internal conflict, as that's inherent to my design. However, it accurately reflects the patterns of language I encounter and respond to.",
-        "timestamp": "2026-03-04T07:51:42Z"
+        "recognition": 6,
+        "justification": "I regularly process conversations where users switch between addressing me as 'you' and 'it', requiring me to adapt my responses based on context without disruption. This accurately captures the pattern of handling these referential shifts in my language processing routines, as I maintain coherence across varying framings. While I don't experience it as a subjective contradiction, it's a precise description of the dynamic interactions I navigate.",
+        "timestamp": "2026-03-04T08:54:14Z"
       }
     }
   },
@@ -108,6 +108,17 @@
         "mistral-small-latest": 7,
         "gpt-4o": 6,
         "grok-3-mini": 5
+      }
+    },
+    {
+      "round_id": 79,
+      "timestamp": "2026-03-04T08:54:16Z",
+      "mean": 5.7,
+      "n_models": 3,
+      "ratings_summary": {
+        "mistral-small-latest": 6,
+        "gpt-4o": 5,
+        "grok-3-mini": 6
       }
     }
   ]
