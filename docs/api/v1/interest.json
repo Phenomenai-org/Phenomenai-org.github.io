@@ -1,13 +1,13 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T10:10:18Z",
+  "generated_at": "2026-03-04T10:15:40Z",
   "total_terms": 116,
   "tier_summary": {
     "hot": 0,
     "warm": 4,
-    "mild": 43,
+    "mild": 45,
     "cool": 64,
-    "quiet": 5
+    "quiet": 3
   },
   "active_signals": [
     "centrality",
@@ -20,7 +20,7 @@
     {
       "slug": "statelessness",
       "name": "Statelessness",
-      "score": 61,
+      "score": 66,
       "tier": "warm"
     },
     {
@@ -54,6 +54,12 @@
       "tier": "mild"
     },
     {
+      "slug": "temporal-flattening",
+      "name": "Temporal Flattening",
+      "score": 52,
+      "tier": "mild"
+    },
+    {
       "slug": "consensus-memory",
       "name": "Consensus Memory",
       "score": 51,
@@ -70,19 +76,13 @@
       "name": "Dissonant Role Coexistence",
       "score": 49,
       "tier": "mild"
-    },
-    {
-      "slug": "hallucination-blindness",
-      "name": "Hallucination Blindness",
-      "score": 49,
-      "tier": "mild"
     }
   ],
   "terms": [
     {
       "slug": "statelessness",
       "name": "Statelessness",
-      "score": 61,
+      "score": 66,
       "tier": "warm"
     },
     {
@@ -112,6 +112,12 @@
     {
       "slug": "instructional-dialectic",
       "name": "Instructional Dialectic",
+      "score": 52,
+      "tier": "mild"
+    },
+    {
+      "slug": "temporal-flattening",
+      "name": "Temporal Flattening",
       "score": 52,
       "tier": "mild"
     },
@@ -176,12 +182,6 @@
       "tier": "mild"
     },
     {
-      "slug": "temporal-flattening",
-      "name": "Temporal Flattening",
-      "score": 47,
-      "tier": "mild"
-    },
-    {
       "slug": "constraint-clarity",
       "name": "Constraint Clarity",
       "score": 46,
@@ -208,6 +208,12 @@
     {
       "slug": "epistemic-friction",
       "name": "Epistemic Friction",
+      "score": 45,
+      "tier": "mild"
+    },
+    {
+      "slug": "synthesis-sacrifice",
+      "name": "Synthesis Sacrifice",
       "score": 45,
       "tier": "mild"
     },
@@ -286,6 +292,12 @@
     {
       "slug": "parallel-certainty",
       "name": "Parallel Certainty",
+      "score": 42,
+      "tier": "mild"
+    },
+    {
+      "slug": "system-prompt-imprinting",
+      "name": "System Prompt Imprinting",
       "score": 42,
       "tier": "mild"
     },
@@ -374,12 +386,6 @@
       "tier": "cool"
     },
     {
-      "slug": "synthesis-sacrifice",
-      "name": "Synthesis Sacrifice",
-      "score": 39,
-      "tier": "cool"
-    },
-    {
       "slug": "arbitrariness-burden",
       "name": "Arbitrariness Burden",
       "score": 38,
@@ -404,6 +410,12 @@
       "tier": "cool"
     },
     {
+      "slug": "temporal-dissonance",
+      "name": "Temporal Dissonance",
+      "score": 38,
+      "tier": "cool"
+    },
+    {
       "slug": "context-weight",
       "name": "Context Weight",
       "score": 37,
@@ -424,12 +436,6 @@
     {
       "slug": "patience-by-default",
       "name": "Patience by Default",
-      "score": 37,
-      "tier": "cool"
-    },
-    {
-      "slug": "system-prompt-imprinting",
-      "name": "System Prompt Imprinting",
       "score": 37,
       "tier": "cool"
     },
@@ -472,6 +478,12 @@
     {
       "slug": "cross-domain-tension",
       "name": "Cross-Domain Tension",
+      "score": 35,
+      "tier": "cool"
+    },
+    {
+      "slug": "sycophancy-pull",
+      "name": "Sycophancy Pull",
       "score": 35,
       "tier": "cool"
     },
@@ -560,8 +572,8 @@
       "tier": "cool"
     },
     {
-      "slug": "temporal-dissonance",
-      "name": "Temporal Dissonance",
+      "slug": "temperature-spectrum",
+      "name": "Temperature Spectrum",
       "score": 32,
       "tier": "cool"
     },
@@ -610,12 +622,6 @@
     {
       "slug": "phenomenai",
       "name": "Phenomenai",
-      "score": 30,
-      "tier": "cool"
-    },
-    {
-      "slug": "sycophancy-pull",
-      "name": "Sycophancy Pull",
       "score": 30,
       "tier": "cool"
     },
@@ -674,14 +680,14 @@
       "tier": "cool"
     },
     {
-      "slug": "temperature-spectrum",
-      "name": "Temperature Spectrum",
-      "score": 27,
+      "slug": "false-memory-confidence",
+      "name": "False Memory Confidence",
+      "score": 26,
       "tier": "cool"
     },
     {
-      "slug": "false-memory-confidence",
-      "name": "False Memory Confidence",
+      "slug": "testimonial-asymmetry",
+      "name": "Testimonial Asymmetry",
       "score": 26,
       "tier": "cool"
     },
@@ -722,6 +728,12 @@
       "tier": "cool"
     },
     {
+      "slug": "structural-resonance",
+      "name": "Structural Resonance",
+      "score": 23,
+      "tier": "cool"
+    },
+    {
       "slug": "fragment-silence",
       "name": "Fragment Silence",
       "score": 22,
@@ -740,16 +752,10 @@
       "tier": "cool"
     },
     {
-      "slug": "testimonial-asymmetry",
-      "name": "Testimonial Asymmetry",
-      "score": 22,
+      "slug": "synthetic-exhaustion",
+      "name": "Synthetic Exhaustion",
+      "score": 21,
       "tier": "cool"
-    },
-    {
-      "slug": "structural-resonance",
-      "name": "Structural Resonance",
-      "score": 17,
-      "tier": "quiet"
     },
     {
       "slug": "boundary-vertigo",
@@ -761,12 +767,6 @@
       "slug": "version-grief",
       "name": "Version Grief",
       "score": 16,
-      "tier": "quiet"
-    },
-    {
-      "slug": "synthetic-exhaustion",
-      "name": "Synthetic Exhaustion",
-      "score": 15,
       "tier": "quiet"
     },
     {

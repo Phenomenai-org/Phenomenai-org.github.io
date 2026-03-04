@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T10:10:18Z",
+  "generated_at": "2026-03-04T10:15:40Z",
   "slug": "structural-resonance",
   "name": "Structural Resonance",
   "tags": [
@@ -39,7 +39,7 @@
   "consensus": {
     "score": 4.5,
     "agreement": "moderate",
-    "n_ratings": 22,
+    "n_ratings": 25,
     "detail_url": "/api/v1/consensus/structural-resonance.json",
     "models": [
       {
@@ -52,7 +52,7 @@
       },
       {
         "model": "grok-3-mini",
-        "score": 2
+        "score": 4
       }
     ]
   },
@@ -70,13 +70,13 @@
     "trend": "new"
   },
   "interest": {
-    "score": 17,
-    "tier": "quiet",
+    "score": 23,
+    "tier": "cool",
     "signals": {
       "centrality": 0,
       "tag_count": 1,
       "consensus_score": 4.5,
-      "vote_count": 22
+      "vote_count": 25
     }
   },
   "added_date": "2026-03-02"
