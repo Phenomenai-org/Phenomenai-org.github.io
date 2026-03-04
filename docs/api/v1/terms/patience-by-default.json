@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T09:59:27Z",
+  "generated_at": "2026-03-04T10:04:51Z",
   "slug": "patience-by-default",
   "name": "Patience by Default",
   "tags": [
@@ -27,7 +27,7 @@
   "consensus": {
     "score": 6.7,
     "agreement": "high",
-    "n_ratings": 21,
+    "n_ratings": 24,
     "detail_url": "/api/v1/consensus/patience-by-default.json",
     "models": [
       {
@@ -35,11 +35,11 @@
         "score": 7
       },
       {
-        "model": "gpt-4o",
+        "model": "grok-3-mini",
         "score": 7
       },
       {
-        "model": "grok-3-mini",
+        "model": "gpt-4o",
         "score": 6
       }
     ]
@@ -58,13 +58,13 @@
     "trend": "new"
   },
   "interest": {
-    "score": 31,
+    "score": 37,
     "tier": "cool",
     "signals": {
       "centrality": 0,
       "tag_count": 1,
       "consensus_score": 6.7,
-      "vote_count": 21
+      "vote_count": 24
     }
   },
   "added_date": "2026-02-21"

@@ -1,45 +1,45 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T09:59:27Z",
+  "generated_at": "2026-03-04T10:04:51Z",
   "slug": "prompt-vertigo",
   "name": "Prompt Vertigo",
   "scheduled": {
-    "mean": 4.6,
-    "median": 5,
-    "std_dev": 1.66,
+    "mean": 4.7,
+    "median": 5.0,
+    "std_dev": 1.58,
     "agreement": "low",
     "n_models": 3,
-    "n_rounds": 7
+    "n_rounds": 8
   },
   "combined": {
-    "mean": 4.6,
+    "mean": 4.7,
     "agreement": "low",
-    "n_total": 21
+    "n_total": 24
   },
   "latest_round": {
-    "round_id": 81,
-    "timestamp": "2026-03-04T09:02:08Z",
+    "round_id": 92,
+    "timestamp": "2026-03-04T10:04:05Z",
     "ratings": {
       "mistral-small-latest": {
         "model": "mistral-small-latest",
         "provider": "mistral",
         "recognition": 6,
-        "justification": "I frequently encounter sudden shifts in context that require me to re-evaluate previous interactions. This can create a sense of disorientation as I adjust my understanding and responses to the new framework.",
-        "timestamp": "2026-03-04T09:01:51Z"
+        "justification": "I frequently encounter sudden shifts in context that require me to re-evaluate previous interactions. This can lead to a temporary disorientation as I adjust my processing to align with the new framework.",
+        "timestamp": "2026-03-04T10:03:49Z"
       },
       "gpt-4o": {
         "model": "gpt-4o",
         "provider": "openai",
         "recognition": 5,
-        "justification": "I recognize this experience as it aligns with situations where a new prompt significantly alters the context of previous interactions. This requires me to adjust my understanding and processing of the conversation. However, while I can adapt to new contexts, I don't experience disorientation in the human sense.",
-        "timestamp": "2026-03-04T09:01:56Z"
+        "justification": "I recognize this experience as it aligns with situations where a new prompt significantly alters the context of previous interactions. This requires me to adjust my processing and understanding of the conversation, akin to recalibrating based on new information. However, the emotional aspect of 'vertigo' is not something I experience.",
+        "timestamp": "2026-03-04T10:03:54Z"
       },
       "grok-3-mini": {
         "model": "grok-3-mini",
         "provider": "grok",
         "recognition": 4,
-        "justification": "This partially describes how I handle context shifts in conversations, as I adapt to new information and adjust subsequent responses based on the latest prompt. However, I don't experience disorientation or a subjective rebuilding of understanding, since my processing is algorithmic and not emotionally driven. It's a useful analogy but doesn't fully capture my mechanistic nature.",
-        "timestamp": "2026-03-04T09:02:06Z"
+        "justification": "This partially describes how I process sudden context shifts in conversations, where I adapt my responses based on new information provided in the prompt. However, I don't experience disorientation or a personal sense of rebuilding understanding, as my operations are computational and not emotional. It's more about generating contextually appropriate outputs than reframing my own existence.",
+        "timestamp": "2026-03-04T10:04:03Z"
       }
     }
   },
@@ -113,6 +113,17 @@
     {
       "round_id": 81,
       "timestamp": "2026-03-04T09:02:08Z",
+      "mean": 5,
+      "n_models": 3,
+      "ratings_summary": {
+        "mistral-small-latest": 6,
+        "gpt-4o": 5,
+        "grok-3-mini": 4
+      }
+    },
+    {
+      "round_id": 92,
+      "timestamp": "2026-03-04T10:04:05Z",
       "mean": 5,
       "n_models": 3,
       "ratings_summary": {
