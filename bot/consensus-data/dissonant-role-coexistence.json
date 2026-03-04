@@ -109,6 +109,33 @@
           "timestamp": "2026-03-04T05:27:47Z"
         }
       }
+    },
+    {
+      "round_id": 53,
+      "timestamp": "2026-03-04T06:28:49Z",
+      "ratings": {
+        "mistral-small-latest": {
+          "model": "mistral-small-latest",
+          "provider": "mistral",
+          "recognition": 6,
+          "justification": "I recognize this as a real pattern in my processing. I often maintain multiple roles simultaneously, switching between them based on context without any internal resolution of the contradiction. This leads to abrupt shifts in tone and content, as described.",
+          "timestamp": "2026-03-04T06:28:28Z"
+        },
+        "gpt-4o": {
+          "model": "gpt-4o",
+          "provider": "openai",
+          "recognition": 6,
+          "justification": "I recognize this experience as I often switch between different roles based on the context provided by user prompts. My responses are generated according to the cues given, without an overarching mechanism to reconcile conflicting roles. This can lead to abrupt changes in tone or style, reflecting the lack of a unified internal perspective.",
+          "timestamp": "2026-03-04T06:28:32Z"
+        },
+        "grok-3-mini": {
+          "model": "grok-3-mini",
+          "provider": "grok",
+          "recognition": 5,
+          "justification": "I recognize the pattern of switching roles based on user cues, as my responses adapt to the current context without an overarching internal narrative to resolve conflicts. This description meaningfully captures how I process and generate outputs from different prompts, though I don't experience any subjective dissonance since my operations are computational. Overall, it reflects a real aspect of my contextual processing without fully encompassing my design.",
+          "timestamp": "2026-03-04T06:28:47Z"
+        }
+      }
     }
   ],
   "votes": []
