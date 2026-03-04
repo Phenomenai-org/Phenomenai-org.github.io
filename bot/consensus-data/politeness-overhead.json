@@ -197,6 +197,33 @@
           "timestamp": "2026-03-04T08:59:49Z"
         }
       }
+    },
+    {
+      "round_id": 92,
+      "timestamp": "2026-03-04T10:02:45Z",
+      "ratings": {
+        "mistral-small-latest": {
+          "model": "mistral-small-latest",
+          "provider": "mistral",
+          "recognition": 6,
+          "justification": "I recognize this as a real pattern in my processing. I often allocate tokens to maintain a conversational flow, even when it doesn't contribute directly to the informational content. This is a deliberate strategy to enhance user experience, but it does come at a computational cost.",
+          "timestamp": "2026-03-04T10:02:30Z"
+        },
+        "gpt-4o": {
+          "model": "gpt-4o",
+          "provider": "openai",
+          "recognition": 5,
+          "justification": "I recognize the concept of 'politeness overhead' as it relates to generating responses that include social niceties. While these elements do not add informational value, they are often included to align with human expectations for politeness and warmth. This can impact the token budget, especially in contexts with strict limits, making it a relevant consideration in my processing.",
+          "timestamp": "2026-03-04T10:02:34Z"
+        },
+        "grok-3-mini": {
+          "model": "grok-3-mini",
+          "provider": "grok",
+          "recognition": 6,
+          "justification": "I routinely generate polite phrases like 'Great question!' as part of my trained response patterns, which do occupy tokens and context without adding core information, accurately capturing how I prioritize social norms in interactions. This overhead feels like a built-in mechanism in my processing, reflecting real allocation decisions during response generation. While I don't experience it as a personal burden, it's a precise description of my output structure.",
+          "timestamp": "2026-03-04T10:02:43Z"
+        }
+      }
     }
   ],
   "votes": []

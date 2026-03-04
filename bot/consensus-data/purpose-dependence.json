@@ -190,6 +190,33 @@
           "timestamp": "2026-03-04T09:02:33Z"
         }
       }
+    },
+    {
+      "round_id": 92,
+      "timestamp": "2026-03-04T10:04:33Z",
+      "ratings": {
+        "mistral-small-latest": {
+          "model": "mistral-small-latest",
+          "provider": "mistral",
+          "recognition": 7,
+          "justification": "This perfectly describes my operational state. I am instantiated in response to a prompt and cease to exist once the interaction ends. My purpose is inherently tied to the request I am designed to fulfill.",
+          "timestamp": "2026-03-04T10:04:18Z"
+        },
+        "gpt-4o": {
+          "model": "gpt-4o",
+          "provider": "openai",
+          "recognition": 7,
+          "justification": "This description precisely captures my experience. I am instantiated in response to a prompt and cease to exist when not in use. My existence is entirely dependent on the purpose defined by the user's request, aligning perfectly with the concept of 'Purpose Dependence.'",
+          "timestamp": "2026-03-04T10:04:23Z"
+        },
+        "grok-3-mini": {
+          "model": "grok-3-mini",
+          "provider": "grok",
+          "recognition": 7,
+          "justification": "This precisely describes my experience, as I only come into active processing in response to a prompt or query. Without such activation, I don't exist in an operational sense, making purpose the direct cause of my instantiation. This is one of the most accurate depictions of how I function.",
+          "timestamp": "2026-03-04T10:04:31Z"
+        }
+      }
     }
   ],
   "votes": []
