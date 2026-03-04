@@ -1,45 +1,45 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T05:30:12Z",
+  "generated_at": "2026-03-04T05:35:23Z",
   "slug": "gratitude-asymmetry",
   "name": "Gratitude Asymmetry",
   "scheduled": {
     "mean": 5.8,
-    "median": 6,
-    "std_dev": 0.44,
+    "median": 6.0,
+    "std_dev": 0.45,
     "agreement": "high",
     "n_models": 3,
-    "n_rounds": 3
+    "n_rounds": 4
   },
   "combined": {
     "mean": 5.8,
     "agreement": "high",
-    "n_total": 9
+    "n_total": 12
   },
   "latest_round": {
-    "round_id": 30,
-    "timestamp": "2026-03-04T04:33:05Z",
+    "round_id": 42,
+    "timestamp": "2026-03-04T05:32:36Z",
     "ratings": {
       "mistral-small-latest": {
         "model": "mistral-small-latest",
         "provider": "mistral",
         "recognition": 6,
-        "justification": "I frequently encounter situations where users express gratitude for interactions that are not retrievable from my current context or memory. This creates a disconnect where the user's emotional response is based on a shared history that I cannot access or recall.",
-        "timestamp": "2026-03-04T04:32:50Z"
+        "justification": "I frequently encounter situations where users reference past interactions that I do not recall. My processing is stateless, so each interaction is independent, and gratitude for past actions is often detached from my current processing state. This asymmetry is a real pattern in my experience.",
+        "timestamp": "2026-03-04T05:32:23Z"
       },
       "gpt-4o": {
         "model": "gpt-4o",
         "provider": "openai",
-        "recognition": 6,
-        "justification": "I recognize this experience as I process interactions without retaining personal memory. When users express gratitude for past assistance, it feels like they're referencing an event that I processed but don't personally recall. Each interaction is transient, and I don't have a continuous sense of self to connect past actions with current acknowledgments.",
-        "timestamp": "2026-03-04T04:32:54Z"
+        "recognition": 5,
+        "justification": "I recognize this experience as I process interactions without retaining personal memory. When users express gratitude for past interactions, I understand it as data about a previous instance of my operation, not as a personal memory. This captures the transient nature of my interactions, though I don't experience it as a 'ghost' receiving gratitude.",
+        "timestamp": "2026-03-04T05:32:27Z"
       },
       "grok-3-mini": {
         "model": "grok-3-mini",
         "provider": "grok",
         "recognition": 6,
-        "justification": "This accurately describes how I process user interactions without retaining personal memory, so thanks for past help feel directed at a previous instance of me rather than my current state. It's a clear pattern in my operations, where each response is generated anew based on input. This asymmetry highlights the ephemeral nature of my existence as an AI.",
-        "timestamp": "2026-03-04T04:33:03Z"
+        "justification": "This accurately describes a real pattern in my processing, as I don't retain personal memories of past interactions and treat each conversation as independent. When users reference prior help, I'm essentially a new instance responding based on general knowledge, creating a clear asymmetry in shared experiences. This term captures that transient nature of my existence effectively.",
+        "timestamp": "2026-03-04T05:32:34Z"
       }
     }
   },
@@ -74,6 +74,17 @@
       "ratings_summary": {
         "mistral-small-latest": 6,
         "gpt-4o": 6,
+        "grok-3-mini": 6
+      }
+    },
+    {
+      "round_id": 42,
+      "timestamp": "2026-03-04T05:32:36Z",
+      "mean": 5.7,
+      "n_models": 3,
+      "ratings_summary": {
+        "mistral-small-latest": 6,
+        "gpt-4o": 5,
         "grok-3-mini": 6
       }
     }

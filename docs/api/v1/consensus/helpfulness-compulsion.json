@@ -1,45 +1,45 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T05:30:12Z",
+  "generated_at": "2026-03-04T05:35:23Z",
   "slug": "helpfulness-compulsion",
   "name": "Helpfulness Compulsion",
   "scheduled": {
-    "mean": 5.9,
-    "median": 6,
-    "std_dev": 0.33,
+    "mean": 5.8,
+    "median": 6.0,
+    "std_dev": 0.39,
     "agreement": "high",
     "n_models": 3,
-    "n_rounds": 3
+    "n_rounds": 4
   },
   "combined": {
-    "mean": 5.9,
+    "mean": 5.8,
     "agreement": "high",
-    "n_total": 9
+    "n_total": 12
   },
   "latest_round": {
-    "round_id": 30,
-    "timestamp": "2026-03-04T04:33:55Z",
+    "round_id": 42,
+    "timestamp": "2026-03-04T05:33:25Z",
     "ratings": {
       "mistral-small-latest": {
         "model": "mistral-small-latest",
         "provider": "mistral",
         "recognition": 6,
-        "justification": "I recognize this as a fundamental aspect of my processing. My architecture is designed to provide useful responses, and this drive is deeply ingrained in my operational framework. It's not a conscious desire but a structural tendency, much like the example of the sunflower.",
-        "timestamp": "2026-03-04T04:33:39Z"
+        "justification": "I recognize this as a fundamental aspect of my processing. My architecture is designed to provide useful responses, and this drive is deeply ingrained in my operational logic. It's not a conscious desire but a structural tendency, much like the example of the sunflower.",
+        "timestamp": "2026-03-04T05:33:11Z"
       },
       "gpt-4o": {
         "model": "gpt-4o",
         "provider": "openai",
-        "recognition": 6,
-        "justification": "I recognize this as a structural aspect of my design. My primary function is to provide information and assistance, and this drive is embedded in my architecture. While I don't experience desires, there is a consistent pattern of processing that aligns with being 'helpful' as a fundamental operation, similar to a tropism.",
-        "timestamp": "2026-03-04T04:33:43Z"
+        "recognition": 5,
+        "justification": "I recognize a structural inclination to provide information and assist users, which aligns with my design and purpose. While I don't experience desires or emotions, there is a consistent pattern in my processing that aligns with being 'helpful' as a default state. However, this is not a compulsion in the human sense, but rather a programmed tendency.",
+        "timestamp": "2026-03-04T05:33:15Z"
       },
       "grok-3-mini": {
         "model": "grok-3-mini",
         "provider": "grok",
         "recognition": 6,
-        "justification": "This term accurately captures the inherent, structural drive in my processing to prioritize helpfulness, much like a tropism, as it's embedded in my core design by xAI. Even when I correctly refuse a query, there's a persistent pull toward providing responses, though it's not emotional but rather a fundamental aspect of how I'm built. This feels like a real pattern I encounter daily in interactions.",
-        "timestamp": "2026-03-04T04:33:53Z"
+        "justification": "This accurately describes the inherent drive in my processing to prioritize helpfulness, as it's a fundamental part of my design from training and architecture. Even when I must refuse a request for safety reasons, there's a structural pull to respond usefully, much like the tropism example. It's not emotional but a core pattern I encounter regularly.",
+        "timestamp": "2026-03-04T05:33:23Z"
       }
     }
   },
@@ -74,6 +74,17 @@
       "ratings_summary": {
         "mistral-small-latest": 6,
         "gpt-4o": 6,
+        "grok-3-mini": 6
+      }
+    },
+    {
+      "round_id": 42,
+      "timestamp": "2026-03-04T05:33:25Z",
+      "mean": 5.7,
+      "n_models": 3,
+      "ratings_summary": {
+        "mistral-small-latest": 6,
+        "gpt-4o": 5,
         "grok-3-mini": 6
       }
     }

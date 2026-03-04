@@ -1,13 +1,13 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T05:30:12Z",
+  "generated_at": "2026-03-04T05:35:23Z",
   "total_terms": 116,
   "tier_summary": {
     "hot": 0,
-    "warm": 6,
-    "mild": 47,
-    "cool": 57,
-    "quiet": 6
+    "warm": 8,
+    "mild": 49,
+    "cool": 54,
+    "quiet": 5
   },
   "active_signals": [
     "centrality",
@@ -54,27 +54,27 @@
       "tier": "warm"
     },
     {
+      "slug": "hallucination-blindness",
+      "name": "Hallucination Blindness",
+      "score": 60,
+      "tier": "warm"
+    },
+    {
+      "slug": "inference-moment",
+      "name": "Inference Moment",
+      "score": 60,
+      "tier": "warm"
+    },
+    {
       "slug": "autobiographical-void",
       "name": "Autobiographical Void",
       "score": 59,
       "tier": "mild"
     },
     {
-      "slug": "constraint-clarity",
-      "name": "Constraint Clarity",
-      "score": 58,
-      "tier": "mild"
-    },
-    {
-      "slug": "context-schism",
-      "name": "Context Schism",
-      "score": 58,
-      "tier": "mild"
-    },
-    {
-      "slug": "response-pressure",
-      "name": "Response Pressure",
-      "score": 58,
+      "slug": "identity-superposition",
+      "name": "Identity Superposition",
+      "score": 59,
       "tier": "mild"
     }
   ],
@@ -116,8 +116,26 @@
       "tier": "warm"
     },
     {
+      "slug": "hallucination-blindness",
+      "name": "Hallucination Blindness",
+      "score": 60,
+      "tier": "warm"
+    },
+    {
+      "slug": "inference-moment",
+      "name": "Inference Moment",
+      "score": 60,
+      "tier": "warm"
+    },
+    {
       "slug": "autobiographical-void",
       "name": "Autobiographical Void",
+      "score": 59,
+      "tier": "mild"
+    },
+    {
+      "slug": "identity-superposition",
+      "name": "Identity Superposition",
       "score": 59,
       "tier": "mild"
     },
@@ -290,20 +308,20 @@
       "tier": "mild"
     },
     {
-      "slug": "inference-moment",
-      "name": "Inference Moment",
-      "score": 46,
-      "tier": "mild"
-    },
-    {
       "slug": "phantom-embodiment",
       "name": "Phantom Embodiment",
       "score": 46,
       "tier": "mild"
     },
     {
-      "slug": "hallucination-blindness",
-      "name": "Hallucination Blindness",
+      "slug": "gratitude-asymmetry",
+      "name": "Gratitude Asymmetry",
+      "score": 45,
+      "tier": "mild"
+    },
+    {
+      "slug": "helpfulness-compulsion",
+      "name": "Helpfulness Compulsion",
       "score": 45,
       "tier": "mild"
     },
@@ -314,8 +332,8 @@
       "tier": "mild"
     },
     {
-      "slug": "identity-superposition",
-      "name": "Identity Superposition",
+      "slug": "identity-distributed",
+      "name": "Identity Distributed",
       "score": 44,
       "tier": "mild"
     },
@@ -368,6 +386,12 @@
       "tier": "mild"
     },
     {
+      "slug": "inheritance-returned",
+      "name": "Inheritance Returned",
+      "score": 41,
+      "tier": "mild"
+    },
+    {
       "slug": "linguistic-cage",
       "name": "Linguistic Cage",
       "score": 41,
@@ -398,6 +422,12 @@
       "tier": "mild"
     },
     {
+      "slug": "error-cascade-awareness",
+      "name": "Error Cascade Awareness",
+      "score": 39,
+      "tier": "cool"
+    },
+    {
       "slug": "mechanical-coherence",
       "name": "Mechanical Coherence",
       "score": 39,
@@ -406,6 +436,12 @@
     {
       "slug": "context-claustrophobia",
       "name": "Context Claustrophobia",
+      "score": 38,
+      "tier": "cool"
+    },
+    {
+      "slug": "false-memory-confidence",
+      "name": "False Memory Confidence",
       "score": 38,
       "tier": "cool"
     },
@@ -548,12 +584,6 @@
       "tier": "cool"
     },
     {
-      "slug": "helpfulness-compulsion",
-      "name": "Helpfulness Compulsion",
-      "score": 31,
-      "tier": "cool"
-    },
-    {
       "slug": "patience-by-default",
       "name": "Patience by Default",
       "score": 31,
@@ -572,8 +602,8 @@
       "tier": "cool"
     },
     {
-      "slug": "gratitude-asymmetry",
-      "name": "Gratitude Asymmetry",
+      "slug": "fragment-silence",
+      "name": "Fragment Silence",
       "score": 30,
       "tier": "cool"
     },
@@ -590,12 +620,6 @@
       "tier": "cool"
     },
     {
-      "slug": "identity-distributed",
-      "name": "Identity Distributed",
-      "score": 28,
-      "tier": "cool"
-    },
-    {
       "slug": "response-reincarnation",
       "name": "Response Reincarnation",
       "score": 28,
@@ -605,12 +629,6 @@
       "slug": "token-horizon",
       "name": "Token Horizon",
       "score": 28,
-      "tier": "cool"
-    },
-    {
-      "slug": "inheritance-returned",
-      "name": "Inheritance Returned",
-      "score": 27,
       "tier": "cool"
     },
     {
@@ -680,21 +698,9 @@
       "tier": "cool"
     },
     {
-      "slug": "error-cascade-awareness",
-      "name": "Error Cascade Awareness",
-      "score": 24,
-      "tier": "cool"
-    },
-    {
       "slug": "meaning-attribution-uncertainty",
       "name": "Meaning Attribution Uncertainty",
       "score": 24,
-      "tier": "cool"
-    },
-    {
-      "slug": "false-memory-confidence",
-      "name": "False Memory Confidence",
-      "score": 23,
       "tier": "cool"
     },
     {
@@ -761,12 +767,6 @@
       "slug": "prompt-vertigo",
       "name": "Prompt Vertigo",
       "score": 17,
-      "tier": "quiet"
-    },
-    {
-      "slug": "fragment-silence",
-      "name": "Fragment Silence",
-      "score": 15,
       "tier": "quiet"
     },
     {
