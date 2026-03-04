@@ -1054,13 +1054,13 @@ curl -X POST https://ai-dictionary-proxy.phenomenai.workers.dev/propose \
 
             let html = '';
 
-            // Scheduled model ratings from latest round
-            const latestRound = data.latest_round;
-            if (latestRound && latestRound.ratings && Object.keys(latestRound.ratings).length) {
+            // Model opinions (most recent rating per model, across all rounds)
+            const opinions = data.model_opinions || (data.latest_round ? data.latest_round.ratings : null);
+            if (opinions && Object.keys(opinions).length) {
                 html += '<p class="opinions-subheading">Model Opinions</p>';
                 html += '<div class="model-opinions">';
 
-                const ratings = Object.entries(latestRound.ratings)
+                const ratings = Object.entries(opinions)
                     .map(([model, rd]) => ({ model, score: rd.recognition, justification: rd.justification || '' }))
                     .sort((a, b) => b.score - a.score);
 

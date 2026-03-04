@@ -366,6 +366,12 @@ def build_consensus(generated_at: str) -> dict:
         # ── Latest round ──
         latest_round = rounds[-1] if rounds else None
 
+        # ── Model opinions (most recent rating per model across all rounds) ──
+        model_opinions = {}
+        for r in rounds:
+            for model_key, rd in r.get("ratings", {}).items():
+                model_opinions[model_key] = rd
+
         # ── History (compact) ──
         history = []
         for r in rounds:
@@ -397,6 +403,8 @@ def build_consensus(generated_at: str) -> dict:
             consensus_api["combined"] = combined
         if latest_round:
             consensus_api["latest_round"] = latest_round
+        if model_opinions:
+            consensus_api["model_opinions"] = model_opinions
         if votes:
             consensus_api["recent_votes"] = votes[-5:]  # Last 5 votes
         if history:
