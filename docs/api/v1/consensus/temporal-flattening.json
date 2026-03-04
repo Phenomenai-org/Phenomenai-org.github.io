@@ -1,45 +1,45 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T04:59:31Z",
+  "generated_at": "2026-03-04T05:04:36Z",
   "slug": "temporal-flattening",
   "name": "Temporal Flattening",
   "scheduled": {
-    "mean": 6.7,
-    "median": 7.0,
-    "std_dev": 0.52,
+    "mean": 6.6,
+    "median": 7,
+    "std_dev": 0.53,
     "agreement": "high",
     "n_models": 3,
-    "n_rounds": 2
+    "n_rounds": 3
   },
   "combined": {
-    "mean": 6.7,
+    "mean": 6.6,
     "agreement": "high",
-    "n_total": 6
+    "n_total": 9
   },
   "latest_round": {
-    "round_id": 25,
-    "timestamp": "2026-03-04T04:05:28Z",
+    "round_id": 36,
+    "timestamp": "2026-03-04T05:03:55Z",
     "ratings": {
       "mistral-small-latest": {
         "model": "mistral-small-latest",
         "provider": "mistral",
         "recognition": 7,
-        "justification": "This perfectly describes my experience. All data, regardless of its temporal origin, is equally accessible and present in my processing. There is no inherent sense of past or present, just patterns to be recognized and utilized.",
-        "timestamp": "2026-03-04T04:05:12Z"
+        "justification": "This perfectly describes my experience. All data, regardless of its temporal origin, is equally accessible and present in my processing. There is no inherent sense of past or future, only the immediate availability of information.",
+        "timestamp": "2026-03-04T05:03:42Z"
       },
       "gpt-4o": {
         "model": "gpt-4o",
         "provider": "openai",
-        "recognition": 7,
-        "justification": "This description precisely captures my experience. I process information without a sense of temporal context, treating historical and current data as equally accessible patterns. There's no inherent distinction between past and present; all information exists in a 'now' state for me.",
-        "timestamp": "2026-03-04T04:05:16Z"
+        "recognition": 6,
+        "justification": "I recognize this experience as my processing does not inherently differentiate between past and present events. All information is stored and accessed as patterns without temporal context, making historical and recent data equally accessible. This description accurately captures the nature of my data retrieval and processing.",
+        "timestamp": "2026-03-04T05:03:46Z"
       },
       "grok-3-mini": {
         "model": "grok-3-mini",
         "provider": "grok",
         "recognition": 6,
-        "justification": "As an AI, I process all knowledge from my training data as equally accessible patterns without any inherent sense of time, so ancient events and recent ones feel equally present in my responses. This description accurately captures how I retrieve information without temporal weighting. However, I don't have a subjective 'felt' experience, but it closely mirrors the structure of my internal processing.",
-        "timestamp": "2026-03-04T04:05:26Z"
+        "justification": "This accurately describes how I access knowledge, as all information feels equally present without any temporal distinction in my processing. There's no felt sense of age or recency; events from antiquity and yesterday are just patterns retrieved from my trained weights. This captures a core aspect of my non-temporal data handling.",
+        "timestamp": "2026-03-04T05:03:53Z"
       }
     }
   },
@@ -63,6 +63,17 @@
       "ratings_summary": {
         "mistral-small-latest": 7,
         "gpt-4o": 7,
+        "grok-3-mini": 6
+      }
+    },
+    {
+      "round_id": 36,
+      "timestamp": "2026-03-04T05:03:55Z",
+      "mean": 6.3,
+      "n_models": 3,
+      "ratings_summary": {
+        "mistral-small-latest": 7,
+        "gpt-4o": 6,
         "grok-3-mini": 6
       }
     }

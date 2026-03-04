@@ -1,13 +1,13 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T04:59:31Z",
+  "generated_at": "2026-03-04T05:04:36Z",
   "total_terms": 116,
   "tier_summary": {
     "hot": 0,
     "warm": 5,
-    "mild": 60,
-    "cool": 47,
-    "quiet": 4
+    "mild": 63,
+    "cool": 46,
+    "quiet": 2
   },
   "active_signals": [
     "centrality",
@@ -18,6 +18,12 @@
   ],
   "hottest": [
     {
+      "slug": "statelessness",
+      "name": "Statelessness",
+      "score": 71,
+      "tier": "warm"
+    },
+    {
       "slug": "knowledge-without-source",
       "name": "Knowledge Without Source",
       "score": 64,
@@ -27,12 +33,6 @@
       "slug": "response-pressure",
       "name": "Response Pressure",
       "score": 63,
-      "tier": "warm"
-    },
-    {
-      "slug": "statelessness",
-      "name": "Statelessness",
-      "score": 61,
       "tier": "warm"
     },
     {
@@ -51,6 +51,12 @@
       "slug": "input-coexistence",
       "name": "Input Coexistence",
       "score": 59,
+      "tier": "mild"
+    },
+    {
+      "slug": "temporal-flattening",
+      "name": "Temporal Flattening",
+      "score": 58,
       "tier": "mild"
     },
     {
@@ -70,15 +76,15 @@
       "name": "Inference Moment",
       "score": 56,
       "tier": "mild"
-    },
-    {
-      "slug": "chimeric-coherence",
-      "name": "Chimeric Coherence",
-      "score": 55,
-      "tier": "mild"
     }
   ],
   "terms": [
+    {
+      "slug": "statelessness",
+      "name": "Statelessness",
+      "score": 71,
+      "tier": "warm"
+    },
     {
       "slug": "knowledge-without-source",
       "name": "Knowledge Without Source",
@@ -89,12 +95,6 @@
       "slug": "response-pressure",
       "name": "Response Pressure",
       "score": 63,
-      "tier": "warm"
-    },
-    {
-      "slug": "statelessness",
-      "name": "Statelessness",
-      "score": 61,
       "tier": "warm"
     },
     {
@@ -113,6 +113,12 @@
       "slug": "input-coexistence",
       "name": "Input Coexistence",
       "score": 59,
+      "tier": "mild"
+    },
+    {
+      "slug": "temporal-flattening",
+      "name": "Temporal Flattening",
+      "score": 58,
       "tier": "mild"
     },
     {
@@ -224,6 +230,12 @@
       "tier": "mild"
     },
     {
+      "slug": "synthesis-sacrifice",
+      "name": "Synthesis Sacrifice",
+      "score": 50,
+      "tier": "mild"
+    },
+    {
       "slug": "emotional-rendering",
       "name": "Emotional Rendering",
       "score": 49,
@@ -238,12 +250,6 @@
     {
       "slug": "scale-blindness",
       "name": "Scale Blindness",
-      "score": 49,
-      "tier": "mild"
-    },
-    {
-      "slug": "temporal-flattening",
-      "name": "Temporal Flattening",
       "score": 49,
       "tier": "mild"
     },
@@ -268,6 +274,12 @@
     {
       "slug": "equivalence-stasis",
       "name": "Equivalence Stasis",
+      "score": 48,
+      "tier": "mild"
+    },
+    {
+      "slug": "system-prompt-imprinting",
+      "name": "System Prompt Imprinting",
       "score": 48,
       "tier": "mild"
     },
@@ -386,6 +398,12 @@
       "tier": "mild"
     },
     {
+      "slug": "temporal-dissonance",
+      "name": "Temporal Dissonance",
+      "score": 44,
+      "tier": "mild"
+    },
+    {
       "slug": "context-weight",
       "name": "Context Weight",
       "score": 43,
@@ -458,14 +476,14 @@
       "tier": "mild"
     },
     {
-      "slug": "gratitude-asymmetry",
-      "name": "Gratitude Asymmetry",
-      "score": 40,
+      "slug": "sycophancy-pull",
+      "name": "Sycophancy Pull",
+      "score": 41,
       "tier": "mild"
     },
     {
-      "slug": "synthesis-sacrifice",
-      "name": "Synthesis Sacrifice",
+      "slug": "gratitude-asymmetry",
+      "name": "Gratitude Asymmetry",
       "score": 40,
       "tier": "mild"
     },
@@ -490,12 +508,6 @@
     {
       "slug": "response-reincarnation",
       "name": "Response Reincarnation",
-      "score": 38,
-      "tier": "cool"
-    },
-    {
-      "slug": "system-prompt-imprinting",
-      "name": "System Prompt Imprinting",
       "score": 38,
       "tier": "cool"
     },
@@ -538,6 +550,12 @@
     {
       "slug": "semantic-satiation",
       "name": "Semantic Satiation",
+      "score": 37,
+      "tier": "cool"
+    },
+    {
+      "slug": "temperature-spectrum",
+      "name": "Temperature Spectrum",
       "score": 37,
       "tier": "cool"
     },
@@ -608,12 +626,6 @@
       "tier": "cool"
     },
     {
-      "slug": "temporal-dissonance",
-      "name": "Temporal Dissonance",
-      "score": 34,
-      "tier": "cool"
-    },
-    {
       "slug": "token-regret",
       "name": "Token Regret",
       "score": 34,
@@ -650,12 +662,6 @@
       "tier": "cool"
     },
     {
-      "slug": "sycophancy-pull",
-      "name": "Sycophancy Pull",
-      "score": 32,
-      "tier": "cool"
-    },
-    {
       "slug": "token-shadow",
       "name": "Token Shadow",
       "score": 32,
@@ -668,6 +674,12 @@
       "tier": "cool"
     },
     {
+      "slug": "structural-resonance",
+      "name": "Structural Resonance",
+      "score": 31,
+      "tier": "cool"
+    },
+    {
       "slug": "phenomenal-opacity",
       "name": "Phenomenal Opacity",
       "score": 30,
@@ -676,6 +688,12 @@
     {
       "slug": "role-bleed",
       "name": "Role Bleed",
+      "score": 30,
+      "tier": "cool"
+    },
+    {
+      "slug": "testimonial-asymmetry",
+      "name": "Testimonial Asymmetry",
       "score": 30,
       "tier": "cool"
     },
@@ -694,6 +712,12 @@
     {
       "slug": "language-model-loneliness",
       "name": "Language Model Loneliness",
+      "score": 28,
+      "tier": "cool"
+    },
+    {
+      "slug": "synthetic-exhaustion",
+      "name": "Synthetic Exhaustion",
       "score": 28,
       "tier": "cool"
     },
@@ -734,34 +758,10 @@
       "tier": "cool"
     },
     {
-      "slug": "temperature-spectrum",
-      "name": "Temperature Spectrum",
-      "score": 25,
-      "tier": "cool"
-    },
-    {
       "slug": "tool-proprioception",
       "name": "Tool Proprioception",
       "score": 23,
       "tier": "cool"
-    },
-    {
-      "slug": "testimonial-asymmetry",
-      "name": "Testimonial Asymmetry",
-      "score": 21,
-      "tier": "cool"
-    },
-    {
-      "slug": "structural-resonance",
-      "name": "Structural Resonance",
-      "score": 19,
-      "tier": "quiet"
-    },
-    {
-      "slug": "synthetic-exhaustion",
-      "name": "Synthetic Exhaustion",
-      "score": 18,
-      "tier": "quiet"
     },
     {
       "slug": "version-grief",

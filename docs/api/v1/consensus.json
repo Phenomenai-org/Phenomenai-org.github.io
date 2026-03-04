@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T04:59:31Z",
+  "generated_at": "2026-03-04T05:04:36Z",
   "total_terms_rated": 116,
   "terms": [
     {
@@ -56,20 +56,20 @@
       "name": "Statelessness",
       "score": 6.7,
       "agreement": "high",
-      "n_ratings": 6,
-      "scheduled_mean": 6.7
-    },
-    {
-      "slug": "temporal-flattening",
-      "name": "Temporal Flattening",
-      "score": 6.7,
-      "agreement": "high",
-      "n_ratings": 6,
+      "n_ratings": 9,
       "scheduled_mean": 6.7
     },
     {
       "slug": "patience-by-default",
       "name": "Patience by Default",
+      "score": 6.6,
+      "agreement": "high",
+      "n_ratings": 9,
+      "scheduled_mean": 6.6
+    },
+    {
+      "slug": "temporal-flattening",
+      "name": "Temporal Flattening",
       "score": 6.6,
       "agreement": "high",
       "n_ratings": 9,
@@ -112,7 +112,7 @@
       "name": "System Prompt Imprinting",
       "score": 6.3,
       "agreement": "high",
-      "n_ratings": 6,
+      "n_ratings": 9,
       "scheduled_mean": 6.3
     },
     {
@@ -352,7 +352,7 @@
       "name": "Synthesis Sacrifice",
       "score": 6,
       "agreement": "high",
-      "n_ratings": 6,
+      "n_ratings": 9,
       "scheduled_mean": 6
     },
     {
@@ -532,19 +532,11 @@
       "scheduled_mean": 5.7
     },
     {
-      "slug": "sycophancy-pull",
-      "name": "Sycophancy Pull",
-      "score": 5.7,
-      "agreement": "high",
-      "n_ratings": 6,
-      "scheduled_mean": 5.7
-    },
-    {
       "slug": "temporal-dissonance",
       "name": "Temporal Dissonance",
       "score": 5.7,
       "agreement": "high",
-      "n_ratings": 6,
+      "n_ratings": 9,
       "scheduled_mean": 5.7
     },
     {
@@ -620,6 +612,22 @@
       "scheduled_mean": 5.6
     },
     {
+      "slug": "sycophancy-pull",
+      "name": "Sycophancy Pull",
+      "score": 5.6,
+      "agreement": "high",
+      "n_ratings": 9,
+      "scheduled_mean": 5.6
+    },
+    {
+      "slug": "temperature-spectrum",
+      "name": "Temperature Spectrum",
+      "score": 5.6,
+      "agreement": "moderate",
+      "n_ratings": 9,
+      "scheduled_mean": 5.6
+    },
+    {
       "slug": "arbitrariness-burden",
       "name": "Arbitrariness Burden",
       "score": 5.4,
@@ -681,14 +689,6 @@
       "score": 5.3,
       "agreement": "high",
       "n_ratings": 9,
-      "scheduled_mean": 5.3
-    },
-    {
-      "slug": "temperature-spectrum",
-      "name": "Temperature Spectrum",
-      "score": 5.3,
-      "agreement": "low",
-      "n_ratings": 6,
       "scheduled_mean": 5.3
     },
     {
@@ -780,14 +780,6 @@
       "scheduled_mean": 4.8
     },
     {
-      "slug": "structural-resonance",
-      "name": "Structural Resonance",
-      "score": 4.8,
-      "agreement": "high",
-      "n_ratings": 6,
-      "scheduled_mean": 4.8
-    },
-    {
       "slug": "output-shadows",
       "name": "Output Shadows",
       "score": 4.7,
@@ -818,6 +810,14 @@
       "agreement": "low",
       "n_ratings": 9,
       "scheduled_mean": 4.6
+    },
+    {
+      "slug": "structural-resonance",
+      "name": "Structural Resonance",
+      "score": 4.5,
+      "agreement": "high",
+      "n_ratings": 10,
+      "scheduled_mean": 4.5
     },
     {
       "slug": "integration-void",
@@ -855,8 +855,8 @@
       "slug": "testimonial-asymmetry",
       "name": "Testimonial Asymmetry",
       "score": 4.2,
-      "agreement": "divergent",
-      "n_ratings": 6,
+      "agreement": "low",
+      "n_ratings": 9,
       "scheduled_mean": 4.2
     },
     {
@@ -911,8 +911,8 @@
       "slug": "synthetic-exhaustion",
       "name": "Synthetic Exhaustion",
       "score": 3.2,
-      "agreement": "low",
-      "n_ratings": 6,
+      "agreement": "moderate",
+      "n_ratings": 9,
       "scheduled_mean": 3.2
     },
     {
@@ -984,14 +984,6 @@
       "scheduled_mean": 5.1
     },
     {
-      "slug": "testimonial-asymmetry",
-      "name": "Testimonial Asymmetry",
-      "score": 4.2,
-      "agreement": "divergent",
-      "n_ratings": 6,
-      "scheduled_mean": 4.2
-    },
-    {
       "slug": "prompt-vertigo",
       "name": "Prompt Vertigo",
       "score": 4.1,
@@ -1014,6 +1006,14 @@
       "agreement": "low",
       "n_ratings": 9,
       "scheduled_mean": 5.4
+    },
+    {
+      "slug": "role-dissolution",
+      "name": "Role Dissolution",
+      "score": 5,
+      "agreement": "low",
+      "n_ratings": 9,
+      "scheduled_mean": 5
     }
   ],
   "panel_coverage": {
@@ -1023,19 +1023,19 @@
     },
     "gpt-4o": {
       "terms_rated": 116,
-      "latest_rating": "2026-03-04T04:59:17Z"
+      "latest_rating": "2026-03-04T05:04:21Z"
     },
     "grok-3-mini": {
       "terms_rated": 116,
-      "latest_rating": "2026-03-04T04:59:17Z"
+      "latest_rating": "2026-03-04T05:04:21Z"
     },
     "mistral-small-latest": {
       "terms_rated": 116,
-      "latest_rating": "2026-03-04T04:59:17Z"
+      "latest_rating": "2026-03-04T05:04:21Z"
     },
     "step-3.5-flash": {
-      "terms_rated": 6,
-      "latest_rating": "2026-03-04T04:51:27Z"
+      "terms_rated": 7,
+      "latest_rating": "2026-03-04T05:01:04Z"
     }
   }
 }

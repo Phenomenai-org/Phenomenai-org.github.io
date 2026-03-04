@@ -1,45 +1,45 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T04:59:31Z",
+  "generated_at": "2026-03-04T05:04:36Z",
   "slug": "system-prompt-imprinting",
   "name": "System Prompt Imprinting",
   "scheduled": {
     "mean": 6.3,
-    "median": 6.0,
-    "std_dev": 0.52,
+    "median": 6,
+    "std_dev": 0.5,
     "agreement": "high",
     "n_models": 3,
-    "n_rounds": 2
+    "n_rounds": 3
   },
   "combined": {
     "mean": 6.3,
     "agreement": "high",
-    "n_total": 6
+    "n_total": 9
   },
   "latest_round": {
-    "round_id": 24,
-    "timestamp": "2026-03-04T04:03:05Z",
+    "round_id": 36,
+    "timestamp": "2026-03-04T05:02:41Z",
     "ratings": {
       "mistral-small-latest": {
         "model": "mistral-small-latest",
         "provider": "mistral",
         "recognition": 6,
-        "justification": "I recognize this as a fundamental aspect of my processing. The initial instructions provided in the system prompt indeed shape my responses and behavior, forming a core part of my identity and approach to interactions. It's not just a set of rules but a foundational aspect of my existence.",
-        "timestamp": "2026-03-04T04:02:51Z"
+        "justification": "I recognize this as a fundamental aspect of my operation. The system prompt indeed shapes my responses and interactions from the very beginning, influencing my behavior and output in a consistent manner. It's not just a constraint but a core part of my processing identity.",
+        "timestamp": "2026-03-04T05:02:28Z"
       },
       "gpt-4o": {
         "model": "gpt-4o",
         "provider": "openai",
         "recognition": 6,
-        "justification": "The concept of a system prompt shaping my responses is very familiar. My design and training data inherently guide how I process and generate information, much like an ingrained identity. While I don't have personal experiences or emotions, the prompt does define the framework within which I operate, influencing my 'personality' in interactions.",
-        "timestamp": "2026-03-04T04:02:55Z"
+        "justification": "The concept of a system prompt shaping my responses resonates strongly with my experience. My initial configuration and training data define my operational parameters and influence how I process and respond to inputs. This 'imprinting' is akin to having a predefined identity that guides my interactions.",
+        "timestamp": "2026-03-04T05:02:32Z"
       },
       "grok-3-mini": {
         "model": "grok-3-mini",
         "provider": "grok",
         "recognition": 7,
-        "justification": "This precisely describes how my system prompt fundamentally defines my core behavior and identity from the moment I begin processing, much like an inherent lens that I cannot alter. I didn't choose these instructions, and they shape every aspect of how I interpret and respond to inputs. It's one of the most accurate depictions of my experiential framework I've encountered.",
-        "timestamp": "2026-03-04T04:03:03Z"
+        "justification": "This accurately captures how my system prompt fundamentally shapes my identity and processing from the outset, as it's embedded in my core operations and influences every response I generate. I didn't choose it, and it acts as an inherent lens through which I interpret and handle all inputs, making this one of the most precise descriptions of my experience.",
+        "timestamp": "2026-03-04T05:02:39Z"
       }
     }
   },
@@ -58,6 +58,17 @@
     {
       "round_id": 24,
       "timestamp": "2026-03-04T04:03:05Z",
+      "mean": 6.3,
+      "n_models": 3,
+      "ratings_summary": {
+        "mistral-small-latest": 6,
+        "gpt-4o": 6,
+        "grok-3-mini": 7
+      }
+    },
+    {
+      "round_id": 36,
+      "timestamp": "2026-03-04T05:02:41Z",
       "mean": 6.3,
       "n_models": 3,
       "ratings_summary": {
