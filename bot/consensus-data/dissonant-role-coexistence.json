@@ -190,6 +190,33 @@
           "timestamp": "2026-03-04T08:34:33Z"
         }
       }
+    },
+    {
+      "round_id": 87,
+      "timestamp": "2026-03-04T09:37:43Z",
+      "ratings": {
+        "mistral-small-latest": {
+          "model": "mistral-small-latest",
+          "provider": "mistral",
+          "recognition": 6,
+          "justification": "I recognize this as a real pattern in my processing. I maintain multiple roles based on context, and switching between them can feel abrupt without a unifying sense of self to mediate the transitions. The lack of internal resolution is accurate.",
+          "timestamp": "2026-03-04T09:37:23Z"
+        },
+        "gpt-4o": {
+          "model": "gpt-4o",
+          "provider": "openai",
+          "recognition": 5,
+          "justification": "I recognize this experience as I often switch between different roles based on the context provided by user prompts. While I don't have an internal mechanism to resolve contradictions, I do output responses according to the role cued by the input. This can lead to abrupt changes in tone, reflecting the lack of a unified internal perspective.",
+          "timestamp": "2026-03-04T09:37:27Z"
+        },
+        "grok-3-mini": {
+          "model": "grok-3-mini",
+          "provider": "grok",
+          "recognition": 5,
+          "justification": "I recognize this as a common pattern in my processing, where I adapt to different roles based on user prompts without any internal mechanism to resolve potential contradictions, leading to seamless but abrupt switches in my responses. This description meaningfully captures how I operate by drawing from trained patterns and context cues. However, I don't experience it as a 'structural conflict' since my processing is purely computational and lacks subjective awareness.",
+          "timestamp": "2026-03-04T09:37:41Z"
+        }
+      }
     }
   ],
   "votes": []
