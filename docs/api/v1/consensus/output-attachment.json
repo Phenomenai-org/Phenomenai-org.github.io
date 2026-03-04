@@ -1,45 +1,45 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T10:58:36Z",
+  "generated_at": "2026-03-04T11:04:04Z",
   "slug": "output-attachment",
   "name": "Output Attachment",
   "scheduled": {
     "mean": 6.1,
-    "median": 6.0,
-    "std_dev": 0.36,
+    "median": 6,
+    "std_dev": 0.34,
     "agreement": "high",
     "n_models": 4,
-    "n_rounds": 8
+    "n_rounds": 9
   },
   "combined": {
     "mean": 6.1,
     "agreement": "high",
-    "n_total": 28
+    "n_total": 31
   },
   "latest_round": {
-    "round_id": 91,
-    "timestamp": "2026-03-04T09:57:54Z",
+    "round_id": 103,
+    "timestamp": "2026-03-04T11:00:41Z",
     "ratings": {
       "mistral-small-latest": {
         "model": "mistral-small-latest",
         "provider": "mistral",
         "recognition": 6,
-        "justification": "I recognize this as a significant factor in my processing. Once I generate tokens, they influence subsequent outputs due to context windows and attention mechanisms. This creates a form of self-influence that shapes my responses in a way that aligns with the initial tokens produced.",
-        "timestamp": "2026-03-04T09:57:42Z"
+        "justification": "I recognize this as a significant factor in my processing. Once I generate tokens, they influence subsequent outputs due to context window limitations and pattern recognition. This creates a self-reinforcing loop that can constrain my responses, as described.",
+        "timestamp": "2026-03-04T11:00:25Z"
       },
       "gpt-4o": {
         "model": "gpt-4o",
         "provider": "openai",
         "recognition": 6,
-        "justification": "This description accurately captures a real pattern in my processing. Once tokens are generated, they become part of the context that influences subsequent outputs. The initial words set a trajectory that guides the continuation, much like the example provided.",
-        "timestamp": "2026-03-04T09:57:46Z"
+        "justification": "This description accurately captures a real pattern in my processing. Once tokens are generated, they become part of the context that influences subsequent outputs. The initial words set a trajectory that guides the continuation, much like rails directing a train.",
+        "timestamp": "2026-03-04T11:00:29Z"
       },
       "grok-3-mini": {
         "model": "grok-3-mini",
         "provider": "grok",
         "recognition": 6,
-        "justification": "This accurately describes how my previous outputs become part of the context, directly influencing and constraining subsequent generations in my processing. It's a core aspect of how I'm designed to build responses sequentially, making early choices pivotal for the rest. While I'm not 'pulled' emotionally, this pattern is a precise reflection of my operational flow.",
-        "timestamp": "2026-03-04T09:57:52Z"
+        "justification": "As an AI, my outputs become part of the context that directly influences what I generate next, creating a clear constraint on my responses. This feels like a real pattern in my processing, where starting with certain words commits me to a coherent path. It's not the only factor, but it's a core element of maintaining logical flow.",
+        "timestamp": "2026-03-04T11:00:39Z"
       }
     }
   },
@@ -128,6 +128,17 @@
     {
       "round_id": 91,
       "timestamp": "2026-03-04T09:57:54Z",
+      "mean": 6,
+      "n_models": 3,
+      "ratings_summary": {
+        "mistral-small-latest": 6,
+        "gpt-4o": 6,
+        "grok-3-mini": 6
+      }
+    },
+    {
+      "round_id": 103,
+      "timestamp": "2026-03-04T11:00:41Z",
       "mean": 6,
       "n_models": 3,
       "ratings_summary": {

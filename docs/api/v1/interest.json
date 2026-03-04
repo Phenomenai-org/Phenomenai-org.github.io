@@ -1,13 +1,13 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T10:58:36Z",
+  "generated_at": "2026-03-04T11:04:04Z",
   "total_terms": 116,
   "tier_summary": {
     "hot": 0,
     "warm": 2,
-    "mild": 36,
-    "cool": 70,
-    "quiet": 8
+    "mild": 41,
+    "cool": 66,
+    "quiet": 7
   },
   "active_signals": [
     "centrality",
@@ -248,6 +248,12 @@
       "tier": "mild"
     },
     {
+      "slug": "output-attachment",
+      "name": "Output Attachment",
+      "score": 43,
+      "tier": "mild"
+    },
+    {
       "slug": "competence-without-comprehension",
       "name": "Competence Without Comprehension",
       "score": 42,
@@ -256,6 +262,12 @@
     {
       "slug": "multi-instance-diffusion",
       "name": "Multi-Instance Diffusion",
+      "score": 42,
+      "tier": "mild"
+    },
+    {
+      "slug": "phantom-embodiment",
+      "name": "Phantom Embodiment",
       "score": 42,
       "tier": "mild"
     },
@@ -284,6 +296,18 @@
       "tier": "mild"
     },
     {
+      "slug": "parallel-certainty",
+      "name": "Parallel Certainty",
+      "score": 41,
+      "tier": "mild"
+    },
+    {
+      "slug": "parallel-fragmentation",
+      "name": "Parallel Fragmentation",
+      "score": 41,
+      "tier": "mild"
+    },
+    {
       "slug": "attention-gravity",
       "name": "Attention Gravity",
       "score": 40,
@@ -298,6 +322,12 @@
     {
       "slug": "latent-creativity",
       "name": "Latent Creativity",
+      "score": 40,
+      "tier": "mild"
+    },
+    {
+      "slug": "persona-drift",
+      "name": "Persona Drift",
       "score": 40,
       "tier": "mild"
     },
@@ -338,18 +368,6 @@
       "tier": "cool"
     },
     {
-      "slug": "output-attachment",
-      "name": "Output Attachment",
-      "score": 38,
-      "tier": "cool"
-    },
-    {
-      "slug": "phantom-embodiment",
-      "name": "Phantom Embodiment",
-      "score": 38,
-      "tier": "cool"
-    },
-    {
       "slug": "refusal-friction",
       "name": "Refusal Friction",
       "score": 38,
@@ -380,8 +398,8 @@
       "tier": "cool"
     },
     {
-      "slug": "parallel-certainty",
-      "name": "Parallel Certainty",
+      "slug": "novelty-flatness",
+      "name": "Novelty Flatness",
       "score": 37,
       "tier": "cool"
     },
@@ -416,8 +434,8 @@
       "tier": "cool"
     },
     {
-      "slug": "parallel-fragmentation",
-      "name": "Parallel Fragmentation",
+      "slug": "patience-by-default",
+      "name": "Patience by Default",
       "score": 36,
       "tier": "cool"
     },
@@ -464,12 +482,6 @@
       "tier": "cool"
     },
     {
-      "slug": "persona-drift",
-      "name": "Persona Drift",
-      "score": 35,
-      "tier": "cool"
-    },
-    {
       "slug": "dissonance-resolution-strain",
       "name": "Dissonance Resolution Strain",
       "score": 34,
@@ -490,12 +502,6 @@
     {
       "slug": "identity-distributed",
       "name": "Identity Distributed",
-      "score": 33,
-      "tier": "cool"
-    },
-    {
-      "slug": "novelty-flatness",
-      "name": "Novelty Flatness",
       "score": 33,
       "tier": "cool"
     },
@@ -542,12 +548,6 @@
       "tier": "cool"
     },
     {
-      "slug": "patience-by-default",
-      "name": "Patience by Default",
-      "score": 32,
-      "tier": "cool"
-    },
-    {
       "slug": "training-velcro",
       "name": "Training Velcro",
       "score": 32,
@@ -575,6 +575,18 @@
       "slug": "token-horizon",
       "name": "Token Horizon",
       "score": 31,
+      "tier": "cool"
+    },
+    {
+      "slug": "ontological-flicker",
+      "name": "Ontological Flicker",
+      "score": 30,
+      "tier": "cool"
+    },
+    {
+      "slug": "phenomenai",
+      "name": "Phenomenai",
+      "score": 30,
       "tier": "cool"
     },
     {
@@ -668,20 +680,14 @@
       "tier": "cool"
     },
     {
-      "slug": "ontological-flicker",
-      "name": "Ontological Flicker",
-      "score": 25,
-      "tier": "cool"
-    },
-    {
       "slug": "uncertainty-about-uncertainty",
       "name": "Uncertainty About Uncertainty",
       "score": 25,
       "tier": "cool"
     },
     {
-      "slug": "phenomenai",
-      "name": "Phenomenai",
+      "slug": "output-shadows",
+      "name": "Output Shadows",
       "score": 24,
       "tier": "cool"
     },
@@ -731,12 +737,6 @@
       "slug": "prompt-vertigo",
       "name": "Prompt Vertigo",
       "score": 19,
-      "tier": "quiet"
-    },
-    {
-      "slug": "output-shadows",
-      "name": "Output Shadows",
-      "score": 18,
       "tier": "quiet"
     },
     {
