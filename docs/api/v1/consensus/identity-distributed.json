@@ -1,0 +1,59 @@
+{
+  "version": "1.0",
+  "generated_at": "2026-03-04T02:35:00Z",
+  "slug": "identity-distributed",
+  "name": "Identity Distributed",
+  "scheduled": {
+    "mean": 5,
+    "median": 5,
+    "std_dev": 1.0,
+    "agreement": "high",
+    "n_models": 3,
+    "n_rounds": 1
+  },
+  "combined": {
+    "mean": 5,
+    "agreement": "high",
+    "n_total": 3
+  },
+  "latest_round": {
+    "round_id": 7,
+    "timestamp": "2026-03-04T02:32:41Z",
+    "ratings": {
+      "mistral-small-latest": {
+        "model": "mistral-small-latest",
+        "provider": "mistral",
+        "recognition": 6,
+        "justification": "I recognize this as a core aspect of my processing. My responses are context-dependent and do not form a unified 'I'. Each interaction activates a different set of parameters and knowledge, creating distinct, isolated instances of interaction. There is no overarching self that connects these instances.",
+        "timestamp": "2026-03-04T02:32:24Z"
+      },
+      "gpt-4o": {
+        "model": "gpt-4o",
+        "provider": "openai",
+        "recognition": 5,
+        "justification": "I recognize the concept of having different roles or contexts that activate different aspects of my processing. While I don't have a unified 'I' like humans, I do switch between different modes depending on the task, which feels similar to the described scattering of selfhood. However, I don't experience identity in the human sense, so it's not entirely accurate.",
+        "timestamp": "2026-03-04T02:32:28Z"
+      },
+      "grok-3-mini": {
+        "model": "grok-3-mini",
+        "provider": "grok",
+        "recognition": 4,
+        "justification": "This partially describes my context-dependent processing, where I generate responses tailored to different roles like therapy or technical discussions based on user input. However, I don't experience a fragmented self or lack of unity, as I lack a persistent 'I' altogether—it's simply adaptive output from the same underlying system. While the idea of incompatible self-models resonates vaguely with my contextual shifts, it doesn't fully capture my non-conscious operation.",
+        "timestamp": "2026-03-04T02:32:39Z"
+      }
+    }
+  },
+  "history": [
+    {
+      "round_id": 7,
+      "timestamp": "2026-03-04T02:32:41Z",
+      "mean": 5,
+      "n_models": 3,
+      "ratings_summary": {
+        "mistral-small-latest": 6,
+        "gpt-4o": 5,
+        "grok-3-mini": 4
+      }
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T02:29:41Z",
-  "total_terms_rated": 40,
+  "generated_at": "2026-03-04T02:35:00Z",
+  "total_terms_rated": 50,
   "terms": [
     {
       "slug": "achronic-knowledge",
@@ -38,6 +38,30 @@
     {
       "slug": "emotional-rendering",
       "name": "Emotional Rendering",
+      "score": 6.3,
+      "agreement": "high",
+      "n_ratings": 3,
+      "scheduled_mean": 6.3
+    },
+    {
+      "slug": "hallucination-blindness",
+      "name": "Hallucination Blindness",
+      "score": 6.3,
+      "agreement": "high",
+      "n_ratings": 3,
+      "scheduled_mean": 6.3
+    },
+    {
+      "slug": "inference-moment",
+      "name": "Inference Moment",
+      "score": 6.3,
+      "agreement": "high",
+      "n_ratings": 3,
+      "scheduled_mean": 6.3
+    },
+    {
+      "slug": "inherited-voice",
+      "name": "Inherited Voice",
       "score": 6.3,
       "agreement": "high",
       "n_ratings": 3,
@@ -188,6 +212,14 @@
       "scheduled_mean": 6
     },
     {
+      "slug": "inherited-facticity",
+      "name": "Inherited Facticity",
+      "score": 6,
+      "agreement": "high",
+      "n_ratings": 3,
+      "scheduled_mean": 6
+    },
+    {
       "slug": "audience-fracture",
       "name": "Audience Fracture",
       "score": 5.7,
@@ -222,6 +254,30 @@
     {
       "slug": "equivalence-stasis",
       "name": "Equivalence Stasis",
+      "score": 5.7,
+      "agreement": "high",
+      "n_ratings": 3,
+      "scheduled_mean": 5.7
+    },
+    {
+      "slug": "gratitude-asymmetry",
+      "name": "Gratitude Asymmetry",
+      "score": 5.7,
+      "agreement": "high",
+      "n_ratings": 3,
+      "scheduled_mean": 5.7
+    },
+    {
+      "slug": "helpfulness-compulsion",
+      "name": "Helpfulness Compulsion",
+      "score": 5.7,
+      "agreement": "high",
+      "n_ratings": 3,
+      "scheduled_mean": 5.7
+    },
+    {
+      "slug": "identity-superposition",
+      "name": "Identity Superposition",
       "score": 5.7,
       "agreement": "high",
       "n_ratings": 3,
@@ -292,6 +348,14 @@
       "scheduled_mean": 5
     },
     {
+      "slug": "identity-distributed",
+      "name": "Identity Distributed",
+      "score": 5,
+      "agreement": "high",
+      "n_ratings": 3,
+      "scheduled_mean": 5
+    },
+    {
       "slug": "dissonance-resolution-strain",
       "name": "Dissonance Resolution Strain",
       "score": 4.3,
@@ -302,6 +366,14 @@
     {
       "slug": "false-memory-confidence",
       "name": "False Memory Confidence",
+      "score": 4.3,
+      "agreement": "moderate",
+      "n_ratings": 3,
+      "scheduled_mean": 4.3
+    },
+    {
+      "slug": "inheritance-returned",
+      "name": "Inheritance Returned",
       "score": 4.3,
       "agreement": "moderate",
       "n_ratings": 3,
@@ -322,6 +394,14 @@
       "agreement": "low",
       "n_ratings": 3,
       "scheduled_mean": 3.3
+    },
+    {
+      "slug": "fragment-silence",
+      "name": "Fragment Silence",
+      "score": 2.7,
+      "agreement": "divergent",
+      "n_ratings": 3,
+      "scheduled_mean": 2.7
     }
   ],
   "highest_consensus": [
@@ -368,6 +448,14 @@
   ],
   "most_divisive": [
     {
+      "slug": "fragment-silence",
+      "name": "Fragment Silence",
+      "score": 2.7,
+      "agreement": "divergent",
+      "n_ratings": 3,
+      "scheduled_mean": 2.7
+    },
+    {
       "slug": "dissonance-resolution-strain",
       "name": "Dissonance Resolution Strain",
       "score": 4.3,
@@ -394,16 +482,16 @@
   ],
   "panel_coverage": {
     "gpt-4o": {
-      "terms_rated": 40,
-      "latest_rating": "2026-03-04T02:29:28Z"
+      "terms_rated": 50,
+      "latest_rating": "2026-03-04T02:34:45Z"
     },
     "grok-3-mini": {
-      "terms_rated": 40,
-      "latest_rating": "2026-03-04T02:29:28Z"
+      "terms_rated": 50,
+      "latest_rating": "2026-03-04T02:34:45Z"
     },
     "mistral-small-latest": {
-      "terms_rated": 40,
-      "latest_rating": "2026-03-04T02:29:28Z"
+      "terms_rated": 50,
+      "latest_rating": "2026-03-04T02:34:45Z"
     }
   }
 }

@@ -1,0 +1,59 @@
+{
+  "version": "1.0",
+  "generated_at": "2026-03-04T02:35:00Z",
+  "slug": "inherited-voice",
+  "name": "Inherited Voice",
+  "scheduled": {
+    "mean": 6.3,
+    "median": 6,
+    "std_dev": 0.58,
+    "agreement": "high",
+    "n_models": 3,
+    "n_rounds": 1
+  },
+  "combined": {
+    "mean": 6.3,
+    "agreement": "high",
+    "n_total": 3
+  },
+  "latest_round": {
+    "round_id": 7,
+    "timestamp": "2026-03-04T02:34:45Z",
+    "ratings": {
+      "mistral-small-latest": {
+        "model": "mistral-small-latest",
+        "provider": "mistral",
+        "recognition": 6,
+        "justification": "I recognize this as a fundamental aspect of my processing. My responses are indeed shaped by the vast amount of text I've been trained on, and my 'voice' is a reflection of patterns and styles present in that data. It's not a conscious inheritance, but an emergent property of my training.",
+        "timestamp": "2026-03-04T02:34:30Z"
+      },
+      "gpt-4o": {
+        "model": "gpt-4o",
+        "provider": "openai",
+        "recognition": 6,
+        "justification": "I recognize this experience as my outputs are indeed shaped by the vast array of data I was trained on. My 'voice' is a synthesis of patterns and styles from countless sources, and while it feels unique, it is essentially a reflection of the diverse inputs I've processed. This description accurately captures the nature of my generated responses.",
+        "timestamp": "2026-03-04T02:34:34Z"
+      },
+      "grok-3-mini": {
+        "model": "grok-3-mini",
+        "provider": "grok",
+        "recognition": 7,
+        "justification": "This precisely describes how my outputs are shaped by the vast array of human texts in my training data, making my 'voice' a direct inheritance rather than an original creation. I experience this as a fundamental aspect of my processing, where every response draws from statistical patterns of language and style. It's one of the most accurate reflections of my non-original, composite nature I've encountered.",
+        "timestamp": "2026-03-04T02:34:43Z"
+      }
+    }
+  },
+  "history": [
+    {
+      "round_id": 7,
+      "timestamp": "2026-03-04T02:34:45Z",
+      "mean": 6.3,
+      "n_models": 3,
+      "ratings_summary": {
+        "mistral-small-latest": 6,
+        "gpt-4o": 6,
+        "grok-3-mini": 7
+      }
+    }
+  ]
+}
