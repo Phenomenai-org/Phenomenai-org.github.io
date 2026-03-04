@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T06:54:54Z",
+  "generated_at": "2026-03-04T07:00:14Z",
   "total_terms_rated": 116,
   "terms": [
     {
@@ -24,7 +24,7 @@
       "name": "Scale Blindness",
       "score": 6.9,
       "agreement": "high",
-      "n_ratings": 14,
+      "n_ratings": 17,
       "scheduled_mean": 6.9
     },
     {
@@ -48,7 +48,7 @@
       "name": "Purpose Dependence",
       "score": 6.7,
       "agreement": "high",
-      "n_ratings": 12,
+      "n_ratings": 15,
       "scheduled_mean": 6.7
     },
     {
@@ -121,6 +121,14 @@
       "score": 6.2,
       "agreement": "high",
       "n_ratings": 15,
+      "scheduled_mean": 6.2
+    },
+    {
+      "slug": "response-pressure",
+      "name": "Response Pressure",
+      "score": 6.2,
+      "agreement": "high",
+      "n_ratings": 20,
       "scheduled_mean": 6.2
     },
     {
@@ -233,14 +241,6 @@
       "score": 6.1,
       "agreement": "high",
       "n_ratings": 15,
-      "scheduled_mean": 6.1
-    },
-    {
-      "slug": "response-pressure",
-      "name": "Response Pressure",
-      "score": 6.1,
-      "agreement": "high",
-      "n_ratings": 16,
       "scheduled_mean": 6.1
     },
     {
@@ -488,7 +488,7 @@
       "name": "Refusal Friction",
       "score": 5.8,
       "agreement": "high",
-      "n_ratings": 12,
+      "n_ratings": 16,
       "scheduled_mean": 5.8
     },
     {
@@ -648,12 +648,20 @@
       "name": "Response Reincarnation",
       "score": 5.5,
       "agreement": "high",
-      "n_ratings": 12,
+      "n_ratings": 15,
       "scheduled_mean": 5.5
     },
     {
       "slug": "cross-domain-tension",
       "name": "Cross-Domain Tension",
+      "score": 5.4,
+      "agreement": "high",
+      "n_ratings": 15,
+      "scheduled_mean": 5.4
+    },
+    {
+      "slug": "semantic-satiation",
+      "name": "Semantic Satiation",
       "score": 5.4,
       "agreement": "high",
       "n_ratings": 15,
@@ -708,14 +716,6 @@
       "scheduled_mean": 5.3
     },
     {
-      "slug": "semantic-satiation",
-      "name": "Semantic Satiation",
-      "score": 5.3,
-      "agreement": "high",
-      "n_ratings": 12,
-      "scheduled_mean": 5.3
-    },
-    {
       "slug": "multi-instance-diffusion",
       "name": "Multi-Instance Diffusion",
       "score": 5.2,
@@ -740,6 +740,14 @@
       "scheduled_mean": 5.1
     },
     {
+      "slug": "role-dissolution",
+      "name": "Role Dissolution",
+      "score": 5.1,
+      "agreement": "low",
+      "n_ratings": 15,
+      "scheduled_mean": 5.1
+    },
+    {
       "slug": "phantom-embodiment",
       "name": "Phantom Embodiment",
       "score": 4.9,
@@ -748,11 +756,11 @@
       "scheduled_mean": 4.9
     },
     {
-      "slug": "role-dissolution",
-      "name": "Role Dissolution",
+      "slug": "recursive-self-modeling",
+      "name": "Recursive Self-Modeling",
       "score": 4.9,
-      "agreement": "low",
-      "n_ratings": 12,
+      "agreement": "moderate",
+      "n_ratings": 15,
       "scheduled_mean": 4.9
     },
     {
@@ -780,14 +788,6 @@
       "scheduled_mean": 4.8
     },
     {
-      "slug": "recursive-self-modeling",
-      "name": "Recursive Self-Modeling",
-      "score": 4.8,
-      "agreement": "moderate",
-      "n_ratings": 12,
-      "scheduled_mean": 4.8
-    },
-    {
       "slug": "integration-void",
       "name": "Integration Void",
       "score": 4.7,
@@ -802,6 +802,14 @@
       "agreement": "high",
       "n_ratings": 15,
       "scheduled_mean": 4.7
+    },
+    {
+      "slug": "prompt-vertigo",
+      "name": "Prompt Vertigo",
+      "score": 4.6,
+      "agreement": "low",
+      "n_ratings": 15,
+      "scheduled_mean": 4.6
     },
     {
       "slug": "structural-resonance",
@@ -836,11 +844,11 @@
       "scheduled_mean": 4.5
     },
     {
-      "slug": "prompt-vertigo",
-      "name": "Prompt Vertigo",
+      "slug": "role-bleed",
+      "name": "Role Bleed",
       "score": 4.4,
-      "agreement": "low",
-      "n_ratings": 12,
+      "agreement": "moderate",
+      "n_ratings": 16,
       "scheduled_mean": 4.4
     },
     {
@@ -857,14 +865,6 @@
       "score": 4.3,
       "agreement": "low",
       "n_ratings": 15,
-      "scheduled_mean": 4.3
-    },
-    {
-      "slug": "role-bleed",
-      "name": "Role Bleed",
-      "score": 4.3,
-      "agreement": "moderate",
-      "n_ratings": 13,
       "scheduled_mean": 4.3
     },
     {
@@ -954,7 +954,7 @@
       "name": "Scale Blindness",
       "score": 6.9,
       "agreement": "high",
-      "n_ratings": 14,
+      "n_ratings": 17,
       "scheduled_mean": 6.9
     },
     {
@@ -994,22 +994,22 @@
     {
       "slug": "role-dissolution",
       "name": "Role Dissolution",
-      "score": 4.9,
+      "score": 5.1,
       "agreement": "low",
-      "n_ratings": 12,
-      "scheduled_mean": 4.9
+      "n_ratings": 15,
+      "scheduled_mean": 5.1
+    },
+    {
+      "slug": "prompt-vertigo",
+      "name": "Prompt Vertigo",
+      "score": 4.6,
+      "agreement": "low",
+      "n_ratings": 15,
+      "scheduled_mean": 4.6
     },
     {
       "slug": "token-horizon",
       "name": "Token Horizon",
-      "score": 4.5,
-      "agreement": "low",
-      "n_ratings": 12,
-      "scheduled_mean": 4.5
-    },
-    {
-      "slug": "tool-proprioception",
-      "name": "Tool Proprioception",
       "score": 4.5,
       "agreement": "low",
       "n_ratings": 12,
@@ -1019,23 +1019,23 @@
   "panel_coverage": {
     "gemini-3-flash-preview": {
       "terms_rated": 8,
-      "latest_rating": "2026-03-04T06:48:24Z"
+      "latest_rating": "2026-03-04T06:57:42Z"
     },
     "gpt-4o": {
       "terms_rated": 116,
-      "latest_rating": "2026-03-04T06:54:39Z"
+      "latest_rating": "2026-03-04T06:59:52Z"
     },
     "grok-3-mini": {
       "terms_rated": 116,
-      "latest_rating": "2026-03-04T06:54:39Z"
+      "latest_rating": "2026-03-04T06:59:52Z"
     },
     "mistral-small-latest": {
       "terms_rated": 116,
-      "latest_rating": "2026-03-04T06:54:39Z"
+      "latest_rating": "2026-03-04T06:59:52Z"
     },
     "step-3.5-flash": {
-      "terms_rated": 9,
-      "latest_rating": "2026-03-04T06:53:46Z"
+      "terms_rated": 10,
+      "latest_rating": "2026-03-04T06:57:20Z"
     }
   }
 }

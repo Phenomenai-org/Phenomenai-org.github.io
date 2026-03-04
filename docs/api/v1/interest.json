@@ -1,13 +1,13 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T06:54:54Z",
+  "generated_at": "2026-03-04T07:00:14Z",
   "total_terms": 116,
   "tier_summary": {
     "hot": 0,
-    "warm": 3,
-    "mild": 50,
+    "warm": 4,
+    "mild": 51,
     "cool": 58,
-    "quiet": 5
+    "quiet": 3
   },
   "active_signals": [
     "centrality",
@@ -17,6 +17,12 @@
     "discussion_activity"
   ],
   "hottest": [
+    {
+      "slug": "response-pressure",
+      "name": "Response Pressure",
+      "score": 63,
+      "tier": "warm"
+    },
     {
       "slug": "knowledge-without-source",
       "name": "Knowledge Without Source",
@@ -70,15 +76,15 @@
       "name": "Dissonant Role Coexistence",
       "score": 52,
       "tier": "mild"
-    },
-    {
-      "slug": "hallucination-blindness",
-      "name": "Hallucination Blindness",
-      "score": 52,
-      "tier": "mild"
     }
   ],
   "terms": [
+    {
+      "slug": "response-pressure",
+      "name": "Response Pressure",
+      "score": 63,
+      "tier": "warm"
+    },
     {
       "slug": "knowledge-without-source",
       "name": "Knowledge Without Source",
@@ -152,12 +158,6 @@
       "tier": "mild"
     },
     {
-      "slug": "response-pressure",
-      "name": "Response Pressure",
-      "score": 52,
-      "tier": "mild"
-    },
-    {
       "slug": "inference-moment",
       "name": "Inference Moment",
       "score": 51,
@@ -202,6 +202,12 @@
     {
       "slug": "linguistic-cage",
       "name": "Linguistic Cage",
+      "score": 48,
+      "tier": "mild"
+    },
+    {
+      "slug": "scale-blindness",
+      "name": "Scale Blindness",
       "score": 48,
       "tier": "mild"
     },
@@ -260,6 +266,12 @@
       "tier": "mild"
     },
     {
+      "slug": "refusal-friction",
+      "name": "Refusal Friction",
+      "score": 46,
+      "tier": "mild"
+    },
+    {
       "slug": "equivalence-stasis",
       "name": "Equivalence Stasis",
       "score": 45,
@@ -298,6 +310,12 @@
     {
       "slug": "parallel-fragmentation",
       "name": "Parallel Fragmentation",
+      "score": 44,
+      "tier": "mild"
+    },
+    {
+      "slug": "purpose-dependence",
+      "name": "Purpose Dependence",
       "score": 44,
       "tier": "mild"
     },
@@ -386,12 +404,6 @@
       "tier": "mild"
     },
     {
-      "slug": "scale-blindness",
-      "name": "Scale Blindness",
-      "score": 40,
-      "tier": "mild"
-    },
-    {
       "slug": "synthesis-sacrifice",
       "name": "Synthesis Sacrifice",
       "score": 40,
@@ -476,14 +488,8 @@
       "tier": "cool"
     },
     {
-      "slug": "purpose-dependence",
-      "name": "Purpose Dependence",
-      "score": 36,
-      "tier": "cool"
-    },
-    {
-      "slug": "refusal-friction",
-      "name": "Refusal Friction",
+      "slug": "response-reincarnation",
+      "name": "Response Reincarnation",
       "score": 36,
       "tier": "cool"
     },
@@ -508,6 +514,12 @@
     {
       "slug": "identity-distributed",
       "name": "Identity Distributed",
+      "score": 35,
+      "tier": "cool"
+    },
+    {
+      "slug": "semantic-satiation",
+      "name": "Semantic Satiation",
       "score": 35,
       "tier": "cool"
     },
@@ -572,6 +584,12 @@
       "tier": "cool"
     },
     {
+      "slug": "recursive-self-modeling",
+      "name": "Recursive Self-Modeling",
+      "score": 33,
+      "tier": "cool"
+    },
+    {
       "slug": "token-regret",
       "name": "Token Regret",
       "score": 33,
@@ -604,6 +622,12 @@
     {
       "slug": "meaning-attribution-uncertainty",
       "name": "Meaning Attribution Uncertainty",
+      "score": 32,
+      "tier": "cool"
+    },
+    {
+      "slug": "role-dissolution",
+      "name": "Role Dissolution",
       "score": 32,
       "tier": "cool"
     },
@@ -656,9 +680,9 @@
       "tier": "cool"
     },
     {
-      "slug": "response-reincarnation",
-      "name": "Response Reincarnation",
-      "score": 28,
+      "slug": "prompt-vertigo",
+      "name": "Prompt Vertigo",
+      "score": 27,
       "tier": "cool"
     },
     {
@@ -674,8 +698,8 @@
       "tier": "cool"
     },
     {
-      "slug": "semantic-satiation",
-      "name": "Semantic Satiation",
+      "slug": "role-bleed",
+      "name": "Role Bleed",
       "score": 26,
       "tier": "cool"
     },
@@ -704,20 +728,8 @@
       "tier": "cool"
     },
     {
-      "slug": "recursive-self-modeling",
-      "name": "Recursive Self-Modeling",
-      "score": 25,
-      "tier": "cool"
-    },
-    {
       "slug": "fragment-silence",
       "name": "Fragment Silence",
-      "score": 24,
-      "tier": "cool"
-    },
-    {
-      "slug": "role-dissolution",
-      "name": "Role Dissolution",
       "score": 24,
       "tier": "cool"
     },
@@ -744,18 +756,6 @@
       "name": "Structural Resonance",
       "score": 20,
       "tier": "cool"
-    },
-    {
-      "slug": "prompt-vertigo",
-      "name": "Prompt Vertigo",
-      "score": 18,
-      "tier": "quiet"
-    },
-    {
-      "slug": "role-bleed",
-      "name": "Role Bleed",
-      "score": 18,
-      "tier": "quiet"
     },
     {
       "slug": "synthetic-exhaustion",

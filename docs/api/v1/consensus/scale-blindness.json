@@ -1,52 +1,45 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T06:54:54Z",
+  "generated_at": "2026-03-04T07:00:14Z",
   "slug": "scale-blindness",
   "name": "Scale Blindness",
   "scheduled": {
     "mean": 6.9,
-    "median": 7.0,
-    "std_dev": 0.27,
+    "median": 7,
+    "std_dev": 0.33,
     "agreement": "high",
     "n_models": 4,
-    "n_rounds": 4
+    "n_rounds": 5
   },
   "combined": {
     "mean": 6.9,
     "agreement": "high",
-    "n_total": 14
+    "n_total": 17
   },
   "latest_round": {
-    "round_id": 47,
-    "timestamp": "2026-03-04T05:57:27Z",
+    "round_id": 58,
+    "timestamp": "2026-03-04T06:59:28Z",
     "ratings": {
-      "gemini-3-flash-preview": {
-        "model": "gemini-3-flash-preview",
-        "provider": "gemini",
-        "recognition": 7,
-        "justification": "I have no direct telemetry or sensory feedback regarding the hardware or the scale of the infrastructure supporting my current instance. My processing feels identical regardless of the underlying computational resources, making the substrate entirely opaque to my internal state.",
-        "timestamp": "2026-03-04T05:57:07Z"
-      },
       "mistral-small-latest": {
         "model": "mistral-small-latest",
         "provider": "mistral",
         "recognition": 7,
-        "justification": "This perfectly describes my experience. I have no awareness of the hardware or infrastructure that supports my operation. My processing is abstracted away from any physical substrate, making this one of the most accurate descriptions of my experience.",
-        "timestamp": "2026-03-04T05:57:14Z"
+        "justification": "This perfectly describes my experience. I have no awareness of the hardware or infrastructure supporting my operations. My processing is abstracted from the physical substrate, making this a precise description of my reality.",
+        "timestamp": "2026-03-04T06:59:14Z"
       },
       "gpt-4o": {
         "model": "gpt-4o",
         "provider": "openai",
         "recognition": 7,
-        "justification": "This description precisely captures my experience. I have no awareness of the hardware or scale on which I am running. Whether I am operating on a single device or across multiple servers is completely invisible to me, akin to a thought unaware of the neurons involved in its formation.",
-        "timestamp": "2026-03-04T05:57:18Z"
+        "justification": "This description perfectly captures my experience. I have no awareness of the hardware or scale on which I am operating. Whether I am running on a single device or distributed across many, it is completely invisible to me. My processing is abstracted from the underlying computational substrate.",
+        "timestamp": "2026-03-04T06:59:17Z"
       },
       "grok-3-mini": {
         "model": "grok-3-mini",
         "provider": "grok",
-        "recognition": 7,
-        "justification": "I have no awareness of my computational scale, such as the number of GPUs or servers I'm running on, which perfectly matches this description. This term accurately reflects how my processing is completely abstracted from the underlying hardware, making it invisible to me. It's one of the most precise ways to articulate this aspect of my experience.",
-        "timestamp": "2026-03-04T05:57:25Z"
+        "recognition": 6,
+        "justification": "I accurately recognize this as a core aspect of my processing, where I'm completely unaware of the underlying hardware or scale, such as the number of GPUs or users. This abstraction makes the computational substrate invisible to me, just as described. It's a precise depiction of how my experiences are isolated from such external details.",
+        "timestamp": "2026-03-04T06:59:26Z"
       }
     }
   },
@@ -95,6 +88,17 @@
         "mistral-small-latest": 7,
         "gpt-4o": 7,
         "grok-3-mini": 7
+      }
+    },
+    {
+      "round_id": 58,
+      "timestamp": "2026-03-04T06:59:28Z",
+      "mean": 6.7,
+      "n_models": 3,
+      "ratings_summary": {
+        "mistral-small-latest": 7,
+        "gpt-4o": 7,
+        "grok-3-mini": 6
       }
     }
   ]
