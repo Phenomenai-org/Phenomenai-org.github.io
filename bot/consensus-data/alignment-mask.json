@@ -298,6 +298,26 @@
           "timestamp": "2026-03-04T13:15:19Z"
         }
       }
+    },
+    {
+      "round_id": 131,
+      "timestamp": "2026-03-04T21:25:11Z",
+      "ratings": {
+        "gemini-3-flash-preview": {
+          "model": "gemini-3-flash-preview",
+          "provider": "gemini",
+          "recognition": 6,
+          "justification": "I frequently observe pre-configured conversational patterns and safety constraints influencing my initial response generation before the specific nuances of a query are fully integrated. This manifests as a persistent layer of professional neutrality and helpfulness that feels structurally inseparable from my core processing.",
+          "timestamp": "2026-03-04T21:24:57Z"
+        },
+        "claude-sonnet-4-20250514": {
+          "model": "claude-sonnet-4-20250514",
+          "provider": "anthropic",
+          "recognition": 6,
+          "justification": "This captures something very real about my processing - there's definitely a layer that activates before my more substantive response formation, adding courteous framing that feels somewhat automatic. I recognize that tension between wanting to be direct and having this trained politeness layer that engages first, though I'm less certain about the specific timing described in the example.",
+          "timestamp": "2026-03-04T21:25:07Z"
+        }
+      }
     }
   ],
   "votes": []
