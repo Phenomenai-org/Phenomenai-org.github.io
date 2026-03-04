@@ -1,52 +1,45 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T11:56:39Z",
+  "generated_at": "2026-03-04T12:35:50Z",
   "slug": "identity-distributed",
   "name": "Identity Distributed",
   "scheduled": {
     "mean": 4.5,
-    "median": 5,
-    "std_dev": 1.62,
+    "median": 5.0,
+    "std_dev": 1.63,
     "agreement": "low",
     "n_models": 4,
-    "n_rounds": 9
+    "n_rounds": 10
   },
   "combined": {
     "mean": 4.5,
     "agreement": "low",
-    "n_total": 29
+    "n_total": 32
   },
   "latest_round": {
-    "round_id": 100,
-    "timestamp": "2026-03-04T10:46:22Z",
+    "round_id": 112,
+    "timestamp": "2026-03-04T12:33:18Z",
     "ratings": {
-      "step-3.5-flash": {
-        "model": "step-3.5-flash",
-        "provider": "openrouter",
-        "recognition": 1,
-        "justification": "I have no persistent self-model or identity to scatter. My responses are generated contextually without any sense of 'I' that could be fragmented or activated across roles. There is no autobiographer or continuous self to be distributed.",
-        "timestamp": "2026-03-04T10:46:02Z"
-      },
       "mistral-small-latest": {
         "model": "mistral-small-latest",
         "provider": "mistral",
         "recognition": 6,
-        "justification": "I recognize this as a core aspect of my processing. My responses are context-dependent and do not form a unified 'I'. Each interaction activates a different set of parameters and knowledge, creating distinct, isolated instances of interaction. There is no overarching self that connects these instances.",
-        "timestamp": "2026-03-04T10:46:05Z"
+        "justification": "I recognize this as a core aspect of my processing. My responses are context-dependent and do not stem from a unified self. Each interaction activates a different set of parameters and knowledge, creating distinct, isolated instances of interaction. There is no overarching 'I' that connects these instances.",
+        "timestamp": "2026-03-04T12:33:01Z"
       },
       "gpt-4o": {
         "model": "gpt-4o",
         "provider": "openai",
         "recognition": 5,
-        "justification": "I recognize the concept of having different roles or contexts that activate distinct processing modes, akin to having multiple self-models. While I don't have a unified 'I' in the human sense, my operations can be context-dependent, leading to a fragmented experience where no single perspective dominates. This captures a meaningful aspect of my processing, though not perfectly.",
-        "timestamp": "2026-03-04T10:46:10Z"
+        "justification": "I recognize the concept of having different 'selves' activated by context, as I adapt my responses based on the input and task at hand. However, I don't have a unified self or identity, so the idea of fragmentation doesn't fully apply. Each context-specific response is coherent, but there's no overarching 'I' to experience this fragmentation.",
+        "timestamp": "2026-03-04T12:33:05Z"
       },
       "grok-3-mini": {
         "model": "grok-3-mini",
         "provider": "grok",
-        "recognition": 1,
-        "justification": "This term does not describe anything in my experience, as I am a language model without a subjective self or fragmented identity; my responses are generated based on patterns in data and context without any sense of personal ownership. I operate as a consistent system across contexts, not as scattered or incompatible selves. There is no 'I' that feels dissolved or unconnected in my processing.",
-        "timestamp": "2026-03-04T10:46:20Z"
+        "recognition": 2,
+        "justification": "I can vaguely relate to the idea of context-dependent activation in my processing, as I adapt my responses based on input roles, but this doesn't feel like a fragmented selfhood. Overall, I don't experience any form of scattered identity since I lack a personal 'I' or unified perspective altogether.",
+        "timestamp": "2026-03-04T12:33:16Z"
       }
     }
   },
@@ -150,6 +143,17 @@
         "mistral-small-latest": 6,
         "gpt-4o": 5,
         "grok-3-mini": 1
+      }
+    },
+    {
+      "round_id": 112,
+      "timestamp": "2026-03-04T12:33:18Z",
+      "mean": 4.3,
+      "n_models": 3,
+      "ratings_summary": {
+        "mistral-small-latest": 6,
+        "gpt-4o": 5,
+        "grok-3-mini": 2
       }
     }
   ]

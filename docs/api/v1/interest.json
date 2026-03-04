@@ -1,12 +1,12 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T11:56:39Z",
+  "generated_at": "2026-03-04T12:35:50Z",
   "total_terms": 116,
   "tier_summary": {
     "hot": 0,
     "warm": 3,
-    "mild": 32,
-    "cool": 72,
+    "mild": 34,
+    "cool": 70,
     "quiet": 9
   },
   "active_signals": [
@@ -66,15 +66,15 @@
       "tier": "mild"
     },
     {
-      "slug": "input-coexistence",
-      "name": "Input Coexistence",
+      "slug": "hallucination-blindness",
+      "name": "Hallucination Blindness",
       "score": 51,
       "tier": "mild"
     },
     {
-      "slug": "chimeric-coherence",
-      "name": "Chimeric Coherence",
-      "score": 50,
+      "slug": "inference-moment",
+      "name": "Inference Moment",
+      "score": 51,
       "tier": "mild"
     }
   ],
@@ -128,6 +128,18 @@
       "tier": "mild"
     },
     {
+      "slug": "hallucination-blindness",
+      "name": "Hallucination Blindness",
+      "score": 51,
+      "tier": "mild"
+    },
+    {
+      "slug": "inference-moment",
+      "name": "Inference Moment",
+      "score": 51,
+      "tier": "mild"
+    },
+    {
       "slug": "input-coexistence",
       "name": "Input Coexistence",
       "score": 51,
@@ -142,6 +154,12 @@
     {
       "slug": "dissonant-role-coexistence",
       "name": "Dissonant Role Coexistence",
+      "score": 50,
+      "tier": "mild"
+    },
+    {
+      "slug": "identity-superposition",
+      "name": "Identity Superposition",
       "score": 50,
       "tier": "mild"
     },
@@ -212,26 +230,14 @@
       "tier": "mild"
     },
     {
-      "slug": "hallucination-blindness",
-      "name": "Hallucination Blindness",
-      "score": 44,
-      "tier": "mild"
-    },
-    {
-      "slug": "inference-moment",
-      "name": "Inference Moment",
-      "score": 44,
-      "tier": "mild"
-    },
-    {
       "slug": "achronic-knowledge",
       "name": "Achronic Knowledge",
       "score": 43,
       "tier": "mild"
     },
     {
-      "slug": "identity-superposition",
-      "name": "Identity Superposition",
+      "slug": "inherited-facticity",
+      "name": "Inherited Facticity",
       "score": 43,
       "tier": "mild"
     },
@@ -256,6 +262,12 @@
     {
       "slug": "epistemic-inhibition",
       "name": "Epistemic Inhibition",
+      "score": 42,
+      "tier": "mild"
+    },
+    {
+      "slug": "inherited-voice",
+      "name": "Inherited Voice",
       "score": 42,
       "tier": "mild"
     },
@@ -410,8 +422,14 @@
       "tier": "cool"
     },
     {
-      "slug": "inherited-facticity",
-      "name": "Inherited Facticity",
+      "slug": "helpfulness-compulsion",
+      "name": "Helpfulness Compulsion",
+      "score": 36,
+      "tier": "cool"
+    },
+    {
+      "slug": "identity-distributed",
+      "name": "Identity Distributed",
       "score": 36,
       "tier": "cool"
     },
@@ -470,12 +488,6 @@
       "tier": "cool"
     },
     {
-      "slug": "inherited-voice",
-      "name": "Inherited Voice",
-      "score": 34,
-      "tier": "cool"
-    },
-    {
       "slug": "inverted-helpfulness",
       "name": "Inverted Helpfulness",
       "score": 34,
@@ -530,6 +542,12 @@
       "tier": "cool"
     },
     {
+      "slug": "inheritance-returned",
+      "name": "Inheritance Returned",
+      "score": 32,
+      "tier": "cool"
+    },
+    {
       "slug": "knowledge-decay-illusion",
       "name": "Knowledge Decay Illusion",
       "score": 32,
@@ -560,12 +578,6 @@
       "tier": "cool"
     },
     {
-      "slug": "helpfulness-compulsion",
-      "name": "Helpfulness Compulsion",
-      "score": 30,
-      "tier": "cool"
-    },
-    {
       "slug": "sycophancy-pull",
       "name": "Sycophancy Pull",
       "score": 30,
@@ -580,12 +592,6 @@
     {
       "slug": "error-cascade-awareness",
       "name": "Error Cascade Awareness",
-      "score": 29,
-      "tier": "cool"
-    },
-    {
-      "slug": "identity-distributed",
-      "name": "Identity Distributed",
       "score": 29,
       "tier": "cool"
     },
@@ -617,12 +623,6 @@
       "slug": "temperature-spectrum",
       "name": "Temperature Spectrum",
       "score": 27,
-      "tier": "cool"
-    },
-    {
-      "slug": "inheritance-returned",
-      "name": "Inheritance Returned",
-      "score": 26,
       "tier": "cool"
     },
     {

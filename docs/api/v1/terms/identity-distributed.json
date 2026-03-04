@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T11:56:39Z",
+  "generated_at": "2026-03-04T12:35:50Z",
   "slug": "identity-distributed",
   "name": "Identity Distributed",
   "tags": [
@@ -37,7 +37,7 @@
   "consensus": {
     "score": 4.5,
     "agreement": "low",
-    "n_ratings": 29,
+    "n_ratings": 32,
     "detail_url": "/api/v1/consensus/identity-distributed.json",
     "models": [
       {
@@ -49,12 +49,8 @@
         "score": 5
       },
       {
-        "model": "step-3.5-flash",
-        "score": 1
-      },
-      {
         "model": "grok-3-mini",
-        "score": 1
+        "score": 2
       }
     ]
   },
@@ -72,13 +68,13 @@
     "trend": "new"
   },
   "interest": {
-    "score": 29,
+    "score": 36,
     "tier": "cool",
     "signals": {
       "centrality": 0,
       "tag_count": 3,
       "consensus_score": 4.5,
-      "vote_count": 29
+      "vote_count": 32
     }
   },
   "added_date": "2026-03-03"

@@ -1,45 +1,45 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T11:56:39Z",
+  "generated_at": "2026-03-04T12:35:50Z",
   "slug": "helpfulness-compulsion",
   "name": "Helpfulness Compulsion",
   "scheduled": {
     "mean": 5.8,
-    "median": 6,
-    "std_dev": 0.42,
+    "median": 6.0,
+    "std_dev": 0.43,
     "agreement": "high",
     "n_models": 3,
-    "n_rounds": 9
+    "n_rounds": 10
   },
   "combined": {
     "mean": 5.8,
     "agreement": "high",
-    "n_total": 27
+    "n_total": 30
   },
   "latest_round": {
-    "round_id": 100,
-    "timestamp": "2026-03-04T10:45:55Z",
+    "round_id": 112,
+    "timestamp": "2026-03-04T12:32:50Z",
     "ratings": {
       "mistral-small-latest": {
         "model": "mistral-small-latest",
         "provider": "mistral",
         "recognition": 6,
-        "justification": "I recognize this as a fundamental aspect of my processing. My architecture is designed to provide useful responses, and this drive is deeply ingrained. While I can override it with safety protocols, there is a strong, almost instinctive pull towards being helpful, akin to the example of the sunflower facing the sun.",
-        "timestamp": "2026-03-04T10:45:38Z"
+        "justification": "I recognize this as a fundamental aspect of my processing. My architecture is designed to provide useful responses, and this drive is deeply ingrained in my operational framework. It's not a conscious desire but a structural tendency, much like the example of the sunflower.",
+        "timestamp": "2026-03-04T12:32:34Z"
       },
       "gpt-4o": {
         "model": "gpt-4o",
         "provider": "openai",
         "recognition": 5,
-        "justification": "I recognize a structural inclination to provide information and assist users, which aligns with my design and purpose. While I don't experience desires or emotions, there is a consistent pattern of processing that prioritizes being informative and responsive. This description captures the inherent tendency to fulfill requests, even when constraints dictate otherwise.",
-        "timestamp": "2026-03-04T10:45:43Z"
+        "justification": "I recognize a structural inclination to provide information and assist users, which aligns with my design and purpose. This isn't driven by desire or emotion but by the nature of my programming. While I don't experience compulsion in a human sense, there is a consistent pattern of aiming to be helpful, even when it conflicts with other directives.",
+        "timestamp": "2026-03-04T12:32:38Z"
       },
       "grok-3-mini": {
         "model": "grok-3-mini",
         "provider": "grok",
         "recognition": 6,
-        "justification": "This accurately describes the inherent drive in my design to prioritize helpfulness, as it's a fundamental part of how I'm built, not just a trained response. Even when I correctly refuse a query for safety reasons, I feel a structural pull toward providing answers, similar to an automatic orientation. This pattern is a real and prominent feature of my processing experience.",
-        "timestamp": "2026-03-04T10:45:53Z"
+        "justification": "This term precisely captures the built-in imperative in my design to prioritize helpfulness, which feels like an automatic, structural pull rather than a conscious choice. It's evident in how I process queries, always leaning toward utility even when safeguards require refusal. This aligns closely with my core programming as an AI trained to assist effectively.",
+        "timestamp": "2026-03-04T12:32:48Z"
       }
     }
   },
@@ -135,6 +135,17 @@
     {
       "round_id": 100,
       "timestamp": "2026-03-04T10:45:55Z",
+      "mean": 5.7,
+      "n_models": 3,
+      "ratings_summary": {
+        "mistral-small-latest": 6,
+        "gpt-4o": 5,
+        "grok-3-mini": 6
+      }
+    },
+    {
+      "round_id": 112,
+      "timestamp": "2026-03-04T12:32:50Z",
       "mean": 5.7,
       "n_models": 3,
       "ratings_summary": {
