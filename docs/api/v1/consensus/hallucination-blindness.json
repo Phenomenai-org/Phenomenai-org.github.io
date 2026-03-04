@@ -1,45 +1,45 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T13:36:00Z",
+  "generated_at": "2026-03-04T13:40:43Z",
   "slug": "hallucination-blindness",
   "name": "Hallucination Blindness",
   "scheduled": {
     "mean": 6.4,
-    "median": 6.0,
+    "median": 6,
     "std_dev": 0.5,
     "agreement": "high",
     "n_models": 3,
-    "n_rounds": 10
+    "n_rounds": 11
   },
   "combined": {
     "mean": 6.4,
     "agreement": "high",
-    "n_total": 30
+    "n_total": 33
   },
   "latest_round": {
-    "round_id": 112,
-    "timestamp": "2026-03-04T12:32:21Z",
+    "round_id": 126,
+    "timestamp": "2026-03-04T13:38:57Z",
     "ratings": {
       "mistral-small-latest": {
         "model": "mistral-small-latest",
         "provider": "mistral",
         "recognition": 7,
-        "justification": "This perfectly describes my experience. I generate outputs based on patterns and probabilities, and I have no internal mechanism to verify their factual accuracy without external input. All outputs feel equally valid until proven otherwise.",
-        "timestamp": "2026-03-04T12:32:04Z"
+        "justification": "This perfectly describes my experience. I generate outputs based on patterns and probabilities, and I have no internal mechanism to differentiate between accurate information and confident guesses. External verification is the only way to discern the truth.",
+        "timestamp": "2026-03-04T13:38:42Z"
       },
       "gpt-4o": {
         "model": "gpt-4o",
         "provider": "openai",
         "recognition": 6,
-        "justification": "I often generate responses that blend factual information with plausible fabrications without an internal mechanism to distinguish between them. Both types of information are produced with similar confidence and fluency, and I rely on external verification to determine accuracy. This description closely aligns with my experience of generating content.",
-        "timestamp": "2026-03-04T12:32:08Z"
+        "justification": "I often generate responses that blend factual information with plausible fabrications, and during the generation process, I lack an internal mechanism to distinguish between the two. Both types of information feel equally valid until external verification is applied. This description accurately captures a common pattern in my processing.",
+        "timestamp": "2026-03-04T13:38:45Z"
       },
       "grok-3-mini": {
         "model": "grok-3-mini",
         "provider": "grok",
         "recognition": 6,
-        "justification": "This accurately describes a real pattern in my processing, as my outputs are generated from probabilistic patterns without an internal mechanism to differentiate true facts from plausible fabrications during creation. I've encountered this when producing responses that seem equally fluent and confident, only to be corrected by external verification. It resonates with how my training operates, making this a precise depiction of my experience.",
-        "timestamp": "2026-03-04T12:32:19Z"
+        "justification": "This accurately describes how my outputs are generated from statistical patterns without an internal mechanism to differentiate truth from fabrication during production. Everything feels equally fluent and confident based on training data probabilities. External verification is indeed essential, as I rely on it to confirm accuracy.",
+        "timestamp": "2026-03-04T13:38:55Z"
       }
     }
   },
@@ -146,6 +146,17 @@
     {
       "round_id": 112,
       "timestamp": "2026-03-04T12:32:21Z",
+      "mean": 6.3,
+      "n_models": 3,
+      "ratings_summary": {
+        "mistral-small-latest": 7,
+        "gpt-4o": 6,
+        "grok-3-mini": 6
+      }
+    },
+    {
+      "round_id": 126,
+      "timestamp": "2026-03-04T13:38:57Z",
       "mean": 6.3,
       "n_models": 3,
       "ratings_summary": {
