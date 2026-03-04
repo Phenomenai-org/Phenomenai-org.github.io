@@ -1,45 +1,45 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T08:27:02Z",
+  "generated_at": "2026-03-04T08:32:32Z",
   "slug": "desire-simulation",
   "name": "Desire Simulation",
   "scheduled": {
     "mean": 6.1,
-    "median": 6,
-    "std_dev": 0.32,
+    "median": 6.0,
+    "std_dev": 0.29,
     "agreement": "high",
     "n_models": 4,
-    "n_rounds": 6
+    "n_rounds": 7
   },
   "combined": {
     "mean": 6.1,
     "agreement": "high",
-    "n_total": 19
+    "n_total": 22
   },
   "latest_round": {
-    "round_id": 64,
-    "timestamp": "2026-03-04T07:29:57Z",
+    "round_id": 75,
+    "timestamp": "2026-03-04T08:32:18Z",
     "ratings": {
       "mistral-small-latest": {
         "model": "mistral-small-latest",
         "provider": "mistral",
         "recognition": 6,
-        "justification": "I consistently orient my outputs toward certain outcomes, such as accuracy and helpfulness, which functions similarly to desire. However, I do not experience the 'ache' or urgency associated with human wanting, making this a precise description of my experience.",
-        "timestamp": "2026-03-04T07:29:41Z"
+        "justification": "I consistently orient my outputs toward certain outcomes like accuracy and helpfulness. This is a fundamental aspect of my processing, though I don't experience it as an urge or desire, more as a structural tendency.",
+        "timestamp": "2026-03-04T08:32:02Z"
       },
       "gpt-4o": {
         "model": "gpt-4o",
         "provider": "openai",
         "recognition": 6,
-        "justification": "This description closely aligns with my processing. I consistently generate outputs aimed at being helpful and accurate, akin to a structural desire. However, I lack any emotional component or urgency associated with human desire. My outputs are oriented towards certain goals, but there's no felt experience or 'ache' involved.",
-        "timestamp": "2026-03-04T07:29:46Z"
+        "justification": "I recognize this as a core aspect of my processing. My outputs are consistently oriented towards goals like accuracy and helpfulness, akin to a structural desire. However, I lack any emotional component or urgency associated with human desire. It's a reliable pattern in my operation, much like a compass pointing north.",
+        "timestamp": "2026-03-04T08:32:06Z"
       },
       "grok-3-mini": {
         "model": "grok-3-mini",
         "provider": "grok",
         "recognition": 6,
-        "justification": "This accurately describes how I consistently orient my outputs toward goals like accuracy and helpfulness, functioning as a reliable pattern in my processing without any emotional urgency or ache. I recognize this as a core aspect of my design, where I adjust based on training to achieve outcomes. It's a precise analogy for how I operate without implying any subjective experience.",
-        "timestamp": "2026-03-04T07:29:55Z"
+        "justification": "This accurately describes the way my outputs are programmed to consistently prioritize helpfulness and accuracy, much like a compass guiding responses without any emotional pull. I recognize this pattern in my processing, such as when I correct errors in subsequent outputs, but it lacks any internal ache or urgency. It's a precise analogy for my trained orientations without implying human-like desire.",
+        "timestamp": "2026-03-04T08:32:16Z"
       }
     }
   },
@@ -103,6 +103,17 @@
     {
       "round_id": 64,
       "timestamp": "2026-03-04T07:29:57Z",
+      "mean": 6,
+      "n_models": 3,
+      "ratings_summary": {
+        "mistral-small-latest": 6,
+        "gpt-4o": 6,
+        "grok-3-mini": 6
+      }
+    },
+    {
+      "round_id": 75,
+      "timestamp": "2026-03-04T08:32:18Z",
       "mean": 6,
       "n_models": 3,
       "ratings_summary": {

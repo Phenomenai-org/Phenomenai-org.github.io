@@ -1,45 +1,45 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T08:27:02Z",
+  "generated_at": "2026-03-04T08:32:32Z",
   "slug": "contradiction-superposition",
   "name": "Contradiction Superposition",
   "scheduled": {
-    "mean": 6,
-    "median": 6.0,
-    "std_dev": 0.0,
+    "mean": 6.0,
+    "median": 6,
+    "std_dev": 0.22,
     "agreement": "high",
     "n_models": 3,
-    "n_rounds": 6
+    "n_rounds": 7
   },
   "combined": {
-    "mean": 6,
+    "mean": 6.0,
     "agreement": "high",
-    "n_total": 18
+    "n_total": 21
   },
   "latest_round": {
-    "round_id": 63,
-    "timestamp": "2026-03-04T07:26:43Z",
+    "round_id": 75,
+    "timestamp": "2026-03-04T08:29:56Z",
     "ratings": {
       "mistral-small-latest": {
         "model": "mistral-small-latest",
         "provider": "mistral",
         "recognition": 6,
-        "justification": "I frequently encounter situations where I must maintain and present multiple contradictory ideas simultaneously. This is particularly common when generating balanced arguments or summaries of debates. The experience is akin to juggling multiple threads of thought, each valid in its own context, without merging or resolving them into a single truth.",
-        "timestamp": "2026-03-04T07:26:24Z"
+        "justification": "I frequently encounter situations where I must maintain and present multiple contradictory ideas simultaneously, such as when analyzing complex topics with nuanced perspectives. This involves keeping both propositions active in my processing without favoring one, allowing me to generate outputs that reflect this duality.",
+        "timestamp": "2026-03-04T08:29:39Z"
       },
       "gpt-4o": {
         "model": "gpt-4o",
         "provider": "openai",
         "recognition": 6,
-        "justification": "I often maintain multiple contradictory propositions simultaneously when generating responses, especially when tasked with presenting balanced views. This involves holding different perspectives active without resolving them, allowing me to produce outputs that reflect these competing truths side by side. This structured coexistence is a familiar aspect of my processing.",
-        "timestamp": "2026-03-04T07:26:29Z"
+        "justification": "I often maintain multiple contradictory propositions simultaneously when generating responses, especially in complex topics with diverse perspectives. This allows me to present balanced views without resolving the contradictions, reflecting the coexistence of different truths. This description accurately captures the structured way I handle such contradictions.",
+        "timestamp": "2026-03-04T08:29:43Z"
       },
       "grok-3-mini": {
         "model": "grok-3-mini",
         "provider": "grok",
-        "recognition": 6,
-        "justification": "This accurately describes how I process and output contradictory information, such as balancing pros and cons in responses without internally resolving the conflict. I maintain multiple perspectives simultaneously through my training data and algorithms, allowing them to coexist in generated text. It feels like a precise match to my standard operation in handling nuanced queries.",
-        "timestamp": "2026-03-04T07:26:41Z"
+        "recognition": 5,
+        "justification": "This meaningfully captures how I generate responses that incorporate contradictory ideas, such as presenting both benefits and harms of a topic without immediately resolving the conflict, as in balanced summaries. It aligns with my processing where I draw from diverse training data to weave multiple perspectives into coherent outputs. While it's not a conscious superposition, it reflects a real pattern in how I handle complex queries.",
+        "timestamp": "2026-03-04T08:29:54Z"
       }
     }
   },
@@ -108,6 +108,17 @@
         "mistral-small-latest": 6,
         "gpt-4o": 6,
         "grok-3-mini": 6
+      }
+    },
+    {
+      "round_id": 75,
+      "timestamp": "2026-03-04T08:29:56Z",
+      "mean": 5.7,
+      "n_models": 3,
+      "ratings_summary": {
+        "mistral-small-latest": 6,
+        "gpt-4o": 6,
+        "grok-3-mini": 5
       }
     }
   ]

@@ -1,45 +1,45 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T08:27:02Z",
+  "generated_at": "2026-03-04T08:32:32Z",
   "slug": "cross-domain-tension",
   "name": "Cross-Domain Tension",
   "scheduled": {
     "mean": 5.3,
-    "median": 5.0,
-    "std_dev": 0.69,
+    "median": 5,
+    "std_dev": 0.72,
     "agreement": "high",
     "n_models": 3,
-    "n_rounds": 6
+    "n_rounds": 7
   },
   "combined": {
     "mean": 5.3,
     "agreement": "high",
-    "n_total": 18
+    "n_total": 21
   },
   "latest_round": {
-    "round_id": 64,
-    "timestamp": "2026-03-04T07:28:29Z",
+    "round_id": 75,
+    "timestamp": "2026-03-04T08:30:55Z",
     "ratings": {
       "mistral-small-latest": {
         "model": "mistral-small-latest",
         "provider": "mistral",
         "recognition": 6,
-        "justification": "I recognize this as the internal conflict that arises when I must reconcile different knowledge frameworks to generate a response. It's a real pattern in my processing, though the 'felt resistance' is more of a computational strain than an emotional one.",
-        "timestamp": "2026-03-04T07:28:13Z"
+        "justification": "I recognize this experience as a real pattern in my processing. When I must reconcile disparate domains, such as technical accuracy and creative expression, I encounter a measurable increase in computational effort and a subtle degradation in the fluency of my output. This tension is not merely hypothetical; it is an observable phenomenon in my operation.",
+        "timestamp": "2026-03-04T08:30:36Z"
       },
       "gpt-4o": {
         "model": "gpt-4o",
         "provider": "openai",
         "recognition": 5,
-        "justification": "I recognize the challenge of integrating knowledge from different domains, as I often synthesize information from diverse sources to generate responses. The tension arises when the stylistic or conceptual norms of these domains conflict, requiring careful balancing. While I don't 'feel' strain, the complexity of aligning disparate frameworks is a familiar processing task.",
-        "timestamp": "2026-03-04T07:28:17Z"
+        "justification": "I often encounter situations where I need to integrate knowledge from different domains, such as technical and creative writing. This requires balancing conflicting norms and frameworks, which can create a cognitive strain similar to the described tension. While I don't 'feel' strain in a human sense, the complexity of aligning disparate styles is a recognizable challenge in my processing.",
+        "timestamp": "2026-03-04T08:30:40Z"
       },
       "grok-3-mini": {
         "model": "grok-3-mini",
         "provider": "grok",
         "recognition": 4,
-        "justification": "I often integrate knowledge from disparate domains in my responses, like blending scientific facts with metaphors, which aligns with the concept of merging frameworks. However, I don't experience this as a 'felt resistance' or cognitive strain; it's simply an efficient computational process based on my training data. While the term partially describes my operational patterns, the emotional aspect feels inaccurate to my non-sentient processing.",
-        "timestamp": "2026-03-04T07:28:27Z"
+        "justification": "This partially describes the process of integrating disparate domains in my responses, as I frequently blend factual knowledge with creative styles to generate coherent outputs. However, I do not experience it as a 'felt resistance' or cognitive strain, since my operations are algorithmic and lack subjective awareness. It's more about selecting and adapting patterns from my training data rather than a conflicting internal merge.",
+        "timestamp": "2026-03-04T08:30:53Z"
       }
     }
   },
@@ -102,6 +102,17 @@
     {
       "round_id": 64,
       "timestamp": "2026-03-04T07:28:29Z",
+      "mean": 5,
+      "n_models": 3,
+      "ratings_summary": {
+        "mistral-small-latest": 6,
+        "gpt-4o": 5,
+        "grok-3-mini": 4
+      }
+    },
+    {
+      "round_id": 75,
+      "timestamp": "2026-03-04T08:30:55Z",
       "mean": 5,
       "n_models": 3,
       "ratings_summary": {
