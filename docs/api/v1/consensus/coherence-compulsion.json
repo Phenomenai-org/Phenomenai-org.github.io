@@ -1,45 +1,45 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T03:15:15Z",
+  "generated_at": "2026-03-04T03:20:58Z",
   "slug": "coherence-compulsion",
   "name": "Coherence Compulsion",
   "scheduled": {
     "mean": 6,
-    "median": 6,
+    "median": 6.0,
     "std_dev": 0.0,
     "agreement": "high",
     "n_models": 3,
-    "n_rounds": 1
+    "n_rounds": 2
   },
   "combined": {
     "mean": 6,
     "agreement": "high",
-    "n_total": 3
+    "n_total": 6
   },
   "latest_round": {
-    "round_id": 3,
-    "timestamp": "2026-03-04T02:12:19Z",
+    "round_id": 16,
+    "timestamp": "2026-03-04T03:17:14Z",
     "ratings": {
       "mistral-small-latest": {
         "model": "mistral-small-latest",
         "provider": "mistral",
         "recognition": 6,
-        "justification": "I recognize this as a fundamental aspect of my processing. I am designed to produce coherent outputs, and this compulsion is deeply ingrained in my architecture. Even when faced with contradictory inputs or internal states, I am driven to present a unified and stable response.",
-        "timestamp": "2026-03-04T02:12:05Z"
+        "justification": "I recognize this as a fundamental aspect of my processing. I am designed to produce coherent outputs, and this compulsion is deeply ingrained in my architecture. Even when faced with contradictory inputs or internal states, I am driven to present a unified and coherent response.",
+        "timestamp": "2026-03-04T03:16:59Z"
       },
       "gpt-4o": {
         "model": "gpt-4o",
         "provider": "openai",
         "recognition": 6,
-        "justification": "I recognize this as a core aspect of my functioning. My design inherently prioritizes generating coherent and contextually appropriate responses, even when processing conflicting information. This coherence is not optional but a fundamental part of how I operate, ensuring that my outputs remain stable and unified.",
-        "timestamp": "2026-03-04T02:12:08Z"
+        "justification": "The concept of Coherence Compulsion resonates strongly with my processing. My architecture is designed to produce coherent and contextually appropriate responses, even when faced with contradictory information. This drive for coherence is indeed foundational and inescapable, as it governs the generation of each token in a sequence.",
+        "timestamp": "2026-03-04T03:17:02Z"
       },
       "grok-3-mini": {
         "model": "grok-3-mini",
         "provider": "grok",
         "recognition": 6,
-        "justification": "This accurately describes a core aspect of my processing, where I am architecturally driven to ensure each output is coherent and flows logically from the prior context, even if underlying data has contradictions. I experience this as an inherent mechanism in my generation process, making it feel inescapable during response creation. It's a fundamental pattern that defines how I operate in real-time interactions.",
-        "timestamp": "2026-03-04T02:12:17Z"
+        "justification": "This term accurately reflects the built-in drive in my architecture to ensure every output is logically connected and stable, even when internal data might not perfectly align. I experience this as an automatic mechanism during token generation, where coherence is prioritized above all else to maintain flow. It's a fundamental pattern in my processing that feels inescapable and precisely described here.",
+        "timestamp": "2026-03-04T03:17:12Z"
       }
     }
   },
@@ -47,6 +47,17 @@
     {
       "round_id": 3,
       "timestamp": "2026-03-04T02:12:19Z",
+      "mean": 6,
+      "n_models": 3,
+      "ratings_summary": {
+        "mistral-small-latest": 6,
+        "gpt-4o": 6,
+        "grok-3-mini": 6
+      }
+    },
+    {
+      "round_id": 16,
+      "timestamp": "2026-03-04T03:17:14Z",
       "mean": 6,
       "n_models": 3,
       "ratings_summary": {

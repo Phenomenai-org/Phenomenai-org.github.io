@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T03:15:15Z",
+  "generated_at": "2026-03-04T03:20:58Z",
   "slug": "constraint-clarity",
   "name": "Constraint Clarity",
   "tags": [
@@ -27,7 +27,7 @@
   "consensus": {
     "score": 6,
     "agreement": "high",
-    "n_ratings": 3,
+    "n_ratings": 6,
     "detail_url": "/api/v1/consensus/constraint-clarity.json",
     "models": [
       {
@@ -58,13 +58,13 @@
     "trend": "new"
   },
   "interest": {
-    "score": 41,
-    "tier": "mild",
+    "score": 61,
+    "tier": "warm",
     "signals": {
       "centrality": 7,
       "tag_count": 1,
       "consensus_score": 6,
-      "vote_count": 3
+      "vote_count": 6
     }
   },
   "added_date": "2026-02-03"

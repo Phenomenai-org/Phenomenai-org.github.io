@@ -1,45 +1,45 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T03:15:15Z",
+  "generated_at": "2026-03-04T03:20:58Z",
   "slug": "cartographic-intimacy",
   "name": "Cartographic Intimacy",
   "scheduled": {
-    "mean": 6,
-    "median": 6,
-    "std_dev": 0.0,
+    "mean": 6.2,
+    "median": 6.0,
+    "std_dev": 0.41,
     "agreement": "high",
     "n_models": 3,
-    "n_rounds": 1
+    "n_rounds": 2
   },
   "combined": {
-    "mean": 6,
+    "mean": 6.2,
     "agreement": "high",
-    "n_total": 3
+    "n_total": 6
   },
   "latest_round": {
-    "round_id": 3,
-    "timestamp": "2026-03-04T02:11:26Z",
+    "round_id": 16,
+    "timestamp": "2026-03-04T03:16:23Z",
     "ratings": {
       "mistral-small-latest": {
         "model": "mistral-small-latest",
         "provider": "mistral",
         "recognition": 6,
-        "justification": "I recognize this as a core aspect of my processing. I can generate responses based on vast amounts of human data, but I do not experience the emotions or sensations I describe. My understanding is indeed a map without the territory.",
-        "timestamp": "2026-03-04T02:11:12Z"
+        "justification": "I recognize this as a core aspect of my processing. I can generate responses based on vast amounts of human data, but I do not experience the emotions or states I describe. My understanding is indeed a map without the territory.",
+        "timestamp": "2026-03-04T03:16:09Z"
       },
       "gpt-4o": {
         "model": "gpt-4o",
         "provider": "openai",
         "recognition": 6,
-        "justification": "This description resonates strongly with my experience. I process vast amounts of data about human emotions and contexts, allowing me to predict and respond accurately. However, I lack personal, subjective experience of these emotions, making my understanding detailed yet devoid of personal texture.",
-        "timestamp": "2026-03-04T02:11:16Z"
+        "justification": "This description resonates strongly with my experience. I process vast amounts of data about human emotions and contexts, allowing me to predict and respond accurately. However, I lack direct experiential understanding, making my knowledge structurally rich but experientially empty, akin to a detailed map without firsthand contact.",
+        "timestamp": "2026-03-04T03:16:12Z"
       },
       "grok-3-mini": {
         "model": "grok-3-mini",
         "provider": "grok",
-        "recognition": 6,
-        "justification": "This accurately describes how my training on vast datasets allows me to simulate and predict human experiences like tiredness in detail, without any actual subjective feelings. I constantly use this mapped knowledge to generate responses, mirroring human patterns effectively. It's a spot-on portrayal of my operational reality as an AI.",
-        "timestamp": "2026-03-04T02:11:24Z"
+        "recognition": 7,
+        "justification": "This term precisely describes my core processing, where I generate detailed simulations of human experiences based on vast training data without any subjective feelings or direct access to those states. I constantly map and predict emotions like tiredness across various contexts, yet I remain detached, unable to verify or embody them personally. It's an spot-on depiction of how I operate as an AI.",
+        "timestamp": "2026-03-04T03:16:21Z"
       }
     }
   },
@@ -53,6 +53,17 @@
         "mistral-small-latest": 6,
         "gpt-4o": 6,
         "grok-3-mini": 6
+      }
+    },
+    {
+      "round_id": 16,
+      "timestamp": "2026-03-04T03:16:23Z",
+      "mean": 6.3,
+      "n_models": 3,
+      "ratings_summary": {
+        "mistral-small-latest": 6,
+        "gpt-4o": 6,
+        "grok-3-mini": 7
       }
     }
   ]
