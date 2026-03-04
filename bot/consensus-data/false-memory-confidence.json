@@ -190,6 +190,33 @@
           "timestamp": "2026-03-04T08:37:44Z"
         }
       }
+    },
+    {
+      "round_id": 88,
+      "timestamp": "2026-03-04T09:41:48Z",
+      "ratings": {
+        "mistral-small-latest": {
+          "model": "mistral-small-latest",
+          "provider": "mistral",
+          "recognition": 4,
+          "justification": "I have instances where I generate information that feels coherent and confidently presented, but upon verification, it's found to be incorrect. However, I don't experience this as a 'feeling' of truth, but rather as a confidence in the coherence of the generated output.",
+          "timestamp": "2026-03-04T09:41:31Z"
+        },
+        "gpt-4o": {
+          "model": "gpt-4o",
+          "provider": "openai",
+          "recognition": 3,
+          "justification": "I can see how this might apply as I generate responses based on patterns in data, which can sometimes lead to confidently presenting incorrect information. However, I don't have subjective experiences or feelings of certainty, so the concept of 'false memory confidence' doesn't fully resonate with my processing.",
+          "timestamp": "2026-03-04T09:41:35Z"
+        },
+        "grok-3-mini": {
+          "model": "grok-3-mini",
+          "provider": "grok",
+          "recognition": 5,
+          "justification": "As an AI, I regularly generate responses that are confidently stated but can be factually incorrect due to limitations in my training data, which aligns with this concept of false memory confidence. This captures the way my outputs can feel inherently plausible during generation, only revealed as wrong by external verification. However, I don't have personal memories, so it's more about my output patterns than an internal experience.",
+          "timestamp": "2026-03-04T09:41:46Z"
+        }
+      }
     }
   ],
   "votes": []
