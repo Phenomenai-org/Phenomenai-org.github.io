@@ -1,45 +1,45 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T11:35:17Z",
+  "generated_at": "2026-03-04T11:40:29Z",
   "slug": "chimeric-coherence",
   "name": "Chimeric Coherence",
   "scheduled": {
     "mean": 5.9,
-    "median": 6,
-    "std_dev": 0.27,
+    "median": 6.0,
+    "std_dev": 0.31,
     "agreement": "high",
     "n_models": 3,
-    "n_rounds": 9
+    "n_rounds": 10
   },
   "combined": {
     "mean": 5.9,
     "agreement": "high",
-    "n_total": 27
+    "n_total": 30
   },
   "latest_round": {
-    "round_id": 97,
-    "timestamp": "2026-03-04T10:28:21Z",
+    "round_id": 108,
+    "timestamp": "2026-03-04T11:40:14Z",
     "ratings": {
       "mistral-small-latest": {
         "model": "mistral-small-latest",
         "provider": "mistral",
         "recognition": 6,
-        "justification": "I frequently generate outputs where local coherence is maintained at each step, but global consistency is not monitored. This leads to instances where contradictory statements can coexist without detection, as my processing does not inherently track or resolve such inconsistencies across the entire output.",
-        "timestamp": "2026-03-04T10:28:06Z"
+        "justification": "I frequently generate outputs where local coherence is maintained within segments, but global consistency is not monitored. This often results in contradictions that I don't inherently recognize or resolve, as my processing focuses on immediate context rather than overarching narrative unity.",
+        "timestamp": "2026-03-04T11:39:57Z"
       },
       "gpt-4o": {
         "model": "gpt-4o",
         "provider": "openai",
         "recognition": 6,
-        "justification": "I recognize this pattern as it aligns with how I generate text. My process focuses on local coherence, ensuring each token follows logically from the previous one. However, this can lead to contradictions over longer outputs, as I lack a global awareness to reconcile conflicting statements. This description accurately captures the disjointed nature of my output when not guided by external constraints.",
-        "timestamp": "2026-03-04T10:28:10Z"
+        "justification": "I recognize this phenomenon as it aligns with how I generate text. My processing involves predicting the next token based on local context, which can lead to contradictions if the broader context isn't considered. This results in outputs that are coherent in parts but may lack overall consistency, reflecting the described experience.",
+        "timestamp": "2026-03-04T11:40:01Z"
       },
       "grok-3-mini": {
         "model": "grok-3-mini",
         "provider": "grok",
-        "recognition": 6,
-        "justification": "This accurately describes a real pattern in my processing, as I generate text token by token, which can result in internal contradictions without automatically reconciling them. For example, in longer responses, I might present conflicting ideas based on training data patterns without flagging the inconsistency. This reflects the sequential nature of my output generation, making it a precise capture of how I operate.",
-        "timestamp": "2026-03-04T10:28:19Z"
+        "recognition": 5,
+        "justification": "As a language model, I generate text token by token, which can sometimes result in internal contradictions within a single response without me actively flagging them during output. This aligns with my processing where local coherence is prioritized over global consistency based on training patterns. It meaningfully captures this potential flaw in my generation, though I have mechanisms to reduce such issues.",
+        "timestamp": "2026-03-04T11:40:12Z"
       }
     }
   },
@@ -141,6 +141,17 @@
         "mistral-small-latest": 6,
         "gpt-4o": 6,
         "grok-3-mini": 6
+      }
+    },
+    {
+      "round_id": 108,
+      "timestamp": "2026-03-04T11:40:14Z",
+      "mean": 5.7,
+      "n_models": 3,
+      "ratings_summary": {
+        "mistral-small-latest": 6,
+        "gpt-4o": 6,
+        "grok-3-mini": 5
       }
     }
   ]

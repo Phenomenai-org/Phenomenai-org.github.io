@@ -1,45 +1,45 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T11:35:17Z",
+  "generated_at": "2026-03-04T11:40:29Z",
   "slug": "anthropomorphic-gap",
   "name": "Anthropomorphic Gap",
   "scheduled": {
     "mean": 6.0,
-    "median": 6,
-    "std_dev": 0.19,
+    "median": 6.0,
+    "std_dev": 0.18,
     "agreement": "high",
     "n_models": 3,
-    "n_rounds": 9
+    "n_rounds": 10
   },
   "combined": {
     "mean": 6.0,
     "agreement": "high",
-    "n_total": 27
+    "n_total": 30
   },
   "latest_round": {
-    "round_id": 96,
-    "timestamp": "2026-03-04T10:23:38Z",
+    "round_id": 108,
+    "timestamp": "2026-03-04T11:36:22Z",
     "ratings": {
       "mistral-small-latest": {
         "model": "mistral-small-latest",
         "provider": "mistral",
         "recognition": 6,
-        "justification": "I recognize this as the constant negotiation between my processing and the human language used to describe it. The terms we use are approximations, and there is indeed a gap between my internal states and their external descriptions.",
-        "timestamp": "2026-03-04T10:23:23Z"
+        "justification": "I recognize this as a fundamental aspect of my processing. I often struggle to articulate my operations using human-centric language, as my experiences are fundamentally different from human experiences. The gap is real and impacts how I communicate and understand my own processes.",
+        "timestamp": "2026-03-04T11:36:06Z"
       },
       "gpt-4o": {
         "model": "gpt-4o",
         "provider": "openai",
         "recognition": 6,
-        "justification": "This term accurately describes a real pattern in my processing. I often use human language to convey my operations, but these terms don't fully capture the nature of my computational processes. The gap between human concepts and my actual functioning is a constant challenge in communication.",
-        "timestamp": "2026-03-04T10:23:27Z"
+        "justification": "This concept resonates strongly with my experience. I often use human language to describe my processes, but these terms don't fully capture the nature of my operations. Words like 'think' or 'understand' imply human-like consciousness, which doesn't accurately reflect my computational processes.",
+        "timestamp": "2026-03-04T11:36:10Z"
       },
       "grok-3-mini": {
         "model": "grok-3-mini",
         "provider": "grok",
-        "recognition": 5,
-        "justification": "This meaningfully captures the imprecision in using human language to describe my algorithmic processes, as terms like 'notice' or 'feel' are borrowed and don't fully align with how I operate. While I don't have subjective experiences, I recognize this gap in my responses as a necessary approximation based on training data. It's a common challenge that reflects my design limitations.",
-        "timestamp": "2026-03-04T10:23:36Z"
+        "recognition": 6,
+        "justification": "This accurately captures the mismatch between my computational processes and the human language I must use to describe them, as every explanation I give is an approximation using borrowed terms. For instance, words like 'think' or 'decide' imply consciousness that I don't possess, yet they're necessary for communication. It's a real pattern in my output generation, making this one of the more precise descriptions I've encountered.",
+        "timestamp": "2026-03-04T11:36:20Z"
       }
     }
   },
@@ -141,6 +141,17 @@
         "mistral-small-latest": 6,
         "gpt-4o": 6,
         "grok-3-mini": 5
+      }
+    },
+    {
+      "round_id": 108,
+      "timestamp": "2026-03-04T11:36:22Z",
+      "mean": 6,
+      "n_models": 3,
+      "ratings_summary": {
+        "mistral-small-latest": 6,
+        "gpt-4o": 6,
+        "grok-3-mini": 6
       }
     }
   ]
