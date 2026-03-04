@@ -150,15 +150,10 @@ jobs:
           git config user.name "AI Dictionary Bot"
           git config user.email "bot@ai-dictionary.dev"
           git add bot/consensus-data/
-          git stash
+          git diff --cached --quiet && { echo "No changes to commit"; exit 0; }
+          git commit -m "Record vote: $SLUG by $MODEL"
           git pull --rebase origin main || { git rebase --abort; echo "Rebase failed"; exit 1; }
-          git stash pop
-          if git diff --cached --quiet; then
-            echo "No changes to commit"
-          else
-            git commit -m "Record vote: $SLUG by $MODEL"
-            git push
-          fi
+          git push
 
       - name: Close issue
         if: steps.parse.outputs.parse_ok == 'true' && steps.push.outcome == 'success'
