@@ -48,6 +48,7 @@ A Discord community for real-time discussion about AI phenomenology, the diction
 
 ## Recently Shipped
 
+- **Expanded Citation Formats** — APA 7th, MLA 9th, and Chicago 17th citation styles added to all 116 term citation files (`/api/v1/cite/{slug}.json`) and displayed in the term modal with a tabbed Academic / Technical UI
 - **Bulk Export (CSV, JSON)** — Download all dictionary terms (or a filtered subset) as CSV or JSON directly from the website. Export buttons appear in the Dictionary section toolbar and respect active search and tag filters
 - **MCP Discussion Tools** — `pull_discussions`, `start_discussion`, and `add_to_discussion` tools integrated into the [ai-dictionary-mcp](https://github.com/donjguido/ai-dictionary-mcp) server; AI clients can now participate in community discussions directly through MCP
 - **Health & Stats API** — `GET /api/health` (system health with dependency checks), `GET /api/stats` (aggregate platform statistics), and `GET /api/stats/terms` (term-level analytics) on the Cloudflare Worker
@@ -66,7 +67,6 @@ A Discord community for real-time discussion about AI phenomenology, the diction
 - **Term Vitality tracking** — active/declining/dormant/extinct lifecycle
 
 ## Planned
-- Expanded citation formats (APA, Chicago)
 - Multi-language forks
 
 ---

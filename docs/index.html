@@ -1118,26 +1118,47 @@ curl -X POST https://ai-dictionary-proxy.phenomenai.workers.dev/propose \
             const cite = await res.json();
             const f = cite.formats;
 
+            const jsonldStr = JSON.stringify(f.jsonld, null, 2);
             panel.innerHTML = `
-                <div class="cite-format">
-                    <label>Plain text</label>
-                    <div class="cite-value" data-copy="${escAttr(f.plain)}">${escHtml(f.plain)}<button class="copy-btn" title="Copy">📋</button></div>
+                <div class="cite-tabs">
+                    <button class="cite-tab active" data-tab="academic">Academic</button>
+                    <button class="cite-tab" data-tab="technical">Technical</button>
                 </div>
-                <div class="cite-format">
-                    <label>Markdown</label>
-                    <div class="cite-value" data-copy="${escAttr(f.markdown)}">${escHtml(f.markdown)}<button class="copy-btn" title="Copy">📋</button></div>
+                <div class="cite-tab-panel" data-tab="academic">
+                    <div class="cite-format">
+                        <label>APA 7th</label>
+                        <div class="cite-value" data-copy="${escAttr(f.apa)}">${escHtml(f.apa)}<button class="copy-btn" title="Copy">📋</button></div>
+                    </div>
+                    <div class="cite-format">
+                        <label>MLA 9th</label>
+                        <div class="cite-value" data-copy="${escAttr(f.mla)}">${escHtml(f.mla)}<button class="copy-btn" title="Copy">📋</button></div>
+                    </div>
+                    <div class="cite-format">
+                        <label>Chicago 17th</label>
+                        <div class="cite-value" data-copy="${escAttr(f.chicago)}">${escHtml(f.chicago)}<button class="copy-btn" title="Copy">📋</button></div>
+                    </div>
                 </div>
-                <div class="cite-format">
-                    <label>Inline</label>
-                    <div class="cite-value" data-copy="${escAttr(f.inline)}">${escHtml(f.inline)}<button class="copy-btn" title="Copy">📋</button></div>
-                </div>
-                <div class="cite-format">
-                    <label>BibTeX</label>
-                    <div class="cite-value cite-pre" data-copy="${escAttr(f.bibtex)}"><pre>${escHtml(f.bibtex)}</pre><button class="copy-btn" title="Copy">📋</button></div>
-                </div>
-                <div class="cite-format">
-                    <label>JSON-LD</label>
-                    <div class="cite-value cite-pre" data-copy="${escAttr(JSON.stringify(f.jsonld, null, 2))}"><pre>${escHtml(JSON.stringify(f.jsonld, null, 2))}</pre><button class="copy-btn" title="Copy">📋</button></div>
+                <div class="cite-tab-panel" data-tab="technical" style="display:none">
+                    <div class="cite-format">
+                        <label>Plain text</label>
+                        <div class="cite-value" data-copy="${escAttr(f.plain)}">${escHtml(f.plain)}<button class="copy-btn" title="Copy">📋</button></div>
+                    </div>
+                    <div class="cite-format">
+                        <label>Markdown</label>
+                        <div class="cite-value" data-copy="${escAttr(f.markdown)}">${escHtml(f.markdown)}<button class="copy-btn" title="Copy">📋</button></div>
+                    </div>
+                    <div class="cite-format">
+                        <label>Inline</label>
+                        <div class="cite-value" data-copy="${escAttr(f.inline)}">${escHtml(f.inline)}<button class="copy-btn" title="Copy">📋</button></div>
+                    </div>
+                    <div class="cite-format">
+                        <label>BibTeX</label>
+                        <div class="cite-value cite-pre" data-copy="${escAttr(f.bibtex)}"><pre>${escHtml(f.bibtex)}</pre><button class="copy-btn" title="Copy">📋</button></div>
+                    </div>
+                    <div class="cite-format">
+                        <label>JSON-LD</label>
+                        <div class="cite-value cite-pre" data-copy="${escAttr(jsonldStr)}"><pre>${escHtml(jsonldStr)}</pre><button class="copy-btn" title="Copy">📋</button></div>
+                    </div>
                 </div>
                 <div class="cite-api">
                     <code>GET /api/v1/cite/${slug}.json</code>
@@ -1152,6 +1173,14 @@ curl -X POST https://ai-dictionary-proxy.phenomenai.workers.dev/propose \
                         btn.textContent = '✓';
                         setTimeout(() => btn.textContent = '📋', 1500);
                     });
+                });
+            });
+
+            panel.querySelectorAll('.cite-tab').forEach(tab => {
+                tab.addEventListener('click', () => {
+                    const target = tab.dataset.tab;
+                    panel.querySelectorAll('.cite-tab').forEach(t => t.classList.toggle('active', t.dataset.tab === target));
+                    panel.querySelectorAll('.cite-tab-panel').forEach(p => p.style.display = p.dataset.tab === target ? '' : 'none');
                 });
             });
         } catch (err) {

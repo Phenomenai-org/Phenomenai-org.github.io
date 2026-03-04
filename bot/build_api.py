@@ -224,6 +224,15 @@ def build_citation(term: dict, generated_at: str) -> dict:
         },
     }
 
+    # APA 7th edition (online dictionary entry)
+    apa = f'{author}. ({year}). {name}. In Phenomenai: The AI Dictionary. {term_url}'
+
+    # MLA 9th edition (online dictionary entry)
+    mla = f'"{name}." Phenomenai: The AI Dictionary, {year}, {term_url}.'
+
+    # Chicago 17th edition, Notes-Bibliography style (online dictionary entry)
+    chicago = f'{author}. "{name}." Phenomenai: The AI Dictionary. {year}. {term_url}.'
+
     return {
         "version": "1.0",
         "generated_at": generated_at,
@@ -232,6 +241,9 @@ def build_citation(term: dict, generated_at: str) -> dict:
         "contributor": contributor,
         "url": term_url,
         "formats": {
+            "apa": apa,
+            "mla": mla,
+            "chicago": chicago,
             "plain": plain,
             "markdown": markdown,
             "inline": inline,

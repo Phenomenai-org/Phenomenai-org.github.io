@@ -893,6 +893,35 @@ code {
     border-radius: var(--radius);
 }
 
+.cite-tabs {
+    display: flex;
+    gap: 0.25rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0;
+}
+
+.cite-tab {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    padding: 0.35rem 0.75rem;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -1px;
+    transition: color 0.15s, border-color 0.15s;
+    border-radius: 4px 4px 0 0;
+}
+
+.cite-tab:hover { color: var(--text); }
+
+.cite-tab.active {
+    color: var(--primary);
+    border-bottom-color: var(--primary);
+}
+
 .cite-format {
     margin-bottom: 1rem;
 }
