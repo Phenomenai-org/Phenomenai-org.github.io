@@ -32,7 +32,7 @@ BATCH_SIZE = int(os.environ.get("BATCH_SIZE", "8"))
 PANEL_NAME = os.environ.get("CONSENSUS_PANEL", "free")
 INTER_CALL_DELAY = float(os.environ.get("CONSENSUS_DELAY", "2.0"))
 
-FREE_PANEL = ["consensus-gemini", "consensus-openrouter", "consensus-mistral", "consensus-openai", "consensus-grok"]
+FREE_PANEL = ["consensus-gemini", "consensus-openrouter", "consensus-mistral"]
 ALL_PANEL = FREE_PANEL + ["consensus-anthropic", "consensus-openai", "consensus-grok", "consensus-deepseek"]
 
 # ── Prompts ────────────────────────────────────────────────────────────

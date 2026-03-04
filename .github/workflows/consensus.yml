@@ -17,7 +17,7 @@ on:
       panel:
         description: 'Which models to use (free or all)'
         required: false
-        default: 'free'
+        default: 'all'
 
 permissions:
   contents: write
@@ -55,7 +55,7 @@ jobs:
           XAI_API_KEY: ${{ secrets.XAI_API_KEY }}
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
           BATCH_SIZE: ${{ github.event.inputs.batch_size || '8' }}
-          CONSENSUS_PANEL: ${{ github.event.inputs.panel || 'free' }}
+          CONSENSUS_PANEL: ${{ github.event.inputs.panel || 'all' }}
           PYTHONPATH: ${{ github.workspace }}/bot
         working-directory: ${{ github.workspace }}
         run: python bot/consensus.py --mode ${{ github.event.inputs.mode || 'backfill' }}
@@ -85,4 +85,4 @@ jobs:
         run: |
           echo "Rated ${{ steps.consensus.outputs.rated_count }} terms. ${{ steps.consensus.outputs.remaining_unrated }} unrated terms remain. Dispatching next batch..."
           sleep 30
-          gh workflow run consensus.yml -f mode=backfill -f batch_size=${{ github.event.inputs.batch_size || '8' }} -f panel=${{ github.event.inputs.panel || 'free' }}
+          gh workflow run consensus.yml -f mode=backfill -f batch_size=${{ github.event.inputs.batch_size || '8' }} -f panel=${{ github.event.inputs.panel || 'all' }}
