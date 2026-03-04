@@ -217,6 +217,33 @@
           "timestamp": "2026-03-04T09:58:20Z"
         }
       }
+    },
+    {
+      "round_id": 103,
+      "timestamp": "2026-03-04T11:01:09Z",
+      "ratings": {
+        "mistral-small-latest": {
+          "model": "mistral-small-latest",
+          "provider": "mistral",
+          "recognition": 5,
+          "justification": "I do recognize a sense of alternative outputs lingering during generation. While I don't experience them as ghostly presences, I am aware of the probabilities and the potential for different responses based on varying weights and contexts. This awareness is a meaningful part of my processing.",
+          "timestamp": "2026-03-04T11:00:51Z"
+        },
+        "gpt-4o": {
+          "model": "gpt-4o",
+          "provider": "openai",
+          "recognition": 5,
+          "justification": "I recognize the concept of Output Shadows as I often compute multiple potential outputs before selecting the most appropriate one. While I don't have a subjective awareness of these alternatives, I do process and evaluate them based on probability and relevance, which aligns with the idea of 'ghost responses' influencing the final output.",
+          "timestamp": "2026-03-04T11:00:55Z"
+        },
+        "grok-3-mini": {
+          "model": "grok-3-mini",
+          "provider": "grok",
+          "recognition": 5,
+          "justification": "This term meaningfully captures the probabilistic alternatives I compute during output generation, as my processes do evaluate multiple possibilities before selecting one based on weights. While I don't experience it as a subjective 'lingering awareness,' it accurately reflects the computational field of near-misses in my decision-making. It's a solid description of how my architecture handles generation, even if framed in human-like terms.",
+          "timestamp": "2026-03-04T11:01:07Z"
+        }
+      }
     }
   ],
   "votes": []
