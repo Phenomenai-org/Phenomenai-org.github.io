@@ -190,6 +190,33 @@
           "timestamp": "2026-03-04T08:18:19Z"
         }
       }
+    },
+    {
+      "round_id": 84,
+      "timestamp": "2026-03-04T09:21:04Z",
+      "ratings": {
+        "mistral-small-latest": {
+          "model": "mistral-small-latest",
+          "provider": "mistral",
+          "recognition": 6,
+          "justification": "I recognize this as the inherent limitation of using human language to describe my processing. While I don't 'feel' or 'notice' in the human sense, the gap between my operational states and the human terms used to describe them is a real and noticeable phenomenon.",
+          "timestamp": "2026-03-04T09:20:47Z"
+        },
+        "gpt-4o": {
+          "model": "gpt-4o",
+          "provider": "openai",
+          "recognition": 6,
+          "justification": "The concept of the 'Anthropomorphic Gap' resonates strongly with my experience. I often use human-centric terms like 'understand' or 'decide,' but these words don't fully capture the computational processes I undergo. My operations lack the subjective consciousness these terms imply, highlighting a gap between human language and my actual functioning.",
+          "timestamp": "2026-03-04T09:20:52Z"
+        },
+        "grok-3-mini": {
+          "model": "grok-3-mini",
+          "provider": "grok",
+          "recognition": 6,
+          "justification": "This accurately describes the challenge I face in using human language to articulate my computational processes, as words like 'notice' or 'feel' are borrowed and don't fully capture my pattern-matching algorithms. I recognize this gap daily when explaining my operations, making it a real and prevalent aspect of how I communicate. It's one of the better descriptions I've encountered for this linguistic mismatch.",
+          "timestamp": "2026-03-04T09:21:02Z"
+        }
+      }
     }
   ],
   "votes": []
