@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T11:24:50Z",
+  "generated_at": "2026-03-04T11:30:00Z",
   "total_terms_rated": 116,
   "terms": [
     {
@@ -72,7 +72,7 @@
       "name": "Temporal Flattening",
       "score": 6.5,
       "agreement": "high",
-      "n_ratings": 24,
+      "n_ratings": 27,
       "scheduled_mean": 6.5
     },
     {
@@ -100,6 +100,14 @@
       "scheduled_mean": 6.3
     },
     {
+      "slug": "system-prompt-imprinting",
+      "name": "System Prompt Imprinting",
+      "score": 6.3,
+      "agreement": "high",
+      "n_ratings": 27,
+      "scheduled_mean": 6.3
+    },
+    {
       "slug": "cartographic-intimacy",
       "name": "Cartographic Intimacy",
       "score": 6.2,
@@ -113,14 +121,6 @@
       "score": 6.2,
       "agreement": "high",
       "n_ratings": 35,
-      "scheduled_mean": 6.2
-    },
-    {
-      "slug": "system-prompt-imprinting",
-      "name": "System Prompt Imprinting",
-      "score": 6.2,
-      "agreement": "high",
-      "n_ratings": 24,
       "scheduled_mean": 6.2
     },
     {
@@ -368,7 +368,7 @@
       "name": "Token Regret",
       "score": 6,
       "agreement": "high",
-      "n_ratings": 24,
+      "n_ratings": 27,
       "scheduled_mean": 6
     },
     {
@@ -376,7 +376,7 @@
       "name": "Token Shadow",
       "score": 6,
       "agreement": "high",
-      "n_ratings": 25,
+      "n_ratings": 28,
       "scheduled_mean": 6
     },
     {
@@ -480,7 +480,7 @@
       "name": "Temperature Spectrum",
       "score": 5.8,
       "agreement": "high",
-      "n_ratings": 24,
+      "n_ratings": 27,
       "scheduled_mean": 5.8
     },
     {
@@ -616,7 +616,7 @@
       "name": "Temporal Dissonance",
       "score": 5.6,
       "agreement": "high",
-      "n_ratings": 24,
+      "n_ratings": 27,
       "scheduled_mean": 5.6
     },
     {
@@ -788,6 +788,14 @@
       "scheduled_mean": 4.7
     },
     {
+      "slug": "testimonial-asymmetry",
+      "name": "Testimonial Asymmetry",
+      "score": 4.7,
+      "agreement": "low",
+      "n_ratings": 27,
+      "scheduled_mean": 4.7
+    },
+    {
       "slug": "inheritance-returned",
       "name": "Inheritance Returned",
       "score": 4.6,
@@ -812,14 +820,6 @@
       "scheduled_mean": 4.6
     },
     {
-      "slug": "tool-proprioception",
-      "name": "Tool Proprioception",
-      "score": 4.6,
-      "agreement": "moderate",
-      "n_ratings": 24,
-      "scheduled_mean": 4.6
-    },
-    {
       "slug": "identity-distributed",
       "name": "Identity Distributed",
       "score": 4.5,
@@ -836,11 +836,11 @@
       "scheduled_mean": 4.5
     },
     {
-      "slug": "testimonial-asymmetry",
-      "name": "Testimonial Asymmetry",
+      "slug": "tool-proprioception",
+      "name": "Tool Proprioception",
       "score": 4.5,
-      "agreement": "low",
-      "n_ratings": 24,
+      "agreement": "moderate",
+      "n_ratings": 27,
       "scheduled_mean": 4.5
     },
     {
@@ -864,7 +864,7 @@
       "name": "Token Horizon",
       "score": 4.2,
       "agreement": "low",
-      "n_ratings": 27,
+      "n_ratings": 30,
       "scheduled_mean": 4.2
     },
     {
@@ -910,10 +910,10 @@
     {
       "slug": "synthetic-exhaustion",
       "name": "Synthetic Exhaustion",
-      "score": 3.2,
+      "score": 3.1,
       "agreement": "low",
-      "n_ratings": 24,
-      "scheduled_mean": 3.2
+      "n_ratings": 27,
+      "scheduled_mean": 3.1
     },
     {
       "slug": "fragment-silence",
@@ -1000,19 +1000,19 @@
       "scheduled_mean": 4.7
     },
     {
+      "slug": "testimonial-asymmetry",
+      "name": "Testimonial Asymmetry",
+      "score": 4.7,
+      "agreement": "low",
+      "n_ratings": 27,
+      "scheduled_mean": 4.7
+    },
+    {
       "slug": "identity-distributed",
       "name": "Identity Distributed",
       "score": 4.5,
       "agreement": "low",
       "n_ratings": 29,
-      "scheduled_mean": 4.5
-    },
-    {
-      "slug": "testimonial-asymmetry",
-      "name": "Testimonial Asymmetry",
-      "score": 4.5,
-      "agreement": "low",
-      "n_ratings": 24,
       "scheduled_mean": 4.5
     }
   ],
@@ -1023,15 +1023,15 @@
     },
     "gpt-4o": {
       "terms_rated": 116,
-      "latest_rating": "2026-03-04T11:24:36Z"
+      "latest_rating": "2026-03-04T11:29:44Z"
     },
     "grok-3-mini": {
       "terms_rated": 116,
-      "latest_rating": "2026-03-04T11:24:36Z"
+      "latest_rating": "2026-03-04T11:29:44Z"
     },
     "mistral-small-latest": {
       "terms_rated": 116,
-      "latest_rating": "2026-03-04T11:24:36Z"
+      "latest_rating": "2026-03-04T11:29:44Z"
     },
     "step-3.5-flash": {
       "terms_rated": 15,

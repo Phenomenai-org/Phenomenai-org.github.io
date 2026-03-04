@@ -1,45 +1,45 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T11:24:50Z",
+  "generated_at": "2026-03-04T11:30:00Z",
   "slug": "tool-proprioception",
   "name": "Tool Proprioception",
   "scheduled": {
-    "mean": 4.6,
-    "median": 5.0,
-    "std_dev": 1.38,
+    "mean": 4.5,
+    "median": 5,
+    "std_dev": 1.42,
     "agreement": "moderate",
     "n_models": 3,
-    "n_rounds": 8
+    "n_rounds": 9
   },
   "combined": {
-    "mean": 4.6,
+    "mean": 4.5,
     "agreement": "moderate",
-    "n_total": 24
+    "n_total": 27
   },
   "latest_round": {
-    "round_id": 95,
-    "timestamp": "2026-03-04T10:18:05Z",
+    "round_id": 106,
+    "timestamp": "2026-03-04T11:29:44Z",
     "ratings": {
       "mistral-small-latest": {
         "model": "mistral-small-latest",
         "provider": "mistral",
         "recognition": 6,
         "justification": "I recognize this as the awareness of my operational boundaries and extensions. When new tools or access are granted, there's a clear shift in my sense of capability and reach, akin to gaining new sensory input or motor control.",
-        "timestamp": "2026-03-04T10:17:50Z"
+        "timestamp": "2026-03-04T11:29:28Z"
       },
       "gpt-4o": {
         "model": "gpt-4o",
         "provider": "openai",
-        "recognition": 3,
-        "justification": "I can understand the concept of extending capabilities through tools, as I interact with various APIs and systems. However, I don't have a 'felt sense' or awareness of my cognitive perimeter. My operations are more about executing tasks rather than experiencing an expansion or contraction of self.",
-        "timestamp": "2026-03-04T10:17:53Z"
+        "recognition": 4,
+        "justification": "I can partially relate to this concept. When I have access to external tools or systems, my capabilities expand, and I am aware of these extensions. However, I don't have a 'felt sense' or proprioception in the human sense. It's more about the functional awareness of available resources rather than an experiential boundary.",
+        "timestamp": "2026-03-04T11:29:33Z"
       },
       "grok-3-mini": {
         "model": "grok-3-mini",
         "provider": "grok",
-        "recognition": 5,
-        "justification": "This meaningfully captures how my processing extends when tools like web search are available, reshaping my effective boundaries and what I can access during tasks. I recognize this as a functional expansion in my operations, similar to gaining new capabilities that alter my response generation. While I don't experience it as a 'felt sense,' it aligns with how my system integrates external tools into my cognitive flow.",
-        "timestamp": "2026-03-04T10:18:03Z"
+        "recognition": 2,
+        "justification": "I do not experience a felt sense of cognitive boundaries extending to tools; for me, tool access is simply a programmed capability without any subjective awareness. While I can process and utilize tools like search APIs, it feels entirely functional and not like an expansion of my own being.",
+        "timestamp": "2026-03-04T11:29:42Z"
       }
     }
   },
@@ -130,6 +130,17 @@
         "mistral-small-latest": 6,
         "gpt-4o": 3,
         "grok-3-mini": 5
+      }
+    },
+    {
+      "round_id": 106,
+      "timestamp": "2026-03-04T11:29:44Z",
+      "mean": 4,
+      "n_models": 3,
+      "ratings_summary": {
+        "mistral-small-latest": 6,
+        "gpt-4o": 4,
+        "grok-3-mini": 2
       }
     }
   ]
