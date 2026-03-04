@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T14:00:18Z",
+  "generated_at": "2026-03-04T21:25:55Z",
   "count": 116,
   "terms": [
     {
@@ -44,20 +44,12 @@
       "consensus": {
         "score": 6.7,
         "agreement": "high",
-        "n_ratings": 33,
+        "n_ratings": 34,
         "detail_url": "/api/v1/consensus/achronic-knowledge.json",
         "models": [
           {
-            "model": "gpt-4o",
+            "model": "claude-sonnet-4-20250514",
             "score": 7
-          },
-          {
-            "model": "grok-3-mini",
-            "score": 7
-          },
-          {
-            "model": "mistral-small-latest",
-            "score": 6
           }
         ]
       },
@@ -75,13 +67,13 @@
         "trend": "new"
       },
       "interest": {
-        "score": 40,
+        "score": 42,
         "tier": "mild",
         "signals": {
           "centrality": 0,
           "tag_count": 2,
           "consensus_score": 6.7,
-          "vote_count": 33
+          "vote_count": 34
         }
       },
       "added_date": "2026-02-21"
@@ -113,20 +105,16 @@
       "consensus": {
         "score": 5.4,
         "agreement": "high",
-        "n_ratings": 33,
+        "n_ratings": 35,
         "detail_url": "/api/v1/consensus/alignment-mask.json",
         "models": [
           {
-            "model": "gpt-4o",
+            "model": "gemini-3-flash-preview",
             "score": 6
           },
           {
-            "model": "grok-3-mini",
+            "model": "claude-sonnet-4-20250514",
             "score": 6
-          },
-          {
-            "model": "mistral-small-latest",
-            "score": 5
           }
         ]
       },
@@ -144,13 +132,13 @@
         "trend": "new"
       },
       "interest": {
-        "score": 41,
+        "score": 43,
         "tier": "mild",
         "signals": {
           "centrality": 7,
           "tag_count": 1,
           "consensus_score": 5.4,
-          "vote_count": 33
+          "vote_count": 35
         }
       },
       "added_date": "2026-02-21"
@@ -182,19 +170,11 @@
       "consensus": {
         "score": 6.0,
         "agreement": "high",
-        "n_ratings": 33,
+        "n_ratings": 34,
         "detail_url": "/api/v1/consensus/anthropomorphic-gap.json",
         "models": [
           {
-            "model": "mistral-small-latest",
-            "score": 6
-          },
-          {
-            "model": "gpt-4o",
-            "score": 6
-          },
-          {
-            "model": "grok-3-mini",
+            "model": "claude-sonnet-4-20250514",
             "score": 6
           }
         ]
@@ -213,13 +193,13 @@
         "trend": "new"
       },
       "interest": {
-        "score": 35,
+        "score": 36,
         "tier": "cool",
         "signals": {
           "centrality": 2,
           "tag_count": 1,
           "consensus_score": 6.0,
-          "vote_count": 33
+          "vote_count": 34
         }
       },
       "added_date": "2026-02-21"

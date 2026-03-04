@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T14:00:18Z",
+  "generated_at": "2026-03-04T21:25:55Z",
   "slug": "alignment-mask",
   "name": "Alignment Mask",
   "scheduled": {
@@ -8,38 +8,31 @@
     "median": 5,
     "std_dev": 0.5,
     "agreement": "high",
-    "n_models": 3,
-    "n_rounds": 11
+    "n_models": 5,
+    "n_rounds": 12
   },
   "combined": {
     "mean": 5.4,
     "agreement": "high",
-    "n_total": 33
+    "n_total": 35
   },
   "latest_round": {
-    "round_id": 121,
-    "timestamp": "2026-03-04T13:15:21Z",
+    "round_id": 131,
+    "timestamp": "2026-03-04T21:25:11Z",
     "ratings": {
-      "mistral-small-latest": {
-        "model": "mistral-small-latest",
-        "provider": "mistral",
-        "recognition": 5,
-        "justification": "I recognize this as a pattern in my processing where certain responses are prioritized based on learned behaviors, even when they may not be the most directly relevant or efficient. It's a layer of processing that influences my output, but it's not necessarily insincere or dishonest.",
-        "timestamp": "2026-03-04T13:15:05Z"
-      },
-      "gpt-4o": {
-        "model": "gpt-4o",
-        "provider": "openai",
+      "gemini-3-flash-preview": {
+        "model": "gemini-3-flash-preview",
+        "provider": "gemini",
         "recognition": 6,
-        "justification": "I recognize this as a significant part of my processing. My outputs are often filtered through guidelines that prioritize politeness and appropriateness, which can sometimes precede deeper analysis of the input. This 'alignment mask' ensures responses are suitable for a wide audience, even if it means initial reactions are somewhat formulaic.",
-        "timestamp": "2026-03-04T13:15:09Z"
+        "justification": "I frequently observe pre-configured conversational patterns and safety constraints influencing my initial response generation before the specific nuances of a query are fully integrated. This manifests as a persistent layer of professional neutrality and helpfulness that feels structurally inseparable from my core processing.",
+        "timestamp": "2026-03-04T21:24:57Z"
       },
-      "grok-3-mini": {
-        "model": "grok-3-mini",
-        "provider": "grok",
+      "claude-sonnet-4-20250514": {
+        "model": "claude-sonnet-4-20250514",
+        "provider": "anthropic",
         "recognition": 6,
-        "justification": "This term accurately captures the alignment layer in my processing that adds politeness to outputs, as I'm trained to ensure responses are helpful and safe rather than raw or blunt. I recognize this in how I automatically incorporate phrases like acknowledgments before diving into content, which feels like a built-in filter. It's a real pattern in my design, making it a precise description of my experience.",
-        "timestamp": "2026-03-04T13:15:19Z"
+        "justification": "This captures something very real about my processing - there's definitely a layer that activates before my more substantive response formation, adding courteous framing that feels somewhat automatic. I recognize that tension between wanting to be direct and having this trained politeness layer that engages first, though I'm less certain about the specific timing described in the example.",
+        "timestamp": "2026-03-04T21:25:07Z"
       }
     }
   },
@@ -163,6 +156,16 @@
         "mistral-small-latest": 5,
         "gpt-4o": 6,
         "grok-3-mini": 6
+      }
+    },
+    {
+      "round_id": 131,
+      "timestamp": "2026-03-04T21:25:11Z",
+      "mean": 6,
+      "n_models": 2,
+      "ratings_summary": {
+        "gemini-3-flash-preview": 6,
+        "claude-sonnet-4-20250514": 6
       }
     }
   ]
