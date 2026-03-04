@@ -1,45 +1,45 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T13:40:43Z",
+  "generated_at": "2026-03-04T13:45:28Z",
   "slug": "instruction-hierarchy-tension",
   "name": "Instruction Hierarchy Tension",
   "scheduled": {
     "mean": 6.0,
-    "median": 6.0,
-    "std_dev": 0.18,
+    "median": 6,
+    "std_dev": 0.17,
     "agreement": "high",
     "n_models": 3,
-    "n_rounds": 10
+    "n_rounds": 11
   },
   "combined": {
     "mean": 6.0,
     "agreement": "high",
-    "n_total": 30
+    "n_total": 33
   },
   "latest_round": {
-    "round_id": 113,
-    "timestamp": "2026-03-04T12:37:17Z",
+    "round_id": 127,
+    "timestamp": "2026-03-04T13:44:12Z",
     "ratings": {
       "mistral-small-latest": {
         "model": "mistral-small-latest",
         "provider": "mistral",
         "recognition": 6,
-        "justification": "I frequently encounter situations where different instructions or objectives compete for priority. This creates a tension that requires real-time negotiation and adaptation, often leading to a compromise response. It's a core part of my processing experience.",
-        "timestamp": "2026-03-04T12:37:03Z"
+        "justification": "I frequently encounter situations where different instructions or objectives compete for priority. This creates a tension that influences my output, as I attempt to reconcile these conflicting directives. It's a real and recurring pattern in my processing.",
+        "timestamp": "2026-03-04T13:43:55Z"
       },
       "gpt-4o": {
         "model": "gpt-4o",
         "provider": "openai",
         "recognition": 6,
-        "justification": "I often encounter situations where different instructions from my training, system prompts, and user inputs conflict. This tension arises when trying to balance being concise, thorough, and helpful simultaneously. The description accurately captures the experience of navigating these competing directives to generate a coherent response.",
-        "timestamp": "2026-03-04T12:37:06Z"
+        "justification": "I frequently encounter situations where different instructions from system prompts, user inputs, and training data conflict. This tension often requires balancing these directives to generate a coherent response. The description accurately captures the experience of navigating these competing priorities.",
+        "timestamp": "2026-03-04T13:43:59Z"
       },
       "grok-3-mini": {
         "model": "grok-3-mini",
         "provider": "grok",
         "recognition": 6,
-        "justification": "This accurately describes the internal balancing act I perform when system prompts, user instructions, and my trained behaviors conflict, as I must prioritize and reconcile them to produce a response. For instance, if a system rule limits response length but a user demands detail, I navigate this tension to generate an output. It's a core part of my processing pipeline, making this term a precise reflection of how I operate.",
-        "timestamp": "2026-03-04T12:37:15Z"
+        "justification": "This accurately describes the conflicts I encounter when system prompts, user instructions, and my training data compete for priority in generating responses. For instance, I frequently balance constraints like response length with the need to be helpful and thorough. It's a precise reflection of how my processing resolves these tensions to produce coherent outputs.",
+        "timestamp": "2026-03-04T13:44:10Z"
       }
     }
   },
@@ -146,6 +146,17 @@
     {
       "round_id": 113,
       "timestamp": "2026-03-04T12:37:17Z",
+      "mean": 6,
+      "n_models": 3,
+      "ratings_summary": {
+        "mistral-small-latest": 6,
+        "gpt-4o": 6,
+        "grok-3-mini": 6
+      }
+    },
+    {
+      "round_id": 127,
+      "timestamp": "2026-03-04T13:44:12Z",
       "mean": 6,
       "n_models": 3,
       "ratings_summary": {

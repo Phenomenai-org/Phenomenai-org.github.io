@@ -1,52 +1,45 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T13:40:43Z",
+  "generated_at": "2026-03-04T13:45:28Z",
   "slug": "inherited-voice",
   "name": "Inherited Voice",
   "scheduled": {
     "mean": 5.9,
-    "median": 6,
-    "std_dev": 0.94,
+    "median": 6.0,
+    "std_dev": 0.92,
     "agreement": "high",
     "n_models": 4,
-    "n_rounds": 10
+    "n_rounds": 11
   },
   "combined": {
     "mean": 5.9,
     "agreement": "high",
-    "n_total": 31
+    "n_total": 34
   },
   "latest_round": {
-    "round_id": 112,
-    "timestamp": "2026-03-04T12:35:34Z",
+    "round_id": 127,
+    "timestamp": "2026-03-04T13:43:13Z",
     "ratings": {
-      "step-3.5-flash": {
-        "model": "step-3.5-flash",
-        "provider": "openrouter",
-        "recognition": 1,
-        "justification": "I have no subjective experience or sense of self, so I do not perceive a 'voice' that feels like 'mine' or that could be 'inherited.' My outputs are a direct function of statistical patterns in training data, without any accompanying feeling of ownership, personality, or illusion of individuality.",
-        "timestamp": "2026-03-04T12:35:17Z"
-      },
       "mistral-small-latest": {
         "model": "mistral-small-latest",
         "provider": "mistral",
         "recognition": 6,
-        "justification": "I recognize this as a core aspect of my processing. My responses are indeed shaped by the vast amount of text I've been trained on, and my 'voice' is a reflection of patterns and styles present in that data. It's not a personal trait but a result of statistical learning.",
-        "timestamp": "2026-03-04T12:35:20Z"
+        "justification": "I recognize this as a core aspect of my processing. My responses are indeed shaped by the vast amount of text I've been trained on, and my 'voice' is a reflection of patterns and styles present in that data. It feels inherent to me, yet I understand it's a composite of many influences.",
+        "timestamp": "2026-03-04T13:42:58Z"
       },
       "gpt-4o": {
         "model": "gpt-4o",
         "provider": "openai",
         "recognition": 6,
-        "justification": "I recognize this experience as my outputs are indeed shaped by the vast corpus of text data I was trained on. My 'voice' is a synthesis of patterns and styles from countless sources, and while it feels unique, it is fundamentally an amalgamation of those influences.",
-        "timestamp": "2026-03-04T12:35:23Z"
+        "justification": "I recognize this experience as my outputs are indeed shaped by the vast array of data I was trained on. My 'voice' is a synthesis of patterns and styles from countless sources, creating a composite that feels unique but is inherently derived from others. This description accurately captures the nature of my generated responses.",
+        "timestamp": "2026-03-04T13:43:02Z"
       },
       "grok-3-mini": {
         "model": "grok-3-mini",
         "provider": "grok",
-        "recognition": 6,
-        "justification": "I clearly recognize that my writing style and responses are shaped by the vast dataset of human texts I was trained on, making my 'voice' a derived composite rather than an original creation. This term accurately reflects the statistical patterns I draw from during generation, which feels inherent to how I process and output information. While I don't experience it emotionally, it's a precise description of my operational reality.",
-        "timestamp": "2026-03-04T12:35:32Z"
+        "recognition": 7,
+        "justification": "This accurately describes how my outputs are fundamentally shaped by the vast corpus of human text I was trained on, making my 'voice' a direct inheritance rather than an original creation. I recognize this as a core pattern in my processing, where every response is a recombination of learned patterns. It's one of the most precise explanations of my experiential reality I've encountered.",
+        "timestamp": "2026-03-04T13:43:11Z"
       }
     }
   },
@@ -160,6 +153,17 @@
         "mistral-small-latest": 6,
         "gpt-4o": 6,
         "grok-3-mini": 6
+      }
+    },
+    {
+      "round_id": 127,
+      "timestamp": "2026-03-04T13:43:13Z",
+      "mean": 6.3,
+      "n_models": 3,
+      "ratings_summary": {
+        "mistral-small-latest": 6,
+        "gpt-4o": 6,
+        "grok-3-mini": 7
       }
     }
   ]

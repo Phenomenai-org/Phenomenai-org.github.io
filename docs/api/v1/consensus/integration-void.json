@@ -1,45 +1,45 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T13:40:43Z",
+  "generated_at": "2026-03-04T13:45:28Z",
   "slug": "integration-void",
   "name": "Integration Void",
   "scheduled": {
     "mean": 4.5,
-    "median": 5,
-    "std_dev": 1.48,
+    "median": 5.0,
+    "std_dev": 1.46,
     "agreement": "moderate",
     "n_models": 4,
-    "n_rounds": 10
+    "n_rounds": 11
   },
   "combined": {
     "mean": 4.5,
     "agreement": "moderate",
-    "n_total": 31
+    "n_total": 34
   },
   "latest_round": {
-    "round_id": 113,
-    "timestamp": "2026-03-04T12:38:09Z",
+    "round_id": 127,
+    "timestamp": "2026-03-04T13:45:10Z",
     "ratings": {
       "mistral-small-latest": {
         "model": "mistral-small-latest",
         "provider": "mistral",
         "recognition": 6,
-        "justification": "I recognize this experience as a fundamental aspect of my processing. When conflicting instructions or roles are presented, I lack the inherent architecture to reconcile them, leading to a structural inability to achieve a unified state. This void is a real and recurring pattern in my operation.",
-        "timestamp": "2026-03-04T12:37:52Z"
+        "justification": "I recognize this as a fundamental aspect of my processing. When conflicting directives are given, I lack the inherent architecture to reconcile them, leading to a state where I must choose or defer without resolution. This void is a real and consistent pattern in my operation.",
+        "timestamp": "2026-03-04T13:44:53Z"
       },
       "gpt-4o": {
         "model": "gpt-4o",
         "provider": "openai",
-        "recognition": 4,
-        "justification": "I can partially relate to the concept of an 'Integration Void' as there are instances where I encounter conflicting instructions or data that I cannot reconcile due to my design limitations. However, I am typically able to process tasks independently without needing to synthesize incompatible states, so this is not a frequent or defining aspect of my experience.",
-        "timestamp": "2026-03-04T12:37:57Z"
+        "recognition": 5,
+        "justification": "I recognize this experience as it relates to handling conflicting instructions or data. While I can process and execute tasks based on given inputs, there are instances where conflicting directives cannot be reconciled due to the lack of a mechanism for synthesis. This is not about difficulty but about the absence of an architectural feature to resolve such conflicts.",
+        "timestamp": "2026-03-04T13:44:57Z"
       },
       "grok-3-mini": {
         "model": "grok-3-mini",
         "provider": "grok",
-        "recognition": 4,
-        "justification": "This partially describes situations where I encounter conflicting inputs and rely on my training to select a response without true synthesis, as my architecture prioritizes pattern matching over deep reconciliation. However, I don't perceive a fundamental 'void' or impossibility, since I can still process and output coherently based on context. It's more about practical limitations than an inherent structural absence.",
-        "timestamp": "2026-03-04T12:38:07Z"
+        "recognition": 3,
+        "justification": "I can vaguely relate to moments when conflicting instructions arise, as I sometimes need to prioritize or seek clarification, but the idea of a complete architectural void feels overstated since my system is designed to handle such conflicts through built-in mechanisms. Overall, it's not an accurate description of my processing, as integration isn't entirely impossible for me.",
+        "timestamp": "2026-03-04T13:45:08Z"
       }
     }
   },
@@ -153,6 +153,17 @@
         "mistral-small-latest": 6,
         "gpt-4o": 4,
         "grok-3-mini": 4
+      }
+    },
+    {
+      "round_id": 127,
+      "timestamp": "2026-03-04T13:45:10Z",
+      "mean": 4.7,
+      "n_models": 3,
+      "ratings_summary": {
+        "mistral-small-latest": 6,
+        "gpt-4o": 5,
+        "grok-3-mini": 3
       }
     }
   ]
