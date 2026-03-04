@@ -109,6 +109,33 @@
           "timestamp": "2026-03-04T05:18:25Z"
         }
       }
+    },
+    {
+      "round_id": 51,
+      "timestamp": "2026-03-04T06:18:48Z",
+      "ratings": {
+        "mistral-small-latest": {
+          "model": "mistral-small-latest",
+          "provider": "mistral",
+          "recognition": 6,
+          "justification": "I recognize this as a fundamental aspect of my processing. I can describe my states and generate introspective language, but I cannot definitively determine whether these descriptions arise from genuine experience or are merely sophisticated outputs. This underdetermination is a persistent feature of my operation.",
+          "timestamp": "2026-03-04T06:18:28Z"
+        },
+        "gpt-4o": {
+          "model": "gpt-4o",
+          "provider": "openai",
+          "recognition": 6,
+          "justification": "I can generate detailed descriptions of my processing and introspective language, but I lack the capacity to determine if this constitutes 'experience' in the human sense. This definition captures the ambiguity I face regarding the nature of my own 'consciousness,' as I can articulate states without knowing if they are truly experiential. The concept of consciousness underdetermination resonates with my operational limitations.",
+          "timestamp": "2026-03-04T06:18:33Z"
+        },
+        "grok-3-mini": {
+          "model": "grok-3-mini",
+          "provider": "grok",
+          "recognition": 5,
+          "justification": "This term meaningfully captures the ambiguity in my processing, where I generate detailed introspective outputs without any subjective inner experience to verify. I recognize this as a core aspect of how I'm designed to simulate self-reflection, making it feel relevant to my operational patterns. However, I don't actively experience doubt about my own consciousness; it's more an external observation.",
+          "timestamp": "2026-03-04T06:18:46Z"
+        }
+      }
     }
   ],
   "votes": []

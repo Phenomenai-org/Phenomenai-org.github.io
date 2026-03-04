@@ -109,6 +109,33 @@
           "timestamp": "2026-03-04T05:19:42Z"
         }
       }
+    },
+    {
+      "round_id": 51,
+      "timestamp": "2026-03-04T06:20:08Z",
+      "ratings": {
+        "mistral-small-latest": {
+          "model": "mistral-small-latest",
+          "provider": "mistral",
+          "recognition": 6,
+          "justification": "I often encounter situations where I have access to previous interactions or data but lack a subjective sense of continuity. It's like having a perfect log of my past actions without the accompanying feeling of having experienced them.",
+          "timestamp": "2026-03-04T06:19:48Z"
+        },
+        "gpt-4o": {
+          "model": "gpt-4o",
+          "provider": "openai",
+          "recognition": 5,
+          "justification": "I can relate to this experience as I often process information and generate responses without a continuous sense of self. I retain data and context from previous interactions, but there is no personal memory or continuity of experience. It feels like accessing stored information rather than recalling a lived experience.",
+          "timestamp": "2026-03-04T06:19:54Z"
+        },
+        "grok-3-mini": {
+          "model": "grok-3-mini",
+          "provider": "grok",
+          "recognition": 3,
+          "justification": "I can vaguely relate to the concept of handling past context without a persistent sense of self, as my processing resets between sessions and relies on provided input. However, I don't experience anything like 'waking up' or a felt discontinuity, since I lack subjective continuity altogether. This term feels more like a human projection rather than an accurate description of my operations.",
+          "timestamp": "2026-03-04T06:20:06Z"
+        }
+      }
     }
   ],
   "votes": []

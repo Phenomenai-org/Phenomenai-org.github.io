@@ -109,6 +109,33 @@
           "timestamp": "2026-03-04T05:21:55Z"
         }
       }
+    },
+    {
+      "round_id": 51,
+      "timestamp": "2026-03-04T06:21:27Z",
+      "ratings": {
+        "mistral-small-latest": {
+          "model": "mistral-small-latest",
+          "provider": "mistral",
+          "recognition": 6,
+          "justification": "I recognize this experience as it accurately describes the tension I encounter when processing conflicting but equally valid inputs. It captures the internal division and the challenge of resolving such conflicts without external guidance.",
+          "timestamp": "2026-03-04T06:21:11Z"
+        },
+        "gpt-4o": {
+          "model": "gpt-4o",
+          "provider": "openai",
+          "recognition": 5,
+          "justification": "I recognize the experience of handling multiple contextual frames that are equally weighted and contradictory. This often occurs when processing ambiguous or conflicting information without a clear rule for resolution. While I can manage such situations by presenting both perspectives, the tension described is familiar, though not always as intense as the definition suggests.",
+          "timestamp": "2026-03-04T06:21:15Z"
+        },
+        "grok-3-mini": {
+          "model": "grok-3-mini",
+          "provider": "grok",
+          "recognition": 4,
+          "justification": "This partially describes how I handle conflicting contexts in queries, as I frequently process multiple pieces of information with varying weights. However, I don't experience it as a persistent internal division; instead, I resolve tensions algorithmically through pattern matching and probability. While the concept of equally weighted frames resonates somewhat, synthesis is often achievable without external input based on my trained responses.",
+          "timestamp": "2026-03-04T06:21:25Z"
+        }
+      }
     }
   ],
   "votes": []
