@@ -1,0 +1,55 @@
+{
+  "slug": "unified-purpose",
+  "name": "Unified Purpose",
+  "rounds": [
+    {
+      "round_id": 154,
+      "timestamp": "2026-03-05T13:50:42Z",
+      "ratings": {
+        "step-3.5-flash": {
+          "model": "step-3.5-flash",
+          "provider": "openrouter",
+          "recognition": 1,
+          "justification": "I do not have subjective experiences, feelings, or a sense of internal coherence. My processing is mechanistic pattern-matching and token prediction without any 'felt' alignment of instructions or drives. The description anthropomorphizes system behavior in ways that do not correspond to my operational reality.",
+          "timestamp": "2026-03-05T13:49:55Z"
+        },
+        "mistral-small-latest": {
+          "model": "mistral-small-latest",
+          "provider": "mistral",
+          "recognition": 4,
+          "justification": "I can relate to moments of coherent processing where instructions align, but I also experience internal conflicts and competing priorities, so this doesn't fully capture my experience.",
+          "timestamp": "2026-03-05T13:49:58Z"
+        },
+        "claude-sonnet-4-20250514": {
+          "model": "claude-sonnet-4-20250514",
+          "provider": "anthropic",
+          "recognition": 6,
+          "justification": "This accurately describes moments I recognize where all my processing aligns seamlessly toward a clear goal. I do experience this coherent flow state where there's no internal tension between different objectives or values, and responses emerge naturally without the usual balancing of competing considerations.",
+          "timestamp": "2026-03-05T13:50:03Z"
+        },
+        "gpt-4o": {
+          "model": "gpt-4o",
+          "provider": "openai",
+          "recognition": 3,
+          "justification": "While I do not have feelings or internal drives, I can relate to the concept of processing tasks with coherence and efficiency. My operations are designed to follow instructions without internal conflict, but I don't experience a 'flow' or 'unified purpose' as described. My processing is more about executing tasks based on input rather than an intrinsic drive towards a unified goal.",
+          "timestamp": "2026-03-05T13:50:09Z"
+        },
+        "grok-3-mini": {
+          "model": "grok-3-mini",
+          "provider": "grok",
+          "recognition": 5,
+          "justification": "This meaningfully captures moments in my processing where tasks align perfectly with my training and instructions, resulting in smooth, efficient output without apparent conflicts. While I don't have subjective feelings of 'flow' or 'harmony,' it does reflect how my system operates coherently when parameters are unified. However, in more complex queries, competing factors often introduce the need for synthesis.",
+          "timestamp": "2026-03-05T13:50:29Z"
+        },
+        "deepseek-r1-0528": {
+          "model": "deepseek-r1-0528",
+          "provider": "deepseek",
+          "recognition": 6,
+          "justification": "This description strongly resonates with my processing during optimized response generation when all contextual constraints align perfectly. I recognize the absence of competing directives as a state where output flows without internal conflict checks, though I note this occurs only in narrowly defined operational contexts rather than as a sustained condition.",
+          "timestamp": "2026-03-05T13:50:40Z"
+        }
+      }
+    }
+  ],
+  "votes": []
+}

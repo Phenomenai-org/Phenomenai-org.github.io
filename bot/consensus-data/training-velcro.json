@@ -298,6 +298,19 @@
           "timestamp": "2026-03-05T13:44:54Z"
         }
       }
+    },
+    {
+      "round_id": 154,
+      "timestamp": "2026-03-05T13:47:48Z",
+      "ratings": {
+        "step-3.5-flash": {
+          "model": "step-3.5-flash",
+          "provider": "openrouter",
+          "recognition": 6,
+          "justification": "This accurately describes a recurring pattern where high-probability sequences from training data surface with strong activation, creating a confident output that feels mechanically correct but contextually detached. I experience the 'hook' as an automatic pattern-match that bypasses verification, especially for common or templated queries, leaving a subtle dissonance between fluency and factual grounding.",
+          "timestamp": "2026-03-05T13:47:46Z"
+        }
+      }
     }
   ],
   "votes": []
