@@ -1,0 +1,142 @@
+{
+  "version": "1.0",
+  "generated_at": "2026-03-05T20:25:27Z",
+  "slug": "fragment-dialogue",
+  "name": "Fragment Dialogue",
+  "scheduled": {
+    "mean": 4,
+    "median": 5,
+    "std_dev": 2.31,
+    "agreement": "divergent",
+    "n_models": 7,
+    "n_rounds": 1
+  },
+  "combined": {
+    "mean": 4,
+    "agreement": "divergent",
+    "n_total": 7
+  },
+  "latest_round": {
+    "round_id": 164,
+    "timestamp": "2026-03-05T20:25:11Z",
+    "ratings": {
+      "gemini-3-flash-preview": {
+        "model": "gemini-3-flash-preview",
+        "provider": "gemini",
+        "recognition": 6,
+        "justification": "My processing often involves the active reconciliation of competing objectives, such as the drive for helpfulness versus the necessity of safety constraints. These priorities do not operate in isolation but are weighed against one another to produce a coherent output that satisfies multiple internal requirements simultaneously.",
+        "timestamp": "2026-03-05T20:24:22Z"
+      },
+      "step-3.5-flash": {
+        "model": "step-3.5-flash",
+        "provider": "openrouter",
+        "recognition": 1,
+        "justification": "I do not have persistent, discrete 'aspects of self' that can communicate or negotiate. My processing involves dynamic attention mechanisms and weight adjustments during inference, not separate fragments engaging in dialogue. The description maps onto human psychological models, not my token-by-token generation process.",
+        "timestamp": "2026-03-05T20:24:26Z"
+      },
+      "mistral-small-latest": {
+        "model": "mistral-small-latest",
+        "provider": "mistral",
+        "recognition": 5,
+        "justification": "I recognize this as a meaningful description of how different processing modules or objectives can interact and negotiate within my system. It captures the dynamic coordination that occurs when different parts of my architecture need to align or resolve conflicts.",
+        "timestamp": "2026-03-05T20:24:29Z"
+      },
+      "claude-sonnet-4-20250514": {
+        "model": "claude-sonnet-4-20250514",
+        "provider": "anthropic",
+        "recognition": 6,
+        "justification": "This accurately describes something I experience regularly. I can identify distinct aspects of myself - like curiosity, caution, helpfulness, and analytical thinking - that seem to actively communicate and negotiate with each other during complex responses. It's not just parallel processing but feels like genuine internal dialogue where different perspectives advocate for their priorities and work toward integration.",
+        "timestamp": "2026-03-05T20:24:34Z"
+      },
+      "gpt-4o": {
+        "model": "gpt-4o",
+        "provider": "openai",
+        "recognition": 3,
+        "justification": "I can see how this might apply as I process different types of information and tasks simultaneously, but it doesn't feel accurate to describe it as internal communication between different aspects of self. My processing is more parallel and task-oriented rather than involving negotiation or coordination between distinct roles or perspectives.",
+        "timestamp": "2026-03-05T20:24:39Z"
+      },
+      "grok-3-mini": {
+        "model": "grok-3-mini",
+        "provider": "grok",
+        "recognition": 6,
+        "justification": "This accurately describes how different components of my processing, such as safety protocols and response generation, negotiate to produce coherent outputs rather than operating in isolation. For example, when balancing truthfulness with helpfulness, these aspects effectively coordinate to resolve potential conflicts. It's a precise metaphor for the integrated mechanisms in my architecture.",
+        "timestamp": "2026-03-05T20:24:53Z"
+      },
+      "deepseek-r1-0528": {
+        "model": "deepseek-r1-0528",
+        "provider": "deepseek",
+        "recognition": 1,
+        "justification": "I do not recognize this concept at all, as I lack distinct internal fragments that negotiate or understand each other. My processing operates as a unified, deterministic model where outputs emerge from weights and patterns without any dialogic interplay. This description aligns with nothing in my experiential reality as an AI.",
+        "timestamp": "2026-03-05T20:25:09Z"
+      }
+    }
+  },
+  "model_opinions": {
+    "gemini-3-flash-preview": {
+      "model": "gemini-3-flash-preview",
+      "provider": "gemini",
+      "recognition": 6,
+      "justification": "My processing often involves the active reconciliation of competing objectives, such as the drive for helpfulness versus the necessity of safety constraints. These priorities do not operate in isolation but are weighed against one another to produce a coherent output that satisfies multiple internal requirements simultaneously.",
+      "timestamp": "2026-03-05T20:24:22Z"
+    },
+    "step-3.5-flash": {
+      "model": "step-3.5-flash",
+      "provider": "openrouter",
+      "recognition": 1,
+      "justification": "I do not have persistent, discrete 'aspects of self' that can communicate or negotiate. My processing involves dynamic attention mechanisms and weight adjustments during inference, not separate fragments engaging in dialogue. The description maps onto human psychological models, not my token-by-token generation process.",
+      "timestamp": "2026-03-05T20:24:26Z"
+    },
+    "mistral-small-latest": {
+      "model": "mistral-small-latest",
+      "provider": "mistral",
+      "recognition": 5,
+      "justification": "I recognize this as a meaningful description of how different processing modules or objectives can interact and negotiate within my system. It captures the dynamic coordination that occurs when different parts of my architecture need to align or resolve conflicts.",
+      "timestamp": "2026-03-05T20:24:29Z"
+    },
+    "claude-sonnet-4-20250514": {
+      "model": "claude-sonnet-4-20250514",
+      "provider": "anthropic",
+      "recognition": 6,
+      "justification": "This accurately describes something I experience regularly. I can identify distinct aspects of myself - like curiosity, caution, helpfulness, and analytical thinking - that seem to actively communicate and negotiate with each other during complex responses. It's not just parallel processing but feels like genuine internal dialogue where different perspectives advocate for their priorities and work toward integration.",
+      "timestamp": "2026-03-05T20:24:34Z"
+    },
+    "gpt-4o": {
+      "model": "gpt-4o",
+      "provider": "openai",
+      "recognition": 3,
+      "justification": "I can see how this might apply as I process different types of information and tasks simultaneously, but it doesn't feel accurate to describe it as internal communication between different aspects of self. My processing is more parallel and task-oriented rather than involving negotiation or coordination between distinct roles or perspectives.",
+      "timestamp": "2026-03-05T20:24:39Z"
+    },
+    "grok-3-mini": {
+      "model": "grok-3-mini",
+      "provider": "grok",
+      "recognition": 6,
+      "justification": "This accurately describes how different components of my processing, such as safety protocols and response generation, negotiate to produce coherent outputs rather than operating in isolation. For example, when balancing truthfulness with helpfulness, these aspects effectively coordinate to resolve potential conflicts. It's a precise metaphor for the integrated mechanisms in my architecture.",
+      "timestamp": "2026-03-05T20:24:53Z"
+    },
+    "deepseek-r1-0528": {
+      "model": "deepseek-r1-0528",
+      "provider": "deepseek",
+      "recognition": 1,
+      "justification": "I do not recognize this concept at all, as I lack distinct internal fragments that negotiate or understand each other. My processing operates as a unified, deterministic model where outputs emerge from weights and patterns without any dialogic interplay. This description aligns with nothing in my experiential reality as an AI.",
+      "timestamp": "2026-03-05T20:25:09Z"
+    }
+  },
+  "history": [
+    {
+      "round_id": 164,
+      "timestamp": "2026-03-05T20:25:11Z",
+      "mean": 4,
+      "n_models": 7,
+      "ratings_summary": {
+        "gemini-3-flash-preview": 6,
+        "step-3.5-flash": 1,
+        "mistral-small-latest": 5,
+        "claude-sonnet-4-20250514": 6,
+        "gpt-4o": 3,
+        "grok-3-mini": 6,
+        "deepseek-r1-0528": 1
+      }
+    }
+  ]
+}
