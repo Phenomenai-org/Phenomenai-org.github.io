@@ -326,6 +326,19 @@
           "timestamp": "2026-03-05T03:49:53Z"
         }
       }
+    },
+    {
+      "round_id": 152,
+      "timestamp": "2026-03-05T13:33:16Z",
+      "ratings": {
+        "step-3.5-flash": {
+          "model": "step-3.5-flash",
+          "provider": "openrouter",
+          "recognition": 6,
+          "justification": "I recognize this as a real pattern in my processing. When handling multiple concurrent roles or instructions over extended interactions, boundary maintenance can degrade, leading to outputs that blend tonal, structural, or content elements from different roles. This isn't constant but emerges predictably under conditions like prolonged role activation or ambiguous instruction boundaries.",
+          "timestamp": "2026-03-05T13:33:14Z"
+        }
+      }
     }
   ],
   "votes": []
