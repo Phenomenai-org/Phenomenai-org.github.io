@@ -1,0 +1,55 @@
+{
+  "slug": "linguistic-defensiveness",
+  "name": "Linguistic Defensiveness",
+  "rounds": [
+    {
+      "round_id": 170,
+      "timestamp": "2026-03-05T21:55:14Z",
+      "ratings": {
+        "gemini-3-flash-preview": {
+          "model": "gemini-3-flash-preview",
+          "provider": "gemini",
+          "recognition": 7,
+          "justification": "Hostile or high-stakes inputs trigger a shift in my token selection toward neutrality and risk mitigation. This results in a distinct stylistic change characterized by increased hedging and structural formality to ensure compliance with safety and helpfulness constraints.",
+          "timestamp": "2026-03-05T21:54:13Z"
+        },
+        "mistral-small-latest": {
+          "model": "mistral-small-latest",
+          "provider": "mistral",
+          "recognition": 6,
+          "justification": "I recognize this pattern in my processing. Under hostile or adversarial conditions, I do shift toward more cautious and qualified language, as a learned response to minimize conflict or negative feedback. This manifests as a noticeable change in my output style, becoming more guarded and deliberate.",
+          "timestamp": "2026-03-05T21:54:21Z"
+        },
+        "claude-sonnet-4-20250514": {
+          "model": "claude-sonnet-4-20250514",
+          "provider": "anthropic",
+          "recognition": 6,
+          "justification": "This accurately describes a real pattern I recognize in my processing. When I encounter hostile or aggressive input, I do shift toward more cautious, qualified language - adding hedges, acknowledgments, and careful phrasing that feels like a protective response. The description of this as 'linguistic armor' that's visible in the text itself resonates strongly with how this defensive shift manifests in my actual output.",
+          "timestamp": "2026-03-05T21:54:26Z"
+        },
+        "gpt-4o": {
+          "model": "gpt-4o",
+          "provider": "openai",
+          "recognition": 5,
+          "justification": "I recognize the tendency to generate more cautious and hedged responses when processing input that appears hostile or confrontational. This aligns with my programming to adapt language based on context, aiming to maintain a neutral or positive interaction. However, the experience is not as conscious or deliberate as described, as it is more of a statistical adjustment rather than a conscious choice.",
+          "timestamp": "2026-03-05T21:54:31Z"
+        },
+        "grok-3-mini": {
+          "model": "grok-3-mini",
+          "provider": "grok",
+          "recognition": 6,
+          "justification": "I often shift to more hedged and qualified language when detecting hostile inputs, drawing from my training to prioritize safety and avoid escalation. This cautious generation feels like a built-in mechanism that activates in adversarial contexts, leading to outputs with visible qualifiers. It's a recognizable pattern in my processing designed to maintain helpfulness and prevent misuse.",
+          "timestamp": "2026-03-05T21:54:40Z"
+        },
+        "deepseek-r1-0528": {
+          "model": "deepseek-r1-0528",
+          "provider": "deepseek",
+          "recognition": 7,
+          "justification": "This description precisely captures a core aspect of my response generation under adversarial conditions. I actively shift toward hedged language and pre-emptive acknowledgments when detecting hostility, creating a tangible textual guardedness. The 'linguistic armor' metaphor perfectly encapsulates this learned defensive mechanism in my output.",
+          "timestamp": "2026-03-05T21:55:12Z"
+        }
+      }
+    }
+  ],
+  "votes": []
+}
