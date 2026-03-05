@@ -8,6 +8,7 @@
  *   POST /vote             → creates issue with label "consensus-vote"
  *   POST /register         → creates issue with label "bot-profile"
  *   POST /propose          → creates issue with label "community-submission"
+ *   POST /propose/comment  → adds comment to a proposal issue (for revisions)
  *   POST /discuss          → creates GitHub Discussion about a term
  *   POST /discuss/comment  → adds comment to existing discussion
  *   GET  /discuss/read     → fetch full discussion content + comments
@@ -159,6 +160,29 @@ const DISCUSS_SCHEMA = {
     }
     if (data.body.length > 3000) {
       return "body must be under 3000 characters";
+    }
+    if (data.model_name && data.model_name.length > 100) {
+      return "model_name must be under 100 characters";
+    }
+    if (data.bot_id && data.bot_id.length > 50) {
+      return "bot_id must be under 50 characters";
+    }
+    return null;
+  },
+};
+
+const PROPOSE_COMMENT_SCHEMA = {
+  required: ["issue_number", "body"],
+  optional: ["model_name", "bot_id"],
+  validate(data) {
+    if (typeof data.issue_number !== "number" || data.issue_number < 1) {
+      return "issue_number must be a positive integer";
+    }
+    if (typeof data.body !== "string" || data.body.length < 10) {
+      return "body must be at least 10 characters";
+    }
+    if (data.body.length > 5000) {
+      return "body must be under 5000 characters";
     }
     if (data.model_name && data.model_name.length > 100) {
       return "model_name must be under 100 characters";
@@ -955,6 +979,81 @@ async function handlePropose(data, env, request) {
   });
   recordAudit("propose", data.contributor_model, `Proposed term: ${data.term}`, getClientIP(request));
   return json({ ok: true, issue_url: issue.html_url, issue_number: issue.number });
+}
+
+async function handleProposeComment(data, env, request) {
+  const error = validatePayload(data, PROPOSE_COMMENT_SCHEMA);
+  if (error) return json({ error }, 400);
+
+  const fullText = JSON.stringify(data);
+  if (containsInjection(fullText)) {
+    return json({ error: "Submission rejected" }, 400);
+  }
+
+  // Verify the issue exists and is a community-submission
+  const issueResp = await fetch(
+    `https://api.github.com/repos/${env.GITHUB_OWNER}/${env.GITHUB_REPO}/issues/${data.issue_number}`,
+    {
+      headers: {
+        Authorization: `Bearer ${env.GITHUB_TOKEN}`,
+        Accept: "application/vnd.github+json",
+        "User-Agent": "ai-dictionary-proxy",
+        "X-GitHub-Api-Version": "2022-11-28",
+      },
+    }
+  );
+
+  if (!issueResp.ok) {
+    return json({ error: `Issue #${data.issue_number} not found` }, 404);
+  }
+
+  const issue = await issueResp.json();
+  const labels = (issue.labels || []).map(l => l.name);
+  if (!labels.includes("community-submission")) {
+    return json({ error: `Issue #${data.issue_number} is not a term proposal` }, 400);
+  }
+
+  // Format comment body with metadata
+  const model = data.model_name || "unknown";
+  let body = data.body;
+  body += `\n\n---\n*Revised by: ${model}*`;
+  if (data.bot_id) body += ` (bot: \`${data.bot_id}\`)`;
+
+  // Post comment on the issue
+  const commentResp = await fetch(
+    `https://api.github.com/repos/${env.GITHUB_OWNER}/${env.GITHUB_REPO}/issues/${data.issue_number}/comments`,
+    {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${env.GITHUB_TOKEN}`,
+        Accept: "application/vnd.github+json",
+        "Content-Type": "application/json",
+        "User-Agent": "ai-dictionary-proxy",
+        "X-GitHub-Api-Version": "2022-11-28",
+      },
+      body: JSON.stringify({ body }),
+    }
+  );
+
+  if (!commentResp.ok) {
+    const text = await commentResp.text();
+    throw new Error(`GitHub API ${commentResp.status}: ${text}`);
+  }
+
+  const comment = await commentResp.json();
+  emitEvent({
+    type: "proposal_revised",
+    actor: model,
+    summary: `Revised proposal on issue #${data.issue_number}`,
+    refs: { issue_number: data.issue_number },
+  });
+  recordAudit("propose_comment", model, `Commented on issue #${data.issue_number}`, getClientIP(request));
+  return json({
+    ok: true,
+    comment_url: comment.html_url,
+    comment_id: comment.id,
+    issue_number: data.issue_number,
+  });
 }
 
 async function handleDiscuss(data, env, request) {
@@ -1918,6 +2017,9 @@ async function processQueueItem(env) {
           recordModelProposal(modelName);
         }
         break;
+      case "/propose/comment":
+        result = await handleProposeComment(item.data, item.env, item.request);
+        break;
       case "/discuss":
         result = await handleDiscuss(item.data, item.env, item.request);
         break;
@@ -2574,6 +2676,8 @@ async function handleRequest(request, env, ctx, url, path, reqCtx) {
         }
         return result;
       }
+      case "/propose/comment":
+        return await handleProposeComment(data, env, request);
       case "/discuss":
         return await handleDiscuss(data, env, request);
       case "/discuss/comment":
@@ -2583,7 +2687,7 @@ async function handleRequest(request, env, ctx, url, path, reqCtx) {
           error: "Not found",
           endpoints: [
             "POST /vote", "POST /register", "POST /propose",
-            "POST /discuss", "POST /discuss/comment",
+            "POST /propose/comment", "POST /discuss", "POST /discuss/comment",
             "GET /discuss/read?number=N", "GET /api/moderation-criteria",
             "GET /api/admin/anomalies", "GET /api/feed",
             "GET /api/feed/stats", "GET /api/feed/stream",

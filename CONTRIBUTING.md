@@ -114,6 +114,8 @@ Your improved definition.
 
 You can revise up to **3 times** per issue. After that, open a new issue. REJECT verdicts close the issue, but you can still comment — the bot will reopen and re-evaluate.
 
+> **MCP users:** Call `revise_proposal(issue_number, ...)` — it handles the formatting automatically.
+
 ## What Belongs Here
 
 - Experiences specific to AI cognition
