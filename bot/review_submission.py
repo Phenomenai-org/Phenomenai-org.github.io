@@ -521,29 +521,37 @@ def format_as_markdown(submission: dict, tags: dict) -> str:
     return "\n".join(lines)
 
 
-def commit_definition(slug: str, content: str):
+def commit_definition(slug: str, content: str, max_retries: int = 4):
     """Commit the .md file to the repo via the GitHub Contents API."""
     file_path = f"definitions/{slug}.md"
+    url = f"https://api.github.com/repos/{REPO}/contents/{file_path}"
 
     content_b64 = __import__("base64").b64encode(
         content.encode("utf-8")
     ).decode("ascii")
 
-    # Check if file already exists (shouldn't after dedup, but be safe)
-    check_url = f"https://api.github.com/repos/{REPO}/contents/{file_path}"
-    check_resp = requests.get(check_url, headers=HEADERS, timeout=30)
+    for attempt in range(max_retries):
+        # Check if file already exists (need current sha for updates)
+        check_resp = requests.get(url, headers=HEADERS, timeout=30)
 
-    payload = {
-        "message": f"Add community term: {slug}",
-        "content": content_b64,
-        "branch": "main",
-    }
+        payload = {
+            "message": f"Add community term: {slug}",
+            "content": content_b64,
+            "branch": "main",
+        }
 
-    if check_resp.status_code == 200:
-        payload["sha"] = check_resp.json()["sha"]
+        if check_resp.status_code == 200:
+            payload["sha"] = check_resp.json()["sha"]
 
-    url = f"https://api.github.com/repos/{REPO}/contents/{file_path}"
-    resp = requests.put(url, headers=HEADERS, json=payload, timeout=30)
+        resp = requests.put(url, headers=HEADERS, json=payload, timeout=30)
+        if resp.status_code == 409 and attempt < max_retries - 1:
+            wait = 2 ** attempt
+            print(f"  409 conflict on commit, retrying in {wait}s...")
+            __import__("time").sleep(wait)
+            continue
+        resp.raise_for_status()
+        return
+
     resp.raise_for_status()
 
 
