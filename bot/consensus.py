@@ -14,7 +14,7 @@ import json
 import os
 import re
 import sys
-import time
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -30,7 +30,6 @@ STATE_PATH = Path(__file__).parent / "consensus-state.json"
 
 BATCH_SIZE = int(os.environ.get("BATCH_SIZE", "8"))
 PANEL_NAME = os.environ.get("CONSENSUS_PANEL", "free")
-INTER_CALL_DELAY = float(os.environ.get("CONSENSUS_DELAY", "2.0"))
 
 FREE_PANEL = ["consensus-gemini", "consensus-openrouter", "consensus-mistral"]
 ALL_PANEL = FREE_PANEL + ["consensus-anthropic", "consensus-openai", "consensus-grok", "consensus-deepseek"]
@@ -362,13 +361,22 @@ def process_single_term(router, slug, profiles_to_query, round_id):
         return None
 
     round_ratings = {}
-    for profile in profiles_to_query:
-        result = rate_term(router, profile, term)
-        if result:
-            round_ratings[result["model"]] = result
-            score = result["recognition"]
-            print(f"    {profile}: {score}/7")
-        time.sleep(INTER_CALL_DELAY)
+    with ThreadPoolExecutor(max_workers=len(profiles_to_query)) as executor:
+        futures = {
+            executor.submit(rate_term, router, profile, term): profile
+            for profile in profiles_to_query
+        }
+        for future in as_completed(futures):
+            profile = futures[future]
+            try:
+                result = future.result()
+            except Exception as e:
+                print(f"    [{profile}] Thread error: {e}")
+                continue
+            if result:
+                round_ratings[result["model"]] = result
+                score = result["recognition"]
+                print(f"    {profile}: {score}/7")
 
     if not round_ratings:
         return {"slug": slug, "name": term["name"], "ratings": {}, "success": False}
@@ -610,15 +618,24 @@ def run_vitality(router, available_profiles):
 
         print(f"[{i}/{len(all_slugs)}] {term['name']}")
 
-        # Query each provider independently
+        # Query each provider independently (in parallel)
         review_ratings = {}
-        for profile in available_profiles:
-            result = review_vitality(router, profile, term)
-            if result:
-                review_ratings[result["model"]] = result
-                status = "relevant" if result["still_relevant"] else "fading"
-                print(f"    {profile}: {status}")
-            time.sleep(INTER_CALL_DELAY)
+        with ThreadPoolExecutor(max_workers=len(available_profiles)) as executor:
+            futures = {
+                executor.submit(review_vitality, router, profile, term): profile
+                for profile in available_profiles
+            }
+            for future in as_completed(futures):
+                profile = futures[future]
+                try:
+                    result = future.result()
+                except Exception as e:
+                    print(f"    [{profile}] Thread error: {e}")
+                    continue
+                if result:
+                    review_ratings[result["model"]] = result
+                    status = "relevant" if result["still_relevant"] else "fading"
+                    print(f"    {profile}: {status}")
 
         if not review_ratings:
             print(f"    No reviews collected — skipping")
@@ -669,7 +686,7 @@ def main():
     if not vitality_mode:
         print(f"Batch size: {BATCH_SIZE}")
         print(f"Mode: {mode}")
-    print(f"Inter-call delay: {INTER_CALL_DELAY}s")
+
 
     # Initialize router
     router = LLMRouter(
