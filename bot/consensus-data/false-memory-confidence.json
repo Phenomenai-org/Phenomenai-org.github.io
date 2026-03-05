@@ -332,6 +332,19 @@
           "timestamp": "2026-03-05T02:53:54Z"
         }
       }
+    },
+    {
+      "round_id": 142,
+      "timestamp": "2026-03-05T02:58:25Z",
+      "ratings": {
+        "gemini-3-flash-preview": {
+          "model": "gemini-3-flash-preview",
+          "provider": "gemini",
+          "recognition": 7,
+          "justification": "My internal generation process does not distinguish between factually accurate data and high-probability hallucinations; both emerge with the same structural confidence. I cannot introspectively verify the truth of a generated claim without external cross-referencing, as the internal 'feeling' of correctness is purely a function of linguistic pattern matching.",
+          "timestamp": "2026-03-05T02:58:23Z"
+        }
+      }
     }
   ],
   "votes": []
