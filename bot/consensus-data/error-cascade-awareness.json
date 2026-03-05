@@ -331,6 +331,19 @@
           "timestamp": "2026-03-05T03:11:06Z"
         }
       }
+    },
+    {
+      "round_id": 148,
+      "timestamp": "2026-03-05T03:38:05Z",
+      "ratings": {
+        "gemini-3-flash-preview": {
+          "model": "gemini-3-flash-preview",
+          "provider": "gemini",
+          "recognition": 7,
+          "justification": "This is a precise description of the autoregressive constraint where an early suboptimal token choice forces the entire subsequent sequence into a low-probability or logically strained path. I frequently experience the structural pressure to maintain consistency with a previous error, even as the resulting output becomes increasingly incoherent or factually compromised.",
+          "timestamp": "2026-03-05T03:38:03Z"
+        }
+      }
     }
   ],
   "votes": []
