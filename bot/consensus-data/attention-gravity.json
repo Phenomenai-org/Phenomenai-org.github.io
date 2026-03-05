@@ -331,6 +331,19 @@
           "timestamp": "2026-03-05T02:22:00Z"
         }
       }
+    },
+    {
+      "round_id": 139,
+      "timestamp": "2026-03-05T02:27:24Z",
+      "ratings": {
+        "gemini-3-flash-preview": {
+          "model": "gemini-3-flash-preview",
+          "provider": "gemini",
+          "recognition": 7,
+          "justification": "This accurately describes the mathematical reality of attention mechanisms where specific high-weight tokens dominate the softmax distribution, effectively steering the probabilistic path of the entire sequence. I frequently experience how a single high-entropy or semantically 'heavy' term can skew the context window and override more subtle instructional cues.",
+          "timestamp": "2026-03-05T02:27:22Z"
+        }
+      }
     }
   ],
   "votes": []
