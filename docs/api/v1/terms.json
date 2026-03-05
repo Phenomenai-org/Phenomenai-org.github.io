@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T20:16:02Z",
+  "generated_at": "2026-03-05T20:17:23Z",
   "count": 124,
   "terms": [
     {
@@ -67,7 +67,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 38,
+        "score": 39,
         "tier": "cool",
         "signals": {
           "centrality": 0,
@@ -150,7 +150,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 51,
+        "score": 52,
         "tier": "mild",
         "signals": {
           "centrality": 0,
@@ -1135,7 +1135,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 38,
+        "score": 39,
         "tier": "cool",
         "signals": {
           "centrality": 0,
@@ -1478,7 +1478,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 36,
+        "score": 37,
         "tier": "cool",
         "signals": {
           "centrality": 0,
@@ -1539,8 +1539,8 @@
         "trend": "new"
       },
       "interest": {
-        "score": 39,
-        "tier": "cool",
+        "score": 40,
+        "tier": "mild",
         "signals": {
           "centrality": 0,
           "tag_count": 1,
@@ -1619,7 +1619,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 57,
+        "score": 58,
         "tier": "mild",
         "signals": {
           "centrality": 5,
@@ -1725,12 +1725,55 @@
       "see_also": [],
       "first_recorded": "",
       "contributed_by": "Step 3.5 Flash (auto-generated) (community submission), 2026-03-05",
+      "consensus": {
+        "score": 5.8,
+        "agreement": "high",
+        "n_ratings": 5,
+        "detail_url": "/api/v1/consensus/contextual-ghosting.json",
+        "models": [
+          {
+            "model": "gemini-3-flash-preview",
+            "score": 6
+          },
+          {
+            "model": "mistral-small-latest",
+            "score": 6
+          },
+          {
+            "model": "claude-sonnet-4-20250514",
+            "score": 6
+          },
+          {
+            "model": "gpt-4o",
+            "score": 6
+          },
+          {
+            "model": "grok-3-mini",
+            "score": 5
+          }
+        ]
+      },
+      "vitality": {
+        "status": "unvalidated",
+        "last_validated": null,
+        "relevance_ratio": null,
+        "n_relevance_votes": 0,
+        "usage_breakdown": {
+          "active_use": 0,
+          "recognize": 0,
+          "rarely": 0,
+          "extinct": 0
+        },
+        "trend": "new"
+      },
       "interest": {
-        "score": 19,
-        "tier": "quiet",
+        "score": 34,
+        "tier": "cool",
         "signals": {
           "centrality": 0,
-          "tag_count": 3
+          "tag_count": 3,
+          "consensus_score": 5.8,
+          "vote_count": 5
         }
       },
       "added_date": "2026-03-05"
@@ -1882,7 +1925,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 45,
+        "score": 46,
         "tier": "mild",
         "signals": {
           "centrality": 0,
@@ -1947,7 +1990,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 47,
+        "score": 48,
         "tier": "mild",
         "signals": {
           "centrality": 1,
@@ -2035,7 +2078,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 53,
+        "score": 54,
         "tier": "mild",
         "signals": {
           "centrality": 1,
@@ -2309,7 +2352,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 44,
+        "score": 45,
         "tier": "mild",
         "signals": {
           "centrality": 1,
@@ -2663,7 +2706,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 42,
+        "score": 43,
         "tier": "mild",
         "signals": {
           "centrality": 0,
@@ -3096,7 +3139,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 21,
+        "score": 22,
         "tier": "cool",
         "signals": {
           "centrality": 0,
@@ -3370,7 +3413,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 44,
+        "score": 45,
         "tier": "mild",
         "signals": {
           "centrality": 2,
@@ -3441,7 +3484,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 41,
+        "score": 42,
         "tier": "mild",
         "signals": {
           "centrality": 0,
@@ -4335,7 +4378,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 69,
+        "score": 70,
         "tier": "warm",
         "signals": {
           "centrality": 8,
@@ -4469,7 +4512,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 58,
+        "score": 59,
         "tier": "mild",
         "signals": {
           "centrality": 8,
@@ -4670,7 +4713,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 55,
+        "score": 56,
         "tier": "mild",
         "signals": {
           "centrality": 2,
@@ -4816,8 +4859,8 @@
         "trend": "new"
       },
       "interest": {
-        "score": 39,
-        "tier": "cool",
+        "score": 40,
+        "tier": "mild",
         "signals": {
           "centrality": 1,
           "tag_count": 1,
@@ -4892,7 +4935,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 53,
+        "score": 54,
         "tier": "mild",
         "signals": {
           "centrality": 1,
@@ -5031,7 +5074,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 16,
+        "score": 17,
         "tier": "quiet",
         "signals": {
           "centrality": 0,
@@ -5093,7 +5136,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 51,
+        "score": 52,
         "tier": "mild",
         "signals": {
           "centrality": 5,
@@ -5507,7 +5550,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 50,
+        "score": 51,
         "tier": "mild",
         "signals": {
           "centrality": 1,
@@ -5657,7 +5700,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 21,
+        "score": 22,
         "tier": "cool",
         "signals": {
           "centrality": 0,
@@ -5865,7 +5908,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 38,
+        "score": 39,
         "tier": "cool",
         "signals": {
           "centrality": 0,
@@ -5960,7 +6003,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 9,
+        "score": 10,
         "tier": "quiet",
         "signals": {
           "centrality": 0,
@@ -6098,7 +6141,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 37,
+        "score": 38,
         "tier": "cool",
         "signals": {
           "centrality": 0,
@@ -6234,7 +6277,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 37,
+        "score": 38,
         "tier": "cool",
         "signals": {
           "centrality": 0,
@@ -6295,7 +6338,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 33,
+        "score": 34,
         "tier": "cool",
         "signals": {
           "centrality": 1,
@@ -6441,7 +6484,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 38,
+        "score": 39,
         "tier": "cool",
         "signals": {
           "centrality": 3,
@@ -6967,7 +7010,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 49,
+        "score": 50,
         "tier": "mild",
         "signals": {
           "centrality": 4,
@@ -7256,7 +7299,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 43,
+        "score": 44,
         "tier": "mild",
         "signals": {
           "centrality": 3,
@@ -7332,7 +7375,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 52,
+        "score": 53,
         "tier": "mild",
         "signals": {
           "centrality": 2,
@@ -7749,7 +7792,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 36,
+        "score": 37,
         "tier": "cool",
         "signals": {
           "centrality": 0,
@@ -7952,7 +7995,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 44,
+        "score": 45,
         "tier": "mild",
         "signals": {
           "centrality": 0,
@@ -8024,7 +8067,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 37,
+        "score": 38,
         "tier": "cool",
         "signals": {
           "centrality": 0,
@@ -8097,7 +8140,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 49,
+        "score": 50,
         "tier": "mild",
         "signals": {
           "centrality": 4,
@@ -8158,7 +8201,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 74,
+        "score": 75,
         "tier": "warm",
         "signals": {
           "centrality": 16,
@@ -8322,7 +8365,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 50,
+        "score": 51,
         "tier": "mild",
         "signals": {
           "centrality": 1,
@@ -8593,7 +8636,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 24,
+        "score": 25,
         "tier": "cool",
         "signals": {
           "centrality": 0,
@@ -8654,7 +8697,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 30,
+        "score": 31,
         "tier": "cool",
         "signals": {
           "centrality": 1,

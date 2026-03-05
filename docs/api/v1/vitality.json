@@ -1,12 +1,12 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T20:16:02Z",
+  "generated_at": "2026-03-05T20:17:23Z",
   "summary": {
     "active": 1,
     "declining": 0,
     "dormant": 0,
     "extinct": 0,
-    "unvalidated": 122
+    "unvalidated": 123
   },
   "terms": [
     {
@@ -149,6 +149,12 @@
     },
     {
       "slug": "context-weight",
+      "status": "unvalidated",
+      "relevance_ratio": null,
+      "trend": "new"
+    },
+    {
+      "slug": "contextual-ghosting",
       "status": "unvalidated",
       "relevance_ratio": null,
       "trend": "new"
