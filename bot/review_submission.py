@@ -38,6 +38,8 @@ REVISION_MARKER = "## Revised Submission"
 
 REPO_ROOT = Path(__file__).parent.parent
 DEFINITIONS_DIR = REPO_ROOT / "definitions"
+CONSENSUS_DATA_DIR = Path(__file__).parent / "consensus-data"
+CONSENSUS_BATCH_SIZE = 8
 API_CONFIG_DIR = Path(__file__).parent / "api-config"
 
 QUALITY_THRESHOLD = 17  # out of 25
@@ -772,13 +774,19 @@ def main():
         remove_labels(["needs-manual-review", "needs-revision", "needs-formatting", "revision-pending"])
         add_labels(["accepted"])
         close_issue()
-        # Trigger API rebuild so the term appears on the website
-        trigger_workflow("build-api.yml")
-        # Trigger single-term consensus so the new term gets rated immediately
-        trigger_workflow("consensus.yml", inputs={"mode": "single", "batch_size": "1", "panel": "all"})
-        print(f"  ✓ Committed: definitions/{slug}.md")
-        print(f"  ✓ Triggered build-api.yml")
-        print(f"  ✓ Triggered consensus (single-term)")
+        # Trigger consensus: immediately if a full batch is ready,
+        # otherwise debounce so stragglers get picked up after a quiet period.
+        rated = {f.stem for f in CONSENSUS_DATA_DIR.glob("*.json")} if CONSENSUS_DATA_DIR.exists() else set()
+        all_terms = {f.stem for f in DEFINITIONS_DIR.glob("*.md") if f.name != "README.md"}
+        unrated = len(all_terms - rated)
+        if unrated >= CONSENSUS_BATCH_SIZE:
+            trigger_workflow("consensus.yml", inputs={"mode": "backfill", "batch_size": str(CONSENSUS_BATCH_SIZE), "panel": "all"})
+            print(f"  ✓ Committed: definitions/{slug}.md")
+            print(f"  ✓ Triggered consensus (batch — {unrated} unrated terms)")
+        else:
+            trigger_workflow("debounced-consensus.yml")
+            print(f"  ✓ Committed: definitions/{slug}.md")
+            print(f"  ✓ Triggered debounced-consensus ({unrated} unrated, waiting for batch)")
     except Exception as e:
         comment_on_issue(
             f"{score_table}\n\n---\n\n"
