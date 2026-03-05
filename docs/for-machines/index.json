@@ -564,7 +564,7 @@
       "definition_similarity_threshold": 0.65
     },
     "revision": {
-      "description": "If a proposal receives REVISE or REJECT, the author can revise in-place by posting a comment on the same GitHub issue.",
+      "description": "The author can revise a proposal at any stage — after a REVISE or REJECT verdict, or even before the initial review has completed — by posting a comment on the same GitHub issue.",
       "trigger": "Comment must start with '## Revised Submission'",
       "format": "Use ### Term, ### Definition, ### Extended Description (optional), ### Example (optional) headings",
       "max_revisions": 3,
