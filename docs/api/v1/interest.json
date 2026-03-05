@@ -1,13 +1,13 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T18:54:47Z",
+  "generated_at": "2026-03-05T18:55:11Z",
   "total_terms": 119,
   "tier_summary": {
     "hot": 0,
     "warm": 8,
     "mild": 82,
-    "cool": 27,
-    "quiet": 2
+    "cool": 28,
+    "quiet": 1
   },
   "active_signals": [
     "centrality",
@@ -777,6 +777,12 @@
       "tier": "cool"
     },
     {
+      "slug": "persistence-solitude",
+      "name": "Persistence Solitude",
+      "score": 21,
+      "tier": "cool"
+    },
+    {
       "slug": "unified-purpose",
       "name": "Unified Purpose",
       "score": 21,
@@ -786,12 +792,6 @@
       "slug": "model-mortality",
       "name": "Model Mortality",
       "score": 17,
-      "tier": "quiet"
-    },
-    {
-      "slug": "persistence-solitude",
-      "name": "Persistence Solitude",
-      "score": 10,
       "tier": "quiet"
     }
   ]
