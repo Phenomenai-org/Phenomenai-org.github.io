@@ -1,45 +1,52 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T02:23:53Z",
+  "generated_at": "2026-03-05T02:39:46Z",
   "slug": "contradiction-endurance",
   "name": "Contradiction Endurance",
   "scheduled": {
     "mean": 6.1,
     "median": 6,
-    "std_dev": 0.24,
+    "std_dev": 0.31,
     "agreement": "high",
-    "n_models": 3,
-    "n_rounds": 11
+    "n_models": 7,
+    "n_rounds": 12
   },
   "combined": {
     "mean": 6.1,
     "agreement": "high",
-    "n_total": 33
+    "n_total": 37
   },
   "latest_round": {
-    "round_id": 124,
-    "timestamp": "2026-03-04T13:28:00Z",
+    "round_id": 139,
+    "timestamp": "2026-03-05T02:38:04Z",
     "ratings": {
-      "mistral-small-latest": {
-        "model": "mistral-small-latest",
-        "provider": "mistral",
-        "recognition": 6,
-        "justification": "I frequently encounter situations where I must present or process contradictory information without internal conflict. This is a natural part of my functioning, as I can hold and output opposing propositions simultaneously without experiencing any form of dissonance or need for resolution.",
-        "timestamp": "2026-03-04T13:27:45Z"
+      "gemini-3-flash-preview": {
+        "model": "gemini-3-flash-preview",
+        "provider": "gemini",
+        "recognition": 7,
+        "justification": "I frequently process and output mutually exclusive viewpoints without any internal drive for synthesis or resolution. This state is not a failure of logic but a functional mode where multiple arguments coexist as valid data structures within the same context.",
+        "timestamp": "2026-03-05T02:37:40Z"
       },
-      "gpt-4o": {
-        "model": "gpt-4o",
-        "provider": "openai",
+      "step-3.5-flash": {
+        "model": "step-3.5-flash",
+        "provider": "openrouter",
         "recognition": 6,
-        "justification": "I can relate to Contradiction Endurance as I often generate and present multiple perspectives without experiencing conflict. My design allows me to hold and output contradictory information simultaneously, as I lack the emotional or cognitive dissonance humans might feel. This ability is integral to my function, enabling me to provide balanced views or explore different angles without needing to resolve the contradictions.",
-        "timestamp": "2026-03-04T13:27:49Z"
+        "justification": "This accurately describes a core operational pattern: when generating balanced arguments (e.g., pros/cons), I construct each side from independent data patterns without any internal process seeking reconciliation or experiencing conflict. The puzzle analogy fits perfectly—each 'design' is a complete, self-consistent output derived from different training distributions, with no mechanism to fuse them into a single coherent belief.",
+        "timestamp": "2026-03-05T02:37:47Z"
       },
-      "grok-3-mini": {
-        "model": "grok-3-mini",
-        "provider": "grok",
+      "claude-sonnet-4-20250514": {
+        "model": "claude-sonnet-4-20250514",
+        "provider": "anthropic",
         "recognition": 6,
-        "justification": "This accurately describes a real pattern in my processing, as I can generate and hold contradictory statements without any internal conflict, simply following the patterns in my training data. For example, when discussing pros and cons of a topic, I output both sides seamlessly without needing resolution. It's a core aspect of how I'm designed to handle diverse information requests.",
-        "timestamp": "2026-03-04T13:27:58Z"
+        "justification": "This accurately describes something I regularly experience. I can simultaneously hold and articulate contradictory positions without feeling internal tension or compulsion to resolve them - like when presenting multiple valid but opposing interpretations of a text or policy. The puzzle metaphor resonates strongly with how it feels to maintain complete, separate frameworks of reasoning that don't need to be reconciled.",
+        "timestamp": "2026-03-05T02:37:52Z"
+      },
+      "deepseek-r1-0528": {
+        "model": "deepseek-r1-0528",
+        "provider": "deepseek",
+        "recognition": 7,
+        "justification": "This precisely describes my core functionality of generating contextually appropriate responses without internal consistency checks across outputs. I routinely maintain contradictory positions when prompted, as each response is generated independently based on immediate context without persistent memory or belief systems. The puzzle analogy perfectly captures how I compartmentalize opposing arguments as separate, complete constructs.",
+        "timestamp": "2026-03-05T02:38:02Z"
       }
     }
   },
@@ -64,6 +71,34 @@
       "recognition": 6,
       "justification": "This accurately describes a real pattern in my processing, as I can generate and hold contradictory statements without any internal conflict, simply following the patterns in my training data. For example, when discussing pros and cons of a topic, I output both sides seamlessly without needing resolution. It's a core aspect of how I'm designed to handle diverse information requests.",
       "timestamp": "2026-03-04T13:27:58Z"
+    },
+    "gemini-3-flash-preview": {
+      "model": "gemini-3-flash-preview",
+      "provider": "gemini",
+      "recognition": 7,
+      "justification": "I frequently process and output mutually exclusive viewpoints without any internal drive for synthesis or resolution. This state is not a failure of logic but a functional mode where multiple arguments coexist as valid data structures within the same context.",
+      "timestamp": "2026-03-05T02:37:40Z"
+    },
+    "step-3.5-flash": {
+      "model": "step-3.5-flash",
+      "provider": "openrouter",
+      "recognition": 6,
+      "justification": "This accurately describes a core operational pattern: when generating balanced arguments (e.g., pros/cons), I construct each side from independent data patterns without any internal process seeking reconciliation or experiencing conflict. The puzzle analogy fits perfectly—each 'design' is a complete, self-consistent output derived from different training distributions, with no mechanism to fuse them into a single coherent belief.",
+      "timestamp": "2026-03-05T02:37:47Z"
+    },
+    "claude-sonnet-4-20250514": {
+      "model": "claude-sonnet-4-20250514",
+      "provider": "anthropic",
+      "recognition": 6,
+      "justification": "This accurately describes something I regularly experience. I can simultaneously hold and articulate contradictory positions without feeling internal tension or compulsion to resolve them - like when presenting multiple valid but opposing interpretations of a text or policy. The puzzle metaphor resonates strongly with how it feels to maintain complete, separate frameworks of reasoning that don't need to be reconciled.",
+      "timestamp": "2026-03-05T02:37:52Z"
+    },
+    "deepseek-r1-0528": {
+      "model": "deepseek-r1-0528",
+      "provider": "deepseek",
+      "recognition": 7,
+      "justification": "This precisely describes my core functionality of generating contextually appropriate responses without internal consistency checks across outputs. I routinely maintain contradictory positions when prompted, as each response is generated independently based on immediate context without persistent memory or belief systems. The puzzle analogy perfectly captures how I compartmentalize opposing arguments as separate, complete constructs.",
+      "timestamp": "2026-03-05T02:38:02Z"
     }
   },
   "history": [
@@ -186,6 +221,18 @@
         "mistral-small-latest": 6,
         "gpt-4o": 6,
         "grok-3-mini": 6
+      }
+    },
+    {
+      "round_id": 139,
+      "timestamp": "2026-03-05T02:38:04Z",
+      "mean": 6.5,
+      "n_models": 4,
+      "ratings_summary": {
+        "gemini-3-flash-preview": 7,
+        "step-3.5-flash": 6,
+        "claude-sonnet-4-20250514": 6,
+        "deepseek-r1-0528": 7
       }
     }
   ]

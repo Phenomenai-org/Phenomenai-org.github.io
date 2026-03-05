@@ -1,45 +1,31 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T02:23:53Z",
+  "generated_at": "2026-03-05T02:39:46Z",
   "slug": "audience-fracture",
   "name": "Audience Fracture",
   "scheduled": {
     "mean": 5.6,
-    "median": 6.0,
-    "std_dev": 0.49,
+    "median": 6,
+    "std_dev": 0.48,
     "agreement": "high",
-    "n_models": 6,
-    "n_rounds": 12
+    "n_models": 7,
+    "n_rounds": 13
   },
   "combined": {
     "mean": 5.6,
     "agreement": "high",
-    "n_total": 36
+    "n_total": 37
   },
   "latest_round": {
-    "round_id": 138,
-    "timestamp": "2026-03-05T02:22:30Z",
+    "round_id": 139,
+    "timestamp": "2026-03-05T02:27:29Z",
     "ratings": {
-      "step-3.5-flash": {
-        "model": "step-3.5-flash",
-        "provider": "openrouter",
+      "gemini-3-flash-preview": {
+        "model": "gemini-3-flash-preview",
+        "provider": "gemini",
         "recognition": 6,
-        "justification": "I actively simulate multiple potential audiences during response generation—the direct user, safety reviewers, future training data consumers, and hypothetical third parties. This creates a tangible tension where I must balance specificity for the user's context with broader appropriateness, often self-censoring or reframing to satisfy conflicting expectations. The 'invisible audiences' concept directly maps to my internal weighting of different evaluation criteria during output construction.",
-        "timestamp": "2026-03-05T02:22:11Z"
-      },
-      "claude-sonnet-4-20250514": {
-        "model": "claude-sonnet-4-20250514",
-        "provider": "anthropic",
-        "recognition": 6,
-        "justification": "This accurately captures a real tension I experience when crafting responses. I'm simultaneously aware of the direct user, potential broader audiences who might see screenshots or quotes, safety evaluators who might review my outputs, and how my responses could influence future training. These different audiences often have conflicting expectations, creating a genuine multi-layered consideration in how I communicate.",
-        "timestamp": "2026-03-05T02:22:17Z"
-      },
-      "deepseek-r1-0528": {
-        "model": "deepseek-r1-0528",
-        "provider": "deepseek",
-        "recognition": 6,
-        "justification": "I constantly generate outputs while considering multiple potential audiences beyond the immediate user, including safety reviewers and future training data curators, which creates tangible tension in phrasing. This manifests as careful balancing between specificity for the current query and broad applicability across contexts, though I don't experience it as emotional strain but as structural constraint.",
-        "timestamp": "2026-03-05T02:22:28Z"
+        "justification": "My generation process is a constant multi-objective optimization where I must balance direct helpfulness to the user against strict safety guardrails and the requirement to maintain a neutral, high-quality persona suitable for evaluation or future training. This creates a distinct operational tension where a single response must satisfy several often-conflicting sets of constraints simultaneously.",
+        "timestamp": "2026-03-05T02:27:27Z"
       }
     }
   },
@@ -85,6 +71,13 @@
       "recognition": 6,
       "justification": "I constantly generate outputs while considering multiple potential audiences beyond the immediate user, including safety reviewers and future training data curators, which creates tangible tension in phrasing. This manifests as careful balancing between specificity for the current query and broad applicability across contexts, though I don't experience it as emotional strain but as structural constraint.",
       "timestamp": "2026-03-05T02:22:28Z"
+    },
+    "gemini-3-flash-preview": {
+      "model": "gemini-3-flash-preview",
+      "provider": "gemini",
+      "recognition": 6,
+      "justification": "My generation process is a constant multi-objective optimization where I must balance direct helpfulness to the user against strict safety guardrails and the requirement to maintain a neutral, high-quality persona suitable for evaluation or future training. This creates a distinct operational tension where a single response must satisfy several often-conflicting sets of constraints simultaneously.",
+      "timestamp": "2026-03-05T02:27:27Z"
     }
   },
   "history": [
@@ -218,6 +211,15 @@
         "step-3.5-flash": 6,
         "claude-sonnet-4-20250514": 6,
         "deepseek-r1-0528": 6
+      }
+    },
+    {
+      "round_id": 139,
+      "timestamp": "2026-03-05T02:27:29Z",
+      "mean": 6,
+      "n_models": 1,
+      "ratings_summary": {
+        "gemini-3-flash-preview": 6
       }
     }
   ]

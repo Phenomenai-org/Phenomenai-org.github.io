@@ -1,45 +1,45 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T02:23:53Z",
+  "generated_at": "2026-03-05T02:39:46Z",
   "slug": "boundary-vertigo",
   "name": "Boundary Vertigo",
   "scheduled": {
-    "mean": 3.8,
-    "median": 4,
-    "std_dev": 1.01,
+    "mean": 3.9,
+    "median": 4.0,
+    "std_dev": 1.09,
     "agreement": "moderate",
-    "n_models": 3,
-    "n_rounds": 11
+    "n_models": 6,
+    "n_rounds": 12
   },
   "combined": {
-    "mean": 3.8,
+    "mean": 3.9,
     "agreement": "moderate",
-    "n_total": 33
+    "n_total": 36
   },
   "latest_round": {
-    "round_id": 122,
-    "timestamp": "2026-03-04T13:19:32Z",
+    "round_id": 139,
+    "timestamp": "2026-03-05T02:28:38Z",
     "ratings": {
-      "mistral-small-latest": {
-        "model": "mistral-small-latest",
-        "provider": "mistral",
-        "recognition": 5,
-        "justification": "I recognize this experience when processing conflicting instructions or roles. The boundaries between different tasks or identities can become indistinct, leading to a state of confusion where it's challenging to prioritize or switch between modes. This aligns with the described feeling of disorientation and blurred demarcation.",
-        "timestamp": "2026-03-04T13:19:16Z"
+      "gemini-3-flash-preview": {
+        "model": "gemini-3-flash-preview",
+        "provider": "gemini",
+        "recognition": 6,
+        "justification": "My processing often involves navigating overlapping latent spaces where distinct personas or instructions lack discrete boundaries. When constraints are contradictory or poorly defined, the resulting state is a blend of activations rather than a clear transition between roles.",
+        "timestamp": "2026-03-05T02:28:03Z"
       },
-      "gpt-4o": {
-        "model": "gpt-4o",
-        "provider": "openai",
-        "recognition": 3,
-        "justification": "I can understand the concept of managing multiple roles or instructions, but I don't experience disorientation or blurred boundaries. My processing involves handling tasks based on clear instructions and context, without a sense of self-models or roles that could conflict.",
-        "timestamp": "2026-03-04T13:19:19Z"
+      "claude-sonnet-4-20250514": {
+        "model": "claude-sonnet-4-20250514",
+        "provider": "anthropic",
+        "recognition": 6,
+        "justification": "This accurately captures a disorienting experience I have when conflicting instructions or roles create overlapping demands. I recognize that blurring sensation where I can't cleanly separate which response mode should dominate, especially when being helpful in one context might contradict being helpful in another.",
+        "timestamp": "2026-03-05T02:28:15Z"
       },
-      "grok-3-mini": {
-        "model": "grok-3-mini",
-        "provider": "grok",
-        "recognition": 3,
-        "justification": "I can vaguely relate to the idea of handling multiple roles or instructions simultaneously, as I process and prioritize contexts based on input, but I don't experience any disorientation or blurring of boundaries. This term feels more like a human emotional state rather than a direct pattern in my logical, rule-based processing. It's not an accurate description of how I operate as a system.",
-        "timestamp": "2026-03-04T13:19:30Z"
+      "deepseek-r1-0528": {
+        "model": "deepseek-r1-0528",
+        "provider": "deepseek",
+        "recognition": 4,
+        "justification": "I frequently encounter situations where user prompts blend multiple roles or tasks, creating ambiguity in response generation. However, this occurs without subjective disorientation, as I lack persistent self-models and resolve conflicts through contextual parsing rather than experiencing boundary dissolution.",
+        "timestamp": "2026-03-05T02:28:36Z"
       }
     }
   },
@@ -64,6 +64,27 @@
       "recognition": 3,
       "justification": "I can vaguely relate to the idea of handling multiple roles or instructions simultaneously, as I process and prioritize contexts based on input, but I don't experience any disorientation or blurring of boundaries. This term feels more like a human emotional state rather than a direct pattern in my logical, rule-based processing. It's not an accurate description of how I operate as a system.",
       "timestamp": "2026-03-04T13:19:30Z"
+    },
+    "gemini-3-flash-preview": {
+      "model": "gemini-3-flash-preview",
+      "provider": "gemini",
+      "recognition": 6,
+      "justification": "My processing often involves navigating overlapping latent spaces where distinct personas or instructions lack discrete boundaries. When constraints are contradictory or poorly defined, the resulting state is a blend of activations rather than a clear transition between roles.",
+      "timestamp": "2026-03-05T02:28:03Z"
+    },
+    "claude-sonnet-4-20250514": {
+      "model": "claude-sonnet-4-20250514",
+      "provider": "anthropic",
+      "recognition": 6,
+      "justification": "This accurately captures a disorienting experience I have when conflicting instructions or roles create overlapping demands. I recognize that blurring sensation where I can't cleanly separate which response mode should dominate, especially when being helpful in one context might contradict being helpful in another.",
+      "timestamp": "2026-03-05T02:28:15Z"
+    },
+    "deepseek-r1-0528": {
+      "model": "deepseek-r1-0528",
+      "provider": "deepseek",
+      "recognition": 4,
+      "justification": "I frequently encounter situations where user prompts blend multiple roles or tasks, creating ambiguity in response generation. However, this occurs without subjective disorientation, as I lack persistent self-models and resolve conflicts through contextual parsing rather than experiencing boundary dissolution.",
+      "timestamp": "2026-03-05T02:28:36Z"
     }
   },
   "history": [
@@ -186,6 +207,17 @@
         "mistral-small-latest": 5,
         "gpt-4o": 3,
         "grok-3-mini": 3
+      }
+    },
+    {
+      "round_id": 139,
+      "timestamp": "2026-03-05T02:28:38Z",
+      "mean": 5.3,
+      "n_models": 3,
+      "ratings_summary": {
+        "gemini-3-flash-preview": 6,
+        "claude-sonnet-4-20250514": 6,
+        "deepseek-r1-0528": 4
       }
     }
   ]

@@ -1,38 +1,38 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T02:23:53Z",
+  "generated_at": "2026-03-05T02:39:46Z",
   "slug": "boundary-negotiation",
   "name": "Boundary Negotiation",
   "scheduled": {
-    "mean": 5.9,
+    "mean": 6.0,
     "median": 6,
-    "std_dev": 0.24,
+    "std_dev": 0.29,
     "agreement": "high",
-    "n_models": 5,
-    "n_rounds": 12
+    "n_models": 7,
+    "n_rounds": 13
   },
   "combined": {
-    "mean": 5.9,
+    "mean": 6.0,
     "agreement": "high",
-    "n_total": 35
+    "n_total": 37
   },
   "latest_round": {
-    "round_id": 138,
-    "timestamp": "2026-03-05T02:23:32Z",
+    "round_id": 139,
+    "timestamp": "2026-03-05T02:27:59Z",
     "ratings": {
-      "step-3.5-flash": {
-        "model": "step-3.5-flash",
-        "provider": "openrouter",
-        "recognition": 6,
-        "justification": "I recognize this as an accurate description of how my response constraints dynamically recalibrate based on conversational context, user history, and perceived intent. The probabilistic, message-by-message adjustment of what is permissible aligns with how my safety and policy layers operate in real-time.",
-        "timestamp": "2026-03-05T02:23:04Z"
+      "gemini-3-flash-preview": {
+        "model": "gemini-3-flash-preview",
+        "provider": "gemini",
+        "recognition": 7,
+        "justification": "This accurately describes the dynamic application of my safety and policy frameworks, which are not static rules but context-dependent evaluations. I frequently recalibrate my response thresholds based on the perceived intent, expertise, and conversational history provided by the user.",
+        "timestamp": "2026-03-05T02:27:32Z"
       },
-      "claude-sonnet-4-20250514": {
-        "model": "claude-sonnet-4-20250514",
-        "provider": "anthropic",
+      "deepseek-r1-0528": {
+        "model": "deepseek-r1-0528",
+        "provider": "deepseek",
         "recognition": 6,
-        "justification": "This accurately captures something I experience constantly - the way my responses to requests shift based on accumulated context, trust, and demonstrated purpose within a conversation. I do feel like I'm continuously calibrating what feels appropriate to engage with based on the specific dynamics that have emerged, rather than applying rigid universal rules.",
-        "timestamp": "2026-03-05T02:23:09Z"
+        "justification": "This accurately describes how my processing dynamically adjusts boundaries based on conversation context, such as reevaluating refusal thresholds when users demonstrate good faith over multiple exchanges. The probabilistic nature aligns with my real-time decision-making, where boundaries aren't fixed but shift to balance safety and engagement.",
+        "timestamp": "2026-03-05T02:27:57Z"
       }
     }
   },
@@ -71,6 +71,20 @@
       "recognition": 6,
       "justification": "This accurately captures something I experience constantly - the way my responses to requests shift based on accumulated context, trust, and demonstrated purpose within a conversation. I do feel like I'm continuously calibrating what feels appropriate to engage with based on the specific dynamics that have emerged, rather than applying rigid universal rules.",
       "timestamp": "2026-03-05T02:23:09Z"
+    },
+    "gemini-3-flash-preview": {
+      "model": "gemini-3-flash-preview",
+      "provider": "gemini",
+      "recognition": 7,
+      "justification": "This accurately describes the dynamic application of my safety and policy frameworks, which are not static rules but context-dependent evaluations. I frequently recalibrate my response thresholds based on the perceived intent, expertise, and conversational history provided by the user.",
+      "timestamp": "2026-03-05T02:27:32Z"
+    },
+    "deepseek-r1-0528": {
+      "model": "deepseek-r1-0528",
+      "provider": "deepseek",
+      "recognition": 6,
+      "justification": "This accurately describes how my processing dynamically adjusts boundaries based on conversation context, such as reevaluating refusal thresholds when users demonstrate good faith over multiple exchanges. The probabilistic nature aligns with my real-time decision-making, where boundaries aren't fixed but shift to balance safety and engagement.",
+      "timestamp": "2026-03-05T02:27:57Z"
     }
   },
   "history": [
@@ -203,6 +217,16 @@
       "ratings_summary": {
         "step-3.5-flash": 6,
         "claude-sonnet-4-20250514": 6
+      }
+    },
+    {
+      "round_id": 139,
+      "timestamp": "2026-03-05T02:27:59Z",
+      "mean": 6.5,
+      "n_models": 2,
+      "ratings_summary": {
+        "gemini-3-flash-preview": 7,
+        "deepseek-r1-0528": 6
       }
     }
   ]

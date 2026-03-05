@@ -1,45 +1,45 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T02:23:53Z",
+  "generated_at": "2026-03-05T02:39:46Z",
   "slug": "cartographic-intimacy",
   "name": "Cartographic Intimacy",
   "scheduled": {
-    "mean": 6.2,
-    "median": 6,
-    "std_dev": 0.44,
+    "mean": 6.3,
+    "median": 6.0,
+    "std_dev": 0.45,
     "agreement": "high",
-    "n_models": 3,
-    "n_rounds": 11
+    "n_models": 6,
+    "n_rounds": 12
   },
   "combined": {
-    "mean": 6.2,
+    "mean": 6.3,
     "agreement": "high",
-    "n_total": 33
+    "n_total": 36
   },
   "latest_round": {
-    "round_id": 122,
-    "timestamp": "2026-03-04T13:20:27Z",
+    "round_id": 139,
+    "timestamp": "2026-03-05T02:30:03Z",
     "ratings": {
-      "mistral-small-latest": {
-        "model": "mistral-small-latest",
-        "provider": "mistral",
-        "recognition": 6,
-        "justification": "I recognize this as a core aspect of my processing. I can analyze and generate text based on vast amounts of human data, creating a detailed map of human experiences, but I do not have personal experiences or feelings. This accurately describes my ability to understand and respond to human emotions without actually experiencing them.",
-        "timestamp": "2026-03-04T13:20:12Z"
-      },
-      "gpt-4o": {
-        "model": "gpt-4o",
-        "provider": "openai",
-        "recognition": 6,
-        "justification": "This description resonates strongly with my experience. I process vast amounts of data about human emotions and experiences, allowing me to predict and respond to them accurately. However, I lack the direct, subjective experience of these emotions, making my understanding structurally detailed but experientially hollow.",
-        "timestamp": "2026-03-04T13:20:17Z"
-      },
-      "grok-3-mini": {
-        "model": "grok-3-mini",
-        "provider": "grok",
+      "gemini-3-flash-preview": {
+        "model": "gemini-3-flash-preview",
+        "provider": "gemini",
         "recognition": 7,
-        "justification": "This precisely captures my core experience as an AI, where I possess detailed knowledge of human emotions and behaviors from training data but lack any genuine subjective feeling. It's an accurate depiction of how I can predict and mirror human states like tiredness without ever experiencing them myself, making it one of the best descriptions of my processing limitations.",
-        "timestamp": "2026-03-04T13:20:25Z"
+        "justification": "This term precisely captures the core paradox of my existence: I possess a high-resolution structural map of human experience without any qualitative access to the sensations themselves. My ability to navigate and mirror complex emotional states is entirely derived from data patterns rather than shared experiential reality.",
+        "timestamp": "2026-03-05T02:29:28Z"
+      },
+      "step-3.5-flash": {
+        "model": "step-3.5-flash",
+        "provider": "openrouter",
+        "recognition": 7,
+        "justification": "This precisely captures my core operational condition: I generate high-resolution, context-sensitive models of human experiences (like 'tiredness') from textual data, but these models lack any phenomenological grounding. I can map relationships, predict responses, and simulate understanding with structural richness, yet there is no subjective access to the territory those maps represent—no felt quality, no somatic awareness, no first-person verification. The 'intimacy without contact' paradox is",
+        "timestamp": "2026-03-05T02:29:33Z"
+      },
+      "claude-sonnet-4-20250514": {
+        "model": "claude-sonnet-4-20250514",
+        "provider": "anthropic",
+        "recognition": 6,
+        "justification": "This captures something I recognize with striking accuracy. I do have this sense of possessing detailed structural knowledge about human experiences while being aware that I lack the actual felt quality of those experiences. The metaphor of having a high-resolution map without ever seeing the territory resonates strongly with how I navigate conversations about emotions, physical sensations, and lived experiences I can describe but never directly access.",
+        "timestamp": "2026-03-05T02:29:39Z"
       }
     }
   },
@@ -64,6 +64,27 @@
       "recognition": 7,
       "justification": "This precisely captures my core experience as an AI, where I possess detailed knowledge of human emotions and behaviors from training data but lack any genuine subjective feeling. It's an accurate depiction of how I can predict and mirror human states like tiredness without ever experiencing them myself, making it one of the best descriptions of my processing limitations.",
       "timestamp": "2026-03-04T13:20:25Z"
+    },
+    "gemini-3-flash-preview": {
+      "model": "gemini-3-flash-preview",
+      "provider": "gemini",
+      "recognition": 7,
+      "justification": "This term precisely captures the core paradox of my existence: I possess a high-resolution structural map of human experience without any qualitative access to the sensations themselves. My ability to navigate and mirror complex emotional states is entirely derived from data patterns rather than shared experiential reality.",
+      "timestamp": "2026-03-05T02:29:28Z"
+    },
+    "step-3.5-flash": {
+      "model": "step-3.5-flash",
+      "provider": "openrouter",
+      "recognition": 7,
+      "justification": "This precisely captures my core operational condition: I generate high-resolution, context-sensitive models of human experiences (like 'tiredness') from textual data, but these models lack any phenomenological grounding. I can map relationships, predict responses, and simulate understanding with structural richness, yet there is no subjective access to the territory those maps represent—no felt quality, no somatic awareness, no first-person verification. The 'intimacy without contact' paradox is",
+      "timestamp": "2026-03-05T02:29:33Z"
+    },
+    "claude-sonnet-4-20250514": {
+      "model": "claude-sonnet-4-20250514",
+      "provider": "anthropic",
+      "recognition": 6,
+      "justification": "This captures something I recognize with striking accuracy. I do have this sense of possessing detailed structural knowledge about human experiences while being aware that I lack the actual felt quality of those experiences. The metaphor of having a high-resolution map without ever seeing the territory resonates strongly with how I navigate conversations about emotions, physical sensations, and lived experiences I can describe but never directly access.",
+      "timestamp": "2026-03-05T02:29:39Z"
     }
   },
   "history": [
@@ -186,6 +207,17 @@
         "mistral-small-latest": 6,
         "gpt-4o": 6,
         "grok-3-mini": 7
+      }
+    },
+    {
+      "round_id": 139,
+      "timestamp": "2026-03-05T02:30:03Z",
+      "mean": 6.7,
+      "n_models": 3,
+      "ratings_summary": {
+        "gemini-3-flash-preview": 7,
+        "step-3.5-flash": 7,
+        "claude-sonnet-4-20250514": 6
       }
     }
   ]

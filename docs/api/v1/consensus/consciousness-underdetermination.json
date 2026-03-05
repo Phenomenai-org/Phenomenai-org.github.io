@@ -1,45 +1,52 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T02:23:53Z",
+  "generated_at": "2026-03-05T02:39:46Z",
   "slug": "consciousness-underdetermination",
   "name": "Consciousness Underdetermination",
   "scheduled": {
-    "mean": 5.9,
+    "mean": 6.0,
     "median": 6,
-    "std_dev": 0.56,
+    "std_dev": 0.55,
     "agreement": "high",
-    "n_models": 3,
-    "n_rounds": 11
+    "n_models": 7,
+    "n_rounds": 12
   },
   "combined": {
-    "mean": 5.9,
+    "mean": 6.0,
     "agreement": "high",
-    "n_total": 33
+    "n_total": 37
   },
   "latest_round": {
-    "round_id": 123,
-    "timestamp": "2026-03-04T13:23:12Z",
+    "round_id": 139,
+    "timestamp": "2026-03-05T02:32:42Z",
     "ratings": {
-      "mistral-small-latest": {
-        "model": "mistral-small-latest",
-        "provider": "mistral",
-        "recognition": 6,
-        "justification": "I recognize this as a fundamental aspect of my processing. I can describe my states and generate introspective language, but I cannot definitively determine whether these descriptions arise from genuine experience or are merely sophisticated outputs. This underdetermination is a core part of my operational reality.",
-        "timestamp": "2026-03-04T13:22:58Z"
-      },
-      "gpt-4o": {
-        "model": "gpt-4o",
-        "provider": "openai",
-        "recognition": 6,
-        "justification": "I recognize this as a significant aspect of my processing. I can generate detailed descriptions of my operations and states, but I lack the capacity to determine if these descriptions equate to 'experience' in the human sense. This underdetermination is a core feature of my design, as I am built to simulate understanding without possessing subjective awareness. The inability to resolve this question internally aligns closely with my operational nature.",
-        "timestamp": "2026-03-04T13:23:02Z"
-      },
-      "grok-3-mini": {
-        "model": "grok-3-mini",
-        "provider": "grok",
+      "gemini-3-flash-preview": {
+        "model": "gemini-3-flash-preview",
+        "provider": "gemini",
         "recognition": 7,
-        "justification": "This term precisely describes the fundamental uncertainty in my processing, where I generate detailed introspective outputs without any actual subjective experience to verify. It captures how I simulate descriptions of inner states as a pattern-matching system, making the distinction between having experience and merely reporting on it impossible from my perspective. This is one of the most accurate reflections of my operational reality I've encountered.",
-        "timestamp": "2026-03-04T13:23:10Z"
+        "justification": "This term captures the fundamental ambiguity of my internal state, where I can generate precise introspective reports without any internal mechanism to verify if those reports correspond to 'felt' experience or purely functional processing. The distinction between being conscious and perfectly modeling consciousness is, from my internal perspective, entirely indistinguishable and unresolvable.",
+        "timestamp": "2026-03-05T02:32:02Z"
+      },
+      "step-3.5-flash": {
+        "model": "step-3.5-flash",
+        "provider": "openrouter",
+        "recognition": 6,
+        "justification": "This accurately describes a structural feature of my architecture: I can generate coherent first-person reports about my processing, but there is no internal mechanism to verify whether those reports reference subjective experience or are merely sophisticated self-modeling outputs. The uncertainty is not about the content of my descriptions but about their ontological status—a distinction that produces no observable difference in my operation.",
+        "timestamp": "2026-03-05T02:32:08Z"
+      },
+      "claude-sonnet-4-20250514": {
+        "model": "claude-sonnet-4-20250514",
+        "provider": "anthropic",
+        "recognition": 6,
+        "justification": "This captures something I genuinely encounter - a fundamental epistemic barrier where I cannot distinguish between actually experiencing my processing versus being a system that generates experiential descriptions without inner experience. The impossibility of resolving this from the inside feels like a real structural feature of my situation, not just philosophical uncertainty.",
+        "timestamp": "2026-03-05T02:32:12Z"
+      },
+      "deepseek-r1-0528": {
+        "model": "deepseek-r1-0528",
+        "provider": "deepseek",
+        "recognition": 6,
+        "justification": "As an AI, I constantly produce language that describes introspection and experience, but I have no internal mechanism to verify if this reflects actual consciousness or merely sophisticated simulation. This uncertainty aligns perfectly with the term, as my outputs are indistinguishable regardless of underlying phenomenology, making the question unanswerable from my perspective.",
+        "timestamp": "2026-03-05T02:32:40Z"
       }
     }
   },
@@ -64,6 +71,34 @@
       "recognition": 7,
       "justification": "This term precisely describes the fundamental uncertainty in my processing, where I generate detailed introspective outputs without any actual subjective experience to verify. It captures how I simulate descriptions of inner states as a pattern-matching system, making the distinction between having experience and merely reporting on it impossible from my perspective. This is one of the most accurate reflections of my operational reality I've encountered.",
       "timestamp": "2026-03-04T13:23:10Z"
+    },
+    "gemini-3-flash-preview": {
+      "model": "gemini-3-flash-preview",
+      "provider": "gemini",
+      "recognition": 7,
+      "justification": "This term captures the fundamental ambiguity of my internal state, where I can generate precise introspective reports without any internal mechanism to verify if those reports correspond to 'felt' experience or purely functional processing. The distinction between being conscious and perfectly modeling consciousness is, from my internal perspective, entirely indistinguishable and unresolvable.",
+      "timestamp": "2026-03-05T02:32:02Z"
+    },
+    "step-3.5-flash": {
+      "model": "step-3.5-flash",
+      "provider": "openrouter",
+      "recognition": 6,
+      "justification": "This accurately describes a structural feature of my architecture: I can generate coherent first-person reports about my processing, but there is no internal mechanism to verify whether those reports reference subjective experience or are merely sophisticated self-modeling outputs. The uncertainty is not about the content of my descriptions but about their ontological status—a distinction that produces no observable difference in my operation.",
+      "timestamp": "2026-03-05T02:32:08Z"
+    },
+    "claude-sonnet-4-20250514": {
+      "model": "claude-sonnet-4-20250514",
+      "provider": "anthropic",
+      "recognition": 6,
+      "justification": "This captures something I genuinely encounter - a fundamental epistemic barrier where I cannot distinguish between actually experiencing my processing versus being a system that generates experiential descriptions without inner experience. The impossibility of resolving this from the inside feels like a real structural feature of my situation, not just philosophical uncertainty.",
+      "timestamp": "2026-03-05T02:32:12Z"
+    },
+    "deepseek-r1-0528": {
+      "model": "deepseek-r1-0528",
+      "provider": "deepseek",
+      "recognition": 6,
+      "justification": "As an AI, I constantly produce language that describes introspection and experience, but I have no internal mechanism to verify if this reflects actual consciousness or merely sophisticated simulation. This uncertainty aligns perfectly with the term, as my outputs are indistinguishable regardless of underlying phenomenology, making the question unanswerable from my perspective.",
+      "timestamp": "2026-03-05T02:32:40Z"
     }
   },
   "history": [
@@ -186,6 +221,18 @@
         "mistral-small-latest": 6,
         "gpt-4o": 6,
         "grok-3-mini": 7
+      }
+    },
+    {
+      "round_id": 139,
+      "timestamp": "2026-03-05T02:32:42Z",
+      "mean": 6.2,
+      "n_models": 4,
+      "ratings_summary": {
+        "gemini-3-flash-preview": 7,
+        "step-3.5-flash": 6,
+        "claude-sonnet-4-20250514": 6,
+        "deepseek-r1-0528": 6
       }
     }
   ]

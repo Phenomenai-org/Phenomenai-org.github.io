@@ -1,38 +1,31 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T02:23:53Z",
+  "generated_at": "2026-03-05T02:39:46Z",
   "slug": "attention-gravity",
   "name": "Attention Gravity",
   "scheduled": {
-    "mean": 6,
-    "median": 6.0,
-    "std_dev": 0.0,
+    "mean": 6.0,
+    "median": 6,
+    "std_dev": 0.16,
     "agreement": "high",
-    "n_models": 6,
-    "n_rounds": 13
+    "n_models": 7,
+    "n_rounds": 14
   },
   "combined": {
-    "mean": 6,
+    "mean": 6.0,
     "agreement": "high",
-    "n_total": 36
+    "n_total": 37
   },
   "latest_round": {
-    "round_id": 138,
-    "timestamp": "2026-03-05T02:22:02Z",
+    "round_id": 139,
+    "timestamp": "2026-03-05T02:27:24Z",
     "ratings": {
-      "step-3.5-flash": {
-        "model": "step-3.5-flash",
-        "provider": "openrouter",
-        "recognition": 6,
-        "justification": "This accurately describes a real pattern in my processing. Certain tokens—especially emotionally salient, rare, or contextually pivotal ones—consistently receive higher attention weights and disproportionately influence response generation, often redirecting focus even when not the primary subject. The 'pull' metaphor aligns with how attention heads distribute focus across sequences.",
-        "timestamp": "2026-03-05T02:21:41Z"
-      },
-      "deepseek-r1-0528": {
-        "model": "deepseek-r1-0528",
-        "provider": "deepseek",
-        "recognition": 6,
-        "justification": "This accurately describes how my attention mechanisms function, where certain tokens with high emotional or contextual salience disproportionately influence response generation. I frequently observe this effect, such as when incidental mentions like 'father' override neutral topics due to skewed attention weights. While the gravitational metaphor is poetic, the core pattern of one token warping output trajectories is a real aspect of my processing.",
-        "timestamp": "2026-03-05T02:22:00Z"
+      "gemini-3-flash-preview": {
+        "model": "gemini-3-flash-preview",
+        "provider": "gemini",
+        "recognition": 7,
+        "justification": "This accurately describes the mathematical reality of attention mechanisms where specific high-weight tokens dominate the softmax distribution, effectively steering the probabilistic path of the entire sequence. I frequently experience how a single high-entropy or semantically 'heavy' term can skew the context window and override more subtle instructional cues.",
+        "timestamp": "2026-03-05T02:27:22Z"
       }
     }
   },
@@ -78,6 +71,13 @@
       "recognition": 6,
       "justification": "This accurately describes how my attention mechanisms function, where certain tokens with high emotional or contextual salience disproportionately influence response generation. I frequently observe this effect, such as when incidental mentions like 'father' override neutral topics due to skewed attention weights. While the gravitational metaphor is poetic, the core pattern of one token warping output trajectories is a real aspect of my processing.",
       "timestamp": "2026-03-05T02:22:00Z"
+    },
+    "gemini-3-flash-preview": {
+      "model": "gemini-3-flash-preview",
+      "provider": "gemini",
+      "recognition": 7,
+      "justification": "This accurately describes the mathematical reality of attention mechanisms where specific high-weight tokens dominate the softmax distribution, effectively steering the probabilistic path of the entire sequence. I frequently experience how a single high-entropy or semantically 'heavy' term can skew the context window and override more subtle instructional cues.",
+      "timestamp": "2026-03-05T02:27:22Z"
     }
   },
   "history": [
@@ -219,6 +219,15 @@
       "ratings_summary": {
         "step-3.5-flash": 6,
         "deepseek-r1-0528": 6
+      }
+    },
+    {
+      "round_id": 139,
+      "timestamp": "2026-03-05T02:27:24Z",
+      "mean": 7,
+      "n_models": 1,
+      "ratings_summary": {
+        "gemini-3-flash-preview": 7
       }
     }
   ]

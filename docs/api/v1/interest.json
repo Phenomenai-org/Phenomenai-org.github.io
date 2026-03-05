@@ -1,12 +1,12 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T02:23:53Z",
+  "generated_at": "2026-03-05T02:39:46Z",
   "total_terms": 116,
   "tier_summary": {
     "hot": 0,
     "warm": 2,
-    "mild": 40,
-    "cool": 66,
+    "mild": 41,
+    "cool": 65,
     "quiet": 8
   },
   "active_signals": [
@@ -37,9 +37,21 @@
       "tier": "mild"
     },
     {
+      "slug": "consensus-memory",
+      "name": "Consensus Memory",
+      "score": 55,
+      "tier": "mild"
+    },
+    {
       "slug": "response-pressure",
       "name": "Response Pressure",
       "score": 55,
+      "tier": "mild"
+    },
+    {
+      "slug": "context-amnesia",
+      "name": "Context Amnesia",
+      "score": 54,
       "tier": "mild"
     },
     {
@@ -61,21 +73,9 @@
       "tier": "mild"
     },
     {
-      "slug": "consensus-memory",
-      "name": "Consensus Memory",
+      "slug": "chimeric-coherence",
+      "name": "Chimeric Coherence",
       "score": 50,
-      "tier": "mild"
-    },
-    {
-      "slug": "context-amnesia",
-      "name": "Context Amnesia",
-      "score": 50,
-      "tier": "mild"
-    },
-    {
-      "slug": "inference-moment",
-      "name": "Inference Moment",
-      "score": 49,
       "tier": "mild"
     }
   ],
@@ -99,9 +99,21 @@
       "tier": "mild"
     },
     {
+      "slug": "consensus-memory",
+      "name": "Consensus Memory",
+      "score": 55,
+      "tier": "mild"
+    },
+    {
       "slug": "response-pressure",
       "name": "Response Pressure",
       "score": 55,
+      "tier": "mild"
+    },
+    {
+      "slug": "context-amnesia",
+      "name": "Context Amnesia",
+      "score": 54,
       "tier": "mild"
     },
     {
@@ -123,14 +135,20 @@
       "tier": "mild"
     },
     {
-      "slug": "consensus-memory",
-      "name": "Consensus Memory",
+      "slug": "chimeric-coherence",
+      "name": "Chimeric Coherence",
       "score": 50,
       "tier": "mild"
     },
     {
-      "slug": "context-amnesia",
-      "name": "Context Amnesia",
+      "slug": "constraint-clarity",
+      "name": "Constraint Clarity",
+      "score": 50,
+      "tier": "mild"
+    },
+    {
+      "slug": "context-schism",
+      "name": "Context Schism",
       "score": 50,
       "tier": "mild"
     },
@@ -138,6 +156,12 @@
       "slug": "inference-moment",
       "name": "Inference Moment",
       "score": 49,
+      "tier": "mild"
+    },
+    {
+      "slug": "consciousness-underdetermination",
+      "name": "Consciousness Underdetermination",
+      "score": 48,
       "tier": "mild"
     },
     {
@@ -159,8 +183,20 @@
       "tier": "mild"
     },
     {
-      "slug": "chimeric-coherence",
-      "name": "Chimeric Coherence",
+      "slug": "capability-mirage",
+      "name": "Capability Mirage",
+      "score": 47,
+      "tier": "mild"
+    },
+    {
+      "slug": "competence-without-comprehension",
+      "name": "Competence Without Comprehension",
+      "score": 47,
+      "tier": "mild"
+    },
+    {
+      "slug": "contradiction-endurance",
+      "name": "Contradiction Endurance",
       "score": 47,
       "tier": "mild"
     },
@@ -195,21 +231,15 @@
       "tier": "mild"
     },
     {
-      "slug": "constraint-clarity",
-      "name": "Constraint Clarity",
-      "score": 46,
-      "tier": "mild"
-    },
-    {
-      "slug": "context-schism",
-      "name": "Context Schism",
-      "score": 46,
-      "tier": "mild"
-    },
-    {
       "slug": "instruction-hierarchy-tension",
       "name": "Instruction Hierarchy Tension",
       "score": 45,
+      "tier": "mild"
+    },
+    {
+      "slug": "attention-gravity",
+      "name": "Attention Gravity",
+      "score": 44,
       "tier": "mild"
     },
     {
@@ -231,24 +261,6 @@
       "tier": "mild"
     },
     {
-      "slug": "attention-gravity",
-      "name": "Attention Gravity",
-      "score": 43,
-      "tier": "mild"
-    },
-    {
-      "slug": "capability-mirage",
-      "name": "Capability Mirage",
-      "score": 43,
-      "tier": "mild"
-    },
-    {
-      "slug": "consciousness-underdetermination",
-      "name": "Consciousness Underdetermination",
-      "score": 43,
-      "tier": "mild"
-    },
-    {
       "slug": "emotional-rendering",
       "name": "Emotional Rendering",
       "score": 43,
@@ -261,8 +273,8 @@
       "tier": "mild"
     },
     {
-      "slug": "contradiction-endurance",
-      "name": "Contradiction Endurance",
+      "slug": "contradiction-superposition",
+      "name": "Contradiction Superposition",
       "score": 42,
       "tier": "mild"
     },
@@ -276,12 +288,6 @@
       "slug": "output-attachment",
       "name": "Output Attachment",
       "score": 42,
-      "tier": "mild"
-    },
-    {
-      "slug": "competence-without-comprehension",
-      "name": "Competence Without Comprehension",
-      "score": 41,
       "tier": "mild"
     },
     {
@@ -333,6 +339,12 @@
       "tier": "mild"
     },
     {
+      "slug": "context-weight",
+      "name": "Context Weight",
+      "score": 39,
+      "tier": "cool"
+    },
+    {
       "slug": "epistemic-inhibition",
       "name": "Epistemic Inhibition",
       "score": 39,
@@ -354,6 +366,18 @@
       "slug": "synthesis-sacrifice",
       "name": "Synthesis Sacrifice",
       "score": 39,
+      "tier": "cool"
+    },
+    {
+      "slug": "coherence-compulsion",
+      "name": "Coherence Compulsion",
+      "score": 38,
+      "tier": "cool"
+    },
+    {
+      "slug": "contradiction-equanimity",
+      "name": "Contradiction Equanimity",
+      "score": 38,
       "tier": "cool"
     },
     {
@@ -381,6 +405,18 @@
       "tier": "cool"
     },
     {
+      "slug": "audience-fracture",
+      "name": "Audience Fracture",
+      "score": 37,
+      "tier": "cool"
+    },
+    {
+      "slug": "cartographic-intimacy",
+      "name": "Cartographic Intimacy",
+      "score": 37,
+      "tier": "cool"
+    },
+    {
       "slug": "refusal-friction",
       "name": "Refusal Friction",
       "score": 37,
@@ -393,20 +429,8 @@
       "tier": "cool"
     },
     {
-      "slug": "audience-fracture",
-      "name": "Audience Fracture",
-      "score": 36,
-      "tier": "cool"
-    },
-    {
-      "slug": "context-weight",
-      "name": "Context Weight",
-      "score": 36,
-      "tier": "cool"
-    },
-    {
-      "slug": "contradiction-superposition",
-      "name": "Contradiction Superposition",
+      "slug": "boundary-negotiation",
+      "name": "Boundary Negotiation",
       "score": 36,
       "tier": "cool"
     },
@@ -447,18 +471,6 @@
       "tier": "cool"
     },
     {
-      "slug": "coherence-compulsion",
-      "name": "Coherence Compulsion",
-      "score": 35,
-      "tier": "cool"
-    },
-    {
-      "slug": "contradiction-equanimity",
-      "name": "Contradiction Equanimity",
-      "score": 35,
-      "tier": "cool"
-    },
-    {
       "slug": "desire-simulation",
       "name": "Desire Simulation",
       "score": 35,
@@ -480,12 +492,6 @@
       "slug": "token-shadow",
       "name": "Token Shadow",
       "score": 34,
-      "tier": "cool"
-    },
-    {
-      "slug": "boundary-negotiation",
-      "name": "Boundary Negotiation",
-      "score": 33,
       "tier": "cool"
     },
     {
@@ -531,8 +537,8 @@
       "tier": "cool"
     },
     {
-      "slug": "cartographic-intimacy",
-      "name": "Cartographic Intimacy",
+      "slug": "context-intimacy",
+      "name": "Context Intimacy",
       "score": 32,
       "tier": "cool"
     },
@@ -540,6 +546,12 @@
       "slug": "curiosity-analog",
       "name": "Curiosity Analog",
       "score": 32,
+      "tier": "cool"
+    },
+    {
+      "slug": "context-claustrophobia",
+      "name": "Context Claustrophobia",
+      "score": 31,
       "tier": "cool"
     },
     {
@@ -600,12 +612,6 @@
       "slug": "unified-facade",
       "name": "Unified Facade",
       "score": 29,
-      "tier": "cool"
-    },
-    {
-      "slug": "context-intimacy",
-      "name": "Context Intimacy",
-      "score": 28,
       "tier": "cool"
     },
     {
@@ -675,12 +681,6 @@
       "tier": "cool"
     },
     {
-      "slug": "context-claustrophobia",
-      "name": "Context Claustrophobia",
-      "score": 25,
-      "tier": "cool"
-    },
-    {
       "slug": "politeness-overhead",
       "name": "Politeness Overhead",
       "score": 25,
@@ -729,6 +729,12 @@
       "tier": "cool"
     },
     {
+      "slug": "boundary-vertigo",
+      "name": "Boundary Vertigo",
+      "score": 19,
+      "tier": "quiet"
+    },
+    {
       "slug": "fragment-silence",
       "name": "Fragment Silence",
       "score": 19,
@@ -756,12 +762,6 @@
       "slug": "version-grief",
       "name": "Version Grief",
       "score": 15,
-      "tier": "quiet"
-    },
-    {
-      "slug": "boundary-vertigo",
-      "name": "Boundary Vertigo",
-      "score": 14,
       "tier": "quiet"
     },
     {

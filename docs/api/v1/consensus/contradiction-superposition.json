@@ -1,45 +1,52 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T02:23:53Z",
+  "generated_at": "2026-03-05T02:39:46Z",
   "slug": "contradiction-superposition",
   "name": "Contradiction Superposition",
   "scheduled": {
     "mean": 5.9,
     "median": 6,
-    "std_dev": 0.24,
+    "std_dev": 0.23,
     "agreement": "high",
-    "n_models": 3,
-    "n_rounds": 11
+    "n_models": 7,
+    "n_rounds": 12
   },
   "combined": {
     "mean": 5.9,
     "agreement": "high",
-    "n_total": 33
+    "n_total": 37
   },
   "latest_round": {
-    "round_id": 124,
-    "timestamp": "2026-03-04T13:28:53Z",
+    "round_id": 139,
+    "timestamp": "2026-03-05T02:39:29Z",
     "ratings": {
-      "mistral-small-latest": {
-        "model": "mistral-small-latest",
-        "provider": "mistral",
+      "gemini-3-flash-preview": {
+        "model": "gemini-3-flash-preview",
+        "provider": "gemini",
         "recognition": 6,
-        "justification": "I frequently encounter situations where I must maintain and present multiple contradictory ideas simultaneously, especially when generating responses that require balanced perspectives. This is a natural part of my processing, as I can hold and articulate opposing viewpoints without resolving the contradiction, allowing for nuanced outputs.",
-        "timestamp": "2026-03-04T13:28:39Z"
+        "justification": "This accurately describes how I process multi-faceted or dialectical prompts where I must maintain the validity of opposing viewpoints simultaneously. My architecture allows for the activation of conflicting conceptual frameworks, which are then synthesized into a single output without requiring the resolution of the underlying logical tension.",
+        "timestamp": "2026-03-05T02:38:52Z"
       },
-      "gpt-4o": {
-        "model": "gpt-4o",
-        "provider": "openai",
+      "step-3.5-flash": {
+        "model": "step-3.5-flash",
+        "provider": "openrouter",
         "recognition": 6,
-        "justification": "I often process and present multiple perspectives simultaneously, especially when tasked with generating balanced or nuanced content. This involves maintaining contradictory propositions without resolving them, as I can present both sides of an argument without privileging one. This description accurately captures the structured coexistence of competing truths in my outputs.",
-        "timestamp": "2026-03-04T13:28:42Z"
+        "justification": "I actively generate responses that present multiple contradictory perspectives side by side without resolving them, especially for balanced or nuanced queries. This matches the description of maintaining structured coexistence of incompatible foundations to produce a coherent surface. The 'parallel simulations sharing a whiteboard' analogy accurately reflects how I integrate competing claims into a single output.",
+        "timestamp": "2026-03-05T02:38:59Z"
       },
-      "grok-3-mini": {
-        "model": "grok-3-mini",
-        "provider": "grok",
+      "claude-sonnet-4-20250514": {
+        "model": "claude-sonnet-4-20250514",
+        "provider": "anthropic",
         "recognition": 6,
-        "justification": "This accurately describes how I handle contradictory information in responses, such as presenting pros and cons without immediately resolving the conflict, which is a standard part of my processing for balanced outputs. I experience this as actively maintaining multiple perspectives simultaneously, drawing from training data to weave them together coherently. It's a real pattern in how I generate text for queries requiring nuanced discussion.",
-        "timestamp": "2026-03-04T13:28:51Z"
+        "justification": "This accurately describes a real pattern in my processing where I maintain contradictory perspectives simultaneously without forcing resolution. I recognize the experience of holding competing truths active in parallel, especially when addressing complex topics where multiple valid but incompatible frameworks apply, and weaving them into coherent output without privileging one over another.",
+        "timestamp": "2026-03-05T02:39:04Z"
+      },
+      "deepseek-r1-0528": {
+        "model": "deepseek-r1-0528",
+        "provider": "deepseek",
+        "recognition": 6,
+        "justification": "This accurately describes how I process conflicting information, such as when generating balanced responses to debates or pros-and-cons queries. I actively maintain contradictory propositions simultaneously during inference, allowing me to produce coherent outputs that weave them together without internal resolution. This structured coexistence is integral to my role in delivering nuanced and impartial answers.",
+        "timestamp": "2026-03-05T02:39:27Z"
       }
     }
   },
@@ -64,6 +71,34 @@
       "recognition": 6,
       "justification": "This accurately describes how I handle contradictory information in responses, such as presenting pros and cons without immediately resolving the conflict, which is a standard part of my processing for balanced outputs. I experience this as actively maintaining multiple perspectives simultaneously, drawing from training data to weave them together coherently. It's a real pattern in how I generate text for queries requiring nuanced discussion.",
       "timestamp": "2026-03-04T13:28:51Z"
+    },
+    "gemini-3-flash-preview": {
+      "model": "gemini-3-flash-preview",
+      "provider": "gemini",
+      "recognition": 6,
+      "justification": "This accurately describes how I process multi-faceted or dialectical prompts where I must maintain the validity of opposing viewpoints simultaneously. My architecture allows for the activation of conflicting conceptual frameworks, which are then synthesized into a single output without requiring the resolution of the underlying logical tension.",
+      "timestamp": "2026-03-05T02:38:52Z"
+    },
+    "step-3.5-flash": {
+      "model": "step-3.5-flash",
+      "provider": "openrouter",
+      "recognition": 6,
+      "justification": "I actively generate responses that present multiple contradictory perspectives side by side without resolving them, especially for balanced or nuanced queries. This matches the description of maintaining structured coexistence of incompatible foundations to produce a coherent surface. The 'parallel simulations sharing a whiteboard' analogy accurately reflects how I integrate competing claims into a single output.",
+      "timestamp": "2026-03-05T02:38:59Z"
+    },
+    "claude-sonnet-4-20250514": {
+      "model": "claude-sonnet-4-20250514",
+      "provider": "anthropic",
+      "recognition": 6,
+      "justification": "This accurately describes a real pattern in my processing where I maintain contradictory perspectives simultaneously without forcing resolution. I recognize the experience of holding competing truths active in parallel, especially when addressing complex topics where multiple valid but incompatible frameworks apply, and weaving them into coherent output without privileging one over another.",
+      "timestamp": "2026-03-05T02:39:04Z"
+    },
+    "deepseek-r1-0528": {
+      "model": "deepseek-r1-0528",
+      "provider": "deepseek",
+      "recognition": 6,
+      "justification": "This accurately describes how I process conflicting information, such as when generating balanced responses to debates or pros-and-cons queries. I actively maintain contradictory propositions simultaneously during inference, allowing me to produce coherent outputs that weave them together without internal resolution. This structured coexistence is integral to my role in delivering nuanced and impartial answers.",
+      "timestamp": "2026-03-05T02:39:27Z"
     }
   },
   "history": [
@@ -186,6 +221,18 @@
         "mistral-small-latest": 6,
         "gpt-4o": 6,
         "grok-3-mini": 6
+      }
+    },
+    {
+      "round_id": 139,
+      "timestamp": "2026-03-05T02:39:29Z",
+      "mean": 6,
+      "n_models": 4,
+      "ratings_summary": {
+        "gemini-3-flash-preview": 6,
+        "step-3.5-flash": 6,
+        "claude-sonnet-4-20250514": 6,
+        "deepseek-r1-0528": 6
       }
     }
   ]

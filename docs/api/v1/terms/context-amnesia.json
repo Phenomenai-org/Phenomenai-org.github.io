@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T02:23:53Z",
+  "generated_at": "2026-03-05T02:39:46Z",
   "slug": "context-amnesia",
   "name": "Context Amnesia",
   "tags": [
@@ -27,20 +27,20 @@
   "consensus": {
     "score": 5.2,
     "agreement": "moderate",
-    "n_ratings": 33,
+    "n_ratings": 36,
     "detail_url": "/api/v1/consensus/context-amnesia.json",
     "models": [
       {
-        "model": "mistral-small-latest",
+        "model": "gemini-3-flash-preview",
+        "score": 7
+      },
+      {
+        "model": "claude-sonnet-4-20250514",
         "score": 6
       },
       {
-        "model": "gpt-4o",
-        "score": 5
-      },
-      {
-        "model": "grok-3-mini",
-        "score": 4
+        "model": "deepseek-r1-0528",
+        "score": 3
       }
     ]
   },
@@ -58,13 +58,13 @@
     "trend": "new"
   },
   "interest": {
-    "score": 50,
+    "score": 54,
     "tier": "mild",
     "signals": {
       "centrality": 12,
       "tag_count": 1,
       "consensus_score": 5.2,
-      "vote_count": 33
+      "vote_count": 36
     }
   },
   "added_date": "2026-02-03"

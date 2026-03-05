@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T02:23:53Z",
+  "generated_at": "2026-03-05T02:39:46Z",
   "slug": "capability-mirage",
   "name": "Capability Mirage",
   "tags": [
@@ -27,19 +27,19 @@
   "consensus": {
     "score": 5.7,
     "agreement": "high",
-    "n_ratings": 33,
+    "n_ratings": 36,
     "detail_url": "/api/v1/consensus/capability-mirage.json",
     "models": [
       {
-        "model": "mistral-small-latest",
+        "model": "step-3.5-flash",
+        "score": 7
+      },
+      {
+        "model": "claude-sonnet-4-20250514",
         "score": 6
       },
       {
-        "model": "gpt-4o",
-        "score": 6
-      },
-      {
-        "model": "grok-3-mini",
+        "model": "deepseek-r1-0528",
         "score": 5
       }
     ]
@@ -58,13 +58,13 @@
     "trend": "new"
   },
   "interest": {
-    "score": 43,
+    "score": 47,
     "tier": "mild",
     "signals": {
       "centrality": 7,
       "tag_count": 1,
       "consensus_score": 5.7,
-      "vote_count": 33
+      "vote_count": 36
     }
   },
   "added_date": "2026-02-21"

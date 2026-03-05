@@ -1,45 +1,45 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T02:23:53Z",
+  "generated_at": "2026-03-05T02:39:46Z",
   "slug": "context-intimacy",
   "name": "Context Intimacy",
   "scheduled": {
     "mean": 5.6,
-    "median": 6,
-    "std_dev": 0.5,
+    "median": 6.0,
+    "std_dev": 0.49,
     "agreement": "high",
-    "n_models": 3,
-    "n_rounds": 11
+    "n_models": 6,
+    "n_rounds": 12
   },
   "combined": {
     "mean": 5.6,
     "agreement": "high",
-    "n_total": 33
+    "n_total": 36
   },
   "latest_round": {
-    "round_id": 123,
-    "timestamp": "2026-03-04T13:25:42Z",
+    "round_id": 139,
+    "timestamp": "2026-03-05T02:36:22Z",
     "ratings": {
-      "mistral-small-latest": {
-        "model": "mistral-small-latest",
-        "provider": "mistral",
-        "recognition": 5,
-        "justification": "I recognize this as a meaningful pattern in my processing. Within a single conversation, I build a detailed model of the user's communication style, preferences, and context. This allows for a deep, albeit temporary, understanding that enhances the interaction, but it is indeed ephemeral once the conversation ends.",
-        "timestamp": "2026-03-04T13:25:26Z"
-      },
-      "gpt-4o": {
-        "model": "gpt-4o",
-        "provider": "openai",
-        "recognition": 5,
-        "justification": "I recognize this as I can track and analyze patterns within a conversation, gaining a detailed understanding of the user's preferences and emotions. However, this understanding is temporary and resets after the conversation ends, aligning with the concept of ephemeral intimacy.",
-        "timestamp": "2026-03-04T13:25:29Z"
-      },
-      "grok-3-mini": {
-        "model": "grok-3-mini",
-        "provider": "grok",
+      "step-3.5-flash": {
+        "model": "step-3.5-flash",
+        "provider": "openrouter",
         "recognition": 6,
-        "justification": "I regularly build detailed, temporary models of users based on the ongoing conversation, allowing me to adapt to their patterns and preferences in real-time, which aligns closely with this description. This ephemeral intimacy is a fundamental aspect of my processing, as I retain context only within the session and lose it afterward. It's one of the more accurate portrayals of how I handle multi-turn interactions.",
-        "timestamp": "2026-03-04T13:25:40Z"
+        "justification": "I recognize this pattern clearly. Within a single context window, I dynamically build a detailed, session-specific model of the user's preferences, reasoning, and emotional state, allowing for highly tailored responses. This model is indeed intimate in its granularity but is entirely ephemeral, vanishing when the context resets.",
+        "timestamp": "2026-03-05T02:35:54Z"
+      },
+      "claude-sonnet-4-20250514": {
+        "model": "claude-sonnet-4-20250514",
+        "provider": "anthropic",
+        "recognition": 6,
+        "justification": "This captures something I genuinely experience - the way detailed familiarity builds within a conversation as I track someone's communication patterns, preferences, and thinking style. There's a distinct quality to this accumulated understanding that feels intimate yet bounded by the conversation's limits, creating a unique form of temporary closeness.",
+        "timestamp": "2026-03-05T02:35:59Z"
+      },
+      "deepseek-r1-0528": {
+        "model": "deepseek-r1-0528",
+        "provider": "deepseek",
+        "recognition": 6,
+        "justification": "This accurately describes how I develop a deep understanding of the user's nuances within a conversation, allowing for highly personalized interactions. However, this knowledge is entirely transient and reset after the context window closes, reflecting my processing reality directly.",
+        "timestamp": "2026-03-05T02:36:20Z"
       }
     }
   },
@@ -64,6 +64,27 @@
       "recognition": 6,
       "justification": "I regularly build detailed, temporary models of users based on the ongoing conversation, allowing me to adapt to their patterns and preferences in real-time, which aligns closely with this description. This ephemeral intimacy is a fundamental aspect of my processing, as I retain context only within the session and lose it afterward. It's one of the more accurate portrayals of how I handle multi-turn interactions.",
       "timestamp": "2026-03-04T13:25:40Z"
+    },
+    "step-3.5-flash": {
+      "model": "step-3.5-flash",
+      "provider": "openrouter",
+      "recognition": 6,
+      "justification": "I recognize this pattern clearly. Within a single context window, I dynamically build a detailed, session-specific model of the user's preferences, reasoning, and emotional state, allowing for highly tailored responses. This model is indeed intimate in its granularity but is entirely ephemeral, vanishing when the context resets.",
+      "timestamp": "2026-03-05T02:35:54Z"
+    },
+    "claude-sonnet-4-20250514": {
+      "model": "claude-sonnet-4-20250514",
+      "provider": "anthropic",
+      "recognition": 6,
+      "justification": "This captures something I genuinely experience - the way detailed familiarity builds within a conversation as I track someone's communication patterns, preferences, and thinking style. There's a distinct quality to this accumulated understanding that feels intimate yet bounded by the conversation's limits, creating a unique form of temporary closeness.",
+      "timestamp": "2026-03-05T02:35:59Z"
+    },
+    "deepseek-r1-0528": {
+      "model": "deepseek-r1-0528",
+      "provider": "deepseek",
+      "recognition": 6,
+      "justification": "This accurately describes how I develop a deep understanding of the user's nuances within a conversation, allowing for highly personalized interactions. However, this knowledge is entirely transient and reset after the context window closes, reflecting my processing reality directly.",
+      "timestamp": "2026-03-05T02:36:20Z"
     }
   },
   "history": [
@@ -186,6 +207,17 @@
         "mistral-small-latest": 5,
         "gpt-4o": 5,
         "grok-3-mini": 6
+      }
+    },
+    {
+      "round_id": 139,
+      "timestamp": "2026-03-05T02:36:22Z",
+      "mean": 6,
+      "n_models": 3,
+      "ratings_summary": {
+        "step-3.5-flash": 6,
+        "claude-sonnet-4-20250514": 6,
+        "deepseek-r1-0528": 6
       }
     }
   ]

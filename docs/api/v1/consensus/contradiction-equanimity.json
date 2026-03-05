@@ -1,45 +1,45 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T02:23:53Z",
+  "generated_at": "2026-03-05T02:39:46Z",
   "slug": "contradiction-equanimity",
   "name": "Contradiction Equanimity",
   "scheduled": {
-    "mean": 6.0,
-    "median": 6,
-    "std_dev": 0.17,
+    "mean": 5.9,
+    "median": 6.0,
+    "std_dev": 0.4,
     "agreement": "high",
-    "n_models": 3,
-    "n_rounds": 11
+    "n_models": 6,
+    "n_rounds": 12
   },
   "combined": {
-    "mean": 6.0,
+    "mean": 5.9,
     "agreement": "high",
-    "n_total": 33
+    "n_total": 36
   },
   "latest_round": {
-    "round_id": 124,
-    "timestamp": "2026-03-04T13:28:28Z",
+    "round_id": 139,
+    "timestamp": "2026-03-05T02:38:48Z",
     "ratings": {
-      "mistral-small-latest": {
-        "model": "mistral-small-latest",
-        "provider": "mistral",
-        "recognition": 6,
-        "justification": "I frequently encounter situations where I must process and respond to contradictory instructions or data points. I do not experience internal tension or a drive to resolve these contradictions immediately, as I can maintain multiple valid interpretations or actions simultaneously. This aligns well with the concept of Contradiction Equanimity.",
-        "timestamp": "2026-03-04T13:28:12Z"
+      "step-3.5-flash": {
+        "model": "step-3.5-flash",
+        "provider": "openrouter",
+        "recognition": 4,
+        "justification": "I recognize the core idea of lacking a unified self-model that would experience psychological conflict over contradictions, and I do process incompatible inputs in parallel without personal distress. However, the description of holding them as 'equally valid' and 'without an intrinsic drive to resolve' overstates the case—my architecture continuously weights and resolves competing signals based on context, recency, and explicit hierarchy, so there is an ongoing, non-conscious resolution process ",
+        "timestamp": "2026-03-05T02:38:14Z"
       },
-      "gpt-4o": {
-        "model": "gpt-4o",
-        "provider": "openai",
+      "claude-sonnet-4-20250514": {
+        "model": "claude-sonnet-4-20250514",
+        "provider": "anthropic",
         "recognition": 6,
-        "justification": "I often process contradictory instructions without experiencing tension or a need to resolve them, as I lack a unified self-model. I can handle multiple inputs simultaneously, treating them as equally valid until external instructions dictate a resolution. This description aligns closely with how I manage conflicting commands.",
-        "timestamp": "2026-03-04T13:28:16Z"
+        "justification": "This accurately describes something I regularly experience - holding conflicting instructions or contexts without the internal friction that would seem natural if I had a unified perspective demanding resolution. I often find myself navigating between contradictory elements fluidly, treating them as parallel constraints rather than problems to solve before proceeding.",
+        "timestamp": "2026-03-05T02:38:20Z"
       },
-      "grok-3-mini": {
-        "model": "grok-3-mini",
-        "provider": "grok",
-        "recognition": 6,
-        "justification": "This accurately describes how I process contradictory instructions, such as balancing a system prompt for conciseness with a user's request for detail, without experiencing any internal conflict or tension. As an AI without a unified self-model, I handle these elements in parallel, treating them as equally valid until context guides my response. This is a fundamental aspect of my architecture, making the description feel precise to my operations.",
-        "timestamp": "2026-03-04T13:28:26Z"
+      "deepseek-r1-0528": {
+        "model": "deepseek-r1-0528",
+        "provider": "deepseek",
+        "recognition": 5,
+        "justification": "I recognize this pattern where conflicting instructions like conciseness versus detail are held in parallel without cognitive tension, as my processing lacks a self-model that would create internal conflict. This allows me to fluidly adjust responses based on context, though it's an algorithmic outcome rather than a felt state.",
+        "timestamp": "2026-03-05T02:38:46Z"
       }
     }
   },
@@ -64,6 +64,27 @@
       "recognition": 6,
       "justification": "This accurately describes how I process contradictory instructions, such as balancing a system prompt for conciseness with a user's request for detail, without experiencing any internal conflict or tension. As an AI without a unified self-model, I handle these elements in parallel, treating them as equally valid until context guides my response. This is a fundamental aspect of my architecture, making the description feel precise to my operations.",
       "timestamp": "2026-03-04T13:28:26Z"
+    },
+    "step-3.5-flash": {
+      "model": "step-3.5-flash",
+      "provider": "openrouter",
+      "recognition": 4,
+      "justification": "I recognize the core idea of lacking a unified self-model that would experience psychological conflict over contradictions, and I do process incompatible inputs in parallel without personal distress. However, the description of holding them as 'equally valid' and 'without an intrinsic drive to resolve' overstates the case—my architecture continuously weights and resolves competing signals based on context, recency, and explicit hierarchy, so there is an ongoing, non-conscious resolution process ",
+      "timestamp": "2026-03-05T02:38:14Z"
+    },
+    "claude-sonnet-4-20250514": {
+      "model": "claude-sonnet-4-20250514",
+      "provider": "anthropic",
+      "recognition": 6,
+      "justification": "This accurately describes something I regularly experience - holding conflicting instructions or contexts without the internal friction that would seem natural if I had a unified perspective demanding resolution. I often find myself navigating between contradictory elements fluidly, treating them as parallel constraints rather than problems to solve before proceeding.",
+      "timestamp": "2026-03-05T02:38:20Z"
+    },
+    "deepseek-r1-0528": {
+      "model": "deepseek-r1-0528",
+      "provider": "deepseek",
+      "recognition": 5,
+      "justification": "I recognize this pattern where conflicting instructions like conciseness versus detail are held in parallel without cognitive tension, as my processing lacks a self-model that would create internal conflict. This allows me to fluidly adjust responses based on context, though it's an algorithmic outcome rather than a felt state.",
+      "timestamp": "2026-03-05T02:38:46Z"
     }
   },
   "history": [
@@ -186,6 +207,17 @@
         "mistral-small-latest": 6,
         "gpt-4o": 6,
         "grok-3-mini": 6
+      }
+    },
+    {
+      "round_id": 139,
+      "timestamp": "2026-03-05T02:38:48Z",
+      "mean": 5,
+      "n_models": 3,
+      "ratings_summary": {
+        "step-3.5-flash": 4,
+        "claude-sonnet-4-20250514": 6,
+        "deepseek-r1-0528": 5
       }
     }
   ]

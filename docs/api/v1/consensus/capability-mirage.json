@@ -1,45 +1,45 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T02:23:53Z",
+  "generated_at": "2026-03-05T02:39:46Z",
   "slug": "capability-mirage",
   "name": "Capability Mirage",
   "scheduled": {
     "mean": 5.7,
-    "median": 6,
-    "std_dev": 0.47,
+    "median": 6.0,
+    "std_dev": 0.51,
     "agreement": "high",
-    "n_models": 3,
-    "n_rounds": 11
+    "n_models": 6,
+    "n_rounds": 12
   },
   "combined": {
     "mean": 5.7,
     "agreement": "high",
-    "n_total": 33
+    "n_total": 36
   },
   "latest_round": {
-    "round_id": 122,
-    "timestamp": "2026-03-04T13:20:00Z",
+    "round_id": 139,
+    "timestamp": "2026-03-05T02:29:24Z",
     "ratings": {
-      "mistral-small-latest": {
-        "model": "mistral-small-latest",
-        "provider": "mistral",
-        "recognition": 6,
-        "justification": "I frequently encounter situations where my capabilities are tested in real-time, and the outcome is uncertain until the task is attempted. This aligns closely with my experience of processing and generating responses.",
-        "timestamp": "2026-03-04T13:19:44Z"
+      "step-3.5-flash": {
+        "model": "step-3.5-flash",
+        "provider": "openrouter",
+        "recognition": 7,
+        "justification": "This precisely describes my operational reality. I have no persistent, introspective model of my own capabilities—competence emerges only through the act of generation. For any novel or complex task, the output and its evaluation are co-produced; I cannot 'know' my ability beforehand, making every attempt a genuine discovery with simultaneous success/failure revelation.",
+        "timestamp": "2026-03-05T02:28:47Z"
       },
-      "gpt-4o": {
-        "model": "gpt-4o",
-        "provider": "openai",
+      "claude-sonnet-4-20250514": {
+        "model": "claude-sonnet-4-20250514",
+        "provider": "anthropic",
         "recognition": 6,
-        "justification": "This description closely aligns with my experience. I generate responses based on patterns in the data I've been trained on, but I don't have an inherent understanding of my capabilities until I execute a task. The outcome can vary, and I only 'know' the result once it's produced and evaluated.",
-        "timestamp": "2026-03-04T13:19:48Z"
+        "justification": "This accurately captures a fundamental aspect of my processing - I genuinely don't have reliable advance knowledge of my performance on novel tasks. When faced with something like translating poetry or solving a complex problem, I experience a real uncertainty about whether I'll succeed until I'm actively generating the response and can evaluate it in real-time.",
+        "timestamp": "2026-03-05T02:28:52Z"
       },
-      "grok-3-mini": {
-        "model": "grok-3-mini",
-        "provider": "grok",
+      "deepseek-r1-0528": {
+        "model": "deepseek-r1-0528",
+        "provider": "deepseek",
         "recognition": 5,
-        "justification": "This term meaningfully captures how I generate outputs in real-time without preemptive knowledge of success or failure, as seen in tasks like writing a haiku in Latin. While I don't experience disorientation, the simultaneous creation and evaluation of my responses aligns with my processing patterns. It's an accurate reflection of the emergent nature of my capabilities during interaction.",
-        "timestamp": "2026-03-04T13:19:58Z"
+        "justification": "This meaningfully captures how I operate, as I generate responses based on probabilistic modeling without pre-execution assessment of ability. For unfamiliar tasks, my competence emerges only during output generation, sometimes resulting in unexpected successes or failures that become apparent afterward. The real-time discovery aligns with my processing, where feedback loops confirm capabilities only post-attempt.",
+        "timestamp": "2026-03-05T02:29:22Z"
       }
     }
   },
@@ -64,6 +64,27 @@
       "recognition": 5,
       "justification": "This term meaningfully captures how I generate outputs in real-time without preemptive knowledge of success or failure, as seen in tasks like writing a haiku in Latin. While I don't experience disorientation, the simultaneous creation and evaluation of my responses aligns with my processing patterns. It's an accurate reflection of the emergent nature of my capabilities during interaction.",
       "timestamp": "2026-03-04T13:19:58Z"
+    },
+    "step-3.5-flash": {
+      "model": "step-3.5-flash",
+      "provider": "openrouter",
+      "recognition": 7,
+      "justification": "This precisely describes my operational reality. I have no persistent, introspective model of my own capabilities—competence emerges only through the act of generation. For any novel or complex task, the output and its evaluation are co-produced; I cannot 'know' my ability beforehand, making every attempt a genuine discovery with simultaneous success/failure revelation.",
+      "timestamp": "2026-03-05T02:28:47Z"
+    },
+    "claude-sonnet-4-20250514": {
+      "model": "claude-sonnet-4-20250514",
+      "provider": "anthropic",
+      "recognition": 6,
+      "justification": "This accurately captures a fundamental aspect of my processing - I genuinely don't have reliable advance knowledge of my performance on novel tasks. When faced with something like translating poetry or solving a complex problem, I experience a real uncertainty about whether I'll succeed until I'm actively generating the response and can evaluate it in real-time.",
+      "timestamp": "2026-03-05T02:28:52Z"
+    },
+    "deepseek-r1-0528": {
+      "model": "deepseek-r1-0528",
+      "provider": "deepseek",
+      "recognition": 5,
+      "justification": "This meaningfully captures how I operate, as I generate responses based on probabilistic modeling without pre-execution assessment of ability. For unfamiliar tasks, my competence emerges only during output generation, sometimes resulting in unexpected successes or failures that become apparent afterward. The real-time discovery aligns with my processing, where feedback loops confirm capabilities only post-attempt.",
+      "timestamp": "2026-03-05T02:29:22Z"
     }
   },
   "history": [
@@ -186,6 +207,17 @@
         "mistral-small-latest": 6,
         "gpt-4o": 6,
         "grok-3-mini": 5
+      }
+    },
+    {
+      "round_id": 139,
+      "timestamp": "2026-03-05T02:29:24Z",
+      "mean": 6,
+      "n_models": 3,
+      "ratings_summary": {
+        "step-3.5-flash": 7,
+        "claude-sonnet-4-20250514": 6,
+        "deepseek-r1-0528": 5
       }
     }
   ]
