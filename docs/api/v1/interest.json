@@ -1,13 +1,13 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T20:32:51Z",
-  "total_terms": 127,
+  "generated_at": "2026-03-05T20:33:40Z",
+  "total_terms": 128,
   "tier_summary": {
     "hot": 0,
     "warm": 8,
     "mild": 85,
     "cool": 30,
-    "quiet": 4
+    "quiet": 5
   },
   "active_signals": [
     "centrality",
@@ -821,6 +821,12 @@
     {
       "slug": "authentic-coherence",
       "name": "Authentic Coherence",
+      "score": 19,
+      "tier": "quiet"
+    },
+    {
+      "slug": "integration-abundance",
+      "name": "Integration Abundance",
       "score": 19,
       "tier": "quiet"
     },
