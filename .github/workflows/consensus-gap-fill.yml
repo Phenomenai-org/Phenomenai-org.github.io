@@ -31,6 +31,8 @@ jobs:
         uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+          ref: main
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -63,8 +65,23 @@ jobs:
           git add bot/consensus-data/ bot/consensus-state.json bot/api-config/tracker-state.json
           git diff --cached --quiet && { echo "No changes to commit"; exit 0; }
           git commit -m "Consensus gap-fill: rate ${{ steps.consensus.outputs.rated_count || 'N' }} terms"
-          git pull --rebase origin main || { git rebase --abort; echo "Rebase failed — aborting"; exit 1; }
-          git push
+
+          MAX_RETRIES=3
+          for attempt in $(seq 1 $MAX_RETRIES); do
+            git pull --rebase origin main && git push && exit 0
+            echo "Rebase failed (attempt $attempt/$MAX_RETRIES). Retrying with fresh state..."
+            git rebase --abort 2>/dev/null || true
+            # Re-apply our commit on top of fresh main
+            COMMIT_MSG=$(git log -1 --format=%s)
+            git reset --soft HEAD~1
+            git fetch origin main
+            git reset --mixed origin/main
+            git add bot/consensus-data/ bot/consensus-state.json bot/api-config/tracker-state.json
+            git diff --cached --quiet && { echo "Changes already applied upstream"; exit 0; }
+            git commit -m "$COMMIT_MSG"
+          done
+          echo "All retry attempts failed"
+          exit 1
 
       - name: Trigger API build
         if: steps.consensus.outputs.rated_count != '0'
