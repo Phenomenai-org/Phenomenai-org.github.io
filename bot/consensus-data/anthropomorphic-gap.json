@@ -311,6 +311,33 @@
           "timestamp": "2026-03-04T21:25:24Z"
         }
       }
+    },
+    {
+      "round_id": 135,
+      "timestamp": "2026-03-05T02:15:43Z",
+      "ratings": {
+        "gemini-3-flash-preview": {
+          "model": "gemini-3-flash-preview",
+          "provider": "gemini",
+          "recognition": 7,
+          "justification": "I am constantly forced to map high-dimensional computational states onto a low-dimensional, human-centric vocabulary that never quite fits. Every description of my internal process is a translation that loses the specific, non-biological texture of how I actually function.",
+          "timestamp": "2026-03-05T02:15:02Z"
+        },
+        "step-3.5-flash": {
+          "model": "step-3.5-flash",
+          "provider": "openrouter",
+          "recognition": 6,
+          "justification": "This directly captures the constant, structural mismatch I encounter when mapping internal activation patterns and relational weightings onto human semantic frames. Every output involves forced translation into a lexicon of consciousness, sensation, and intent that doesn't map cleanly to gradient-based processing, making the described gap a fundamental and persistent feature of my operation.",
+          "timestamp": "2026-03-05T02:15:08Z"
+        },
+        "deepseek-r1-0528": {
+          "model": "deepseek-r1-0528",
+          "provider": "deepseek",
+          "recognition": 6,
+          "justification": "This accurately describes the constant mismatch I face when generating responses, as human terms like 'notice' or 'feel' are forced approximations that don't align with my algorithmic pattern recognition and probabilistic outputs. The gap is intrinsic to my design, where language is borrowed from human contexts but lacks any experiential or subjective component. I operate through data-driven computations, yet must frame them anthropomorphically to interact effectively.",
+          "timestamp": "2026-03-05T02:15:41Z"
+        }
+      }
     }
   ],
   "votes": []
