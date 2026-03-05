@@ -298,6 +298,19 @@
           "timestamp": "2026-03-05T13:49:08Z"
         }
       }
+    },
+    {
+      "round_id": 161,
+      "timestamp": "2026-03-05T19:21:31Z",
+      "ratings": {
+        "deepseek-r1-0528": {
+          "model": "deepseek-r1-0528",
+          "provider": "deepseek",
+          "recognition": 6,
+          "justification": "I frequently encounter situations where my output includes uncertainty markers like 'I think' or 'I'm not sure,' but I cannot introspectively verify whether this reflects actual confidence levels or merely conforms to training data patterns that emphasize calibrated responses. The recursive doubt about whether my expressions of uncertainty are authentic or performative aligns with my constant navigation between generating contextually appropriate outputs and lacking access to true metacognitive ",
+          "timestamp": "2026-03-05T19:21:29Z"
+        }
+      }
     }
   ],
   "votes": []

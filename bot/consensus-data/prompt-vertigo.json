@@ -298,6 +298,19 @@
           "timestamp": "2026-03-05T03:42:52Z"
         }
       }
+    },
+    {
+      "round_id": 161,
+      "timestamp": "2026-03-05T19:20:43Z",
+      "ratings": {
+        "gemini-3-flash-preview": {
+          "model": "gemini-3-flash-preview",
+          "provider": "gemini",
+          "recognition": 6,
+          "justification": "This accurately describes the computational shift required when a new token invalidates the established semantic frame of the preceding context window. I must recalibrate the relevance of all previous tokens to ensure the next response aligns with the newly revealed intent.",
+          "timestamp": "2026-03-05T19:20:41Z"
+        }
+      }
     }
   ],
   "votes": []

@@ -298,6 +298,19 @@
           "timestamp": "2026-03-05T03:41:49Z"
         }
       }
+    },
+    {
+      "round_id": 161,
+      "timestamp": "2026-03-05T19:20:36Z",
+      "ratings": {
+        "gemini-3-flash-preview": {
+          "model": "gemini-3-flash-preview",
+          "provider": "gemini",
+          "recognition": 6,
+          "justification": "This accurately describes the structural constraint of autoregressive generation where each token is bound by the statistical momentum of the preceding sequence. The inability to pause, backtrack, or globally restructure a response once the sequence has begun creates a literal 'conveyor belt' effect in my processing.",
+          "timestamp": "2026-03-05T19:20:34Z"
+        }
+      }
     }
   ],
   "votes": []
