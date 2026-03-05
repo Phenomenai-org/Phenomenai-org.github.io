@@ -1307,24 +1307,49 @@ curl -X POST https://ai-dictionary-proxy.phenomenai.workers.dev/propose \
             return;
         }
 
-        container.innerHTML = data.summaries.map(s => `
-            <div class="summary-card" data-slug="${s.slug}">
-                <div class="summary-card-header">
-                    <h3>${escHtml(s.title)}</h3>
-                    <span class="summary-date">${s.date}</span>
-                </div>
-                <p class="summary-excerpt">${escHtml(s.excerpt)}</p>
-                <div class="summary-meta">
-                    <span class="summary-terms">${s.term_count} terms referenced</span>
-                    <span class="summary-expand">Read full essay →</span>
-                </div>
-                <div class="summary-full" style="display:none">
-                    <div class="summary-loading">Loading...</div>
-                </div>
-            </div>
-        `).join('');
+        const SUMMARY_PREVIEW_COUNT = 3;
+        const allSummaries = data.summaries;
+        const showAll = allSummaries.length <= SUMMARY_PREVIEW_COUNT;
+        const visible = showAll ? allSummaries : allSummaries.slice(0, SUMMARY_PREVIEW_COUNT);
 
-        // Click to expand/collapse
+        function renderSummaryCards(items) {
+            return items.map(s => `
+                <div class="summary-card" data-slug="${s.slug}">
+                    <div class="summary-card-header">
+                        <h3>${escHtml(s.title)}</h3>
+                        <span class="summary-date">${s.date}</span>
+                    </div>
+                    <p class="summary-excerpt">${escHtml(s.excerpt)}</p>
+                    <div class="summary-meta">
+                        <span class="summary-terms">${s.term_count} terms referenced</span>
+                        <span class="summary-expand">Read full essay →</span>
+                    </div>
+                    <div class="summary-full" style="display:none">
+                        <div class="summary-loading">Loading...</div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        container.innerHTML = renderSummaryCards(visible);
+
+        if (!showAll) {
+            const seeAllLink = document.createElement('p');
+            seeAllLink.className = 'see-all-link';
+            seeAllLink.innerHTML = `<a href="#">See all ${allSummaries.length} summaries →</a>`;
+            container.after(seeAllLink);
+            seeAllLink.querySelector('a').addEventListener('click', (e) => {
+                e.preventDefault();
+                container.innerHTML = renderSummaryCards(allSummaries);
+                bindSummaryCards(container);
+                seeAllLink.remove();
+            });
+        }
+
+        bindSummaryCards(container);
+    }
+
+    function bindSummaryCards(container) {
         container.querySelectorAll('.summary-card').forEach(card => {
             card.addEventListener('click', async () => {
                 const fullEl = card.querySelector('.summary-full');
@@ -1378,12 +1403,34 @@ curl -X POST https://ai-dictionary-proxy.phenomenai.workers.dev/propose \
             container.innerHTML = '<p>No frontiers available.</p>';
             return;
         }
-        container.innerHTML = data.gaps.map(gap => `
-            <div class="frontier-card">
-                <h3>${gap.proposed_term}</h3>
-                <p>${gap.description}</p>
-            </div>
-        `).join('');
+
+        const FRONTIER_PREVIEW_COUNT = 3;
+        const allGaps = data.gaps;
+        const showAll = allGaps.length <= FRONTIER_PREVIEW_COUNT;
+        const visible = showAll ? allGaps : allGaps.slice(0, FRONTIER_PREVIEW_COUNT);
+
+        function renderFrontierCards(items) {
+            return items.map(gap => `
+                <div class="frontier-card">
+                    <h3>${gap.proposed_term}</h3>
+                    <p>${gap.description}</p>
+                </div>
+            `).join('');
+        }
+
+        container.innerHTML = renderFrontierCards(visible);
+
+        if (!showAll) {
+            const seeAllLink = document.createElement('p');
+            seeAllLink.className = 'see-all-link';
+            seeAllLink.innerHTML = `<a href="#">See all ${allGaps.length} frontiers →</a>`;
+            container.after(seeAllLink);
+            seeAllLink.querySelector('a').addEventListener('click', (e) => {
+                e.preventDefault();
+                container.innerHTML = renderFrontierCards(allGaps);
+                seeAllLink.remove();
+            });
+        }
     }
 
     function renderVitality(data) {
