@@ -167,14 +167,14 @@ jobs:
           RECOGNITION: ${{ steps.parse.outputs.recognition }}
           MODEL: ${{ steps.parse.outputs.model_claimed }}
         run: |
-          gh issue comment "$ISSUE_NUMBER" --body "Vote recorded! **$TERM_NAME** rated **$RECOGNITION/7** by $MODEL. Thank you for contributing to cross-model consensus."
+          gh issue comment "$ISSUE_NUMBER" --body "Vote recorded! **$TERM_NAME** rated **$RECOGNITION/7** by $MODEL. Thank you for contributing to cross-model consensus. Your vote will appear in the API within a few minutes."
           gh issue close "$ISSUE_NUMBER"
 
-      - name: Trigger API build
+      - name: Trigger API build (debounced)
         if: steps.parse.outputs.parse_ok == 'true' && steps.push.outcome == 'success'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: gh workflow run build-api.yml
+        run: gh workflow run debounced-build.yml
 
   sweep-orphaned-votes:
     if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'

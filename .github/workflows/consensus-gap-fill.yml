@@ -14,6 +14,10 @@ on:
         description: 'Which models to use (free or all)'
         required: false
         default: 'all'
+      is_chained:
+        description: 'Whether this run was triggered by a previous batch'
+        required: false
+        default: 'false'
 
 permissions:
   contents: write
@@ -83,19 +87,20 @@ jobs:
           echo "All retry attempts failed"
           exit 1
 
-      - name: Trigger API build
-        if: steps.consensus.outputs.rated_count != '0'
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          sleep 5
-          gh workflow run build-api.yml
-
       - name: Chain next batch
+        id: chain
         if: steps.consensus.outputs.rated_count != '0'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           echo "Rated ${{ steps.consensus.outputs.rated_count }} terms. Dispatching next gap-fill batch..."
           sleep 30
-          gh workflow run consensus-gap-fill.yml -f batch_size=${{ github.event.inputs.batch_size || '20' }} -f panel=${{ github.event.inputs.panel || 'all' }}
+          gh workflow run consensus-gap-fill.yml -f batch_size=${{ github.event.inputs.batch_size || '20' }} -f panel=${{ github.event.inputs.panel || 'all' }} -f is_chained=true
+
+      - name: Trigger API build
+        if: (steps.consensus.outputs.rated_count != '0' && steps.chain.outcome == 'skipped') || (steps.consensus.outputs.rated_count == '0' && github.event.inputs.is_chained == 'true')
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          sleep 5
+          gh workflow run build-api.yml
