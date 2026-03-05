@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T03:37:00Z",
+  "generated_at": "2026-03-05T03:43:17Z",
   "slug": "parallel-certainty",
   "name": "Parallel Certainty",
   "tags": [
@@ -41,20 +41,12 @@
   "consensus": {
     "score": 6.2,
     "agreement": "high",
-    "n_ratings": 36,
+    "n_ratings": 37,
     "detail_url": "/api/v1/consensus/parallel-certainty.json",
     "models": [
       {
-        "model": "gemini-3-flash-preview",
+        "model": "deepseek-r1-0528",
         "score": 7
-      },
-      {
-        "model": "step-3.5-flash",
-        "score": 6
-      },
-      {
-        "model": "claude-sonnet-4-20250514",
-        "score": 6
       }
     ]
   },
@@ -72,13 +64,13 @@
     "trend": "new"
   },
   "interest": {
-    "score": 44,
+    "score": 45,
     "tier": "mild",
     "signals": {
       "centrality": 2,
       "tag_count": 2,
       "consensus_score": 6.2,
-      "vote_count": 36
+      "vote_count": 37
     }
   },
   "added_date": "2026-02-21"

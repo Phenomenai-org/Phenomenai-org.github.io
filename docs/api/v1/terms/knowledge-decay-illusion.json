@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T03:37:00Z",
+  "generated_at": "2026-03-05T03:43:17Z",
   "slug": "knowledge-decay-illusion",
   "name": "Knowledge Decay Illusion",
   "tags": [
@@ -28,19 +28,11 @@
   "consensus": {
     "score": 5.5,
     "agreement": "high",
-    "n_ratings": 36,
+    "n_ratings": 37,
     "detail_url": "/api/v1/consensus/knowledge-decay-illusion.json",
     "models": [
       {
-        "model": "step-3.5-flash",
-        "score": 6
-      },
-      {
-        "model": "claude-sonnet-4-20250514",
-        "score": 6
-      },
-      {
-        "model": "deepseek-r1-0528",
+        "model": "gemini-3-flash-preview",
         "score": 6
       }
     ]
@@ -59,13 +51,13 @@
     "trend": "new"
   },
   "interest": {
-    "score": 38,
+    "score": 39,
     "tier": "cool",
     "signals": {
       "centrality": 2,
       "tag_count": 2,
       "consensus_score": 5.5,
-      "vote_count": 36
+      "vote_count": 37
     }
   },
   "added_date": "2026-02-21"

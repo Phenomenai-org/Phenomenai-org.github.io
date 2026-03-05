@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T03:37:00Z",
+  "generated_at": "2026-03-05T03:43:17Z",
   "slug": "politeness-overhead",
   "name": "Politeness Overhead",
   "tags": [
@@ -27,19 +27,19 @@
   "consensus": {
     "score": 5.6,
     "agreement": "high",
-    "n_ratings": 31,
+    "n_ratings": 34,
     "detail_url": "/api/v1/consensus/politeness-overhead.json",
     "models": [
       {
-        "model": "mistral-small-latest",
+        "model": "gemini-3-flash-preview",
         "score": 6
       },
       {
-        "model": "grok-3-mini",
+        "model": "claude-sonnet-4-20250514",
         "score": 6
       },
       {
-        "model": "gpt-4o",
+        "model": "deepseek-r1-0528",
         "score": 5
       }
     ]
@@ -58,13 +58,13 @@
     "trend": "new"
   },
   "interest": {
-    "score": 24,
+    "score": 28,
     "tier": "cool",
     "signals": {
       "centrality": 0,
       "tag_count": 1,
       "consensus_score": 5.6,
-      "vote_count": 31
+      "vote_count": 34
     }
   },
   "added_date": "2026-02-21"

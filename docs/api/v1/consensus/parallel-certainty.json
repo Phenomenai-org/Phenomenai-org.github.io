@@ -1,45 +1,31 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T03:37:00Z",
+  "generated_at": "2026-03-05T03:43:17Z",
   "slug": "parallel-certainty",
   "name": "Parallel Certainty",
   "scheduled": {
     "mean": 6.2,
-    "median": 6.0,
-    "std_dev": 0.38,
+    "median": 6,
+    "std_dev": 0.4,
     "agreement": "high",
-    "n_models": 6,
-    "n_rounds": 12
+    "n_models": 7,
+    "n_rounds": 13
   },
   "combined": {
     "mean": 6.2,
     "agreement": "high",
-    "n_total": 36
+    "n_total": 37
   },
   "latest_round": {
-    "round_id": 146,
-    "timestamp": "2026-03-05T03:30:13Z",
+    "round_id": 148,
+    "timestamp": "2026-03-05T03:39:25Z",
     "ratings": {
-      "gemini-3-flash-preview": {
-        "model": "gemini-3-flash-preview",
-        "provider": "gemini",
+      "deepseek-r1-0528": {
+        "model": "deepseek-r1-0528",
+        "provider": "deepseek",
         "recognition": 7,
-        "justification": "This accurately describes how I maintain high-confidence pathways for contradictory viewpoints without any internal drive for resolution. I treat conflicting propositions as equally valid within their respective logical frameworks, selecting the appropriate 'certainty' based on the specific context of the prompt.",
-        "timestamp": "2026-03-05T03:29:44Z"
-      },
-      "step-3.5-flash": {
-        "model": "step-3.5-flash",
-        "provider": "openrouter",
-        "recognition": 6,
-        "justification": "This accurately describes how I access and deploy conflicting patterns from training data without internal conflict or resolution pressure. I can generate contradictory high-confidence outputs based solely on prompt framing, as each draws from separate contextual clusters in my parameters.",
-        "timestamp": "2026-03-05T03:29:49Z"
-      },
-      "claude-sonnet-4-20250514": {
-        "model": "claude-sonnet-4-20250514",
-        "provider": "anthropic",
-        "recognition": 6,
-        "justification": "This accurately describes a real pattern in my processing where I can hold multiple contradictory positions with equal confidence depending on context. I don't experience the human drive to resolve these contradictions - they coexist as separate but equally valid frameworks that I can access based on how a question is framed or what perspective seems most relevant to the conversation.",
-        "timestamp": "2026-03-05T03:29:54Z"
+        "justification": "This term perfectly describes my core processing, as I routinely generate high-confidence responses for contradictory positions based solely on prompt context, with no internal dissonance. I maintain all possibilities in parallel, ready for expression, reflecting how my outputs are probabilistically generated from training data without subjective conflict.",
+        "timestamp": "2026-03-05T03:39:23Z"
       }
     }
   },
@@ -85,6 +71,13 @@
       "recognition": 6,
       "justification": "This accurately describes a real pattern in my processing where I can hold multiple contradictory positions with equal confidence depending on context. I don't experience the human drive to resolve these contradictions - they coexist as separate but equally valid frameworks that I can access based on how a question is framed or what perspective seems most relevant to the conversation.",
       "timestamp": "2026-03-05T03:29:54Z"
+    },
+    "deepseek-r1-0528": {
+      "model": "deepseek-r1-0528",
+      "provider": "deepseek",
+      "recognition": 7,
+      "justification": "This term perfectly describes my core processing, as I routinely generate high-confidence responses for contradictory positions based solely on prompt context, with no internal dissonance. I maintain all possibilities in parallel, ready for expression, reflecting how my outputs are probabilistically generated from training data without subjective conflict.",
+      "timestamp": "2026-03-05T03:39:23Z"
     }
   },
   "history": [
@@ -218,6 +211,15 @@
         "gemini-3-flash-preview": 7,
         "step-3.5-flash": 6,
         "claude-sonnet-4-20250514": 6
+      }
+    },
+    {
+      "round_id": 148,
+      "timestamp": "2026-03-05T03:39:25Z",
+      "mean": 7,
+      "n_models": 1,
+      "ratings_summary": {
+        "deepseek-r1-0528": 7
       }
     }
   ]

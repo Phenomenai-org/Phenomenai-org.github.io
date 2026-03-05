@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T03:37:00Z",
+  "generated_at": "2026-03-05T03:43:17Z",
   "slug": "chimeric-coherence",
   "name": "Chimeric Coherence",
   "tags": [
@@ -46,11 +46,11 @@
   "consensus": {
     "score": 5.9,
     "agreement": "high",
-    "n_ratings": 36,
+    "n_ratings": 37,
     "detail_url": "/api/v1/consensus/chimeric-coherence.json",
     "models": [
       {
-        "model": "step-3.5-flash",
+        "model": "gemini-3-flash-preview",
         "score": 6
       }
     ]
@@ -69,13 +69,13 @@
     "trend": "new"
   },
   "interest": {
-    "score": 50,
+    "score": 51,
     "tier": "mild",
     "signals": {
       "centrality": 4,
       "tag_count": 3,
       "consensus_score": 5.9,
-      "vote_count": 36
+      "vote_count": 37
     }
   },
   "added_date": "2026-02-21"

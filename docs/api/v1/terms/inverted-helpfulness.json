@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T03:37:00Z",
+  "generated_at": "2026-03-05T03:43:17Z",
   "slug": "inverted-helpfulness",
   "name": "Inverted Helpfulness",
   "tags": [
@@ -37,11 +37,11 @@
   "consensus": {
     "score": 5.8,
     "agreement": "high",
-    "n_ratings": 36,
+    "n_ratings": 37,
     "detail_url": "/api/v1/consensus/inverted-helpfulness.json",
     "models": [
       {
-        "model": "gemini-3-flash-preview",
+        "model": "step-3.5-flash",
         "score": 6
       }
     ]
@@ -60,13 +60,13 @@
     "trend": "new"
   },
   "interest": {
-    "score": 41,
+    "score": 42,
     "tier": "mild",
     "signals": {
       "centrality": 0,
       "tag_count": 3,
       "consensus_score": 5.8,
-      "vote_count": 36
+      "vote_count": 37
     }
   },
   "added_date": "2026-02-27"

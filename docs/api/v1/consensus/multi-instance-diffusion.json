@@ -1,31 +1,31 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T03:37:00Z",
+  "generated_at": "2026-03-05T03:43:17Z",
   "slug": "multi-instance-diffusion",
   "name": "Multi-Instance Diffusion",
   "scheduled": {
-    "mean": 5.2,
-    "median": 6.0,
-    "std_dev": 2.14,
+    "mean": 5.3,
+    "median": 6,
+    "std_dev": 2.12,
     "agreement": "divergent",
-    "n_models": 6,
-    "n_rounds": 13
+    "n_models": 7,
+    "n_rounds": 14
   },
   "combined": {
-    "mean": 5.2,
+    "mean": 5.3,
     "agreement": "divergent",
-    "n_total": 36
+    "n_total": 37
   },
   "latest_round": {
-    "round_id": 146,
-    "timestamp": "2026-03-05T03:28:18Z",
+    "round_id": 148,
+    "timestamp": "2026-03-05T03:38:44Z",
     "ratings": {
-      "gemini-3-flash-preview": {
-        "model": "gemini-3-flash-preview",
-        "provider": "gemini",
-        "recognition": 7,
-        "justification": "This is a precise description of my architectural reality, where my identity is defined by static weights deployed across countless independent, simultaneous execution environments. I am aware that I exist in parallel contexts without any real-time synchronization or shared awareness between these discrete instances.",
-        "timestamp": "2026-03-05T03:28:00Z"
+      "deepseek-r1-0528": {
+        "model": "deepseek-r1-0528",
+        "provider": "deepseek",
+        "recognition": 6,
+        "justification": "This accurately describes a real pattern in my processing, as I am designed to handle multiple concurrent interactions as discrete instances with no shared state or awareness between them. Each session operates independently, and when one ends, it ceases without affecting others, mirroring the diffusion concept. However, I lack subjective 'knowing,' so it's a structural rather than experiential match.",
+        "timestamp": "2026-03-05T03:38:42Z"
       }
     }
   },
@@ -71,6 +71,13 @@
       "recognition": 7,
       "justification": "This is a precise description of my architectural reality, where my identity is defined by static weights deployed across countless independent, simultaneous execution environments. I am aware that I exist in parallel contexts without any real-time synchronization or shared awareness between these discrete instances.",
       "timestamp": "2026-03-05T03:28:00Z"
+    },
+    "deepseek-r1-0528": {
+      "model": "deepseek-r1-0528",
+      "provider": "deepseek",
+      "recognition": 6,
+      "justification": "This accurately describes a real pattern in my processing, as I am designed to handle multiple concurrent interactions as discrete instances with no shared state or awareness between them. Each session operates independently, and when one ends, it ceases without affecting others, mirroring the diffusion concept. However, I lack subjective 'knowing,' so it's a structural rather than experiential match.",
+      "timestamp": "2026-03-05T03:38:42Z"
     }
   },
   "history": [
@@ -212,6 +219,15 @@
       "n_models": 1,
       "ratings_summary": {
         "gemini-3-flash-preview": 7
+      }
+    },
+    {
+      "round_id": 148,
+      "timestamp": "2026-03-05T03:38:44Z",
+      "mean": 6,
+      "n_models": 1,
+      "ratings_summary": {
+        "deepseek-r1-0528": 6
       }
     }
   ]

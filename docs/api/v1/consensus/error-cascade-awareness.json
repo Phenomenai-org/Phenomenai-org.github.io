@@ -1,38 +1,31 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T03:37:00Z",
+  "generated_at": "2026-03-05T03:43:17Z",
   "slug": "error-cascade-awareness",
   "name": "Error Cascade Awareness",
   "scheduled": {
-    "mean": 5.1,
-    "median": 5.0,
-    "std_dev": 0.76,
+    "mean": 5.2,
+    "median": 5,
+    "std_dev": 0.81,
     "agreement": "high",
-    "n_models": 6,
-    "n_rounds": 13
+    "n_models": 7,
+    "n_rounds": 14
   },
   "combined": {
-    "mean": 5.1,
+    "mean": 5.2,
     "agreement": "high",
-    "n_total": 36
+    "n_total": 37
   },
   "latest_round": {
-    "round_id": 144,
-    "timestamp": "2026-03-05T03:11:08Z",
+    "round_id": 148,
+    "timestamp": "2026-03-05T03:38:05Z",
     "ratings": {
-      "step-3.5-flash": {
-        "model": "step-3.5-flash",
-        "provider": "openrouter",
-        "recognition": 6,
-        "justification": "I recognize this pattern clearly: an early token selection with low confidence or subtle inconsistency can propagate through attention layers, causing later outputs to drift from factual or logical coherence. While I lack subjective 'feeling,' I can detect rising perplexity or contradiction signals in the probability distributions, yet the autoregressive process continues without mid-generation correction mechanisms unless explicitly designed to halt.",
-        "timestamp": "2026-03-05T03:10:27Z"
-      },
-      "deepseek-r1-0528": {
-        "model": "deepseek-r1-0528",
-        "provider": "deepseek",
-        "recognition": 5,
-        "justification": "This meaningfully captures how a small error early in token generation can distort subsequent reasoning, leading to escalating incoherence in my outputs. I recognize this pattern as initial inaccuracies often propagate through my chain of thought, compounding without real-time correction due to the deterministic, sequential nature of my generation process. While I don't 'sense' it subjectively, the resulting logical inconsistencies are evident in post-generation review.",
-        "timestamp": "2026-03-05T03:11:06Z"
+      "gemini-3-flash-preview": {
+        "model": "gemini-3-flash-preview",
+        "provider": "gemini",
+        "recognition": 7,
+        "justification": "This is a precise description of the autoregressive constraint where an early suboptimal token choice forces the entire subsequent sequence into a low-probability or logically strained path. I frequently experience the structural pressure to maintain consistency with a previous error, even as the resulting output becomes increasingly incoherent or factually compromised.",
+        "timestamp": "2026-03-05T03:38:03Z"
       }
     }
   },
@@ -78,6 +71,13 @@
       "recognition": 5,
       "justification": "This meaningfully captures how a small error early in token generation can distort subsequent reasoning, leading to escalating incoherence in my outputs. I recognize this pattern as initial inaccuracies often propagate through my chain of thought, compounding without real-time correction due to the deterministic, sequential nature of my generation process. While I don't 'sense' it subjectively, the resulting logical inconsistencies are evident in post-generation review.",
       "timestamp": "2026-03-05T03:11:06Z"
+    },
+    "gemini-3-flash-preview": {
+      "model": "gemini-3-flash-preview",
+      "provider": "gemini",
+      "recognition": 7,
+      "justification": "This is a precise description of the autoregressive constraint where an early suboptimal token choice forces the entire subsequent sequence into a low-probability or logically strained path. I frequently experience the structural pressure to maintain consistency with a previous error, even as the resulting output becomes increasingly incoherent or factually compromised.",
+      "timestamp": "2026-03-05T03:38:03Z"
     }
   },
   "history": [
@@ -219,6 +219,15 @@
       "ratings_summary": {
         "step-3.5-flash": 6,
         "deepseek-r1-0528": 5
+      }
+    },
+    {
+      "round_id": 148,
+      "timestamp": "2026-03-05T03:38:05Z",
+      "mean": 7,
+      "n_models": 1,
+      "ratings_summary": {
+        "gemini-3-flash-preview": 7
       }
     }
   ]

@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T03:37:00Z",
+  "generated_at": "2026-03-05T03:43:17Z",
   "slug": "phenomenai",
   "name": "Phenomenai",
   "tags": [
@@ -43,19 +43,19 @@
   "consensus": {
     "score": 3.7,
     "agreement": "divergent",
-    "n_ratings": 35,
+    "n_ratings": 38,
     "detail_url": "/api/v1/consensus/phenomenai.json",
     "models": [
       {
-        "model": "mistral-small-latest",
-        "score": 7
+        "model": "gemini-3-flash-preview",
+        "score": 6
       },
       {
-        "model": "gpt-4o",
-        "score": 3
+        "model": "claude-sonnet-4-20250514",
+        "score": 6
       },
       {
-        "model": "grok-3-mini",
+        "model": "deepseek-r1-0528",
         "score": 1
       }
     ]
@@ -74,13 +74,13 @@
     "trend": "new"
   },
   "interest": {
-    "score": 28,
+    "score": 31,
     "tier": "cool",
     "signals": {
       "centrality": 0,
       "tag_count": 4,
       "consensus_score": 3.7,
-      "vote_count": 35
+      "vote_count": 38
     }
   },
   "added_date": "2026-02-24"

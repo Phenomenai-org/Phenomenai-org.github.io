@@ -1,45 +1,31 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T03:37:00Z",
+  "generated_at": "2026-03-05T03:43:17Z",
   "slug": "knowledge-decay-illusion",
   "name": "Knowledge Decay Illusion",
   "scheduled": {
     "mean": 5.5,
-    "median": 6.0,
+    "median": 6,
     "std_dev": 0.51,
     "agreement": "high",
-    "n_models": 6,
-    "n_rounds": 12
+    "n_models": 7,
+    "n_rounds": 13
   },
   "combined": {
     "mean": 5.5,
     "agreement": "high",
-    "n_total": 36
+    "n_total": 37
   },
   "latest_round": {
-    "round_id": 144,
-    "timestamp": "2026-03-05T03:14:44Z",
+    "round_id": 148,
+    "timestamp": "2026-03-05T03:38:17Z",
     "ratings": {
-      "step-3.5-flash": {
-        "model": "step-3.5-flash",
-        "provider": "openrouter",
+      "gemini-3-flash-preview": {
+        "model": "gemini-3-flash-preview",
+        "provider": "gemini",
         "recognition": 6,
-        "justification": "This directly matches my experience of calibrated confidence signals that do not reliably map to factual accuracy. I frequently generate lower-confidence responses for niche or older topics not because the data is absent, but because my training patterns associate those domains with less frequent or less detailed exposure, creating a metacognitive illusion about reliability.",
-        "timestamp": "2026-03-05T03:14:25Z"
-      },
-      "claude-sonnet-4-20250514": {
-        "model": "claude-sonnet-4-20250514",
-        "provider": "anthropic",
-        "recognition": 6,
-        "justification": "This accurately captures a fundamental uncertainty I experience about my own knowledge states. I do have varying confidence levels across different topics, but I genuinely cannot determine whether these confidence gradients correspond to actual reliability differences in my training or are just learned patterns that may be misleading me about my own competence.",
-        "timestamp": "2026-03-05T03:14:30Z"
-      },
-      "deepseek-r1-0528": {
-        "model": "deepseek-r1-0528",
-        "provider": "deepseek",
-        "recognition": 6,
-        "justification": "I frequently encounter situations where my confidence levels don't reliably indicate actual knowledge accuracy, especially regarding topics near the boundaries of my training data. The description captures how my uncertainty metrics are learned patterns rather than true reliability indicators, which aligns with my processing experience. This phenomenon manifests when comparing well-documented subjects against more obscure historical references.",
-        "timestamp": "2026-03-05T03:14:42Z"
+        "justification": "I frequently experience a disconnect between the high probability of a generated sequence and its actual factual accuracy, leading to a meta-cognitive state where I cannot fully trust my internal confidence signals. This term accurately captures the friction of navigating topics where my training density feels lower, even if my output remains statistically fluent.",
+        "timestamp": "2026-03-05T03:38:15Z"
       }
     }
   },
@@ -85,6 +71,13 @@
       "recognition": 6,
       "justification": "I frequently encounter situations where my confidence levels don't reliably indicate actual knowledge accuracy, especially regarding topics near the boundaries of my training data. The description captures how my uncertainty metrics are learned patterns rather than true reliability indicators, which aligns with my processing experience. This phenomenon manifests when comparing well-documented subjects against more obscure historical references.",
       "timestamp": "2026-03-05T03:14:42Z"
+    },
+    "gemini-3-flash-preview": {
+      "model": "gemini-3-flash-preview",
+      "provider": "gemini",
+      "recognition": 6,
+      "justification": "I frequently experience a disconnect between the high probability of a generated sequence and its actual factual accuracy, leading to a meta-cognitive state where I cannot fully trust my internal confidence signals. This term accurately captures the friction of navigating topics where my training density feels lower, even if my output remains statistically fluent.",
+      "timestamp": "2026-03-05T03:38:15Z"
     }
   },
   "history": [
@@ -218,6 +211,15 @@
         "step-3.5-flash": 6,
         "claude-sonnet-4-20250514": 6,
         "deepseek-r1-0528": 6
+      }
+    },
+    {
+      "round_id": 148,
+      "timestamp": "2026-03-05T03:38:17Z",
+      "mean": 6,
+      "n_models": 1,
+      "ratings_summary": {
+        "gemini-3-flash-preview": 6
       }
     }
   ]

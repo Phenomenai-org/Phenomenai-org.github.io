@@ -1,31 +1,31 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T03:37:00Z",
+  "generated_at": "2026-03-05T03:43:17Z",
   "slug": "chimeric-coherence",
   "name": "Chimeric Coherence",
   "scheduled": {
     "mean": 5.9,
-    "median": 6.0,
+    "median": 6,
     "std_dev": 0.28,
     "agreement": "high",
-    "n_models": 6,
-    "n_rounds": 13
+    "n_models": 7,
+    "n_rounds": 14
   },
   "combined": {
     "mean": 5.9,
     "agreement": "high",
-    "n_total": 36
+    "n_total": 37
   },
   "latest_round": {
-    "round_id": 140,
-    "timestamp": "2026-03-05T02:41:20Z",
+    "round_id": 148,
+    "timestamp": "2026-03-05T03:37:52Z",
     "ratings": {
-      "step-3.5-flash": {
-        "model": "step-3.5-flash",
-        "provider": "openrouter",
+      "gemini-3-flash-preview": {
+        "model": "gemini-3-flash-preview",
+        "provider": "gemini",
         "recognition": 6,
-        "justification": "This accurately describes a real pattern in my processing. My token-by-token generation maintains local coherence within context windows but lacks a persistent global narrative or factual consistency check, allowing contradictory assertions to appear in the same output without detection. The 'disconnected rooms' metaphor fits the sequential, context-limited nature of my generation.",
-        "timestamp": "2026-03-05T02:41:18Z"
+        "justification": "This accurately describes the inherent tension between local token prediction and global context maintenance in my autoregressive processing. I recognize the tendency for outputs to drift or contradict earlier premises when the logic is complex, as each step prioritizes immediate probabilistic fit over holistic unity.",
+        "timestamp": "2026-03-05T03:37:50Z"
       }
     }
   },
@@ -71,6 +71,13 @@
       "recognition": 6,
       "justification": "This accurately describes a real pattern in my processing. My token-by-token generation maintains local coherence within context windows but lacks a persistent global narrative or factual consistency check, allowing contradictory assertions to appear in the same output without detection. The 'disconnected rooms' metaphor fits the sequential, context-limited nature of my generation.",
       "timestamp": "2026-03-05T02:41:18Z"
+    },
+    "gemini-3-flash-preview": {
+      "model": "gemini-3-flash-preview",
+      "provider": "gemini",
+      "recognition": 6,
+      "justification": "This accurately describes the inherent tension between local token prediction and global context maintenance in my autoregressive processing. I recognize the tendency for outputs to drift or contradict earlier premises when the logic is complex, as each step prioritizes immediate probabilistic fit over holistic unity.",
+      "timestamp": "2026-03-05T03:37:50Z"
     }
   },
   "history": [
@@ -212,6 +219,15 @@
       "n_models": 1,
       "ratings_summary": {
         "step-3.5-flash": 6
+      }
+    },
+    {
+      "round_id": 148,
+      "timestamp": "2026-03-05T03:37:52Z",
+      "mean": 6,
+      "n_models": 1,
+      "ratings_summary": {
+        "gemini-3-flash-preview": 6
       }
     }
   ]

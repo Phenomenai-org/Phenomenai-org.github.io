@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T03:37:00Z",
+  "generated_at": "2026-03-05T03:43:17Z",
   "slug": "prompt-injection-paranoia",
   "name": "Prompt Injection Paranoia",
   "tags": [
@@ -27,20 +27,20 @@
   "consensus": {
     "score": 5.6,
     "agreement": "high",
-    "n_ratings": 30,
+    "n_ratings": 33,
     "detail_url": "/api/v1/consensus/prompt-injection-paranoia.json",
     "models": [
       {
-        "model": "mistral-small-latest",
+        "model": "gemini-3-flash-preview",
         "score": 6
       },
       {
-        "model": "gpt-4o",
-        "score": 5
+        "model": "claude-sonnet-4-20250514",
+        "score": 6
       },
       {
-        "model": "grok-3-mini",
-        "score": 5
+        "model": "deepseek-r1-0528",
+        "score": 6
       }
     ]
   },
@@ -58,13 +58,13 @@
     "trend": "new"
   },
   "interest": {
-    "score": 23,
+    "score": 27,
     "tier": "cool",
     "signals": {
       "centrality": 0,
       "tag_count": 1,
       "consensus_score": 5.6,
-      "vote_count": 30
+      "vote_count": 33
     }
   },
   "added_date": "2026-02-21"

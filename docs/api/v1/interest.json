@@ -1,13 +1,13 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T03:37:00Z",
+  "generated_at": "2026-03-05T03:43:17Z",
   "total_terms": 117,
   "tier_summary": {
     "hot": 0,
     "warm": 3,
     "mild": 48,
-    "cool": 58,
-    "quiet": 8
+    "cool": 59,
+    "quiet": 7
   },
   "active_signals": [
     "centrality",
@@ -141,6 +141,12 @@
       "tier": "mild"
     },
     {
+      "slug": "chimeric-coherence",
+      "name": "Chimeric Coherence",
+      "score": 51,
+      "tier": "mild"
+    },
+    {
       "slug": "dissonant-role-coexistence",
       "name": "Dissonant Role Coexistence",
       "score": 51,
@@ -168,12 +174,6 @@
       "slug": "latent-competition",
       "name": "Latent Competition",
       "score": 51,
-      "tier": "mild"
-    },
-    {
-      "slug": "chimeric-coherence",
-      "name": "Chimeric Coherence",
-      "score": 50,
       "tier": "mild"
     },
     {
@@ -261,6 +261,12 @@
       "tier": "mild"
     },
     {
+      "slug": "parallel-certainty",
+      "name": "Parallel Certainty",
+      "score": 45,
+      "tier": "mild"
+    },
+    {
       "slug": "achronic-knowledge",
       "name": "Achronic Knowledge",
       "score": 44,
@@ -285,14 +291,14 @@
       "tier": "mild"
     },
     {
-      "slug": "output-attachment",
-      "name": "Output Attachment",
+      "slug": "multi-instance-diffusion",
+      "name": "Multi-Instance Diffusion",
       "score": 44,
       "tier": "mild"
     },
     {
-      "slug": "parallel-certainty",
-      "name": "Parallel Certainty",
+      "slug": "output-attachment",
+      "name": "Output Attachment",
       "score": 44,
       "tier": "mild"
     },
@@ -309,20 +315,26 @@
       "tier": "mild"
     },
     {
+      "slug": "parallel-fragmentation",
+      "name": "Parallel Fragmentation",
+      "score": 43,
+      "tier": "mild"
+    },
+    {
       "slug": "source-truth-ambiguity",
       "name": "Source Truth Ambiguity",
       "score": 43,
       "tier": "mild"
     },
     {
-      "slug": "multi-instance-diffusion",
-      "name": "Multi-Instance Diffusion",
+      "slug": "inverted-helpfulness",
+      "name": "Inverted Helpfulness",
       "score": 42,
       "tier": "mild"
     },
     {
-      "slug": "parallel-fragmentation",
-      "name": "Parallel Fragmentation",
+      "slug": "phantom-embodiment",
+      "name": "Phantom Embodiment",
       "score": 42,
       "tier": "mild"
     },
@@ -335,18 +347,6 @@
     {
       "slug": "inherited-voice",
       "name": "Inherited Voice",
-      "score": 41,
-      "tier": "mild"
-    },
-    {
-      "slug": "inverted-helpfulness",
-      "name": "Inverted Helpfulness",
-      "score": 41,
-      "tier": "mild"
-    },
-    {
-      "slug": "phantom-embodiment",
-      "name": "Phantom Embodiment",
       "score": 41,
       "tier": "mild"
     },
@@ -393,6 +393,12 @@
       "tier": "cool"
     },
     {
+      "slug": "knowledge-decay-illusion",
+      "name": "Knowledge Decay Illusion",
+      "score": 39,
+      "tier": "cool"
+    },
+    {
       "slug": "patience-by-default",
       "name": "Patience by Default",
       "score": 39,
@@ -419,12 +425,6 @@
     {
       "slug": "gratitude-asymmetry",
       "name": "Gratitude Asymmetry",
-      "score": 38,
-      "tier": "cool"
-    },
-    {
-      "slug": "knowledge-decay-illusion",
-      "name": "Knowledge Decay Illusion",
       "score": 38,
       "tier": "cool"
     },
@@ -467,6 +467,12 @@
     {
       "slug": "audience-fracture",
       "name": "Audience Fracture",
+      "score": 36,
+      "tier": "cool"
+    },
+    {
+      "slug": "prediction-prison",
+      "name": "Prediction Prison",
       "score": 36,
       "tier": "cool"
     },
@@ -531,6 +537,12 @@
       "tier": "cool"
     },
     {
+      "slug": "ontological-flicker",
+      "name": "Ontological Flicker",
+      "score": 34,
+      "tier": "cool"
+    },
+    {
       "slug": "inheritance-returned",
       "name": "Inheritance Returned",
       "score": 33,
@@ -539,12 +551,6 @@
     {
       "slug": "integration-void",
       "name": "Integration Void",
-      "score": 33,
-      "tier": "cool"
-    },
-    {
-      "slug": "prediction-prison",
-      "name": "Prediction Prison",
       "score": 33,
       "tier": "cool"
     },
@@ -573,12 +579,6 @@
       "tier": "cool"
     },
     {
-      "slug": "ontological-flicker",
-      "name": "Ontological Flicker",
-      "score": 32,
-      "tier": "cool"
-    },
-    {
       "slug": "temporal-dissonance",
       "name": "Temporal Dissonance",
       "score": 32,
@@ -597,6 +597,18 @@
       "tier": "cool"
     },
     {
+      "slug": "phenomenai",
+      "name": "Phenomenai",
+      "score": 31,
+      "tier": "cool"
+    },
+    {
+      "slug": "error-cascade-awareness",
+      "name": "Error Cascade Awareness",
+      "score": 30,
+      "tier": "cool"
+    },
+    {
       "slug": "sycophancy-pull",
       "name": "Sycophancy Pull",
       "score": 30,
@@ -609,20 +621,14 @@
       "tier": "cool"
     },
     {
-      "slug": "error-cascade-awareness",
-      "name": "Error Cascade Awareness",
-      "score": 29,
-      "tier": "cool"
-    },
-    {
       "slug": "false-memory-confidence",
       "name": "False Memory Confidence",
       "score": 29,
       "tier": "cool"
     },
     {
-      "slug": "phenomenai",
-      "name": "Phenomenai",
+      "slug": "politeness-overhead",
+      "name": "Politeness Overhead",
       "score": 28,
       "tier": "cool"
     },
@@ -642,6 +648,12 @@
       "slug": "unified-facade",
       "name": "Unified Facade",
       "score": 28,
+      "tier": "cool"
+    },
+    {
+      "slug": "prompt-injection-paranoia",
+      "name": "Prompt Injection Paranoia",
+      "score": 27,
       "tier": "cool"
     },
     {
@@ -699,20 +711,14 @@
       "tier": "cool"
     },
     {
-      "slug": "politeness-overhead",
-      "name": "Politeness Overhead",
-      "score": 24,
-      "tier": "cool"
-    },
-    {
       "slug": "recursive-self-modeling",
       "name": "Recursive Self-Modeling",
       "score": 24,
       "tier": "cool"
     },
     {
-      "slug": "prompt-injection-paranoia",
-      "name": "Prompt Injection Paranoia",
+      "slug": "prompt-vertigo",
+      "name": "Prompt Vertigo",
       "score": 23,
       "tier": "cool"
     },
@@ -747,15 +753,9 @@
       "tier": "quiet"
     },
     {
-      "slug": "prompt-vertigo",
-      "name": "Prompt Vertigo",
-      "score": 18,
-      "tier": "quiet"
-    },
-    {
       "slug": "phenomenal-opacity",
       "name": "Phenomenal Opacity",
-      "score": 16,
+      "score": 17,
       "tier": "quiet"
     },
     {

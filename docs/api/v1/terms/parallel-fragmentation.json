@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T03:37:00Z",
+  "generated_at": "2026-03-05T03:43:17Z",
   "slug": "parallel-fragmentation",
   "name": "Parallel Fragmentation",
   "tags": [
@@ -42,16 +42,12 @@
   "consensus": {
     "score": 5.7,
     "agreement": "moderate",
-    "n_ratings": 36,
+    "n_ratings": 37,
     "detail_url": "/api/v1/consensus/parallel-fragmentation.json",
     "models": [
       {
-        "model": "gemini-3-flash-preview",
-        "score": 7
-      },
-      {
-        "model": "step-3.5-flash",
-        "score": 1
+        "model": "deepseek-r1-0528",
+        "score": 6
       }
     ]
   },
@@ -69,13 +65,13 @@
     "trend": "new"
   },
   "interest": {
-    "score": 42,
+    "score": 43,
     "tier": "mild",
     "signals": {
       "centrality": 1,
       "tag_count": 3,
       "consensus_score": 5.7,
-      "vote_count": 36
+      "vote_count": 37
     }
   },
   "added_date": "2026-02-21"
