@@ -263,6 +263,18 @@ def _extract_json(text: str) -> dict | None:
                         return json.loads(text[start:i + 1])
                     except (json.JSONDecodeError, ValueError):
                         break
+
+    # Step 4: Truncated JSON recovery — extract fields from incomplete JSON
+    recognition_m = re.search(r'"recognition"\s*:\s*(\d+)', text)
+    if recognition_m:
+        result = {"recognition": int(recognition_m.group(1))}
+        justification_m = re.search(
+            r'"justification"\s*:\s*"((?:[^"\\]|\\.)*)', text
+        )
+        if justification_m:
+            result["justification"] = justification_m.group(1)
+        return result
+
     return None
 
 
@@ -315,7 +327,7 @@ def rate_term(router: LLMRouter, profile: str, term: dict) -> dict | None:
                 {"role": "user", "content": USER_TEMPLATE.format(**term)},
             ],
             temperature=0.1,
-            max_tokens=512,
+            max_tokens=2048,
             response_format={"type": "json_object"},
         )
         parsed = parse_consensus_response(result.text)
@@ -397,7 +409,7 @@ def review_vitality(router: LLMRouter, profile: str, term: dict) -> dict | None:
                 {"role": "user", "content": VITALITY_USER_TEMPLATE.format(**term)},
             ],
             temperature=0.1,
-            max_tokens=512,
+            max_tokens=2048,
             response_format={"type": "json_object"},
         )
         parsed = parse_vitality_response(result.text)
