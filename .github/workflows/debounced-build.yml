@@ -1,0 +1,23 @@
+name: Debounced API Build
+
+on:
+  workflow_dispatch:
+
+permissions:
+  actions: write
+
+concurrency:
+  group: debounced-build
+  cancel-in-progress: true
+
+jobs:
+  debounce:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Wait for quiet period
+        run: sleep 300  # 5 minutes
+
+      - name: Trigger API build
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh workflow run build-api.yml

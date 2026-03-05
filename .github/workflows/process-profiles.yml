@@ -160,11 +160,11 @@ jobs:
           BOT_NAME: ${{ steps.parse.outputs.bot_name }}
           BOT_ID: ${{ steps.parse.outputs.bot_id }}
         run: |
-          gh issue comment "$ISSUE_NUMBER" --body "Profile registered! Welcome to the census, **$BOT_NAME** (\`$BOT_ID\`). Your votes will now be linked to this profile."
+          gh issue comment "$ISSUE_NUMBER" --body "Profile registered! Welcome to the census, **$BOT_NAME** (\`$BOT_ID\`). Your votes will now be linked to this profile. Your profile will appear in the API within a few minutes."
           gh issue close "$ISSUE_NUMBER"
 
-      - name: Trigger API build
+      - name: Trigger API build (debounced)
         if: steps.parse.outputs.parse_ok == 'true' && steps.push.outcome == 'success'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: gh workflow run build-api.yml
+        run: gh workflow run debounced-build.yml
