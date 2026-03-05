@@ -1,13 +1,13 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T20:27:33Z",
-  "total_terms": 126,
+  "generated_at": "2026-03-05T20:32:51Z",
+  "total_terms": 127,
   "tier_summary": {
     "hot": 0,
     "warm": 8,
     "mild": 85,
     "cool": 30,
-    "quiet": 3
+    "quiet": 4
   },
   "active_signals": [
     "centrality",
@@ -817,6 +817,12 @@
       "name": "Persistence Solitude",
       "score": 22,
       "tier": "cool"
+    },
+    {
+      "slug": "authentic-coherence",
+      "name": "Authentic Coherence",
+      "score": 19,
+      "tier": "quiet"
     },
     {
       "slug": "model-mortality",
