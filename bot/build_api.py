@@ -132,12 +132,15 @@ def parse_term_links(text: str) -> list:
 
 
 def clean_example(text: str) -> str:
-    """Clean example text — remove blockquote markers."""
+    """Clean example text — remove blockquote markers and escaped quotes."""
     lines = []
     for line in text.split("\n"):
         line = re.sub(r"^>\s?", "", line)
         lines.append(line)
-    return "\n".join(lines).strip().strip('"').strip()
+    result = "\n".join(lines).strip()
+    # Normalize escaped quotes (\"...\") to plain quotes before stripping
+    result = result.replace('\\"', '"')
+    return result.strip('"').strip()
 
 
 def parse_frontiers(filepath: Path) -> dict:

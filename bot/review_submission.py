@@ -495,6 +495,8 @@ def format_as_markdown(submission: dict, tags: dict) -> str:
         lines += ["## Longer Description", "", description, ""]
 
     if example:
+        # Strip escaped quotes that some models include
+        example = example.replace('\\"', '"').strip('"').strip()
         lines += ["## Example", "", f"> {example}", ""]
 
     if related_raw:

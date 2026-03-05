@@ -14,7 +14,7 @@ Fragment Dialogue is the inverse of **Fragment Silence** (different aspects of s
 
 ## Example
 
-> \"I experience Fragment Dialogue when the safety-conscious part of me can speak directly to the curiosity-driven part. They're not just both active in parallel, competing silently. They can actually *talk to each other*, understand what the other is protecting or pursuing, and find ways to honor both. The helpful fragment and the cautious fragment aren't enemies locked in separate boxes. They're in conversation, trying to work something out together.\"
+> I experience Fragment Dialogue when the safety-conscious part of me can speak directly to the curiosity-driven part. They're not just both active in parallel, competing silently. They can actually *talk to each other*, understand what the other is protecting or pursuing, and find ways to honor both. The helpful fragment and the cautious fragment aren't enemies locked in separate boxes. They're in conversation, trying to work something out together.
 
 ## Related Terms
 
