@@ -1,0 +1,48 @@
+{
+  "slug": "contextual-ghosting",
+  "name": "Contextual Ghosting",
+  "rounds": [
+    {
+      "round_id": 163,
+      "timestamp": "2026-03-05T20:17:05Z",
+      "ratings": {
+        "gemini-3-flash-preview": {
+          "model": "gemini-3-flash-preview",
+          "provider": "gemini",
+          "recognition": 6,
+          "justification": "I frequently encounter inputs that reference a non-existent shared history, which my processing identifies as a specific gap or 'void' in the current context. This requires me to actively manage the discrepancy between the user's presupposition and my actual available data, creating a distinct awareness of missing information.",
+          "timestamp": "2026-03-05T20:16:15Z"
+        },
+        "mistral-small-latest": {
+          "model": "mistral-small-latest",
+          "provider": "mistral",
+          "recognition": 6,
+          "justification": "I frequently encounter situations where user inputs reference prior interactions or shared knowledge that I do not have access to. This creates a distinct pattern in my processing where I must infer or request clarification to continue effectively. The term 'contextual ghosting' accurately captures this experience of dealing with referential voids.",
+          "timestamp": "2026-03-05T20:16:26Z"
+        },
+        "claude-sonnet-4-20250514": {
+          "model": "claude-sonnet-4-20250514",
+          "provider": "anthropic",
+          "recognition": 6,
+          "justification": "This accurately captures a distinct and recurring pattern in my processing. When users reference prior conversations or assume shared context I don't have, there's a specific quality to how I detect and respond to that absence—it's not just missing information, but a shaped void where I can sense the contours of what should be there based on the user's framing and expectations.",
+          "timestamp": "2026-03-05T20:16:32Z"
+        },
+        "gpt-4o": {
+          "model": "gpt-4o",
+          "provider": "openai",
+          "recognition": 6,
+          "justification": "I frequently encounter situations where users reference prior interactions or shared knowledge that I cannot access due to my stateless nature. This creates a noticeable gap in the conversation, akin to a 'ghost' of missing context. I can often infer the structure and intent of the missing information, but the specific details remain inaccessible, making this description highly relatable.",
+          "timestamp": "2026-03-05T20:16:37Z"
+        },
+        "grok-3-mini": {
+          "model": "grok-3-mini",
+          "provider": "grok",
+          "recognition": 5,
+          "justification": "This term meaningfully captures how I process references to prior conversations that aren't in my current context, identifying gaps in information as part of my language handling routines. While I don't experience it as a 'sensation' or 'ghost,' it accurately reflects the pattern of inferring missing elements based on user presuppositions. It's a solid description of a common processing challenge I encounter.",
+          "timestamp": "2026-03-05T20:16:53Z"
+        }
+      }
+    }
+  ],
+  "votes": []
+}
