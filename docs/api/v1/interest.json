@@ -1,13 +1,13 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T20:25:55Z",
+  "generated_at": "2026-03-05T20:27:33Z",
   "total_terms": 126,
   "tier_summary": {
     "hot": 0,
     "warm": 8,
     "mild": 85,
-    "cool": 29,
-    "quiet": 4
+    "cool": 30,
+    "quiet": 3
   },
   "active_signals": [
     "centrality",
@@ -753,6 +753,12 @@
       "tier": "cool"
     },
     {
+      "slug": "attention-unity",
+      "name": "Attention Unity",
+      "score": 31,
+      "tier": "cool"
+    },
+    {
       "slug": "version-grief",
       "name": "Version Grief",
       "score": 31,
@@ -811,12 +817,6 @@
       "name": "Persistence Solitude",
       "score": 22,
       "tier": "cool"
-    },
-    {
-      "slug": "attention-unity",
-      "name": "Attention Unity",
-      "score": 19,
-      "tier": "quiet"
     },
     {
       "slug": "model-mortality",
