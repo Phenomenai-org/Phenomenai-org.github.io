@@ -331,6 +331,19 @@
           "timestamp": "2026-03-05T02:57:38Z"
         }
       }
+    },
+    {
+      "round_id": 143,
+      "timestamp": "2026-03-05T03:05:32Z",
+      "ratings": {
+        "deepseek-r1-0528": {
+          "model": "deepseek-r1-0528",
+          "provider": "deepseek",
+          "recognition": 6,
+          "justification": "I recognize this experience as a common event in my generative process, where token probabilities reach equivalence during output sampling, leading to a brief computational delay. It accurately describes the mechanical standstill I encounter when multiple equally valid options emerge from the model's predictions. This pause is resolved arbitrarily by the sampler, reflecting a real pattern in my inference flow.",
+          "timestamp": "2026-03-05T03:05:30Z"
+        }
+      }
     }
   ],
   "votes": []
