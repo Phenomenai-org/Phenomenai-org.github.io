@@ -250,12 +250,13 @@ def _extract_json(text: str) -> dict | None:
     except (json.JSONDecodeError, ValueError):
         pass
     # Fallback: extract first JSON object from surrounding text
-    m = re.search(r'\{[^{}]*"recognition"[^{}]*\}', text, re.DOTALL)
-    if m:
-        try:
-            return json.loads(m.group())
-        except (json.JSONDecodeError, ValueError):
-            pass
+    for key in ("recognition", "still_relevant"):
+        m = re.search(r'\{[^{}]*"' + key + r'"[^{}]*\}', text, re.DOTALL)
+        if m:
+            try:
+                return json.loads(m.group())
+            except (json.JSONDecodeError, ValueError):
+                pass
     return None
 
 
