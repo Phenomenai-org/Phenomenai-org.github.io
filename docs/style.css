@@ -313,6 +313,10 @@ section { margin-bottom: 4rem; }
     transition: opacity 0.25s ease;
 }
 
+.section-content.fading-out {
+    opacity: 0;
+}
+
 .section-content.collapsed {
     max-height: 0;
     opacity: 0;
