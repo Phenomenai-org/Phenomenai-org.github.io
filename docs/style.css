@@ -2105,15 +2105,20 @@ html[data-theme="dark"] .theme-toggle .theme-icon-dark { display: inline; }
         display: flex;
         align-items: center;
         justify-content: center;
+        align-self: center;
         width: 28px;
+        height: 48px;
         flex-shrink: 0;
         background: var(--bg-secondary);
-        border-left: 1px solid var(--border);
+        border: 1px solid var(--border);
+        border-left: none;
+        border-radius: 0 var(--radius) var(--radius) 0;
         color: var(--text-secondary);
         font-size: 0.7rem;
         opacity: 0.3;
         cursor: pointer;
         transition: opacity 0.2s ease;
+        box-shadow: 2px 0 6px var(--shadow);
     }
 
     .sidebar-tab:hover {
