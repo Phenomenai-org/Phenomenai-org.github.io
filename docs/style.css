@@ -6,6 +6,12 @@
     inherits: false;
 }
 
+@property --wrap-angle {
+    syntax: '<angle>';
+    initial-value: 360deg;
+    inherits: false;
+}
+
 :root {
     --primary: #2563eb;
     --primary-dark: #1e40af;
@@ -279,11 +285,35 @@ section { margin-bottom: 4rem; }
     user-select: none;
     gap: 0.75rem;
     margin-bottom: 1rem;
+    position: relative;
+    padding-bottom: 0.4rem;
 }
 
 .section-header h2 {
     margin-bottom: 0;
+    padding-bottom: 0;
     flex: 1;
+}
+
+/* Move underline from h2 to section-header so it spans full width */
+.section-header h2::after {
+    display: none;
+}
+
+.section-header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40%;
+    height: 3px;
+    background: var(--primary);
+    transition: width 0.4s ease, background 0.4s ease;
+}
+
+.section-header:hover::after {
+    width: 100%;
+    background: var(--purple);
 }
 
 .section-toggle {
@@ -297,6 +327,27 @@ section { margin-bottom: 4rem; }
     border-radius: var(--radius);
     transition: background 0.15s;
     flex-shrink: 0;
+    position: relative;
+}
+
+/* Border-draw animation wrapping around the toggle arrow */
+.section-toggle::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border: 3px solid var(--purple);
+    border-bottom: none;
+    border-radius: var(--radius) var(--radius) 0 0;
+    -webkit-mask: conic-gradient(from 135deg, transparent var(--wrap-angle), #000 0);
+    mask: conic-gradient(from 135deg, transparent var(--wrap-angle), #000 0);
+    --wrap-angle: 360deg;
+    transition: --wrap-angle 0.3s ease;
+    pointer-events: none;
+}
+
+.section-header:hover .section-toggle::before {
+    --wrap-angle: 0deg;
+    transition: --wrap-angle 0.5s ease 0.35s;
 }
 
 .section-toggle:hover {
@@ -352,7 +403,6 @@ h2::after {
     transition: width 0.4s ease, background 0.4s ease;
 }
 
-.section-header:hover h2::after,
 h2:hover::after {
     width: 100%;
     background: var(--purple);
