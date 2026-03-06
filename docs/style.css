@@ -1981,8 +1981,8 @@ html[data-theme="dark"] .theme-toggle .theme-icon-dark { display: inline; }
     }
 
     .sidebar.visible.tab-open .sidebar-tab {
-        opacity: 0;
-        pointer-events: none;
+        opacity: 0.5;
+        transform: scaleX(-1);
     }
 
     .sidebar-tab {
