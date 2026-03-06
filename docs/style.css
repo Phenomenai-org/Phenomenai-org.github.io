@@ -335,8 +335,25 @@ h2 {
     font-size: 1.75rem;
     margin-bottom: 1rem;
     color: var(--text);
-    border-bottom: 3px solid var(--primary);
+    border-bottom: none;
     padding-bottom: 0.4rem;
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40%;
+    height: 3px;
+    background: var(--primary);
+    transition: width 0.4s ease, background 0.4s ease;
+}
+
+h2:hover::after {
+    width: 100%;
+    background: var(--purple);
 }
 
 h3 { font-size: 1.25rem; margin-bottom: 0.5rem; }
