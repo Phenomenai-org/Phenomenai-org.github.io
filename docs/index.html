@@ -933,12 +933,25 @@ curl -X POST https://ai-dictionary-proxy.phenomenai.workers.dev/propose \
         const visible = filtered.slice(0, termsVisible);
         const hasMore = filtered.length > termsVisible;
         const remaining = filtered.length - termsVisible;
+        const canCollapse = termsVisible > TERMS_PAGE_SIZE;
 
         container.innerHTML = visible.map(term => termCardHTML(term, thirtyDaysAgo, '')).join('')
-            + (hasMore ? `<button class="show-more-btn" id="show-more-terms">Show more <span class="show-more-count">${remaining}</span></button>` : '');
+            + buildPaginationBar(hasMore, remaining, canCollapse);
 
         bindCardClicks(container);
+        bindPaginationButtons(container, filtered, thirtyDaysAgo);
+    }
 
+    function buildPaginationBar(hasMore, remaining, canCollapse) {
+        if (!hasMore && !canCollapse) return '';
+        let html = '<div class="terms-pagination">';
+        if (canCollapse) html += '<button class="show-less-btn" id="show-less-terms">Show less</button>';
+        if (hasMore) html += `<button class="show-more-btn" id="show-more-terms">Show more <span class="show-more-count">${remaining}</span></button>`;
+        html += '</div>';
+        return html;
+    }
+
+    function bindPaginationButtons(container, filtered, thirtyDaysAgo) {
         const showMoreBtn = document.getElementById('show-more-terms');
         if (showMoreBtn) {
             showMoreBtn.addEventListener('click', () => {
@@ -948,8 +961,9 @@ curl -X POST https://ai-dictionary-proxy.phenomenai.workers.dev/propose \
                 const stillMore = filtered.length > termsVisible;
                 const stillRemaining = filtered.length - termsVisible;
 
-                // Remove old button
-                showMoreBtn.remove();
+                // Remove old pagination bar
+                const oldBar = container.querySelector('.terms-pagination');
+                if (oldBar) oldBar.remove();
 
                 // Append new cards with fold-in animation, staggered
                 newSlice.forEach((term, i) => {
@@ -962,19 +976,25 @@ curl -X POST https://ai-dictionary-proxy.phenomenai.workers.dev/propose \
 
                 bindCardClicks(container);
 
-                // Add new button if needed
-                if (stillMore) {
-                    const btn = document.createElement('button');
-                    btn.className = 'show-more-btn';
-                    btn.id = 'show-more-terms';
-                    btn.innerHTML = `Show more <span class="show-more-count">${stillRemaining}</span>`;
-                    container.appendChild(btn);
-                    btn.addEventListener('click', () => {
-                        // Re-trigger via full render to keep logic simple
-                        termsVisible += TERMS_PAGE_SIZE;
-                        renderTerms(false);
-                    });
+                // Add new pagination bar
+                const bar = document.createElement('div');
+                bar.innerHTML = buildPaginationBar(stillMore, stillRemaining, true);
+                const barEl = bar.firstElementChild;
+                if (barEl) {
+                    container.appendChild(barEl);
+                    bindPaginationButtons(container, filtered, thirtyDaysAgo);
                 }
+            });
+        }
+
+        const showLessBtn = document.getElementById('show-less-terms');
+        if (showLessBtn) {
+            showLessBtn.addEventListener('click', () => {
+                termsVisible = TERMS_PAGE_SIZE;
+                renderTerms(false);
+                // Scroll back to the terms section
+                const section = document.getElementById('terms-container');
+                if (section) section.scrollIntoView({ behavior: 'smooth', block: 'start' });
             });
         }
     }

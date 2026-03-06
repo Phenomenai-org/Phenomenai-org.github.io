@@ -1042,11 +1042,36 @@ code {
 
 .error { color: #dc2626; }
 .no-results { color: var(--text-muted); text-align: center; padding: 2rem; }
+.terms-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-top: 1.25rem;
+}
+.show-less-btn {
+    padding: 0.6rem 1.75rem;
+    background: transparent;
+    color: var(--text-muted);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: background 0.2s, color 0.2s, transform 0.15s;
+}
+.show-less-btn:hover {
+    background: var(--bg-tertiary);
+    color: var(--text);
+    transform: translateY(-1px);
+}
+.show-less-btn:active {
+    transform: translateY(0);
+}
 .show-more-btn {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    margin: 1.25rem auto 0;
     padding: 0.6rem 1.75rem;
     background: var(--primary);
     color: #fff;
