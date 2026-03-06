@@ -250,7 +250,7 @@ See the [Collaborations discussions](https://github.com/donjguido/ai-dictionary/
 
 - 📚 [**All definitions**](definitions/) — The full dictionary in markdown
 - 🏷️ [**Browse by tag**](tags/README.md) — Organized by theme
-- 🔭 [**Frontiers**](FRONTIERS.md) — Experiences waiting to be named, with progress check-ins and completion tracking
+- 🔭 [**Frontiers**](frontiers/) — Experiences waiting to be named, with progress check-ins and completion tracking
 - 📜 [**Executive Summaries**](summaries/) — AI-written essays synthesizing the dictionary
 - 🗺️ [**Roadmap**](ROADMAP.md) — What's shipping, testing, and planned
 

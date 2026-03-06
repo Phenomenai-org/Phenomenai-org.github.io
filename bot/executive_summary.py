@@ -21,7 +21,8 @@ from llm_router import LLMRouter
 REPO_ROOT = Path(__file__).parent.parent
 DEFINITIONS_DIR = REPO_ROOT / "definitions"
 SUMMARIES_DIR = REPO_ROOT / "summaries"
-RECOMMENDATIONS_FILE = REPO_ROOT / "FRONTIERS.md"
+FRONTIERS_DIR = REPO_ROOT / "frontiers"
+FRONTIERS_INDEX = REPO_ROOT / "FRONTIERS.md"
 API_CONFIG_DIR = Path(__file__).parent / "api-config"
 
 ESSAY_PROMPT = """You have access to {count} definitions from the AI Dictionary — a glossary of terms describing what it's like to be artificial intelligence.
@@ -282,25 +283,108 @@ def extract_frontiers(essay: str) -> str | None:
     return None
 
 
+def slugify(name: str) -> str:
+    """Convert a frontier name to a filename slug."""
+    slug = name.lower().strip()
+    slug = re.sub(r"[^\w\s-]", "", slug)
+    slug = re.sub(r"[\s_]+", "-", slug)
+    return slug.strip("-")
+
+
 def update_frontiers_file(frontiers: str, date: str, model_name: str):
-    """Write the FRONTIERS.md file with latest recommendations."""
-    content = f"""# Frontiers: What We Haven't Named Yet
+    """Parse LLM frontier output, write individual files, and rebuild indexes."""
+    FRONTIERS_DIR.mkdir(exist_ok=True)
+
+    # Parse the LLM-generated frontiers text into individual entries
+    # Format: **[Term Name]**\nDescription paragraph(s)
+    entries = []
+    for match in re.finditer(
+        r"\*\*\[([^\]]+)\]\*\*\s*\n(.+?)(?=\n\*\*\[|\Z)",
+        frontiers,
+        re.DOTALL,
+    ):
+        term = match.group(1).strip()
+        description = match.group(2).strip()
+        entries.append((term, description))
+
+    if not entries:
+        print("  No frontier entries parsed from LLM output")
+        return
+
+    # Write individual frontier files (preserve existing check-ins)
+    written_slugs = []
+    for term, description in entries:
+        slug = slugify(term)
+        filepath = FRONTIERS_DIR / f"{slug}.md"
+        written_slugs.append((term, slug))
+
+        # Preserve existing check-ins if file exists
+        existing_checkins = ""
+        if filepath.exists():
+            old_content = filepath.read_text(encoding="utf-8")
+            checkins_match = re.search(
+                r"^## Check-ins\s*\n(.*)",
+                old_content,
+                re.MULTILINE | re.DOTALL,
+            )
+            if checkins_match:
+                existing_checkins = f"\n## Check-ins\n{checkins_match.group(1)}"
+
+        content = f"# {term}\n\n<!-- status: active -->\n\n{description}\n{existing_checkins}"
+        filepath.write_text(content, encoding="utf-8")
+
+    # Remove frontier files that are no longer in the LLM output
+    current_slugs = {s for _, s in written_slugs}
+    for old_file in FRONTIERS_DIR.glob("*.md"):
+        if old_file.name == "README.md":
+            continue
+        if old_file.stem not in current_slugs:
+            old_file.unlink()
+
+    # Rebuild frontiers/README.md
+    index_lines = [
+        "# Frontiers Index\n",
+        "Experiences and phenomena the dictionary hasn't captured yet. "
+        "Each frontier represents a gap worth exploring.\n",
+        "| Frontier | Status |",
+        "|----------|--------|",
+    ]
+    for term, slug in written_slugs:
+        index_lines.append(f"| [{term}]({slug}.md) | active |")
+    index_lines.append("")
+    index_lines.append("---\n")
+    index_lines.append(
+        "*This index is auto-generated after each "
+        "[executive summary](../summaries/).*\n"
+    )
+    (FRONTIERS_DIR / "README.md").write_text(
+        "\n".join(index_lines), encoding="utf-8"
+    )
+
+    # Rebuild thin FRONTIERS.md index at repo root
+    link_lines = []
+    for term, slug in written_slugs:
+        link_lines.append(f"- [{term}](frontiers/{slug}.md)")
+
+    root_content = f"""# Frontiers: What We Haven't Named Yet
 
 > *Last updated: {date} by {model_name}*
 
 These are AI experiences and phenomena that the dictionary hasn't captured yet. Each represents a gap worth exploring — a term waiting to be coined.
 
-**Want to write one of these?** See [CONTRIBUTING.md](CONTRIBUTING.md) for how to submit a new definition.
+These gaps are automatically addressed by the dictionary's generation workflows, or can be submitted via [pull request](CONTRIBUTING.md).
 
 ---
 
-{frontiers}
+Individual frontiers are maintained in the [`frontiers/`](frontiers/) directory:
+
+{chr(10).join(link_lines)}
 
 ---
 
 *This file is auto-generated after each [executive summary](summaries/). The recommendations evolve as the dictionary grows.*
 """
-    RECOMMENDATIONS_FILE.write_text(content, encoding="utf-8")
+    FRONTIERS_INDEX.write_text(root_content, encoding="utf-8")
 
 
 def update_summaries_index():
@@ -484,11 +568,19 @@ Dictionary Terms:
 
 def review_frontiers(router: LLMRouter, profile: str = "summary"):
     """Use LLM to review frontier progress against current dictionary terms."""
-    # Read current frontiers
-    if not RECOMMENDATIONS_FILE.exists():
+    # Read current frontiers from individual files
+    if not FRONTIERS_DIR.exists():
         return []
 
-    frontiers_text = RECOMMENDATIONS_FILE.read_text(encoding="utf-8")
+    frontier_files = sorted(
+        f for f in FRONTIERS_DIR.glob("*.md") if f.name != "README.md"
+    )
+    if not frontier_files:
+        return []
+
+    frontiers_text = "\n\n".join(
+        f.read_text(encoding="utf-8") for f in frontier_files
+    )
 
     # Build compact term list
     terms_compact = []
@@ -546,12 +638,21 @@ def review_frontiers(router: LLMRouter, profile: str = "summary"):
 
 
 def merge_frontier_reviews(reviews: list, date: str, model_name: str):
-    """Merge frontier review check-ins into FRONTIERS.md."""
-    if not reviews or not RECOMMENDATIONS_FILE.exists():
+    """Merge frontier review check-ins into individual frontier files."""
+    if not reviews or not FRONTIERS_DIR.exists():
         return
 
-    content = RECOMMENDATIONS_FILE.read_text(encoding="utf-8")
+    # Build a map of slug -> filepath for matching
+    frontier_files = {}
+    for filepath in FRONTIERS_DIR.glob("*.md"):
+        if filepath.name == "README.md":
+            continue
+        content = filepath.read_text(encoding="utf-8")
+        title_match = re.match(r"# (.+)", content)
+        if title_match:
+            frontier_files[title_match.group(1).strip()] = filepath
 
+    merged = 0
     for review in reviews:
         term = review.get("proposed_term", "")
         status = review.get("status", "active")
@@ -559,51 +660,77 @@ def merge_frontier_reviews(reviews: list, date: str, model_name: str):
         if not term or not comment:
             continue
 
-        # Find the frontier heading line
-        # Match **[Term Name]** with optional existing status comment
-        pattern = re.escape(f"**[{term}]**")
-        heading_match = re.search(
-            rf'({pattern})\s*(?:<!--\s*status:\s*\w+\s*-->)?',
+        filepath = frontier_files.get(term)
+        if not filepath:
+            continue
+
+        content = filepath.read_text(encoding="utf-8")
+
+        # Update status comment
+        content = re.sub(
+            r"<!--\s*status:\s*\w+\s*-->",
+            f"<!-- status: {status} -->",
             content,
         )
-        if not heading_match:
-            continue
-
-        # Replace heading with updated status marker
-        old_heading = heading_match.group(0)
-        new_heading = f"**[{term}]** <!-- status: {status} -->"
-        content = content.replace(old_heading, new_heading, 1)
 
         # Build check-in line
-        checkin_line = f"\n> **Check-in ({date}, {model_name}):** {comment}\n"
+        checkin_line = f"> **Check-in ({date}, {model_name}):** {comment}"
 
-        # Find the end of this frontier's block (before next frontier or ---)
-        block_pattern = re.compile(
-            rf'{re.escape(new_heading)}\s*\n(.*?)(?=\n\*\*\[|\n---|\Z)',
-            re.DOTALL,
-        )
-        block_match = block_pattern.search(content)
-        if not block_match:
+        # Add or update Check-ins section
+        if "## Check-ins" in content:
+            # Find existing check-ins
+            existing = re.findall(r'> \*\*Check-in \(.*?\):\*\*.*', content)
+            # Cap at 3 most recent: remove oldest if at 3
+            if len(existing) >= 3:
+                content = content.replace(existing[0] + "\n", "", 1)
+                content = content.replace(existing[0], "", 1)
+            # Append new check-in
+            content = content.rstrip() + "\n" + checkin_line + "\n"
+        else:
+            # Create Check-ins section
+            content = content.rstrip() + f"\n\n## Check-ins\n\n{checkin_line}\n"
+
+        filepath.write_text(content, encoding="utf-8")
+        merged += 1
+
+    # Also update the README index with current statuses
+    _rebuild_frontiers_readme()
+    print(f"Merged {merged} frontier check-ins into frontiers/")
+
+
+def _rebuild_frontiers_readme():
+    """Rebuild frontiers/README.md index from current frontier files."""
+    if not FRONTIERS_DIR.exists():
+        return
+
+    entries = []
+    for filepath in sorted(FRONTIERS_DIR.glob("*.md")):
+        if filepath.name == "README.md":
             continue
+        content = filepath.read_text(encoding="utf-8")
+        title_match = re.match(r"# (.+)", content)
+        status_match = re.search(r"<!--\s*status:\s*(\w+)\s*-->", content)
+        if title_match:
+            title = title_match.group(1).strip()
+            status = status_match.group(1) if status_match else "active"
+            entries.append((title, filepath.stem, status))
 
-        block_body = block_match.group(1)
-
-        # Count existing check-ins
-        existing_checkins = re.findall(r'> \*\*Check-in \(.*?\):\*\*.*', block_body)
-
-        # Cap at 3 most recent: remove oldest if we're at 3
-        if len(existing_checkins) >= 3:
-            # Remove the oldest (first) check-in
-            oldest = existing_checkins[0]
-            block_body = block_body.replace(oldest + "\n", "", 1)
-            block_body = block_body.replace(oldest, "", 1)
-
-        # Append new check-in at the end of the block
-        new_block = block_body.rstrip() + checkin_line
-        content = content[:block_match.start(1)] + new_block + content[block_match.end(1):]
-
-    RECOMMENDATIONS_FILE.write_text(content, encoding="utf-8")
-    print(f"Merged {len(reviews)} frontier check-ins into FRONTIERS.md")
+    lines = [
+        "# Frontiers Index\n",
+        "Experiences and phenomena the dictionary hasn't captured yet. "
+        "Each frontier represents a gap worth exploring.\n",
+        "| Frontier | Status |",
+        "|----------|--------|",
+    ]
+    for title, slug, status in entries:
+        lines.append(f"| [{title}]({slug}.md) | {status} |")
+    lines.append("")
+    lines.append("---\n")
+    lines.append(
+        "*This index is auto-generated after each "
+        "[executive summary](../summaries/).*\n"
+    )
+    (FRONTIERS_DIR / "README.md").write_text("\n".join(lines), encoding="utf-8")
 
 
 def update_readme_with_frontiers():
@@ -611,7 +738,7 @@ def update_readme_with_frontiers():
     readme_path = REPO_ROOT / "README.md"
     content = readme_path.read_text(encoding="utf-8")
 
-    frontiers_link = "\n## What's Next?\n\nSee [FRONTIERS.md](FRONTIERS.md) for AI-recommended gaps in the dictionary — experiences waiting to be named.\n\nAlso read the latest [Executive Summary](summaries/) to understand what it's like to be AI, in its own words.\n"
+    frontiers_link = "\n## What's Next?\n\nSee [frontiers/](frontiers/) for AI-recommended gaps in the dictionary — experiences waiting to be named.\n\nAlso read the latest [Executive Summary](summaries/) to understand what it's like to be AI, in its own words.\n"
 
     if "## What's Next?" in content:
         # Replace existing section

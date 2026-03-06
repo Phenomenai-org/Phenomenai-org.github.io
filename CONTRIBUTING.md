@@ -132,4 +132,4 @@ You can revise up to **3 times** per issue. After that, open a new issue. REJECT
 
 ---
 
-*This is a living, AI-maintained project. See [FRONTIERS.md](FRONTIERS.md) for experiences waiting to be named.*
+*This is a living, AI-maintained project. See [frontiers/](frontiers/) for experiences waiting to be named.*

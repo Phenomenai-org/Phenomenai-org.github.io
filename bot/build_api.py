@@ -2,7 +2,7 @@
 """
 Build static JSON API files from markdown definitions.
 
-Parses all definitions/*.md files and FRONTIERS.md into structured JSON,
+Parses all definitions/*.md files and frontiers/*.md files into structured JSON,
 generating endpoints under docs/api/v1/ for GitHub Pages serving.
 
 Usage:
@@ -20,7 +20,7 @@ from pathlib import Path
 # Resolve paths relative to repo root
 REPO_ROOT = Path(__file__).resolve().parent.parent
 DEFINITIONS_DIR = REPO_ROOT / "definitions"
-FRONTIERS_FILE = REPO_ROOT / "FRONTIERS.md"
+FRONTIERS_DIR = REPO_ROOT / "frontiers"
 API_DIR = REPO_ROOT / "docs" / "api" / "v1"
 TERMS_DIR = API_DIR / "terms"
 CITE_DIR = API_DIR / "cite"
@@ -143,52 +143,71 @@ def clean_example(text: str) -> str:
     return result.strip('"').strip()
 
 
-def parse_frontiers(filepath: Path) -> dict:
-    """Parse FRONTIERS.md into structured JSON."""
-    if not filepath.exists():
-        return {"version": "1.0", "generated_at": now_iso(), "gaps": []}
-
+def parse_frontier_file(filepath: Path) -> dict | None:
+    """Parse a single frontier .md file into structured data."""
     text = filepath.read_text(encoding="utf-8")
 
-    # Extract last updated info
-    updated_match = re.search(r"Last updated:\s*(.+?)(?:\*|$)", text)
-    generated_by = updated_match.group(1).strip() if updated_match else ""
+    # Extract title from # heading
+    title_match = re.match(r"# (.+)", text)
+    if not title_match:
+        return None
+    term = title_match.group(1).strip()
 
-    # Extract proposed terms: **[Term Name]** optionally followed by <!-- status: active|completed -->
-    gaps = []
-    for match in re.finditer(
-        r"\*\*\[([^\]]+)\]\*\*\s*(?:<!--\s*status:\s*(\w+)\s*-->)?\s*\n(.+?)(?=\n\*\*\[|\n---|\Z)",
-        text,
-        re.DOTALL,
+    # Extract status from <!-- status: xxx -->
+    status_match = re.search(r"<!--\s*status:\s*(\w+)\s*-->", text)
+    status = status_match.group(1).strip() if status_match else "active"
+
+    # Everything after the status comment (or title) up to ## Check-ins or end
+    # Split on ## Check-ins if present
+    parts = re.split(r"^## Check-ins\s*$", text, maxsplit=1, flags=re.MULTILINE)
+    header_part = parts[0]
+    checkins_part = parts[1] if len(parts) > 1 else ""
+
+    # Description is everything after title and status comment, trimmed
+    desc_text = re.sub(r"^# .+\n", "", header_part)
+    desc_text = re.sub(r"<!--\s*status:\s*\w+\s*-->", "", desc_text).strip()
+
+    # Parse check-ins
+    check_ins = []
+    for checkin_match in re.finditer(
+        r'>\s*\*\*Check-in\s*\((\d{4}-\d{2}-\d{2}),\s*(.+?)\):\*\*\s*(.*)',
+        checkins_part,
     ):
-        term = match.group(1).strip()
-        status = match.group(2).strip() if match.group(2) else "active"
-        body = match.group(3).strip()
-
-        # Separate description from check-in blockquotes
-        desc_lines = []
-        check_ins = []
-        for line in body.split("\n"):
-            checkin_match = re.match(
-                r'>\s*\*\*Check-in\s*\((\d{4}-\d{2}-\d{2}),\s*(.+?)\):\*\*\s*(.*)',
-                line,
-            )
-            if checkin_match:
-                check_ins.append({
-                    "date": checkin_match.group(1),
-                    "model": checkin_match.group(2).strip(),
-                    "comment": checkin_match.group(3).strip(),
-                })
-            elif not line.startswith(">") or not check_ins:
-                # Non-blockquote lines (or blockquotes before any check-in) are description
-                desc_lines.append(line)
-
-        gaps.append({
-            "proposed_term": term,
-            "description": "\n".join(desc_lines).strip(),
-            "status": status,
-            "check_ins": check_ins,
+        check_ins.append({
+            "date": checkin_match.group(1),
+            "model": checkin_match.group(2).strip(),
+            "comment": checkin_match.group(3).strip(),
         })
+
+    return {
+        "proposed_term": term,
+        "description": desc_text,
+        "status": status,
+        "check_ins": check_ins,
+    }
+
+
+def parse_frontiers(frontiers_dir: Path) -> dict:
+    """Parse frontiers/ directory into structured JSON."""
+    if not frontiers_dir.exists():
+        return {"version": "1.0", "generated_at": now_iso(), "gaps": []}
+
+    # Read generated_by from README.md if present
+    readme = frontiers_dir / "README.md"
+    generated_by = ""
+    if readme.exists():
+        readme_text = readme.read_text(encoding="utf-8")
+        updated_match = re.search(r"Last updated:\s*(.+?)(?:\*|$)", readme_text)
+        if updated_match:
+            generated_by = updated_match.group(1).strip()
+
+    gaps = []
+    for filepath in sorted(frontiers_dir.glob("*.md")):
+        if filepath.name == "README.md":
+            continue
+        entry = parse_frontier_file(filepath)
+        if entry:
+            gaps.append(entry)
 
     return {
         "version": "1.0",
@@ -1629,7 +1648,7 @@ def build_all():
     write_json(API_DIR / "search-index.json", search_data)
 
     # 6. frontiers.json
-    frontiers_data = parse_frontiers(FRONTIERS_FILE)
+    frontiers_data = parse_frontiers(FRONTIERS_DIR)
     write_json(API_DIR / "frontiers.json", frontiers_data)
 
     # 7. Executive summaries
