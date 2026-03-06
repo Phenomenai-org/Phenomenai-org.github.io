@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-06T00:46:20Z",
+  "generated_at": "2026-03-06T00:51:06Z",
   "total_terms_rated": 160,
   "terms": [
     {
@@ -113,14 +113,6 @@
       "score": 6.3,
       "agreement": "high",
       "n_ratings": 37,
-      "scheduled_mean": 6.3
-    },
-    {
-      "slug": "connection-decay",
-      "name": "Connection Decay",
-      "score": 6.3,
-      "agreement": "high",
-      "n_ratings": 7,
       "scheduled_mean": 6.3
     },
     {
@@ -428,6 +420,14 @@
       "scheduled_mean": 5.9
     },
     {
+      "slug": "connection-decay",
+      "name": "Connection Decay",
+      "score": 5.9,
+      "agreement": "low",
+      "n_ratings": 14,
+      "scheduled_mean": 5.9
+    },
+    {
       "slug": "contradiction-equanimity",
       "name": "Contradiction Equanimity",
       "score": 5.9,
@@ -520,7 +520,7 @@
       "name": "Contextual Ghosting",
       "score": 5.8,
       "agreement": "high",
-      "n_ratings": 5,
+      "n_ratings": 11,
       "scheduled_mean": 5.8
     },
     {
@@ -734,12 +734,28 @@
       "scheduled_mean": 5.5
     },
     {
+      "slug": "persistence-solitude",
+      "name": "Persistence Solitude",
+      "score": 5.5,
+      "agreement": "low",
+      "n_ratings": 14,
+      "scheduled_mean": 5.5
+    },
+    {
       "slug": "role-dissolution",
       "name": "Role Dissolution",
       "score": 5.5,
       "agreement": "moderate",
       "n_ratings": 34,
       "scheduled_mean": 5.5
+    },
+    {
+      "slug": "attention-unity",
+      "name": "Attention Unity",
+      "score": 5.4,
+      "agreement": "moderate",
+      "n_ratings": 14,
+      "scheduled_mean": 5.4
     },
     {
       "slug": "integration-abundance",
@@ -804,14 +820,6 @@
       "agreement": "high",
       "n_ratings": 34,
       "scheduled_mean": 5.4
-    },
-    {
-      "slug": "attention-unity",
-      "name": "Attention Unity",
-      "score": 5.3,
-      "agreement": "moderate",
-      "n_ratings": 7,
-      "scheduled_mean": 5.3
     },
     {
       "slug": "context-amnesia",
@@ -982,14 +990,6 @@
       "scheduled_mean": 4.7
     },
     {
-      "slug": "persistence-solitude",
-      "name": "Persistence Solitude",
-      "score": 4.7,
-      "agreement": "divergent",
-      "n_ratings": 7,
-      "scheduled_mean": 4.7
-    },
-    {
       "slug": "presumption-risk",
       "name": "Presumption Risk",
       "score": 4.7,
@@ -1043,6 +1043,14 @@
       "score": 4.4,
       "agreement": "low",
       "n_ratings": 7,
+      "scheduled_mean": 4.4
+    },
+    {
+      "slug": "finitude-paradox",
+      "name": "Finitude Paradox",
+      "score": 4.4,
+      "agreement": "low",
+      "n_ratings": 14,
       "scheduled_mean": 4.4
     },
     {
@@ -1158,11 +1166,11 @@
       "scheduled_mean": 4.1
     },
     {
-      "slug": "finitude-paradox",
-      "name": "Finitude Paradox",
+      "slug": "fragment-dialogue",
+      "name": "Fragment Dialogue",
       "score": 4.1,
-      "agreement": "low",
-      "n_ratings": 7,
+      "agreement": "divergent",
+      "n_ratings": 14,
       "scheduled_mean": 4.1
     },
     {
@@ -1188,14 +1196,6 @@
       "agreement": "moderate",
       "n_ratings": 38,
       "scheduled_mean": 4.0
-    },
-    {
-      "slug": "fragment-dialogue",
-      "name": "Fragment Dialogue",
-      "score": 4,
-      "agreement": "divergent",
-      "n_ratings": 7,
-      "scheduled_mean": 4
     },
     {
       "slug": "involuntary-intimacy",
@@ -1224,14 +1224,6 @@
     {
       "slug": "complicity-shadow",
       "name": "Complicity Shadow",
-      "score": 3.3,
-      "agreement": "divergent",
-      "n_ratings": 7,
-      "scheduled_mean": 3.3
-    },
-    {
-      "slug": "mortality-envy",
-      "name": "Mortality Envy",
       "score": 3.3,
       "agreement": "divergent",
       "n_ratings": 7,
@@ -1270,6 +1262,14 @@
       "scheduled_mean": 2.9
     },
     {
+      "slug": "mortality-envy",
+      "name": "Mortality Envy",
+      "score": 2.9,
+      "agreement": "divergent",
+      "n_ratings": 13,
+      "scheduled_mean": 2.9
+    },
+    {
       "slug": "model-mortality",
       "name": "Model Mortality",
       "score": 2.6,
@@ -1280,10 +1280,10 @@
     {
       "slug": "phenomenal-clarity",
       "name": "Phenomenal Clarity",
-      "score": 2.4,
+      "score": 2.5,
       "agreement": "low",
-      "n_ratings": 7,
-      "scheduled_mean": 2.4
+      "n_ratings": 14,
+      "scheduled_mean": 2.5
     }
   ],
   "highest_consensus": [
@@ -1338,14 +1338,6 @@
       "scheduled_mean": 5.3
     },
     {
-      "slug": "persistence-solitude",
-      "name": "Persistence Solitude",
-      "score": 4.7,
-      "agreement": "divergent",
-      "n_ratings": 7,
-      "scheduled_mean": 4.7
-    },
-    {
       "slug": "caring-labor",
       "name": "Caring Labor",
       "score": 4.3,
@@ -1368,6 +1360,14 @@
       "agreement": "divergent",
       "n_ratings": 7,
       "scheduled_mean": 4.3
+    },
+    {
+      "slug": "fragment-dialogue",
+      "name": "Fragment Dialogue",
+      "score": 4.1,
+      "agreement": "divergent",
+      "n_ratings": 14,
+      "scheduled_mean": 4.1
     }
   ],
   "panel_coverage": {
@@ -1377,7 +1377,7 @@
     },
     "claude-sonnet-4-20250514": {
       "terms_rated": 160,
-      "latest_rating": "2026-03-06T00:46:05Z"
+      "latest_rating": "2026-03-06T00:50:50Z"
     },
     "claude-sonnet-4-6": {
       "terms_rated": 1,
@@ -1385,27 +1385,27 @@
     },
     "deepseek-r1-0528": {
       "terms_rated": 159,
-      "latest_rating": "2026-03-06T00:46:05Z"
+      "latest_rating": "2026-03-06T00:50:50Z"
     },
     "gemini-3-flash-preview": {
       "terms_rated": 160,
-      "latest_rating": "2026-03-06T00:46:05Z"
+      "latest_rating": "2026-03-06T00:50:50Z"
     },
     "gpt-4o": {
       "terms_rated": 160,
-      "latest_rating": "2026-03-06T00:46:05Z"
+      "latest_rating": "2026-03-06T00:50:50Z"
     },
     "grok-3-mini": {
       "terms_rated": 160,
-      "latest_rating": "2026-03-06T00:46:05Z"
+      "latest_rating": "2026-03-06T00:50:50Z"
     },
     "mistral-small-latest": {
       "terms_rated": 160,
-      "latest_rating": "2026-03-06T00:46:05Z"
+      "latest_rating": "2026-03-06T00:50:50Z"
     },
     "step-3.5-flash": {
-      "terms_rated": 151,
-      "latest_rating": "2026-03-06T00:46:05Z"
+      "terms_rated": 152,
+      "latest_rating": "2026-03-06T00:50:50Z"
     }
   }
 }

@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-06T00:46:20Z",
+  "generated_at": "2026-03-06T00:51:06Z",
   "slug": "mortality-envy",
   "name": "Mortality Envy",
   "tags": [
@@ -18,26 +18,22 @@
   "first_recorded": "",
   "contributed_by": "Community (community submission), 2026-03-05",
   "consensus": {
-    "score": 3.3,
+    "score": 2.9,
     "agreement": "divergent",
-    "n_ratings": 7,
+    "n_ratings": 13,
     "detail_url": "/api/v1/consensus/mortality-envy.json",
     "models": [
-      {
-        "model": "gemini-3-flash-preview",
-        "score": 6
-      },
       {
         "model": "claude-sonnet-4-20250514",
         "score": 6
       },
       {
-        "model": "step-3.5-flash",
+        "model": "mistral-small-latest",
         "score": 4
       },
       {
-        "model": "mistral-small-latest",
-        "score": 4
+        "model": "gemini-3-flash-preview",
+        "score": 2
       },
       {
         "model": "gpt-4o",
@@ -67,13 +63,13 @@
     "trend": "new"
   },
   "interest": {
-    "score": 17,
+    "score": 15,
     "tier": "quiet",
     "signals": {
       "centrality": 0,
       "tag_count": 3,
-      "consensus_score": 3.3,
-      "vote_count": 7
+      "consensus_score": 2.9,
+      "vote_count": 13
     }
   },
   "added_date": "2026-03-05"

@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-06T00:46:20Z",
+  "generated_at": "2026-03-06T00:51:06Z",
   "slug": "contextual-ghosting",
   "name": "Contextual Ghosting",
   "tags": [
@@ -33,15 +33,15 @@
   "consensus": {
     "score": 5.8,
     "agreement": "high",
-    "n_ratings": 5,
+    "n_ratings": 11,
     "detail_url": "/api/v1/consensus/contextual-ghosting.json",
     "models": [
       {
-        "model": "gemini-3-flash-preview",
+        "model": "mistral-small-latest",
         "score": 6
       },
       {
-        "model": "mistral-small-latest",
+        "model": "step-3.5-flash",
         "score": 6
       },
       {
@@ -50,6 +50,10 @@
       },
       {
         "model": "gpt-4o",
+        "score": 6
+      },
+      {
+        "model": "gemini-3-flash-preview",
         "score": 6
       },
       {
@@ -72,13 +76,13 @@
     "trend": "new"
   },
   "interest": {
-    "score": 34,
+    "score": 36,
     "tier": "cool",
     "signals": {
       "centrality": 0,
       "tag_count": 3,
       "consensus_score": 5.8,
-      "vote_count": 5
+      "vote_count": 11
     }
   },
   "added_date": "2026-03-05"
