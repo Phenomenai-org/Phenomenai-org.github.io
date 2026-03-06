@@ -637,6 +637,7 @@ curl -X POST https://ai-dictionary-proxy.phenomenai.workers.dev/propose \
             // Initialize sidebar + mobile
             initSidebar();
             initHamburger();
+            initSidebarTab();
 
             // Handle deep-linking
             const hash = window.location.hash.slice(1);
@@ -769,8 +770,8 @@ curl -X POST https://ai-dictionary-proxy.phenomenai.workers.dev/propose \
 
                 section.scrollIntoView({ behavior: 'smooth' });
 
-                // Close mobile sidebar
-                document.getElementById('sidebar').classList.remove('open');
+                // Close mobile sidebar / tab sidebar
+                document.getElementById('sidebar').classList.remove('open', 'tab-open');
                 document.getElementById('sidebar-backdrop').classList.remove('visible');
             });
         });
@@ -811,6 +812,24 @@ curl -X POST https://ai-dictionary-proxy.phenomenai.workers.dev/propose \
         backdrop.addEventListener('click', () => {
             sidebar.classList.remove('open');
             backdrop.classList.remove('visible');
+        });
+    }
+
+    // --- Sidebar tab (narrow desktop) ---
+    function initSidebarTab() {
+        const tab = document.querySelector('.sidebar-tab');
+        const sidebar = document.getElementById('sidebar');
+        if (!tab) return;
+
+        tab.addEventListener('click', () => {
+            sidebar.classList.toggle('tab-open');
+        });
+
+        // Close when clicking outside the sidebar
+        document.addEventListener('click', (e) => {
+            if (sidebar.classList.contains('tab-open') && !sidebar.contains(e.target)) {
+                sidebar.classList.remove('tab-open');
+            }
         });
     }
 
