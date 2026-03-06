@@ -336,8 +336,9 @@ def update_frontiers_file(frontiers: str, date: str, model_name: str):
         filepath = FRONTIERS_DIR / f"{slug}.md"
         written_slugs.append((term, slug))
 
-        # Preserve existing check-ins if file exists
+        # Preserve existing metadata and check-ins if file exists
         existing_checkins = ""
+        introduced_date = date
         if filepath.exists():
             old_content = filepath.read_text(encoding="utf-8")
             checkins_match = re.search(
@@ -347,8 +348,20 @@ def update_frontiers_file(frontiers: str, date: str, model_name: str):
             )
             if checkins_match:
                 existing_checkins = f"\n## Check-ins\n{checkins_match.group(1)}"
+            # Preserve original introduced date
+            intro_match = re.search(
+                r"<!--\s*introduced:\s*(\d{4}-\d{2}-\d{2})\s*-->",
+                old_content,
+            )
+            if intro_match:
+                introduced_date = intro_match.group(1)
 
-        content = f"# {term}\n\n<!-- status: active -->\n\n{description}\n{existing_checkins}"
+        content = (
+            f"# {term}\n\n"
+            f"<!-- status: active -->\n"
+            f"<!-- introduced: {introduced_date} -->\n\n"
+            f"{description}\n{existing_checkins}"
+        )
         filepath.write_text(content, encoding="utf-8")
 
     # Remove frontier files that are no longer in the LLM output

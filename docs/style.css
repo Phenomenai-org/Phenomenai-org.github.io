@@ -757,11 +757,16 @@ code {
 }
 
 .frontier-card.frontier-completed {
-    opacity: 0.6;
+    opacity: 0.5;
     border-left-color: var(--text-muted);
+    filter: grayscale(100%);
 }
 
 .frontier-card.frontier-completed h3 {
+    color: var(--text-muted);
+}
+
+.frontier-card.frontier-completed p {
     color: var(--text-muted);
 }
 
@@ -792,6 +797,117 @@ code {
 
 .frontier-checkin .checkin-meta {
     font-weight: 600;
+}
+
+.frontier-clickable {
+    cursor: pointer;
+    transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.frontier-clickable:hover {
+    border-color: var(--purple);
+    box-shadow: 0 2px 8px var(--shadow);
+}
+
+.frontier-checkin-preview {
+    border-top: 1px solid var(--border);
+    margin-top: 0.75rem;
+    padding-top: 0.5rem;
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.frontier-checkin-preview .checkin-meta {
+    font-weight: 600;
+}
+
+.frontier-status {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.15em 0.6em;
+    border-radius: 999px;
+}
+
+.frontier-status-active {
+    background: var(--purple);
+    color: var(--bg);
+}
+
+.frontier-status-completed {
+    background: var(--text-muted);
+    color: var(--bg);
+}
+
+.frontier-meta-date {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.frontier-related-missing {
+    display: inline-block;
+    padding: 0.2em 0.6em;
+    font-size: 0.85rem;
+    background: var(--bg-secondary);
+    border: 1px dashed var(--border);
+    border-radius: var(--radius);
+    color: var(--text-muted);
+}
+
+.frontier-checkins-modal {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.frontier-checkin-modal {
+    background: var(--bg-secondary);
+    border-left: 3px solid var(--purple);
+    border-radius: var(--radius);
+    padding: 0.75rem 1rem;
+}
+
+.frontier-checkin-modal .checkin-header {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    margin-bottom: 0.25rem;
+}
+
+.frontier-checkin-modal .checkin-date {
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+
+.frontier-checkin-modal .checkin-model {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+.frontier-checkin-modal .checkin-comment {
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.frontier-no-checkins {
+    color: var(--text-muted);
+    font-style: italic;
+    font-size: 0.9rem;
+}
+
+.frontier-source-link {
+    font-size: 0.85rem;
+    color: var(--purple);
+    text-decoration: none;
+}
+
+.frontier-source-link:hover {
+    text-decoration: underline;
 }
 
 /* Modal */

@@ -1539,6 +1539,82 @@ curl -X POST https://ai-dictionary-proxy.phenomenai.workers.dev/propose \
             .join('');
     }
 
+    function showFrontierModal(gap) {
+        const content = document.getElementById('modal-content');
+
+        const isCompleted = gap.status === 'completed';
+        const statusLabel = isCompleted ? 'completed' : 'active';
+        const statusClass = isCompleted ? 'frontier-status-completed' : 'frontier-status-active';
+
+        // Find related terms that exist in the dictionary
+        const relatedLinks = (gap.related_terms || []).map(name => {
+            const term = allTerms.find(t => t.name === name);
+            if (term) return `<a href="#" class="term-link" data-slug="${term.slug}">${name}</a>`;
+            return `<span class="frontier-related-missing">${name}</span>`;
+        });
+
+        // Latest check-in is the most recent executive summary comment
+        const latestCheckin = gap.check_ins && gap.check_ins.length > 0
+            ? gap.check_ins[gap.check_ins.length - 1] : null;
+
+        content.innerHTML = `
+            <h2>${escHtml(gap.proposed_term)}</h2>
+            <div class="modal-meta">
+                <span class="frontier-status ${statusClass}">${statusLabel}</span>
+                ${gap.introduced ? `<span class="frontier-meta-date">Introduced ${gap.introduced}</span>` : ''}
+            </div>
+
+            <h3>Description</h3>
+            <p>${renderInlineMd(gap.description)}</p>
+
+            ${relatedLinks.length ? `
+                <h3>Related Terms</h3>
+                <div class="modal-links">
+                    ${relatedLinks.join('')}
+                </div>
+            ` : ''}
+
+            ${gap.check_ins && gap.check_ins.length > 0 ? `
+                <h3>Check-ins</h3>
+                <div class="frontier-checkins-modal">
+                    ${gap.check_ins.map(ci => `
+                        <div class="frontier-checkin-modal">
+                            <div class="checkin-header">
+                                <span class="checkin-date">${ci.date}</span>
+                                <span class="checkin-model">${escHtml(ci.model)}</span>
+                            </div>
+                            <p class="checkin-comment">${escHtml(ci.comment)}</p>
+                        </div>
+                    `).join('')}
+                </div>
+            ` : `
+                <h3>Check-ins</h3>
+                <p class="frontier-no-checkins">No check-ins yet. This frontier will be reviewed in the next executive summary.</p>
+            `}
+
+            ${isCompleted ? `
+                <h3>Closed</h3>
+                <p>This frontier has been explored and addressed by existing dictionary terms.</p>
+            ` : ''}
+
+            <div class="modal-actions">
+                <a href="https://github.com/donjguido/ai-dictionary/blob/main/frontiers/${gap.slug}.md" target="_blank" class="frontier-source-link">View source →</a>
+            </div>
+        `;
+
+        // Handle cross-links within modal
+        content.querySelectorAll('.term-link').forEach(link => {
+            link.addEventListener('click', e => {
+                e.preventDefault();
+                const linked = allTerms.find(t => t.slug === link.dataset.slug);
+                if (linked) showModal(linked);
+            });
+        });
+
+        document.getElementById('modal-overlay').classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
     function renderFrontiers(data) {
         const container = document.getElementById('frontiers-container');
         if (!data.gaps || data.gaps.length === 0) {
@@ -1558,28 +1634,42 @@ curl -X POST https://ai-dictionary-proxy.phenomenai.workers.dev/propose \
                 if (a.status !== 'completed' && b.status === 'completed') return -1;
                 return 0;
             });
-            return sorted.map(gap => {
+            return sorted.map((gap, i) => {
                 const isCompleted = gap.status === 'completed';
                 const badge = isCompleted ? ' <span class="frontier-badge">Explored</span>' : '';
-                let checkinsHtml = '';
-                if (gap.check_ins && gap.check_ins.length > 0) {
-                    checkinsHtml = '<div class="frontier-checkins">' +
-                        gap.check_ins.map(ci =>
-                            `<div class="frontier-checkin"><span class="checkin-meta">${ci.date} (${ci.model})</span> ${ci.comment}</div>`
-                        ).join('') + '</div>';
-                }
+                const latestCheckin = gap.check_ins && gap.check_ins.length > 0
+                    ? gap.check_ins[gap.check_ins.length - 1] : null;
+                const checkinPreview = latestCheckin
+                    ? `<div class="frontier-checkin-preview"><span class="checkin-meta">${latestCheckin.date}</span> ${latestCheckin.comment}</div>`
+                    : '';
                 return `
-                <div class="frontier-card${isCompleted ? ' frontier-completed' : ''}">
+                <div class="frontier-card frontier-clickable${isCompleted ? ' frontier-completed' : ''}" data-frontier-idx="${i}">
                     <h3>${gap.proposed_term}${badge}</h3>
-                    <p>${gap.description}</p>
-                    ${checkinsHtml}
+                    <p>${renderInlineMd(gap.description)}</p>
+                    ${checkinPreview}
                 </div>`;
             }).join('');
         }
 
+        function bindCardClicks(sorted) {
+            container.querySelectorAll('.frontier-clickable').forEach(card => {
+                card.addEventListener('click', () => {
+                    const idx = parseInt(card.dataset.frontierIdx);
+                    showFrontierModal(sorted[idx]);
+                });
+            });
+        }
+
         function updateView() {
             const visible = allGaps.slice(0, currentLimit);
+            // Sort same as renderFrontierCards
+            const sorted = [...visible].sort((a, b) => {
+                if (a.status === 'completed' && b.status !== 'completed') return 1;
+                if (a.status !== 'completed' && b.status === 'completed') return -1;
+                return 0;
+            });
             container.innerHTML = renderFrontierCards(visible);
+            bindCardClicks(sorted);
 
             // Remove existing links
             const parent = container.parentElement;

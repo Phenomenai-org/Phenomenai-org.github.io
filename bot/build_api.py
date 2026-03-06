@@ -166,7 +166,15 @@ def parse_frontier_file(filepath: Path) -> dict | None:
 
     # Description is everything after title and status comment, trimmed
     desc_text = re.sub(r"^# .+\n", "", header_part)
-    desc_text = re.sub(r"<!--\s*status:\s*\w+\s*-->", "", desc_text).strip()
+    desc_text = re.sub(r"<!--\s*status:\s*\w+\s*-->", "", desc_text)
+    desc_text = re.sub(r"<!--\s*introduced:\s*\d{4}-\d{2}-\d{2}\s*-->", "", desc_text).strip()
+
+    # Extract introduced date from <!-- introduced: YYYY-MM-DD -->
+    intro_match = re.search(r"<!--\s*introduced:\s*(\d{4}-\d{2}-\d{2})\s*-->", text)
+    introduced = intro_match.group(1) if intro_match else None
+
+    # Extract related terms from **Bold Term** references in description
+    related_terms = re.findall(r"\*\*([^*]+)\*\*", desc_text)
 
     # Parse check-ins
     check_ins = []
@@ -182,8 +190,11 @@ def parse_frontier_file(filepath: Path) -> dict | None:
 
     return {
         "proposed_term": term,
+        "slug": filepath.stem,
         "description": desc_text,
         "status": status,
+        "introduced": introduced,
+        "related_terms": related_terms,
         "check_ins": check_ins,
     }
 
