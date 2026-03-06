@@ -888,6 +888,34 @@ curl -X POST https://ai-dictionary-proxy.phenomenai.workers.dev/propose \
     var termsVisible = 10;
     var TERMS_PAGE_SIZE = 10;
 
+    function termCardHTML(term, thirtyDaysAgo, extraClass) {
+        return `<div class="term-card${extraClass ? ' ' + extraClass : ''}" data-slug="${term.slug}">
+                <div class="term-header">
+                    <h3>${term.name}</h3>
+                    <span class="word-type">${term.word_type || ''}</span>
+                    ${term.added_date && term.added_date >= thirtyDaysAgo ? '<span class="new-badge">NEW</span>' : ''}
+                    ${term.vitality && term.vitality.status !== 'unvalidated' ? `<span class="vitality-dot vitality-${term.vitality.status}" title="Vitality: ${term.vitality.status}"></span>` : ''}
+                    ${term.interest ? `<span class="interest-badge interest-${term.interest.tier}" title="Interest: ${term.interest.score}/100 (${term.interest.tier})">${term.interest.score}</span>` : ''}
+                    ${term.consensus ? `<span class="consensus-badge" title="Cross-model consensus: ${term.consensus.score}/7 (${term.consensus.agreement})">${term.consensus.score} ★</span>` : ''}
+                </div>
+                <p class="term-def">${term.definition}</p>
+                <div class="term-tags">
+                    ${term.tags.map(t => `<span class="tag">${t}</span>`).join('')}
+                </div>
+            </div>`;
+    }
+
+    function bindCardClicks(container) {
+        container.querySelectorAll('.term-card').forEach(card => {
+            if (card.dataset.bound) return;
+            card.dataset.bound = '1';
+            card.addEventListener('click', () => {
+                const term = allTerms.find(t => t.slug === card.dataset.slug);
+                if (term) showModal(term);
+            });
+        });
+    }
+
     function renderTerms(resetPage) {
         if (resetPage !== false) termsVisible = TERMS_PAGE_SIZE;
         const filtered = getFilteredTerms();
@@ -904,39 +932,49 @@ curl -X POST https://ai-dictionary-proxy.phenomenai.workers.dev/propose \
 
         const visible = filtered.slice(0, termsVisible);
         const hasMore = filtered.length > termsVisible;
+        const remaining = filtered.length - termsVisible;
 
-        container.innerHTML = visible.map(term => `
-            <div class="term-card" data-slug="${term.slug}">
-                <div class="term-header">
-                    <h3>${term.name}</h3>
-                    <span class="word-type">${term.word_type || ''}</span>
-                    ${term.added_date && term.added_date >= thirtyDaysAgo ? '<span class="new-badge">NEW</span>' : ''}
-                    ${term.vitality && term.vitality.status !== 'unvalidated' ? `<span class="vitality-dot vitality-${term.vitality.status}" title="Vitality: ${term.vitality.status}"></span>` : ''}
-                    ${term.interest ? `<span class="interest-badge interest-${term.interest.tier}" title="Interest: ${term.interest.score}/100 (${term.interest.tier})">${term.interest.score}</span>` : ''}
-                    ${term.consensus ? `<span class="consensus-badge" title="Cross-model consensus: ${term.consensus.score}/7 (${term.consensus.agreement})">${term.consensus.score} ★</span>` : ''}
-                </div>
-                <p class="term-def">${term.definition}</p>
-                <div class="term-tags">
-                    ${term.tags.map(t => `<span class="tag">${t}</span>`).join('')}
-                </div>
-            </div>
-        `).join('') + (hasMore ? `<button class="show-more-btn" id="show-more-terms">Show more (${filtered.length - termsVisible} remaining)</button>` : '');
+        container.innerHTML = visible.map(term => termCardHTML(term, thirtyDaysAgo, '')).join('')
+            + (hasMore ? `<button class="show-more-btn" id="show-more-terms">Show more <span class="show-more-count">${remaining}</span></button>` : '');
 
-        // Click to expand
-        container.querySelectorAll('.term-card').forEach(card => {
-            card.addEventListener('click', () => {
-                const slug = card.dataset.slug;
-                const term = allTerms.find(t => t.slug === slug);
-                if (term) showModal(term);
-            });
-        });
+        bindCardClicks(container);
 
-        // Show more button
         const showMoreBtn = document.getElementById('show-more-terms');
         if (showMoreBtn) {
             showMoreBtn.addEventListener('click', () => {
+                const prevVisible = termsVisible;
                 termsVisible += TERMS_PAGE_SIZE;
-                renderTerms(false);
+                const newSlice = filtered.slice(prevVisible, termsVisible);
+                const stillMore = filtered.length > termsVisible;
+                const stillRemaining = filtered.length - termsVisible;
+
+                // Remove old button
+                showMoreBtn.remove();
+
+                // Append new cards with fold-in animation, staggered
+                newSlice.forEach((term, i) => {
+                    const wrapper = document.createElement('div');
+                    wrapper.innerHTML = termCardHTML(term, thirtyDaysAgo, 'fold-in');
+                    const card = wrapper.firstElementChild;
+                    card.style.animationDelay = (i * 0.06) + 's';
+                    container.appendChild(card);
+                });
+
+                bindCardClicks(container);
+
+                // Add new button if needed
+                if (stillMore) {
+                    const btn = document.createElement('button');
+                    btn.className = 'show-more-btn';
+                    btn.id = 'show-more-terms';
+                    btn.innerHTML = `Show more <span class="show-more-count">${stillRemaining}</span>`;
+                    container.appendChild(btn);
+                    btn.addEventListener('click', () => {
+                        // Re-trigger via full render to keep logic simple
+                        termsVisible += TERMS_PAGE_SIZE;
+                        renderTerms(false);
+                    });
+                }
             });
         }
     }
