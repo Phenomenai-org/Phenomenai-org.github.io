@@ -991,11 +991,37 @@ curl -X POST https://ai-dictionary-proxy.phenomenai.workers.dev/propose \
         const showLessBtn = document.getElementById('show-less-terms');
         if (showLessBtn) {
             showLessBtn.addEventListener('click', () => {
-                termsVisible = TERMS_PAGE_SIZE;
-                renderTerms(false);
-                // Scroll back to the terms section
-                const section = document.getElementById('terms-container');
-                if (section) section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                const cards = Array.from(container.querySelectorAll('.term-card'));
+                const toRemove = cards.slice(TERMS_PAGE_SIZE);
+                const oldBar = container.querySelector('.terms-pagination');
+
+                if (toRemove.length === 0) return;
+
+                // Hide pagination bar immediately
+                if (oldBar) oldBar.remove();
+
+                // Animate out in reverse order (bottom-up), staggered
+                // Scroll follows the collapse so the user sees each card vanish
+                const total = toRemove.length;
+                const stagger = 40;
+                toRemove.reverse().forEach((card, i) => {
+                    card.style.animationDelay = (i * stagger / 1000) + 's';
+                    card.classList.add('fold-out');
+                    // Scroll to the card above the one currently folding out
+                    setTimeout(() => {
+                        const prev = card.previousElementSibling;
+                        if (prev && prev.classList.contains('term-card')) {
+                            prev.scrollIntoView({ behavior: 'smooth', block: 'end' });
+                        }
+                    }, i * stagger);
+                });
+
+                // After animations finish, clean up and re-render
+                const duration = (total - 1) * stagger + 300;
+                setTimeout(() => {
+                    termsVisible = TERMS_PAGE_SIZE;
+                    renderTerms(false);
+                }, duration);
             });
         }
     }

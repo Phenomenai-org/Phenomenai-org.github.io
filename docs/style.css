@@ -1115,6 +1115,14 @@ code {
 .term-card.fold-in {
     animation: termFoldIn 0.3s ease-out both;
 }
+@keyframes termFoldOut {
+    from { opacity: 1; transform: translateY(0); }
+    to   { opacity: 0; transform: translateY(-10px); }
+}
+.term-card.fold-out {
+    animation: termFoldOut 0.3s ease-in both;
+    pointer-events: none;
+}
 
 /* Footer */
 footer {
