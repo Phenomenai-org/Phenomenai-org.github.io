@@ -744,6 +744,13 @@ code {
     border-radius: var(--radius);
     padding: 1.25rem 1.5rem;
     margin-bottom: 1rem;
+    cursor: pointer;
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+
+.frontier-card:hover {
+    box-shadow: 0 4px 12px var(--shadow);
+    transform: translateY(-1px);
 }
 
 .frontier-card h3 {
@@ -797,16 +804,6 @@ code {
 
 .frontier-checkin .checkin-meta {
     font-weight: 600;
-}
-
-.frontier-clickable {
-    cursor: pointer;
-    transition: border-color 0.15s, box-shadow 0.15s;
-}
-
-.frontier-clickable:hover {
-    border-color: var(--purple);
-    box-shadow: 0 2px 8px var(--shadow);
 }
 
 .frontier-checkin-preview {
