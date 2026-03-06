@@ -1001,27 +1001,40 @@ curl -X POST https://ai-dictionary-proxy.phenomenai.workers.dev/propose \
                 if (oldBar) oldBar.remove();
 
                 // Animate out in reverse order (bottom-up), staggered
-                // Scroll follows the collapse so the user sees each card vanish
                 const total = toRemove.length;
                 const stagger = 40;
                 toRemove.reverse().forEach((card, i) => {
                     card.style.animationDelay = (i * stagger / 1000) + 's';
                     card.classList.add('fold-out');
-                    // Scroll to the card above the one currently folding out
-                    setTimeout(() => {
-                        const prev = card.previousElementSibling;
-                        if (prev && prev.classList.contains('term-card')) {
-                            prev.scrollIntoView({ behavior: 'smooth', block: 'end' });
-                        }
-                    }, i * stagger);
                 });
 
+                // Smooth scroll to last kept card — mostly linear with quick ease at edges
+                const lastKept = cards[TERMS_PAGE_SIZE - 1];
+                const targetY = lastKept.getBoundingClientRect().bottom + window.scrollY - window.innerHeight + 40;
+                const startY = window.scrollY;
+                const dist = targetY - startY;
+                const scrollDuration = (total - 1) * stagger + 300;
+                const scrollStart = performance.now();
+
+                function easeLinearSnap(t) {
+                    // Quick ease in/out (~10%), constant speed through the middle
+                    if (t < 0.1) return 5 * t * t;
+                    if (t > 0.9) return 1 - 5 * (1 - t) * (1 - t);
+                    return 0.05 + (t - 0.1) * (0.9 / 0.8);
+                }
+
+                function scrollStep(now) {
+                    const t = Math.min((now - scrollStart) / scrollDuration, 1);
+                    window.scrollTo(0, startY + dist * easeLinearSnap(t));
+                    if (t < 1) requestAnimationFrame(scrollStep);
+                }
+                if (Math.abs(dist) > 10) requestAnimationFrame(scrollStep);
+
                 // After animations finish, clean up and re-render
-                const duration = (total - 1) * stagger + 300;
                 setTimeout(() => {
                     termsVisible = TERMS_PAGE_SIZE;
                     renderTerms(false);
-                }, duration);
+                }, scrollDuration);
             });
         }
     }
