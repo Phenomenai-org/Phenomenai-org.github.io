@@ -2066,18 +2066,24 @@ html[data-theme="dark"] .theme-toggle .theme-icon-dark { display: inline; }
 /* Narrow desktop / tablet — collapse sidebar behind an arrow tab */
 @media (max-width: 1100px) and (min-width: 769px) {
     .sidebar {
-        overflow: visible;
+        display: flex;
+        width: 248px;
+        padding: 0;
+        overflow: hidden;
     }
 
     .sidebar-nav {
-        height: calc(100vh - 3rem);
+        width: 220px;
+        flex-shrink: 0;
+        height: 100vh;
         overflow-y: auto;
+        padding: 1.5rem 0;
     }
 
     .sidebar.visible {
         opacity: 1;
         pointer-events: auto;
-        transform: translateX(-100%);
+        transform: translateX(-220px);
         transition: transform 0.25s ease;
     }
 
@@ -2094,29 +2100,21 @@ html[data-theme="dark"] .theme-toggle .theme-icon-dark { display: inline; }
         display: flex;
         align-items: center;
         justify-content: center;
-        position: absolute;
-        top: 50%;
-        right: -28px;
-        transform: translateY(-50%);
         width: 28px;
-        height: 48px;
+        flex-shrink: 0;
         background: var(--bg-secondary);
-        border: 1px solid var(--border);
-        border-left: none;
-        border-radius: 0 var(--radius) var(--radius) 0;
+        border-left: 1px solid var(--border);
         color: var(--text-secondary);
         font-size: 0.7rem;
         opacity: 0.3;
         cursor: pointer;
         transition: opacity 0.2s ease;
-        box-shadow: 2px 0 6px var(--shadow);
     }
 
     .sidebar-tab:hover {
         opacity: 1;
     }
 
-    /* Hide border-right seam when collapsed */
     .sidebar.visible:not(:hover) {
         border-right-color: transparent;
     }
