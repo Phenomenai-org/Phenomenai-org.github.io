@@ -648,6 +648,7 @@ def main():
     # ── Step 3: Quality evaluation (LLM) ─────────────────────────────────
 
     router = LLMRouter(
+        providers_file=str(API_CONFIG_DIR / "providers.yml"),
         profiles_file=str(API_CONFIG_DIR / "profiles.yml"),
         tracker_file=str(API_CONFIG_DIR / "tracker-state.json"),
     )

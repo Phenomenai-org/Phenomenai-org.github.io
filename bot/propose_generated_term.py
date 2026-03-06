@@ -308,6 +308,7 @@ def main():
 
     # ── Initialize router ───────────────────────────────────────────────
     router = LLMRouter(
+        providers_file=str(API_CONFIG_DIR / "providers.yml"),
         profiles_file=str(API_CONFIG_DIR / "profiles.yml"),
         tracker_file=str(API_CONFIG_DIR / "tracker-state.json"),
     )
