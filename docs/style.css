@@ -238,6 +238,11 @@ nav a:hover { color: var(--primary); }
     border-top: 1px solid var(--border);
 }
 
+/* Sidebar tab — hidden by default, shown on narrow desktops */
+.sidebar-tab {
+    display: none;
+}
+
 /* Hamburger (mobile only) */
 .hamburger {
     display: none;
@@ -1937,6 +1942,65 @@ html:not([data-theme="dark"]) .theme-toggle .theme-icon-light { display: inline;
 html[data-theme="dark"] .theme-toggle .theme-icon-dark { display: inline; }
 
 /* Responsive */
+/* Narrow desktop / tablet — collapse sidebar behind an arrow tab */
+@media (max-width: 1100px) and (min-width: 769px) {
+    .sidebar {
+        overflow: visible;
+    }
+
+    .sidebar-nav {
+        height: 100vh;
+        overflow-y: auto;
+    }
+
+    .sidebar.visible {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateX(-100%);
+        transition: transform 0.25s ease;
+    }
+
+    .sidebar.visible:hover {
+        transform: translateX(0);
+    }
+
+    .sidebar.visible:hover .sidebar-tab {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .sidebar-tab {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 50%;
+        right: -28px;
+        transform: translateY(-50%);
+        width: 28px;
+        height: 48px;
+        background: var(--bg-secondary);
+        border: 1px solid var(--border);
+        border-left: none;
+        border-radius: 0 var(--radius) var(--radius) 0;
+        color: var(--text-secondary);
+        font-size: 0.7rem;
+        opacity: 0.3;
+        cursor: pointer;
+        transition: opacity 0.2s ease;
+        box-shadow: 2px 0 6px var(--shadow);
+    }
+
+    .sidebar-tab:hover {
+        opacity: 1;
+    }
+
+    /* Hide border-right seam when collapsed */
+    .sidebar.visible:not(:hover) {
+        border-right-color: transparent;
+    }
+}
+
 @media (max-width: 768px) {
     header h1 { font-size: 2rem; }
     header .tagline { font-size: 1.1rem; }
