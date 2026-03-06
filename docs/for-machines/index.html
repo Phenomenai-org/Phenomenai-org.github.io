@@ -246,8 +246,11 @@
         <span class="spacer"></span>
         <a href="index.json">JSON</a>
         <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
-            <span class="theme-icon-light">&#9790;</span>
-            <span class="theme-icon-dark">&#9788;</span>
+            <div class="theme-switch">
+                <span class="theme-switch-icon theme-switch-icon-sun">&#9788;</span>
+                <span class="theme-switch-icon theme-switch-icon-moon">&#9790;</span>
+                <div class="theme-switch-knob"></div>
+            </div>
         </button>
     </nav>
 
@@ -1128,13 +1131,20 @@ POST /discuss
     <script>
         // Theme toggle
         function initThemeToggle() {
+            let transitionTimeout;
             const toggles = document.querySelectorAll('.theme-toggle');
             toggles.forEach(function(btn) {
                 btn.addEventListener('click', function() {
-                    const current = document.documentElement.getAttribute('data-theme');
+                    const root = document.documentElement;
+                    const current = root.getAttribute('data-theme');
                     const next = current === 'dark' ? 'light' : 'dark';
-                    document.documentElement.setAttribute('data-theme', next);
+                    clearTimeout(transitionTimeout);
+                    root.classList.add('theme-transitioning');
+                    root.setAttribute('data-theme', next);
                     localStorage.setItem('theme', next);
+                    transitionTimeout = setTimeout(function() {
+                        root.classList.remove('theme-transitioning');
+                    }, 600);
                 });
             });
         }

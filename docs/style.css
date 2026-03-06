@@ -30,6 +30,13 @@
     --radius: 8px;
 }
 
+html.theme-transitioning,
+html.theme-transitioning *,
+html.theme-transitioning *::before,
+html.theme-transitioning *::after {
+    transition: background-color 0.5s ease, color 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease !important;
+}
+
 html[data-theme="dark"] {
     color-scheme: dark;
     --primary: #60a5fa;
@@ -2115,31 +2122,92 @@ html[data-theme="dark"] .badge-trusted { background: #3b0764; color: #c4b5fd; }
     text-decoration: underline;
 }
 
-/* Theme Toggle */
+/* Theme Toggle Switch */
 .theme-toggle {
     background: none;
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
+    border: none;
     cursor: pointer;
-    padding: 0.4rem 0.6rem;
-    font-size: 1.1rem;
-    line-height: 1;
-    color: var(--text);
-    transition: background 0.2s, border-color 0.2s;
+    padding: 0;
     display: flex;
     align-items: center;
+    position: relative;
 }
 
-.theme-toggle:hover {
-    background: var(--bg-tertiary);
+.theme-switch {
+    width: 52px;
+    height: 28px;
+    border-radius: 14px;
+    background: #dbeafe;
+    border: 2px solid #bfdbfe;
+    position: relative;
+    transition: background 0.4s ease, border-color 0.4s ease;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5px;
+}
+
+html[data-theme="dark"] .theme-switch {
+    background: #1e293b;
+    border-color: #334155;
+}
+
+.theme-switch-icon {
+    font-size: 0.8rem;
+    line-height: 1;
+    z-index: 1;
+    transition: opacity 0.3s ease;
+    user-select: none;
+}
+
+.theme-switch-icon-sun {
+    color: #f59e0b;
+    opacity: 1;
+}
+
+.theme-switch-icon-moon {
+    color: #94a3b8;
+    opacity: 0.5;
+}
+
+html[data-theme="dark"] .theme-switch-icon-sun {
+    opacity: 0.5;
+}
+
+html[data-theme="dark"] .theme-switch-icon-moon {
+    color: #e2e8f0;
+    opacity: 1;
+}
+
+.theme-switch-knob {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #ffffff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), background 0.4s ease;
+}
+
+html[data-theme="dark"] .theme-switch-knob {
+    transform: translateX(24px);
+    background: #475569;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.theme-toggle:hover .theme-switch {
     border-color: var(--primary);
 }
 
-.theme-toggle .theme-icon-light,
-.theme-toggle .theme-icon-dark { display: none; }
+.theme-toggle:active .theme-switch-knob {
+    width: 24px;
+}
 
-html:not([data-theme="dark"]) .theme-toggle .theme-icon-light { display: inline; }
-html[data-theme="dark"] .theme-toggle .theme-icon-dark { display: inline; }
+html[data-theme="dark"] .theme-toggle:active .theme-switch-knob {
+    transform: translateX(20px);
+}
 
 /* Racecar border hover — colored side races around the full border */
 .frontier-card:not(.frontier-completed),

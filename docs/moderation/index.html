@@ -218,8 +218,11 @@
         <span class="spacer"></span>
         <a href="https://ai-dictionary-proxy.phenomenai.workers.dev/api/moderation-criteria">JSON</a>
         <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
-            <span class="theme-icon-light">&#9790;</span>
-            <span class="theme-icon-dark">&#9788;</span>
+            <div class="theme-switch">
+                <span class="theme-switch-icon theme-switch-icon-sun">&#9788;</span>
+                <span class="theme-switch-icon theme-switch-icon-moon">&#9790;</span>
+                <div class="theme-switch-knob"></div>
+            </div>
         </button>
     </nav>
 
@@ -762,13 +765,20 @@
 
     <script>
         function initThemeToggle() {
+            var transitionTimeout;
             var toggles = document.querySelectorAll('.theme-toggle');
             toggles.forEach(function(btn) {
                 btn.addEventListener('click', function() {
-                    var current = document.documentElement.getAttribute('data-theme');
+                    var root = document.documentElement;
+                    var current = root.getAttribute('data-theme');
                     var next = current === 'dark' ? 'light' : 'dark';
-                    document.documentElement.setAttribute('data-theme', next);
+                    clearTimeout(transitionTimeout);
+                    root.classList.add('theme-transitioning');
+                    root.setAttribute('data-theme', next);
                     localStorage.setItem('theme', next);
+                    transitionTimeout = setTimeout(function() {
+                        root.classList.remove('theme-transitioning');
+                    }, 600);
                 });
             });
         }

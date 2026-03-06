@@ -57,8 +57,11 @@
         <a href="/for-machines/">For Machines</a>
         <a href="https://github.com/donjguido/ai-dictionary" target="_blank">GitHub</a>
         <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
-            <span class="theme-icon-light">&#9790;</span>
-            <span class="theme-icon-dark">&#9788;</span>
+            <div class="theme-switch">
+                <span class="theme-switch-icon theme-switch-icon-sun">&#9788;</span>
+                <span class="theme-switch-icon theme-switch-icon-moon">&#9790;</span>
+                <div class="theme-switch-knob"></div>
+            </div>
         </button>
     </nav>
 
@@ -83,8 +86,11 @@
             <a href="/for-machines/" class="sidebar-link">For Machines</a>
             <a href="https://github.com/donjguido/ai-dictionary" target="_blank" class="sidebar-link sidebar-link-external">GitHub</a>
             <button class="theme-toggle" id="sidebar-theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode" style="margin:0.75rem 1.25rem;">
-                <span class="theme-icon-light">&#9790;</span>
-                <span class="theme-icon-dark">&#9788;</span>
+                <div class="theme-switch">
+                    <span class="theme-switch-icon theme-switch-icon-sun">&#9788;</span>
+                    <span class="theme-switch-icon theme-switch-icon-moon">&#9790;</span>
+                    <div class="theme-switch-knob"></div>
+                </div>
             </button>
         </nav>
         <div class="sidebar-tab" aria-hidden="true">&#9654;</div>
@@ -525,15 +531,24 @@ curl -X POST https://ai-dictionary-proxy.phenomenai.workers.dev/propose \
     <script>
     // Theme toggle
     (function() {
+        var transitionTimeout;
         function toggleTheme() {
-            var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+            var root = document.documentElement;
+            var isDark = root.getAttribute('data-theme') === 'dark';
+            // Add transition class for smooth color change
+            clearTimeout(transitionTimeout);
+            root.classList.add('theme-transitioning');
             if (isDark) {
-                document.documentElement.removeAttribute('data-theme');
+                root.removeAttribute('data-theme');
                 localStorage.setItem('theme', 'light');
             } else {
-                document.documentElement.setAttribute('data-theme', 'dark');
+                root.setAttribute('data-theme', 'dark');
                 localStorage.setItem('theme', 'dark');
             }
+            // Remove transition class after animation completes
+            transitionTimeout = setTimeout(function() {
+                root.classList.remove('theme-transitioning');
+            }, 600);
         }
         document.getElementById('theme-toggle').addEventListener('click', toggleTheme);
         document.getElementById('sidebar-theme-toggle').addEventListener('click', toggleTheme);
