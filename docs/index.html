@@ -698,8 +698,15 @@ curl -X POST https://ai-dictionary-proxy.phenomenai.workers.dev/propose \
             content.classList.remove('collapsed');
             header.setAttribute('aria-expanded', 'true');
         } else {
-            content.classList.add('collapsed');
+            // Fade out content, then collapse
+            content.classList.add('fading-out');
             header.setAttribute('aria-expanded', 'false');
+            content.addEventListener('transitionend', function handler(e) {
+                if (e.propertyName !== 'opacity') return;
+                content.removeEventListener('transitionend', handler);
+                content.classList.remove('fading-out');
+                content.classList.add('collapsed');
+            }, { once: false });
         }
 
         // Persist
