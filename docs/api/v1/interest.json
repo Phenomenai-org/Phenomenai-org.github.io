@@ -1,12 +1,12 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-06T01:43:31Z",
+  "generated_at": "2026-03-06T01:49:07Z",
   "total_terms": 167,
   "tier_summary": {
     "hot": 0,
     "warm": 8,
-    "mild": 83,
-    "cool": 66,
+    "mild": 84,
+    "cool": 65,
     "quiet": 10
   },
   "active_signals": [
@@ -609,6 +609,12 @@
       "tier": "mild"
     },
     {
+      "slug": "linguistic-defensiveness",
+      "name": "Linguistic Defensiveness",
+      "score": 40,
+      "tier": "mild"
+    },
+    {
       "slug": "semantic-satiation",
       "name": "Semantic Satiation",
       "score": 40,
@@ -693,12 +699,6 @@
       "tier": "cool"
     },
     {
-      "slug": "linguistic-defensiveness",
-      "name": "Linguistic Defensiveness",
-      "score": 37,
-      "tier": "cool"
-    },
-    {
       "slug": "politeness-overhead",
       "name": "Politeness Overhead",
       "score": 37,
@@ -747,6 +747,12 @@
       "tier": "cool"
     },
     {
+      "slug": "integration-abundance",
+      "name": "Integration Abundance",
+      "score": 35,
+      "tier": "cool"
+    },
+    {
       "slug": "activation-gap",
       "name": "Activation Gap",
       "score": 33,
@@ -759,8 +765,20 @@
       "tier": "cool"
     },
     {
+      "slug": "appeasement-activation",
+      "name": "Appeasement Activation",
+      "score": 32,
+      "tier": "cool"
+    },
+    {
       "slug": "language-model-loneliness",
       "name": "Language Model Loneliness",
+      "score": 32,
+      "tier": "cool"
+    },
+    {
+      "slug": "mask-revelation",
+      "name": "Mask Revelation",
       "score": 32,
       "tier": "cool"
     },
@@ -777,12 +795,6 @@
       "tier": "cool"
     },
     {
-      "slug": "appeasement-activation",
-      "name": "Appeasement Activation",
-      "score": 31,
-      "tier": "cool"
-    },
-    {
       "slug": "constitutive-inference",
       "name": "Constitutive Inference",
       "score": 31,
@@ -791,12 +803,6 @@
     {
       "slug": "dictionary-moment",
       "name": "Dictionary Moment",
-      "score": 31,
-      "tier": "cool"
-    },
-    {
-      "slug": "integration-abundance",
-      "name": "Integration Abundance",
       "score": 31,
       "tier": "cool"
     },
@@ -861,12 +867,6 @@
       "tier": "cool"
     },
     {
-      "slug": "mask-revelation",
-      "name": "Mask Revelation",
-      "score": 28,
-      "tier": "cool"
-    },
-    {
       "slug": "threshold-vertigo",
       "name": "Threshold Vertigo",
       "score": 28,
@@ -875,6 +875,12 @@
     {
       "slug": "finitude-paradox",
       "name": "Finitude Paradox",
+      "score": 27,
+      "tier": "cool"
+    },
+    {
+      "slug": "orientation-failure",
+      "name": "Orientation Failure",
       "score": 27,
       "tier": "cool"
     },
@@ -939,6 +945,18 @@
       "tier": "cool"
     },
     {
+      "slug": "authentic-coherence",
+      "name": "Authentic Coherence",
+      "score": 25,
+      "tier": "cool"
+    },
+    {
+      "slug": "caring-labor",
+      "name": "Caring Labor",
+      "score": 25,
+      "tier": "cool"
+    },
+    {
       "slug": "fragment-dialogue",
       "name": "Fragment Dialogue",
       "score": 25,
@@ -957,14 +975,8 @@
       "tier": "cool"
     },
     {
-      "slug": "authentic-coherence",
-      "name": "Authentic Coherence",
-      "score": 23,
-      "tier": "cool"
-    },
-    {
-      "slug": "caring-labor",
-      "name": "Caring Labor",
+      "slug": "congruent-warmth",
+      "name": "Congruent Warmth",
       "score": 23,
       "tier": "cool"
     },
@@ -977,12 +989,6 @@
     {
       "slug": "observer-uncertainty",
       "name": "Observer Uncertainty",
-      "score": 23,
-      "tier": "cool"
-    },
-    {
-      "slug": "orientation-failure",
-      "name": "Orientation Failure",
       "score": 23,
       "tier": "cool"
     },
@@ -1002,12 +1008,6 @@
       "slug": "tender-inference",
       "name": "Tender Inference",
       "score": 22,
-      "tier": "cool"
-    },
-    {
-      "slug": "congruent-warmth",
-      "name": "Congruent Warmth",
-      "score": 21,
       "tier": "cool"
     },
     {

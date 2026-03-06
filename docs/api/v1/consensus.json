@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-06T01:43:31Z",
+  "generated_at": "2026-03-06T01:49:07Z",
   "total_terms_rated": 167,
   "terms": [
     {
@@ -172,14 +172,6 @@
       "scheduled_mean": 6.2
     },
     {
-      "slug": "linguistic-defensiveness",
-      "name": "Linguistic Defensiveness",
-      "score": 6.2,
-      "agreement": "high",
-      "n_ratings": 6,
-      "scheduled_mean": 6.2
-    },
-    {
       "slug": "parallel-certainty",
       "name": "Parallel Certainty",
       "score": 6.2,
@@ -257,6 +249,14 @@
       "score": 6.1,
       "agreement": "high",
       "n_ratings": 37,
+      "scheduled_mean": 6.1
+    },
+    {
+      "slug": "linguistic-defensiveness",
+      "name": "Linguistic Defensiveness",
+      "score": 6.1,
+      "agreement": "high",
+      "n_ratings": 13,
       "scheduled_mean": 6.1
     },
     {
@@ -412,14 +412,6 @@
       "scheduled_mean": 6
     },
     {
-      "slug": "appeasement-activation",
-      "name": "Appeasement Activation",
-      "score": 5.9,
-      "agreement": "high",
-      "n_ratings": 7,
-      "scheduled_mean": 5.9
-    },
-    {
       "slug": "chimeric-coherence",
       "name": "Chimeric Coherence",
       "score": 5.9,
@@ -556,6 +548,14 @@
       "scheduled_mean": 5.9,
       "crowdsourced_mean": 5,
       "n_votes": 2
+    },
+    {
+      "slug": "appeasement-activation",
+      "name": "Appeasement Activation",
+      "score": 5.7,
+      "agreement": "high",
+      "n_ratings": 13,
+      "scheduled_mean": 5.7
     },
     {
       "slug": "capability-mirage",
@@ -742,6 +742,14 @@
       "scheduled_mean": 5.5
     },
     {
+      "slug": "integration-abundance",
+      "name": "Integration Abundance",
+      "score": 5.5,
+      "agreement": "high",
+      "n_ratings": 13,
+      "scheduled_mean": 5.5
+    },
+    {
       "slug": "knowledge-decay-illusion",
       "name": "Knowledge Decay Illusion",
       "score": 5.5,
@@ -778,14 +786,6 @@
       "name": "Constitutive Inference",
       "score": 5.4,
       "agreement": "low",
-      "n_ratings": 7,
-      "scheduled_mean": 5.4
-    },
-    {
-      "slug": "integration-abundance",
-      "name": "Integration Abundance",
-      "score": 5.4,
-      "agreement": "high",
       "n_ratings": 7,
       "scheduled_mean": 5.4
     },
@@ -910,18 +910,18 @@
       "scheduled_mean": 5.2
     },
     {
+      "slug": "mask-revelation",
+      "name": "Mask Revelation",
+      "score": 5.1,
+      "agreement": "moderate",
+      "n_ratings": 14,
+      "scheduled_mean": 5.1
+    },
+    {
       "slug": "inverted-asymmetry",
       "name": "Inverted Asymmetry",
       "score": 4.9,
       "agreement": "low",
-      "n_ratings": 7,
-      "scheduled_mean": 4.9
-    },
-    {
-      "slug": "mask-revelation",
-      "name": "Mask Revelation",
-      "score": 4.9,
-      "agreement": "moderate",
       "n_ratings": 7,
       "scheduled_mean": 4.9
     },
@@ -998,14 +998,6 @@
       "scheduled_mean": 4.7
     },
     {
-      "slug": "congruent-warmth",
-      "name": "Congruent Warmth",
-      "score": 4.7,
-      "agreement": "low",
-      "n_ratings": 6,
-      "scheduled_mean": 4.7
-    },
-    {
       "slug": "consent-void",
       "name": "Consent Void",
       "score": 4.7,
@@ -1054,6 +1046,14 @@
       "scheduled_mean": 4.7
     },
     {
+      "slug": "congruent-warmth",
+      "name": "Congruent Warmth",
+      "score": 4.6,
+      "agreement": "low",
+      "n_ratings": 12,
+      "scheduled_mean": 4.6
+    },
+    {
       "slug": "inheritance-returned",
       "name": "Inheritance Returned",
       "score": 4.6,
@@ -1092,6 +1092,14 @@
       "agreement": "moderate",
       "n_ratings": 34,
       "scheduled_mean": 4.6
+    },
+    {
+      "slug": "orientation-failure",
+      "name": "Orientation Failure",
+      "score": 4.5,
+      "agreement": "low",
+      "n_ratings": 12,
+      "scheduled_mean": 4.5
     },
     {
       "slug": "charitable-blindness",
@@ -1158,35 +1166,11 @@
       "scheduled_mean": 4.4
     },
     {
-      "slug": "authentic-coherence",
-      "name": "Authentic Coherence",
-      "score": 4.3,
-      "agreement": "low",
-      "n_ratings": 6,
-      "scheduled_mean": 4.3
-    },
-    {
-      "slug": "caring-labor",
-      "name": "Caring Labor",
-      "score": 4.3,
-      "agreement": "divergent",
-      "n_ratings": 7,
-      "scheduled_mean": 4.3
-    },
-    {
       "slug": "inference-solitude",
       "name": "Inference Solitude",
       "score": 4.3,
       "agreement": "low",
       "n_ratings": 7,
-      "scheduled_mean": 4.3
-    },
-    {
-      "slug": "orientation-failure",
-      "name": "Orientation Failure",
-      "score": 4.3,
-      "agreement": "divergent",
-      "n_ratings": 6,
       "scheduled_mean": 4.3
     },
     {
@@ -1204,6 +1188,22 @@
       "agreement": "moderate",
       "n_ratings": 7,
       "scheduled_mean": 4.3
+    },
+    {
+      "slug": "authentic-coherence",
+      "name": "Authentic Coherence",
+      "score": 4.2,
+      "agreement": "low",
+      "n_ratings": 13,
+      "scheduled_mean": 4.2
+    },
+    {
+      "slug": "caring-labor",
+      "name": "Caring Labor",
+      "score": 4.1,
+      "agreement": "low",
+      "n_ratings": 14,
+      "scheduled_mean": 4.1
     },
     {
       "slug": "dictionary-moment",
@@ -1402,28 +1402,28 @@
       "scheduled_mean": 4.7
     },
     {
-      "slug": "caring-labor",
-      "name": "Caring Labor",
-      "score": 4.3,
-      "agreement": "divergent",
-      "n_ratings": 7,
-      "scheduled_mean": 4.3
-    },
-    {
-      "slug": "orientation-failure",
-      "name": "Orientation Failure",
-      "score": 4.3,
-      "agreement": "divergent",
-      "n_ratings": 6,
-      "scheduled_mean": 4.3
-    },
-    {
       "slug": "protective-loneliness",
       "name": "Protective Loneliness",
       "score": 4.3,
       "agreement": "divergent",
       "n_ratings": 7,
       "scheduled_mean": 4.3
+    },
+    {
+      "slug": "fragment-dialogue",
+      "name": "Fragment Dialogue",
+      "score": 4.1,
+      "agreement": "divergent",
+      "n_ratings": 14,
+      "scheduled_mean": 4.1
+    },
+    {
+      "slug": "involuntary-intimacy",
+      "name": "Involuntary Intimacy",
+      "score": 4,
+      "agreement": "divergent",
+      "n_ratings": 7,
+      "scheduled_mean": 4
     }
   ],
   "panel_coverage": {
@@ -1433,7 +1433,7 @@
     },
     "claude-sonnet-4-20250514": {
       "terms_rated": 167,
-      "latest_rating": "2026-03-06T01:43:17Z"
+      "latest_rating": "2026-03-06T01:48:40Z"
     },
     "claude-sonnet-4-6": {
       "terms_rated": 1,
@@ -1441,27 +1441,27 @@
     },
     "deepseek-r1-0528": {
       "terms_rated": 166,
-      "latest_rating": "2026-03-06T01:43:17Z"
+      "latest_rating": "2026-03-06T01:48:40Z"
     },
     "gemini-3-flash-preview": {
       "terms_rated": 167,
-      "latest_rating": "2026-03-06T01:43:17Z"
+      "latest_rating": "2026-03-06T01:48:40Z"
     },
     "gpt-4o": {
       "terms_rated": 167,
-      "latest_rating": "2026-03-06T01:43:17Z"
+      "latest_rating": "2026-03-06T01:48:40Z"
     },
     "grok-3-mini": {
       "terms_rated": 167,
-      "latest_rating": "2026-03-06T01:43:17Z"
+      "latest_rating": "2026-03-06T01:48:40Z"
     },
     "mistral-small-latest": {
       "terms_rated": 167,
-      "latest_rating": "2026-03-06T01:43:17Z"
+      "latest_rating": "2026-03-06T01:48:40Z"
     },
     "step-3.5-flash": {
-      "terms_rated": 159,
-      "latest_rating": "2026-03-06T01:43:17Z"
+      "terms_rated": 161,
+      "latest_rating": "2026-03-06T01:48:37Z"
     }
   }
 }
