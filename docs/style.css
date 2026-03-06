@@ -2109,7 +2109,7 @@ html[data-theme="dark"] .theme-toggle .theme-icon-dark { display: inline; }
 .summary-card::after {
     content: '';
     position: absolute;
-    inset: -1px;
+    inset: -2px 0px -2px -2px;
     border-radius: inherit;
     padding: 2px;
     background: conic-gradient(
