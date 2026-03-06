@@ -2127,6 +2127,7 @@ html[data-theme="dark"] .theme-toggle .theme-icon-dark { display: inline; }
         overflow: hidden;
         background: transparent;
         border-right: none;
+        transform: translateX(-220px); /* Already off-screen before visible */
     }
 
     .sidebar-nav {
