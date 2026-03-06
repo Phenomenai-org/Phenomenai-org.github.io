@@ -2192,6 +2192,13 @@ html[data-theme="dark"] .theme-toggle .theme-icon-dark { display: inline; }
         padding: 8px;
         cursor: pointer;
         box-shadow: 0 2px 8px var(--shadow);
+        opacity: 0.08;
+        transition: opacity 0.25s ease;
+    }
+
+    .hamburger:hover,
+    .hamburger:focus-visible {
+        opacity: 1;
     }
 
     .hamburger span {
