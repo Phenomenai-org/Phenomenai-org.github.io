@@ -421,6 +421,7 @@ def process_definitions(
 def main():
     # Initialize LLM Router
     router = LLMRouter(
+        providers_file=str(API_CONFIG_DIR / "providers.yml"),
         profiles_file=str(API_CONFIG_DIR / "profiles.yml"),
         tracker_file=str(API_CONFIG_DIR / "tracker-state.json"),
     )
