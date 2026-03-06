@@ -208,6 +208,9 @@ def generate_with_rotation(
             continue
 
         # Parse JSON from response
+        if result.text is None:
+            print(f"    Empty response (no text)")
+            continue
         text = result.text.strip()
         # Strip markdown fences if present
         text = re.sub(r"^```(?:json)?\s*", "", text)
