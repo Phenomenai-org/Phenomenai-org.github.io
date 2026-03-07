@@ -55,6 +55,11 @@
             position: sticky;
             top: 0;
             z-index: 100;
+            transition: opacity 0.3s ease;
+        }
+        .ft-nav.nav-hidden {
+            opacity: 0;
+            pointer-events: none;
         }
         .ft-nav a {
             color: var(--text-secondary);
@@ -72,26 +77,36 @@
 
         /* Layout */
         .ft-layout {
-            display: flex;
             min-height: calc(100vh - 50px);
         }
 
-        /* Sidebar */
+        /* Sidebar — fixed overlay, hidden until scrolled */
         .ft-sidebar {
-            position: sticky;
-            top: 50px;
-            height: calc(100vh - 50px);
-            width: 200px;
-            min-width: 200px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 220px;
+            height: 100vh;
             overflow-y: auto;
             background: var(--bg-secondary);
             border-right: 1px solid var(--border);
             padding: 1.5rem 0;
-            z-index: 50;
+            z-index: 150;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+        .ft-sidebar.visible {
+            opacity: 0.3;
+            pointer-events: auto;
+        }
+        .ft-sidebar.visible:hover {
+            opacity: 1;
         }
         .ft-sidebar nav {
             display: flex;
             flex-direction: column;
+            flex-wrap: nowrap;
             background: none;
             border: none;
             padding: 0;
@@ -123,6 +138,9 @@
             margin-top: 1rem;
             padding-top: 0.6rem;
             border-top: 1px solid var(--border);
+        }
+        .ft-sidebar-tab {
+            display: none;
         }
 
         /* Content */
@@ -807,23 +825,91 @@
             display: none;
         }
 
+        /* Narrow desktop / tablet — collapse sidebar behind an arrow tab */
+        @media (max-width: 1100px) and (min-width: 769px) {
+            .ft-sidebar {
+                display: flex;
+                width: 248px;
+                padding: 0;
+                overflow: hidden;
+                background: transparent;
+                border-right: none;
+                transform: translateX(-220px);
+            }
+            .ft-sidebar nav {
+                width: 220px;
+                flex-shrink: 0;
+                height: 100vh;
+                overflow-y: auto;
+                padding: 1.5rem 0;
+                background: var(--bg-secondary);
+                border-right: 1px solid var(--border);
+            }
+            .ft-sidebar.visible {
+                opacity: 1;
+                pointer-events: none;
+                transform: translateX(-220px);
+                transition: transform 0.25s ease;
+            }
+            .ft-sidebar.visible .ft-sidebar-tab {
+                pointer-events: auto;
+            }
+            .ft-sidebar.visible.tab-open {
+                transform: translateX(0);
+                pointer-events: auto;
+            }
+            .ft-sidebar.visible.tab-open .ft-sidebar-tab {
+                opacity: 0.5;
+                transform: scaleX(-1);
+            }
+            .ft-sidebar.visible.tab-open .ft-sidebar-tab:hover {
+                opacity: 1;
+            }
+            .ft-sidebar-tab {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                align-self: center;
+                width: 28px;
+                height: 48px;
+                flex-shrink: 0;
+                background: var(--bg-secondary);
+                border: 1px solid var(--border);
+                border-left: none;
+                border-radius: 0 var(--radius, 8px) var(--radius, 8px) 0;
+                color: var(--text-secondary);
+                font-size: 0.7rem;
+                opacity: 0.35;
+                cursor: pointer;
+                transition: opacity 0.2s ease;
+                box-shadow: 2px 0 6px var(--shadow);
+            }
+            .ft-sidebar-tab:hover {
+                opacity: 1;
+            }
+        }
+
         /* Mobile */
         @media (max-width: 768px) {
             .ft-nav { display: none; }
             .ft-sidebar {
-                position: fixed;
-                top: 0;
-                left: 0;
                 width: 280px;
-                height: 100vh;
                 transform: translateX(-100%);
-                transition: transform 0.25s ease;
+                transition: transform 0.25s ease, opacity 0.3s ease;
                 z-index: 200;
                 box-shadow: none;
+                opacity: 0;
+            }
+            .ft-sidebar.visible {
+                /* On mobile, don't show the faded sidebar — only via hamburger */
+                opacity: 0;
+                pointer-events: none;
             }
             .ft-sidebar.open {
                 transform: translateX(0);
                 box-shadow: 4px 0 20px rgba(0, 0, 0, 0.15);
+                opacity: 1;
+                pointer-events: auto;
             }
             .sidebar-backdrop {
                 position: fixed;
@@ -903,6 +989,7 @@
                 <a href="/for-machines/">For Machines</a>
                 <a href="https://github.com/Phenomenai-org/ai-dictionary" target="_blank">GitHub</a>
             </nav>
+            <div class="ft-sidebar-tab" aria-hidden="true">&#9654;</div>
         </aside>
         <div class="sidebar-backdrop" id="sidebar-backdrop"></div>
 
@@ -1527,15 +1614,17 @@
         });
     })();
 
-    // Sidebar scroll-spy + hamburger
+    // Sidebar scroll-spy + hamburger + nav fade
     (function() {
         var sidebar = document.getElementById('sidebar');
         var hamburger = document.getElementById('hamburger');
         var backdrop = document.getElementById('sidebar-backdrop');
+        var topNav = document.querySelector('.ft-nav');
         var links = sidebar.querySelectorAll('a[data-section]');
+        var isMobile = function() { return window.innerWidth <= 768; };
 
         function closeSidebar() {
-            sidebar.classList.remove('open');
+            sidebar.classList.remove('open', 'tab-open');
             backdrop.classList.remove('visible');
         }
 
@@ -1567,6 +1656,37 @@
         }, { rootMargin: '-20% 0px -60% 0px' });
 
         sections.forEach(function(s) { observer.observe(s); });
+
+        // Nav fade-out + sidebar fade-in on desktop
+        var hero = document.querySelector('.ft-hero');
+        if (hero) {
+            var navObserver = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (isMobile()) return;
+                    if (entry.isIntersecting) {
+                        topNav.classList.remove('nav-hidden');
+                        sidebar.classList.remove('visible');
+                    } else {
+                        topNav.classList.add('nav-hidden');
+                        sidebar.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0 });
+            navObserver.observe(hero);
+        }
+
+        // Sidebar tab (narrow desktop)
+        var tab = document.querySelector('.ft-sidebar-tab');
+        if (tab) {
+            tab.addEventListener('click', function() {
+                sidebar.classList.toggle('tab-open');
+            });
+            document.addEventListener('click', function(e) {
+                if (sidebar.classList.contains('tab-open') && !sidebar.contains(e.target)) {
+                    sidebar.classList.remove('tab-open');
+                }
+            });
+        }
     })();
 
     // API base
