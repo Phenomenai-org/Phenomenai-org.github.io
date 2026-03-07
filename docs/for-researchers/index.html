@@ -3254,13 +3254,12 @@
                 return;
             }
 
-            var w = 800, h = 560;
-            var cx = w / 2, cy = h / 2 - 10;
-            var dim = Math.min(w, h);
+            var w = 800, h = 600;
+            var cx = w / 2, cy = h / 2;
 
-            // Radii for each ring
-            var ringRadii = [0, dim * 0.22, dim * 0.38, dim * 0.48];
-            var nodeRadii = [20, 10, 8, 6];
+            // Radii for each ring — use width as base so nodes spread horizontally
+            var ringRadii = [0, 130, 230, 280];
+            var nodeRadii = [22, 14, 11, 9];
 
             // Group slugs by ring
             var ringGroups = [[], [], [], []];
@@ -3337,9 +3336,9 @@
                 g.appendChild(circle);
 
                 var label = svgEl('text', {
-                    x: p.x, y: p.y + r + 14,
+                    x: p.x, y: p.y + r + 15,
                     'text-anchor': 'middle',
-                    'font-size': isCenter ? '11' : '10',
+                    'font-size': isCenter ? '13' : '11',
                     fill: 'var(--text-secondary)',
                     'font-weight': isCenter ? 'bold' : 'normal'
                 });
