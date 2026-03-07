@@ -470,6 +470,13 @@ def build_consensus(generated_at: str) -> dict:
 
         write_json(CONSENSUS_API_DIR / f"{slug}.json", consensus_api)
 
+        # ── Max per-model rating count (how many rounds the busiest model rated) ──
+        model_round_counts = {}
+        for r in rounds:
+            for model_key in r.get("ratings", {}):
+                model_round_counts[model_key] = model_round_counts.get(model_key, 0) + 1
+        max_model_ratings = max(model_round_counts.values()) if model_round_counts else 0
+
         # ── Index entry ──
         entry = {
             "slug": slug,
@@ -477,6 +484,7 @@ def build_consensus(generated_at: str) -> dict:
             "score": combined["mean"] if combined else None,
             "agreement": combined["agreement"] if combined else None,
             "n_ratings": combined["n_total"] if combined else 0,
+            "max_model_ratings": max_model_ratings,
         }
         if scheduled:
             entry["scheduled_mean"] = scheduled["mean"]
