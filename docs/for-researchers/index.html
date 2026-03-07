@@ -2964,6 +2964,8 @@
         var defaultSlug = 'context-amnesia';
         var currentCenter = null;
         var currentDegree = 1;
+        var debounceTimer;
+        var suggestionIndex = -1;
 
         var NS = 'http://www.w3.org/2000/svg';
         var tagColors = {};
@@ -3176,7 +3178,11 @@
 
                 // Click to recenter (non-center nodes)
                 if (!isCenter) {
-                    g.addEventListener('click', function() { doSearch(slug); });
+                    g.addEventListener('click', function() {
+                        clearTimeout(debounceTimer);
+                        searchEl.value = slug;
+                        doSearch(slug);
+                    });
                 }
 
                 nodeElements[slug] = { g: g, circle: circle, label: label };
@@ -3214,6 +3220,7 @@
 
         // Autocomplete suggestions
         function showSuggestions(query) {
+            suggestionIndex = -1;
             if (!query || query.length < 2) { suggestionsEl.style.display = 'none'; return; }
             var q = query.toLowerCase();
             var matches = allTerms.filter(function(t) {
@@ -3237,9 +3244,22 @@
                     suggestionsEl.style.display = 'none';
                     doSearch(slug);
                 });
-                item.addEventListener('mouseenter', function() { item.style.background = 'var(--border)'; });
+                item.addEventListener('mouseenter', function() {
+                    suggestionIndex = -1;
+                    items.forEach(function(el) { el.style.background = 'none'; });
+                    item.style.background = 'var(--border)';
+                });
                 item.addEventListener('mouseleave', function() { item.style.background = 'none'; });
             });
+        }
+
+        function highlightSuggestion(index) {
+            var items = suggestionsEl.querySelectorAll('.network-suggestion');
+            items.forEach(function(el) { el.style.background = 'none'; });
+            if (index >= 0 && index < items.length) {
+                items[index].style.background = 'var(--border)';
+                items[index].scrollIntoView({ block: 'nearest' });
+            }
         }
 
         // Degree button wiring
@@ -3262,7 +3282,6 @@
 
             doSearch(findFeaturedTerm());
 
-            var debounceTimer;
             searchEl.addEventListener('input', function() {
                 clearTimeout(debounceTimer);
                 var val = searchEl.value.trim();
@@ -3271,11 +3290,26 @@
             });
 
             searchEl.addEventListener('keydown', function(e) {
-                if (e.key === 'Enter') {
+                var items = suggestionsEl.querySelectorAll('.network-suggestion');
+                var visible = suggestionsEl.style.display !== 'none' && items.length > 0;
+                if (e.key === 'ArrowDown' && visible) {
                     e.preventDefault();
-                    var first = suggestionsEl.querySelector('.network-suggestion');
-                    if (first && suggestionsEl.style.display !== 'none') {
-                        var slug = first.getAttribute('data-slug');
+                    suggestionIndex = Math.min(suggestionIndex + 1, items.length - 1);
+                    highlightSuggestion(suggestionIndex);
+                } else if (e.key === 'ArrowUp' && visible) {
+                    e.preventDefault();
+                    suggestionIndex = Math.max(suggestionIndex - 1, 0);
+                    highlightSuggestion(suggestionIndex);
+                } else if (e.key === 'Enter') {
+                    e.preventDefault();
+                    clearTimeout(debounceTimer);
+                    if (visible && suggestionIndex >= 0 && suggestionIndex < items.length) {
+                        var slug = items[suggestionIndex].getAttribute('data-slug');
+                        searchEl.value = slug;
+                        suggestionsEl.style.display = 'none';
+                        doSearch(slug);
+                    } else if (visible && items.length > 0) {
+                        var slug = items[0].getAttribute('data-slug');
                         searchEl.value = slug;
                         suggestionsEl.style.display = 'none';
                         doSearch(slug);
@@ -3283,6 +3317,9 @@
                         suggestionsEl.style.display = 'none';
                         doSearch(searchEl.value.trim());
                     }
+                } else if (e.key === 'Escape') {
+                    suggestionsEl.style.display = 'none';
+                    suggestionIndex = -1;
                 }
             });
 
