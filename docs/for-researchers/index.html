@@ -500,6 +500,37 @@
         .rank-low { background: rgba(249,115,22,0.15); color: #f97316; }
         .rank-divergent { background: rgba(236,72,153,0.15); color: #ec4899; }
 
+        /* Confidence indicator */
+        .confidence-indicator {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.25rem 0.65rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            white-space: nowrap;
+            cursor: help;
+        }
+        .confidence-bar {
+            width: 40px;
+            height: 6px;
+            background: var(--bg-tertiary);
+            border-radius: 3px;
+            overflow: hidden;
+        }
+        .confidence-fill {
+            height: 100%;
+            border-radius: 3px;
+        }
+        .conf-high { background: rgba(34,197,94,0.15); color: #22c55e; }
+        .conf-high .confidence-fill { background: #22c55e; }
+        .conf-moderate { background: rgba(245,158,11,0.15); color: #f59e0b; }
+        .conf-moderate .confidence-fill { background: #f59e0b; }
+        .conf-low { background: rgba(249,115,22,0.15); color: #f97316; }
+        .conf-low .confidence-fill { background: #f97316; }
+        .conf-very-low { background: rgba(239,68,68,0.15); color: #ef4444; }
+        .conf-very-low .confidence-fill { background: #ef4444; }
+
         /* Per-model recognition rows in term explorer */
         .te-model-row {
             margin-bottom: 0.6rem;
@@ -1870,6 +1901,59 @@
             renderTermExplorer(term, consensus);
         }
 
+        function computeConfidence(consensus, nModels, nTotal, stdDev) {
+            // Composite confidence score (0-100) considering:
+            // 1. Panel breadth: what fraction of the full panel rated this term
+            // 2. Rating depth: total ratings relative to ideal coverage
+            // 3. Rater reliability: avg self-congruence of models that rated
+            // 4. Agreement strength: lower std_dev = higher confidence in the mean
+            var totalPanel = modelsData && modelsData.models ? Object.keys(modelsData.models).length : 7;
+            if (!nModels || !nTotal) return null;
+
+            // Panel breadth (25%): n_models / total_panel
+            var breadth = Math.min(nModels / totalPanel, 1);
+
+            // Rating depth (25%): approach 1.0 at totalPanel * 3 ratings
+            var idealRatings = totalPanel * 3;
+            var depth = Math.min(nTotal / idealRatings, 1);
+
+            // Rater reliability (25%): avg self-congruence of participating models
+            // Lower self-congruence sigma = more reliable raters
+            var reliability = 0.5; // default if no model data
+            if (modelsData && modelsData.models && consensus.model_opinions) {
+                var raterModels = Object.keys(consensus.model_opinions);
+                var totalSc = 0;
+                var scCount = 0;
+                for (var i = 0; i < raterModels.length; i++) {
+                    var md = modelsData.models[raterModels[i]];
+                    if (md && md.self_congruence) {
+                        totalSc += md.self_congruence.avg_std_dev;
+                        scCount++;
+                    }
+                }
+                if (scCount > 0) {
+                    var avgSc = totalSc / scCount;
+                    reliability = Math.max(0, Math.min(1, 1 - (avgSc / 1.5)));
+                }
+            }
+
+            // Agreement strength (25%): lower std_dev = higher confidence
+            var agreementScore = 0.5;
+            if (stdDev !== null && stdDev !== undefined) {
+                agreementScore = Math.max(0, Math.min(1, 1 - (stdDev / 3)));
+            }
+
+            var raw = (breadth * 0.25 + depth * 0.25 + reliability * 0.25 + agreementScore * 0.25) * 100;
+            var score = Math.round(raw);
+
+            var breakdown = 'Panel breadth: ' + Math.round(breadth * 100) + '% (' + nModels + '/' + totalPanel + ' models)'
+                + ' | Rating depth: ' + Math.round(depth * 100) + '% (' + nTotal + ' ratings)'
+                + ' | Rater reliability: ' + Math.round(reliability * 100) + '%'
+                + ' | Agreement: ' + Math.round(agreementScore * 100) + '%';
+
+            return { score: score, breakdown: breakdown };
+        }
+
         function computeCongruenceRank(slug) {
             if (!consensusData || !consensusData.terms) return null;
             // Filter terms that have std_dev
@@ -1916,10 +2000,22 @@
             var nTotal = consensus.combined ? consensus.combined.n_total : (consensus.total_ratings || 0);
             var stdDev = consensus.scheduled ? consensus.scheduled.std_dev : null;
 
-            if (mean !== null) h += '<span class="stat-pill"><strong>' + Number(mean).toFixed(1) + '</strong>/7</span>';
+            var nModels = consensus.scheduled ? consensus.scheduled.n_models : Object.keys(consensus.model_opinions || {}).length;
+
+            if (mean !== null) h += '<span class="stat-pill">Mean: <strong>' + Number(mean).toFixed(1) + '</strong>/7</span>';
             if (agreement) h += '<span class="stat-pill">Agreement: <strong>' + escHtml(agreement) + '</strong></span>';
-            if (stdDev !== null) h += '<span class="stat-pill">&sigma; <strong>' + Number(stdDev).toFixed(2) + '</strong></span>';
-            if (nTotal) h += '<span class="stat-pill"><strong>' + nTotal + '</strong> ratings</span>';
+            if (stdDev !== null) h += '<span class="stat-pill">Std dev: <strong>' + Number(stdDev).toFixed(2) + '</strong></span>';
+            if (nTotal) h += '<span class="stat-pill"><strong>' + nTotal + '</strong> ratings from <strong>' + nModels + '</strong> models</span>';
+
+            // Confidence indicator
+            var conf = computeConfidence(consensus, nModels, nTotal, stdDev);
+            if (conf !== null) {
+                var confClass = conf.score >= 75 ? 'conf-high' : (conf.score >= 50 ? 'conf-moderate' : (conf.score >= 25 ? 'conf-low' : 'conf-very-low'));
+                h += '<span class="confidence-indicator ' + confClass + '" title="' + escHtml(conf.breakdown) + '">';
+                h += '<span class="confidence-bar"><span class="confidence-fill" style="width:' + conf.score + '%"></span></span>';
+                h += ' Confidence: <strong>' + conf.score + '%</strong>';
+                h += '</span>';
+            }
 
             // Congruence rank badge
             var cr = computeCongruenceRank(term.slug);
