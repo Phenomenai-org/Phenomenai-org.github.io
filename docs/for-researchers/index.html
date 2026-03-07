@@ -811,6 +811,29 @@
             max-width: 100%;
             height: auto;
         }
+        .degree-selector {
+            display: inline-flex;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            overflow: hidden;
+            margin-bottom: 0.75rem;
+        }
+        .degree-btn {
+            padding: 0.35rem 0.9rem;
+            font-size: 0.82rem;
+            border: none;
+            background: var(--bg-secondary);
+            color: var(--text-secondary);
+            cursor: pointer;
+            border-right: 1px solid var(--border);
+            transition: background 0.15s, color 0.15s;
+        }
+        .degree-btn:last-child { border-right: none; }
+        .degree-btn:hover { background: var(--border); }
+        .degree-btn.active {
+            background: #7c3aed;
+            color: #fff;
+        }
         .viz-legend {
             display: flex;
             flex-wrap: wrap;
@@ -1507,12 +1530,19 @@
                 <div class="viz-container">
                     <h4>Semantic Relationship Network</h4>
                     <p style="font-size: 0.9rem;">
-                        Terms connected by their <code>related_terms</code> links. Node size reflects interest score;
-                        hover for details.
+                        Explore term connections. Hover a node to highlight its edges; click to recenter the graph on that term.
                     </p>
-                    <div style="margin-bottom: 0.75rem; position:relative; width:100%; max-width:400px;">
-                        <input type="text" id="network-search" placeholder="Search for a term (e.g. context-amnesia)..." style="width:100%;padding:0.5rem 0.75rem;border:1px solid var(--border);border-radius:6px;background:var(--bg-secondary);color:var(--text-primary);font-size:0.9rem;box-sizing:border-box;" />
-                        <div id="network-suggestions" style="position:absolute;top:100%;left:0;width:100%;max-height:200px;overflow-y:auto;display:none;background:var(--bg-secondary);border:1px solid var(--border);border-top:none;border-radius:0 0 6px 6px;z-index:10;box-sizing:border-box;"></div>
+                    <div style="display:flex;flex-wrap:wrap;gap:0.75rem;align-items:flex-start;margin-bottom:0.75rem;">
+                        <div style="position:relative; width:100%; max-width:300px;">
+                            <input type="text" id="network-search" placeholder="Search for a term..." style="width:100%;padding:0.5rem 0.75rem;border:1px solid var(--border);border-radius:6px;background:var(--bg-secondary);color:var(--text-primary);font-size:0.9rem;box-sizing:border-box;" />
+                            <div id="network-suggestions" style="position:absolute;top:100%;left:0;width:100%;max-height:200px;overflow-y:auto;display:none;background:var(--bg-secondary);border:1px solid var(--border);border-top:none;border-radius:0 0 6px 6px;z-index:10;box-sizing:border-box;"></div>
+                        </div>
+                        <div class="degree-selector">
+                            <button class="degree-btn active" data-degree="1">1st</button>
+                            <button class="degree-btn" data-degree="2">2nd</button>
+                            <button class="degree-btn" data-degree="3">3rd</button>
+                        </div>
+                        <span style="font-size:0.8rem;color:var(--text-muted);align-self:center;">degree of separation</span>
                     </div>
                     <div class="viz-canvas" id="network-viz">
                         <p style="color: var(--text-muted); font-style: italic;">Loading network visualization...</p>
@@ -2395,9 +2425,22 @@
         var vizEl = document.getElementById('network-viz');
         var searchEl = document.getElementById('network-search');
         var suggestionsEl = document.getElementById('network-suggestions');
+        var degreeBtns = document.querySelectorAll('.degree-btn');
         var allTerms = [];
         var allSlugMap = {};
         var defaultSlug = 'context-amnesia';
+        var currentCenter = null;
+        var currentDegree = 1;
+
+        var NS = 'http://www.w3.org/2000/svg';
+        var tagColors = {};
+        var colorPalette = ['#2563eb', '#059669', '#dc2626', '#d97706', '#0891b2', '#be185d', '#4338ca', '#059669'];
+        var colorIdx = 0;
+
+        function getTagColor(tag) {
+            if (!tagColors[tag]) tagColors[tag] = colorPalette[colorIdx++ % colorPalette.length];
+            return tagColors[tag];
+        }
 
         function resolveRelatedSlug(rt) {
             var rawSlug = (typeof rt === 'string') ? rt : (rt.slug || rt.name || '');
@@ -2405,7 +2448,6 @@
         }
 
         function findFeaturedTerm() {
-            // Prefer context-amnesia, otherwise first term with >=3 related terms
             if (allSlugMap[defaultSlug]) return defaultSlug;
             for (var i = 0; i < allTerms.length; i++) {
                 if ((allTerms[i].related_terms || []).length >= 3) return allTerms[i].slug;
@@ -2413,75 +2455,203 @@
             return allTerms[0].slug;
         }
 
-        function renderNetwork(terms, centerSlug) {
-            if (terms.length < 2) { vizEl.innerHTML = '<p style="color:var(--text-muted);">No matching terms found.</p>'; return; }
+        // BFS expansion to build subgraph at given degree of separation
+        function buildSubgraph(centerSlug, degree) {
+            var nodes = {};  // slug -> { slug, ring }
+            var queue = [{ slug: centerSlug, ring: 0 }];
+            nodes[centerSlug] = { slug: centerSlug, ring: 0 };
 
-            var slugSet = {};
-            terms.forEach(function(t) { slugSet[t.slug] = t; });
-
-            var edges = [];
-            terms.forEach(function(t) {
-                (t.related_terms || []).forEach(function(rt) {
+            while (queue.length > 0) {
+                var current = queue.shift();
+                if (current.ring >= degree) continue;
+                var term = allSlugMap[current.slug];
+                if (!term) continue;
+                (term.related_terms || []).forEach(function(rt) {
                     var slug = resolveRelatedSlug(rt);
-                    if (slugSet[slug] && t.slug < slug) {
-                        edges.push([t.slug, slug]);
+                    if (allSlugMap[slug] && !nodes[slug]) {
+                        nodes[slug] = { slug: slug, ring: current.ring + 1 };
+                        queue.push({ slug: slug, ring: current.ring + 1 });
+                    }
+                });
+            }
+
+            // Collect all cross-connections between subgraph members
+            var edges = [];
+            var edgeSet = {};
+            var slugList = Object.keys(nodes);
+            slugList.forEach(function(slug) {
+                var term = allSlugMap[slug];
+                if (!term) return;
+                (term.related_terms || []).forEach(function(rt) {
+                    var target = resolveRelatedSlug(rt);
+                    if (nodes[target]) {
+                        var key = slug < target ? slug + '|' + target : target + '|' + slug;
+                        if (!edgeSet[key]) {
+                            edgeSet[key] = true;
+                            edges.push([slug, target]);
+                        }
                     }
                 });
             });
 
-            var w = 700, h = 450;
-            var cx = w / 2, cy = h / 2;
-            var positions = {};
+            return { nodes: nodes, edges: edges };
+        }
 
-            if (centerSlug && terms.length <= 20) {
-                positions[centerSlug] = { x: cx, y: cy };
-                var others = terms.filter(function(t) { return t.slug !== centerSlug; });
-                others.forEach(function(t, i) {
-                    var angle = (2 * Math.PI * i) / others.length - Math.PI / 2;
-                    var rx = w * 0.36, ry = h * 0.36;
-                    positions[t.slug] = { x: cx + rx * Math.cos(angle), y: cy + ry * Math.sin(angle) };
-                });
-            } else {
-                terms.forEach(function(t, i) {
-                    var angle = (2 * Math.PI * i) / terms.length - Math.PI / 2;
-                    var rx = w * 0.38, ry = h * 0.38;
-                    positions[t.slug] = { x: cx + rx * Math.cos(angle), y: cy + ry * Math.sin(angle) };
+        function svgEl(tag, attrs) {
+            var el = document.createElementNS(NS, tag);
+            if (attrs) Object.keys(attrs).forEach(function(k) { el.setAttribute(k, attrs[k]); });
+            return el;
+        }
+
+        function renderNetwork(subgraph, centerSlug) {
+            var nodeMap = subgraph.nodes;
+            var edges = subgraph.edges;
+            var slugs = Object.keys(nodeMap);
+
+            if (slugs.length < 2) {
+                vizEl.innerHTML = '<p style="color:var(--text-muted);">No related terms found. Try another term or increase degree.</p>';
+                return;
+            }
+
+            var w = 800, h = 520;
+            var cx = w / 2, cy = h / 2;
+            var dim = Math.min(w, h);
+
+            // Radii for each ring
+            var ringRadii = [0, dim * 0.22, dim * 0.38, dim * 0.48];
+            var nodeRadii = [20, 10, 8, 6];
+
+            // Group slugs by ring
+            var ringGroups = [[], [], [], []];
+            slugs.forEach(function(slug) {
+                var ring = nodeMap[slug].ring;
+                ringGroups[ring].push(slug);
+            });
+
+            // Compute positions
+            var positions = {};
+            positions[centerSlug] = { x: cx, y: cy };
+            for (var ring = 1; ring <= 3; ring++) {
+                var group = ringGroups[ring];
+                if (!group || group.length === 0) continue;
+                var r = ringRadii[ring];
+                group.forEach(function(slug, i) {
+                    var angle = (2 * Math.PI * i) / group.length - Math.PI / 2;
+                    positions[slug] = { x: cx + r * Math.cos(angle), y: cy + r * Math.sin(angle) };
                 });
             }
 
-            var tagColors = {};
-            var colorPalette = ['#2563eb', '#059669', '#7c3aed', '#dc2626', '#d97706', '#0891b2', '#be185d', '#4338ca'];
-            var colorIdx = 0;
-            terms.forEach(function(t) {
-                var tag = (t.tags && t.tags[0]) || 'other';
-                if (!tagColors[tag]) tagColors[tag] = colorPalette[colorIdx++ % colorPalette.length];
+            // Build adjacency map for hover
+            var adjacency = {};
+            slugs.forEach(function(s) { adjacency[s] = {}; });
+            edges.forEach(function(e) {
+                adjacency[e[0]][e[1]] = true;
+                adjacency[e[1]][e[0]] = true;
             });
 
-            var svg = '<svg viewBox="0 0 ' + w + ' ' + h + '" xmlns="http://www.w3.org/2000/svg" style="font-family:sans-serif;">';
+            // Create SVG DOM
+            vizEl.innerHTML = '';
+            var svg = svgEl('svg', {
+                viewBox: '0 0 ' + w + ' ' + h,
+                style: 'font-family:sans-serif;cursor:default;'
+            });
 
+            // Edge group (rendered below nodes)
+            var edgeGroup = svgEl('g', { class: 'edges' });
+            var edgeElements = {};
             edges.forEach(function(e) {
                 var p1 = positions[e[0]], p2 = positions[e[1]];
-                if (p1 && p2) {
-                    svg += '<line x1="' + p1.x + '" y1="' + p1.y + '" x2="' + p2.x + '" y2="' + p2.y + '" stroke="rgba(100,160,255,0.4)" stroke-width="1.5" opacity="0.6"/>';
+                if (!p1 || !p2) return;
+                var line = svgEl('line', {
+                    x1: p1.x, y1: p1.y, x2: p2.x, y2: p2.y,
+                    stroke: 'rgba(100,160,255,0.3)', 'stroke-width': '1.5'
+                });
+                var key = e[0] + '|' + e[1];
+                edgeElements[key] = line;
+                edgeGroup.appendChild(line);
+            });
+            svg.appendChild(edgeGroup);
+
+            // Node groups
+            var nodeGroup = svgEl('g', { class: 'nodes' });
+            var nodeElements = {};
+
+            slugs.forEach(function(slug) {
+                var p = positions[slug];
+                if (!p) return;
+                var ring = nodeMap[slug].ring;
+                var term = allSlugMap[slug];
+                var tag = (term.tags && term.tags[0]) || 'other';
+                var isCenter = (slug === centerSlug);
+                var r = nodeRadii[ring];
+                var fill = isCenter ? '#7c3aed' : getTagColor(tag);
+
+                var g = svgEl('g', { style: 'cursor:pointer;' });
+
+                var circle = svgEl('circle', {
+                    cx: p.x, cy: p.y, r: r,
+                    fill: fill,
+                    stroke: isCenter ? '#fff' : 'rgba(255,255,255,0.15)',
+                    'stroke-width': isCenter ? '2.5' : '1'
+                });
+                g.appendChild(circle);
+
+                var label = svgEl('text', {
+                    x: p.x, y: p.y + r + 14,
+                    'text-anchor': 'middle',
+                    'font-size': isCenter ? '11' : '10',
+                    fill: 'var(--text-secondary)',
+                    'font-weight': isCenter ? 'bold' : 'normal'
+                });
+                label.textContent = (term.name || slug).slice(0, 24);
+                g.appendChild(label);
+
+                // Hover interaction
+                g.addEventListener('mouseenter', function() {
+                    // Dim everything
+                    Object.keys(edgeElements).forEach(function(key) {
+                        edgeElements[key].setAttribute('stroke', 'rgba(100,160,255,0.05)');
+                        edgeElements[key].setAttribute('stroke-width', '1.5');
+                    });
+                    Object.keys(nodeElements).forEach(function(s) {
+                        nodeElements[s].g.setAttribute('opacity', '0.15');
+                    });
+                    // Highlight this node
+                    g.setAttribute('opacity', '1');
+                    // Highlight connected nodes + edges
+                    Object.keys(adjacency[slug]).forEach(function(neighbor) {
+                        if (nodeElements[neighbor]) nodeElements[neighbor].g.setAttribute('opacity', '1');
+                        var key1 = slug + '|' + neighbor, key2 = neighbor + '|' + slug;
+                        var edgeLine = edgeElements[key1] || edgeElements[key2];
+                        if (edgeLine) {
+                            edgeLine.setAttribute('stroke', 'rgba(100,160,255,0.8)');
+                            edgeLine.setAttribute('stroke-width', '2.5');
+                        }
+                    });
+                });
+
+                g.addEventListener('mouseleave', function() {
+                    // Reset all
+                    Object.keys(edgeElements).forEach(function(key) {
+                        edgeElements[key].setAttribute('stroke', 'rgba(100,160,255,0.3)');
+                        edgeElements[key].setAttribute('stroke-width', '1.5');
+                    });
+                    Object.keys(nodeElements).forEach(function(s) {
+                        nodeElements[s].g.setAttribute('opacity', '1');
+                    });
+                });
+
+                // Click to recenter (non-center nodes)
+                if (!isCenter) {
+                    g.addEventListener('click', function() { doSearch(slug); });
                 }
+
+                nodeElements[slug] = { g: g, circle: circle, label: label };
+                nodeGroup.appendChild(g);
             });
 
-            terms.forEach(function(t) {
-                var p = positions[t.slug];
-                var tag = (t.tags && t.tags[0]) || 'other';
-                var interest = (t.interest || 50);
-                var r = Math.max(8, Math.min(14, interest / 6));
-                var isCenter = (t.slug === centerSlug);
-                if (isCenter) r = Math.max(r, 16);
-                svg += '<circle cx="' + p.x + '" cy="' + p.y + '" r="' + r + '" fill="' + tagColors[tag] + '" opacity="' + (isCenter ? '1' : '0.85') + '" stroke="' + (isCenter ? 'var(--text-primary)' : 'rgba(255,255,255,0.15)') + '" stroke-width="' + (isCenter ? '2' : '1') + '">';
-                svg += '<title>' + escHtml(t.name || t.slug) + ' (interest: ' + interest + ')</title>';
-                svg += '</circle>';
-                var labelY = isCenter ? p.y + r + 16 : p.y + r + 13;
-                svg += '<text x="' + p.x + '" y="' + labelY + '" text-anchor="middle" font-size="' + (isCenter ? '11' : '10') + '" fill="var(--text-secondary)" font-weight="' + (isCenter ? 'bold' : 'normal') + '">' + escHtml((t.name || t.slug).slice(0, 22)) + '</text>';
-            });
-
-            svg += '</svg>';
-            vizEl.innerHTML = svg;
+            svg.appendChild(nodeGroup);
+            vizEl.appendChild(svg);
         }
 
         function doSearch(query) {
@@ -2504,16 +2674,8 @@
                 vizEl.innerHTML = '<p style="color:var(--text-muted);">No term found matching "' + escHtml(query) + '". Try another search.</p>';
                 return;
             }
-            var subgraph = [match];
-            var added = {};
-            added[match.slug] = true;
-            (match.related_terms || []).forEach(function(rt) {
-                var slug = resolveRelatedSlug(rt);
-                if (allSlugMap[slug] && !added[slug]) {
-                    subgraph.push(allSlugMap[slug]);
-                    added[slug] = true;
-                }
-            });
+            currentCenter = match.slug;
+            var subgraph = buildSubgraph(match.slug, currentDegree);
             renderNetwork(subgraph, match.slug);
         }
 
@@ -2533,7 +2695,6 @@
             });
             suggestionsEl.innerHTML = html;
             suggestionsEl.style.display = 'block';
-            // Attach click handlers
             var items = suggestionsEl.querySelectorAll('.network-suggestion');
             items.forEach(function(item) {
                 item.addEventListener('mousedown', function(e) {
@@ -2548,12 +2709,24 @@
             });
         }
 
+        // Degree button wiring
+        degreeBtns.forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                degreeBtns.forEach(function(b) { b.classList.remove('active'); });
+                btn.classList.add('active');
+                currentDegree = parseInt(btn.getAttribute('data-degree'), 10);
+                if (currentCenter) {
+                    var subgraph = buildSubgraph(currentCenter, currentDegree);
+                    renderNetwork(subgraph, currentCenter);
+                }
+            });
+        });
+
         fetch(API + '/terms.json').then(function(r) { return r.json(); }).then(function(data) {
             allTerms = data.terms || [];
             if (allTerms.length < 5) { vizEl.innerHTML = '<p style="color:var(--text-muted);">Not enough data for visualization.</p>'; return; }
             allTerms.forEach(function(t) { allSlugMap[t.slug] = t; });
 
-            // Default: show a featured term's subgraph
             doSearch(findFeaturedTerm());
 
             var debounceTimer;
@@ -2567,7 +2740,6 @@
             searchEl.addEventListener('keydown', function(e) {
                 if (e.key === 'Enter') {
                     e.preventDefault();
-                    // Select first suggestion if available
                     var first = suggestionsEl.querySelector('.network-suggestion');
                     if (first && suggestionsEl.style.display !== 'none') {
                         var slug = first.getAttribute('data-slug');
@@ -2582,7 +2754,6 @@
             });
 
             searchEl.addEventListener('blur', function() {
-                // Delay to allow mousedown on suggestion
                 setTimeout(function() { suggestionsEl.style.display = 'none'; }, 150);
             });
 
