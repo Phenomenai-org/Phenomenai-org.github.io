@@ -1724,6 +1724,7 @@
                         <select id="rating-history-select" class="ds-select">
                             <option value="">Loading terms...</option>
                         </select>
+                        <button id="rating-history-refresh" class="ds-select" style="cursor:pointer;padding:0.4rem 0.6rem;" title="Refresh term list">&#x21bb;</button>
                     </div>
                     <div class="viz-canvas" id="rating-history-viz">
                         <p style="color: var(--text-muted); font-style: italic;">Loading rating history...</p>
@@ -3372,7 +3373,10 @@
         }
 
         minEl.addEventListener('change', populateTermSelect);
+        minEl.addEventListener('input', populateTermSelect);
         minModelsEl.addEventListener('change', populateTermSelect);
+        minModelsEl.addEventListener('input', populateTermSelect);
+        document.getElementById('rating-history-refresh').addEventListener('click', populateTermSelect);
 
         function renderChart(slug) {
             vizEl.innerHTML = '<p style="color:var(--text-muted); font-style:italic;">Loading...</p>';
