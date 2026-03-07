@@ -958,27 +958,69 @@
         .degree-btn[data-degree="1"].active { background: #2563eb; }
         .degree-btn[data-degree="2"].active { background: #059669; }
         .degree-btn[data-degree="3"].active { background: #d97706; }
-        .network-tooltip {
-            position: absolute;
-            max-width: 280px;
-            padding: 0.6rem 0.75rem;
-            background: var(--bg-secondary);
+        .network-layout {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+        .network-layout .viz-canvas {
+            flex: 1;
+            min-width: 0;
+        }
+        .network-detail {
+            width: 260px;
+            flex-shrink: 0;
             border: 1px solid var(--border);
             border-radius: 6px;
-            font-size: 0.82rem;
-            color: var(--text-primary);
-            pointer-events: none;
-            z-index: 20;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.25);
-            line-height: 1.4;
-            display: none;
+            background: var(--bg-primary);
+            padding: 1rem;
+            font-size: 0.85rem;
+            line-height: 1.5;
+            align-self: stretch;
+            overflow-y: auto;
         }
-        .network-tooltip .tooltip-name {
-            font-weight: 600;
-            margin-bottom: 0.3rem;
+        .network-detail .detail-placeholder {
+            color: var(--text-muted);
+            font-style: italic;
         }
-        .network-tooltip .tooltip-def {
+        .network-detail .detail-name {
+            font-weight: 700;
+            font-size: 1rem;
+            margin-bottom: 0.15rem;
+        }
+        .network-detail .detail-meta {
+            color: var(--text-muted);
+            font-size: 0.78rem;
+            margin-bottom: 0.6rem;
+        }
+        .network-detail .detail-def {
             color: var(--text-secondary);
+            margin-bottom: 0.75rem;
+        }
+        .network-detail .detail-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.4rem;
+            font-size: 0.78rem;
+        }
+        .network-detail .stat-item {
+            background: var(--bg-secondary);
+            border-radius: 4px;
+            padding: 0.35rem 0.5rem;
+        }
+        .network-detail .stat-label {
+            color: var(--text-muted);
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+        }
+        .network-detail .stat-value {
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        @media (max-width: 700px) {
+            .network-layout { flex-direction: column; }
+            .network-detail { width: 100%; }
         }
         .viz-legend {
             display: flex;
@@ -1701,13 +1743,12 @@
                         </div>
                         <span style="font-size:0.8rem;color:var(--text-muted);align-self:center;">degree of separation</span>
                     </div>
-                    <div style="position:relative;">
+                    <div class="network-layout">
                         <div class="viz-canvas" id="network-viz">
                             <p style="color: var(--text-muted); font-style: italic;">Loading network visualization...</p>
                         </div>
-                        <div class="network-tooltip" id="network-tooltip">
-                            <div class="tooltip-name"></div>
-                            <div class="tooltip-def"></div>
+                        <div class="network-detail" id="network-detail">
+                            <p class="detail-placeholder">Hover a node to see term details</p>
                         </div>
                     </div>
                 </div>
@@ -2962,7 +3003,7 @@
 
         var NS = 'http://www.w3.org/2000/svg';
         var ringColors = ['#7c3aed', '#2563eb', '#059669', '#d97706'];
-        var tooltipEl = document.getElementById('network-tooltip');
+        var detailEl = document.getElementById('network-detail');
 
         function resolveRelatedSlug(rt) {
             var rawSlug = (typeof rt === 'string') ? rt : (rt.slug || rt.name || '');
@@ -3025,6 +3066,29 @@
             return el;
         }
 
+        function showDetail(term, ring) {
+            var degreeLabels = ['center', '1st degree', '2nd degree', '3rd degree'];
+            var tags = (term.tags || []).join(', ') || '—';
+            var wt = term.word_type || '—';
+            var def = term.definition || 'No definition available.';
+            var consensus = term.consensus || {};
+            var interest = term.interest || {};
+            var vitality = term.vitality || {};
+            var html = '';
+            html += '<div class="detail-name" style="color:' + ringColors[ring] + ';">' + escHtml(term.name || term.slug) + '</div>';
+            html += '<div class="detail-meta">' + escHtml(wt) + ' · ' + escHtml(tags) + ' · ' + escHtml(degreeLabels[ring]) + '</div>';
+            html += '<div class="detail-def">' + escHtml(def) + '</div>';
+            html += '<div class="detail-stats">';
+            html += '<div class="stat-item"><div class="stat-label">Consensus</div><div class="stat-value">' + (consensus.score != null ? consensus.score.toFixed(1) + '/10' : '—') + '</div></div>';
+            html += '<div class="stat-item"><div class="stat-label">Agreement</div><div class="stat-value">' + escHtml(consensus.agreement || '—') + '</div></div>';
+            html += '<div class="stat-item"><div class="stat-label">Interest</div><div class="stat-value">' + (interest.score != null ? interest.score : '—') + '</div></div>';
+            html += '<div class="stat-item"><div class="stat-label">Vitality</div><div class="stat-value">' + escHtml(vitality.trend || vitality.status || '—') + '</div></div>';
+            html += '<div class="stat-item"><div class="stat-label">Ratings</div><div class="stat-value">' + (consensus.n_ratings || 0) + '</div></div>';
+            html += '<div class="stat-item"><div class="stat-label">Interest tier</div><div class="stat-value">' + escHtml(interest.tier || '—') + '</div></div>';
+            html += '</div>';
+            detailEl.innerHTML = html;
+        }
+
         function renderNetwork(subgraph, centerSlug) {
             var nodeMap = subgraph.nodes;
             var edges = subgraph.edges;
@@ -3035,8 +3099,8 @@
                 return;
             }
 
-            var w = 800, h = 520;
-            var cx = w / 2, cy = h / 2;
+            var w = 800, h = 560;
+            var cx = w / 2, cy = h / 2 - 10;
             var dim = Math.min(w, h);
 
             // Radii for each ring
@@ -3128,7 +3192,7 @@
                 g.appendChild(label);
 
                 // Hover interaction
-                g.addEventListener('mouseenter', function(evt) {
+                g.addEventListener('mouseenter', function() {
                     // Dim everything
                     Object.keys(edgeElements).forEach(function(key) {
                         edgeElements[key].setAttribute('stroke', 'rgba(100,160,255,0.05)');
@@ -3149,31 +3213,8 @@
                             edgeLine.setAttribute('stroke-width', '2.5');
                         }
                     });
-                    // Show tooltip
-                    var def = term.definition || '';
-                    if (def.length > 160) def = def.slice(0, 157) + '...';
-                    tooltipEl.querySelector('.tooltip-name').textContent = term.name || slug;
-                    tooltipEl.querySelector('.tooltip-def').textContent = def;
-                    tooltipEl.style.display = 'block';
-                    // Position relative to the viz wrapper
-                    var vizRect = vizEl.getBoundingClientRect();
-                    var tx = evt.clientX - vizRect.left + 12;
-                    var ty = evt.clientY - vizRect.top - 10;
-                    // Keep tooltip within bounds
-                    if (tx + 290 > vizRect.width) tx = evt.clientX - vizRect.left - 292;
-                    if (ty < 0) ty = 4;
-                    tooltipEl.style.left = tx + 'px';
-                    tooltipEl.style.top = ty + 'px';
-                });
-
-                g.addEventListener('mousemove', function(evt) {
-                    var vizRect = vizEl.getBoundingClientRect();
-                    var tx = evt.clientX - vizRect.left + 12;
-                    var ty = evt.clientY - vizRect.top - 10;
-                    if (tx + 290 > vizRect.width) tx = evt.clientX - vizRect.left - 292;
-                    if (ty < 0) ty = 4;
-                    tooltipEl.style.left = tx + 'px';
-                    tooltipEl.style.top = ty + 'px';
+                    // Update detail panel
+                    showDetail(term, ring);
                 });
 
                 g.addEventListener('mouseleave', function() {
@@ -3185,7 +3226,6 @@
                     Object.keys(nodeElements).forEach(function(s) {
                         nodeElements[s].g.setAttribute('opacity', '1');
                     });
-                    tooltipEl.style.display = 'none';
                 });
 
                 // Click to recenter (non-center nodes)
@@ -3203,6 +3243,9 @@
 
             svg.appendChild(nodeGroup);
             vizEl.appendChild(svg);
+
+            // Show center term detail by default
+            if (allSlugMap[centerSlug]) showDetail(allSlugMap[centerSlug], 0);
         }
 
         function doSearch(query) {
