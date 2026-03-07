@@ -515,25 +515,10 @@
             white-space: nowrap;
             cursor: help;
         }
-        .confidence-bar {
-            width: 40px;
-            height: 6px;
-            background: var(--bg-tertiary);
-            border-radius: 3px;
-            overflow: hidden;
-        }
-        .confidence-fill {
-            height: 100%;
-            border-radius: 3px;
-        }
         .conf-high { background: rgba(34,197,94,0.12); color: #22c55e; }
-        .conf-high .confidence-fill { background: #22c55e; }
         .conf-moderate { background: rgba(147,160,178,0.15); color: var(--text-secondary); }
-        .conf-moderate .confidence-fill { background: var(--text-secondary); }
         .conf-low { background: rgba(147,160,178,0.15); color: var(--text-muted); }
-        .conf-low .confidence-fill { background: var(--text-muted); }
         .conf-very-low { background: rgba(239,68,68,0.12); color: #ef4444; }
-        .conf-very-low .confidence-fill { background: #ef4444; }
 
         /* Per-model recognition rows in term explorer */
         .te-model-row {
@@ -2690,10 +2675,11 @@
             var score = Math.round(raw);
 
             var breakdown = 'Confidence that this is a consistent, universally recognized phenomenon across models. '
-                + 'Computed from: Panel breadth ' + Math.round(breadth * 100) + '% (' + nModels + '/' + totalPanel + ' models rated) '
-                + '| Rating depth ' + Math.round(depth * 100) + '% (' + nTotal + ' total ratings) '
-                + '| Rater reliability ' + Math.round(reliability * 100) + '% (how consistent the rating models are across all terms) '
-                + '| Cross-model agreement ' + Math.round(agreementScore * 100) + '% (how closely models agree on this term)';
+                + 'Equal-weighted mean of four factors (each 25%): '
+                + 'Panel breadth ' + Math.round(breadth * 100) + '% (' + nModels + '/' + totalPanel + ' models rated) '
+                + '+ Rating depth ' + Math.round(depth * 100) + '% (' + nTotal + ' total ratings) '
+                + '+ Rater reliability ' + Math.round(reliability * 100) + '% (how consistent the rating models are across all terms) '
+                + '+ Cross-model agreement ' + Math.round(agreementScore * 100) + '% (how closely models agree on this term)';
 
             return { score: score, breakdown: breakdown };
         }
@@ -2737,8 +2723,7 @@
             if (conf !== null) {
                 var confClass = conf.score >= 75 ? 'conf-high' : (conf.score >= 50 ? 'conf-moderate' : (conf.score >= 25 ? 'conf-low' : 'conf-very-low'));
                 h += '<span class="confidence-indicator ' + confClass + '" title="' + escHtml(conf.breakdown) + '">';
-                h += '<span class="confidence-bar"><span class="confidence-fill" style="width:' + conf.score + '%"></span></span>';
-                h += ' Confidence: <strong>' + conf.score + '%</strong>';
+                h += 'Confidence: <strong>' + conf.score + '%</strong>';
                 h += '</span>';
             }
 
