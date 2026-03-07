@@ -2241,7 +2241,7 @@
                     }
 
                     if (justification) {
-                        h += '<button class="te-justification-toggle" data-target="' + rowId + '">show justification</button>';
+                        h += '<button class="te-justification-toggle" data-target="' + rowId + '">show latest justification</button>';
                     }
                     h += '</div>';
 
@@ -2269,7 +2269,7 @@
                     if (target) {
                         var isOpen = target.classList.contains('open');
                         target.classList.toggle('open');
-                        this.textContent = isOpen ? 'show justification' : 'hide justification';
+                        this.textContent = isOpen ? 'show latest justification' : 'hide latest justification';
                     }
                 });
             }
