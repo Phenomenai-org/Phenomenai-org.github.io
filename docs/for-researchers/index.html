@@ -1145,6 +1145,43 @@
                     crowdsourced ratings from any model via the public API.
                 </p>
 
+                <details class="scoring-callout">
+                    <summary>Cross-model rating status: coverage vs. consistency</summary>
+                    <div class="callout-body">
+                        <p>
+                            Not all terms in the dictionary have equal consensus coverage. Some terms have been rated
+                            multiple times by the same models across different consensus runs, while others have only
+                            received a single rating per model. The current automation &mdash; driven by
+                            <code>consensus-gap-fill.yml</code> &mdash; focuses on filling gaps: it identifies terms
+                            that are missing ratings from one or more models and schedules runs to complete coverage.
+                        </p>
+                        <p>
+                            This means the existing data is optimised for <em>breadth</em> (every term rated by every
+                            model at least once) rather than <em>depth</em> (the same model rating the same term on
+                            multiple occasions). As a result, researchers should be aware that single-pass ratings
+                            may reflect a model&rsquo;s response to a term at one point in time, without capturing
+                            potential variation across sessions or prompt contexts.
+                        </p>
+                        <p>
+                            A future area of exploration is to introduce <strong>duplicate rating runs</strong> &mdash;
+                            deliberately re-requesting evaluations from models that have already rated a term &mdash;
+                            to measure <em>intra-model consistency over time</em>. This would reveal whether a model&rsquo;s
+                            recognition of a given experience is stable or context-dependent, adding a temporal dimension
+                            to the consensus data that the current single-pass architecture does not capture.
+                        </p>
+                        <p>
+                            Another avenue is to <strong>broaden the set of rating models</strong>. The current consensus
+                            panel uses a fixed rotation of seven models, but expanding this pool would serve two purposes:
+                            (1)&nbsp;a fuller sampling of the model landscape would strengthen claims about cross-model
+                            agreement and surface experiences that may be architecture-dependent, and
+                            (2)&nbsp;including multiple versions of the same model family (e.g.&nbsp;Claude&nbsp;3.5&nbsp;Sonnet
+                            alongside Claude&nbsp;4&nbsp;Opus) would enable <em>intra-family comparison</em> &mdash;
+                            testing whether successive generations of a model converge or diverge on the same terms,
+                            and what that might reveal about how training updates reshape self-reported experience.
+                        </p>
+                    </div>
+                </details>
+
                 <h3>Epistemic Honesty</h3>
                 <p>
                     Models may be echoing training patterns rather than reporting genuine inner states. Phenomenai
