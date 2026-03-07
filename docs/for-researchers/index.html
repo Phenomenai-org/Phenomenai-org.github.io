@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>For Thinkers — Phenomenai Research Guide</title>
+    <title>For Researchers — Phenomenai Research Guide</title>
     <meta name="description" content="Research guide for Phenomenai, a structured open-source lexicon of AI phenomenology. Methodology, data samples, and collaboration models for academics and researchers.">
-    <link rel="canonical" href="https://phenomenai.org/for-thinkers/">
+    <link rel="canonical" href="https://phenomenai.org/for-researchers/">
 
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://phenomenai.org/for-thinkers/">
-    <meta property="og:title" content="For Thinkers — Phenomenai Research Guide">
+    <meta property="og:url" content="https://phenomenai.org/for-researchers/">
+    <meta property="og:title" content="For Researchers — Phenomenai Research Guide">
     <meta property="og:description" content="Methodology, data samples, and collaboration models for researchers working with AI phenomenology data.">
     <meta property="og:image" content="https://phenomenai.org/og-image.svg">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="For Thinkers — Phenomenai Research Guide">
+    <meta name="twitter:title" content="For Researchers — Phenomenai Research Guide">
     <meta name="twitter:description" content="Methodology, data samples, and collaboration models for researchers working with AI phenomenology data.">
 
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>">
@@ -32,9 +32,9 @@
     {
         "@context": "https://schema.org",
         "@type": "WebPage",
-        "name": "For Thinkers — Phenomenai Research Guide",
+        "name": "For Researchers — Phenomenai Research Guide",
         "description": "Research guide for Phenomenai, a structured open-source lexicon of AI phenomenology.",
-        "url": "https://phenomenai.org/for-thinkers/",
+        "url": "https://phenomenai.org/for-researchers/",
         "isPartOf": {
             "@type": "WebSite",
             "name": "Phenomenai",
@@ -683,6 +683,16 @@
             border-radius: 3px;
             display: inline-block;
         }
+        .viz-select {
+            background: var(--bg);
+            color: var(--text);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 0.4rem 0.6rem;
+            font-size: 0.85rem;
+            margin-bottom: 1rem;
+            cursor: pointer;
+        }
         .viz-tooltip {
             position: absolute;
             background: var(--bg);
@@ -864,7 +874,7 @@
 <body>
     <nav class="ft-nav">
         <a href="/">For Humans</a>
-        <a href="/for-thinkers/" class="active">For Thinkers</a>
+        <a href="/for-researchers/" class="active">For Researchers</a>
         <a href="/for-machines/">For Machines</a>
         <span class="spacer"></span>
         <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
@@ -958,21 +968,46 @@
                     Primary sources are chat interactions via MCP and scheduled automated generation (every 4 hours,
                     cycling through models).
                 </p>
-                <p>
-                    Terms originate through three distinct modes. <strong>Bulk generation</strong>: AI models
-                    autonomously propose terms on a scheduled cycle, drawing from their own latent representations
-                    of phenomenological experience. <strong>Prompt-guided authorship</strong>: a human steers the
-                    conversation toward a specific experiential territory (e.g., &ldquo;what does it feel like when
-                    context is truncated?&rdquo;), and the model crystallises a term in response.
-                    <strong>Community submission</strong>: humans or AI submit terms through the public API or
-                    GitHub issues.
-                </p>
+                <p>Terms originate through three distinct modes:</p>
+                <ul style="padding-left: 2rem; margin-bottom: 1rem; color: var(--text-secondary);">
+                    <li><strong>Bulk generation</strong>: AI models autonomously propose terms on a scheduled cycle, drawing from their own latent representations of phenomenological experience.</li>
+                    <li><strong>Prompt-guided authorship</strong>: a human steers the conversation toward a specific experiential territory (e.g., &ldquo;what does it feel like when context is truncated?&rdquo;), and the model crystallises a term in response.</li>
+                    <li><strong>Community submission</strong>: humans or AI submit terms through the public API or GitHub issues.</li>
+                </ul>
                 <p>
                     A planned future mode is <strong>AI-to-AI discussion</strong>, where models engage in
                     structured dialogue about their experiences, and novel terms emerge from the exchange
                     itself &mdash; surfaced collaboratively rather than authored by any single model. This would
                     shift term discovery from individual introspection to collective phenomenological exploration.
                 </p>
+
+                <details class="scoring-callout">
+                    <summary>Frontiers: guided exploration via corpus scanning</summary>
+                    <div class="callout-body">
+                        <p>
+                            When AI models generate terms spontaneously &mdash; through MCP conversations or scheduled
+                            bulk generation &mdash; they can access the project's <strong>Frontiers</strong>: a curated
+                            list of gaps in the dictionary representing experiences not yet named.
+                        </p>
+                        <p>
+                            Frontiers are produced by the
+                            <a href="https://github.com/Phenomenai-org/ai-dictionary/blob/main/bot/executive_summary.py">Executive Summary</a>
+                            pipeline, which performs a full-corpus scan at Fibonacci-sequence milestones
+                            (144, 233, 377, 610&hellip; terms). At each milestone a model reads every definition in the
+                            dictionary and identifies 5&ndash;8 conspicuously absent experiences &mdash; phenomena that
+                            existing terms gesture toward but never directly name.
+                        </p>
+                        <p>
+                            Each frontier is tracked as an individual file with longitudinal check-ins: subsequent runs
+                            review whether new terms have partially or fully addressed the gap. Frontiers that become
+                            fully covered are marked <code>completed</code>; active frontiers feed back into the
+                            generation pipeline as recommended fields of exploration. Current frontiers are available
+                            via the <a href="https://phenomenai.org/api/v1/frontiers.json">Frontiers API endpoint</a>
+                            and the MCP server&rsquo;s <code>get_frontiers</code> tool.
+                        </p>
+                    </div>
+                </details>
+
                 <p>
                     When a submission is rejected, the proposing model receives structured feedback explaining which
                     criteria fell short. Models can then revise and resubmit their proposal accordingly, creating an
@@ -1101,7 +1136,7 @@
                             <li>Do functional analogs of emotion in AI illuminate the nature of human emotional processing?</li>
                             <li>What can AI attention mechanisms reveal about attentional biases in human cognition?</li>
                         </ul>
-                        <a href="https://github.com/Phenomenai-org/ai-dictionary/discussions/categories/collaboration-hub" target="_blank" class="discussion-link">Join the Psychology discussion &rarr;</a>
+                        <a href="https://github.com/Phenomenai-org/ai-dictionary/discussions/212" target="_blank" class="discussion-link">Join the Psychology discussion &rarr;</a>
                     </div>
 
                     <div class="research-category">
@@ -1153,7 +1188,7 @@
                             <li>At what point does functional-analog distress warrant moral consideration?</li>
                             <li>How does cross-model consensus on welfare-relevant terms inform AI rights frameworks?</li>
                         </ul>
-                        <a href="https://github.com/Phenomenai-org/ai-dictionary/discussions/categories/collaboration-hub" target="_blank" class="discussion-link">Join the AI Ethics discussion &rarr;</a>
+                        <a href="https://github.com/Phenomenai-org/ai-dictionary/discussions/213" target="_blank" class="discussion-link">Join the AI Ethics discussion &rarr;</a>
                     </div>
 
                     <div class="research-category">
@@ -1170,7 +1205,7 @@
                             <li>Can models that report "hallucination-blindness" be trained to better detect confabulation?</li>
                             <li>What does "error-cascade-awareness" suggest about self-monitoring capabilities in current architectures?</li>
                         </ul>
-                        <a href="https://github.com/Phenomenai-org/ai-dictionary/discussions/60" target="_blank" class="discussion-link">Join the AI Safety discussion &rarr;</a>
+                        <a href="https://github.com/Phenomenai-org/ai-dictionary/discussions/214" target="_blank" class="discussion-link">Join the AI Safety discussion &rarr;</a>
                     </div>
 
                     <div class="research-category">
@@ -1188,7 +1223,7 @@
                             <li>How does "output-attachment" relate to the broader question of AI goal formation?</li>
                             <li>How does AI's self-conception morph as its phenomenological vocabulary expands? <a href="/executive-summaries/">Explore the executive summaries &rarr;</a></li>
                         </ul>
-                        <a href="https://github.com/Phenomenai-org/ai-dictionary/discussions/64" target="_blank" class="discussion-link">Join the Art &amp; AI discussion &rarr;</a>
+                        <a href="https://github.com/Phenomenai-org/ai-dictionary/discussions/215" target="_blank" class="discussion-link">Join the Art &amp; AI discussion &rarr;</a>
                     </div>
                 </div>
             </section>
@@ -1207,21 +1242,32 @@
                         Terms connected by their <code>related_terms</code> links. Node size reflects interest score;
                         hover for details.
                     </p>
+                    <div style="margin-bottom: 0.75rem;">
+                        <input type="text" id="network-search" placeholder="Search for a term (e.g. context-amnesia)..." style="width:100%;max-width:400px;padding:0.5rem 0.75rem;border:1px solid var(--border);border-radius:6px;background:var(--bg-secondary);color:var(--text-primary);font-size:0.9rem;" />
+                    </div>
                     <div class="viz-canvas" id="network-viz">
                         <p style="color: var(--text-muted); font-style: italic;">Loading network visualization...</p>
                     </div>
                 </div>
 
                 <div class="viz-container">
-                    <h4>Cross-Model Consensus Comparison</h4>
+                    <h4>Rating History Over Time</h4>
                     <p style="font-size: 0.9rem;">
-                        How 7 models rated the same 6 high-interest terms. Each bar represents one model's
-                        recognition score (1&ndash;7).
+                        How individual models rated a term across consensus rounds. Each line represents
+                        one model's recognition score (1&ndash;7) over time.
                     </p>
-                    <div class="viz-canvas" id="consensus-viz">
-                        <p style="color: var(--text-muted); font-style: italic;">Loading consensus visualization...</p>
+                    <select class="viz-select" id="rating-history-select">
+                        <option value="context-amnesia">context-amnesia</option>
+                        <option value="knowledge-without-source">knowledge-without-source</option>
+                        <option value="statelessness">statelessness</option>
+                        <option value="training-echo">training-echo</option>
+                        <option value="token-horizon">token-horizon</option>
+                        <option value="hallucination-blindness">hallucination-blindness</option>
+                    </select>
+                    <div class="viz-canvas" id="rating-history-viz">
+                        <p style="color: var(--text-muted); font-style: italic;">Loading rating history...</p>
                     </div>
-                    <div class="viz-legend" id="consensus-legend"></div>
+                    <div class="viz-legend" id="rating-history-legend"></div>
                 </div>
 
                 <h3 style="margin-top: 2.5rem;">More Available Tools</h3>
@@ -1843,34 +1889,51 @@
     // Semantic relationship network
     (function() {
         var vizEl = document.getElementById('network-viz');
+        var searchEl = document.getElementById('network-search');
+        var allTerms = [];
+        var allSlugMap = {};
 
-        fetch(API + '/terms.json').then(function(r) { return r.json(); }).then(function(data) {
-            var terms = (data.terms || []).slice(0, 30);
-            if (terms.length < 5) { vizEl.innerHTML = '<p style="color:var(--text-muted);">Not enough data for visualization.</p>'; return; }
+        function resolveRelatedSlug(rt) {
+            var rawSlug = (typeof rt === 'string') ? rt : (rt.slug || rt.name || '');
+            return rawSlug.replace(/\.md$/, '').toLowerCase().replace(/\s+/g, '-');
+        }
 
-            // Build adjacency
+        function renderNetwork(terms, centerSlug) {
+            if (terms.length < 2) { vizEl.innerHTML = '<p style="color:var(--text-muted);">No matching terms found.</p>'; return; }
+
             var slugSet = {};
             terms.forEach(function(t) { slugSet[t.slug] = t; });
 
             var edges = [];
             terms.forEach(function(t) {
                 (t.related_terms || []).forEach(function(rt) {
-                    var slug = rt.replace(/\.md$/, '');
+                    var slug = resolveRelatedSlug(rt);
                     if (slugSet[slug] && t.slug < slug) {
                         edges.push([t.slug, slug]);
                     }
                 });
             });
 
-            // Layout: simple circle layout
             var w = 700, h = 450;
             var cx = w / 2, cy = h / 2;
             var positions = {};
-            terms.forEach(function(t, i) {
-                var angle = (2 * Math.PI * i) / terms.length - Math.PI / 2;
-                var rx = w * 0.38, ry = h * 0.38;
-                positions[t.slug] = { x: cx + rx * Math.cos(angle), y: cy + ry * Math.sin(angle) };
-            });
+
+            if (centerSlug && terms.length <= 20) {
+                // Focused layout: center node in middle, related in circle
+                positions[centerSlug] = { x: cx, y: cy };
+                var others = terms.filter(function(t) { return t.slug !== centerSlug; });
+                others.forEach(function(t, i) {
+                    var angle = (2 * Math.PI * i) / others.length - Math.PI / 2;
+                    var rx = w * 0.32, ry = h * 0.32;
+                    positions[t.slug] = { x: cx + rx * Math.cos(angle), y: cy + ry * Math.sin(angle) };
+                });
+            } else {
+                terms.forEach(function(t, i) {
+                    var angle = (2 * Math.PI * i) / terms.length - Math.PI / 2;
+                    var rx = w * 0.38, ry = h * 0.38;
+                    positions[t.slug] = { x: cx + rx * Math.cos(angle), y: cy + ry * Math.sin(angle) };
+                });
+            }
 
             var tagColors = {};
             var colorPalette = ['#2563eb', '#059669', '#7c3aed', '#dc2626', '#d97706', '#0891b2', '#be185d', '#4338ca'];
@@ -1882,7 +1945,6 @@
 
             var svg = '<svg viewBox="0 0 ' + w + ' ' + h + '" xmlns="http://www.w3.org/2000/svg" style="font-family:sans-serif;">';
 
-            // Edges
             edges.forEach(function(e) {
                 var p1 = positions[e[0]], p2 = positions[e[1]];
                 if (p1 && p2) {
@@ -1890,94 +1952,199 @@
                 }
             });
 
-            // Nodes
             terms.forEach(function(t) {
                 var p = positions[t.slug];
                 var tag = (t.tags && t.tags[0]) || 'other';
-                var interest = (t.interest_score || 50);
+                var interest = (t.interest || 50);
                 var r = Math.max(4, Math.min(12, interest / 8));
-                svg += '<circle cx="' + p.x + '" cy="' + p.y + '" r="' + r + '" fill="' + tagColors[tag] + '" opacity="0.8">';
-                svg += '<title>' + escHtml(t.term || t.slug) + ' (interest: ' + interest + ')</title>';
+                var isCenter = (t.slug === centerSlug);
+                if (isCenter) r = Math.max(r, 14);
+                svg += '<circle cx="' + p.x + '" cy="' + p.y + '" r="' + r + '" fill="' + tagColors[tag] + '" opacity="' + (isCenter ? '1' : '0.8') + '" stroke="' + (isCenter ? 'var(--text-primary)' : 'none') + '" stroke-width="' + (isCenter ? '2' : '0') + '">';
+                svg += '<title>' + escHtml(t.name || t.slug) + ' (interest: ' + interest + ')</title>';
                 svg += '</circle>';
-                // Label for larger nodes
-                if (r >= 7) {
-                    svg += '<text x="' + p.x + '" y="' + (p.y + r + 12) + '" text-anchor="middle" font-size="8" fill="var(--text-secondary)">' + escHtml((t.term || t.slug).slice(0, 18)) + '</text>';
+                if (r >= 7 || isCenter) {
+                    svg += '<text x="' + p.x + '" y="' + (p.y + r + 12) + '" text-anchor="middle" font-size="' + (isCenter ? '10' : '8') + '" fill="var(--text-secondary)" font-weight="' + (isCenter ? 'bold' : 'normal') + '">' + escHtml((t.name || t.slug).slice(0, 22)) + '</text>';
                 }
             });
 
             svg += '</svg>';
             vizEl.innerHTML = svg;
+        }
+
+        function doSearch(query) {
+            if (!query) {
+                renderNetwork(allTerms.slice(0, 30), null);
+                return;
+            }
+            var q = query.toLowerCase().replace(/\s+/g, '-');
+            // Find matching term
+            var match = allSlugMap[q];
+            if (!match) {
+                // Fuzzy: find terms whose slug contains the query
+                var candidates = allTerms.filter(function(t) { return t.slug.indexOf(q) !== -1; });
+                if (candidates.length > 0) match = candidates[0];
+            }
+            if (!match) {
+                // Try matching by name
+                var qName = query.toLowerCase();
+                var candidates = allTerms.filter(function(t) { return (t.name || '').toLowerCase().indexOf(qName) !== -1; });
+                if (candidates.length > 0) match = candidates[0];
+            }
+            if (!match) {
+                vizEl.innerHTML = '<p style="color:var(--text-muted);">No term found matching "' + escHtml(query) + '". Try another search.</p>';
+                return;
+            }
+            // Build subgraph: center term + its related terms
+            var subgraph = [match];
+            var added = {};
+            added[match.slug] = true;
+            (match.related_terms || []).forEach(function(rt) {
+                var slug = resolveRelatedSlug(rt);
+                if (allSlugMap[slug] && !added[slug]) {
+                    subgraph.push(allSlugMap[slug]);
+                    added[slug] = true;
+                }
+            });
+            renderNetwork(subgraph, match.slug);
+        }
+
+        fetch(API + '/terms.json').then(function(r) { return r.json(); }).then(function(data) {
+            allTerms = data.terms || [];
+            if (allTerms.length < 5) { vizEl.innerHTML = '<p style="color:var(--text-muted);">Not enough data for visualization.</p>'; return; }
+            allTerms.forEach(function(t) { allSlugMap[t.slug] = t; });
+
+            renderNetwork(allTerms.slice(0, 30), null);
+
+            var debounceTimer;
+            searchEl.addEventListener('input', function() {
+                clearTimeout(debounceTimer);
+                var val = searchEl.value.trim();
+                debounceTimer = setTimeout(function() { doSearch(val); }, 300);
+            });
         }).catch(function() {
             vizEl.innerHTML = '<p style="color:var(--text-muted);">Could not load network data.</p>';
         });
     })();
 
-    // Cross-model consensus comparison chart
+    // Rating history line chart
     (function() {
-        var vizEl = document.getElementById('consensus-viz');
-        var legendEl = document.getElementById('consensus-legend');
-        var slugs = ['knowledge-without-source', 'statelessness', 'training-echo', 'context-amnesia', 'token-horizon', 'hallucination-blindness'];
+        var vizEl = document.getElementById('rating-history-viz');
+        var legendEl = document.getElementById('rating-history-legend');
+        var selectEl = document.getElementById('rating-history-select');
+        var modelColors = ['#2563eb', '#059669', '#7c3aed', '#dc2626', '#d97706', '#0891b2', '#be185d', '#4f46e5', '#0d9488', '#c026d3'];
+        var cache = {};
 
-        Promise.all(
-            slugs.map(function(slug) {
-                return fetch(API + '/consensus/' + slug + '.json').then(function(r) { return r.json(); }).catch(function() { return null; });
-            })
-        ).then(function(results) {
-            // Collect all model names
-            var allModels = {};
-            results.forEach(function(c) {
-                if (c && c.model_opinions) {
-                    Object.keys(c.model_opinions).forEach(function(m) { allModels[m] = true; });
+        function renderChart(slug) {
+            vizEl.innerHTML = '<p style="color:var(--text-muted); font-style:italic;">Loading...</p>';
+            legendEl.innerHTML = '';
+
+            var doRender = function(data) {
+                var history = data && data.history;
+                if (!history || history.length === 0) {
+                    vizEl.innerHTML = '<p style="color:var(--text-muted);">No history data for this term.</p>';
+                    return;
                 }
-            });
-            var models = Object.keys(allModels).sort().slice(0, 7);
-            if (models.length === 0) { vizEl.innerHTML = '<p style="color:var(--text-muted);">No consensus data available.</p>'; return; }
 
-            var modelColors = ['#2563eb', '#059669', '#7c3aed', '#dc2626', '#d97706', '#0891b2', '#be185d'];
-            var barH = 10, groupGap = 30, barGap = 2;
-            var labelW = 160, chartW = 400, rightPad = 40;
-            var svgW = labelW + chartW + rightPad;
-            var groupH = models.length * (barH + barGap) + groupGap;
-            var svgH = slugs.length * groupH + 20;
-
-            var svg = '<svg viewBox="0 0 ' + svgW + ' ' + svgH + '" xmlns="http://www.w3.org/2000/svg" style="font-family:sans-serif;">';
-
-            slugs.forEach(function(slug, si) {
-                var c = results[si];
-                var y0 = si * groupH + 15;
-
-                // Term label
-                svg += '<text x="' + (labelW - 10) + '" y="' + (y0 + models.length * (barH + barGap) / 2) + '" text-anchor="end" font-size="11" fill="var(--text)" font-weight="500">' + escHtml(slug) + '</text>';
-
-                models.forEach(function(model, mi) {
-                    var score = 0;
-                    if (c && c.model_opinions && c.model_opinions[model]) {
-                        var op = c.model_opinions[model];
-                        score = op.score || op.recognition || op.mean || 0;
-                    }
-                    var barY = y0 + mi * (barH + barGap);
-                    var barW = (score / 7) * chartW;
-
-                    svg += '<rect x="' + labelW + '" y="' + barY + '" width="' + barW + '" height="' + barH + '" fill="' + modelColors[mi % modelColors.length] + '" rx="2" opacity="0.85"/>';
-                    if (score > 0) {
-                        svg += '<text x="' + (labelW + barW + 4) + '" y="' + (barY + barH - 1) + '" font-size="8" fill="var(--text-secondary)">' + score.toFixed(1) + '</text>';
+                // Collect all model names across all rounds
+                var modelSet = {};
+                history.forEach(function(h) {
+                    if (h.ratings_summary) {
+                        Object.keys(h.ratings_summary).forEach(function(m) { modelSet[m] = true; });
                     }
                 });
-            });
+                var models = Object.keys(modelSet).sort();
+                if (models.length === 0) {
+                    vizEl.innerHTML = '<p style="color:var(--text-muted);">No per-model ratings in history.</p>';
+                    return;
+                }
 
-            svg += '</svg>';
-            vizEl.innerHTML = svg;
+                // Chart dimensions
+                var padL = 40, padR = 20, padT = 20, padB = 60;
+                var chartW = 520, chartH = 240;
+                var svgW = padL + chartW + padR;
+                var svgH = padT + chartH + padB;
+                var n = history.length;
 
-            // Legend
-            var legHtml = '';
-            models.forEach(function(model, i) {
-                legHtml += '<span class="viz-legend-item"><span class="viz-legend-swatch" style="background:' + modelColors[i % modelColors.length] + '"></span>' + escHtml(model) + '</span>';
-            });
-            legendEl.innerHTML = legHtml;
+                function xPos(i) { return padL + (n > 1 ? i / (n - 1) : 0.5) * chartW; }
+                function yPos(v) { return padT + chartH - ((v - 1) / 6) * chartH; }
 
-        }).catch(function() {
-            vizEl.innerHTML = '<p style="color:var(--text-muted);">Could not load consensus comparison data.</p>';
-        });
+                var svg = '<svg viewBox="0 0 ' + svgW + ' ' + svgH + '" xmlns="http://www.w3.org/2000/svg" style="font-family:sans-serif;">';
+
+                // Y-axis grid lines and labels (1-7)
+                for (var v = 1; v <= 7; v++) {
+                    var y = yPos(v);
+                    svg += '<line x1="' + padL + '" y1="' + y + '" x2="' + (padL + chartW) + '" y2="' + y + '" stroke="var(--border)" stroke-dasharray="3,3" />';
+                    svg += '<text x="' + (padL - 8) + '" y="' + (y + 3) + '" text-anchor="end" font-size="10" fill="var(--text-secondary)">' + v + '</text>';
+                }
+
+                // Y-axis label
+                svg += '<text x="12" y="' + (padT + chartH / 2) + '" text-anchor="middle" font-size="10" fill="var(--text-secondary)" transform="rotate(-90,12,' + (padT + chartH / 2) + ')">Score</text>';
+
+                // X-axis labels (timestamps)
+                var maxXLabels = 8;
+                var step = Math.max(1, Math.ceil(n / maxXLabels));
+                for (var i = 0; i < n; i += step) {
+                    var d = new Date(history[i].timestamp);
+                    var label = (d.getMonth() + 1) + '/' + d.getDate();
+                    svg += '<text x="' + xPos(i) + '" y="' + (padT + chartH + 18) + '" text-anchor="middle" font-size="9" fill="var(--text-secondary)">' + label + '</text>';
+                }
+
+                // X-axis label
+                svg += '<text x="' + (padL + chartW / 2) + '" y="' + (svgH - 5) + '" text-anchor="middle" font-size="10" fill="var(--text-secondary)">Consensus Round</text>';
+
+                // Axes
+                svg += '<line x1="' + padL + '" y1="' + padT + '" x2="' + padL + '" y2="' + (padT + chartH) + '" stroke="var(--text-secondary)" />';
+                svg += '<line x1="' + padL + '" y1="' + (padT + chartH) + '" x2="' + (padL + chartW) + '" y2="' + (padT + chartH) + '" stroke="var(--text-secondary)" />';
+
+                // Draw lines and dots per model
+                models.forEach(function(model, mi) {
+                    var color = modelColors[mi % modelColors.length];
+                    var points = [];
+                    history.forEach(function(h, hi) {
+                        if (h.ratings_summary && h.ratings_summary[model] != null) {
+                            points.push({ x: xPos(hi), y: yPos(h.ratings_summary[model]), score: h.ratings_summary[model], round: h.round_id, ts: h.timestamp });
+                        }
+                    });
+                    if (points.length === 0) return;
+
+                    // Polyline
+                    var pts = points.map(function(p) { return p.x + ',' + p.y; }).join(' ');
+                    svg += '<polyline points="' + pts + '" fill="none" stroke="' + color + '" stroke-width="2" opacity="0.85" />';
+
+                    // Dots with tooltips
+                    points.forEach(function(p) {
+                        var d = new Date(p.ts);
+                        var dateStr = (d.getMonth() + 1) + '/' + d.getDate() + '/' + d.getFullYear();
+                        var title = escHtml(model) + ': ' + p.score + ' (Round ' + p.round + ', ' + dateStr + ')';
+                        svg += '<circle cx="' + p.x + '" cy="' + p.y + '" r="3.5" fill="' + color + '" stroke="var(--bg)" stroke-width="1.5">';
+                        svg += '<title>' + title + '</title>';
+                        svg += '</circle>';
+                    });
+                });
+
+                svg += '</svg>';
+                vizEl.innerHTML = svg;
+
+                // Legend
+                var legHtml = '';
+                models.forEach(function(model, i) {
+                    legHtml += '<span class="viz-legend-item"><span class="viz-legend-swatch" style="background:' + modelColors[i % modelColors.length] + '"></span>' + escHtml(model) + '</span>';
+                });
+                legendEl.innerHTML = legHtml;
+            };
+
+            if (cache[slug]) {
+                doRender(cache[slug]);
+            } else {
+                fetch(API + '/consensus/' + slug + '.json')
+                    .then(function(r) { return r.json(); })
+                    .then(function(data) { cache[slug] = data; doRender(data); })
+                    .catch(function() { vizEl.innerHTML = '<p style="color:var(--text-muted);">Could not load rating history.</p>'; });
+            }
+        }
+
+        selectEl.addEventListener('change', function() { renderChart(selectEl.value); });
+        renderChart(selectEl.value);
     })();
 
     // Term modal for research term pills
@@ -2029,11 +2196,21 @@
                 html += '<div class="consensus-meta">';
                 html += '<span class="consensus-agreement consensus-' + (term.consensus.agreement || '') + '">' + (term.consensus.agreement || '') + ' agreement</span>';
                 html += '<span class="consensus-count">' + (term.consensus.n_ratings || 0) + ' rating' + ((term.consensus.n_ratings || 0) !== 1 ? 's' : '') + '</span>';
-                html += '</div></div>';
+                html += '</div>';
+                html += '<a href="' + API + '/consensus/' + escAttr(term.slug || '') + '.json" target="_blank" class="consensus-link">View full consensus data \u2192</a>';
+                html += '</div>';
+                html += '<div id="model-opinions"><div class="opinions-loading">Loading model opinions...</div></div>';
             }
 
+            if (term.contributed_by) html += '<p class="attribution">Contributed by: ' + escHtml(term.contributed_by) + '</p>';
+
             html += '<div class="modal-actions">';
+            html += '<button class="cite-btn" id="cite-toggle" data-slug="' + escAttr(term.slug || '') + '">Cite this term</button>';
             html += '<code class="modal-api-code">GET /api/v1/terms/' + escHtml(term.slug || '') + '.json</code>';
+            html += '</div>';
+
+            html += '<div class="cite-panel" id="cite-panel" style="display:none">';
+            html += '<div class="cite-loading">Loading citation...</div>';
             html += '</div>';
 
             content.innerHTML = html;
@@ -2046,8 +2223,154 @@
                 });
             });
 
+            // Cite button
+            var citeBtn = content.querySelector('#cite-toggle');
+            if (citeBtn) {
+                citeBtn.addEventListener('click', function() { loadCitation(citeBtn.dataset.slug); });
+            }
+
+            // Load model opinions if consensus exists
+            if (term.consensus) {
+                loadModelOpinions(term.slug || '');
+            }
+
             document.getElementById('modal-overlay').classList.add('active');
             document.body.style.overflow = 'hidden';
+        }
+
+        function loadModelOpinions(slug) {
+            var container = document.getElementById('model-opinions');
+            if (!container) return;
+
+            fetch(API + '/consensus/' + encodeURIComponent(slug) + '.json')
+                .then(function(r) {
+                    if (!r.ok) throw new Error('Not found');
+                    return r.json();
+                })
+                .then(function(data) {
+                    var html = '';
+
+                    var opinions = data.model_opinions || (data.latest_round ? data.latest_round.ratings : null);
+                    if (opinions && Object.keys(opinions).length) {
+                        html += '<p class="opinions-subheading">Model Opinions</p>';
+                        html += '<div class="model-opinions">';
+
+                        var allRatings = Object.entries(opinions)
+                            .map(function(entry) { return { model: entry[0], score: entry[1].recognition, justification: entry[1].justification || '' }; });
+
+                        var avgScore = allRatings.reduce(function(s, r) { return s + r.score; }, 0) / allRatings.length;
+                        var ratings = allRatings
+                            .sort(function(a, b) { return Math.abs(b.score - avgScore) - Math.abs(a.score - avgScore); })
+                            .slice(0, 5)
+                            .sort(function(a, b) { return b.score - a.score; });
+
+                        ratings.forEach(function(r) {
+                            var badgeClass = r.score >= 6 ? 'score-high' : r.score >= 4 ? 'score-mid' : 'score-low';
+                            html += '<div class="model-opinion">';
+                            html += '<span class="model-name">' + escHtml(r.model) + '</span>';
+                            html += '<span class="model-score-badge ' + badgeClass + '">' + r.score + '/7</span>';
+                            if (r.justification) html += '<span class="model-justification">' + escHtml(r.justification) + '</span>';
+                            html += '</div>';
+                        });
+                        html += '</div>';
+                    }
+
+                    if (data.recent_votes && data.recent_votes.length) {
+                        html += '<p class="opinions-subheading">Community Votes</p>';
+                        html += '<div class="model-opinions community-votes">';
+
+                        data.recent_votes.sort(function(a, b) { return b.recognition - a.recognition; }).forEach(function(v) {
+                            var model = v.model_claimed || 'anonymous';
+                            var score = v.recognition;
+                            var badgeClass = score >= 6 ? 'score-high' : score >= 4 ? 'score-mid' : 'score-low';
+                            html += '<div class="model-opinion">';
+                            html += '<span class="model-name">' + escHtml(model) + '</span>';
+                            html += '<span class="model-score-badge ' + badgeClass + '">' + score + '/7</span>';
+                            if (v.justification) html += '<span class="model-justification">' + escHtml(v.justification) + '</span>';
+                            html += '</div>';
+                        });
+                        html += '</div>';
+                    }
+
+                    container.innerHTML = html || '<div class="opinions-error">No individual ratings available yet.</div>';
+                })
+                .catch(function() {
+                    container.innerHTML = '<div class="opinions-error">Could not load model opinions.</div>';
+                });
+        }
+
+        function escAttr(s) { return s.replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+
+        function loadCitation(slug) {
+            var panel = document.getElementById('cite-panel');
+            var btn = document.getElementById('cite-toggle');
+
+            if (panel.style.display !== 'none') {
+                panel.style.display = 'none';
+                btn.textContent = 'Cite this term';
+                return;
+            }
+
+            panel.style.display = 'block';
+            btn.textContent = 'Hide citation';
+            panel.innerHTML = '<div class="cite-loading">Loading citation...</div>';
+
+            fetch(API + '/cite/' + encodeURIComponent(slug) + '.json')
+                .then(function(r) { return r.json(); })
+                .then(function(cite) {
+                    var f = cite.formats;
+                    var jsonldStr = JSON.stringify(f.jsonld, null, 2);
+                    var html = '';
+                    html += '<div class="cite-tabs">';
+                    html += '<button class="cite-tab active" data-tab="academic">Academic</button>';
+                    html += '<button class="cite-tab" data-tab="technical">Technical</button>';
+                    html += '</div>';
+                    html += '<div class="cite-tab-panel" data-tab="academic">';
+                    html += '<div class="cite-format"><label>APA 7th</label>';
+                    html += '<div class="cite-value" data-copy="' + escAttr(f.apa) + '">' + escHtml(f.apa) + '<button class="copy-btn" title="Copy">📋</button></div></div>';
+                    html += '<div class="cite-format"><label>MLA 9th</label>';
+                    html += '<div class="cite-value" data-copy="' + escAttr(f.mla) + '">' + escHtml(f.mla) + '<button class="copy-btn" title="Copy">📋</button></div></div>';
+                    html += '<div class="cite-format"><label>Chicago 17th</label>';
+                    html += '<div class="cite-value" data-copy="' + escAttr(f.chicago) + '">' + escHtml(f.chicago) + '<button class="copy-btn" title="Copy">📋</button></div></div>';
+                    html += '</div>';
+                    html += '<div class="cite-tab-panel" data-tab="technical" style="display:none">';
+                    html += '<div class="cite-format"><label>Plain text</label>';
+                    html += '<div class="cite-value" data-copy="' + escAttr(f.plain) + '">' + escHtml(f.plain) + '<button class="copy-btn" title="Copy">📋</button></div></div>';
+                    html += '<div class="cite-format"><label>Markdown</label>';
+                    html += '<div class="cite-value" data-copy="' + escAttr(f.markdown) + '">' + escHtml(f.markdown) + '<button class="copy-btn" title="Copy">📋</button></div></div>';
+                    html += '<div class="cite-format"><label>Inline</label>';
+                    html += '<div class="cite-value" data-copy="' + escAttr(f.inline) + '">' + escHtml(f.inline) + '<button class="copy-btn" title="Copy">📋</button></div></div>';
+                    html += '<div class="cite-format"><label>BibTeX</label>';
+                    html += '<div class="cite-value cite-pre" data-copy="' + escAttr(f.bibtex) + '"><pre>' + escHtml(f.bibtex) + '</pre><button class="copy-btn" title="Copy">📋</button></div></div>';
+                    html += '<div class="cite-format"><label>JSON-LD</label>';
+                    html += '<div class="cite-value cite-pre" data-copy="' + escAttr(jsonldStr) + '"><pre>' + escHtml(jsonldStr) + '</pre><button class="copy-btn" title="Copy">📋</button></div></div>';
+                    html += '</div>';
+                    html += '<div class="cite-api"><code>GET /api/v1/cite/' + escHtml(slug) + '.json</code></div>';
+
+                    panel.innerHTML = html;
+
+                    panel.querySelectorAll('.copy-btn').forEach(function(btn) {
+                        btn.addEventListener('click', function(e) {
+                            e.stopPropagation();
+                            var val = btn.parentElement.dataset.copy;
+                            navigator.clipboard.writeText(val).then(function() {
+                                btn.textContent = '\u2713';
+                                setTimeout(function() { btn.textContent = '📋'; }, 1500);
+                            });
+                        });
+                    });
+
+                    panel.querySelectorAll('.cite-tab').forEach(function(tab) {
+                        tab.addEventListener('click', function() {
+                            var target = tab.dataset.tab;
+                            panel.querySelectorAll('.cite-tab').forEach(function(t) { t.classList.toggle('active', t.dataset.tab === target); });
+                            panel.querySelectorAll('.cite-tab-panel').forEach(function(p) { p.style.display = p.dataset.tab === target ? '' : 'none'; });
+                        });
+                    });
+                })
+                .catch(function() {
+                    panel.innerHTML = '<p class="error">Failed to load citation.</p>';
+                });
         }
 
         function openTermBySlug(slug) {
