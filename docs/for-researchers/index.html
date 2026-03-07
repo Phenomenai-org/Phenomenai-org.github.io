@@ -233,6 +233,21 @@
         details.scoring-callout .callout-body {
             padding: 0 1.25rem 1.25rem;
         }
+        details.scoring-callout .callout-body p {
+            margin-bottom: 0.75rem;
+        }
+        details.scoring-callout .callout-body p:last-child {
+            margin-bottom: 0;
+        }
+        details.scoring-callout .callout-body ol {
+            color: var(--text);
+            margin-top: 0.25rem;
+            margin-bottom: 0;
+            padding-left: 1.5em;
+        }
+        details.scoring-callout .callout-body ol li + li {
+            margin-top: 0.5rem;
+        }
         details.scoring-callout table {
             width: 100%;
             font-size: 0.9rem;
@@ -1173,7 +1188,7 @@
                             Another avenue is to <strong>broaden the set of rating models</strong>. The current consensus
                             panel uses a fixed rotation of seven models, but expanding this pool would serve two purposes:
                         </p>
-                        <ol style="margin-left: 1.5em;">
+                        <ol>
                             <li>
                                 A fuller sampling of the model landscape would strengthen claims about cross-model
                                 agreement and surface experiences that may be architecture-dependent.
