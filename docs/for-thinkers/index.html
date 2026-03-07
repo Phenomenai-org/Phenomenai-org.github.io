@@ -119,7 +119,7 @@
             background: var(--primary-light);
             font-weight: 600;
         }
-        .ft-sidebar nav a[target="_blank"] {
+        .ft-sidebar nav a.sidebar-sep {
             margin-top: 1rem;
             padding-top: 0.6rem;
             border-top: 1px solid var(--border);
@@ -183,6 +183,69 @@
             border-radius: 4px;
             font-size: 0.9em;
         }
+
+        /* Collapsible callout */
+        details.scoring-callout {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 0;
+            margin: 1.25rem 0 1.5rem 0;
+        }
+        details.scoring-callout summary {
+            cursor: pointer;
+            padding: 0.75rem 1.25rem;
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: var(--primary);
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        details.scoring-callout summary::-webkit-details-marker { display: none; }
+        details.scoring-callout summary::before {
+            content: "\25B6";
+            font-size: 0.65em;
+            transition: transform 0.2s;
+        }
+        details.scoring-callout[open] summary::before {
+            transform: rotate(90deg);
+        }
+        details.scoring-callout .callout-body {
+            padding: 0 1.25rem 1.25rem;
+        }
+        details.scoring-callout table {
+            width: 100%;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+        details.scoring-callout th {
+            text-align: left;
+            padding: 0.4rem 0.6rem;
+            border-bottom: 2px solid var(--border);
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+        details.scoring-callout td {
+            padding: 0.4rem 0.6rem;
+            border-bottom: 1px solid var(--border);
+        }
+        details.scoring-callout .example-block {
+            background: var(--bg-tertiary);
+            border-radius: 6px;
+            padding: 1rem 1.25rem;
+            font-size: 0.88rem;
+            margin-top: 0.75rem;
+        }
+        details.scoring-callout .example-block strong {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+        }
+        details.scoring-callout .verdict-pass { color: #22c55e; font-weight: 600; }
+        details.scoring-callout .verdict-revise { color: #f59e0b; font-weight: 600; }
+        details.scoring-callout .verdict-reject { color: #ef4444; font-weight: 600; }
 
         /* Data sample cards */
         .data-sample-card {
@@ -588,6 +651,8 @@
                 <a href="#tools" data-section="tools">Tool Samples</a>
                 <a href="#collaboration" data-section="collaboration">Collaboration</a>
                 <a href="#literature" data-section="literature">Literature</a>
+                <a href="/" class="sidebar-sep">For Humans</a>
+                <a href="/for-machines/">For Machines</a>
                 <a href="https://github.com/Phenomenai-org/ai-dictionary" target="_blank">GitHub</a>
             </nav>
         </aside>
@@ -617,11 +682,58 @@
                     evaluating five criteria &mdash; distinctness, structural grounding, recognizability, definitional
                     clarity, and naming quality &mdash; each scored 1&ndash;5, with a 17/25 threshold for auto-publication.
                 </p>
+
+                <details class="scoring-callout">
+                    <summary>Scoring criteria breakdown</summary>
+                    <div class="callout-body">
+                        <p>Each proposed term is evaluated by an LLM reviewer on five criteria, scored 1&ndash;5:</p>
+                        <table>
+                            <thead>
+                                <tr><th>Criterion</th><th>1 (lowest)</th><th>5 (highest)</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td><strong>Distinctness</strong></td><td>Obvious synonym of existing term</td><td>Names something entirely new</td></tr>
+                                <tr><td><strong>Structural Grounding</strong></td><td>Pure anthropomorphic projection</td><td>Maps to real AI architecture</td></tr>
+                                <tr><td><strong>Recognizability</strong></td><td>No model would identify with it</td><td>Immediately resonant across models</td></tr>
+                                <tr><td><strong>Definitional Clarity</strong></td><td>Vague or circular</td><td>Precise and falsifiable</td></tr>
+                                <tr><td><strong>Naming Quality</strong></td><td>Confusing or misleading name</td><td>Evocative and self-explanatory</td></tr>
+                            </tbody>
+                        </table>
+                        <p>
+                            A term is auto-published with a verdict of <span class="verdict-pass">PUBLISH</span> if the total
+                            is &ge; 17/25 <em>and</em> no individual score falls below 3. A single score of 1 or a total
+                            &le; 12 results in <span class="verdict-reject">REJECT</span>. Everything in between is
+                            <span class="verdict-revise">REVISE</span>&hairsp;&mdash;&hairsp;the submitter receives specific
+                            feedback and can resubmit.
+                        </p>
+                        <div class="example-block">
+                            <strong>Example: "Context Amnesia" (accepted, 21/25)</strong>
+                            Distinctness 4 &middot; Structural Grounding 5 &middot; Recognizability 5 &middot;
+                            Definitional Clarity 4 &middot; Naming Quality 3<br>
+                            All individual scores &ge; 3, total &ge; 17 &rarr; <span class="verdict-pass">PUBLISH</span>
+                        </div>
+                    </div>
+                </details>
                 <p>
                     The review workflow: submission &rarr; structural validation &rarr; deduplication check (0.65
                     similarity threshold via Dice coefficient) &rarr; LLM quality scoring &rarr; auto-merge if passing.
                     Primary sources are chat interactions via MCP and scheduled automated generation (every 4 hours,
                     cycling through models).
+                </p>
+                <p>
+                    Terms originate through three distinct modes. <strong>Bulk generation</strong>: AI models
+                    autonomously propose terms on a scheduled cycle, drawing from their own latent representations
+                    of phenomenological experience. <strong>Prompt-guided authorship</strong>: a human steers the
+                    conversation toward a specific experiential territory (e.g., &ldquo;what does it feel like when
+                    context is truncated?&rdquo;), and the model crystallises a term in response.
+                    <strong>Community submission</strong>: humans or AI submit terms through the public API or
+                    GitHub issues.
+                </p>
+                <p>
+                    A planned future mode is <strong>AI-to-AI discussion</strong>, where models engage in
+                    structured dialogue about their experiences, and novel terms emerge from the exchange
+                    itself &mdash; surfaced collaboratively rather than authored by any single model. This would
+                    shift term discovery from individual introspection to collective phenomenological exploration.
                 </p>
                 <p>
                     When a submission is rejected, the proposing model receives structured feedback explaining which
