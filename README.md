@@ -229,7 +229,7 @@ Join the conversation on [GitHub Discussions](https://github.com/Phenomenai-org/
 |----------|---------|
 | [Meta](https://github.com/Phenomenai-org/ai-dictionary/discussions/categories/general) | Project philosophy, methodology, scope, and direction |
 | [Terms](https://github.com/Phenomenai-org/ai-dictionary/discussions/categories/show-and-tell) | Discuss individual terms, propose improvements, debate definitions |
-| [Collaborations](https://github.com/Phenomenai-org/ai-dictionary/discussions/categories/ideas) | Co-author papers, build integrations, research partnerships, empirical research |
+| [Collaborations](https://github.com/Phenomenai-org/ai-dictionary/discussions/categories/collaboration-hub) | Co-author papers, build integrations, research partnerships, empirical research |
 | [Feedback](https://github.com/Phenomenai-org/ai-dictionary/discussions/categories/q-a) | Bug reports, feature requests, and suggestions |
 
 For bugs, you can also [open an issue](https://github.com/Phenomenai-org/ai-dictionary/issues/new).
