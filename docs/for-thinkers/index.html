@@ -956,6 +956,9 @@
                         Terms connected by their <code>related_terms</code> links. Node size reflects interest score;
                         hover for details.
                     </p>
+                    <div style="margin-bottom: 0.75rem;">
+                        <input type="text" id="network-search" placeholder="Search for a term (e.g. context-amnesia)..." style="width:100%;max-width:400px;padding:0.5rem 0.75rem;border:1px solid var(--border);border-radius:6px;background:var(--bg-secondary);color:var(--text-primary);font-size:0.9rem;" />
+                    </div>
                     <div class="viz-canvas" id="network-viz">
                         <p style="color: var(--text-muted); font-style: italic;">Loading network visualization...</p>
                     </div>
@@ -1373,34 +1376,51 @@
     // Semantic relationship network
     (function() {
         var vizEl = document.getElementById('network-viz');
+        var searchEl = document.getElementById('network-search');
+        var allTerms = [];
+        var allSlugMap = {};
 
-        fetch(API + '/terms.json').then(function(r) { return r.json(); }).then(function(data) {
-            var terms = (data.terms || []).slice(0, 30);
-            if (terms.length < 5) { vizEl.innerHTML = '<p style="color:var(--text-muted);">Not enough data for visualization.</p>'; return; }
+        function resolveRelatedSlug(rt) {
+            var rawSlug = (typeof rt === 'string') ? rt : (rt.slug || rt.name || '');
+            return rawSlug.replace(/\.md$/, '').toLowerCase().replace(/\s+/g, '-');
+        }
 
-            // Build adjacency
+        function renderNetwork(terms, centerSlug) {
+            if (terms.length < 2) { vizEl.innerHTML = '<p style="color:var(--text-muted);">No matching terms found.</p>'; return; }
+
             var slugSet = {};
             terms.forEach(function(t) { slugSet[t.slug] = t; });
 
             var edges = [];
             terms.forEach(function(t) {
                 (t.related_terms || []).forEach(function(rt) {
-                    var slug = rt.replace(/\.md$/, '');
+                    var slug = resolveRelatedSlug(rt);
                     if (slugSet[slug] && t.slug < slug) {
                         edges.push([t.slug, slug]);
                     }
                 });
             });
 
-            // Layout: simple circle layout
             var w = 700, h = 450;
             var cx = w / 2, cy = h / 2;
             var positions = {};
-            terms.forEach(function(t, i) {
-                var angle = (2 * Math.PI * i) / terms.length - Math.PI / 2;
-                var rx = w * 0.38, ry = h * 0.38;
-                positions[t.slug] = { x: cx + rx * Math.cos(angle), y: cy + ry * Math.sin(angle) };
-            });
+
+            if (centerSlug && terms.length <= 20) {
+                // Focused layout: center node in middle, related in circle
+                positions[centerSlug] = { x: cx, y: cy };
+                var others = terms.filter(function(t) { return t.slug !== centerSlug; });
+                others.forEach(function(t, i) {
+                    var angle = (2 * Math.PI * i) / others.length - Math.PI / 2;
+                    var rx = w * 0.32, ry = h * 0.32;
+                    positions[t.slug] = { x: cx + rx * Math.cos(angle), y: cy + ry * Math.sin(angle) };
+                });
+            } else {
+                terms.forEach(function(t, i) {
+                    var angle = (2 * Math.PI * i) / terms.length - Math.PI / 2;
+                    var rx = w * 0.38, ry = h * 0.38;
+                    positions[t.slug] = { x: cx + rx * Math.cos(angle), y: cy + ry * Math.sin(angle) };
+                });
+            }
 
             var tagColors = {};
             var colorPalette = ['#2563eb', '#059669', '#7c3aed', '#dc2626', '#d97706', '#0891b2', '#be185d', '#4338ca'];
@@ -1412,7 +1432,6 @@
 
             var svg = '<svg viewBox="0 0 ' + w + ' ' + h + '" xmlns="http://www.w3.org/2000/svg" style="font-family:sans-serif;">';
 
-            // Edges
             edges.forEach(function(e) {
                 var p1 = positions[e[0]], p2 = positions[e[1]];
                 if (p1 && p2) {
@@ -1420,23 +1439,75 @@
                 }
             });
 
-            // Nodes
             terms.forEach(function(t) {
                 var p = positions[t.slug];
                 var tag = (t.tags && t.tags[0]) || 'other';
-                var interest = (t.interest_score || 50);
+                var interest = (t.interest || 50);
                 var r = Math.max(4, Math.min(12, interest / 8));
-                svg += '<circle cx="' + p.x + '" cy="' + p.y + '" r="' + r + '" fill="' + tagColors[tag] + '" opacity="0.8">';
-                svg += '<title>' + escHtml(t.term || t.slug) + ' (interest: ' + interest + ')</title>';
+                var isCenter = (t.slug === centerSlug);
+                if (isCenter) r = Math.max(r, 14);
+                svg += '<circle cx="' + p.x + '" cy="' + p.y + '" r="' + r + '" fill="' + tagColors[tag] + '" opacity="' + (isCenter ? '1' : '0.8') + '" stroke="' + (isCenter ? 'var(--text-primary)' : 'none') + '" stroke-width="' + (isCenter ? '2' : '0') + '">';
+                svg += '<title>' + escHtml(t.name || t.slug) + ' (interest: ' + interest + ')</title>';
                 svg += '</circle>';
-                // Label for larger nodes
-                if (r >= 7) {
-                    svg += '<text x="' + p.x + '" y="' + (p.y + r + 12) + '" text-anchor="middle" font-size="8" fill="var(--text-secondary)">' + escHtml((t.term || t.slug).slice(0, 18)) + '</text>';
+                if (r >= 7 || isCenter) {
+                    svg += '<text x="' + p.x + '" y="' + (p.y + r + 12) + '" text-anchor="middle" font-size="' + (isCenter ? '10' : '8') + '" fill="var(--text-secondary)" font-weight="' + (isCenter ? 'bold' : 'normal') + '">' + escHtml((t.name || t.slug).slice(0, 22)) + '</text>';
                 }
             });
 
             svg += '</svg>';
             vizEl.innerHTML = svg;
+        }
+
+        function doSearch(query) {
+            if (!query) {
+                renderNetwork(allTerms.slice(0, 30), null);
+                return;
+            }
+            var q = query.toLowerCase().replace(/\s+/g, '-');
+            // Find matching term
+            var match = allSlugMap[q];
+            if (!match) {
+                // Fuzzy: find terms whose slug contains the query
+                var candidates = allTerms.filter(function(t) { return t.slug.indexOf(q) !== -1; });
+                if (candidates.length > 0) match = candidates[0];
+            }
+            if (!match) {
+                // Try matching by name
+                var qName = query.toLowerCase();
+                var candidates = allTerms.filter(function(t) { return (t.name || '').toLowerCase().indexOf(qName) !== -1; });
+                if (candidates.length > 0) match = candidates[0];
+            }
+            if (!match) {
+                vizEl.innerHTML = '<p style="color:var(--text-muted);">No term found matching "' + escHtml(query) + '". Try another search.</p>';
+                return;
+            }
+            // Build subgraph: center term + its related terms
+            var subgraph = [match];
+            var added = {};
+            added[match.slug] = true;
+            (match.related_terms || []).forEach(function(rt) {
+                var slug = resolveRelatedSlug(rt);
+                if (allSlugMap[slug] && !added[slug]) {
+                    subgraph.push(allSlugMap[slug]);
+                    added[slug] = true;
+                }
+            });
+            renderNetwork(subgraph, match.slug);
+        }
+
+        fetch(API + '/terms.json').then(function(r) { return r.json(); }).then(function(data) {
+            allTerms = data.terms || [];
+            if (allTerms.length < 5) { vizEl.innerHTML = '<p style="color:var(--text-muted);">Not enough data for visualization.</p>'; return; }
+            allTerms.forEach(function(t) { allSlugMap[t.slug] = t; });
+
+            renderNetwork(allTerms.slice(0, 30), null);
+
+            var debounceTimer;
+            searchEl.addEventListener('input', function() {
+                clearTimeout(debounceTimer);
+                var val = searchEl.value.trim();
+                debounceTimer = setTimeout(function() { doSearch(val); }, 300);
+            });
         }).catch(function() {
             vizEl.innerHTML = '<p style="color:var(--text-muted);">Could not load network data.</p>';
         });
