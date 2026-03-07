@@ -1774,25 +1774,25 @@
                         How individual models rated a term across consensus rounds. Each line represents
                         one model's recognition score (1&ndash;7) over time.
                     </p>
-                    <div class="ds-controls">
-                        <label for="rating-history-min">Min ratings per model:</label>
-                        <select id="rating-history-min" class="ds-select">
-                            <option value="2">2+</option>
-                            <option value="3">3+</option>
-                            <option value="4">4+</option>
-                            <option value="5">5+</option>
-                            <option value="10">10+</option>
-                            <option value="20">20+</option>
-                        </select>
-                        <label for="rating-history-min-models">By at least:</label>
+                    <div class="ds-controls" style="row-gap:0.4rem;">
+                        <span style="font-size:0.9rem;color:var(--text-secondary);white-space:nowrap;">At least</span>
                         <select id="rating-history-min-models" class="ds-select">
-                            <option value="1">1 model</option>
-                            <option value="2">2 models</option>
-                            <option value="3" selected>3 models</option>
-                            <option value="4">4 models</option>
-                            <option value="5">5 models</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3" selected>3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
                         </select>
-                        <label for="rating-history-select">Term:</label>
+                        <span style="font-size:0.9rem;color:var(--text-secondary);white-space:nowrap;">model(s) with at least</span>
+                        <select id="rating-history-min" class="ds-select">
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="7">7</option>
+                            <option value="10">10</option>
+                        </select>
+                        <span style="font-size:0.9rem;color:var(--text-secondary);white-space:nowrap;">ratings:</span>
                         <select id="rating-history-select" class="ds-select">
                             <option value="">Loading terms...</option>
                         </select>
@@ -3556,6 +3556,7 @@
         var modelColors = ['#2563eb', '#059669', '#7c3aed', '#dc2626', '#d97706', '#0891b2', '#be185d', '#4f46e5', '#0d9488', '#c026d3'];
         var cache = {};
         var allTerms = []; // [{slug, name, counts: [desc sorted per-model counts]}]
+        var hasCountsData = false;
 
         // Populate term dropdown from consensus.json
         fetch(API + '/consensus.json')
@@ -3567,6 +3568,8 @@
                 }).sort(function(a, b) {
                     return a.name.toLowerCase().localeCompare(b.name.toLowerCase());
                 });
+                // Check if any term actually has model_rating_counts data
+                hasCountsData = allTerms.some(function(t) { return t.counts.length > 0; });
                 populateTermSelect();
             })
             .catch(function() {
@@ -3584,16 +3587,20 @@
         function populateTermSelect() {
             var minRatings = parseInt(minEl.value, 10) || 2;
             var minModels = parseInt(minModelsEl.value, 10) || 1;
-            var filtered = allTerms.filter(function(t) {
-                return modelsAboveThreshold(t.counts, minRatings) >= minModels;
-            });
+            // If API hasn't rebuilt with model_rating_counts yet, show all terms
+            var filtered = hasCountsData
+                ? allTerms.filter(function(t) { return modelsAboveThreshold(t.counts, minRatings) >= minModels; })
+                : allTerms;
             var prevSlug = selectEl.value;
             var html = '';
             var foundPrev = false;
             for (var i = 0; i < filtered.length; i++) {
                 var t = filtered[i];
-                var nQualifying = modelsAboveThreshold(t.counts, minRatings);
-                var label = escHtml(t.name) + ' (' + nQualifying + ' model' + (nQualifying !== 1 ? 's' : '') + ' w/ ' + minRatings + '+)';
+                var label = escHtml(t.name);
+                if (hasCountsData) {
+                    var nQ = modelsAboveThreshold(t.counts, minRatings);
+                    label += ' (' + nQ + ' model' + (nQ !== 1 ? 's' : '') + ' \u2265' + minRatings + ')';
+                }
                 if (t.slug === prevSlug) foundPrev = true;
                 html += '<option value="' + escHtml(t.slug) + '">' + label + '</option>';
             }
