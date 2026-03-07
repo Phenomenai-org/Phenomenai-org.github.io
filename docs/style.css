@@ -2384,6 +2384,10 @@ html[data-theme="dark"] .theme-toggle:active .theme-switch-knob {
         transition: opacity 0.25s ease;
     }
 
+    .hamburger.at-top {
+        opacity: 1;
+    }
+
     .hamburger:hover,
     .hamburger:focus-visible {
         opacity: 1;

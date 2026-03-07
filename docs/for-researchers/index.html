@@ -851,6 +851,9 @@
                 opacity: 0.08;
                 transition: opacity 0.25s ease;
             }
+            .hamburger.at-top {
+                opacity: 1;
+            }
             .hamburger:hover,
             .hamburger:focus-visible {
                 opacity: 1;
@@ -1538,6 +1541,12 @@
             sidebar.classList.remove('open');
             backdrop.classList.remove('visible');
         }
+
+        function updateHamburgerOpacity() {
+            hamburger.classList.toggle('at-top', window.scrollY <= 50);
+        }
+        updateHamburgerOpacity();
+        window.addEventListener('scroll', updateHamburgerOpacity, { passive: true });
 
         hamburger.addEventListener('click', function() {
             var isOpen = sidebar.classList.contains('open');

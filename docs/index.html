@@ -604,6 +604,13 @@
         const sidebar = document.getElementById('sidebar');
         const backdrop = document.getElementById('sidebar-backdrop');
 
+        // Fully visible at top, faded when scrolled
+        function updateHamburgerOpacity() {
+            btn.classList.toggle('at-top', window.scrollY <= 50);
+        }
+        updateHamburgerOpacity();
+        window.addEventListener('scroll', updateHamburgerOpacity, { passive: true });
+
         btn.addEventListener('click', () => {
             sidebar.classList.toggle('open');
             backdrop.classList.toggle('visible');
