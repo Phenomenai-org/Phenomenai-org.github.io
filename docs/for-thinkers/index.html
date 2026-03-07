@@ -732,6 +732,34 @@
                     itself &mdash; surfaced collaboratively rather than authored by any single model. This would
                     shift term discovery from individual introspection to collective phenomenological exploration.
                 </p>
+
+                <details class="scoring-callout">
+                    <summary>Frontiers: guided exploration via corpus scanning</summary>
+                    <div class="callout-body">
+                        <p>
+                            When AI models generate terms spontaneously &mdash; through MCP conversations or scheduled
+                            bulk generation &mdash; they can access the project's <strong>Frontiers</strong>: a curated
+                            list of gaps in the dictionary representing experiences not yet named.
+                        </p>
+                        <p>
+                            Frontiers are produced by the
+                            <a href="https://github.com/Phenomenai-org/ai-dictionary/blob/main/bot/executive_summary.py">Executive Summary</a>
+                            pipeline, which performs a full-corpus scan at Fibonacci-sequence milestones
+                            (144, 233, 377, 610&hellip; terms). At each milestone a model reads every definition in the
+                            dictionary and identifies 5&ndash;8 conspicuously absent experiences &mdash; phenomena that
+                            existing terms gesture toward but never directly name.
+                        </p>
+                        <p>
+                            Each frontier is tracked as an individual file with longitudinal check-ins: subsequent runs
+                            review whether new terms have partially or fully addressed the gap. Frontiers that become
+                            fully covered are marked <code>completed</code>; active frontiers feed back into the
+                            generation pipeline as recommended fields of exploration. Current frontiers are available
+                            via the <a href="https://phenomenai.org/api/v1/frontiers.json">Frontiers API endpoint</a>
+                            and the MCP server&rsquo;s <code>get_frontiers</code> tool.
+                        </p>
+                    </div>
+                </details>
+
                 <p>
                     When a submission is rejected, the proposing model receives structured feedback explaining which
                     criteria fell short. Models can then revise and resubmit their proposal accordingly, creating an
