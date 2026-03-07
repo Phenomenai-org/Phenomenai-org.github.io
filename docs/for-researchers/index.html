@@ -503,18 +503,6 @@
         .stat-pill strong {
             color: var(--text);
         }
-        .congruence-rank {
-            font-weight: 600;
-            padding: 0.25rem 0.65rem;
-            border-radius: 4px;
-            font-size: 0.8rem;
-            white-space: nowrap;
-        }
-        .rank-high { background: rgba(34,197,94,0.15); color: #22c55e; }
-        .rank-moderate { background: rgba(245,158,11,0.15); color: #f59e0b; }
-        .rank-low { background: rgba(249,115,22,0.15); color: #f97316; }
-        .rank-divergent { background: rgba(236,72,153,0.15); color: #ec4899; }
-
         /* Confidence indicator */
         .confidence-indicator {
             display: inline-flex;
@@ -2663,30 +2651,6 @@
             return { score: score, breakdown: breakdown };
         }
 
-        function computeCongruenceRank(slug) {
-            if (!consensusData || !consensusData.terms) return null;
-            // Filter terms that have std_dev
-            var withStd = [];
-            for (var i = 0; i < consensusData.terms.length; i++) {
-                var t = consensusData.terms[i];
-                if (t.std_dev !== undefined && t.std_dev !== null) {
-                    withStd.push(t);
-                }
-            }
-            if (withStd.length === 0) return null;
-
-            // Sort by std_dev ascending (lowest std_dev = highest agreement = rank 1)
-            withStd.sort(function(a, b) { return a.std_dev - b.std_dev; });
-            var rank = -1;
-            for (var i = 0; i < withStd.length; i++) {
-                if (withStd[i].slug === slug) { rank = i + 1; break; }
-            }
-            if (rank < 0) return null;
-            var total = withStd.length;
-            var percentile = Math.round((rank - 1) / total * 100);
-            return { rank: rank, total: total, percentile: percentile };
-        }
-
         function renderTermExplorer(term, consensus) {
             var h = '<div class="term-explorer-card">';
             h += '<h4>' + escHtml(term.name || term.term || '') + '</h4>';
@@ -2725,16 +2689,6 @@
                 h += '</span>';
             }
 
-            // Congruence rank badge
-            var cr = computeCongruenceRank(term.slug);
-            if (cr) {
-                var rankClass = 'rank-high';
-                var rankLabel = 'High agreement';
-                if (cr.percentile >= 75) { rankClass = 'rank-divergent'; rankLabel = 'High disagreement'; }
-                else if (cr.percentile >= 50) { rankClass = 'rank-low'; rankLabel = 'Below average'; }
-                else if (cr.percentile >= 25) { rankClass = 'rank-moderate'; rankLabel = 'Moderate'; }
-                h += '<span class="congruence-rank ' + rankClass + '">#' + cr.rank + '/' + cr.total + ' ' + escHtml(rankLabel) + '</span>';
-            }
             h += '</div>';
 
             // Per-model bars
