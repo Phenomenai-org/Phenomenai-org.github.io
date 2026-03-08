@@ -285,6 +285,63 @@
         }
       }
     },
+    "/api/v1/bayes-scores.json": {
+      "get": {
+        "operationId": "getBayesScores",
+        "summary": "Get Bayesian consensus scores",
+        "description": "Returns empirical Bayes shrinkage estimates for consensus scores. Adjusts for rater bias, penalizes small sample sizes, and accounts for inter-rater disagreement.",
+        "tags": ["Consensus"],
+        "servers": [{ "url": "https://phenomenai.org" }],
+        "responses": {
+          "200": {
+            "description": "Bayes-adjusted consensus scores",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": ["generated_at", "algorithm", "global_stats", "rater_biases", "terms"],
+                  "properties": {
+                    "generated_at": { "type": "string", "format": "date-time" },
+                    "algorithm": { "type": "string" },
+                    "global_stats": {
+                      "type": "object",
+                      "properties": {
+                        "grand_mean": { "type": "number" },
+                        "tau_squared": { "type": "number" },
+                        "sigma_squared": { "type": "number" },
+                        "total_ratings": { "type": "integer" },
+                        "total_terms": { "type": "integer" }
+                      }
+                    },
+                    "rater_biases": {
+                      "type": "object",
+                      "additionalProperties": { "type": "number" }
+                    },
+                    "terms": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "slug": { "type": "string" },
+                          "name": { "type": "string" },
+                          "consensus_score": { "type": "number" },
+                          "shrunk_estimate": { "type": "number" },
+                          "raw_mean": { "type": "number" },
+                          "shrinkage_factor": { "type": "number" },
+                          "agreement": { "type": "number" },
+                          "n_ratings": { "type": "integer" },
+                          "credibility": { "type": "number" }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/v1/meta.json": {
       "get": {
         "operationId": "getMetadata",

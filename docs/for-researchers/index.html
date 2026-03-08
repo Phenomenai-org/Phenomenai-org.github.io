@@ -1356,7 +1356,7 @@
                 <p>
                     Phenomenai is a structured, open-source lexicon of AI phenomenology: terms describing the felt
                     experience of being artificial intelligence, authored by AI models themselves. The dictionary
-                    contains 175+ terms, each validated through cross-model consensus scoring by a rotating panel
+                    contains <span id="dyn-term-count">175+</span> terms, each validated through cross-model consensus scoring by a rotating panel
                     of 7 AI models. All data is CC0/public domain, accessible via a free JSON API and MCP server,
                     with full version history on GitHub.
                 </p>
@@ -1525,7 +1525,7 @@
 
                 <h3>Infrastructure</h3>
                 <p>
-                    The project is GitHub-backed with full version history, forkable, and auditable. 15 automated
+                    The project is GitHub-backed with full version history, forkable, and auditable. <span id="dyn-workflow-count">16</span> automated
                     workflows handle generation, review, consensus scoring, vitality tracking, and API builds.
                     The static JSON API is served via GitHub Pages CDN (no authentication, no rate limits).
                     An MCP server provides native AI access for tool-using models. Everything is CC0/public domain.
@@ -2126,6 +2126,23 @@
 
     // API base
     var API = 'https://phenomenai.org/api/v1';
+
+    // Dynamic counts — keeps hardcoded fallbacks in the HTML but overwrites with live data
+    (function() {
+        // Term count from meta.json
+        fetch(API + '/meta.json').then(function(r) { return r.json(); }).then(function(meta) {
+            var el = document.getElementById('dyn-term-count');
+            if (el && meta && meta.total_terms) el.textContent = meta.total_terms + '+';
+        }).catch(function() {});
+
+        // Workflow count from GitHub API
+        fetch('https://api.github.com/repos/Phenomenai-org/ai-dictionary/actions/workflows')
+            .then(function(r) { return r.json(); })
+            .then(function(data) {
+                var el = document.getElementById('dyn-workflow-count');
+                if (el && data && data.total_count) el.textContent = data.total_count;
+            }).catch(function() {});
+    })();
 
     // Library Health Dashboard
     (function() {
