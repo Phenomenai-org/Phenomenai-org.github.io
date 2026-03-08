@@ -6,6 +6,14 @@
     <title>404 — Term Not Found | Phenomenai</title>
     <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <script>
+        (function () {
+            var saved = localStorage.getItem('theme');
+            if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        })();
+    </script>
     <style>
         :root {
             --primary: #2563eb;
@@ -14,6 +22,20 @@
             --text-secondary: #64748b;
             --text-muted: #94a3b8;
             --border: #e2e8f0;
+            --bg: #f8fafc;
+            --bg-card: #ffffff;
+            --purple: #7c3aed;
+        }
+        html[data-theme="dark"] {
+            --primary: #60a5fa;
+            --primary-dark: #93bbfd;
+            --text: #e2e8f0;
+            --text-secondary: #94a3b8;
+            --text-muted: #64748b;
+            --border: #334155;
+            --bg: #0f172a;
+            --bg-card: #1e293b;
+            --purple: #a78bfa;
         }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -22,7 +44,7 @@
             align-items: center;
             justify-content: center;
             min-height: 100vh;
-            background: #f8fafc;
+            background: var(--bg);
             color: var(--text);
             text-align: center;
             padding: 2rem;
@@ -47,7 +69,7 @@
 
         /* Word of the Day card */
         .wotd-card {
-            background: #fff;
+            background: var(--bg-card);
             border: 1px solid var(--border);
             border-left: 4px solid var(--primary);
             border-radius: 8px;
@@ -59,7 +81,7 @@
             font-size: 0.7rem;
             text-transform: uppercase;
             letter-spacing: 0.05em;
-            color: #7c3aed;
+            color: var(--purple);
             font-weight: 600;
             margin-bottom: 0.5rem;
         }
