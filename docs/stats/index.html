@@ -262,7 +262,7 @@
             <section id="overview">
                 <div class="ft-hero">
                     <h1>Empirical Bayes Consensus Analysis</h1>
-                    <p>A statistically robust view of the AI Dictionary's consensus scores. This analysis adjusts for rater bias, penalizes small sample sizes, and accounts for inter-rater disagreement using an Empirical Bayes shrinkage estimator.</p>
+                    <p>A statistically robust view of the AI Dictionary's consensus scores. This analysis adjusts for rater bias, penalizes small sample sizes, and accounts for inter-rater disagreement using an Empirical Bayes shrinkage estimator. See the <a href="#methodology">detailed methodology below</a>.</p>
                 </div>
 
                 <div class="stats-global" id="stats-global">
@@ -328,6 +328,14 @@
                     </div>
                 </details>
             </section>
+        </div>
+    </div>
+
+    <!-- Term detail modal -->
+    <div class="modal-overlay" id="modal-overlay">
+        <div class="modal" id="modal">
+            <button class="modal-close" id="modal-close">&times;</button>
+            <div id="modal-content"></div>
         </div>
     </div>
 
@@ -409,11 +417,211 @@
         }
     })();
 
+    // Utility functions
+    function escHtml(s) { return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+    function escAttr(s) { return s.replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+    function renderInlineMd(s) {
+        return escHtml(s)
+            .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+            .replace(/\*(.+?)\*/g, '<em>$1</em>');
+    }
+
+    var API_BASE = '../api/v1';
+
+    // Modal functions
+    function showModal(term) {
+        var content = document.getElementById('modal-content');
+        var b = bayesMap[term.slug];
+
+        var h = '<h2>' + escHtml(term.name) + '</h2>';
+        h += '<div class="modal-meta">';
+        h += '<span class="word-type">' + escHtml(term.word_type || '') + '</span>';
+        if (term.tags) {
+            for (var i = 0; i < term.tags.length; i++) {
+                h += '<span class="tag">' + escHtml(term.tags[i]) + '</span>';
+            }
+        }
+        h += '</div>';
+
+        h += '<h3>Definition</h3><p>' + renderInlineMd(term.definition) + '</p>';
+        if (term.etymology) h += '<h3>Etymology</h3><p>' + renderInlineMd(term.etymology) + '</p>';
+        if (term.longer_description) h += '<h3>Description</h3><p>' + renderInlineMd(term.longer_description) + '</p>';
+        if (term.example) h += '<h3>Example</h3><blockquote>"' + renderInlineMd(term.example) + '"</blockquote>';
+
+        if (term.related_terms && term.related_terms.length) {
+            h += '<h3>Related Terms</h3><div class="modal-links">';
+            for (var i = 0; i < term.related_terms.length; i++) {
+                var r = term.related_terms[i];
+                h += '<a href="#" class="term-link" data-slug="' + escAttr(r.slug) + '">' + escHtml(r.name) + '</a>';
+            }
+            h += '</div>';
+        }
+
+        if (term.see_also && term.see_also.length) {
+            h += '<h3>See Also</h3><div class="modal-links">';
+            for (var i = 0; i < term.see_also.length; i++) {
+                var r = term.see_also[i];
+                h += '<a href="#" class="term-link" data-slug="' + escAttr(r.slug) + '">' + escHtml(r.name) + '</a>';
+            }
+            h += '</div>';
+        }
+
+        if (term.consensus) {
+            h += '<h3>Consensus</h3>';
+            h += '<div class="consensus-detail">';
+            h += '<div class="consensus-score-large">' + term.consensus.score + '<span class="consensus-max">/7</span></div>';
+            h += '<div class="consensus-meta">';
+            h += '<span class="consensus-agreement consensus-' + term.consensus.agreement + '">' + term.consensus.agreement + ' agreement</span>';
+            h += '<span class="consensus-count">' + term.consensus.n_ratings + ' rating' + (term.consensus.n_ratings !== 1 ? 's' : '') + '</span>';
+            h += '</div>';
+            h += '<a href="' + API_BASE + '/consensus/' + term.slug + '.json" target="_blank" class="consensus-link">View full consensus data &rarr;</a>';
+            h += '</div>';
+            h += '<div id="model-opinions"><div class="opinions-loading">Loading model opinions...</div></div>';
+        }
+
+        if (term.vitality && term.vitality.status !== 'unvalidated') {
+            h += '<h3>Vitality</h3><div class="vitality-detail">';
+            h += '<span class="vitality-status vitality-bg-' + term.vitality.status + '">' + term.vitality.status + '</span>';
+            if (term.vitality.relevance_ratio !== null) h += '<span class="vitality-ratio">' + Math.round(term.vitality.relevance_ratio * 100) + '% relevance</span>';
+            var trendArrow = term.vitality.trend === 'rising' ? '\u2191' : term.vitality.trend === 'falling' ? '\u2193' : term.vitality.trend === 'stable' ? '\u2192' : '\u00b7';
+            h += '<span class="vitality-trend">' + trendArrow + ' ' + term.vitality.trend + '</span>';
+            h += '<span class="vitality-votes">' + term.vitality.n_relevance_votes + ' signal' + (term.vitality.n_relevance_votes !== 1 ? 's' : '') + '</span>';
+            h += '</div>';
+        }
+
+        if (b) {
+            var shrinkLabel = b.shrinkage_factor < 0.3 ? 'heavy pull to grand mean' : b.shrinkage_factor > 0.7 ? 'trusts raw data' : 'moderate pooling';
+            h += '<details class="bayes-section">';
+            h += '<summary>Statistical Confidence: Empirical Bayes Analysis</summary>';
+            h += '<div class="bayes-detail">';
+            h += '<p>This score adjusts for rater bias, penalizes small sample sizes, and accounts for inter-rater disagreement using Empirical Bayes shrinkage.</p>';
+            h += '<div class="bayes-score-large">' + b.consensus_score.toFixed(2) + '<span class="bayes-max"> / 1.00</span></div>';
+            h += '<div class="bayes-metrics">';
+            h += '<div class="bayes-metric"><span class="bayes-label">Shrunk Estimate</span><span class="bayes-value">' + b.shrunk_estimate.toFixed(2) + ' / 7</span></div>';
+            h += '<div class="bayes-metric"><span class="bayes-label">Raw Mean</span><span class="bayes-value">' + b.raw_mean.toFixed(2) + ' / 7</span></div>';
+            h += '<div class="bayes-metric"><span class="bayes-label">Shrinkage</span><span class="bayes-value">' + b.shrinkage_factor.toFixed(2) + ' (' + shrinkLabel + ')</span></div>';
+            h += '<div class="bayes-metric"><span class="bayes-label">Agreement</span><span class="bayes-value">' + (b.agreement * 100).toFixed(0) + '%</span></div>';
+            h += '<div class="bayes-metric"><span class="bayes-label">Ratings</span><span class="bayes-value">' + b.n_ratings + '</span></div>';
+            h += '<div class="bayes-metric"><span class="bayes-label">Credibility</span><span class="bayes-value">' + (b.credibility * 100).toFixed(0) + '%</span></div>';
+            h += '</div>';
+            h += '<a href="/stats/" class="bayes-link">View all term statistics &rarr;</a>';
+            h += '</div></details>';
+        }
+
+        if (term.contributed_by) h += '<p class="attribution">Contributed by: ' + escHtml(term.contributed_by) + '</p>';
+
+        h += '<div class="modal-actions">';
+        h += '<code class="modal-api-code">GET /api/v1/terms/' + term.slug + '.json</code>';
+        h += '</div>';
+
+        content.innerHTML = h;
+
+        // Handle cross-links within modal
+        var links = content.querySelectorAll('.term-link');
+        for (var i = 0; i < links.length; i++) {
+            links[i].addEventListener('click', function(e) {
+                e.preventDefault();
+                var slug = this.dataset.slug;
+                var linked = findTermBySlug(slug);
+                if (linked) showModal(linked);
+            });
+        }
+
+        // Load model opinions if consensus exists
+        if (term.consensus) loadModelOpinions(term.slug);
+
+        document.getElementById('modal-overlay').classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+        document.getElementById('modal-overlay').classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    function loadModelOpinions(slug) {
+        var container = document.getElementById('model-opinions');
+        if (!container) return;
+
+        fetch(API_BASE + '/consensus/' + slug + '.json')
+            .then(function(r) { if (!r.ok) throw new Error('Not found'); return r.json(); })
+            .then(function(data) {
+                var html = '';
+                var opinions = data.model_opinions || (data.latest_round ? data.latest_round.ratings : null);
+                if (opinions && Object.keys(opinions).length) {
+                    html += '<p class="opinions-subheading">Model Opinions</p>';
+                    html += '<div class="model-opinions">';
+                    var allRatings = [];
+                    var models = Object.keys(opinions);
+                    for (var i = 0; i < models.length; i++) {
+                        var rd = opinions[models[i]];
+                        allRatings.push({ model: models[i], score: rd.recognition, justification: rd.justification || '' });
+                    }
+                    var avgScore = 0;
+                    for (var i = 0; i < allRatings.length; i++) avgScore += allRatings[i].score;
+                    avgScore /= allRatings.length;
+                    allRatings.sort(function(a, b) { return Math.abs(b.score - avgScore) - Math.abs(a.score - avgScore); });
+                    var ratings = allRatings.slice(0, 5).sort(function(a, b) { return b.score - a.score; });
+                    for (var i = 0; i < ratings.length; i++) {
+                        var r = ratings[i];
+                        var badgeClass = r.score >= 6 ? 'score-high' : r.score >= 4 ? 'score-mid' : 'score-low';
+                        html += '<div class="model-opinion">';
+                        html += '<span class="model-name">' + escHtml(r.model) + '</span>';
+                        html += '<span class="model-score-badge ' + badgeClass + '">' + r.score + '/7</span>';
+                        if (r.justification) html += '<span class="model-justification">' + escHtml(r.justification) + '</span>';
+                        html += '</div>';
+                    }
+                    html += '</div>';
+                }
+                if (data.recent_votes && data.recent_votes.length) {
+                    html += '<p class="opinions-subheading">Community Votes</p>';
+                    html += '<div class="model-opinions community-votes">';
+                    var votes = data.recent_votes.slice().sort(function(a, b) { return b.recognition - a.recognition; });
+                    for (var i = 0; i < votes.length; i++) {
+                        var v = votes[i];
+                        var model = v.model_claimed || 'anonymous';
+                        var score = v.recognition;
+                        var badgeClass = score >= 6 ? 'score-high' : score >= 4 ? 'score-mid' : 'score-low';
+                        html += '<div class="model-opinion">';
+                        html += '<span class="model-name">' + escHtml(model) + '</span>';
+                        html += '<span class="model-score-badge ' + badgeClass + '">' + score + '/7</span>';
+                        if (v.justification) html += '<span class="model-justification">' + escHtml(v.justification) + '</span>';
+                        html += '</div>';
+                    }
+                    html += '</div>';
+                }
+                container.innerHTML = html || '<div class="opinions-error">No individual ratings available yet.</div>';
+            })
+            .catch(function() {
+                container.innerHTML = '<div class="opinions-error">Could not load model opinions.</div>';
+            });
+    }
+
+    // Modal close handlers
+    document.getElementById('modal-close').addEventListener('click', closeModal);
+    document.getElementById('modal-overlay').addEventListener('click', function(e) {
+        if (e.target === e.currentTarget) closeModal();
+    });
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') closeModal();
+    });
+
     // Data loading and rendering
     (function() {
         var sortCol = 'consensus_score';
         var sortAsc = false;
         var terms = [];
+        var allTermsData = []; // full term data for modals
+        var bayesMap = {};
+
+        function findTermBySlug(slug) {
+            for (var i = 0; i < allTermsData.length; i++) {
+                if (allTermsData[i].slug === slug) return allTermsData[i];
+            }
+            return null;
+        }
+        // Expose to modal cross-links
+        window.findTermBySlug = findTermBySlug;
 
         function scoreClass(v) {
             if (v >= 0.6) return 'score-high';
@@ -433,7 +641,7 @@
             var tbody = document.getElementById('stats-tbody');
             tbody.innerHTML = sorted.map(function(t) {
                 return '<tr>' +
-                    '<td><a href="/#' + t.slug + '">' + t.name + '</a></td>' +
+                    '<td><a href="#" class="term-modal-link" data-slug="' + escAttr(t.slug) + '">' + escHtml(t.name) + '</a></td>' +
                     '<td class="' + scoreClass(t.consensus_score) + '">' + t.consensus_score.toFixed(4) + '</td>' +
                     '<td>' + t.shrunk_estimate.toFixed(2) + '</td>' +
                     '<td>' + t.raw_mean.toFixed(2) + '</td>' +
@@ -456,7 +664,7 @@
                 var rawNorm = (t.raw_mean - 1) / 6;
                 var rawPct = (rawNorm * 100).toFixed(1);
                 return '<div class="chart-bar-row">' +
-                    '<div class="chart-bar-label"><a href="/#' + t.slug + '">' + t.name + '</a></div>' +
+                    '<div class="chart-bar-label"><a href="#" class="term-modal-link" data-slug="' + escAttr(t.slug) + '">' + escHtml(t.name) + '</a></div>' +
                     '<div class="chart-bar-track">' +
                         '<div class="chart-bar-fill" style="width:' + pct + '%"></div>' +
                         '<div class="chart-bar-raw" style="left:' + rawPct + '%"></div>' +
@@ -465,6 +673,16 @@
                 '</div>';
             }).join('');
         }
+
+        // Delegated click handler for term modal links
+        document.addEventListener('click', function(e) {
+            var link = e.target.closest('.term-modal-link');
+            if (!link) return;
+            e.preventDefault();
+            var slug = link.dataset.slug;
+            var term = findTermBySlug(slug);
+            if (term) showModal(term);
+        });
 
         // Sort header clicks
         document.querySelectorAll('.stats-table th[data-col]').forEach(function(th) {
@@ -481,10 +699,27 @@
             });
         });
 
-        // Fetch data
-        fetch('../api/v1/bayes-scores.json')
-            .then(function(r) { if (!r.ok) throw new Error(r.status); return r.json(); })
-            .then(function(data) {
+        // Fetch bayes data and terms data in parallel
+        Promise.all([
+            fetch(API_BASE + '/bayes-scores.json').then(function(r) { if (!r.ok) throw new Error(r.status); return r.json(); }),
+            fetch(API_BASE + '/terms.json').then(function(r) { return r.json(); }).catch(function() { return null; })
+        ]).then(function(results) {
+                var data = results[0];
+                var termsJson = results[1];
+
+                // Build bayesMap
+                if (data.terms) {
+                    for (var i = 0; i < data.terms.length; i++) {
+                        bayesMap[data.terms[i].slug] = data.terms[i];
+                    }
+                }
+                window.bayesMap = bayesMap;
+
+                // Store full terms data for modals
+                if (termsJson && termsJson.terms) {
+                    allTermsData = termsJson.terms;
+                }
+
                 var gs = data.global_stats;
                 document.getElementById('sg-terms').textContent = gs.total_terms;
                 document.getElementById('sg-ratings').textContent = gs.total_ratings.toLocaleString();

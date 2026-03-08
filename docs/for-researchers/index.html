@@ -1598,6 +1598,15 @@
                 </div>
             </section>
 
+            <details class="bayes-section" style="margin: 2rem 0;">
+                <summary>How Final Scores Are Calculated: Empirical Bayes Intervals</summary>
+                <div class="bayes-detail">
+                    <p>Final consensus scores use an Empirical Bayes shrinkage estimator rather than simple averages. This method adjusts for systematic rater bias, penalizes terms with few ratings by pulling their estimates toward the global mean, and weights inter-rater agreement into the final score.</p>
+                    <p>The result is a single 0–1 score per term that reflects both the strength of evidence and the degree of cross-model consensus.</p>
+                    <a href="/stats/" class="bayes-link">View full statistical analysis and methodology &rarr;</a>
+                </div>
+            </details>
+
             <!-- Section 4: Research Applications -->
             <section id="research">
                 <h2>Research Applications</h2>
@@ -2519,15 +2528,25 @@
         var termSelect = document.getElementById('term-select');
         var termContainer = document.getElementById('term-explorer-container');
 
-        // Load all three data sources in parallel
+        var bayesData = null;
+        var bayesMap = {};
+
+        // Load all data sources in parallel
         Promise.all([
             fetch(API + '/models.json').then(function(r) { return r.json(); }).catch(function() { return null; }),
             fetch(API + '/terms.json').then(function(r) { return r.json(); }).catch(function() { return null; }),
-            fetch(API + '/consensus.json').then(function(r) { return r.json(); }).catch(function() { return null; })
+            fetch(API + '/consensus.json').then(function(r) { return r.json(); }).catch(function() { return null; }),
+            fetch(API + '/bayes-scores.json').then(function(r) { return r.json(); }).catch(function() { return null; })
         ]).then(function(results) {
             modelsData = results[0];
             termsData = results[1];
             consensusData = results[2];
+            bayesData = results[3];
+            if (bayesData && bayesData.terms) {
+                for (var i = 0; i < bayesData.terms.length; i++) {
+                    bayesMap[bayesData.terms[i].slug] = bayesData.terms[i];
+                }
+            }
             precomputeConfidenceQuartiles();
             initModelComparison();
             initTermExplorer();
@@ -2693,20 +2712,35 @@
         var confBySlug = {}; // slug -> confidence score
 
         function precomputeConfidenceQuartiles() {
+            // Use Bayes consensus_score if available, fallback to old formula
+            if (bayesData && bayesData.terms) {
+                var scores = [];
+                for (var i = 0; i < bayesData.terms.length; i++) {
+                    var bt = bayesData.terms[i];
+                    var score = Math.round(bt.consensus_score * 100);
+                    confBySlug[bt.slug] = score;
+                    scores.push(score);
+                }
+                scores.sort(function(a, b) { return a - b; });
+                if (scores.length > 0) {
+                    confQuartiles[0] = scores[Math.floor(scores.length * 0.25)];
+                    confQuartiles[1] = scores[Math.floor(scores.length * 0.5)];
+                    confQuartiles[2] = scores[Math.floor(scores.length * 0.75)];
+                }
+                return;
+            }
+            // Fallback: old formula if bayes data unavailable
             if (!consensusData || !consensusData.terms) return;
             var scores = [];
             for (var i = 0; i < consensusData.terms.length; i++) {
                 var ct = consensusData.terms[i];
-                var nModels = ct.n_ratings || 0;
                 var nTotal = ct.n_ratings || 0;
                 var stdDev = ct.std_dev;
-                // Lightweight confidence calc (same formula, using index data)
                 var totalPanel = modelsData && modelsData.models ? Object.keys(modelsData.models).length : 7;
                 if (!nTotal) continue;
                 var breadth = Math.min((ct.n_ratings > 0 ? Math.min(ct.n_ratings, totalPanel) : 0) / totalPanel, 1);
                 var depth = Math.min(nTotal / (totalPanel * 3), 1);
                 var agreementScore = (stdDev !== null && stdDev !== undefined) ? Math.max(0, Math.min(1, 1 - (stdDev / 3))) : 0.5;
-                // Approximate reliability at 0.7 for precomputation (exact value needs per-term consensus fetch)
                 var raw = (breadth * 0.25 + depth * 0.25 + 0.7 * 0.25 + agreementScore * 0.25) * 100;
                 var score = Math.round(raw);
                 confBySlug[ct.slug] = score;
@@ -2816,13 +2850,28 @@
             }
             if (stdDev !== null) h += '<span class="stat-pill">Std dev: <strong>' + Number(stdDev).toFixed(2) + '</strong></span>';
 
-            // Confidence indicator
-            var conf = computeConfidence(consensus, nModels, nTotal, stdDev);
-            if (conf !== null) {
-                var confClass = getConfClass(conf.score);
-                h += '<span class="confidence-indicator ' + confClass + '" title="' + escHtml(conf.breakdown) + '">';
-                h += 'Confidence: <strong>' + conf.score + '%</strong>';
+            // Consensus score (Bayes) or fallback confidence
+            var bt = bayesMap[term.slug];
+            if (bt) {
+                var bayesScore = bt.consensus_score;
+                var confClass = getConfClass(Math.round(bayesScore * 100));
+                var bayesBreakdown = 'Empirical Bayes consensus score. '
+                    + 'Shrunk estimate: ' + bt.shrunk_estimate.toFixed(2) + '/7, '
+                    + 'Raw mean: ' + bt.raw_mean.toFixed(2) + '/7, '
+                    + 'Shrinkage: ' + bt.shrinkage_factor.toFixed(2) + ', '
+                    + 'Agreement: ' + (bt.agreement * 100).toFixed(0) + '%, '
+                    + 'Credibility: ' + (bt.credibility * 100).toFixed(0) + '%';
+                h += '<span class="confidence-indicator ' + confClass + '" title="' + escHtml(bayesBreakdown) + '">';
+                h += 'Consensus Score: <strong>' + bayesScore.toFixed(2) + '</strong>';
                 h += '</span>';
+            } else {
+                var conf = computeConfidence(consensus, nModels, nTotal, stdDev);
+                if (conf !== null) {
+                    var confClass = getConfClass(conf.score);
+                    h += '<span class="confidence-indicator ' + confClass + '" title="' + escHtml(conf.breakdown) + '">';
+                    h += 'Confidence: <strong>' + conf.score + '%</strong>';
+                    h += '</span>';
+                }
             }
 
             h += '</div>';
@@ -3098,7 +3147,8 @@
                 if (idx < 0) idx = 0;
                 if (idx >= confRailTerms.length) idx = confRailTerms.length - 1;
                 var ct = confRailTerms[idx];
-                tooltipEl.textContent = ct.name + ' (' + ct.conf + '% confidence)';
+                var confLabel = bayesMap[ct.slug] ? (bayesMap[ct.slug].consensus_score.toFixed(2) + ' score') : (ct.conf + '% confidence');
+                tooltipEl.textContent = ct.name + ' (' + confLabel + ')';
                 tooltipEl.style.top = (e.clientY - railsContainer.getBoundingClientRect().top - 12) + 'px';
                 tooltipEl.classList.add('visible');
             });
