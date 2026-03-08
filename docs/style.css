@@ -2256,7 +2256,7 @@ html[data-theme="dark"] .theme-toggle:active .theme-switch-knob {
 
 /* Responsive */
 /* Narrow desktop / tablet — hamburger menu for sidebar */
-@media (max-width: 1100px) and (min-width: 769px) {
+@media (max-width: 1280px) and (min-width: 769px) {
     .sidebar {
         width: 280px;
         transform: translateX(-100%);

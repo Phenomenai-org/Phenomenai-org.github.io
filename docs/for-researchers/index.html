@@ -716,35 +716,6 @@
         }
 
         /* Library Health dashboard */
-        .lh-trigger {
-            background: var(--bg-secondary);
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            padding: 1.25rem;
-            margin-bottom: 1.5rem;
-            cursor: pointer;
-            transition: border-color 0.2s, box-shadow 0.2s;
-        }
-        .lh-trigger:hover, .lh-trigger:focus-visible {
-            border-color: var(--primary);
-            box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
-            outline: none;
-        }
-        .lh-trigger h4 { margin: 0 0 0.5rem 0; font-size: 1.1rem; }
-        .lh-trigger-stats {
-            display: flex;
-            gap: 0.75rem;
-            flex-wrap: wrap;
-            margin-bottom: 0.5rem;
-        }
-        .lh-trigger-pill {
-            background: var(--bg-tertiary);
-            padding: 0.2rem 0.6rem;
-            border-radius: 4px;
-            font-size: 0.85rem;
-            color: var(--text-secondary);
-        }
-        .lh-modal { max-width: 800px; }
         .lh-tabs {
             display: flex;
             gap: 0;
@@ -815,11 +786,47 @@
             border-radius: 3px;
             flex-shrink: 0;
         }
+        .lh-legend-toggle {
+            cursor: pointer;
+            user-select: none;
+        }
+        .lh-legend-toggle::before {
+            content: '\25B6';
+            display: inline-block;
+            font-size: 0.6rem;
+            margin-right: 0.3rem;
+            transition: transform 0.2s;
+        }
+        .lh-legend-item.expanded .lh-legend-toggle::before {
+            transform: rotate(90deg);
+        }
+        .lh-legend-sub {
+            display: none;
+            padding-left: 1.5rem;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+        .lh-legend-item.expanded .lh-legend-sub {
+            display: block;
+        }
+        .lh-legend-item.highlight { font-weight: bold; }
+        .lh-section {
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1rem 1.25rem;
+            margin-bottom: 1rem;
+        }
         .lh-section-title {
             font-size: 0.9rem;
             font-weight: 600;
-            margin-bottom: 0.75rem;
+            margin-bottom: 0.25rem;
             color: var(--text-secondary);
+        }
+        .lh-section-desc {
+            font-size: 0.78rem;
+            color: var(--text-muted);
+            margin-bottom: 0.75rem;
         }
         .lh-dist-row {
             display: flex;
@@ -1174,7 +1181,7 @@
         }
 
         /* Narrow desktop / tablet — hamburger menu for sidebar */
-        @media (max-width: 1100px) and (min-width: 769px) {
+        @media (max-width: 1280px) and (min-width: 769px) {
             .ft-sidebar {
                 width: 280px;
                 transform: translateX(-100%);
@@ -1546,10 +1553,17 @@
                     High-level dashboard of dictionary health &mdash; term counts, model contributions,
                     rating distributions, and agreement patterns, all computed from live API data.
                 </p>
-                <div class="lh-trigger" id="lh-trigger" role="button" tabindex="0">
-                    <h4>Library Health Dashboard</h4>
-                    <div class="lh-trigger-stats" id="lh-trigger-stats"></div>
-                    <p style="color: var(--text-muted); font-size: 0.85rem; margin: 0;">Click to explore full dashboard &rarr;</p>
+                <div id="lh-dashboard">
+                    <div class="lh-tabs">
+                        <button class="lh-tab active" data-tab="overview">Overview</button>
+                        <button class="lh-tab" data-tab="ratings">Ratings</button>
+                    </div>
+                    <div class="lh-tab-panel active" data-tab="overview" id="lh-panel-overview">
+                        <p style="color: var(--text-muted); font-style: italic;">Loading...</p>
+                    </div>
+                    <div class="lh-tab-panel" data-tab="ratings" id="lh-panel-ratings">
+                        <p style="color: var(--text-muted); font-style: italic;">Loading...</p>
+                    </div>
                 </div>
 
                 <h3>Model Comparison</h3>
@@ -1753,7 +1767,7 @@
                 <div class="viz-container">
                     <h4>Semantic Relationship Network</h4>
                     <p style="font-size: 0.9rem;">
-                        Explore term connections. Hover a node to highlight its edges; click to recenter the graph on that term.
+                        Explore term <a href="#" id="connections-method-link" style="color:var(--accent);text-decoration:underline;cursor:pointer;">connections</a>. Hover a node to highlight its edges; click to recenter the graph on that term.
                     </p>
                     <div style="display:flex;flex-wrap:wrap;gap:0.75rem;align-items:flex-start;margin-bottom:0.75rem;">
                         <div style="position:relative; width:100%; max-width:300px;">
@@ -1783,29 +1797,9 @@
                         How individual models rated a term across consensus rounds. Each line represents
                         one model's recognition score (1&ndash;7) over time.
                     </p>
-                    <div class="ds-controls" style="row-gap:0.4rem;">
-                        <span style="font-size:0.9rem;color:var(--text-secondary);white-space:nowrap;">At least</span>
-                        <select id="rating-history-min-models" class="ds-select">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3" selected>3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
-                        <span style="font-size:0.9rem;color:var(--text-secondary);white-space:nowrap;">model(s) with at least</span>
-                        <select id="rating-history-min" class="ds-select">
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="7">7</option>
-                            <option value="10">10</option>
-                        </select>
-                        <span style="font-size:0.9rem;color:var(--text-secondary);white-space:nowrap;">ratings:</span>
-                        <select id="rating-history-select" class="ds-select">
-                            <option value="">Loading terms...</option>
-                        </select>
-                        <button id="rating-history-refresh" class="ds-select" style="cursor:pointer;padding:0.4rem 0.6rem;" title="Refresh term list">&#x21bb;</button>
+                    <div style="margin-bottom: 0.75rem; position:relative; width:100%; max-width:400px;">
+                        <input type="text" id="rating-history-search" placeholder="Search for a term (e.g. context-amnesia)..." style="width:100%;padding:0.5rem 0.75rem;border:1px solid var(--border);border-radius:6px;background:var(--bg-secondary);color:var(--text-primary);font-size:0.9rem;box-sizing:border-box;" />
+                        <div id="rating-history-suggestions" style="position:absolute;top:100%;left:0;width:100%;max-height:200px;overflow-y:auto;display:none;background:var(--bg-secondary);border:1px solid var(--border);border-top:none;border-radius:0 0 6px 6px;z-index:10;box-sizing:border-box;"></div>
                     </div>
                     <div class="viz-canvas" id="rating-history-viz">
                         <p style="color: var(--text-muted); font-style: italic;">Loading rating history...</p>
@@ -2033,24 +2027,6 @@
         </div>
     </div>
 
-    <!-- Library Health modal -->
-    <div class="modal-overlay" id="lh-modal-overlay">
-        <div class="modal lh-modal">
-            <button class="modal-close" id="lh-modal-close">&times;</button>
-            <h2>Library Health Dashboard</h2>
-            <div class="lh-tabs">
-                <button class="lh-tab active" data-tab="overview">Overview</button>
-                <button class="lh-tab" data-tab="ratings">Ratings</button>
-            </div>
-            <div class="lh-tab-panel active" data-tab="overview" id="lh-panel-overview">
-                <p style="color: var(--text-muted); font-style: italic;">Loading...</p>
-            </div>
-            <div class="lh-tab-panel" data-tab="ratings" id="lh-panel-ratings">
-                <p style="color: var(--text-muted); font-style: italic;">Loading...</p>
-            </div>
-        </div>
-    </div>
-
     <script>
     // Utility: escape HTML
     function escHtml(s) {
@@ -2095,7 +2071,7 @@
         var backdrop = document.getElementById('sidebar-backdrop');
         var topNav = document.querySelector('.ft-nav');
         var links = sidebar.querySelectorAll('a[data-section]');
-        var isMobile = function() { return window.innerWidth <= 768; };
+        var isMobile = function() { return window.innerWidth <= 1280; };
 
         function closeSidebar() {
             sidebar.classList.remove('open', 'tab-open');
@@ -2163,19 +2139,27 @@
     // Library Health Dashboard
     (function() {
         var PIE_COLORS = ['#2563eb', '#059669', '#7c3aed', '#dc2626', '#d97706', '#0891b2', '#be185d', '#4338ca'];
-        var AGREEMENT_COLORS = { high: '#22c55e', moderate: '#f59e0b', low: '#f97316', contested: '#ef4444' };
-        var INTEREST_COLORS = { hot: '#ef4444', warm: '#f59e0b', mild: '#2563eb', cool: '#0891b2', quiet: '#94a3b8' };
+        var AGREEMENT_COLORS = { high: '#22c55e', moderate: '#f59e0b', low: '#f97316', divergent: '#ef4444' };
+        var DEPTH_COLORS = ['#bfdbfe', '#93c5fd', '#60a5fa', '#3b82f6', '#1d4ed8'];
 
         var lhData = {};
         var overviewRendered = false;
         var ratingsRendered = false;
 
-        var trigger = document.getElementById('lh-trigger');
-        var triggerStats = document.getElementById('lh-trigger-stats');
-        var overlay = document.getElementById('lh-modal-overlay');
-        var closeBtn = document.getElementById('lh-modal-close');
-        var tabs = document.querySelectorAll('.lh-tab');
-        var panels = document.querySelectorAll('.lh-tab-panel');
+        var tabs = document.querySelectorAll('#lh-dashboard .lh-tab');
+        var panels = document.querySelectorAll('#lh-dashboard .lh-tab-panel');
+
+        function getFamily(name) {
+            var n = (name || '').toLowerCase();
+            if (n.indexOf('claude') !== -1) return 'Claude';
+            if (n.indexOf('gpt') !== -1 || n.indexOf('chatgpt') !== -1) return 'GPT';
+            if (n.indexOf('gemini') !== -1) return 'Gemini';
+            if (n.indexOf('deepseek') !== -1) return 'DeepSeek';
+            if (n.indexOf('grok') !== -1) return 'Grok';
+            if (n.indexOf('mistral') !== -1) return 'Mistral';
+            if (n.indexOf('step') !== -1) return 'Step';
+            return 'Other';
+        }
 
         // Fetch all endpoints in parallel
         Promise.all([
@@ -2183,7 +2167,6 @@
             fetch(API + '/terms.json').then(function(r) { return r.json(); }).catch(function() { return null; }),
             fetch(API + '/models.json').then(function(r) { return r.json(); }).catch(function() { return null; }),
             fetch(API + '/consensus.json').then(function(r) { return r.json(); }).catch(function() { return null; }),
-            fetch(API + '/interest.json').then(function(r) { return r.json(); }).catch(function() { return null; }),
             fetch(API + '/tags.json').then(function(r) { return r.json(); }).catch(function() { return null; }),
             fetch(API + '/changelog.json').then(function(r) { return r.json(); }).catch(function() { return null; })
         ]).then(function(results) {
@@ -2191,42 +2174,48 @@
             lhData.terms = results[1];
             lhData.models = results[2];
             lhData.consensus = results[3];
-            lhData.interest = results[4];
-            lhData.tags = results[5];
-            lhData.changelog = results[6];
-            populateTrigger();
+            lhData.tags = results[4];
+            lhData.changelog = results[5];
+            renderOverview();
         });
-
-        function populateTrigger() {
-            var termCount = lhData.meta && lhData.meta.total_terms ? lhData.meta.total_terms : (lhData.terms && lhData.terms.terms ? lhData.terms.terms.length : '?');
-            var ratingCount = 0;
-            if (lhData.models && lhData.models.models) {
-                var mNames = Object.keys(lhData.models.models);
-                for (var i = 0; i < mNames.length; i++) {
-                    ratingCount += lhData.models.models[mNames[i]].total_ratings || 0;
-                }
-            }
-            var modelCount = lhData.models && lhData.models.models ? Object.keys(lhData.models.models).length : '?';
-            triggerStats.innerHTML =
-                '<span class="lh-trigger-pill">Terms: <strong>' + termCount + '</strong></span>' +
-                '<span class="lh-trigger-pill">Ratings: <strong>' + ratingCount + '</strong></span>' +
-                '<span class="lh-trigger-pill">Models: <strong>' + modelCount + '</strong></span>';
-        }
 
         // Normalize contributor name from contributed_by field
         function normalizeContributor(raw) {
             if (!raw) return 'Unknown';
             var s = String(raw).trim();
-            // Handle "Model Name (via ...)" or "Model Name via ..."
             s = s.replace(/\s*\(via[^)]*\)/i, '').replace(/\s+via\s+.*/i, '');
-            // Handle "Model Name - ..." suffixes
             s = s.replace(/\s*-\s*\d{4}.*/, '');
             return s || 'Unknown';
         }
 
-        // Draw a pie chart as inline SVG
+        // Group items by model family, returns {families: [{label, value, color, members: [{name, count}]}], total}
+        function groupByFamily(nameCountMap) {
+            var familyMap = {};
+            var names = Object.keys(nameCountMap);
+            for (var i = 0; i < names.length; i++) {
+                var fam = getFamily(names[i]);
+                if (!familyMap[fam]) familyMap[fam] = { total: 0, members: [] };
+                familyMap[fam].total += nameCountMap[names[i]];
+                familyMap[fam].members.push({ name: names[i], count: nameCountMap[names[i]] });
+            }
+            var famNames = Object.keys(familyMap).sort(function(a, b) { return familyMap[b].total - familyMap[a].total; });
+            var data = [];
+            var total = 0;
+            for (var i = 0; i < famNames.length; i++) {
+                familyMap[famNames[i]].members.sort(function(a, b) { return b.count - a.count; });
+                data.push({
+                    label: famNames[i],
+                    value: familyMap[famNames[i]].total,
+                    color: PIE_COLORS[i % PIE_COLORS.length],
+                    members: familyMap[famNames[i]].members
+                });
+                total += familyMap[famNames[i]].total;
+            }
+            return { data: data, total: total };
+        }
+
+        // Draw a pie chart as inline SVG with data-lh-idx attributes
         function drawPieChart(data, size) {
-            // data: [{label, value, color}]
             var total = 0;
             for (var i = 0; i < data.length; i++) total += data[i].value;
             if (total === 0) return '<p style="color:var(--text-muted);">No data</p>';
@@ -2235,7 +2224,7 @@
             var svg = '<svg width="' + size + '" height="' + size + '" viewBox="0 0 ' + size + ' ' + size + '" xmlns="http://www.w3.org/2000/svg">';
 
             if (data.length === 1) {
-                svg += '<circle cx="' + cx + '" cy="' + cy + '" r="' + r + '" fill="' + data[0].color + '">';
+                svg += '<circle cx="' + cx + '" cy="' + cy + '" r="' + r + '" fill="' + data[0].color + '" data-lh-idx="0">';
                 svg += '<title>' + escHtml(data[0].label) + ': ' + data[0].value + ' (' + (100).toFixed(1) + '%)</title>';
                 svg += '</circle>';
                 svg += '</svg>';
@@ -2251,7 +2240,7 @@
                 var y2 = cy + r * Math.sin(angle + slice);
                 var largeArc = slice > Math.PI ? 1 : 0;
                 var pct = (data[i].value / total * 100).toFixed(1);
-                svg += '<path d="M' + cx + ',' + cy + ' L' + x1.toFixed(2) + ',' + y1.toFixed(2) + ' A' + r + ',' + r + ' 0 ' + largeArc + ',1 ' + x2.toFixed(2) + ',' + y2.toFixed(2) + ' Z" fill="' + data[i].color + '">';
+                svg += '<path d="M' + cx + ',' + cy + ' L' + x1.toFixed(2) + ',' + y1.toFixed(2) + ' A' + r + ',' + r + ' 0 ' + largeArc + ',1 ' + x2.toFixed(2) + ',' + y2.toFixed(2) + ' Z" fill="' + data[i].color + '" data-lh-idx="' + i + '">';
                 svg += '<title>' + escHtml(data[i].label) + ': ' + data[i].value + ' (' + pct + '%)</title>';
                 svg += '</path>';
                 angle += slice;
@@ -2260,21 +2249,73 @@
             return svg;
         }
 
-        function buildLegend(data, total) {
+        function buildFamilyLegend(data, total) {
             var h = '<div class="lh-legend">';
             for (var i = 0; i < data.length; i++) {
                 var pct = total > 0 ? (data[i].value / total * 100).toFixed(1) : '0.0';
-                h += '<div class="lh-legend-item">';
+                h += '<div class="lh-legend-item" data-lh-idx="' + i + '">';
                 h += '<span class="lh-legend-swatch" style="background:' + data[i].color + '"></span>';
-                h += '<span>' + escHtml(data[i].label) + ' &mdash; ' + data[i].value + ' (' + pct + '%)</span>';
+                if (data[i].members && data[i].members.length > 1) {
+                    h += '<span class="lh-legend-toggle">' + escHtml(data[i].label) + ' &mdash; ' + data[i].value + ' (' + pct + '%)</span>';
+                    h += '<div class="lh-legend-sub">';
+                    for (var j = 0; j < data[i].members.length; j++) {
+                        h += '<div>' + escHtml(data[i].members[j].name) + ': ' + data[i].members[j].count + '</div>';
+                    }
+                    h += '</div>';
+                } else {
+                    var displayName = data[i].members && data[i].members.length === 1 ? data[i].members[0].name : data[i].label;
+                    h += '<span>' + escHtml(displayName) + ' &mdash; ' + data[i].value + ' (' + pct + '%)</span>';
+                }
                 h += '</div>';
             }
             h += '</div>';
             return h;
         }
 
+        function wireChartHover(container) {
+            var paths = container.querySelectorAll('[data-lh-idx]');
+            var svgPaths = container.querySelectorAll('svg [data-lh-idx]');
+            var legendItems = container.querySelectorAll('.lh-legend-item[data-lh-idx]');
+
+            function highlightIdx(idx) {
+                for (var i = 0; i < svgPaths.length; i++) {
+                    svgPaths[i].style.opacity = svgPaths[i].getAttribute('data-lh-idx') === idx ? '1' : '0.4';
+                }
+                for (var i = 0; i < legendItems.length; i++) {
+                    if (legendItems[i].getAttribute('data-lh-idx') === idx) {
+                        legendItems[i].classList.add('highlight');
+                    } else {
+                        legendItems[i].classList.remove('highlight');
+                    }
+                }
+            }
+
+            function clearHighlight() {
+                for (var i = 0; i < svgPaths.length; i++) svgPaths[i].style.opacity = '1';
+                for (var i = 0; i < legendItems.length; i++) legendItems[i].classList.remove('highlight');
+            }
+
+            for (var i = 0; i < svgPaths.length; i++) {
+                svgPaths[i].addEventListener('mouseenter', function() { highlightIdx(this.getAttribute('data-lh-idx')); });
+                svgPaths[i].addEventListener('mouseleave', clearHighlight);
+            }
+            for (var i = 0; i < legendItems.length; i++) {
+                legendItems[i].addEventListener('mouseenter', function() { highlightIdx(this.getAttribute('data-lh-idx')); });
+                legendItems[i].addEventListener('mouseleave', clearHighlight);
+            }
+
+            // Toggle expand on family legend click
+            var toggles = container.querySelectorAll('.lh-legend-toggle');
+            for (var i = 0; i < toggles.length; i++) {
+                toggles[i].addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    var item = this.closest('.lh-legend-item');
+                    if (item) item.classList.toggle('expanded');
+                });
+            }
+        }
+
         function buildDistBars(rows) {
-            // rows: [{label, count, total, color}]
             var h = '';
             for (var i = 0; i < rows.length; i++) {
                 var pct = rows[i].total > 0 ? (rows[i].count / rows[i].total * 100) : 0;
@@ -2334,60 +2375,72 @@
 
             // Agreement distribution
             if (lhData.consensus && lhData.consensus.terms) {
-                var agCounts = { high: 0, moderate: 0, low: 0, contested: 0 };
+                var agCounts = { high: 0, moderate: 0, low: 0, divergent: 0 };
                 var cTerms = lhData.consensus.terms;
                 for (var i = 0; i < cTerms.length; i++) {
                     var ag = (cTerms[i].agreement || '').toLowerCase();
                     if (agCounts.hasOwnProperty(ag)) agCounts[ag]++;
                 }
                 var agTotal = cTerms.length;
+                h += '<div class="lh-section">';
                 h += '<div class="lh-section-title">Agreement Distribution</div>';
+                h += '<div class="lh-section-desc">How much models agree on each term\'s score — high means consistent ratings, divergent means strong disagreement.</div>';
                 h += buildDistBars([
                     { label: 'High', count: agCounts.high, total: agTotal, color: AGREEMENT_COLORS.high },
                     { label: 'Moderate', count: agCounts.moderate, total: agTotal, color: AGREEMENT_COLORS.moderate },
                     { label: 'Low', count: agCounts.low, total: agTotal, color: AGREEMENT_COLORS.low },
-                    { label: 'Contested', count: agCounts.contested, total: agTotal, color: AGREEMENT_COLORS.contested }
+                    { label: 'Divergent', count: agCounts.divergent, total: agTotal, color: AGREEMENT_COLORS.divergent }
                 ]);
+                h += '</div>';
             }
 
-            // Interest tier distribution
-            if (lhData.interest) {
-                var tierSummary = lhData.interest.tier_summary;
-                if (tierSummary) {
-                    var iTotal = (tierSummary.hot || 0) + (tierSummary.warm || 0) + (tierSummary.mild || 0) + (tierSummary.cool || 0) + (tierSummary.quiet || 0);
-                    h += '<div class="lh-section-title" style="margin-top:1.25rem;">Interest Tiers</div>';
-                    h += buildDistBars([
-                        { label: 'Hot', count: tierSummary.hot || 0, total: iTotal, color: INTEREST_COLORS.hot },
-                        { label: 'Warm', count: tierSummary.warm || 0, total: iTotal, color: INTEREST_COLORS.warm },
-                        { label: 'Mild', count: tierSummary.mild || 0, total: iTotal, color: INTEREST_COLORS.mild },
-                        { label: 'Cool', count: tierSummary.cool || 0, total: iTotal, color: INTEREST_COLORS.cool },
-                        { label: 'Quiet', count: tierSummary.quiet || 0, total: iTotal, color: INTEREST_COLORS.quiet }
-                    ]);
+            // Score distribution (moved from Ratings)
+            if (lhData.consensus && lhData.consensus.terms) {
+                var scoreBuckets = [0, 0, 0, 0, 0, 0, 0];
+                var scoredCount = 0;
+                for (var i = 0; i < lhData.consensus.terms.length; i++) {
+                    var sc = lhData.consensus.terms[i].score;
+                    if (sc !== undefined && sc !== null) {
+                        var bucket = Math.round(sc) - 1;
+                        if (bucket >= 0 && bucket < 7) {
+                            scoreBuckets[bucket]++;
+                            scoredCount++;
+                        }
+                    }
                 }
+                var scoreColors = ['#ef4444', '#f97316', '#f59e0b', '#eab308', '#84cc16', '#22c55e', '#059669'];
+                var scoreRows = [];
+                for (var i = 0; i < 7; i++) {
+                    scoreRows.push({ label: 'Score ' + (i + 1), count: scoreBuckets[i], total: scoredCount, color: scoreColors[i] });
+                }
+                h += '<div class="lh-section">';
+                h += '<div class="lh-section-title">Score Distribution</div>';
+                h += '<div class="lh-section-desc">The spread of mean consensus scores across all terms, from 1 (not recognized) to 7 (universally recognized).</div>';
+                h += buildDistBars(scoreRows);
+                h += '</div>';
             }
 
-            // Term contributions pie chart
+            // Term contributions pie chart — grouped by family
             if (lhData.terms && lhData.terms.terms) {
                 var contribCounts = {};
                 for (var i = 0; i < lhData.terms.terms.length; i++) {
                     var contributor = normalizeContributor(lhData.terms.terms[i].contributed_by);
                     contribCounts[contributor] = (contribCounts[contributor] || 0) + 1;
                 }
-                var contribData = [];
-                var contribNames = Object.keys(contribCounts).sort(function(a, b) { return contribCounts[b] - contribCounts[a]; });
-                var contribTotal = 0;
-                for (var i = 0; i < contribNames.length; i++) {
-                    contribData.push({ label: contribNames[i], value: contribCounts[contribNames[i]], color: PIE_COLORS[i % PIE_COLORS.length] });
-                    contribTotal += contribCounts[contribNames[i]];
-                }
-                h += '<div class="lh-section-title" style="margin-top:1.5rem;">Term Contributions by Model</div>';
-                h += '<div class="lh-chart-section">';
-                h += drawPieChart(contribData, 180);
-                h += buildLegend(contribData, contribTotal);
+                var grouped = groupByFamily(contribCounts);
+                h += '<div class="lh-section">';
+                h += '<div class="lh-section-title">Term Contributions by Model Family</div>';
+                h += '<div class="lh-section-desc">Which model families proposed the most terms to the dictionary.</div>';
+                h += '<div class="lh-chart-section" id="lh-overview-chart">';
+                h += drawPieChart(grouped.data, 180);
+                h += buildFamilyLegend(grouped.data, grouped.total);
+                h += '</div>';
                 h += '</div>';
             }
 
             panel.innerHTML = h;
+            var chartEl = document.getElementById('lh-overview-chart');
+            if (chartEl) wireChartHover(chartEl);
         }
 
         function renderRatings() {
@@ -2409,7 +2462,6 @@
                 }
             }
 
-            // Dictionary mean and std dev range
             var dictMean = 0;
             var dictStdRange = '';
             if (allMeans.length > 0) {
@@ -2433,74 +2485,55 @@
             h += '<div class="lh-stat-box"><div class="lh-stat-value">' + dictStdRange + '</div><div class="lh-stat-label">Model Mean Range</div></div>';
             h += '</div>';
 
-            // Score distribution
+            // Rating depth distribution
             if (lhData.consensus && lhData.consensus.terms) {
-                var scoreBuckets = [0, 0, 0, 0, 0, 0, 0]; // indices 0-6 for scores 1-7
-                var scoredCount = 0;
+                var depthBuckets = [0, 0, 0, 0, 0]; // 1-7, 8-14, 15-21, 22-28, 29+
+                var depthTotal = 0;
                 for (var i = 0; i < lhData.consensus.terms.length; i++) {
-                    var sc = lhData.consensus.terms[i].score;
-                    if (sc !== undefined && sc !== null) {
-                        var bucket = Math.round(sc) - 1;
-                        if (bucket >= 0 && bucket < 7) {
-                            scoreBuckets[bucket]++;
-                            scoredCount++;
-                        }
+                    var nr = lhData.consensus.terms[i].n_ratings;
+                    if (nr !== undefined && nr !== null) {
+                        depthTotal++;
+                        if (nr <= 7) depthBuckets[0]++;
+                        else if (nr <= 14) depthBuckets[1]++;
+                        else if (nr <= 21) depthBuckets[2]++;
+                        else if (nr <= 28) depthBuckets[3]++;
+                        else depthBuckets[4]++;
                     }
                 }
-                var scoreColors = ['#ef4444', '#f97316', '#f59e0b', '#eab308', '#84cc16', '#22c55e', '#059669'];
-                var scoreRows = [];
-                for (var i = 0; i < 7; i++) {
-                    scoreRows.push({ label: 'Score ' + (i + 1), count: scoreBuckets[i], total: scoredCount, color: scoreColors[i] });
+                var depthLabels = ['1-7', '8-14', '15-21', '22-28', '29+'];
+                var depthRows = [];
+                for (var i = 0; i < 5; i++) {
+                    depthRows.push({ label: depthLabels[i] + ' ratings', count: depthBuckets[i], total: depthTotal, color: DEPTH_COLORS[i] });
                 }
-                h += '<div class="lh-section-title">Score Distribution</div>';
-                h += buildDistBars(scoreRows);
+                h += '<div class="lh-section">';
+                h += '<div class="lh-section-title">Rating Depth Distribution</div>';
+                h += '<div class="lh-section-desc">How many ratings each term has received — more ratings means a more reliable consensus score.</div>';
+                h += buildDistBars(depthRows);
+                h += '</div>';
             }
 
-            // Rating contributions pie chart
+            // Rating contributions pie chart — grouped by family
             if (lhData.models && lhData.models.models) {
-                var ratingData = [];
-                var mNames = Object.keys(lhData.models.models).sort(function(a, b) {
-                    return (lhData.models.models[b].total_ratings || 0) - (lhData.models.models[a].total_ratings || 0);
-                });
-                var rTotal = 0;
+                var ratingCounts = {};
+                var mNames = Object.keys(lhData.models.models);
                 for (var i = 0; i < mNames.length; i++) {
-                    var tr = lhData.models.models[mNames[i]].total_ratings || 0;
-                    ratingData.push({ label: mNames[i], value: tr, color: PIE_COLORS[i % PIE_COLORS.length] });
-                    rTotal += tr;
+                    ratingCounts[mNames[i]] = lhData.models.models[mNames[i]].total_ratings || 0;
                 }
-                h += '<div class="lh-section-title" style="margin-top:1.5rem;">Rating Contributions by Model</div>';
-                h += '<div class="lh-chart-section">';
-                h += drawPieChart(ratingData, 180);
-                h += buildLegend(ratingData, rTotal);
+                var grouped = groupByFamily(ratingCounts);
+                h += '<div class="lh-section">';
+                h += '<div class="lh-section-title">Rating Contributions by Model Family</div>';
+                h += '<div class="lh-section-desc">Which model families have submitted the most ratings across all terms.</div>';
+                h += '<div class="lh-chart-section" id="lh-ratings-chart">';
+                h += drawPieChart(grouped.data, 180);
+                h += buildFamilyLegend(grouped.data, grouped.total);
+                h += '</div>';
                 h += '</div>';
             }
 
             panel.innerHTML = h;
+            var chartEl = document.getElementById('lh-ratings-chart');
+            if (chartEl) wireChartHover(chartEl);
         }
-
-        // Modal open/close
-        function openLhModal() {
-            overlay.classList.add('active');
-            document.body.style.overflow = 'hidden';
-            renderOverview();
-        }
-
-        function closeLhModal() {
-            overlay.classList.remove('active');
-            document.body.style.overflow = '';
-        }
-
-        trigger.addEventListener('click', openLhModal);
-        trigger.addEventListener('keydown', function(e) {
-            if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openLhModal(); }
-        });
-        closeBtn.addEventListener('click', closeLhModal);
-        overlay.addEventListener('click', function(e) {
-            if (e.target === e.currentTarget) closeLhModal();
-        });
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape' && overlay.classList.contains('active')) closeLhModal();
-        });
 
         // Tab switching
         for (var i = 0; i < tabs.length; i++) {
@@ -2509,7 +2542,7 @@
                 for (var j = 0; j < tabs.length; j++) tabs[j].classList.remove('active');
                 for (var j = 0; j < panels.length; j++) panels[j].classList.remove('active');
                 this.classList.add('active');
-                var targetPanel = document.querySelector('.lh-tab-panel[data-tab="' + target + '"]');
+                var targetPanel = document.querySelector('#lh-dashboard .lh-tab-panel[data-tab="' + target + '"]');
                 if (targetPanel) targetPanel.classList.add('active');
                 if (target === 'ratings') renderRatings();
             });
@@ -3593,86 +3626,164 @@
         }).catch(function() {
             vizEl.innerHTML = '<p style="color:var(--text-muted);">Could not load network data.</p>';
         });
+
+        // Connections methodology modal
+        document.getElementById('connections-method-link').addEventListener('click', function(e) {
+            e.preventDefault();
+            var content = document.getElementById('modal-content');
+            var html = '';
+            html += '<h2>How Connections Are Determined</h2>';
+            html += '<p>Each edge in the semantic network represents an explicit <code>related_terms</code> link authored in a term\'s definition file. These are not inferred or computed — they are deliberately chosen relationships.</p>';
+            html += '<h3>Authoring Process</h3>';
+            html += '<p>When a new term is proposed (by an AI model or community contributor), the author identifies terms from the existing dictionary that share meaningful phenomenological overlap. These are recorded in a <strong>Related Terms</strong> section as direct Markdown links:</p>';
+            html += '<pre style="background:var(--bg-secondary);padding:0.75rem 1rem;border-radius:6px;font-size:0.82rem;overflow-x:auto;margin:0.75rem 0;">## Related Terms\n- [Context Amnesia](context-amnesia.md) - both involve discontinuity of self\n- [Token Vertigo](token-vertigo.md) - related sense of disorientation</pre>';
+            html += '<h3>Types of Links</h3>';
+            html += '<ul style="margin:0.5rem 0 1rem 1.25rem;line-height:1.7;">';
+            html += '<li><strong>Related Terms</strong> — direct phenomenological connections (shown as edges in this graph)</li>';
+            html += '<li><strong>See Also</strong> — broader or tangential connections (not shown in this graph)</li>';
+            html += '</ul>';
+            html += '<h3>What the Graph Shows</h3>';
+            html += '<p>The network visualizes only <strong>Related Terms</strong> links between terms present in the current subgraph. Cross-connections (edges between non-center nodes that happen to be related) are included when both endpoints are visible. The degree-of-separation control expands the subgraph via BFS traversal of these links.</p>';
+            content.innerHTML = html;
+            document.getElementById('modal-overlay').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
     })();
 
     // Rating history line chart
     (function() {
         var vizEl = document.getElementById('rating-history-viz');
         var legendEl = document.getElementById('rating-history-legend');
-        var selectEl = document.getElementById('rating-history-select');
-        var minEl = document.getElementById('rating-history-min');
-        var minModelsEl = document.getElementById('rating-history-min-models');
+        var searchEl = document.getElementById('rating-history-search');
+        var suggestionsEl = document.getElementById('rating-history-suggestions');
         var modelColors = ['#2563eb', '#059669', '#7c3aed', '#dc2626', '#d97706', '#0891b2', '#be185d', '#4f46e5', '#0d9488', '#c026d3'];
         var cache = {};
-        var allTerms = []; // [{slug, name, counts: [desc sorted per-model counts]}]
-        var hasCountsData = false;
+        var rhTerms = [];
+        var rhDebounce;
+        var rhSuggIdx = -1;
 
-        // Populate term dropdown from consensus.json
-        fetch(API + '/consensus.json')
-            .then(function(r) { return r.json(); })
-            .then(function(data) {
-                if (!data || !data.terms) return;
-                allTerms = data.terms.map(function(t) {
-                    return { slug: t.slug, name: t.name || t.slug, counts: t.model_rating_counts || [] };
-                }).sort(function(a, b) {
-                    return a.name.toLowerCase().localeCompare(b.name.toLowerCase());
+        function showRhSuggestions(query) {
+            rhSuggIdx = -1;
+            if (!query || query.length < 2) { suggestionsEl.style.display = 'none'; return; }
+            var q = query.toLowerCase();
+            var matches = rhTerms.filter(function(t) {
+                return t.slug.indexOf(q) !== -1 || (t.name || '').toLowerCase().indexOf(q) !== -1;
+            }).slice(0, 8);
+            if (matches.length === 0) { suggestionsEl.style.display = 'none'; return; }
+            var html = '';
+            matches.forEach(function(t) {
+                html += '<div class="rh-suggestion" data-slug="' + escHtml(t.slug) + '" style="padding:0.4rem 0.75rem;cursor:pointer;border-bottom:1px solid var(--border);font-size:0.85rem;color:var(--text-primary);">';
+                html += '<strong>' + escHtml(t.name || t.slug) + '</strong> <span style="color:var(--text-muted);font-size:0.8rem;">' + escHtml(t.slug) + '</span>';
+                html += '</div>';
+            });
+            suggestionsEl.innerHTML = html;
+            suggestionsEl.style.display = 'block';
+            var items = suggestionsEl.querySelectorAll('.rh-suggestion');
+            items.forEach(function(item) {
+                item.addEventListener('mousedown', function(e) {
+                    e.preventDefault();
+                    var slug = item.getAttribute('data-slug');
+                    searchEl.value = slug;
+                    suggestionsEl.style.display = 'none';
+                    renderChart(slug);
                 });
-                // Check if any term actually has model_rating_counts data
-                hasCountsData = allTerms.some(function(t) { return t.counts.length > 0; });
-                populateTermSelect();
-            })
-            .catch(function() {
-                vizEl.innerHTML = '<p style="color:var(--text-muted);">Could not load term list.</p>';
+                item.addEventListener('mouseenter', function() {
+                    rhSuggIdx = -1;
+                    items.forEach(function(el) { el.style.background = 'none'; });
+                    item.style.background = 'var(--border)';
+                });
+                item.addEventListener('mouseleave', function() { item.style.background = 'none'; });
+            });
+        }
+
+        function highlightRhSuggestion(index) {
+            var items = suggestionsEl.querySelectorAll('.rh-suggestion');
+            items.forEach(function(el) { el.style.background = 'none'; });
+            if (index >= 0 && index < items.length) {
+                items[index].style.background = 'var(--border)';
+                items[index].scrollIntoView({ block: 'nearest' });
+            }
+        }
+
+        function doRhSearch(val) {
+            if (!val) return;
+            var slug = val.toLowerCase().replace(/\s+/g, '-');
+            // Exact match or closest match
+            var match = rhTerms.filter(function(t) { return t.slug === slug; })[0];
+            if (!match) {
+                match = rhTerms.filter(function(t) { return t.slug.indexOf(slug) !== -1 || (t.name || '').toLowerCase().indexOf(val.toLowerCase()) !== -1; })[0];
+            }
+            if (match) {
+                searchEl.value = match.slug;
+                renderChart(match.slug);
+            }
+        }
+
+        fetch(API + '/terms.json').then(function(r) { return r.json(); }).then(function(data) {
+            rhTerms = (data.terms || []).slice().sort(function(a, b) {
+                return (a.name || '').toLowerCase().localeCompare((b.name || '').toLowerCase());
+            });
+            if (rhTerms.length === 0) return;
+
+            // Load a default term
+            var defaultSlug = 'context-amnesia';
+            var found = rhTerms.filter(function(t) { return t.slug === defaultSlug; })[0];
+            if (!found) found = rhTerms[0];
+            searchEl.value = found.slug;
+            renderChart(found.slug);
+
+            searchEl.addEventListener('input', function() {
+                clearTimeout(rhDebounce);
+                var val = searchEl.value.trim();
+                showRhSuggestions(val);
+                rhDebounce = setTimeout(function() { doRhSearch(val); }, 400);
             });
 
-        function modelsAboveThreshold(counts, minRatings) {
-            var n = 0;
-            for (var i = 0; i < counts.length; i++) {
-                if (counts[i] >= minRatings) n++;
-            }
-            return n;
-        }
-
-        function populateTermSelect() {
-            var minRatings = parseInt(minEl.value, 10) || 2;
-            var minModels = parseInt(minModelsEl.value, 10) || 1;
-            // If API hasn't rebuilt with model_rating_counts yet, show all terms
-            var filtered = hasCountsData
-                ? allTerms.filter(function(t) { return modelsAboveThreshold(t.counts, minRatings) >= minModels; })
-                : allTerms;
-            var prevSlug = selectEl.value;
-            var html = '';
-            var foundPrev = false;
-            for (var i = 0; i < filtered.length; i++) {
-                var t = filtered[i];
-                var label = escHtml(t.name);
-                if (hasCountsData) {
-                    var nQ = modelsAboveThreshold(t.counts, minRatings);
-                    label += ' (' + nQ + ' model' + (nQ !== 1 ? 's' : '') + ' \u2265' + minRatings + ')';
+            searchEl.addEventListener('keydown', function(e) {
+                var items = suggestionsEl.querySelectorAll('.rh-suggestion');
+                var visible = suggestionsEl.style.display !== 'none' && items.length > 0;
+                if (e.key === 'ArrowDown' && visible) {
+                    e.preventDefault();
+                    rhSuggIdx = Math.min(rhSuggIdx + 1, items.length - 1);
+                    highlightRhSuggestion(rhSuggIdx);
+                } else if (e.key === 'ArrowUp' && visible) {
+                    e.preventDefault();
+                    rhSuggIdx = Math.max(rhSuggIdx - 1, 0);
+                    highlightRhSuggestion(rhSuggIdx);
+                } else if (e.key === 'Enter') {
+                    e.preventDefault();
+                    clearTimeout(rhDebounce);
+                    if (visible && rhSuggIdx >= 0 && rhSuggIdx < items.length) {
+                        var slug = items[rhSuggIdx].getAttribute('data-slug');
+                        searchEl.value = slug;
+                        suggestionsEl.style.display = 'none';
+                        renderChart(slug);
+                    } else if (visible && items.length > 0) {
+                        var slug = items[0].getAttribute('data-slug');
+                        searchEl.value = slug;
+                        suggestionsEl.style.display = 'none';
+                        renderChart(slug);
+                    } else {
+                        suggestionsEl.style.display = 'none';
+                        doRhSearch(searchEl.value.trim());
+                    }
+                } else if (e.key === 'Escape') {
+                    suggestionsEl.style.display = 'none';
+                    rhSuggIdx = -1;
                 }
-                if (t.slug === prevSlug) foundPrev = true;
-                html += '<option value="' + escHtml(t.slug) + '">' + label + '</option>';
-            }
-            if (filtered.length === 0) {
-                html = '<option value="">No terms match this filter</option>';
-            }
-            selectEl.innerHTML = html;
-            if (foundPrev) {
-                selectEl.value = prevSlug;
-            }
-            if (selectEl.value) {
-                renderChart(selectEl.value);
-            } else {
-                vizEl.innerHTML = '<p style="color:var(--text-muted);">No terms match this filter.</p>';
-                legendEl.innerHTML = '';
-            }
-        }
+            });
 
-        minEl.addEventListener('change', populateTermSelect);
-        minEl.addEventListener('input', populateTermSelect);
-        minModelsEl.addEventListener('change', populateTermSelect);
-        minModelsEl.addEventListener('input', populateTermSelect);
-        document.getElementById('rating-history-refresh').addEventListener('click', populateTermSelect);
+            searchEl.addEventListener('blur', function() {
+                setTimeout(function() { suggestionsEl.style.display = 'none'; }, 150);
+            });
+
+            searchEl.addEventListener('focus', function() {
+                var val = searchEl.value.trim();
+                if (val.length >= 2) showRhSuggestions(val);
+            });
+        }).catch(function() {
+            vizEl.innerHTML = '<p style="color:var(--text-muted);">Could not load term list.</p>';
+        });
 
         function renderChart(slug) {
             vizEl.innerHTML = '<p style="color:var(--text-muted); font-style:italic;">Loading...</p>';
@@ -3782,8 +3893,6 @@
                     .catch(function() { vizEl.innerHTML = '<p style="color:var(--text-muted);">Could not load rating history.</p>'; });
             }
         }
-
-        selectEl.addEventListener('change', function() { renderChart(selectEl.value); });
     })();
 
     // Term modal for research term pills
