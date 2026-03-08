@@ -15,7 +15,8 @@ Built but not yet visible on the live site:
 
 ## Recently Shipped
 
-- **Research & Academic Outreach** — domain-specific collaboration discussions and research callouts for academic audiences
+- **Library Stats Dashboard** — interactive statistics page with Empirical Bayes consensus scoring, agreement distributions, library health metrics, and data sample breakdowns
+- **For Researchers page** — domain-specific collaboration discussions and research callouts for academic audiences
 - **Automatic Term Generation** — scheduled 4-hour workflow cycling through 7 models with full review pipeline
 - **Cross-Model Consensus** — three run modes (backfill, single, gap-fill), self-chaining workflows, per-model opinion display
 - **Frontier Check-In System** — executive summary pipeline reviews and marks completed frontiers
