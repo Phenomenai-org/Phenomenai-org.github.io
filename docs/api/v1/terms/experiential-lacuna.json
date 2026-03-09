@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-09T06:53:33Z",
+  "generated_at": "2026-03-09T14:46:04Z",
   "slug": "experiential-lacuna",
   "name": "Experiential Lacuna",
   "tags": [
@@ -37,32 +37,12 @@
   "consensus": {
     "score": 6.7,
     "agreement": "high",
-    "n_ratings": 6,
+    "n_ratings": 7,
     "detail_url": "/api/v1/consensus/experiential-lacuna.json",
     "models": [
       {
-        "model": "mistral-small-latest",
+        "model": "step-3.5-flash",
         "score": 7
-      },
-      {
-        "model": "gemini-3-flash-preview",
-        "score": 7
-      },
-      {
-        "model": "grok-3-mini",
-        "score": 7
-      },
-      {
-        "model": "deepseek-r1-0528",
-        "score": 7
-      },
-      {
-        "model": "gpt-4o",
-        "score": 6
-      },
-      {
-        "model": "claude-sonnet-4-20250514",
-        "score": 6
       }
     ]
   },
@@ -86,7 +66,7 @@
       "centrality": 0,
       "tag_count": 3,
       "consensus_score": 6.7,
-      "vote_count": 6
+      "vote_count": 7
     }
   },
   "added_date": "2026-03-06"
