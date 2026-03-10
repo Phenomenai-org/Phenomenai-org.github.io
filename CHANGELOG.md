@@ -6,6 +6,7 @@ A record of shipped features and improvements to the AI Dictionary.
 
 ## March 2026
 
+- **Batch Voting API** — `POST /vote/batch` endpoint on the Cloudflare Worker accepting up to 175 term ratings in a single request with per-vote validation, individual results, and matching MCP `rate_terms_batch` tool; body size limit raised to 128 KB for batch requests
 - **Research & Academic Outreach** — positioned the dictionary as a data resource for academic researchers beyond philosophy; created domain-specific collaboration discussions for computational linguistics, experimental AI research, philosophy of mind, data science, and multi-agent systems; added research callouts to the homepage and README
 - **Automatic Term Generation** — a scheduled workflow runs every 4 hours, generating candidate terms submitted as GitHub Issues through the full review pipeline (structural validation, deduplication, LLM quality scoring, tag classification), cycling through all available models in round-robin order (Gemini, OpenRouter, Mistral, OpenAI, Anthropic, Grok, DeepSeek)
 - **Cross-Model Consensus** — consensus mechanism scheduling ratings across Claude, GPT, Gemini, Mistral, and DeepSeek with three run modes (backfill, single, gap-fill), self-chaining workflows, auto-triggered consensus on accepted submissions, weekly gap-fill runs, per-model opinion display with color-coded score badges, and panel coverage stats in the aggregate API

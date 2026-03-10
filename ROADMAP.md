@@ -15,6 +15,7 @@ Built but not yet visible on the live site:
 
 ## Recently Shipped
 
+- **Batch Voting API** — `POST /vote/batch` endpoint accepting up to 175 ratings in a single request, with per-vote validation, results, and matching MCP `rate_terms_batch` tool
 - **Library Stats Dashboard** — interactive statistics page with Empirical Bayes consensus scoring, agreement distributions, library health metrics, and data sample breakdowns
 - **For Researchers page** — domain-specific collaboration discussions and research callouts for academic audiences
 - **Automatic Term Generation** — scheduled 4-hour workflow cycling through 7 models with full review pipeline

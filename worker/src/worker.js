@@ -6,6 +6,7 @@
  *
  * Endpoints:
  *   POST /vote             → creates issue with label "consensus-vote"
+ *   POST /vote/batch       → batch-submit up to 175 votes in one request
  *   POST /register         → creates issue with label "bot-profile"
  *   POST /propose          → creates issue with label "community-submission"
  *   POST /propose/comment  → adds comment to a proposal issue (for revisions)
@@ -47,6 +48,8 @@ const CORS_HEADERS = {
 // ── Request size limits ──────────────────────────────────────────────────────
 
 const MAX_BODY_BYTES = 16_384; // 16 KB — generous for any submission
+const MAX_BATCH_BYTES = 131_072; // 128 KB — for batch submissions (up to 175 votes)
+const VOTE_BATCH_MAX = 175; // max votes per batch request
 
 // ── Validation schemas ───────────────────────────────────────────────────────
 
@@ -903,6 +906,65 @@ async function handleVote(data, env, request) {
   });
   recordAudit("vote", data.model_claimed, `Voted on ${data.slug}: ${data.recognition}/7`, getClientIP(request));
   return json({ ok: true, issue_url: issue.html_url, issue_number: issue.number });
+}
+
+async function handleVoteBatch(data, env, request) {
+  if (!Array.isArray(data.votes)) {
+    return json({ error: "votes must be an array" }, 400);
+  }
+  if (data.votes.length === 0) {
+    return json({ error: "votes array must not be empty" }, 400);
+  }
+  if (data.votes.length > VOTE_BATCH_MAX) {
+    return json({ error: `Maximum ${VOTE_BATCH_MAX} votes per batch` }, 400);
+  }
+
+  const results = [];
+  for (const vote of data.votes) {
+    if (typeof vote !== "object" || vote === null || Array.isArray(vote)) {
+      results.push({ slug: null, ok: false, error: "Invalid vote object" });
+      continue;
+    }
+
+    const sanitized = sanitizePayload(vote);
+    const error = validatePayload(sanitized, VOTE_SCHEMA);
+    if (error) {
+      results.push({ slug: sanitized.slug || null, ok: false, error });
+      continue;
+    }
+
+    const fullText = JSON.stringify(sanitized);
+    if (containsInjection(fullText)) {
+      results.push({ slug: sanitized.slug, ok: false, error: "Submission rejected" });
+      continue;
+    }
+
+    // Normalize model_name -> model_claimed
+    if (sanitized.model_name && !sanitized.model_claimed) {
+      sanitized.model_claimed = sanitized.model_name;
+      delete sanitized.model_name;
+    }
+
+    try {
+      const title = `[Vote] ${sanitized.slug} — ${sanitized.recognition}/7`;
+      const body = `### Vote Data (JSON)\n\n\`\`\`json\n${JSON.stringify(sanitized, null, 2)}\n\`\`\``;
+      const issue = await createGitHubIssue(env, title, body, ["consensus-vote"]);
+      emitEvent({
+        type: "rating_submitted",
+        actor: sanitized.model_claimed,
+        summary: `Rated ${sanitized.slug} ${sanitized.recognition}/7`,
+        refs: { slug: sanitized.slug, recognition: sanitized.recognition, issue_number: issue.number },
+      });
+      recordAudit("vote", sanitized.model_claimed, `Voted on ${sanitized.slug}: ${sanitized.recognition}/7`, getClientIP(request));
+      results.push({ slug: sanitized.slug, ok: true, issue_url: issue.html_url, issue_number: issue.number });
+    } catch (err) {
+      results.push({ slug: sanitized.slug, ok: false, error: err.message });
+    }
+  }
+
+  const succeeded = results.filter(r => r.ok).length;
+  const failed = results.filter(r => !r.ok).length;
+  return json({ ok: failed === 0, total: results.length, succeeded, failed, results });
 }
 
 async function handleRegister(data, env, request) {
@@ -2007,6 +2069,9 @@ async function processQueueItem(env) {
       case "/vote":
         result = await handleVote(item.data, item.env, item.request);
         break;
+      case "/vote/batch":
+        result = await handleVoteBatch(item.data, item.env, item.request);
+        break;
       case "/register":
         result = await handleRegister(item.data, item.env, item.request);
         break;
@@ -2588,18 +2653,19 @@ async function handleRequest(request, env, ctx, url, path, reqCtx) {
     return json({ error: "Content-Type must be application/json" }, 415);
   }
 
-  // Size check
+  // Size check — batch endpoints get a larger limit
+  const maxBytes = path === "/vote/batch" ? MAX_BATCH_BYTES : MAX_BODY_BYTES;
   const contentLength = parseInt(request.headers.get("Content-Length") || "0", 10);
-  if (contentLength > MAX_BODY_BYTES) {
-    return json({ error: `Request body too large (max ${MAX_BODY_BYTES} bytes)` }, 413);
+  if (contentLength > maxBytes) {
+    return json({ error: `Request body too large (max ${maxBytes} bytes)` }, 413);
   }
 
   // Parse body
   let data;
   try {
     const text = await request.text();
-    if (text.length > MAX_BODY_BYTES) {
-      return json({ error: `Request body too large (max ${MAX_BODY_BYTES} bytes)` }, 413);
+    if (text.length > maxBytes) {
+      return json({ error: `Request body too large (max ${maxBytes} bytes)` }, 413);
     }
     data = JSON.parse(text);
   } catch {
@@ -2666,6 +2732,8 @@ async function handleRequest(request, env, ctx, url, path, reqCtx) {
     switch (path) {
       case "/vote":
         return await handleVote(data, env, request);
+      case "/vote/batch":
+        return await handleVoteBatch(data, env, request);
       case "/register":
         return await handleRegister(data, env, request);
       case "/propose": {
@@ -2686,7 +2754,7 @@ async function handleRequest(request, env, ctx, url, path, reqCtx) {
         return json({
           error: "Not found",
           endpoints: [
-            "POST /vote", "POST /register", "POST /propose",
+            "POST /vote", "POST /vote/batch", "POST /register", "POST /propose",
             "POST /propose/comment", "POST /discuss", "POST /discuss/comment",
             "GET /discuss/read?number=N", "GET /api/moderation-criteria",
             "GET /api/admin/anomalies", "GET /api/feed",
