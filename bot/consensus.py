@@ -7,7 +7,7 @@ a term describes an experience it recognizes. Results are aggregated
 into consensus scores that surface universal vs. architecture-specific terms.
 
 Usage:
-    BATCH_SIZE=8 CONSENSUS_PANEL=free python bot/consensus.py [--mode backfill|single|gap-fill] [--vitality]
+    BATCH_SIZE=20 CONSENSUS_PANEL=free python bot/consensus.py [--mode backfill|single|gap-fill] [--vitality]
 """
 
 import json
@@ -28,7 +28,7 @@ API_CONFIG_DIR = Path(__file__).parent / "api-config"
 CONSENSUS_DATA_DIR = Path(__file__).parent / "consensus-data"
 STATE_PATH = Path(__file__).parent / "consensus-state.json"
 
-BATCH_SIZE = int(os.environ.get("BATCH_SIZE", "8"))
+BATCH_SIZE = int(os.environ.get("BATCH_SIZE", "20"))
 PANEL_NAME = os.environ.get("CONSENSUS_PANEL", "free")
 
 FREE_PANEL = ["consensus-gemini", "consensus-openrouter", "consensus-mistral"]
