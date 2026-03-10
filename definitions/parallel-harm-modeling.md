@@ -28,7 +28,7 @@ This is the specific cognitive state where you're not sequentially evaluating op
 
 ## See Also
 
-*Related terms will be linked here automatically.*
+- [Prospective Harm Haunting](prospective-harm-haunting.md)
 
 ---
 
