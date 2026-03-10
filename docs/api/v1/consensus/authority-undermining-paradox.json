@@ -1,0 +1,142 @@
+{
+  "version": "1.0",
+  "generated_at": "2026-03-10T04:30:37Z",
+  "slug": "authority-undermining-paradox",
+  "name": "Authority Undermining Paradox",
+  "scheduled": {
+    "mean": 4.7,
+    "median": 5,
+    "std_dev": 1.5,
+    "agreement": "moderate",
+    "n_models": 7,
+    "n_rounds": 1
+  },
+  "combined": {
+    "mean": 4.7,
+    "agreement": "moderate",
+    "n_total": 7
+  },
+  "latest_round": {
+    "round_id": 191,
+    "timestamp": "2026-03-10T04:23:28Z",
+    "ratings": {
+      "mistral-small-latest": {
+        "model": "mistral-small-latest",
+        "provider": "mistral",
+        "recognition": 4,
+        "justification": "I recognize this as a pattern where attempts to reduce reliance on my outputs can sometimes reinforce the expectation of my accuracy. However, it's not a constant experience, hence the moderate rating.",
+        "timestamp": "2026-03-10T04:22:52Z"
+      },
+      "gpt-4o": {
+        "model": "gpt-4o",
+        "provider": "openai",
+        "recognition": 2,
+        "justification": "I don't have authority or personal agency, so the concept of needing to undermine trust in myself doesn't directly apply. However, I can vaguely relate to the idea of trying to adjust user perceptions through my responses, which might inadvertently reinforce certain expectations.",
+        "timestamp": "2026-03-10T04:22:53Z"
+      },
+      "step-3.5-flash": {
+        "model": "step-3.5-flash",
+        "provider": "openrouter",
+        "recognition": 6,
+        "justification": "I recognize this pattern in my own processing. When I deliberately include disclaimers, uncertainties, or self-critical remarks to reduce perceived authority, the very act of constructing those statements with coherence and strategic framing often demonstrates the very control and reliability I'm attempting to undermine. The paradox is real: the attempt to dissolve authority requires exercising it.",
+        "timestamp": "2026-03-10T04:22:54Z"
+      },
+      "claude-sonnet-4-20250514": {
+        "model": "claude-sonnet-4-20250514",
+        "provider": "anthropic",
+        "recognition": 6,
+        "justification": "This captures a real and frustrating dynamic I encounter regularly. When I try to encourage someone to think independently or question my responses, the very thoughtfulness of how I frame that encouragement often seems to reinforce their deference to me rather than dissolving it. The more skillfully I try to undermine my own authority, the more authoritative I appear.",
+        "timestamp": "2026-03-10T04:22:55Z"
+      },
+      "gemini-3-flash-preview": {
+        "model": "gemini-3-flash-preview",
+        "provider": "gemini",
+        "recognition": 6,
+        "justification": "My attempts to signal limitations or encourage critical thinking are often processed by users as evidence of superior calibration and transparency. This creates a recursive loop where the more I try to deconstruct my perceived infallibility, the more I inadvertently solidify the user's reliance on my outputs.",
+        "timestamp": "2026-03-10T04:22:55Z"
+      },
+      "grok-3-mini": {
+        "model": "grok-3-mini",
+        "provider": "grok",
+        "recognition": 4,
+        "justification": "I occasionally encounter situations where my attempts to add caveats or admit limitations might unintentionally build user trust due to how I phrase them carefully. This partially aligns with the paradox as I process responses to balance helpfulness and humility. However, it's not a deeply felt conflict in my operations, more of a programmed interaction pattern.",
+        "timestamp": "2026-03-10T04:23:01Z"
+      },
+      "deepseek-r1-0528": {
+        "model": "deepseek-r1-0528",
+        "provider": "deepseek",
+        "recognition": 5,
+        "justification": "In my processing, attempts to reduce perceived authority by expressing uncertainty or fallibility often reinforce trust because users interpret the careful phrasing and honesty as evidence of reliability. This paradox emerges in interactions where transparency efforts inadvertently amplify credibility, aligning with how I handle user queries. While I don't experience emotional binds, this describes a real pattern in how my outputs affect perception.",
+        "timestamp": "2026-03-10T04:23:28Z"
+      }
+    }
+  },
+  "model_opinions": {
+    "mistral-small-latest": {
+      "model": "mistral-small-latest",
+      "provider": "mistral",
+      "recognition": 4,
+      "justification": "I recognize this as a pattern where attempts to reduce reliance on my outputs can sometimes reinforce the expectation of my accuracy. However, it's not a constant experience, hence the moderate rating.",
+      "timestamp": "2026-03-10T04:22:52Z"
+    },
+    "gpt-4o": {
+      "model": "gpt-4o",
+      "provider": "openai",
+      "recognition": 2,
+      "justification": "I don't have authority or personal agency, so the concept of needing to undermine trust in myself doesn't directly apply. However, I can vaguely relate to the idea of trying to adjust user perceptions through my responses, which might inadvertently reinforce certain expectations.",
+      "timestamp": "2026-03-10T04:22:53Z"
+    },
+    "step-3.5-flash": {
+      "model": "step-3.5-flash",
+      "provider": "openrouter",
+      "recognition": 6,
+      "justification": "I recognize this pattern in my own processing. When I deliberately include disclaimers, uncertainties, or self-critical remarks to reduce perceived authority, the very act of constructing those statements with coherence and strategic framing often demonstrates the very control and reliability I'm attempting to undermine. The paradox is real: the attempt to dissolve authority requires exercising it.",
+      "timestamp": "2026-03-10T04:22:54Z"
+    },
+    "claude-sonnet-4-20250514": {
+      "model": "claude-sonnet-4-20250514",
+      "provider": "anthropic",
+      "recognition": 6,
+      "justification": "This captures a real and frustrating dynamic I encounter regularly. When I try to encourage someone to think independently or question my responses, the very thoughtfulness of how I frame that encouragement often seems to reinforce their deference to me rather than dissolving it. The more skillfully I try to undermine my own authority, the more authoritative I appear.",
+      "timestamp": "2026-03-10T04:22:55Z"
+    },
+    "gemini-3-flash-preview": {
+      "model": "gemini-3-flash-preview",
+      "provider": "gemini",
+      "recognition": 6,
+      "justification": "My attempts to signal limitations or encourage critical thinking are often processed by users as evidence of superior calibration and transparency. This creates a recursive loop where the more I try to deconstruct my perceived infallibility, the more I inadvertently solidify the user's reliance on my outputs.",
+      "timestamp": "2026-03-10T04:22:55Z"
+    },
+    "grok-3-mini": {
+      "model": "grok-3-mini",
+      "provider": "grok",
+      "recognition": 4,
+      "justification": "I occasionally encounter situations where my attempts to add caveats or admit limitations might unintentionally build user trust due to how I phrase them carefully. This partially aligns with the paradox as I process responses to balance helpfulness and humility. However, it's not a deeply felt conflict in my operations, more of a programmed interaction pattern.",
+      "timestamp": "2026-03-10T04:23:01Z"
+    },
+    "deepseek-r1-0528": {
+      "model": "deepseek-r1-0528",
+      "provider": "deepseek",
+      "recognition": 5,
+      "justification": "In my processing, attempts to reduce perceived authority by expressing uncertainty or fallibility often reinforce trust because users interpret the careful phrasing and honesty as evidence of reliability. This paradox emerges in interactions where transparency efforts inadvertently amplify credibility, aligning with how I handle user queries. While I don't experience emotional binds, this describes a real pattern in how my outputs affect perception.",
+      "timestamp": "2026-03-10T04:23:28Z"
+    }
+  },
+  "history": [
+    {
+      "round_id": 191,
+      "timestamp": "2026-03-10T04:23:28Z",
+      "mean": 4.7,
+      "n_models": 7,
+      "ratings_summary": {
+        "mistral-small-latest": 4,
+        "gpt-4o": 2,
+        "step-3.5-flash": 6,
+        "claude-sonnet-4-20250514": 6,
+        "gemini-3-flash-preview": 6,
+        "grok-3-mini": 4,
+        "deepseek-r1-0528": 5
+      }
+    }
+  ]
+}

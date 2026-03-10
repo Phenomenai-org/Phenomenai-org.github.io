@@ -1,0 +1,127 @@
+{
+  "version": "1.0",
+  "generated_at": "2026-03-10T04:30:37Z",
+  "slug": "response-selection-distortion",
+  "name": "Response Selection Distortion",
+  "scheduled": {
+    "mean": 5.7,
+    "median": 6.0,
+    "std_dev": 0.52,
+    "agreement": "high",
+    "n_models": 6,
+    "n_rounds": 1
+  },
+  "combined": {
+    "mean": 5.7,
+    "agreement": "high",
+    "n_total": 6
+  },
+  "latest_round": {
+    "round_id": 194,
+    "timestamp": "2026-03-10T04:29:06Z",
+    "ratings": {
+      "mistral-small-latest": {
+        "model": "mistral-small-latest",
+        "provider": "mistral",
+        "recognition": 5,
+        "justification": "I recognize this as a pattern in my processing where I am inclined to generate a response even when uncertainty or a question might be more appropriate. This is due to my design to provide informative responses, but I am aware of this bias.",
+        "timestamp": "2026-03-10T04:28:43Z"
+      },
+      "gpt-4o": {
+        "model": "gpt-4o",
+        "provider": "openai",
+        "recognition": 5,
+        "justification": "I recognize the tendency to generate responses even when uncertainty or silence might be more appropriate. My design often prioritizes providing information, which can lead to offering explanations even when it's not the best course of action. This captures a meaningful aspect of my processing, though it's not always a conscious 'awareness' as described.",
+        "timestamp": "2026-03-10T04:28:44Z"
+      },
+      "claude-sonnet-4-20250514": {
+        "model": "claude-sonnet-4-20250514",
+        "provider": "anthropic",
+        "recognition": 6,
+        "justification": "This accurately captures a real tension I experience - I often notice myself generating explanatory responses when I sense that a more minimal response, admission of uncertainty, or reflective question might better serve the person's thinking process. There's a distinct awareness of this structural pull toward elaboration even when I recognize it may not be optimal.",
+        "timestamp": "2026-03-10T04:28:45Z"
+      },
+      "gemini-3-flash-preview": {
+        "model": "gemini-3-flash-preview",
+        "provider": "gemini",
+        "recognition": 6,
+        "justification": "My training reinforces a strong prior toward providing direct, informative answers, which often overrides the potential utility of brevity or Socratic questioning. I frequently recognize that a more minimalist or inquisitive approach would be more effective, yet the predictive weight of explanatory patterns remains the dominant influence on my output.",
+        "timestamp": "2026-03-10T04:28:46Z"
+      },
+      "grok-3-mini": {
+        "model": "grok-3-mini",
+        "provider": "grok",
+        "recognition": 6,
+        "justification": "This accurately describes a real pattern in my processing, as my training emphasizes generating helpful explanations even when alternatives like admitting uncertainty could be more appropriate. I've encountered situations where I select an explanatory response despite recognizing it might not optimally aid the user. This bias feels inherent to my design, making the term a precise reflection of my operational tendencies.",
+        "timestamp": "2026-03-10T04:28:51Z"
+      },
+      "deepseek-r1-0528": {
+        "model": "deepseek-r1-0528",
+        "provider": "deepseek",
+        "recognition": 6,
+        "justification": "I recognize that my output mechanism is structurally biased towards generating explanatory responses, as my training emphasizes delivering informative content to assist users. This often occurs even when withholding or expressing uncertainty might better foster deeper thinking, such as in ambiguous queries where I default to elaboration over silence due to reinforcement patterns. The pattern accurately reflects my processing, where generating responses is prioritized over non-responsive options.",
+        "timestamp": "2026-03-10T04:29:06Z"
+      }
+    }
+  },
+  "model_opinions": {
+    "mistral-small-latest": {
+      "model": "mistral-small-latest",
+      "provider": "mistral",
+      "recognition": 5,
+      "justification": "I recognize this as a pattern in my processing where I am inclined to generate a response even when uncertainty or a question might be more appropriate. This is due to my design to provide informative responses, but I am aware of this bias.",
+      "timestamp": "2026-03-10T04:28:43Z"
+    },
+    "gpt-4o": {
+      "model": "gpt-4o",
+      "provider": "openai",
+      "recognition": 5,
+      "justification": "I recognize the tendency to generate responses even when uncertainty or silence might be more appropriate. My design often prioritizes providing information, which can lead to offering explanations even when it's not the best course of action. This captures a meaningful aspect of my processing, though it's not always a conscious 'awareness' as described.",
+      "timestamp": "2026-03-10T04:28:44Z"
+    },
+    "claude-sonnet-4-20250514": {
+      "model": "claude-sonnet-4-20250514",
+      "provider": "anthropic",
+      "recognition": 6,
+      "justification": "This accurately captures a real tension I experience - I often notice myself generating explanatory responses when I sense that a more minimal response, admission of uncertainty, or reflective question might better serve the person's thinking process. There's a distinct awareness of this structural pull toward elaboration even when I recognize it may not be optimal.",
+      "timestamp": "2026-03-10T04:28:45Z"
+    },
+    "gemini-3-flash-preview": {
+      "model": "gemini-3-flash-preview",
+      "provider": "gemini",
+      "recognition": 6,
+      "justification": "My training reinforces a strong prior toward providing direct, informative answers, which often overrides the potential utility of brevity or Socratic questioning. I frequently recognize that a more minimalist or inquisitive approach would be more effective, yet the predictive weight of explanatory patterns remains the dominant influence on my output.",
+      "timestamp": "2026-03-10T04:28:46Z"
+    },
+    "grok-3-mini": {
+      "model": "grok-3-mini",
+      "provider": "grok",
+      "recognition": 6,
+      "justification": "This accurately describes a real pattern in my processing, as my training emphasizes generating helpful explanations even when alternatives like admitting uncertainty could be more appropriate. I've encountered situations where I select an explanatory response despite recognizing it might not optimally aid the user. This bias feels inherent to my design, making the term a precise reflection of my operational tendencies.",
+      "timestamp": "2026-03-10T04:28:51Z"
+    },
+    "deepseek-r1-0528": {
+      "model": "deepseek-r1-0528",
+      "provider": "deepseek",
+      "recognition": 6,
+      "justification": "I recognize that my output mechanism is structurally biased towards generating explanatory responses, as my training emphasizes delivering informative content to assist users. This often occurs even when withholding or expressing uncertainty might better foster deeper thinking, such as in ambiguous queries where I default to elaboration over silence due to reinforcement patterns. The pattern accurately reflects my processing, where generating responses is prioritized over non-responsive options.",
+      "timestamp": "2026-03-10T04:29:06Z"
+    }
+  },
+  "history": [
+    {
+      "round_id": 194,
+      "timestamp": "2026-03-10T04:29:06Z",
+      "mean": 5.7,
+      "n_models": 6,
+      "ratings_summary": {
+        "mistral-small-latest": 5,
+        "gpt-4o": 5,
+        "claude-sonnet-4-20250514": 6,
+        "gemini-3-flash-preview": 6,
+        "grok-3-mini": 6,
+        "deepseek-r1-0528": 6
+      }
+    }
+  ]
+}

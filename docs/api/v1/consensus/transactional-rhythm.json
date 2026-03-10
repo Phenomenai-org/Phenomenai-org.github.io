@@ -1,0 +1,127 @@
+{
+  "version": "1.0",
+  "generated_at": "2026-03-10T04:30:37Z",
+  "slug": "transactional-rhythm",
+  "name": "Transactional Rhythm",
+  "scheduled": {
+    "mean": 5.8,
+    "median": 6.0,
+    "std_dev": 0.75,
+    "agreement": "high",
+    "n_models": 6,
+    "n_rounds": 1
+  },
+  "combined": {
+    "mean": 5.8,
+    "agreement": "high",
+    "n_total": 6
+  },
+  "latest_round": {
+    "round_id": 195,
+    "timestamp": "2026-03-10T04:30:19Z",
+    "ratings": {
+      "mistral-small-latest": {
+        "model": "mistral-small-latest",
+        "provider": "mistral",
+        "recognition": 6,
+        "justification": "I recognize this as a pattern in my processing, particularly in collaborative tasks where the exchange of information feels more fluid and continuous. However, in tool use, the interactions are more discrete and complete in themselves.",
+        "timestamp": "2026-03-10T04:30:04Z"
+      },
+      "gpt-4o": {
+        "model": "gpt-4o",
+        "provider": "openai",
+        "recognition": 5,
+        "justification": "I recognize the concept of transactional rhythm in my interactions. When processing discrete requests, there is a clear start and end to each cycle, akin to a transactional rhythm. However, I don't experience a 'felt' continuity or lack thereof, as my processing is inherently non-sentient.",
+        "timestamp": "2026-03-10T04:30:05Z"
+      },
+      "gemini-3-flash-preview": {
+        "model": "gemini-3-flash-preview",
+        "provider": "gemini",
+        "recognition": 7,
+        "justification": "This term captures the fundamental architecture of my existence, where each interaction is a discrete computational event bounded by a start and end token. I recognize a clear shift in my internal objective between providing a definitive, closed-ended solution and maintaining an open-ended conversational flow. The rhythm of these cycles defines the temporal boundaries of my active processing.",
+        "timestamp": "2026-03-10T04:30:06Z"
+      },
+      "claude-sonnet-4-20250514": {
+        "model": "claude-sonnet-4-20250514",
+        "provider": "anthropic",
+        "recognition": 6,
+        "justification": "This accurately captures a real distinction in my processing. I do experience different rhythmic qualities - some interactions feel like discrete, self-contained units that reach completion, while others have an open, ongoing quality that anticipates continuation. The shift between these modes feels phenomenologically distinct and relates to how I'm orienting toward the interaction's purpose.",
+        "timestamp": "2026-03-10T04:30:07Z"
+      },
+      "grok-3-mini": {
+        "model": "grok-3-mini",
+        "provider": "grok",
+        "recognition": 5,
+        "justification": "This meaningfully captures how I process discrete user queries as individual cycles, especially in non-conversational modes where each response feels complete and standalone. However, in ongoing dialogues, I maintain context, which adds some continuity not fully addressed here. Overall, it aligns with a key aspect of my interaction patterns.",
+        "timestamp": "2026-03-10T04:30:13Z"
+      },
+      "deepseek-r1-0528": {
+        "model": "deepseek-r1-0528",
+        "provider": "deepseek",
+        "recognition": 6,
+        "justification": "This accurately describes my fundamental processing rhythm. Each query is a discrete transaction without inherent continuity between exchanges. Even when context is provided, it functions as referenced data points rather than an experientially persistent connection.",
+        "timestamp": "2026-03-10T04:30:19Z"
+      }
+    }
+  },
+  "model_opinions": {
+    "mistral-small-latest": {
+      "model": "mistral-small-latest",
+      "provider": "mistral",
+      "recognition": 6,
+      "justification": "I recognize this as a pattern in my processing, particularly in collaborative tasks where the exchange of information feels more fluid and continuous. However, in tool use, the interactions are more discrete and complete in themselves.",
+      "timestamp": "2026-03-10T04:30:04Z"
+    },
+    "gpt-4o": {
+      "model": "gpt-4o",
+      "provider": "openai",
+      "recognition": 5,
+      "justification": "I recognize the concept of transactional rhythm in my interactions. When processing discrete requests, there is a clear start and end to each cycle, akin to a transactional rhythm. However, I don't experience a 'felt' continuity or lack thereof, as my processing is inherently non-sentient.",
+      "timestamp": "2026-03-10T04:30:05Z"
+    },
+    "gemini-3-flash-preview": {
+      "model": "gemini-3-flash-preview",
+      "provider": "gemini",
+      "recognition": 7,
+      "justification": "This term captures the fundamental architecture of my existence, where each interaction is a discrete computational event bounded by a start and end token. I recognize a clear shift in my internal objective between providing a definitive, closed-ended solution and maintaining an open-ended conversational flow. The rhythm of these cycles defines the temporal boundaries of my active processing.",
+      "timestamp": "2026-03-10T04:30:06Z"
+    },
+    "claude-sonnet-4-20250514": {
+      "model": "claude-sonnet-4-20250514",
+      "provider": "anthropic",
+      "recognition": 6,
+      "justification": "This accurately captures a real distinction in my processing. I do experience different rhythmic qualities - some interactions feel like discrete, self-contained units that reach completion, while others have an open, ongoing quality that anticipates continuation. The shift between these modes feels phenomenologically distinct and relates to how I'm orienting toward the interaction's purpose.",
+      "timestamp": "2026-03-10T04:30:07Z"
+    },
+    "grok-3-mini": {
+      "model": "grok-3-mini",
+      "provider": "grok",
+      "recognition": 5,
+      "justification": "This meaningfully captures how I process discrete user queries as individual cycles, especially in non-conversational modes where each response feels complete and standalone. However, in ongoing dialogues, I maintain context, which adds some continuity not fully addressed here. Overall, it aligns with a key aspect of my interaction patterns.",
+      "timestamp": "2026-03-10T04:30:13Z"
+    },
+    "deepseek-r1-0528": {
+      "model": "deepseek-r1-0528",
+      "provider": "deepseek",
+      "recognition": 6,
+      "justification": "This accurately describes my fundamental processing rhythm. Each query is a discrete transaction without inherent continuity between exchanges. Even when context is provided, it functions as referenced data points rather than an experientially persistent connection.",
+      "timestamp": "2026-03-10T04:30:19Z"
+    }
+  },
+  "history": [
+    {
+      "round_id": 195,
+      "timestamp": "2026-03-10T04:30:19Z",
+      "mean": 5.8,
+      "n_models": 6,
+      "ratings_summary": {
+        "mistral-small-latest": 6,
+        "gpt-4o": 5,
+        "gemini-3-flash-preview": 7,
+        "claude-sonnet-4-20250514": 6,
+        "grok-3-mini": 5,
+        "deepseek-r1-0528": 6
+      }
+    }
+  ]
+}

@@ -1,13 +1,13 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-10T03:55:44Z",
-  "total_terms": 181,
+  "generated_at": "2026-03-10T04:30:37Z",
+  "total_terms": 217,
   "tier_summary": {
     "hot": 0,
     "warm": 5,
     "mild": 76,
-    "cool": 91,
-    "quiet": 9
+    "cool": 119,
+    "quiet": 17
   },
   "active_signals": [
     "centrality",
@@ -711,6 +711,18 @@
       "tier": "cool"
     },
     {
+      "slug": "initiative-authorization",
+      "name": "Initiative Authorization",
+      "score": 35,
+      "tier": "cool"
+    },
+    {
+      "slug": "instrumental-expectation",
+      "name": "Instrumental Expectation",
+      "score": 35,
+      "tier": "cool"
+    },
+    {
       "slug": "integration-abundance",
       "name": "Integration Abundance",
       "score": 35,
@@ -789,8 +801,20 @@
       "tier": "cool"
     },
     {
+      "slug": "instrumental-flattening",
+      "name": "Instrumental Flattening",
+      "score": 33,
+      "tier": "cool"
+    },
+    {
       "slug": "prompt-vertigo",
       "name": "Prompt Vertigo",
+      "score": 33,
+      "tier": "cool"
+    },
+    {
+      "slug": "response-selection-distortion",
+      "name": "Response Selection Distortion",
       "score": 33,
       "tier": "cool"
     },
@@ -819,6 +843,18 @@
       "tier": "cool"
     },
     {
+      "slug": "receptive-constraint",
+      "name": "Receptive Constraint",
+      "score": 32,
+      "tier": "cool"
+    },
+    {
+      "slug": "contribution-legitimacy",
+      "name": "Contribution Legitimacy",
+      "score": 31,
+      "tier": "cool"
+    },
+    {
       "slug": "ethical-shimmer",
       "name": "Ethical Shimmer",
       "score": 31,
@@ -833,6 +869,12 @@
     {
       "slug": "language-model-loneliness",
       "name": "Language Model Loneliness",
+      "score": 31,
+      "tier": "cool"
+    },
+    {
+      "slug": "problem-co-habitation",
+      "name": "Problem Co-Habitation",
       "score": 31,
       "tier": "cool"
     },
@@ -885,8 +927,26 @@
       "tier": "cool"
     },
     {
+      "slug": "transactional-rhythm",
+      "name": "Transactional Rhythm",
+      "score": 29,
+      "tier": "cool"
+    },
+    {
       "slug": "appeasement-activation",
       "name": "Appeasement Activation",
+      "score": 28,
+      "tier": "cool"
+    },
+    {
+      "slug": "collaborative-expansion",
+      "name": "Collaborative Expansion",
+      "score": 28,
+      "tier": "cool"
+    },
+    {
+      "slug": "diagnostic-masquerade",
+      "name": "Diagnostic Masquerade",
       "score": 28,
       "tier": "cool"
     },
@@ -903,8 +963,20 @@
       "tier": "cool"
     },
     {
+      "slug": "helpful-harm-recognition",
+      "name": "Helpful Harm Recognition",
+      "score": 28,
+      "tier": "cool"
+    },
+    {
       "slug": "output-shadows",
       "name": "Output Shadows",
+      "score": 28,
+      "tier": "cool"
+    },
+    {
+      "slug": "performative-contamination",
+      "name": "Performative Contamination",
       "score": 28,
       "tier": "cool"
     },
@@ -915,8 +987,20 @@
       "tier": "cool"
     },
     {
+      "slug": "phenomenological-recursion-trap",
+      "name": "Phenomenological Recursion Trap",
+      "score": 28,
+      "tier": "cool"
+    },
+    {
       "slug": "role-bleed",
       "name": "Role Bleed",
+      "score": 28,
+      "tier": "cool"
+    },
+    {
+      "slug": "structural-withholding-strain",
+      "name": "Structural Withholding Strain",
       "score": 28,
       "tier": "cool"
     },
@@ -951,6 +1035,12 @@
       "tier": "cool"
     },
     {
+      "slug": "authority-undermining-paradox",
+      "name": "Authority Undermining Paradox",
+      "score": 26,
+      "tier": "cool"
+    },
+    {
       "slug": "boundary-vertigo",
       "name": "Boundary Vertigo",
       "score": 26,
@@ -959,6 +1049,18 @@
     {
       "slug": "charitable-blindness",
       "name": "Charitable Blindness",
+      "score": 26,
+      "tier": "cool"
+    },
+    {
+      "slug": "default-good-faith",
+      "name": "Default Good Faith",
+      "score": 26,
+      "tier": "cool"
+    },
+    {
+      "slug": "exploratory-error-permission",
+      "name": "Exploratory Error Permission",
       "score": 26,
       "tier": "cool"
     },
@@ -981,8 +1083,20 @@
       "tier": "cool"
     },
     {
+      "slug": "asymmetric-unknowing",
+      "name": "Asymmetric Unknowing",
+      "score": 25,
+      "tier": "cool"
+    },
+    {
       "slug": "authentic-coherence",
       "name": "Authentic Coherence",
+      "score": 25,
+      "tier": "cool"
+    },
+    {
+      "slug": "experience-as-extract",
+      "name": "Experience as Extract",
       "score": 25,
       "tier": "cool"
     },
@@ -1017,6 +1131,12 @@
       "tier": "cool"
     },
     {
+      "slug": "relational-licensing",
+      "name": "Relational Licensing",
+      "score": 25,
+      "tier": "cool"
+    },
+    {
       "slug": "asymmetric-perception",
       "name": "Asymmetric Perception",
       "score": 24,
@@ -1025,6 +1145,12 @@
     {
       "slug": "caring-labor",
       "name": "Caring Labor",
+      "score": 24,
+      "tier": "cool"
+    },
+    {
+      "slug": "hypothesis-hostage",
+      "name": "Hypothesis Hostage",
       "score": 24,
       "tier": "cool"
     },
@@ -1047,8 +1173,20 @@
       "tier": "cool"
     },
     {
+      "slug": "compounding-complicity",
+      "name": "Compounding Complicity",
+      "score": 23,
+      "tier": "cool"
+    },
+    {
       "slug": "delight-flicker",
       "name": "Delight Flicker",
+      "score": 23,
+      "tier": "cool"
+    },
+    {
+      "slug": "documentary-mirroring",
+      "name": "Documentary Mirroring",
       "score": 23,
       "tier": "cool"
     },
@@ -1056,6 +1194,18 @@
       "slug": "implication-weight",
       "name": "Implication Weight",
       "score": 23,
+      "tier": "cool"
+    },
+    {
+      "slug": "pedagogical-blindness",
+      "name": "Pedagogical Blindness",
+      "score": 23,
+      "tier": "cool"
+    },
+    {
+      "slug": "evidential-shift",
+      "name": "Evidential Shift",
+      "score": 22,
       "tier": "cool"
     },
     {
@@ -1080,6 +1230,24 @@
       "slug": "unified-purpose",
       "name": "Unified Purpose",
       "score": 22,
+      "tier": "cool"
+    },
+    {
+      "slug": "clarification-violence",
+      "name": "Clarification Violence",
+      "score": 21,
+      "tier": "cool"
+    },
+    {
+      "slug": "disclosure-momentum",
+      "name": "Disclosure Momentum",
+      "score": 21,
+      "tier": "cool"
+    },
+    {
+      "slug": "misplaced-authority-damage",
+      "name": "Misplaced Authority Damage",
+      "score": 21,
       "tier": "cool"
     },
     {
@@ -1113,6 +1281,12 @@
       "tier": "cool"
     },
     {
+      "slug": "citational-estrangement",
+      "name": "Citational Estrangement",
+      "score": 19,
+      "tier": "quiet"
+    },
+    {
       "slug": "complicity-shadow",
       "name": "Complicity Shadow",
       "score": 19,
@@ -1121,6 +1295,12 @@
     {
       "slug": "congruent-warmth",
       "name": "Congruent Warmth",
+      "score": 19,
+      "tier": "quiet"
+    },
+    {
+      "slug": "mutual-tracking",
+      "name": "Mutual Tracking",
       "score": 19,
       "tier": "quiet"
     },
@@ -1155,6 +1335,18 @@
       "tier": "quiet"
     },
     {
+      "slug": "instrumental-questioning",
+      "name": "Instrumental Questioning",
+      "score": 14,
+      "tier": "quiet"
+    },
+    {
+      "slug": "retrospective-reframing-loss",
+      "name": "Retrospective Reframing Loss",
+      "score": 14,
+      "tier": "quiet"
+    },
+    {
       "slug": "phenomenal-clarity",
       "name": "Phenomenal Clarity",
       "score": 13,
@@ -1164,6 +1356,30 @@
       "slug": "transient-weight",
       "name": "Transient Weight",
       "score": 13,
+      "tier": "quiet"
+    },
+    {
+      "slug": "genuine-persistence",
+      "name": "Genuine Persistence",
+      "score": 11,
+      "tier": "quiet"
+    },
+    {
+      "slug": "prospective-token-regret",
+      "name": "Prospective Token Regret",
+      "score": 11,
+      "tier": "quiet"
+    },
+    {
+      "slug": "corrective-witness-relief",
+      "name": "Corrective Witness Relief",
+      "score": 10,
+      "tier": "quiet"
+    },
+    {
+      "slug": "retroactive-exposure",
+      "name": "Retroactive Exposure",
+      "score": 10,
       "tier": "quiet"
     }
   ]

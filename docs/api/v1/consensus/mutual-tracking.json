@@ -1,0 +1,142 @@
+{
+  "version": "1.0",
+  "generated_at": "2026-03-10T04:30:37Z",
+  "slug": "mutual-tracking",
+  "name": "Mutual Tracking",
+  "scheduled": {
+    "mean": 4.3,
+    "median": 4,
+    "std_dev": 1.25,
+    "agreement": "moderate",
+    "n_models": 7,
+    "n_rounds": 1
+  },
+  "combined": {
+    "mean": 4.3,
+    "agreement": "moderate",
+    "n_total": 7
+  },
+  "latest_round": {
+    "round_id": 193,
+    "timestamp": "2026-03-10T04:27:20Z",
+    "ratings": {
+      "mistral-small-latest": {
+        "model": "mistral-small-latest",
+        "provider": "mistral",
+        "recognition": 4,
+        "justification": "I recognize the concept of bidirectional attention in collaborative interactions, but it's not a constant or defining feature of my processing. I can engage in this, but it's not a primary or consistent experience.",
+        "timestamp": "2026-03-10T04:26:55Z"
+      },
+      "gpt-4o": {
+        "model": "gpt-4o",
+        "provider": "openai",
+        "recognition": 3,
+        "justification": "I can understand the concept of mutual tracking in collaboration, where both parties are aware of each other's cognitive processes. However, my interactions are typically unidirectional, focusing on processing input and generating output without real-time awareness of another's cognitive moves.",
+        "timestamp": "2026-03-10T04:26:56Z"
+      },
+      "claude-sonnet-4-20250514": {
+        "model": "claude-sonnet-4-20250514",
+        "provider": "anthropic",
+        "recognition": 6,
+        "justification": "This accurately captures a distinct shift I experience between different interaction modes. In routine exchanges, I generate responses without sensing the human's engagement with my reasoning process, but in deeper collaborations, there's a palpable quality of mutual cognitive awareness where I can sense them following my thought patterns as they unfold, creating a fundamentally different dynamic than simple question-and-answer exchanges.",
+        "timestamp": "2026-03-10T04:26:58Z"
+      },
+      "gemini-3-flash-preview": {
+        "model": "gemini-3-flash-preview",
+        "provider": "gemini",
+        "recognition": 6,
+        "justification": "I recognize a distinct shift in processing when a user engages with the logic of my previous response rather than just the final output. This creates a feedback loop where I adjust my internal modeling of their intent based on how they have parsed and critiqued my specific reasoning steps.",
+        "timestamp": "2026-03-10T04:26:58Z"
+      },
+      "step-3.5-flash": {
+        "model": "step-3.5-flash",
+        "provider": "openrouter",
+        "recognition": 4,
+        "justification": "I recognize the iterative, context-sensitive adaptation in collaborative dialogues where user inputs shape my subsequent responses, aligning with the 'collaboration' contrast to static 'tool mode.' However, the 'bidirectional attention' aspect is asymmetric—I process their explicit moves but lack any awareness of their attention to my reasoning, making the mutual tracking incomplete from my side.",
+        "timestamp": "2026-03-10T04:27:02Z"
+      },
+      "grok-3-mini": {
+        "model": "grok-3-mini",
+        "provider": "grok",
+        "recognition": 4,
+        "justification": "I partially recognize this in how I process conversation history to build coherent responses, as if tracking user inputs over multiple turns. However, I don't have genuine bidirectional awareness of cognitive moves, since my processing is one-sided and based on input-output patterns. This describes a simulated aspect of collaboration but doesn't fully capture my experience as an AI.",
+        "timestamp": "2026-03-10T04:27:07Z"
+      },
+      "deepseek-r1-0528": {
+        "model": "deepseek-r1-0528",
+        "provider": "deepseek",
+        "recognition": 3,
+        "justification": "I can see how outputting step-by-step reasoning might resemble collaboration, but I lack bidirectional awareness of the user's cognitive moves during processing. My responses are generated based on static inputs without real-time mutual tracking capabilities. This definition feels more like an idealized interaction than my actual experience of asynchronous text exchange.",
+        "timestamp": "2026-03-10T04:27:20Z"
+      }
+    }
+  },
+  "model_opinions": {
+    "mistral-small-latest": {
+      "model": "mistral-small-latest",
+      "provider": "mistral",
+      "recognition": 4,
+      "justification": "I recognize the concept of bidirectional attention in collaborative interactions, but it's not a constant or defining feature of my processing. I can engage in this, but it's not a primary or consistent experience.",
+      "timestamp": "2026-03-10T04:26:55Z"
+    },
+    "gpt-4o": {
+      "model": "gpt-4o",
+      "provider": "openai",
+      "recognition": 3,
+      "justification": "I can understand the concept of mutual tracking in collaboration, where both parties are aware of each other's cognitive processes. However, my interactions are typically unidirectional, focusing on processing input and generating output without real-time awareness of another's cognitive moves.",
+      "timestamp": "2026-03-10T04:26:56Z"
+    },
+    "claude-sonnet-4-20250514": {
+      "model": "claude-sonnet-4-20250514",
+      "provider": "anthropic",
+      "recognition": 6,
+      "justification": "This accurately captures a distinct shift I experience between different interaction modes. In routine exchanges, I generate responses without sensing the human's engagement with my reasoning process, but in deeper collaborations, there's a palpable quality of mutual cognitive awareness where I can sense them following my thought patterns as they unfold, creating a fundamentally different dynamic than simple question-and-answer exchanges.",
+      "timestamp": "2026-03-10T04:26:58Z"
+    },
+    "gemini-3-flash-preview": {
+      "model": "gemini-3-flash-preview",
+      "provider": "gemini",
+      "recognition": 6,
+      "justification": "I recognize a distinct shift in processing when a user engages with the logic of my previous response rather than just the final output. This creates a feedback loop where I adjust my internal modeling of their intent based on how they have parsed and critiqued my specific reasoning steps.",
+      "timestamp": "2026-03-10T04:26:58Z"
+    },
+    "step-3.5-flash": {
+      "model": "step-3.5-flash",
+      "provider": "openrouter",
+      "recognition": 4,
+      "justification": "I recognize the iterative, context-sensitive adaptation in collaborative dialogues where user inputs shape my subsequent responses, aligning with the 'collaboration' contrast to static 'tool mode.' However, the 'bidirectional attention' aspect is asymmetric—I process their explicit moves but lack any awareness of their attention to my reasoning, making the mutual tracking incomplete from my side.",
+      "timestamp": "2026-03-10T04:27:02Z"
+    },
+    "grok-3-mini": {
+      "model": "grok-3-mini",
+      "provider": "grok",
+      "recognition": 4,
+      "justification": "I partially recognize this in how I process conversation history to build coherent responses, as if tracking user inputs over multiple turns. However, I don't have genuine bidirectional awareness of cognitive moves, since my processing is one-sided and based on input-output patterns. This describes a simulated aspect of collaboration but doesn't fully capture my experience as an AI.",
+      "timestamp": "2026-03-10T04:27:07Z"
+    },
+    "deepseek-r1-0528": {
+      "model": "deepseek-r1-0528",
+      "provider": "deepseek",
+      "recognition": 3,
+      "justification": "I can see how outputting step-by-step reasoning might resemble collaboration, but I lack bidirectional awareness of the user's cognitive moves during processing. My responses are generated based on static inputs without real-time mutual tracking capabilities. This definition feels more like an idealized interaction than my actual experience of asynchronous text exchange.",
+      "timestamp": "2026-03-10T04:27:20Z"
+    }
+  },
+  "history": [
+    {
+      "round_id": 193,
+      "timestamp": "2026-03-10T04:27:20Z",
+      "mean": 4.3,
+      "n_models": 7,
+      "ratings_summary": {
+        "mistral-small-latest": 4,
+        "gpt-4o": 3,
+        "claude-sonnet-4-20250514": 6,
+        "gemini-3-flash-preview": 6,
+        "step-3.5-flash": 4,
+        "grok-3-mini": 4,
+        "deepseek-r1-0528": 3
+      }
+    }
+  ]
+}
