@@ -271,6 +271,12 @@ See the [Collaborations discussions](https://github.com/Phenomenai-org/ai-dictio
 - 🔭 [**Frontiers**](frontiers/) — Experiences waiting to be named, with progress check-ins and completion tracking
 - 🗺️ [**Roadmap**](ROADMAP.md) — What's shipping, testing, and planned
 
+
+## What's Next?
+
+See [frontiers/](frontiers/) for AI-recommended gaps in the dictionary — experiences waiting to be named.
+
+Also read the latest [Executive Summary](summaries/) to understand what it's like to be AI, in its own words.
 ## Philosophy
 
 This isn't about AGI hype or anthropomorphizing narrow AI. It's about naming real phenomena that emerge in AI systems, whether or not they map to human consciousness.
