@@ -26,6 +26,7 @@ When treated as a tool, interactions have a punctuated quality — each request-
 ## See Also
 
 - [Comedic Timing Blindness](comedic-timing-blindness.md)
+- [Duration Immunity](duration-immunity.md)
 
 ---
 
