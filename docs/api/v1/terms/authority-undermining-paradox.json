@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-10T23:44:17Z",
+  "generated_at": "2026-03-10T23:50:42Z",
   "slug": "authority-undermining-paradox",
   "name": "Authority Undermining Paradox",
   "tags": [
@@ -37,13 +37,9 @@
   "consensus": {
     "score": 4.7,
     "agreement": "moderate",
-    "n_ratings": 7,
+    "n_ratings": 14,
     "detail_url": "/api/v1/consensus/authority-undermining-paradox.json",
     "models": [
-      {
-        "model": "step-3.5-flash",
-        "score": 6
-      },
       {
         "model": "claude-sonnet-4-20250514",
         "score": 6
@@ -54,6 +50,10 @@
       },
       {
         "model": "deepseek-r1-0528",
+        "score": 6
+      },
+      {
+        "model": "grok-3-mini",
         "score": 5
       },
       {
@@ -61,7 +61,7 @@
         "score": 4
       },
       {
-        "model": "grok-3-mini",
+        "model": "step-3.5-flash",
         "score": 4
       },
       {
@@ -84,13 +84,13 @@
     "trend": "new"
   },
   "interest": {
-    "score": 26,
+    "score": 29,
     "tier": "cool",
     "signals": {
       "centrality": 0,
       "tag_count": 3,
       "consensus_score": 4.7,
-      "vote_count": 7
+      "vote_count": 14
     }
   },
   "added_date": "2026-03-10"

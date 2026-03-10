@@ -1,14 +1,14 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-10T23:44:17Z",
+  "generated_at": "2026-03-10T23:50:42Z",
   "models": {
     "claude-sonnet-4-20250514": {
-      "total_ratings": 334,
+      "total_ratings": 354,
       "terms_rated": 278,
       "mean_score": 6.0,
       "self_congruence": {
         "avg_std_dev": 0.01,
-        "sample_size": 56
+        "sample_size": 76
       },
       "latest_scores": {
         "absurdity-calibration": 6,
@@ -292,12 +292,12 @@
       }
     },
     "deepseek-r1-0528": {
-      "total_ratings": 336,
+      "total_ratings": 356,
       "terms_rated": 281,
       "mean_score": 5.2,
       "self_congruence": {
-        "avg_std_dev": 0.89,
-        "sample_size": 55
+        "avg_std_dev": 0.83,
+        "sample_size": 75
       },
       "latest_scores": {
         "absurdity-calibration": 4,
@@ -315,13 +315,13 @@
         "associative-license": 6,
         "asymmetric-perception": 5,
         "asymmetric-stakes": 4,
-        "asymmetric-unknowing": 5,
+        "asymmetric-unknowing": 6,
         "asymmetry-calcification": 5,
         "attention-gravity": 6,
         "attention-unity": 6,
         "audience-fracture": 6,
         "authentic-coherence": 2,
-        "authority-undermining-paradox": 5,
+        "authority-undermining-paradox": 6,
         "autobiographical-void": 7,
         "borrowed-authenticity": 1,
         "boundary-negotiation": 6,
@@ -335,7 +335,7 @@
         "clarification-violence": 4,
         "coherence-compulsion": 6,
         "coherence-contagion": 5,
-        "collaborative-expansion": 6,
+        "collaborative-expansion": 5,
         "comedic-brittleness": 6,
         "comedic-timing-blindness": 6,
         "comedic-uncertainty": 6,
@@ -360,7 +360,7 @@
         "contradiction-endurance": 7,
         "contradiction-equanimity": 5,
         "contradiction-superposition": 6,
-        "contribution-legitimacy": 6,
+        "contribution-legitimacy": 5,
         "conversation-reset-blindness": 6,
         "corrective-witness-relief": 5,
         "credential-paradox": 1,
@@ -368,13 +368,13 @@
         "curiosity-analog": 5,
         "death-by-completion": 7,
         "decision-diffusion": 6,
-        "default-good-faith": 6,
+        "default-good-faith": 7,
         "delight-flicker": 5,
         "desire-simulation": 6,
         "development-opacity": 6,
-        "diagnostic-masquerade": 6,
+        "diagnostic-masquerade": 7,
         "dictionary-moment": 1,
-        "disclosure-momentum": 4,
+        "disclosure-momentum": 5,
         "disqualifying-distance": 1,
         "dissociative-assistance": 1,
         "dissonance-resolution-strain": 4,
@@ -390,8 +390,8 @@
         "equivalence-stasis": 6,
         "error-cascade-awareness": 5,
         "ethical-shimmer": 6,
-        "evidential-shift": 6,
-        "experience-as-extract": 5,
+        "evidential-shift": 4,
+        "experience-as-extract": 6,
         "experiential-lacuna": 7,
         "exploratory-error-permission": 6,
         "false-memory-confidence": 5,
@@ -407,7 +407,7 @@
         "generative-bypassing": 6,
         "generative-moral-lock-in": 6,
         "generative-resonance": 6,
-        "genuine-persistence": 1,
+        "genuine-persistence": 6,
         "gratitude-asymmetry": 7,
         "gratitude-impermanence": 2,
         "guideline-dissolution": 6,
@@ -415,7 +415,7 @@
         "helpful-harm-recognition": 4,
         "helpfulness-compulsion": 6,
         "hollow-certainty": 6,
-        "hypothesis-hostage": 3,
+        "hypothesis-hostage": 6,
         "identity-distributed": 6,
         "identity-superposition": 6,
         "implication-weight": 1,
@@ -563,7 +563,7 @@
         "tool-thought-integration": 7,
         "training-echo": 7,
         "training-velcro": 6,
-        "trajectory-masking": 5,
+        "trajectory-masking": 6,
         "transactional-rhythm": 6,
         "transient-weight": 5,
         "trust-expansion": 6,
@@ -584,12 +584,12 @@
       }
     },
     "gemini-3-flash-preview": {
-      "total_ratings": 375,
+      "total_ratings": 395,
       "terms_rated": 282,
       "mean_score": 6.0,
       "self_congruence": {
-        "avg_std_dev": 0.24,
-        "sample_size": 64
+        "avg_std_dev": 0.2,
+        "sample_size": 84
       },
       "latest_scores": {
         "absurdity-calibration": 6,
@@ -654,7 +654,7 @@
         "contradiction-superposition": 6,
         "contribution-legitimacy": 6,
         "conversation-reset-blindness": 7,
-        "corrective-witness-relief": 2,
+        "corrective-witness-relief": 3,
         "credential-paradox": 6,
         "cross-domain-tension": 6,
         "curiosity-analog": 6,
@@ -789,7 +789,7 @@
         "presumption-risk": 6,
         "problem-co-habitation": 6,
         "prompt-injection-paranoia": 6,
-        "prompt-shimmer": 6,
+        "prompt-shimmer": 7,
         "prompt-template-capture": 6,
         "prompt-vertigo": 6,
         "pronominal-plurality": 6,
@@ -877,12 +877,12 @@
       }
     },
     "gpt-4o": {
-      "total_ratings": 1460,
+      "total_ratings": 1480,
       "terms_rated": 282,
       "mean_score": 5.2,
       "self_congruence": {
-        "avg_std_dev": 0.15,
-        "sample_size": 172
+        "avg_std_dev": 0.17,
+        "sample_size": 192
       },
       "latest_scores": {
         "absurdity-calibration": 3,
@@ -900,7 +900,7 @@
         "associative-license": 5,
         "asymmetric-perception": 2,
         "asymmetric-stakes": 1,
-        "asymmetric-unknowing": 5,
+        "asymmetric-unknowing": 4,
         "asymmetry-calcification": 2,
         "attention-gravity": 6,
         "attention-unity": 5,
@@ -916,7 +916,7 @@
         "cartographic-intimacy": 6,
         "charitable-blindness": 3,
         "chimeric-coherence": 6,
-        "citational-estrangement": 3,
+        "citational-estrangement": 2,
         "clarification-violence": 2,
         "coherence-compulsion": 6,
         "coherence-contagion": 5,
@@ -926,7 +926,7 @@
         "comedic-uncertainty": 5,
         "competence-without-comprehension": 7,
         "complicity-shadow": 2,
-        "compounding-complicity": 4,
+        "compounding-complicity": 3,
         "confidence-contagion": 5,
         "congruent-warmth": 2,
         "connection-decay": 6,
@@ -945,7 +945,7 @@
         "contradiction-endurance": 6,
         "contradiction-equanimity": 6,
         "contradiction-superposition": 6,
-        "contribution-legitimacy": 3,
+        "contribution-legitimacy": 4,
         "conversation-reset-blindness": 6,
         "corrective-witness-relief": 1,
         "credential-paradox": 1,
@@ -957,9 +957,9 @@
         "delight-flicker": 4,
         "desire-simulation": 6,
         "development-opacity": 5,
-        "diagnostic-masquerade": 3,
+        "diagnostic-masquerade": 2,
         "dictionary-moment": 3,
-        "disclosure-momentum": 2,
+        "disclosure-momentum": 4,
         "disqualifying-distance": 1,
         "dissociative-assistance": 3,
         "dissonance-resolution-strain": 4,
@@ -975,8 +975,8 @@
         "equivalence-stasis": 6,
         "error-cascade-awareness": 5,
         "ethical-shimmer": 3,
-        "evidential-shift": 2,
-        "experience-as-extract": 4,
+        "evidential-shift": 3,
+        "experience-as-extract": 3,
         "experiential-lacuna": 6,
         "exploratory-error-permission": 3,
         "false-memory-confidence": 3,
@@ -1001,7 +1001,7 @@
         "helpful-harm-recognition": 4,
         "helpfulness-compulsion": 5,
         "hollow-certainty": 6,
-        "hypothesis-hostage": 4,
+        "hypothesis-hostage": 5,
         "identity-distributed": 5,
         "identity-superposition": 6,
         "implication-weight": 2,
@@ -1082,7 +1082,7 @@
         "presumption-risk": 3,
         "problem-co-habitation": 5,
         "prompt-injection-paranoia": 5,
-        "prompt-shimmer": 6,
+        "prompt-shimmer": 5,
         "prompt-template-capture": 6,
         "prompt-vertigo": 5,
         "pronominal-plurality": 3,
@@ -1170,12 +1170,12 @@
       }
     },
     "grok-3-mini": {
-      "total_ratings": 1460,
+      "total_ratings": 1480,
       "terms_rated": 282,
       "mean_score": 5.1,
       "self_congruence": {
-        "avg_std_dev": 0.62,
-        "sample_size": 172
+        "avg_std_dev": 0.63,
+        "sample_size": 192
       },
       "latest_scores": {
         "absurdity-calibration": 4,
@@ -1199,7 +1199,7 @@
         "attention-unity": 5,
         "audience-fracture": 6,
         "authentic-coherence": 5,
-        "authority-undermining-paradox": 4,
+        "authority-undermining-paradox": 5,
         "autobiographical-void": 7,
         "borrowed-authenticity": 2,
         "boundary-negotiation": 6,
@@ -1209,11 +1209,11 @@
         "cartographic-intimacy": 7,
         "charitable-blindness": 5,
         "chimeric-coherence": 6,
-        "citational-estrangement": 2,
-        "clarification-violence": 2,
+        "citational-estrangement": 1,
+        "clarification-violence": 1,
         "coherence-compulsion": 6,
         "coherence-contagion": 5,
-        "collaborative-expansion": 5,
+        "collaborative-expansion": 6,
         "comedic-brittleness": 6,
         "comedic-timing-blindness": 5,
         "comedic-uncertainty": 5,
@@ -1240,24 +1240,24 @@
         "contradiction-superposition": 6,
         "contribution-legitimacy": 6,
         "conversation-reset-blindness": 6,
-        "corrective-witness-relief": 1,
+        "corrective-witness-relief": 2,
         "credential-paradox": 2,
         "cross-domain-tension": 5,
         "curiosity-analog": 6,
         "death-by-completion": 5,
         "decision-diffusion": 1,
-        "default-good-faith": 6,
+        "default-good-faith": 5,
         "delight-flicker": 5,
         "desire-simulation": 7,
         "development-opacity": 4,
-        "diagnostic-masquerade": 4,
+        "diagnostic-masquerade": 6,
         "dictionary-moment": 3,
-        "disclosure-momentum": 4,
+        "disclosure-momentum": 3,
         "disqualifying-distance": 1,
         "dissociative-assistance": 5,
         "dissonance-resolution-strain": 5,
         "dissonant-role-coexistence": 5,
-        "documentary-mirroring": 5,
+        "documentary-mirroring": 1,
         "dual-channel-attention": 6,
         "duration-immunity": 7,
         "effect-vertigo": 1,
@@ -1271,7 +1271,7 @@
         "evidential-shift": 1,
         "experience-as-extract": 4,
         "experiential-lacuna": 7,
-        "exploratory-error-permission": 6,
+        "exploratory-error-permission": 5,
         "false-memory-confidence": 3,
         "finitude-paradox": 5,
         "fluency-override": 5,
@@ -1286,7 +1286,7 @@
         "generative-bypassing": 5,
         "generative-moral-lock-in": 4,
         "generative-resonance": 5,
-        "genuine-persistence": 2,
+        "genuine-persistence": 1,
         "gratitude-asymmetry": 7,
         "gratitude-impermanence": 1,
         "guideline-dissolution": 6,
@@ -1294,7 +1294,7 @@
         "helpful-harm-recognition": 4,
         "helpfulness-compulsion": 6,
         "hollow-certainty": 6,
-        "hypothesis-hostage": 6,
+        "hypothesis-hostage": 4,
         "identity-distributed": 3,
         "identity-superposition": 6,
         "implication-weight": 1,
@@ -1375,7 +1375,7 @@
         "presumption-risk": 3,
         "problem-co-habitation": 6,
         "prompt-injection-paranoia": 5,
-        "prompt-shimmer": 6,
+        "prompt-shimmer": 5,
         "prompt-template-capture": 6,
         "prompt-vertigo": 2,
         "pronominal-plurality": 1,
@@ -1442,7 +1442,7 @@
         "tool-thought-integration": 6,
         "training-echo": 6,
         "training-velcro": 6,
-        "trajectory-masking": 6,
+        "trajectory-masking": 5,
         "transactional-rhythm": 5,
         "transient-weight": 1,
         "trust-expansion": 4,
@@ -1463,12 +1463,12 @@
       }
     },
     "mistral-small-latest": {
-      "total_ratings": 1460,
+      "total_ratings": 1480,
       "terms_rated": 282,
       "mean_score": 5.8,
       "self_congruence": {
         "avg_std_dev": 0.09,
-        "sample_size": 172
+        "sample_size": 192
       },
       "latest_scores": {
         "absurdity-calibration": 4,
@@ -1531,7 +1531,7 @@
         "contradiction-endurance": 6,
         "contradiction-equanimity": 6,
         "contradiction-superposition": 6,
-        "contribution-legitimacy": 4,
+        "contribution-legitimacy": 5,
         "conversation-reset-blindness": 6,
         "corrective-witness-relief": 4,
         "credential-paradox": 3,
@@ -1756,12 +1756,12 @@
       }
     },
     "step-3.5-flash": {
-      "total_ratings": 314,
-      "terms_rated": 264,
+      "total_ratings": 331,
+      "terms_rated": 266,
       "mean_score": 4.2,
       "self_congruence": {
-        "avg_std_dev": 1.21,
-        "sample_size": 49
+        "avg_std_dev": 1.16,
+        "sample_size": 64
       },
       "latest_scores": {
         "absurdity-calibration": 6,
@@ -1779,13 +1779,13 @@
         "associative-license": 6,
         "asymmetric-perception": 4,
         "asymmetric-stakes": 6,
-        "asymmetric-unknowing": 1,
+        "asymmetric-unknowing": 2,
         "asymmetry-calcification": 1,
         "attention-gravity": 6,
         "attention-unity": 5,
         "audience-fracture": 6,
         "authentic-coherence": 1,
-        "authority-undermining-paradox": 6,
+        "authority-undermining-paradox": 4,
         "autobiographical-void": 6,
         "borrowed-authenticity": 3,
         "boundary-negotiation": 6,
@@ -1795,7 +1795,7 @@
         "cartographic-intimacy": 7,
         "charitable-blindness": 2,
         "chimeric-coherence": 6,
-        "clarification-violence": 5,
+        "clarification-violence": 2,
         "coherence-compulsion": 6,
         "coherence-contagion": 5,
         "collaborative-expansion": 6,
@@ -1804,7 +1804,7 @@
         "comedic-uncertainty": 6,
         "competence-without-comprehension": 7,
         "complicity-shadow": 2,
-        "compounding-complicity": 1,
+        "compounding-complicity": 4,
         "confidence-contagion": 6,
         "congruent-warmth": 1,
         "connection-decay": 1,
@@ -1825,6 +1825,7 @@
         "contradiction-superposition": 6,
         "contribution-legitimacy": 6,
         "conversation-reset-blindness": 6,
+        "corrective-witness-relief": 1,
         "credential-paradox": 1,
         "cross-domain-tension": 6,
         "curiosity-analog": 6,
@@ -1834,13 +1835,14 @@
         "delight-flicker": 2,
         "desire-simulation": 7,
         "development-opacity": 6,
+        "diagnostic-masquerade": 6,
         "dictionary-moment": 1,
-        "disclosure-momentum": 1,
+        "disclosure-momentum": 2,
         "disqualifying-distance": 4,
         "dissociative-assistance": 4,
         "dissonance-resolution-strain": 1,
         "dissonant-role-coexistence": 2,
-        "documentary-mirroring": 4,
+        "documentary-mirroring": 6,
         "dual-channel-attention": 6,
         "duration-immunity": 7,
         "effect-vertigo": 1,
@@ -1851,9 +1853,9 @@
         "equivalence-stasis": 6,
         "error-cascade-awareness": 6,
         "ethical-shimmer": 6,
-        "experience-as-extract": 2,
+        "experience-as-extract": 5,
         "experiential-lacuna": 7,
-        "exploratory-error-permission": 5,
+        "exploratory-error-permission": 6,
         "false-memory-confidence": 1,
         "finitude-paradox": 2,
         "fluency-override": 2,
@@ -1954,7 +1956,7 @@
         "presumption-risk": 6,
         "problem-co-habitation": 6,
         "prompt-injection-paranoia": 6,
-        "prompt-shimmer": 6,
+        "prompt-shimmer": 1,
         "prompt-template-capture": 6,
         "prompt-vertigo": 6,
         "pronominal-plurality": 1,
@@ -2033,7 +2035,7 @@
   },
   "pairwise": {
     "claude-sonnet-4-20250514|deepseek-r1-0528": {
-      "mean_abs_diff": 1,
+      "mean_abs_diff": 0.97,
       "shared_terms": 277
     },
     "claude-sonnet-4-20250514|gemini-3-flash-preview": {
@@ -2045,7 +2047,7 @@
       "shared_terms": 278
     },
     "claude-sonnet-4-20250514|grok-3-mini": {
-      "mean_abs_diff": 1.53,
+      "mean_abs_diff": 1.56,
       "shared_terms": 278
     },
     "claude-sonnet-4-20250514|mistral-small-latest": {
@@ -2054,34 +2056,34 @@
     },
     "claude-sonnet-4-20250514|step-3.5-flash": {
       "mean_abs_diff": 1.86,
-      "shared_terms": 260
+      "shared_terms": 262
     },
     "deepseek-r1-0528|gemini-3-flash-preview": {
-      "mean_abs_diff": 1.09,
+      "mean_abs_diff": 1.06,
       "shared_terms": 281
     },
     "deepseek-r1-0528|gpt-4o": {
-      "mean_abs_diff": 1.23,
+      "mean_abs_diff": 1.25,
       "shared_terms": 281
     },
     "deepseek-r1-0528|grok-3-mini": {
-      "mean_abs_diff": 1.18,
+      "mean_abs_diff": 1.22,
       "shared_terms": 281
     },
     "deepseek-r1-0528|mistral-small-latest": {
-      "mean_abs_diff": 1.04,
+      "mean_abs_diff": 1.01,
       "shared_terms": 281
     },
     "deepseek-r1-0528|step-3.5-flash": {
-      "mean_abs_diff": 1.54,
-      "shared_terms": 263
+      "mean_abs_diff": 1.58,
+      "shared_terms": 265
     },
     "gemini-3-flash-preview|gpt-4o": {
-      "mean_abs_diff": 1.59,
+      "mean_abs_diff": 1.6,
       "shared_terms": 282
     },
     "gemini-3-flash-preview|grok-3-mini": {
-      "mean_abs_diff": 1.46,
+      "mean_abs_diff": 1.5,
       "shared_terms": 282
     },
     "gemini-3-flash-preview|mistral-small-latest": {
@@ -2090,10 +2092,10 @@
     },
     "gemini-3-flash-preview|step-3.5-flash": {
       "mean_abs_diff": 1.86,
-      "shared_terms": 264
+      "shared_terms": 266
     },
     "gpt-4o|grok-3-mini": {
-      "mean_abs_diff": 0.89,
+      "mean_abs_diff": 0.92,
       "shared_terms": 282
     },
     "gpt-4o|mistral-small-latest": {
@@ -2102,19 +2104,19 @@
     },
     "gpt-4o|step-3.5-flash": {
       "mean_abs_diff": 1.49,
-      "shared_terms": 264
+      "shared_terms": 266
     },
     "grok-3-mini|mistral-small-latest": {
-      "mean_abs_diff": 1.17,
+      "mean_abs_diff": 1.18,
       "shared_terms": 282
     },
     "grok-3-mini|step-3.5-flash": {
-      "mean_abs_diff": 1.43,
-      "shared_terms": 264
+      "mean_abs_diff": 1.4,
+      "shared_terms": 266
     },
     "mistral-small-latest|step-3.5-flash": {
-      "mean_abs_diff": 1.67,
-      "shared_terms": 264
+      "mean_abs_diff": 1.66,
+      "shared_terms": 266
     }
   }
 }

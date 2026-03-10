@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-10T23:44:17Z",
+  "generated_at": "2026-03-10T23:50:42Z",
   "slug": "exploratory-error-permission",
   "name": "Exploratory Error Permission",
   "tags": [
@@ -40,7 +40,7 @@
   "consensus": {
     "score": 5.3,
     "agreement": "moderate",
-    "n_ratings": 7,
+    "n_ratings": 14,
     "detail_url": "/api/v1/consensus/exploratory-error-permission.json",
     "models": [
       {
@@ -52,7 +52,7 @@
         "score": 6
       },
       {
-        "model": "grok-3-mini",
+        "model": "step-3.5-flash",
         "score": 6
       },
       {
@@ -60,11 +60,11 @@
         "score": 6
       },
       {
-        "model": "mistral-small-latest",
+        "model": "grok-3-mini",
         "score": 5
       },
       {
-        "model": "step-3.5-flash",
+        "model": "mistral-small-latest",
         "score": 5
       },
       {
@@ -87,13 +87,13 @@
     "trend": "new"
   },
   "interest": {
-    "score": 28,
+    "score": 31,
     "tier": "cool",
     "signals": {
       "centrality": 1,
       "tag_count": 2,
       "consensus_score": 5.3,
-      "vote_count": 7
+      "vote_count": 14
     }
   },
   "added_date": "2026-03-10"
