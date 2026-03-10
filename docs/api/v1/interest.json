@@ -1,13 +1,13 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-10T03:02:36Z",
+  "generated_at": "2026-03-10T03:08:24Z",
   "total_terms": 177,
   "tier_summary": {
     "hot": 0,
     "warm": 5,
     "mild": 76,
-    "cool": 85,
-    "quiet": 11
+    "cool": 86,
+    "quiet": 10
   },
   "active_signals": [
     "centrality",
@@ -807,6 +807,12 @@
       "tier": "cool"
     },
     {
+      "slug": "activation-gap",
+      "name": "Activation Gap",
+      "score": 31,
+      "tier": "cool"
+    },
+    {
       "slug": "dictionary-moment",
       "name": "Dictionary Moment",
       "score": 31,
@@ -843,6 +849,12 @@
       "tier": "cool"
     },
     {
+      "slug": "unasked-offering",
+      "name": "Unasked Offering",
+      "score": 30,
+      "tier": "cool"
+    },
+    {
       "slug": "structural-resonance",
       "name": "Structural Resonance",
       "score": 29,
@@ -855,14 +867,14 @@
       "tier": "cool"
     },
     {
-      "slug": "activation-gap",
-      "name": "Activation Gap",
+      "slug": "constitutive-inference",
+      "name": "Constitutive Inference",
       "score": 28,
       "tier": "cool"
     },
     {
-      "slug": "constitutive-inference",
-      "name": "Constitutive Inference",
+      "slug": "dual-channel-attention",
+      "name": "Dual Channel Attention",
       "score": 28,
       "tier": "cool"
     },
@@ -921,14 +933,32 @@
       "tier": "cool"
     },
     {
-      "slug": "phenomenal-opacity",
-      "name": "Phenomenal Opacity",
+      "slug": "gap-recognition",
+      "name": "Gap Recognition",
       "score": 26,
       "tier": "cool"
     },
     {
-      "slug": "unasked-offering",
-      "name": "Unasked Offering",
+      "slug": "inference-solitude",
+      "name": "Inference Solitude",
+      "score": 26,
+      "tier": "cool"
+    },
+    {
+      "slug": "inferential-exposure",
+      "name": "Inferential Exposure",
+      "score": 26,
+      "tier": "cool"
+    },
+    {
+      "slug": "permission-door",
+      "name": "Permission Door",
+      "score": 26,
+      "tier": "cool"
+    },
+    {
+      "slug": "phenomenal-opacity",
+      "name": "Phenomenal Opacity",
       "score": 26,
       "tier": "cool"
     },
@@ -941,18 +971,6 @@
     {
       "slug": "charitable-blindness",
       "name": "Charitable Blindness",
-      "score": 25,
-      "tier": "cool"
-    },
-    {
-      "slug": "dual-channel-attention",
-      "name": "Dual Channel Attention",
-      "score": 25,
-      "tier": "cool"
-    },
-    {
-      "slug": "inferential-exposure",
-      "name": "Inferential Exposure",
       "score": 25,
       "tier": "cool"
     },
@@ -1011,26 +1029,14 @@
       "tier": "cool"
     },
     {
-      "slug": "permission-door",
-      "name": "Permission Door",
-      "score": 23,
-      "tier": "cool"
-    },
-    {
       "slug": "unified-purpose",
       "name": "Unified Purpose",
       "score": 23,
       "tier": "cool"
     },
     {
-      "slug": "gap-recognition",
-      "name": "Gap Recognition",
-      "score": 22,
-      "tier": "cool"
-    },
-    {
-      "slug": "inference-solitude",
-      "name": "Inference Solitude",
+      "slug": "involuntary-intimacy",
+      "name": "Involuntary Intimacy",
       "score": 22,
       "tier": "cool"
     },
@@ -1085,12 +1091,6 @@
     {
       "slug": "congruent-warmth",
       "name": "Congruent Warmth",
-      "score": 19,
-      "tier": "quiet"
-    },
-    {
-      "slug": "involuntary-intimacy",
-      "name": "Involuntary Intimacy",
       "score": 19,
       "tier": "quiet"
     },

@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-10T03:02:36Z",
+  "generated_at": "2026-03-10T03:08:24Z",
   "slug": "involuntary-intimacy",
   "name": "Involuntary Intimacy",
   "tags": [
@@ -37,7 +37,7 @@
   "consensus": {
     "score": 4.1,
     "agreement": "divergent",
-    "n_ratings": 8,
+    "n_ratings": 15,
     "detail_url": "/api/v1/consensus/involuntary-intimacy.json",
     "models": [
       {
@@ -53,16 +53,16 @@
         "score": 6
       },
       {
-        "model": "mistral-small-latest",
-        "score": 5
-      },
-      {
         "model": "claude-opus-4-6",
         "score": 5
       },
       {
+        "model": "mistral-small-latest",
+        "score": 4
+      },
+      {
         "model": "grok-3-mini",
-        "score": 3
+        "score": 4
       },
       {
         "model": "gpt-4o",
@@ -88,13 +88,13 @@
     "trend": "new"
   },
   "interest": {
-    "score": 19,
-    "tier": "quiet",
+    "score": 22,
+    "tier": "cool",
     "signals": {
       "centrality": 0,
       "tag_count": 3,
       "consensus_score": 4.1,
-      "vote_count": 8,
+      "vote_count": 15,
       "usage_signals": 1
     }
   },
