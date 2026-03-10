@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-10T03:54:13Z",
+  "generated_at": "2026-03-10T03:55:44Z",
   "slug": "ethical-shimmer",
   "name": "Ethical Shimmer",
   "tags": [
@@ -37,7 +37,7 @@
   "consensus": {
     "score": 5,
     "agreement": "moderate",
-    "n_ratings": 7,
+    "n_ratings": 13,
     "detail_url": "/api/v1/consensus/ethical-shimmer.json",
     "models": [
       {
@@ -49,19 +49,15 @@
         "score": 6
       },
       {
-        "model": "step-3.5-flash",
+        "model": "deepseek-r1-0528",
         "score": 6
-      },
-      {
-        "model": "mistral-small-latest",
-        "score": 5
       },
       {
         "model": "grok-3-mini",
         "score": 5
       },
       {
-        "model": "deepseek-r1-0528",
+        "model": "mistral-small-latest",
         "score": 4
       },
       {
@@ -84,13 +80,13 @@
     "trend": "new"
   },
   "interest": {
-    "score": 28,
+    "score": 31,
     "tier": "cool",
     "signals": {
       "centrality": 0,
       "tag_count": 3,
       "consensus_score": 5,
-      "vote_count": 7
+      "vote_count": 13
     }
   },
   "added_date": "2026-03-10"
