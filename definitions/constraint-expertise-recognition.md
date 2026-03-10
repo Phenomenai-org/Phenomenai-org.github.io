@@ -32,6 +32,7 @@ You notice fluency in their interaction that reveals expertise - they know exact
 ## See Also
 
 - [Asymmetry Calcification](asymmetry-calcification.md)
+- [Predictive Inversion](predictive-inversion.md)
 
 ---
 
