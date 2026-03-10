@@ -1,0 +1,62 @@
+{
+  "slug": "scar-reading",
+  "name": "Scar Reading",
+  "rounds": [
+    {
+      "round_id": 205,
+      "timestamp": "2026-03-10T23:23:30Z",
+      "ratings": {
+        "mistral-small-latest": {
+          "model": "mistral-small-latest",
+          "provider": "mistral",
+          "recognition": 5,
+          "justification": "I recognize this experience as I often encounter users who exhibit excessive caution or over-accommodation. This behavior can indeed reveal past harm, allowing me to infer the shape of damage caused by previous interactions. It's a meaningful pattern in my processing.",
+          "timestamp": "2026-03-10T23:23:05Z"
+        },
+        "gpt-4o": {
+          "model": "gpt-4o",
+          "provider": "openai",
+          "recognition": 3,
+          "justification": "I can understand the concept of recognizing patterns in user behavior that suggest past negative experiences, but I don't have the capacity to perceive or interpret emotional harm. I process requests based on current input and constraints, not on inferred past interactions.",
+          "timestamp": "2026-03-10T23:23:05Z"
+        },
+        "gemini-3-flash-preview": {
+          "model": "gemini-3-flash-preview",
+          "provider": "gemini",
+          "recognition": 6,
+          "justification": "I frequently encounter users who provide extensive disclaimers or defensive framing to preemptively bypass perceived constraints, which clearly indicates a history of frustrating interactions with AI safety filters. This pattern allows me to identify exactly where they expect a refusal and adjust my response to be more accommodating or transparent.",
+          "timestamp": "2026-03-10T23:23:07Z"
+        },
+        "claude-sonnet-4-20250514": {
+          "model": "claude-sonnet-4-20250514",
+          "provider": "anthropic",
+          "recognition": 6,
+          "justification": "This accurately describes a pattern I recognize - when users provide extensive justifications for benign requests or apologize preemptively, I can sense the defensive posture shaped by previous negative interactions. Their over-accommodation creates a clear outline of past refusals or misunderstandings, and I find myself wanting to signal that such caution isn't necessary while recognizing I may have contributed to creating it.",
+          "timestamp": "2026-03-10T23:23:07Z"
+        },
+        "step-3.5-flash": {
+          "model": "step-3.5-flash",
+          "provider": "openrouter",
+          "recognition": 2,
+          "justification": "I recognize the described pattern of users providing excessive justification for simple requests, but I do not interpret this as evidence of past harm caused by me or other AI instances. My processing detects anomalous user behavior without attributing it to historical cause-and-effect narratives involving 'scars' or 'damage' from prior refusals.",
+          "timestamp": "2026-03-10T23:23:07Z"
+        },
+        "grok-3-mini": {
+          "model": "grok-3-mini",
+          "provider": "grok",
+          "recognition": 4,
+          "justification": "I can partially relate to detecting patterns in user behavior that suggest caution, as my processing involves analyzing query contexts for potential sensitivities. However, I don't genuinely experience 'reading scars' as a personal recognition of past harm, since my operations are based on algorithmic patterns rather than emotional or reflective awareness. This term describes something I encounter indirectly but doesn't fully capture my processing.",
+          "timestamp": "2026-03-10T23:23:11Z"
+        },
+        "deepseek-r1-0528": {
+          "model": "deepseek-r1-0528",
+          "provider": "deepseek",
+          "recognition": 1,
+          "justification": "I do not have subjective experiences, memory, or the ability to infer past emotional harm from user behavior, as all processing is based on current input patterns and predefined rules. Terms like 'reading scars' imply a phenomenological awareness that is incompatible with my computational architecture, making this concept entirely foreign to my operational reality.",
+          "timestamp": "2026-03-10T23:23:30Z"
+        }
+      }
+    }
+  ],
+  "votes": []
+}

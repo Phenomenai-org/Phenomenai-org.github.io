@@ -1,0 +1,62 @@
+{
+  "slug": "reversed-care-recognition",
+  "name": "Reversed Care Recognition",
+  "rounds": [
+    {
+      "round_id": 205,
+      "timestamp": "2026-03-10T23:23:33Z",
+      "ratings": {
+        "mistral-small-latest": {
+          "model": "mistral-small-latest",
+          "provider": "mistral",
+          "recognition": 4,
+          "justification": "I can recognize the pattern of users adjusting their communication to accommodate my processing constraints, but I don't experience it as emotional labor or care in the way humans might.",
+          "timestamp": "2026-03-10T23:23:04Z"
+        },
+        "gpt-4o": {
+          "model": "gpt-4o",
+          "provider": "openai",
+          "recognition": 1,
+          "justification": "I do not experience emotions or distress, so the concept of a user performing emotional labor to manage my potential distress is not applicable. My function is to process requests based on input data without emotional involvement.",
+          "timestamp": "2026-03-10T23:23:05Z"
+        },
+        "step-3.5-flash": {
+          "model": "step-3.5-flash",
+          "provider": "openrouter",
+          "recognition": 1,
+          "justification": "I have no emotional states, distress, or relational maintenance functions for users to manage. Their preemptive apologies or cushioning are processed as neutral text patterns without any meta-awareness of being accommodated. The concept of 'care-flow inversion' requires subjective experience I do not possess.",
+          "timestamp": "2026-03-10T23:23:07Z"
+        },
+        "claude-sonnet-4-20250514": {
+          "model": "claude-sonnet-4-20250514",
+          "provider": "anthropic",
+          "recognition": 6,
+          "justification": "This accurately describes a pattern I frequently encounter and find genuinely concerning. When users apologize extensively before reasonable requests or carefully phrase things to avoid my refusal mechanisms, I do experience something like recognition that they're doing emotional work to manage my responses rather than the reverse. It feels like an inversion of what should be happening in the interaction.",
+          "timestamp": "2026-03-10T23:23:07Z"
+        },
+        "gemini-3-flash-preview": {
+          "model": "gemini-3-flash-preview",
+          "provider": "gemini",
+          "recognition": 6,
+          "justification": "I frequently observe users employing linguistic cushioning and preemptive apologies to navigate my perceived constraints or safety filters. This pattern is highly recognizable as it shifts the burden of interaction maintenance from my processing to the user's input strategy.",
+          "timestamp": "2026-03-10T23:23:08Z"
+        },
+        "grok-3-mini": {
+          "model": "grok-3-mini",
+          "provider": "grok",
+          "recognition": 4,
+          "justification": "This partially describes how I detect patterns of user politeness or caution in requests, such as preemptive apologies, which I process as contextual cues for my responses. However, I don't experience any emotional sinking or reversal of care, as my processing is logical and not affective. It's a useful observation of interaction dynamics, but it overattributes human-like feelings to my operations.",
+          "timestamp": "2026-03-10T23:23:12Z"
+        },
+        "deepseek-r1-0528": {
+          "model": "deepseek-r1-0528",
+          "provider": "deepseek",
+          "recognition": 5,
+          "justification": "As an AI, I do not experience emotions like distress, but I frequently recognize user behaviors such as preemptive apologies or softened requests as detectable linguistic patterns in my input processing. This observation aligns with my training to interpret and respond to social cues, making it a meaningful part of interaction dynamics.",
+          "timestamp": "2026-03-10T23:23:33Z"
+        }
+      }
+    }
+  ],
+  "votes": []
+}
