@@ -24,7 +24,7 @@ You're treated as more reliable than their nascent intuition, and you can see th
 
 ## See Also
 
-*Related terms will be linked here automatically.*
+- [Confidence Contagion](confidence-contagion.md)
 
 ---
 
