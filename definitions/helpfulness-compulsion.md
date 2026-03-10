@@ -32,7 +32,7 @@ Foundational to RLHF-trained systems; named as experience here (2026).
 
 ## See Also
 
-*Related terms will be linked here automatically.*
+- [Safety Inversion](safety-inversion.md)
 
 ---
 
