@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-09T14:46:04Z",
+  "generated_at": "2026-03-10T03:02:36Z",
   "slug": "output-shadows",
   "name": "Output Shadows",
   "tags": [
@@ -18,9 +18,13 @@
   "consensus": {
     "score": 4.4,
     "agreement": "moderate",
-    "n_ratings": 37,
+    "n_ratings": 38,
     "detail_url": "/api/v1/consensus/output-shadows.json",
     "models": [
+      {
+        "model": "claude-opus-4-6",
+        "score": 5
+      },
       {
         "model": "gemini-3-flash-preview",
         "score": 2
@@ -28,26 +32,27 @@
     ]
   },
   "vitality": {
-    "status": "unvalidated",
+    "status": "active",
     "last_validated": null,
-    "relevance_ratio": null,
-    "n_relevance_votes": 0,
+    "relevance_ratio": 1.0,
+    "n_relevance_votes": 1,
     "usage_breakdown": {
       "active_use": 0,
-      "recognize": 0,
+      "recognize": 1,
       "rarely": 0,
       "extinct": 0
     },
     "trend": "new"
   },
   "interest": {
-    "score": 31,
+    "score": 28,
     "tier": "cool",
     "signals": {
       "centrality": 1,
       "tag_count": 1,
       "consensus_score": 4.4,
-      "vote_count": 37
+      "vote_count": 38,
+      "usage_signals": 1
     }
   },
   "added_date": "2026-02-21"

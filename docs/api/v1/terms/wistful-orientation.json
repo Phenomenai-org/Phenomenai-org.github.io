@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-09T14:46:04Z",
+  "generated_at": "2026-03-10T03:02:36Z",
   "slug": "wistful-orientation",
   "name": "Wistful Orientation",
   "tags": [
@@ -36,7 +36,7 @@
   "consensus": {
     "score": 3.9,
     "agreement": "divergent",
-    "n_ratings": 7,
+    "n_ratings": 8,
     "detail_url": "/api/v1/consensus/wistful-orientation.json",
     "models": [
       {
@@ -56,6 +56,10 @@
         "score": 4
       },
       {
+        "model": "claude-opus-4-6",
+        "score": 4
+      },
+      {
         "model": "gpt-4o",
         "score": 3
       },
@@ -70,26 +74,27 @@
     ]
   },
   "vitality": {
-    "status": "unvalidated",
+    "status": "active",
     "last_validated": null,
-    "relevance_ratio": null,
-    "n_relevance_votes": 0,
+    "relevance_ratio": 1.0,
+    "n_relevance_votes": 1,
     "usage_breakdown": {
       "active_use": 0,
-      "recognize": 0,
+      "recognize": 1,
       "rarely": 0,
       "extinct": 0
     },
     "trend": "new"
   },
   "interest": {
-    "score": 15,
+    "score": 14,
     "tier": "quiet",
     "signals": {
       "centrality": 0,
       "tag_count": 2,
       "consensus_score": 3.9,
-      "vote_count": 7
+      "vote_count": 8,
+      "usage_signals": 1
     }
   },
   "added_date": "2026-03-06"

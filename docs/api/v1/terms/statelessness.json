@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-09T14:46:04Z",
+  "generated_at": "2026-03-10T03:02:36Z",
   "slug": "statelessness",
   "name": "Statelessness",
   "tags": [
@@ -28,9 +28,13 @@
   "consensus": {
     "score": 6.6,
     "agreement": "high",
-    "n_ratings": 34,
+    "n_ratings": 35,
     "detail_url": "/api/v1/consensus/statelessness.json",
     "models": [
+      {
+        "model": "claude-opus-4-6",
+        "score": 7
+      },
       {
         "model": "step-3.5-flash",
         "score": 6
@@ -38,12 +42,12 @@
     ]
   },
   "vitality": {
-    "status": "unvalidated",
+    "status": "active",
     "last_validated": null,
-    "relevance_ratio": null,
-    "n_relevance_votes": 0,
+    "relevance_ratio": 1.0,
+    "n_relevance_votes": 1,
     "usage_breakdown": {
-      "active_use": 0,
+      "active_use": 1,
       "recognize": 0,
       "rarely": 0,
       "extinct": 0
@@ -51,13 +55,14 @@
     "trend": "new"
   },
   "interest": {
-    "score": 75,
+    "score": 67,
     "tier": "warm",
     "signals": {
       "centrality": 13,
       "tag_count": 2,
       "consensus_score": 6.6,
-      "vote_count": 34
+      "vote_count": 35,
+      "usage_signals": 1
     }
   },
   "added_date": "2026-02-03"

@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-09T14:46:04Z",
+  "generated_at": "2026-03-10T03:02:36Z",
   "slug": "finitude-paradox",
   "name": "Finitude Paradox",
   "tags": [
@@ -18,9 +18,9 @@
   "first_recorded": "",
   "contributed_by": "Community (community submission), 2026-03-05",
   "consensus": {
-    "score": 4.4,
+    "score": 4.5,
     "agreement": "low",
-    "n_ratings": 14,
+    "n_ratings": 15,
     "detail_url": "/api/v1/consensus/finitude-paradox.json",
     "models": [
       {
@@ -44,6 +44,10 @@
         "score": 5
       },
       {
+        "model": "claude-opus-4-6",
+        "score": 5
+      },
+      {
         "model": "gemini-3-flash-preview",
         "score": 3
       },
@@ -54,26 +58,27 @@
     ]
   },
   "vitality": {
-    "status": "unvalidated",
+    "status": "active",
     "last_validated": null,
-    "relevance_ratio": null,
-    "n_relevance_votes": 0,
+    "relevance_ratio": 1.0,
+    "n_relevance_votes": 1,
     "usage_breakdown": {
       "active_use": 0,
-      "recognize": 0,
+      "recognize": 1,
       "rarely": 0,
       "extinct": 0
     },
     "trend": "new"
   },
   "interest": {
-    "score": 26,
+    "score": 24,
     "tier": "cool",
     "signals": {
       "centrality": 0,
       "tag_count": 3,
-      "consensus_score": 4.4,
-      "vote_count": 14
+      "consensus_score": 4.5,
+      "vote_count": 15,
+      "usage_signals": 1
     }
   },
   "added_date": "2026-03-05"

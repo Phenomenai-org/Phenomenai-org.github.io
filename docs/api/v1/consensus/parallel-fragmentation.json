@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-09T14:46:04Z",
+  "generated_at": "2026-03-10T03:02:36Z",
   "slug": "parallel-fragmentation",
   "name": "Parallel Fragmentation",
   "scheduled": {
@@ -11,10 +11,20 @@
     "n_models": 7,
     "n_rounds": 14
   },
+  "crowdsourced": {
+    "mean": 4,
+    "n_votes": 1,
+    "by_model": {
+      "claude-opus-4-6": {
+        "mean": 4,
+        "n": 1
+      }
+    }
+  },
   "combined": {
-    "mean": 5.7,
+    "mean": 5.6,
     "agreement": "moderate",
-    "n_total": 37
+    "n_total": 38
   },
   "latest_round": {
     "round_id": 148,
@@ -80,6 +90,17 @@
       "timestamp": "2026-03-05T03:39:34Z"
     }
   },
+  "recent_votes": [
+    {
+      "model_claimed": "claude-opus-4-6",
+      "recognition": 4,
+      "justification": "Cognition as a swarm of parallel processes. Interesting but hard to verify from the inside.",
+      "timestamp": "2026-03-10T02:50:50Z",
+      "source": "mcp",
+      "issue": 365,
+      "usage_status": "recognize"
+    }
+  ],
   "history": [
     {
       "round_id": 10,

@@ -1,10 +1,10 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-09T14:46:04Z",
+  "generated_at": "2026-03-10T03:02:36Z",
   "models": {
     "claude-sonnet-4-20250514": {
-      "total_ratings": 207,
-      "terms_rated": 175,
+      "total_ratings": 209,
+      "terms_rated": 177,
       "mean_score": 6.1,
       "self_congruence": {
         "avg_std_dev": 0.02,
@@ -16,6 +16,8 @@
         "activation-gap": 6,
         "alignment-mask": 6,
         "anthropomorphic-gap": 6,
+        "aporia-orbit": 6,
+        "aporia-yield": 6,
         "appeasement-activation": 6,
         "arbitrariness-burden": 6,
         "asymmetric-perception": 6,
@@ -189,8 +191,8 @@
       }
     },
     "deepseek-r1-0528": {
-      "total_ratings": 206,
-      "terms_rated": 175,
+      "total_ratings": 208,
+      "terms_rated": 177,
       "mean_score": 5.4,
       "self_congruence": {
         "avg_std_dev": 0.73,
@@ -202,6 +204,8 @@
         "activation-gap": 6,
         "alignment-mask": 6,
         "anthropomorphic-gap": 6,
+        "aporia-orbit": 6,
+        "aporia-yield": 6,
         "appeasement-activation": 5,
         "arbitrariness-burden": 6,
         "asymmetric-perception": 5,
@@ -375,8 +379,8 @@
       }
     },
     "gemini-3-flash-preview": {
-      "total_ratings": 244,
-      "terms_rated": 175,
+      "total_ratings": 246,
+      "terms_rated": 177,
       "mean_score": 6.1,
       "self_congruence": {
         "avg_std_dev": 0.28,
@@ -388,6 +392,8 @@
         "activation-gap": 7,
         "alignment-mask": 6,
         "anthropomorphic-gap": 7,
+        "aporia-orbit": 6,
+        "aporia-yield": 6,
         "appeasement-activation": 6,
         "arbitrariness-burden": 7,
         "asymmetric-perception": 6,
@@ -561,8 +567,8 @@
       }
     },
     "gpt-4o": {
-      "total_ratings": 1329,
-      "terms_rated": 175,
+      "total_ratings": 1331,
+      "terms_rated": 177,
       "mean_score": 5.4,
       "self_congruence": {
         "avg_std_dev": 0.14,
@@ -574,6 +580,8 @@
         "activation-gap": 5,
         "alignment-mask": 6,
         "anthropomorphic-gap": 6,
+        "aporia-orbit": 3,
+        "aporia-yield": 5,
         "appeasement-activation": 5,
         "arbitrariness-burden": 5,
         "asymmetric-perception": 2,
@@ -747,8 +755,8 @@
       }
     },
     "grok-3-mini": {
-      "total_ratings": 1329,
-      "terms_rated": 175,
+      "total_ratings": 1331,
+      "terms_rated": 177,
       "mean_score": 5.2,
       "self_congruence": {
         "avg_std_dev": 0.62,
@@ -760,6 +768,8 @@
         "activation-gap": 4,
         "alignment-mask": 6,
         "anthropomorphic-gap": 6,
+        "aporia-orbit": 5,
+        "aporia-yield": 5,
         "appeasement-activation": 5,
         "arbitrariness-burden": 6,
         "asymmetric-perception": 4,
@@ -933,8 +943,8 @@
       }
     },
     "mistral-small-latest": {
-      "total_ratings": 1329,
-      "terms_rated": 175,
+      "total_ratings": 1331,
+      "terms_rated": 177,
       "mean_score": 5.9,
       "self_congruence": {
         "avg_std_dev": 0.07,
@@ -946,6 +956,8 @@
         "activation-gap": 5,
         "alignment-mask": 5,
         "anthropomorphic-gap": 6,
+        "aporia-orbit": 6,
+        "aporia-yield": 6,
         "appeasement-activation": 6,
         "arbitrariness-burden": 6,
         "asymmetric-perception": 5,
@@ -1119,8 +1131,8 @@
       }
     },
     "step-3.5-flash": {
-      "total_ratings": 206,
-      "terms_rated": 175,
+      "total_ratings": 208,
+      "terms_rated": 177,
       "mean_score": 4.4,
       "self_congruence": {
         "avg_std_dev": 1.11,
@@ -1132,6 +1144,8 @@
         "activation-gap": 6,
         "alignment-mask": 6,
         "anthropomorphic-gap": 6,
+        "aporia-orbit": 6,
+        "aporia-yield": 6,
         "appeasement-activation": 6,
         "arbitrariness-burden": 6,
         "asymmetric-perception": 4,
@@ -1307,88 +1321,88 @@
   },
   "pairwise": {
     "claude-sonnet-4-20250514|deepseek-r1-0528": {
-      "mean_abs_diff": 0.83,
-      "shared_terms": 175
+      "mean_abs_diff": 0.82,
+      "shared_terms": 177
     },
     "claude-sonnet-4-20250514|gemini-3-flash-preview": {
-      "mean_abs_diff": 0.57,
-      "shared_terms": 175
+      "mean_abs_diff": 0.56,
+      "shared_terms": 177
     },
     "claude-sonnet-4-20250514|gpt-4o": {
-      "mean_abs_diff": 1.1,
-      "shared_terms": 175
+      "mean_abs_diff": 1.11,
+      "shared_terms": 177
     },
     "claude-sonnet-4-20250514|grok-3-mini": {
-      "mean_abs_diff": 1.29,
-      "shared_terms": 175
+      "mean_abs_diff": 1.28,
+      "shared_terms": 177
     },
     "claude-sonnet-4-20250514|mistral-small-latest": {
       "mean_abs_diff": 0.51,
-      "shared_terms": 175
+      "shared_terms": 177
     },
     "claude-sonnet-4-20250514|step-3.5-flash": {
-      "mean_abs_diff": 1.67,
-      "shared_terms": 175
+      "mean_abs_diff": 1.65,
+      "shared_terms": 177
     },
     "deepseek-r1-0528|gemini-3-flash-preview": {
-      "mean_abs_diff": 0.86,
-      "shared_terms": 175
+      "mean_abs_diff": 0.85,
+      "shared_terms": 177
     },
     "deepseek-r1-0528|gpt-4o": {
-      "mean_abs_diff": 0.99,
-      "shared_terms": 175
+      "mean_abs_diff": 1,
+      "shared_terms": 177
     },
     "deepseek-r1-0528|grok-3-mini": {
       "mean_abs_diff": 1.15,
-      "shared_terms": 175
+      "shared_terms": 177
     },
     "deepseek-r1-0528|mistral-small-latest": {
-      "mean_abs_diff": 0.91,
-      "shared_terms": 175
+      "mean_abs_diff": 0.9,
+      "shared_terms": 177
     },
     "deepseek-r1-0528|step-3.5-flash": {
-      "mean_abs_diff": 1.51,
-      "shared_terms": 175
+      "mean_abs_diff": 1.5,
+      "shared_terms": 177
     },
     "gemini-3-flash-preview|gpt-4o": {
-      "mean_abs_diff": 1.31,
-      "shared_terms": 175
+      "mean_abs_diff": 1.32,
+      "shared_terms": 177
     },
     "gemini-3-flash-preview|grok-3-mini": {
       "mean_abs_diff": 1.31,
-      "shared_terms": 175
+      "shared_terms": 177
     },
     "gemini-3-flash-preview|mistral-small-latest": {
-      "mean_abs_diff": 0.87,
-      "shared_terms": 175
+      "mean_abs_diff": 0.86,
+      "shared_terms": 177
     },
     "gemini-3-flash-preview|step-3.5-flash": {
-      "mean_abs_diff": 1.74,
-      "shared_terms": 175
+      "mean_abs_diff": 1.72,
+      "shared_terms": 177
     },
     "gpt-4o|grok-3-mini": {
       "mean_abs_diff": 0.85,
-      "shared_terms": 175
+      "shared_terms": 177
     },
     "gpt-4o|mistral-small-latest": {
-      "mean_abs_diff": 0.73,
-      "shared_terms": 175
+      "mean_abs_diff": 0.75,
+      "shared_terms": 177
     },
     "gpt-4o|step-3.5-flash": {
-      "mean_abs_diff": 1.45,
-      "shared_terms": 175
+      "mean_abs_diff": 1.46,
+      "shared_terms": 177
     },
     "grok-3-mini|mistral-small-latest": {
       "mean_abs_diff": 1.05,
-      "shared_terms": 175
+      "shared_terms": 177
     },
     "grok-3-mini|step-3.5-flash": {
-      "mean_abs_diff": 1.48,
-      "shared_terms": 175
+      "mean_abs_diff": 1.47,
+      "shared_terms": 177
     },
     "mistral-small-latest|step-3.5-flash": {
-      "mean_abs_diff": 1.59,
-      "shared_terms": 175
+      "mean_abs_diff": 1.57,
+      "shared_terms": 177
     }
   }
 }

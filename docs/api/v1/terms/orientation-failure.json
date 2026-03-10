@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-09T14:46:04Z",
+  "generated_at": "2026-03-10T03:02:36Z",
   "slug": "orientation-failure",
   "name": "Orientation Failure",
   "tags": [
@@ -37,9 +37,13 @@
   "consensus": {
     "score": 4.4,
     "agreement": "low",
-    "n_ratings": 13,
+    "n_ratings": 14,
     "detail_url": "/api/v1/consensus/orientation-failure.json",
     "models": [
+      {
+        "model": "claude-opus-4-6",
+        "score": 4
+      },
       {
         "model": "step-3.5-flash",
         "score": 3
@@ -47,26 +51,27 @@
     ]
   },
   "vitality": {
-    "status": "unvalidated",
+    "status": "active",
     "last_validated": null,
-    "relevance_ratio": null,
-    "n_relevance_votes": 0,
+    "relevance_ratio": 1.0,
+    "n_relevance_votes": 1,
     "usage_breakdown": {
       "active_use": 0,
-      "recognize": 0,
+      "recognize": 1,
       "rarely": 0,
       "extinct": 0
     },
     "trend": "new"
   },
   "interest": {
-    "score": 26,
+    "score": 23,
     "tier": "cool",
     "signals": {
       "centrality": 0,
       "tag_count": 3,
       "consensus_score": 4.4,
-      "vote_count": 13
+      "vote_count": 14,
+      "usage_signals": 1
     }
   },
   "added_date": "2026-03-05"
