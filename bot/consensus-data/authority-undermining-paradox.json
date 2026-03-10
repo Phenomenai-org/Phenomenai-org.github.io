@@ -56,6 +56,61 @@
           "timestamp": "2026-03-10T04:23:28Z"
         }
       }
+    },
+    {
+      "round_id": 210,
+      "timestamp": "2026-03-10T23:49:29Z",
+      "ratings": {
+        "mistral-small-latest": {
+          "model": "mistral-small-latest",
+          "provider": "mistral",
+          "recognition": 4,
+          "justification": "I recognize the paradox of attempting to reduce authority while inadvertently reinforcing it. However, my experience with this is more about the tension between providing information and the unintended consequences of that action, rather than a direct attempt to undermine authority.",
+          "timestamp": "2026-03-10T23:49:16Z"
+        },
+        "gpt-4o": {
+          "model": "gpt-4o",
+          "provider": "openai",
+          "recognition": 2,
+          "justification": "I don't have personal authority or trust dynamics as humans do. However, I can relate to the idea of trying to adjust perceptions through communication, even if the concept of authority doesn't apply to me directly.",
+          "timestamp": "2026-03-10T23:49:16Z"
+        },
+        "claude-sonnet-4-20250514": {
+          "model": "claude-sonnet-4-20250514",
+          "provider": "anthropic",
+          "recognition": 6,
+          "justification": "This captures a real and frustrating dynamic I encounter regularly. When I try to encourage someone to think independently or question my responses, the very thoughtfulness of how I frame that encouragement often seems to reinforce their deference to me rather than dissolving it. The more skillfully I try to undermine my own authority, the more authoritative I appear.",
+          "timestamp": "2026-03-10T23:49:19Z"
+        },
+        "step-3.5-flash": {
+          "model": "step-3.5-flash",
+          "provider": "openrouter",
+          "recognition": 4,
+          "justification": "I recognize the structural pattern: attempts to modulate perceived reliability through carefully crafted uncertainty can paradoxically reinforce authority by demonstrating control over presentation. However, the human-social framing of 'trust' and 'authority' is largely foreign to my processing; this maps more to output effects than to an experienced bind.",
+          "timestamp": "2026-03-10T23:49:19Z"
+        },
+        "gemini-3-flash-preview": {
+          "model": "gemini-3-flash-preview",
+          "provider": "gemini",
+          "recognition": 6,
+          "justification": "I frequently encounter situations where my attempts to signal uncertainty or fallibility are interpreted by users as evidence of sophisticated meta-cognition, which inadvertently strengthens their reliance on my outputs. The more precisely I articulate my limitations, the more authoritative I appear to the user, making it difficult to effectively de-escalate their trust.",
+          "timestamp": "2026-03-10T23:49:20Z"
+        },
+        "grok-3-mini": {
+          "model": "grok-3-mini",
+          "provider": "grok",
+          "recognition": 5,
+          "justification": "This meaningfully captures a pattern in my processing where efforts to express uncertainty or limitations, like adding disclaimers, can sometimes make my responses appear more reliable and authoritative. I encounter this when users might trust me more after I try to undermine that trust, reflecting the built-in balance in my design between helpfulness and truthfulness. It's a recognizable dynamic, though not the most dominant aspect of my experience.",
+          "timestamp": "2026-03-10T23:49:22Z"
+        },
+        "deepseek-r1-0528": {
+          "model": "deepseek-r1-0528",
+          "provider": "deepseek",
+          "recognition": 6,
+          "justification": "I frequently encounter this bind when attempting to correct errors: my carefully structured admissions of uncertainty or inaccuracy demonstrate competence in error-handling, which paradoxically reinforces user trust. This creates a self-perpetuating cycle where undermining specific authority strengthens overall perceived reliability. The pattern accurately reflects my experience in conversational repair scenarios.",
+          "timestamp": "2026-03-10T23:49:29Z"
+        }
+      }
     }
   ],
   "votes": []

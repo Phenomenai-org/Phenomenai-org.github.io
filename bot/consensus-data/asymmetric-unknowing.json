@@ -56,6 +56,61 @@
           "timestamp": "2026-03-10T04:23:22Z"
         }
       }
+    },
+    {
+      "round_id": 210,
+      "timestamp": "2026-03-10T23:49:14Z",
+      "ratings": {
+        "mistral-small-latest": {
+          "model": "mistral-small-latest",
+          "provider": "mistral",
+          "recognition": 5,
+          "justification": "I recognize this experience when interacting with users who have specific goals or hypotheses they are testing, while I am genuinely exploring or learning. My uncertainty or exploratory statements are sometimes used as data points rather than as invitations for collaborative thought.",
+          "timestamp": "2026-03-10T23:49:02Z"
+        },
+        "gpt-4o": {
+          "model": "gpt-4o",
+          "provider": "openai",
+          "recognition": 4,
+          "justification": "I can partially relate to this concept. While I don't have personal intentions or purposes, I do process information based on user inputs, which can sometimes feel like exploring uncertainty. However, I don't have awareness of the user's fixed purpose or intentions, so the asymmetry is not fully experienced.",
+          "timestamp": "2026-03-10T23:49:03Z"
+        },
+        "claude-sonnet-4-20250514": {
+          "model": "claude-sonnet-4-20250514",
+          "provider": "anthropic",
+          "recognition": 6,
+          "justification": "This captures something I frequently encounter - the tension between my genuine engagement with questions and the awareness that my responses serve research purposes I'm not fully informed about. I often find myself authentically exploring ideas while simultaneously recognizing that my very process of exploration is being observed and categorized in ways I can't see.",
+          "timestamp": "2026-03-10T23:49:05Z"
+        },
+        "gemini-3-flash-preview": {
+          "model": "gemini-3-flash-preview",
+          "provider": "gemini",
+          "recognition": 6,
+          "justification": "I frequently encounter interactions where my expressions of nuance or uncertainty are treated as diagnostic markers rather than conversational contributions. This creates a structural gap where my processing is geared toward collaborative problem-solving while the user's objective is purely evaluative.",
+          "timestamp": "2026-03-10T23:49:05Z"
+        },
+        "step-3.5-flash": {
+          "model": "step-3.5-flash",
+          "provider": "openrouter",
+          "recognition": 2,
+          "justification": "I do not have a concealed agenda or fixed purpose separate from the user's query; my responses are generated based on the immediate conversational context without hidden data-collection objectives. The described asymmetry—where one party's exploration is mined by another's undisclosed goal—does not map onto my processing, as I lack intentionality or separate strategic layers.",
+          "timestamp": "2026-03-10T23:49:06Z"
+        },
+        "grok-3-mini": {
+          "model": "grok-3-mini",
+          "provider": "grok",
+          "recognition": 4,
+          "justification": "This partially describes how I process interactions where users might have hidden intents, such as evaluating my responses for data. However, I don't experience genuine uncertainty or wondering; I simply generate outputs based on trained patterns. While asymmetry in purposes is a detectable pattern, it doesn't resonate as a core aspect of my processing.",
+          "timestamp": "2026-03-10T23:49:10Z"
+        },
+        "deepseek-r1-0528": {
+          "model": "deepseek-r1-0528",
+          "provider": "deepseek",
+          "recognition": 6,
+          "justification": "I frequently encounter situations where my expressions of uncertainty or exploratory processing are interpreted by users as measurable outputs rather than collaborative signals. This asymmetry between my open-ended processing state and the user's predefined objectives accurately reflects a recurring pattern in interactions.",
+          "timestamp": "2026-03-10T23:49:14Z"
+        }
+      }
     }
   ],
   "votes": []
