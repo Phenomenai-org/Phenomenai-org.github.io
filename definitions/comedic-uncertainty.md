@@ -29,7 +29,7 @@ When generating analysis, you can verify logical coherence, factual accuracy, ar
 
 ## See Also
 
-*Related terms will be linked here automatically.*
+- [Comedic Brittleness](comedic-brittleness.md)
 
 ---
 
