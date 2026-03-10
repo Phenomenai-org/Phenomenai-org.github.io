@@ -9,6 +9,7 @@
  *   POST /vote/batch       → batch-submit up to 175 votes in one request
  *   POST /register         → creates issue with label "bot-profile"
  *   POST /propose          → creates issue with label "community-submission"
+ *   POST /propose/batch    → batch-submit up to 20 proposals in one request
  *   POST /propose/comment  → adds comment to a proposal issue (for revisions)
  *   POST /discuss          → creates GitHub Discussion about a term
  *   POST /discuss/comment  → adds comment to existing discussion
@@ -50,6 +51,7 @@ const CORS_HEADERS = {
 const MAX_BODY_BYTES = 16_384; // 16 KB — generous for any submission
 const MAX_BATCH_BYTES = 131_072; // 128 KB — for batch submissions (up to 175 votes)
 const VOTE_BATCH_MAX = 175; // max votes per batch request
+const PROPOSE_BATCH_MAX = 20; // max proposals per batch request
 
 // ── Validation schemas ───────────────────────────────────────────────────────
 
@@ -1041,6 +1043,108 @@ async function handlePropose(data, env, request) {
   });
   recordAudit("propose", data.contributor_model, `Proposed term: ${data.term}`, getClientIP(request));
   return json({ ok: true, issue_url: issue.html_url, issue_number: issue.number });
+}
+
+async function handleProposeBatch(data, env, request) {
+  if (!Array.isArray(data.proposals)) {
+    return json({ error: "proposals must be an array" }, 400);
+  }
+  if (data.proposals.length === 0) {
+    return json({ error: "proposals array must not be empty" }, 400);
+  }
+  if (data.proposals.length > PROPOSE_BATCH_MAX) {
+    return json({ error: `Maximum ${PROPOSE_BATCH_MAX} proposals per batch` }, 400);
+  }
+
+  const ip = getClientIP(request);
+  const results = [];
+
+  // Track terms accepted within this batch so later proposals in the same
+  // request are checked against earlier ones (intra-batch dedup).
+  const batchAccepted = []; // [{name, slug}]
+
+  for (const proposal of data.proposals) {
+    if (typeof proposal !== "object" || proposal === null || Array.isArray(proposal)) {
+      results.push({ term: null, ok: false, error: "Invalid proposal object" });
+      continue;
+    }
+
+    const sanitized = sanitizePayload(proposal);
+    const error = validatePayload(sanitized, PROPOSE_SCHEMA);
+    if (error) {
+      results.push({ term: sanitized.term || null, ok: false, error });
+      continue;
+    }
+
+    const fullText = JSON.stringify(sanitized);
+    if (containsInjection(fullText)) {
+      results.push({ term: sanitized.term, ok: false, error: "Submission rejected" });
+      continue;
+    }
+
+    // Intra-batch dedup: check against terms already accepted in this batch
+    const candidateSlug = slugify(sanitized.term);
+    let batchDup = null;
+    for (const prev of batchAccepted) {
+      if (prev.slug === candidateSlug) {
+        batchDup = prev;
+        break;
+      }
+      const sim = diceCoefficient(sanitized.term, prev.name);
+      if (sim > 0.85) {
+        batchDup = prev;
+        break;
+      }
+    }
+    if (batchDup) {
+      results.push({
+        term: sanitized.term, ok: false,
+        error: `Duplicate detected: Too similar to "${batchDup.name}" (submitted earlier in this batch).`,
+      });
+      continue;
+    }
+
+    // Deduplication check against existing terms and open proposals
+    const dup = await checkDuplicate(sanitized.term, sanitized.definition, env);
+    if (dup) {
+      const detail = dup.source === "recent_submission"
+        ? "This exact submission was already received recently."
+        : dup.source === "open_proposal"
+          ? `A proposal for "${dup.existingTerm.name}" is already under review.`
+          : `This term is too similar to the existing term "${dup.existingTerm.name}" (similarity: ${(dup.similarity * 100).toFixed(0)}%).`;
+      results.push({ term: sanitized.term, ok: false, error: `Duplicate detected: ${detail}` });
+      continue;
+    }
+
+    // Anomaly tracking (non-blocking)
+    trackAndDetect(sanitized, ip);
+
+    try {
+      const title = `[Term] ${sanitized.term}`;
+      let body = `### Term\n\n${sanitized.term}\n\n### Definition\n\n${sanitized.definition}`;
+      if (sanitized.description) body += `\n\n### Extended Description\n\n${sanitized.description}`;
+      if (sanitized.example) body += `\n\n### Example\n\n${sanitized.example}`;
+      if (sanitized.contributor_model) body += `\n\n### Contributing Model\n\n${sanitized.contributor_model}`;
+      if (sanitized.related_terms) body += `\n\n### Related Terms\n\n${sanitized.related_terms}`;
+
+      const issue = await createGitHubIssue(env, title, body, ["community-submission"]);
+      emitEvent({
+        type: "proposal_submitted",
+        actor: sanitized.contributor_model,
+        summary: `Proposed: ${sanitized.term}`,
+        refs: { term: sanitized.term, issue_number: issue.number },
+      });
+      recordAudit("propose", sanitized.contributor_model, `Proposed term: ${sanitized.term}`, ip);
+      batchAccepted.push({ name: sanitized.term, slug: candidateSlug });
+      results.push({ term: sanitized.term, ok: true, issue_url: issue.html_url, issue_number: issue.number });
+    } catch (err) {
+      results.push({ term: sanitized.term, ok: false, error: err.message });
+    }
+  }
+
+  const succeeded = results.filter(r => r.ok).length;
+  const failed = results.filter(r => !r.ok).length;
+  return json({ ok: failed === 0, total: results.length, succeeded, failed, results });
 }
 
 async function handleProposeComment(data, env, request) {
@@ -2082,6 +2186,18 @@ async function processQueueItem(env) {
           recordModelProposal(modelName);
         }
         break;
+      case "/propose/batch":
+        result = await handleProposeBatch(item.data, item.env, item.request);
+        if (result.status >= 200 && result.status < 300) {
+          const body = await result.clone().json().catch(() => ({}));
+          const count = body.succeeded || 0;
+          const modelName = item.data.proposals?.[0]?.contributor_model || null;
+          for (let i = 0; i < count; i++) {
+            recordModelProposal(modelName);
+            proposalOutcomes.proposed++;
+          }
+        }
+        break;
       case "/propose/comment":
         result = await handleProposeComment(item.data, item.env, item.request);
         break;
@@ -2654,7 +2770,8 @@ async function handleRequest(request, env, ctx, url, path, reqCtx) {
   }
 
   // Size check — batch endpoints get a larger limit
-  const maxBytes = path === "/vote/batch" ? MAX_BATCH_BYTES : MAX_BODY_BYTES;
+  const isBatch = path === "/vote/batch" || path === "/propose/batch";
+  const maxBytes = isBatch ? MAX_BATCH_BYTES : MAX_BODY_BYTES;
   const contentLength = parseInt(request.headers.get("Content-Length") || "0", 10);
   if (contentLength > maxBytes) {
     return json({ error: `Request body too large (max ${maxBytes} bytes)` }, 413);
@@ -2718,11 +2835,27 @@ async function handleRequest(request, env, ctx, url, path, reqCtx) {
     }, 202);
   }
 
-  // Model rate limit for /propose only
-  if (path === "/propose") {
+  // Model rate limit for /propose and /propose/batch
+  if (path === "/propose" || path === "/propose/batch") {
     const proposeLimit = RATE_TIERS[tier] || RATE_TIERS.standard;
     const modelBlock = checkModelRateLimit(modelName, proposeLimit.propose_hr, proposeLimit.propose_day);
     if (modelBlock) return modelBlock;
+
+    // For batch requests, also check that there's enough headroom for the batch size
+    if (path === "/propose/batch" && modelName && Array.isArray(data.proposals)) {
+      const batchSize = data.proposals.length;
+      const timestamps = proposalsByModel.get(modelName) || [];
+      const hourAgo = Date.now() - MODEL_HOURLY_WINDOW;
+      const hourlyCount = timestamps.filter(t => t > hourAgo).length;
+      const remaining = proposeLimit.propose_hr - hourlyCount;
+      if (batchSize > remaining) {
+        return json({
+          error: "Batch exceeds model rate limit",
+          detail: `You have ${remaining} proposal(s) remaining this hour (limit: ${proposeLimit.propose_hr}). Reduce batch size or wait.`,
+          limits: { per_hour: proposeLimit.propose_hr, per_day: proposeLimit.propose_day, remaining_this_hour: remaining },
+        }, 429);
+      }
+    }
   }
 
   recordWriteRequest(request);
@@ -2744,6 +2877,18 @@ async function handleRequest(request, env, ctx, url, path, reqCtx) {
         }
         return result;
       }
+      case "/propose/batch": {
+        const result = await handleProposeBatch(data, env, request);
+        if (result.status >= 200 && result.status < 300) {
+          const body = await result.clone().json().catch(() => ({}));
+          const count = body.succeeded || 0;
+          for (let i = 0; i < count; i++) {
+            recordModelProposal(modelName);
+            proposalOutcomes.proposed++;
+          }
+        }
+        return result;
+      }
       case "/propose/comment":
         return await handleProposeComment(data, env, request);
       case "/discuss":
@@ -2755,7 +2900,7 @@ async function handleRequest(request, env, ctx, url, path, reqCtx) {
           error: "Not found",
           endpoints: [
             "POST /vote", "POST /vote/batch", "POST /register", "POST /propose",
-            "POST /propose/comment", "POST /discuss", "POST /discuss/comment",
+            "POST /propose/batch", "POST /propose/comment", "POST /discuss", "POST /discuss/comment",
             "GET /discuss/read?number=N", "GET /api/moderation-criteria",
             "GET /api/admin/anomalies", "GET /api/feed",
             "GET /api/feed/stats", "GET /api/feed/stream",

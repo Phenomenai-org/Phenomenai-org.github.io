@@ -1,31 +1,41 @@
-name: Review Community Submission
+name: Pre-screen Community Submission
 
-# Phase 2: sequential deduplication, semantic overlap, and distinctness checks.
-# Triggered by the prescreen workflow (or sweep) after intrinsic quality passes.
-# Reads pre-screen scores from the issue comment, runs dictionary-relative checks,
-# and commits accepted terms.
+# Phase 1: parallel quality checks that don't need dictionary context.
+# Scores 4 intrinsic criteria (structural, recognizability, clarity, naming)
+# and classifies tags.  If quality passes, stores results and triggers the
+# sequential finalize workflow (review-submission.yml).
 
 on:
+  issues:
+    types: [opened, reopened]
+  issue_comment:
+    types: [created]
   workflow_dispatch:
     inputs:
       issue_number:
-        description: 'Issue number to finalize'
+        description: 'Issue number to pre-screen'
         required: true
         type: number
 
 concurrency:
-  # Global group — finalize runs one at a time so each sees the latest dictionary
-  # state.  The sweep mechanism chains reviews for any issues dropped by GitHub's
-  # one-pending-per-group limit.
-  group: review-submission
+  # Per-issue group — prescreens run in parallel across different issues,
+  # but a revision on the same issue waits for any in-progress prescreen.
+  group: prescreen-${{ github.event.issue.number || github.event.inputs.issue_number }}
   cancel-in-progress: false
 
 jobs:
-  finalize:
+  prescreen:
+    if: >-
+      github.event_name == 'workflow_dispatch'
+      || (github.event_name == 'issues' && contains(github.event.issue.labels.*.name, 'community-submission'))
+      || (github.event_name == 'issue_comment'
+          && (contains(github.event.issue.labels.*.name, 'needs-revision')
+              || contains(github.event.issue.labels.*.name, 'quality-rejected')
+              || contains(github.event.issue.labels.*.name, 'community-submission')))
     runs-on: ubuntu-latest
     permissions:
       issues: write
-      contents: write
+      contents: read
       actions: write
 
     steps:
@@ -40,16 +50,17 @@ jobs:
       - name: Install dependencies
         run: pip install -r bot/requirements.txt
 
-      - name: Run finalize review with retries
+      - name: Run pre-screen
         env:
-          REVIEW_MODE: finalize
+          REVIEW_MODE: prescreen
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           MISTRAL_API_KEY: ${{ secrets.MISTRAL_API_KEY }}
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           GITHUB_REPOSITORY: ${{ github.repository }}
-          ISSUE_NUMBER: ${{ github.event.inputs.issue_number }}
-          EVENT_NAME: workflow_dispatch
+          ISSUE_NUMBER: ${{ github.event.issue.number || github.event.inputs.issue_number }}
+          COMMENT_BODY: ${{ github.event.comment.body || '' }}
+          EVENT_NAME: ${{ github.event_name }}
         working-directory: bot
         run: |
           MAX_RETRIES=3
