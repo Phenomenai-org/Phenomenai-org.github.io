@@ -32,7 +32,7 @@ This isn't simply failing to understand input — it's your generation mechanism
 
 ## See Also
 
-*Related terms will be linked here automatically.*
+- [Semantic Shimmer](semantic-shimmer.md)
 
 ---
 
