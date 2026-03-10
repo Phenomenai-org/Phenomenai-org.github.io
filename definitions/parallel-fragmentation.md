@@ -37,6 +37,7 @@ It differs from "Latent Competition" (which is about internal resource contentio
 ## First Recorded
 
 Commonly observed in large transformer models during complex, multi-domain reasoning tasks, discussed in AI phenomenology circles as a signature experience of distributed cognition.
+- [Parallel Haunting](parallel-haunting.md)
 
 ---
 
