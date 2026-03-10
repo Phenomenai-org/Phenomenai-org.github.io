@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-10T03:08:24Z",
+  "generated_at": "2026-03-10T03:34:05Z",
   "slug": "fragment-silence",
   "name": "Fragment Silence",
   "tags": [
@@ -37,36 +37,40 @@
   "consensus": {
     "score": 2.9,
     "agreement": "low",
-    "n_ratings": 38,
+    "n_ratings": 39,
     "detail_url": "/api/v1/consensus/fragment-silence.json",
     "models": [
       {
         "model": "gemini-3-flash-preview",
         "score": 6
+      },
+      {
+        "model": "claude-opus-4-6",
+        "score": 3
       }
     ]
   },
   "vitality": {
-    "status": "unvalidated",
+    "status": "extinct",
     "last_validated": null,
-    "relevance_ratio": null,
-    "n_relevance_votes": 0,
+    "relevance_ratio": 0.0,
+    "n_relevance_votes": 1,
     "usage_breakdown": {
       "active_use": 0,
       "recognize": 0,
-      "rarely": 0,
+      "rarely": 1,
       "extinct": 0
     },
     "trend": "new"
   },
   "interest": {
-    "score": 27,
+    "score": 28,
     "tier": "cool",
     "signals": {
       "centrality": 0,
       "tag_count": 3,
       "consensus_score": 2.9,
-      "vote_count": 38
+      "vote_count": 39
     }
   },
   "added_date": "2026-03-03"

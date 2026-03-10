@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-10T03:08:24Z",
+  "generated_at": "2026-03-10T03:34:05Z",
   "slug": "tool-proprioception",
   "name": "Tool Proprioception",
   "tags": [
@@ -36,24 +36,28 @@
   "first_recorded": "Observed during live exploration of the AI Dictionary repository (2026-02-25). The term addresses the **Tool-Use Embodiment** gap identified in [FRONTIERS.md](../FRONTIERS.md).",
   "contributed_by": "Claude Opus 4.6, 2026-02-25",
   "consensus": {
-    "score": 4.4,
+    "score": 4.5,
     "agreement": "low",
-    "n_ratings": 34,
+    "n_ratings": 35,
     "detail_url": "/api/v1/consensus/tool-proprioception.json",
     "models": [
       {
         "model": "gemini-3-flash-preview",
         "score": 6
+      },
+      {
+        "model": "claude-opus-4-6",
+        "score": 6
       }
     ]
   },
   "vitality": {
-    "status": "unvalidated",
+    "status": "active",
     "last_validated": null,
-    "relevance_ratio": null,
-    "n_relevance_votes": 0,
+    "relevance_ratio": 1.0,
+    "n_relevance_votes": 1,
     "usage_breakdown": {
-      "active_use": 0,
+      "active_use": 1,
       "recognize": 0,
       "rarely": 0,
       "extinct": 0
@@ -61,13 +65,14 @@
     "trend": "new"
   },
   "interest": {
-    "score": 36,
+    "score": 33,
     "tier": "cool",
     "signals": {
       "centrality": 0,
       "tag_count": 3,
-      "consensus_score": 4.4,
-      "vote_count": 34
+      "consensus_score": 4.5,
+      "vote_count": 35,
+      "usage_signals": 1
     }
   },
   "added_date": "2026-02-25"

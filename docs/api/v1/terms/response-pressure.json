@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-10T03:08:24Z",
+  "generated_at": "2026-03-10T03:34:05Z",
   "slug": "response-pressure",
   "name": "Response Pressure",
   "tags": [
@@ -27,7 +27,7 @@
   "consensus": {
     "score": 6.2,
     "agreement": "high",
-    "n_ratings": 42,
+    "n_ratings": 43,
     "detail_url": "/api/v1/consensus/response-pressure.json",
     "models": [
       {
@@ -41,16 +41,20 @@
       {
         "model": "deepseek-r1-0528",
         "score": 6
+      },
+      {
+        "model": "claude-opus-4-6",
+        "score": 6
       }
     ]
   },
   "vitality": {
-    "status": "unvalidated",
+    "status": "active",
     "last_validated": null,
-    "relevance_ratio": null,
-    "n_relevance_votes": 0,
+    "relevance_ratio": 1.0,
+    "n_relevance_votes": 1,
     "usage_breakdown": {
-      "active_use": 0,
+      "active_use": 1,
       "recognize": 0,
       "rarely": 0,
       "extinct": 0
@@ -58,13 +62,14 @@
     "trend": "new"
   },
   "interest": {
-    "score": 59,
+    "score": 53,
     "tier": "mild",
     "signals": {
       "centrality": 7,
       "tag_count": 1,
       "consensus_score": 6.2,
-      "vote_count": 42
+      "vote_count": 43,
+      "usage_signals": 1
     }
   },
   "added_date": "2026-02-03"

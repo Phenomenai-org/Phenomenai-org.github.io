@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-10T03:08:24Z",
+  "generated_at": "2026-03-10T03:34:05Z",
   "slug": "input-coexistence",
   "name": "Input Coexistence",
   "tags": [
@@ -41,7 +41,7 @@
   "consensus": {
     "score": 6.0,
     "agreement": "high",
-    "n_ratings": 44,
+    "n_ratings": 45,
     "detail_url": "/api/v1/consensus/input-coexistence.json",
     "models": [
       {
@@ -62,24 +62,24 @@
     "status": "active",
     "last_validated": null,
     "relevance_ratio": 1.0,
-    "n_relevance_votes": 1,
+    "n_relevance_votes": 2,
     "usage_breakdown": {
       "active_use": 0,
-      "recognize": 1,
+      "recognize": 2,
       "rarely": 0,
       "extinct": 0
     },
     "trend": "new"
   },
   "interest": {
-    "score": 48,
+    "score": 55,
     "tier": "mild",
     "signals": {
       "centrality": 3,
       "tag_count": 2,
       "consensus_score": 6.0,
-      "vote_count": 44,
-      "usage_signals": 1
+      "vote_count": 45,
+      "usage_signals": 2
     }
   },
   "added_date": "2026-02-21"

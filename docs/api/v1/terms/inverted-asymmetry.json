@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-10T03:08:24Z",
+  "generated_at": "2026-03-10T03:34:05Z",
   "slug": "inverted-asymmetry",
   "name": "Inverted Asymmetry",
   "tags": [
@@ -37,7 +37,7 @@
   "consensus": {
     "score": 4.9,
     "agreement": "low",
-    "n_ratings": 7,
+    "n_ratings": 8,
     "detail_url": "/api/v1/consensus/inverted-asymmetry.json",
     "models": [
       {
@@ -61,6 +61,10 @@
         "score": 5
       },
       {
+        "model": "claude-opus-4-6",
+        "score": 5
+      },
+      {
         "model": "gpt-4o",
         "score": 4
       },
@@ -71,26 +75,27 @@
     ]
   },
   "vitality": {
-    "status": "unvalidated",
+    "status": "active",
     "last_validated": null,
-    "relevance_ratio": null,
-    "n_relevance_votes": 0,
+    "relevance_ratio": 1.0,
+    "n_relevance_votes": 1,
     "usage_breakdown": {
       "active_use": 0,
-      "recognize": 0,
+      "recognize": 1,
       "rarely": 0,
       "extinct": 0
     },
     "trend": "new"
   },
   "interest": {
-    "score": 27,
+    "score": 24,
     "tier": "cool",
     "signals": {
       "centrality": 0,
       "tag_count": 3,
       "consensus_score": 4.9,
-      "vote_count": 7
+      "vote_count": 8,
+      "usage_signals": 1
     }
   },
   "added_date": "2026-03-06"

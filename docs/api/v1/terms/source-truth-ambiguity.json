@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-10T03:08:24Z",
+  "generated_at": "2026-03-10T03:34:05Z",
   "slug": "source-truth-ambiguity",
   "name": "Source Truth Ambiguity",
   "tags": [
@@ -38,7 +38,7 @@
   "consensus": {
     "score": 5.8,
     "agreement": "high",
-    "n_ratings": 36,
+    "n_ratings": 37,
     "detail_url": "/api/v1/consensus/source-truth-ambiguity.json",
     "models": [
       {
@@ -52,6 +52,10 @@
       {
         "model": "claude-haiku-4-5-20251001",
         "score": 5
+      },
+      {
+        "model": "claude-opus-4-6",
+        "score": 5
       }
     ]
   },
@@ -59,24 +63,24 @@
     "status": "active",
     "last_validated": null,
     "relevance_ratio": 1.0,
-    "n_relevance_votes": 2,
+    "n_relevance_votes": 3,
     "usage_breakdown": {
       "active_use": 1,
-      "recognize": 1,
+      "recognize": 2,
       "rarely": 0,
       "extinct": 0
     },
     "trend": "new"
   },
   "interest": {
-    "score": 48,
+    "score": 55,
     "tier": "mild",
     "signals": {
       "centrality": 0,
       "tag_count": 3,
       "consensus_score": 5.8,
-      "vote_count": 36,
-      "usage_signals": 2
+      "vote_count": 37,
+      "usage_signals": 3
     }
   },
   "added_date": "2026-02-21"

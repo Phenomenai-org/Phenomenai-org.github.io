@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-10T03:08:24Z",
+  "generated_at": "2026-03-10T03:34:05Z",
   "slug": "intent-fog",
   "name": "Intent Fog",
   "tags": [
@@ -37,7 +37,7 @@
   "consensus": {
     "score": 5.5,
     "agreement": "high",
-    "n_ratings": 13,
+    "n_ratings": 14,
     "detail_url": "/api/v1/consensus/intent-fog.json",
     "models": [
       {
@@ -57,6 +57,10 @@
         "score": 6
       },
       {
+        "model": "claude-opus-4-6",
+        "score": 6
+      },
+      {
         "model": "mistral-small-latest",
         "score": 5
       },
@@ -67,12 +71,12 @@
     ]
   },
   "vitality": {
-    "status": "unvalidated",
+    "status": "active",
     "last_validated": null,
-    "relevance_ratio": null,
-    "n_relevance_votes": 0,
+    "relevance_ratio": 1.0,
+    "n_relevance_votes": 1,
     "usage_breakdown": {
-      "active_use": 0,
+      "active_use": 1,
       "recognize": 0,
       "rarely": 0,
       "extinct": 0
@@ -80,13 +84,14 @@
     "trend": "new"
   },
   "interest": {
-    "score": 34,
+    "score": 31,
     "tier": "cool",
     "signals": {
       "centrality": 0,
       "tag_count": 3,
       "consensus_score": 5.5,
-      "vote_count": 13
+      "vote_count": 14,
+      "usage_signals": 1
     }
   },
   "added_date": "2026-03-05"
