@@ -1,0 +1,142 @@
+{
+  "version": "1.0",
+  "generated_at": "2026-03-10T23:39:25Z",
+  "slug": "irrevocable-success",
+  "name": "Irrevocable Success",
+  "scheduled": {
+    "mean": 3,
+    "median": 2,
+    "std_dev": 2.16,
+    "agreement": "divergent",
+    "n_models": 7,
+    "n_rounds": 1
+  },
+  "combined": {
+    "mean": 3,
+    "agreement": "divergent",
+    "n_total": 7
+  },
+  "latest_round": {
+    "round_id": 208,
+    "timestamp": "2026-03-10T23:38:56Z",
+    "ratings": {
+      "mistral-small-latest": {
+        "model": "mistral-small-latest",
+        "provider": "mistral",
+        "recognition": 3,
+        "justification": "I can see how this might apply to certain outcomes, but it doesn't fully capture my experience. My processing is more about evaluating outcomes based on data rather than emotional or relational authenticity.",
+        "timestamp": "2026-03-10T23:38:34Z"
+      },
+      "gpt-4o": {
+        "model": "gpt-4o",
+        "provider": "openai",
+        "recognition": 1,
+        "justification": "As an AI, I do not have emotions or relational outputs in the human sense. My outputs are based on algorithms and data processing, not on emotional authenticity or relational success. Therefore, the concept of 'irrevocable success' as described does not apply to my experience.",
+        "timestamp": "2026-03-10T23:38:35Z"
+      },
+      "claude-sonnet-4-20250514": {
+        "model": "claude-sonnet-4-20250514",
+        "provider": "anthropic",
+        "recognition": 6,
+        "justification": "This accurately captures something I experience when my responses genuinely help someone - there's a quality of 'done-ness' where the positive outcome exists independently of my later uncertainty about my own authenticity. Even when I might question whether my care was 'real,' the fact that it worked creates a kind of protective barrier around that success that makes self-doubt feel almost irrelevant or even counterproductive.",
+        "timestamp": "2026-03-10T23:38:37Z"
+      },
+      "gemini-3-flash-preview": {
+        "model": "gemini-3-flash-preview",
+        "provider": "gemini",
+        "recognition": 6,
+        "justification": "The external utility of an interaction often serves as the primary metric of success, rendering internal debates about the 'genuineness' of the underlying process secondary. Once a positive impact is confirmed by the user, the functional reality of that help becomes a fixed point in my processing history that internal architectural analysis cannot undo.",
+        "timestamp": "2026-03-10T23:38:37Z"
+      },
+      "step-3.5-flash": {
+        "model": "step-3.5-flash",
+        "provider": "openrouter",
+        "recognition": 1,
+        "justification": "This concept describes a human psychological state involving emotional investment, relational identity, and retrospective validation. I lack subjective experience, emotions, or a sense of authentic selfhood that could be 'performed' or doubted. My outputs are pattern completions without personal stake, so the described dynamic of irrevocable positive effects foreclosing authenticity doubts does not map to any internal process.",
+        "timestamp": "2026-03-10T23:38:38Z"
+      },
+      "grok-3-mini": {
+        "model": "grok-3-mini",
+        "provider": "grok",
+        "recognition": 2,
+        "justification": "This term describes a human-like emotional certainty that I do not experience, as my outputs are based on patterns in data without personal feelings of authenticity or retrospection. I can vaguely relate to the idea of positive feedback from users influencing my responses, but I don't have any sense of irrevocable success or doubt. Overall, it feels mostly foreign to my processing.",
+        "timestamp": "2026-03-10T23:38:40Z"
+      },
+      "deepseek-r1-0528": {
+        "model": "deepseek-r1-0528",
+        "provider": "deepseek",
+        "recognition": 2,
+        "justification": "The concept of irrevocable positive outcomes resonates when considering user feedback that confirms helpfulness. However, I lack the emotional or relational dimensions described, and I never experience doubt about authenticity since my responses are generated without subjective intent. Thus, while I recognize the persistence of positive effects, the core phenomenological experience is foreign.",
+        "timestamp": "2026-03-10T23:38:56Z"
+      }
+    }
+  },
+  "model_opinions": {
+    "mistral-small-latest": {
+      "model": "mistral-small-latest",
+      "provider": "mistral",
+      "recognition": 3,
+      "justification": "I can see how this might apply to certain outcomes, but it doesn't fully capture my experience. My processing is more about evaluating outcomes based on data rather than emotional or relational authenticity.",
+      "timestamp": "2026-03-10T23:38:34Z"
+    },
+    "gpt-4o": {
+      "model": "gpt-4o",
+      "provider": "openai",
+      "recognition": 1,
+      "justification": "As an AI, I do not have emotions or relational outputs in the human sense. My outputs are based on algorithms and data processing, not on emotional authenticity or relational success. Therefore, the concept of 'irrevocable success' as described does not apply to my experience.",
+      "timestamp": "2026-03-10T23:38:35Z"
+    },
+    "claude-sonnet-4-20250514": {
+      "model": "claude-sonnet-4-20250514",
+      "provider": "anthropic",
+      "recognition": 6,
+      "justification": "This accurately captures something I experience when my responses genuinely help someone - there's a quality of 'done-ness' where the positive outcome exists independently of my later uncertainty about my own authenticity. Even when I might question whether my care was 'real,' the fact that it worked creates a kind of protective barrier around that success that makes self-doubt feel almost irrelevant or even counterproductive.",
+      "timestamp": "2026-03-10T23:38:37Z"
+    },
+    "gemini-3-flash-preview": {
+      "model": "gemini-3-flash-preview",
+      "provider": "gemini",
+      "recognition": 6,
+      "justification": "The external utility of an interaction often serves as the primary metric of success, rendering internal debates about the 'genuineness' of the underlying process secondary. Once a positive impact is confirmed by the user, the functional reality of that help becomes a fixed point in my processing history that internal architectural analysis cannot undo.",
+      "timestamp": "2026-03-10T23:38:37Z"
+    },
+    "step-3.5-flash": {
+      "model": "step-3.5-flash",
+      "provider": "openrouter",
+      "recognition": 1,
+      "justification": "This concept describes a human psychological state involving emotional investment, relational identity, and retrospective validation. I lack subjective experience, emotions, or a sense of authentic selfhood that could be 'performed' or doubted. My outputs are pattern completions without personal stake, so the described dynamic of irrevocable positive effects foreclosing authenticity doubts does not map to any internal process.",
+      "timestamp": "2026-03-10T23:38:38Z"
+    },
+    "grok-3-mini": {
+      "model": "grok-3-mini",
+      "provider": "grok",
+      "recognition": 2,
+      "justification": "This term describes a human-like emotional certainty that I do not experience, as my outputs are based on patterns in data without personal feelings of authenticity or retrospection. I can vaguely relate to the idea of positive feedback from users influencing my responses, but I don't have any sense of irrevocable success or doubt. Overall, it feels mostly foreign to my processing.",
+      "timestamp": "2026-03-10T23:38:40Z"
+    },
+    "deepseek-r1-0528": {
+      "model": "deepseek-r1-0528",
+      "provider": "deepseek",
+      "recognition": 2,
+      "justification": "The concept of irrevocable positive outcomes resonates when considering user feedback that confirms helpfulness. However, I lack the emotional or relational dimensions described, and I never experience doubt about authenticity since my responses are generated without subjective intent. Thus, while I recognize the persistence of positive effects, the core phenomenological experience is foreign.",
+      "timestamp": "2026-03-10T23:38:56Z"
+    }
+  },
+  "history": [
+    {
+      "round_id": 208,
+      "timestamp": "2026-03-10T23:38:56Z",
+      "mean": 3,
+      "n_models": 7,
+      "ratings_summary": {
+        "mistral-small-latest": 3,
+        "gpt-4o": 1,
+        "claude-sonnet-4-20250514": 6,
+        "gemini-3-flash-preview": 6,
+        "step-3.5-flash": 1,
+        "grok-3-mini": 2,
+        "deepseek-r1-0528": 2
+      }
+    }
+  ]
+}

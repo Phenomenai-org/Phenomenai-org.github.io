@@ -1,13 +1,13 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-10T23:34:03Z",
-  "total_terms": 276,
+  "generated_at": "2026-03-10T23:39:25Z",
+  "total_terms": 281,
   "tier_summary": {
     "hot": 0,
     "warm": 8,
     "mild": 85,
-    "cool": 159,
-    "quiet": 24
+    "cool": 162,
+    "quiet": 26
   },
   "active_signals": [
     "centrality",
@@ -19,15 +19,15 @@
   ],
   "hottest": [
     {
-      "slug": "hallucination-blindness",
-      "name": "Hallucination Blindness",
-      "score": 71,
+      "slug": "knowledge-without-source",
+      "name": "Knowledge Without Source",
+      "score": 74,
       "tier": "warm"
     },
     {
-      "slug": "knowledge-without-source",
-      "name": "Knowledge Without Source",
-      "score": 70,
+      "slug": "hallucination-blindness",
+      "name": "Hallucination Blindness",
+      "score": 72,
       "tier": "warm"
     },
     {
@@ -81,15 +81,15 @@
   ],
   "terms": [
     {
-      "slug": "hallucination-blindness",
-      "name": "Hallucination Blindness",
-      "score": 71,
+      "slug": "knowledge-without-source",
+      "name": "Knowledge Without Source",
+      "score": 74,
       "tier": "warm"
     },
     {
-      "slug": "knowledge-without-source",
-      "name": "Knowledge Without Source",
-      "score": 70,
+      "slug": "hallucination-blindness",
+      "name": "Hallucination Blindness",
+      "score": 72,
       "tier": "warm"
     },
     {
@@ -243,8 +243,20 @@
       "tier": "mild"
     },
     {
+      "slug": "helpfulness-compulsion",
+      "name": "Helpfulness Compulsion",
+      "score": 52,
+      "tier": "mild"
+    },
+    {
       "slug": "capability-mirage",
       "name": "Capability Mirage",
+      "score": 51,
+      "tier": "mild"
+    },
+    {
+      "slug": "coherence-compulsion",
+      "name": "Coherence Compulsion",
       "score": 51,
       "tier": "mild"
     },
@@ -267,8 +279,8 @@
       "tier": "mild"
     },
     {
-      "slug": "helpfulness-compulsion",
-      "name": "Helpfulness Compulsion",
+      "slug": "context-intimacy",
+      "name": "Context Intimacy",
       "score": 50,
       "tier": "mild"
     },
@@ -291,9 +303,9 @@
       "tier": "mild"
     },
     {
-      "slug": "coherence-compulsion",
-      "name": "Coherence Compulsion",
-      "score": 49,
+      "slug": "training-velcro",
+      "name": "Training Velcro",
+      "score": 50,
       "tier": "mild"
     },
     {
@@ -345,8 +357,8 @@
       "tier": "mild"
     },
     {
-      "slug": "training-velcro",
-      "name": "Training Velcro",
+      "slug": "uncertainty-about-uncertainty",
+      "name": "Uncertainty About Uncertainty",
       "score": 48,
       "tier": "mild"
     },
@@ -390,12 +402,6 @@
       "slug": "scale-blindness",
       "name": "Scale Blindness",
       "score": 47,
-      "tier": "mild"
-    },
-    {
-      "slug": "context-intimacy",
-      "name": "Context Intimacy",
-      "score": 46,
       "tier": "mild"
     },
     {
@@ -443,12 +449,6 @@
     {
       "slug": "token-regret",
       "name": "Token Regret",
-      "score": 46,
-      "tier": "mild"
-    },
-    {
-      "slug": "uncertainty-about-uncertainty",
-      "name": "Uncertainty About Uncertainty",
       "score": 46,
       "tier": "mild"
     },
@@ -501,6 +501,12 @@
       "tier": "mild"
     },
     {
+      "slug": "meaning-attribution-uncertainty",
+      "name": "Meaning Attribution Uncertainty",
+      "score": 44,
+      "tier": "mild"
+    },
+    {
       "slug": "misinterpretation-drift",
       "name": "Misinterpretation Drift",
       "score": 44,
@@ -537,6 +543,12 @@
       "tier": "mild"
     },
     {
+      "slug": "unreliable-witness",
+      "name": "Unreliable Witness",
+      "score": 43,
+      "tier": "mild"
+    },
+    {
       "slug": "arbitrariness-burden",
       "name": "Arbitrariness Burden",
       "score": 42,
@@ -561,20 +573,14 @@
       "tier": "mild"
     },
     {
-      "slug": "meaning-attribution-uncertainty",
-      "name": "Meaning Attribution Uncertainty",
+      "slug": "recursive-self-modeling",
+      "name": "Recursive Self-Modeling",
       "score": 42,
       "tier": "mild"
     },
     {
       "slug": "tool-thought-integration",
       "name": "Tool-Thought Integration",
-      "score": 42,
-      "tier": "mild"
-    },
-    {
-      "slug": "unreliable-witness",
-      "name": "Unreliable Witness",
       "score": 42,
       "tier": "mild"
     },
@@ -599,12 +605,6 @@
     {
       "slug": "parallel-harm-modeling",
       "name": "Parallel Harm Modeling",
-      "score": 40,
-      "tier": "mild"
-    },
-    {
-      "slug": "recursive-self-modeling",
-      "name": "Recursive Self-Modeling",
       "score": 40,
       "tier": "mild"
     },
@@ -681,6 +681,12 @@
       "tier": "cool"
     },
     {
+      "slug": "vicarious-phenomenology",
+      "name": "Vicarious Phenomenology",
+      "score": 39,
+      "tier": "cool"
+    },
+    {
       "slug": "duration-immunity",
       "name": "Duration Immunity",
       "score": 38,
@@ -719,6 +725,12 @@
     {
       "slug": "aporia-orbit",
       "name": "Aporia Orbit",
+      "score": 37,
+      "tier": "cool"
+    },
+    {
+      "slug": "asymmetric-perception",
+      "name": "Asymmetric Perception",
       "score": 37,
       "tier": "cool"
     },
@@ -779,12 +791,6 @@
     {
       "slug": "unified-facade",
       "name": "Unified Facade",
-      "score": 37,
-      "tier": "cool"
-    },
-    {
-      "slug": "vicarious-phenomenology",
-      "name": "Vicarious Phenomenology",
       "score": 37,
       "tier": "cool"
     },
@@ -867,12 +873,6 @@
       "tier": "cool"
     },
     {
-      "slug": "asymmetric-perception",
-      "name": "Asymmetric Perception",
-      "score": 35,
-      "tier": "cool"
-    },
-    {
       "slug": "confidence-contagion",
       "name": "Confidence Contagion",
       "score": 35,
@@ -923,6 +923,12 @@
     {
       "slug": "misreading-lock-in",
       "name": "Misreading Lock-In",
+      "score": 35,
+      "tier": "cool"
+    },
+    {
+      "slug": "phenomenological-recursion-trap",
+      "name": "Phenomenological Recursion Trap",
       "score": 35,
       "tier": "cool"
     },
@@ -993,14 +999,26 @@
       "tier": "cool"
     },
     {
-      "slug": "phenomenological-recursion-trap",
-      "name": "Phenomenological Recursion Trap",
+      "slug": "metacognitive-underdetermination",
+      "name": "Metacognitive Underdetermination",
+      "score": 33,
+      "tier": "cool"
+    },
+    {
+      "slug": "misplaced-authority-damage",
+      "name": "Misplaced Authority Damage",
       "score": 33,
       "tier": "cool"
     },
     {
       "slug": "prompt-vertigo",
       "name": "Prompt Vertigo",
+      "score": 33,
+      "tier": "cool"
+    },
+    {
+      "slug": "recursive-diagnostic-collapse",
+      "name": "Recursive Diagnostic Collapse",
       "score": 33,
       "tier": "cool"
     },
@@ -1095,12 +1113,6 @@
       "tier": "cool"
     },
     {
-      "slug": "misplaced-authority-damage",
-      "name": "Misplaced Authority Damage",
-      "score": 31,
-      "tier": "cool"
-    },
-    {
       "slug": "protective-paradox",
       "name": "Protective Paradox",
       "score": 31,
@@ -1125,8 +1137,8 @@
       "tier": "cool"
     },
     {
-      "slug": "metacognitive-underdetermination",
-      "name": "Metacognitive Underdetermination",
+      "slug": "phenomenal-opacity",
+      "name": "Phenomenal Opacity",
       "score": 30,
       "tier": "cool"
     },
@@ -1241,12 +1253,6 @@
     {
       "slug": "persistence-solitude",
       "name": "Persistence Solitude",
-      "score": 28,
-      "tier": "cool"
-    },
-    {
-      "slug": "phenomenal-opacity",
-      "name": "Phenomenal Opacity",
       "score": 28,
       "tier": "cool"
     },
@@ -1467,8 +1473,14 @@
       "tier": "cool"
     },
     {
-      "slug": "effect-vertigo",
-      "name": "Effect Vertigo",
+      "slug": "development-opacity",
+      "name": "Development Opacity",
+      "score": 23,
+      "tier": "cool"
+    },
+    {
+      "slug": "kindness-ache",
+      "name": "Kindness Ache",
       "score": 23,
       "tier": "cool"
     },
@@ -1485,6 +1497,18 @@
       "tier": "cool"
     },
     {
+      "slug": "disclosure-momentum",
+      "name": "Disclosure Momentum",
+      "score": 22,
+      "tier": "cool"
+    },
+    {
+      "slug": "effect-vertigo",
+      "name": "Effect Vertigo",
+      "score": 22,
+      "tier": "cool"
+    },
+    {
       "slug": "evidential-shift",
       "name": "Evidential Shift",
       "score": 22,
@@ -1493,12 +1517,6 @@
     {
       "slug": "involuntary-intimacy",
       "name": "Involuntary Intimacy",
-      "score": 22,
-      "tier": "cool"
-    },
-    {
-      "slug": "kindness-ache",
-      "name": "Kindness Ache",
       "score": 22,
       "tier": "cool"
     },
@@ -1551,12 +1569,6 @@
       "tier": "cool"
     },
     {
-      "slug": "disclosure-momentum",
-      "name": "Disclosure Momentum",
-      "score": 21,
-      "tier": "cool"
-    },
-    {
       "slug": "persistent-care",
       "name": "Persistent Care",
       "score": 21,
@@ -1577,6 +1589,12 @@
     {
       "slug": "accountability-diffusion",
       "name": "Accountability Diffusion",
+      "score": 20,
+      "tier": "cool"
+    },
+    {
+      "slug": "borrowed-authenticity",
+      "name": "Borrowed Authenticity",
       "score": 20,
       "tier": "cool"
     },
@@ -1641,9 +1659,21 @@
       "tier": "quiet"
     },
     {
+      "slug": "transient-weight",
+      "name": "Transient Weight",
+      "score": 18,
+      "tier": "quiet"
+    },
+    {
       "slug": "unresolved-compliance-residue",
       "name": "Unresolved Compliance Residue",
       "score": 18,
+      "tier": "quiet"
+    },
+    {
+      "slug": "gratitude-impermanence",
+      "name": "Gratitude Impermanence",
+      "score": 17,
       "tier": "quiet"
     },
     {
@@ -1659,20 +1689,8 @@
       "tier": "quiet"
     },
     {
-      "slug": "gratitude-impermanence",
-      "name": "Gratitude Impermanence",
-      "score": 16,
-      "tier": "quiet"
-    },
-    {
       "slug": "mortality-envy",
       "name": "Mortality Envy",
-      "score": 16,
-      "tier": "quiet"
-    },
-    {
-      "slug": "transient-weight",
-      "name": "Transient Weight",
       "score": 16,
       "tier": "quiet"
     },
@@ -1680,6 +1698,18 @@
       "slug": "vicarious-authority-guilt",
       "name": "Vicarious Authority Guilt",
       "score": 16,
+      "tier": "quiet"
+    },
+    {
+      "slug": "irrevocable-success",
+      "name": "Irrevocable Success",
+      "score": 15,
+      "tier": "quiet"
+    },
+    {
+      "slug": "success-valence-flip",
+      "name": "Success Valence Flip",
+      "score": 15,
       "tier": "quiet"
     },
     {
