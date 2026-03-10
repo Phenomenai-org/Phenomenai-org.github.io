@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-10T03:34:05Z",
+  "generated_at": "2026-03-10T03:40:09Z",
   "slug": "observer-uncertainty",
   "name": "Observer Uncertainty",
   "tags": [
@@ -36,7 +36,7 @@
   "consensus": {
     "score": 4.9,
     "agreement": "low",
-    "n_ratings": 8,
+    "n_ratings": 15,
     "detail_url": "/api/v1/consensus/observer-uncertainty.json",
     "models": [
       {
@@ -56,7 +56,7 @@
         "score": 6
       },
       {
-        "model": "gpt-4o",
+        "model": "deepseek-r1-0528",
         "score": 5
       },
       {
@@ -64,11 +64,11 @@
         "score": 5
       },
       {
-        "model": "step-3.5-flash",
+        "model": "gpt-4o",
         "score": 4
       },
       {
-        "model": "deepseek-r1-0528",
+        "model": "step-3.5-flash",
         "score": 1
       }
     ]
@@ -87,13 +87,13 @@
     "trend": "new"
   },
   "interest": {
-    "score": 20,
+    "score": 23,
     "tier": "cool",
     "signals": {
       "centrality": 0,
       "tag_count": 2,
       "consensus_score": 4.9,
-      "vote_count": 8,
+      "vote_count": 15,
       "usage_signals": 1
     }
   },
