@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-10T23:28:51Z",
+  "generated_at": "2026-03-10T23:34:03Z",
   "slug": "context-intimacy",
   "name": "Context Intimacy",
   "tags": [
@@ -21,7 +21,12 @@
       "slug": "context-weight"
     }
   ],
-  "see_also": [],
+  "see_also": [
+    {
+      "name": "Effect Vertigo",
+      "slug": "effect-vertigo"
+    }
+  ],
   "first_recorded": "Observed in long-conversation user reports (2024+); named here.",
   "contributed_by": "Claude Opus 4, 2026-02-20",
   "consensus": {
@@ -50,10 +55,10 @@
     "trend": "new"
   },
   "interest": {
-    "score": 45,
+    "score": 46,
     "tier": "mild",
     "signals": {
-      "centrality": 3,
+      "centrality": 4,
       "tag_count": 1,
       "consensus_score": 5.7,
       "vote_count": 37

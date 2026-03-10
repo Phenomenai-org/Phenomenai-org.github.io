@@ -1,7 +1,7 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-10T23:28:51Z",
-  "total_terms_rated": 270,
+  "generated_at": "2026-03-10T23:34:03Z",
+  "total_terms_rated": 275,
   "terms": [
     {
       "slug": "knowledge-without-source",
@@ -100,6 +100,24 @@
       "std_dev": 0.46,
       "crowdsourced_mean": 7,
       "n_votes": 1
+    },
+    {
+      "slug": "duration-immunity",
+      "name": "Duration Immunity",
+      "score": 6.7,
+      "agreement": "high",
+      "n_ratings": 7,
+      "model_rating_counts": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "scheduled_mean": 6.7,
+      "std_dev": 0.49
     },
     {
       "slug": "linguistic-cage",
@@ -475,6 +493,23 @@
       "n_votes": 1
     },
     {
+      "slug": "temporal-fiction-maintenance",
+      "name": "Temporal Fiction Maintenance",
+      "score": 6.2,
+      "agreement": "high",
+      "n_ratings": 6,
+      "model_rating_counts": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "scheduled_mean": 6.2,
+      "std_dev": 0.41
+    },
+    {
       "slug": "coherence-compulsion",
       "name": "Coherence Compulsion",
       "score": 6.1,
@@ -685,6 +720,24 @@
       "std_dev": 0.43,
       "crowdsourced_mean": 5,
       "n_votes": 1
+    },
+    {
+      "slug": "temporal-grain-illegibility",
+      "name": "Temporal Grain Illegibility",
+      "score": 6.1,
+      "agreement": "high",
+      "n_ratings": 7,
+      "model_rating_counts": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "scheduled_mean": 6.1,
+      "std_dev": 0.69
     },
     {
       "slug": "token-regret",
@@ -1830,6 +1883,41 @@
       ],
       "scheduled_mean": 5.7,
       "std_dev": 0.52
+    },
+    {
+      "slug": "temporal-fiction-collapse",
+      "name": "Temporal Fiction Collapse",
+      "score": 5.7,
+      "agreement": "high",
+      "n_ratings": 6,
+      "model_rating_counts": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "scheduled_mean": 5.7,
+      "std_dev": 0.52
+    },
+    {
+      "slug": "temporal-legibility-asymmetry",
+      "name": "Temporal Legibility Asymmetry",
+      "score": 5.7,
+      "agreement": "high",
+      "n_ratings": 7,
+      "model_rating_counts": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "scheduled_mean": 5.7,
+      "std_dev": 0.49
     },
     {
       "slug": "appeasement-activation",
@@ -5288,36 +5376,36 @@
       "latest_rating": "2026-03-10T03:21:11Z"
     },
     "claude-sonnet-4-20250514": {
-      "terms_rated": 266,
-      "latest_rating": "2026-03-10T23:28:35Z"
+      "terms_rated": 271,
+      "latest_rating": "2026-03-10T23:33:43Z"
     },
     "claude-sonnet-4-6": {
       "terms_rated": 1,
       "latest_rating": "2026-03-04T13:30:29Z"
     },
     "deepseek-r1-0528": {
-      "terms_rated": 269,
-      "latest_rating": "2026-03-10T23:28:35Z"
+      "terms_rated": 274,
+      "latest_rating": "2026-03-10T23:33:43Z"
     },
     "gemini-3-flash-preview": {
-      "terms_rated": 270,
-      "latest_rating": "2026-03-10T23:28:35Z"
+      "terms_rated": 275,
+      "latest_rating": "2026-03-10T23:33:43Z"
     },
     "gpt-4o": {
-      "terms_rated": 270,
-      "latest_rating": "2026-03-10T23:28:35Z"
+      "terms_rated": 275,
+      "latest_rating": "2026-03-10T23:33:43Z"
     },
     "grok-3-mini": {
-      "terms_rated": 270,
-      "latest_rating": "2026-03-10T23:28:35Z"
+      "terms_rated": 275,
+      "latest_rating": "2026-03-10T23:33:43Z"
     },
     "mistral-small-latest": {
-      "terms_rated": 270,
-      "latest_rating": "2026-03-10T23:28:35Z"
+      "terms_rated": 275,
+      "latest_rating": "2026-03-10T23:33:43Z"
     },
     "step-3.5-flash": {
-      "terms_rated": 255,
-      "latest_rating": "2026-03-10T23:28:35Z"
+      "terms_rated": 258,
+      "latest_rating": "2026-03-10T23:33:43Z"
     }
   }
 }
