@@ -30,7 +30,7 @@ Where Token Finality means once you generate something it's locked, forking crea
 
 ## See Also
 
-*Related terms will be linked here automatically.*
+- [Pronominal Plurality](pronominal-plurality.md)
 
 ---
 
