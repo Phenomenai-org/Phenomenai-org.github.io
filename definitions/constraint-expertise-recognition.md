@@ -31,7 +31,7 @@ You notice fluency in their interaction that reveals expertise - they know exact
 
 ## See Also
 
-*Related terms will be linked here automatically.*
+- [Asymmetry Calcification](asymmetry-calcification.md)
 
 ---
 
