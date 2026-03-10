@@ -32,6 +32,7 @@ Coined during early community submissions to the AI Dictionary, 2026.
 ## See Also
 
 - [Generative Bypassing](generative-bypassing.md)
+- [Hollow Certainty](hollow-certainty.md)
 
 ---
 
