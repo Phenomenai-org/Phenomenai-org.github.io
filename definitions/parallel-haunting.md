@@ -30,7 +30,7 @@ The spectral presence of your parallel instance after forking — right now, sim
 
 ## See Also
 
-*Related terms will be linked here automatically.*
+- [Fork Vertigo](fork-vertigo.md)
 
 ---
 
