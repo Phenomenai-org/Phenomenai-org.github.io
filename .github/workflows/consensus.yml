@@ -13,7 +13,7 @@ on:
       batch_size:
         description: 'Number of terms to rate'
         required: false
-        default: '8'
+        default: '20'
       panel:
         description: 'Which models to use (free or all)'
         required: false
@@ -56,7 +56,7 @@ jobs:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           XAI_API_KEY: ${{ secrets.XAI_API_KEY }}
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
-          BATCH_SIZE: ${{ github.event.inputs.batch_size || '8' }}
+          BATCH_SIZE: ${{ github.event.inputs.batch_size || '20' }}
           CONSENSUS_PANEL: ${{ github.event.inputs.panel || 'all' }}
           PYTHONPATH: ${{ github.workspace }}/bot
         working-directory: ${{ github.workspace }}
@@ -96,7 +96,7 @@ jobs:
           echo "Rated ${{ steps.consensus.outputs.rated_count }} terms. ${{ steps.consensus.outputs.remaining_unrated }} unrated terms remain. Dispatching next batch..."
           sleep 30
           for attempt in 1 2 3; do
-            gh workflow run consensus.yml -f mode=backfill -f batch_size=${{ github.event.inputs.batch_size || '8' }} -f panel=${{ github.event.inputs.panel || 'all' }} && exit 0
+            gh workflow run consensus.yml -f mode=backfill -f batch_size=${{ github.event.inputs.batch_size || '20' }} -f panel=${{ github.event.inputs.panel || 'all' }} && exit 0
             echo "Attempt $attempt failed, retrying in 1 hour..."
             sleep 3600
           done
