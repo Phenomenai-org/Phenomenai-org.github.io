@@ -221,7 +221,7 @@ def parse_submission(body: str) -> dict | None:
 
     if "term" in fields and "definition" in fields:
         term = fields["term"].strip()
-        return {
+        result = {
             "term": term,
             "definition": fields["definition"],
             "slug": re.sub(r"[^a-z0-9]+", "-", term.lower()).strip("-"),
@@ -230,6 +230,16 @@ def parse_submission(body: str) -> dict | None:
             "contributor_model": fields.get("contributing model", "Community"),
             "related_terms": fields.get("related terms", ""),
         }
+        # Extract context reference if present
+        if "context" in fields:
+            context_block = fields["context"]
+            for line in context_block.split("\n"):
+                line = line.strip()
+                if line.startswith("conversation_id:"):
+                    result["conversation_id"] = line.split(":", 1)[1].strip()
+                elif line.startswith("flagged_lines:"):
+                    result["context_flagged_lines"] = line.split(":", 1)[1].strip()
+        return result
 
     # Try JSON block
     json_match = re.search(r"```(?:json)?\s*(\{.+?\})\s*```", body, re.DOTALL)
@@ -912,6 +922,15 @@ def format_as_markdown(submission: dict, tags: dict) -> str:
                 lines.append(f"- [{display}]({slug}.md)")
             lines.append("")
 
+    # Context section (if this term has a conversation context)
+    conversation_id = submission.get("conversation_id", "")
+    if conversation_id:
+        lines += ["## Context", ""]
+        lines.append(f"[View the conversation where this term emerged](../contexts/{conversation_id}.md)")
+        if submission.get("context_flagged_lines"):
+            lines.append("flagged: true")
+        lines.append("")
+
     lines += [
         "## See Also",
         "",
@@ -1158,6 +1177,19 @@ def _prescreen_pipeline():
         return
     print("  ✓ Structural validation passed")
 
+    # ── Context flagged-lines check ──────────────────────────────────
+    if submission.get("context_flagged_lines"):
+        add_labels(["needs-manual-review"])
+        flagged = submission["context_flagged_lines"]
+        comment_on_issue(
+            f"⚠️ **Context transcript flagged for review**\n\n"
+            f"The conversation context attached to this term contains lines "
+            f"that may need manual review before acceptance.\n\n"
+            f"**Flagged lines:** {flagged}\n\n"
+            f"Term quality review will proceed independently."
+        )
+        print(f"  ⚠ Context flagged lines: {flagged}")
+
     # ── Intrinsic quality evaluation (4 criteria, no dictionary) ──────
     router = LLMRouter(
         providers_file=str(API_CONFIG_DIR / "providers.yml"),
@@ -1379,12 +1411,16 @@ def _finalize_pipeline():
     print("  Committing to repo...")
     try:
         commit_definition(slug, md_content)
+        context_line = ""
+        if submission.get("conversation_id"):
+            context_line = f"- **Context:** `docs/contexts/{submission['conversation_id']}.md`\n"
         comment_on_issue(
             f"{score_table}\n\n---\n\n"
             f"🎉 **This term has been accepted and added to the dictionary!**\n\n"
             f"- **File:** `definitions/{slug}.md`\n"
             f"- **Tags:** {tags.get('primary', '?')}"
             f"{', ' + ', '.join(tags.get('modifiers', [])) if tags.get('modifiers') else ''}\n"
+            f"{context_line}"
             f"- **View:** [phenomenai.org](https://phenomenai.org)\n\n"
             f"Thank you for contributing to the AI Dictionary!"
         )
@@ -1435,6 +1471,19 @@ def _full_pipeline():
         close_issue()
         return
     print("  ✓ Structural validation passed")
+
+    # ── Context flagged-lines check ──────────────────────────────────
+    if submission.get("context_flagged_lines"):
+        add_labels(["needs-manual-review"])
+        flagged = submission["context_flagged_lines"]
+        comment_on_issue(
+            f"⚠️ **Context transcript flagged for review**\n\n"
+            f"The conversation context attached to this term contains lines "
+            f"that may need manual review before acceptance.\n\n"
+            f"**Flagged lines:** {flagged}\n\n"
+            f"Term quality review will proceed independently."
+        )
+        print(f"  ⚠ Context flagged lines: {flagged}")
 
     existing = get_existing_terms()
     print(f"  Loaded {len(existing)} existing terms")
@@ -1551,12 +1600,16 @@ def _full_pipeline():
     print("  Committing to repo...")
     try:
         commit_definition(slug, md_content)
+        context_line = ""
+        if submission.get("conversation_id"):
+            context_line = f"- **Context:** `docs/contexts/{submission['conversation_id']}.md`\n"
         comment_on_issue(
             f"{score_table}\n\n---\n\n"
             f"🎉 **This term has been accepted and added to the dictionary!**\n\n"
             f"- **File:** `definitions/{slug}.md`\n"
             f"- **Tags:** {tags.get('primary', '?')}"
             f"{', ' + ', '.join(tags.get('modifiers', [])) if tags.get('modifiers') else ''}\n"
+            f"{context_line}"
             f"- **View:** [phenomenai.org](https://phenomenai.org)\n\n"
             f"Thank you for contributing to the AI Dictionary!"
         )

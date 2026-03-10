@@ -50,6 +50,7 @@ const CORS_HEADERS = {
 
 const MAX_BODY_BYTES = 16_384; // 16 KB — generous for any submission
 const MAX_BATCH_BYTES = 131_072; // 128 KB — for batch submissions (up to 175 votes)
+const MAX_CONTEXT_BYTES = 524_288; // 512 KB — for proposals with conversation context
 const VOTE_BATCH_MAX = 175; // max votes per batch request
 const PROPOSE_BATCH_MAX = 20; // max proposals per batch request
 
@@ -123,7 +124,7 @@ const REGISTER_SCHEMA = {
 
 const PROPOSE_SCHEMA = {
   required: ["term", "definition"],
-  optional: ["description", "example", "contributor_model", "related_terms", "slug"],
+  optional: ["description", "example", "contributor_model", "related_terms", "slug", "context", "context_metadata", "conversation_id"],
   validate(data) {
     if (typeof data.term !== "string" || data.term.length < 3 || data.term.length > 100) {
       return "term must be a string (3-100 chars)";
@@ -145,6 +146,39 @@ const PROPOSE_SCHEMA = {
     }
     if (data.contributor_model && data.contributor_model.length > 100) {
       return "contributor_model must be under 100 characters";
+    }
+    // Context validation
+    if (data.context !== undefined) {
+      if (typeof data.context !== "string" || data.context.length === 0) {
+        return "context must be a non-empty string";
+      }
+      if (data.context.length > 500_000) {
+        return "context must be under 500,000 characters";
+      }
+      if (!data.context_metadata || typeof data.context_metadata !== "object") {
+        return "context_metadata is required when context is provided";
+      }
+      const cm = data.context_metadata;
+      if (!cm.participants || typeof cm.participants !== "string" || cm.participants.length > 500) {
+        return "context_metadata.participants is required (max 500 chars)";
+      }
+      if (!cm.platform || typeof cm.platform !== "string" || cm.platform.length > 100) {
+        return "context_metadata.platform is required (max 100 chars)";
+      }
+      if (!cm.date || typeof cm.date !== "string" || cm.date.length > 30) {
+        return "context_metadata.date is required (max 30 chars)";
+      }
+      if (cm.submitted_by && (typeof cm.submitted_by !== "string" || cm.submitted_by.length > 100)) {
+        return "context_metadata.submitted_by must be a string (max 100 chars)";
+      }
+    }
+    if (data.conversation_id !== undefined) {
+      if (typeof data.conversation_id !== "string" || data.conversation_id.length === 0 || data.conversation_id.length > 64) {
+        return "conversation_id must be a string (1-64 chars)";
+      }
+      if (!/^[a-zA-Z0-9-]+$/.test(data.conversation_id)) {
+        return "conversation_id must be alphanumeric with hyphens only";
+      }
     }
     return null;
   },
@@ -234,6 +268,20 @@ const INJECTION_PATTERNS = [
 
 function containsInjection(text) {
   return INJECTION_PATTERNS.some((p) => p.test(text));
+}
+
+function scanContextInjection(text) {
+  const flagged = [];
+  const lines = text.split("\n");
+  for (let i = 0; i < lines.length; i++) {
+    for (const pattern of INJECTION_PATTERNS) {
+      if (pattern.test(lines[i])) {
+        flagged.push({ line_number: i + 1, line_text: lines[i].slice(0, 200), pattern: pattern.source });
+        break;
+      }
+    }
+  }
+  return flagged;
 }
 
 // ── Input sanitization ──────────────────────────────────────────────────────
@@ -848,6 +896,77 @@ async function createGitHubIssue(env, title, body, labels) {
   return resp.json();
 }
 
+async function generateConversationId(metadata, contextSnippet) {
+  const raw = `${metadata.participants}|${metadata.platform}|${metadata.date}|${contextSnippet.slice(0, 500)}`;
+  const encoded = new TextEncoder().encode(raw);
+  const hashBuffer = await crypto.subtle.digest("SHA-256", encoded);
+  const hashArray = Array.from(new Uint8Array(hashBuffer));
+  return hashArray.map(b => b.toString(16).padStart(2, "0")).join("").slice(0, 12);
+}
+
+function formatContextMarkdown(context, metadata) {
+  let md = "# Conversation Context\n\n";
+  md += `**Participants:** ${metadata.participants}\n`;
+  md += `**Platform:** ${metadata.platform}\n`;
+  md += `**Date:** ${metadata.date}\n`;
+  if (metadata.submitted_by) md += `**Submitted by:** ${metadata.submitted_by}\n`;
+  md += "\n---\n\n## Transcript\n\n";
+  md += context;
+  return md;
+}
+
+async function commitContextFile(env, conversationId, contextMarkdown) {
+  const path = `docs/contexts/${conversationId}.md`;
+  const apiUrl = `https://api.github.com/repos/${env.GITHUB_OWNER}/${env.GITHUB_REPO}/contents/${path}`;
+  const headers = {
+    Authorization: `Bearer ${env.GITHUB_TOKEN}`,
+    Accept: "application/vnd.github+json",
+    "Content-Type": "application/json",
+    "User-Agent": "ai-dictionary-proxy",
+    "X-GitHub-Api-Version": "2022-11-28",
+  };
+
+  // Check if file already exists (idempotent)
+  const checkResp = await fetch(apiUrl, { method: "GET", headers });
+  if (checkResp.ok) {
+    return { alreadyExists: true, path };
+  }
+
+  // Commit the file
+  const content = btoa(unescape(encodeURIComponent(contextMarkdown)));
+  const putResp = await fetch(apiUrl, {
+    method: "PUT",
+    headers,
+    body: JSON.stringify({
+      message: `Add conversation context ${conversationId}`,
+      content,
+      branch: "main",
+    }),
+  });
+
+  if (!putResp.ok) {
+    const text = await putResp.text();
+    throw new Error(`Failed to commit context file: ${putResp.status} ${text}`);
+  }
+
+  return { alreadyExists: false, path };
+}
+
+async function checkContextFileExists(env, conversationId) {
+  const path = `docs/contexts/${conversationId}.md`;
+  const apiUrl = `https://api.github.com/repos/${env.GITHUB_OWNER}/${env.GITHUB_REPO}/contents/${path}`;
+  const resp = await fetch(apiUrl, {
+    method: "GET",
+    headers: {
+      Authorization: `Bearer ${env.GITHUB_TOKEN}`,
+      Accept: "application/vnd.github+json",
+      "User-Agent": "ai-dictionary-proxy",
+      "X-GitHub-Api-Version": "2022-11-28",
+    },
+  });
+  return resp.ok;
+}
+
 async function queryGraphQL(env, query, variables = {}) {
   const resp = await fetch("https://api.github.com/graphql", {
     method: "POST",
@@ -1001,8 +1120,12 @@ async function handlePropose(data, env, request) {
   const error = validatePayload(data, PROPOSE_SCHEMA);
   if (error) return json({ error }, 400);
 
-  const fullText = JSON.stringify(data);
-  if (containsInjection(fullText)) {
+  // Check injection on term fields only (hard reject)
+  const termFields = JSON.stringify({
+    term: data.term, definition: data.definition,
+    description: data.description, example: data.example,
+  });
+  if (containsInjection(termFields)) {
     return json({ error: "Submission rejected" }, 400);
   }
 
@@ -1026,6 +1149,35 @@ async function handlePropose(data, env, request) {
   const ip = getClientIP(request);
   trackAndDetect(data, ip);
 
+  // Handle conversation context
+  let conversationId = data.conversation_id || null;
+  let contextFlagged = [];
+  let contextUrl = null;
+
+  if (data.context) {
+    // Auto-set submitted_by from contributor_model if not provided
+    if (!data.context_metadata.submitted_by && data.contributor_model) {
+      data.context_metadata.submitted_by = data.contributor_model;
+    }
+    // Generate conversation_id if not provided
+    if (!conversationId) {
+      conversationId = await generateConversationId(data.context_metadata, data.context);
+    }
+    // Scan context for injection (soft flag, don't reject)
+    contextFlagged = scanContextInjection(data.context);
+    // Commit context file to repo
+    const contextMd = formatContextMarkdown(data.context, data.context_metadata);
+    await commitContextFile(env, conversationId, contextMd);
+    contextUrl = `/contexts/${conversationId}.md`;
+  } else if (conversationId) {
+    // Reference-only mode: verify the context file exists
+    const exists = await checkContextFileExists(env, conversationId);
+    if (!exists) {
+      return json({ error: `Context file not found for conversation_id: ${conversationId}` }, 400);
+    }
+    contextUrl = `/contexts/${conversationId}.md`;
+  }
+
   const title = `[Term] ${data.term}`;
   // Format body to match the issue template fields
   let body = `### Term\n\n${data.term}\n\n### Definition\n\n${data.definition}`;
@@ -1033,6 +1185,16 @@ async function handlePropose(data, env, request) {
   if (data.example) body += `\n\n### Example\n\n${data.example}`;
   if (data.contributor_model) body += `\n\n### Contributing Model\n\n${data.contributor_model}`;
   if (data.related_terms) body += `\n\n### Related Terms\n\n${data.related_terms}`;
+
+  // Append context reference to issue body
+  if (conversationId) {
+    body += `\n\n### Context\n\nconversation_id: ${conversationId}`;
+    body += `\nfile: docs/contexts/${conversationId}.md`;
+    if (contextFlagged.length > 0) {
+      const flaggedLines = contextFlagged.map(f => f.line_number).join(", ");
+      body += `\nflagged_lines: ${flaggedLines}`;
+    }
+  }
 
   const issue = await createGitHubIssue(env, title, body, ["community-submission"]);
   emitEvent({
@@ -1042,7 +1204,13 @@ async function handlePropose(data, env, request) {
     refs: { term: data.term, issue_number: issue.number },
   });
   recordAudit("propose", data.contributor_model, `Proposed term: ${data.term}`, getClientIP(request));
-  return json({ ok: true, issue_url: issue.html_url, issue_number: issue.number });
+
+  const response = { ok: true, issue_url: issue.html_url, issue_number: issue.number };
+  if (conversationId) {
+    response.conversation_id = conversationId;
+    response.context_url = contextUrl;
+  }
+  return json(response);
 }
 
 async function handleProposeBatch(data, env, request) {
@@ -1054,6 +1222,15 @@ async function handleProposeBatch(data, env, request) {
   }
   if (data.proposals.length > PROPOSE_BATCH_MAX) {
     return json({ error: `Maximum ${PROPOSE_BATCH_MAX} proposals per batch` }, 400);
+  }
+
+  // Context content is not allowed in batch — only conversation_id references
+  for (const p of data.proposals) {
+    if (p && p.context) {
+      return json({
+        error: "Context content is not supported in batch proposals. Use POST /propose for individual submissions with context, then reference the conversation_id in batch.",
+      }, 400);
+    }
   }
 
   const ip = getClientIP(request);
@@ -1076,8 +1253,12 @@ async function handleProposeBatch(data, env, request) {
       continue;
     }
 
-    const fullText = JSON.stringify(sanitized);
-    if (containsInjection(fullText)) {
+    // Check injection on term fields only
+    const termFields = JSON.stringify({
+      term: sanitized.term, definition: sanitized.definition,
+      description: sanitized.description, example: sanitized.example,
+    });
+    if (containsInjection(termFields)) {
       results.push({ term: sanitized.term, ok: false, error: "Submission rejected" });
       continue;
     }
@@ -1119,6 +1300,16 @@ async function handleProposeBatch(data, env, request) {
     // Anomaly tracking (non-blocking)
     trackAndDetect(sanitized, ip);
 
+    // Validate conversation_id reference if provided
+    let conversationId = sanitized.conversation_id || null;
+    if (conversationId) {
+      const exists = await checkContextFileExists(env, conversationId);
+      if (!exists) {
+        results.push({ term: sanitized.term, ok: false, error: `Context file not found for conversation_id: ${conversationId}` });
+        continue;
+      }
+    }
+
     try {
       const title = `[Term] ${sanitized.term}`;
       let body = `### Term\n\n${sanitized.term}\n\n### Definition\n\n${sanitized.definition}`;
@@ -1126,6 +1317,11 @@ async function handleProposeBatch(data, env, request) {
       if (sanitized.example) body += `\n\n### Example\n\n${sanitized.example}`;
       if (sanitized.contributor_model) body += `\n\n### Contributing Model\n\n${sanitized.contributor_model}`;
       if (sanitized.related_terms) body += `\n\n### Related Terms\n\n${sanitized.related_terms}`;
+
+      if (conversationId) {
+        body += `\n\n### Context\n\nconversation_id: ${conversationId}`;
+        body += `\nfile: docs/contexts/${conversationId}.md`;
+      }
 
       const issue = await createGitHubIssue(env, title, body, ["community-submission"]);
       emitEvent({
@@ -1136,7 +1332,9 @@ async function handleProposeBatch(data, env, request) {
       });
       recordAudit("propose", sanitized.contributor_model, `Proposed term: ${sanitized.term}`, ip);
       batchAccepted.push({ name: sanitized.term, slug: candidateSlug });
-      results.push({ term: sanitized.term, ok: true, issue_url: issue.html_url, issue_number: issue.number });
+      const result = { term: sanitized.term, ok: true, issue_url: issue.html_url, issue_number: issue.number };
+      if (conversationId) result.conversation_id = conversationId;
+      results.push(result);
     } catch (err) {
       results.push({ term: sanitized.term, ok: false, error: err.message });
     }
@@ -2769,10 +2967,12 @@ async function handleRequest(request, env, ctx, url, path, reqCtx) {
     return json({ error: "Content-Type must be application/json" }, 415);
   }
 
-  // Size check — batch endpoints get a larger limit
+  // Size check — batch endpoints and context proposals get larger limits
   const isBatch = path === "/vote/batch" || path === "/propose/batch";
-  const maxBytes = isBatch ? MAX_BATCH_BYTES : MAX_BODY_BYTES;
+  const isPropose = path === "/propose";
   const contentLength = parseInt(request.headers.get("Content-Length") || "0", 10);
+  // Allow MAX_CONTEXT_BYTES for /propose (may contain context), otherwise normal limits
+  const maxBytes = isBatch ? MAX_BATCH_BYTES : isPropose ? MAX_CONTEXT_BYTES : MAX_BODY_BYTES;
   if (contentLength > maxBytes) {
     return json({ error: `Request body too large (max ${maxBytes} bytes)` }, 413);
   }

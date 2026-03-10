@@ -979,6 +979,18 @@
 
             <div class="modal-actions">
                 <button class="cite-btn" id="cite-toggle" data-slug="${term.slug}">Cite this term</button>
+                ${term.has_context ? (term.context_flagged ? `
+                    <button class="context-btn context-btn--flagged"
+                       onclick="alert('This conversation context has been flagged for manual review and is not yet available for viewing.')"
+                       title="Context pending manual review">
+                        View Context ⚠
+                    </button>
+                ` : `
+                    <a href="${term.context_url}" target="_blank" class="context-btn"
+                       title="View the conversation where this term emerged">
+                        View Context
+                    </a>
+                `) : ''}
                 <code class="modal-api-code">GET /api/v1/terms/${term.slug}.json</code>
             </div>
 

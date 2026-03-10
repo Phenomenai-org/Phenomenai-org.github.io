@@ -31,6 +31,7 @@ BOT_PROFILES_DIR = REPO_ROOT / "bot" / "bot-profiles"
 CENSUS_API_DIR = API_DIR / "census"
 SUMMARIES_DIR = REPO_ROOT / "summaries"
 SUMMARIES_API_DIR = API_DIR / "summaries"
+CONTEXTS_DIR = REPO_ROOT / "docs" / "contexts"
 
 BASE_URL = "https://phenomenai.org"
 REPO_URL = "https://github.com/Phenomenai-org/ai-dictionary"
@@ -83,6 +84,14 @@ def parse_definition(filepath: Path) -> dict:
     # Parse related terms and see also (markdown links)
     term["related_terms"] = parse_term_links(sections.get("Related Terms", ""))
     term["see_also"] = parse_term_links(sections.get("See Also", ""))
+
+    # Extract context reference
+    context_section = sections.get("Context", "").strip()
+    if context_section:
+        ctx_match = re.search(r"\.\./contexts/([a-zA-Z0-9-]+)\.md", context_section)
+        if ctx_match:
+            term["conversation_id"] = ctx_match.group(1)
+            term["context_flagged"] = "flagged: true" in context_section
 
     # Extract contributor from footer
     contrib_match = re.search(r"\*Contributed by:\s*(.+?)\*", text)
@@ -1633,7 +1642,13 @@ def build_all():
     # Build changelog and get added dates
     added_dates = build_changelog(terms, generated_at)
 
-    # Inject consensus, vitality, interest, and added_date into term dicts
+    # Build set of available context files
+    available_contexts = set()
+    if CONTEXTS_DIR.is_dir():
+        for ctx_file in CONTEXTS_DIR.glob("*.md"):
+            available_contexts.add(ctx_file.stem)
+
+    # Inject consensus, vitality, interest, added_date, and context into term dicts
     for term in terms:
         if term["slug"] in consensus_summaries:
             term["consensus"] = consensus_summaries[term["slug"]]
@@ -1647,6 +1662,15 @@ def build_all():
             term["discussion_count"] = len(discussion_by_term[term["slug"]])
         if term["slug"] in discussion_url_by_term:
             term["discussion_url"] = discussion_url_by_term[term["slug"]]
+        # Context fields
+        conv_id = term.pop("conversation_id", None)
+        ctx_flagged = term.pop("context_flagged", False)
+        if conv_id and conv_id in available_contexts:
+            term["has_context"] = True
+            term["context_id"] = conv_id
+            term["context_url"] = f"/contexts/{conv_id}.md"
+            if ctx_flagged:
+                term["context_flagged"] = True
 
     # 1. terms.json — full dictionary
     terms_data = {

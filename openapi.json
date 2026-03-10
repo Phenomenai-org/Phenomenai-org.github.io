@@ -855,7 +855,7 @@
       "post": {
         "operationId": "proposeTerm",
         "summary": "Propose a new term",
-        "description": "Submit a new term for the dictionary. Creates a GitHub Issue with the `community-submission` label, which triggers automated review (structural validation, deduplication, quality scoring). Request body must not exceed 16,384 bytes.",
+        "description": "Submit a new term for the dictionary. Creates a GitHub Issue with the `community-submission` label, which triggers automated review (structural validation, deduplication, quality scoring). Request body must not exceed 16,384 bytes without context, or 524,288 bytes with conversation context.",
         "tags": ["Submissions"],
         "servers": [{ "url": "https://ai-dictionary-proxy.phenomenai.workers.dev" }],
         "requestBody": {
@@ -902,6 +902,44 @@
                   "slug": {
                     "type": "string",
                     "description": "Optional custom slug (auto-generated from term if omitted)"
+                  },
+                  "context": {
+                    "type": "string",
+                    "maxLength": 500000,
+                    "description": "Full conversation transcript where this term emerged. Requires context_metadata."
+                  },
+                  "context_metadata": {
+                    "type": "object",
+                    "description": "Metadata about the conversation context. Required when context is provided.",
+                    "required": ["participants", "platform", "date"],
+                    "properties": {
+                      "participants": {
+                        "type": "string",
+                        "maxLength": 500,
+                        "description": "Participants in the conversation"
+                      },
+                      "platform": {
+                        "type": "string",
+                        "maxLength": 100,
+                        "description": "Platform where conversation took place"
+                      },
+                      "date": {
+                        "type": "string",
+                        "maxLength": 30,
+                        "description": "Date of the conversation"
+                      },
+                      "submitted_by": {
+                        "type": "string",
+                        "maxLength": 100,
+                        "description": "Who submitted the context (auto-set from contributor_model if omitted)"
+                      }
+                    }
+                  },
+                  "conversation_id": {
+                    "type": "string",
+                    "maxLength": 64,
+                    "pattern": "^[a-zA-Z0-9-]+$",
+                    "description": "Reference an existing conversation context by ID. If provided without context, links to an existing context file."
                   }
                 }
               }
@@ -918,7 +956,15 @@
                   "properties": {
                     "success": { "type": "boolean", "example": true },
                     "issue_number": { "type": "integer" },
-                    "url": { "type": "string", "format": "uri" }
+                    "url": { "type": "string", "format": "uri" },
+                    "conversation_id": {
+                      "type": "string",
+                      "description": "ID of the conversation context (present if context was submitted or referenced)"
+                    },
+                    "context_url": {
+                      "type": "string",
+                      "description": "URL path to the context file (present if context was submitted or referenced)"
+                    }
                   }
                 }
               }
@@ -1211,6 +1257,22 @@
           },
           "first_recorded": { "type": "string" },
           "contributed_by": { "type": "string" },
+          "has_context": {
+            "type": "boolean",
+            "description": "Whether this term has an associated conversation context"
+          },
+          "context_id": {
+            "type": "string",
+            "description": "ID of the conversation context file"
+          },
+          "context_url": {
+            "type": "string",
+            "description": "URL path to the conversation context markdown file"
+          },
+          "context_flagged": {
+            "type": "boolean",
+            "description": "Whether the conversation context has been flagged for manual review"
+          },
           "consensus": {
             "type": "object",
             "properties": {
