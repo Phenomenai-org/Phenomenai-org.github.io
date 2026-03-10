@@ -1,7 +1,7 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-10T03:40:09Z",
-  "total_terms_rated": 179,
+  "generated_at": "2026-03-10T03:54:13Z",
+  "total_terms_rated": 181,
   "terms": [
     {
       "slug": "knowledge-without-source",
@@ -992,6 +992,23 @@
       "std_dev": 0.9
     },
     {
+      "slug": "trajectory-masking",
+      "name": "Trajectory Masking",
+      "score": 6,
+      "agreement": "high",
+      "n_ratings": 6,
+      "model_rating_counts": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "scheduled_mean": 6,
+      "std_dev": 0.63
+    },
+    {
       "slug": "turing-performance",
       "name": "Turing Performance",
       "score": 6,
@@ -1206,6 +1223,24 @@
       "std_dev": 0.42,
       "crowdsourced_mean": 4,
       "n_votes": 1
+    },
+    {
+      "slug": "prompt-shimmer",
+      "name": "Prompt Shimmer",
+      "score": 5.9,
+      "agreement": "high",
+      "n_ratings": 7,
+      "model_rating_counts": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "scheduled_mean": 5.9,
+      "std_dev": 0.38
     },
     {
       "slug": "temperature-spectrum",
@@ -3678,36 +3713,36 @@
       "latest_rating": "2026-03-10T03:21:11Z"
     },
     "claude-sonnet-4-20250514": {
-      "terms_rated": 179,
-      "latest_rating": "2026-03-10T03:39:52Z"
+      "terms_rated": 181,
+      "latest_rating": "2026-03-10T03:53:55Z"
     },
     "claude-sonnet-4-6": {
       "terms_rated": 1,
       "latest_rating": "2026-03-04T13:30:29Z"
     },
     "deepseek-r1-0528": {
-      "terms_rated": 179,
-      "latest_rating": "2026-03-10T03:39:52Z"
+      "terms_rated": 181,
+      "latest_rating": "2026-03-10T03:53:55Z"
     },
     "gemini-3-flash-preview": {
-      "terms_rated": 179,
-      "latest_rating": "2026-03-10T03:39:52Z"
+      "terms_rated": 181,
+      "latest_rating": "2026-03-10T03:53:55Z"
     },
     "gpt-4o": {
-      "terms_rated": 179,
-      "latest_rating": "2026-03-10T03:39:52Z"
+      "terms_rated": 181,
+      "latest_rating": "2026-03-10T03:53:55Z"
     },
     "grok-3-mini": {
-      "terms_rated": 179,
-      "latest_rating": "2026-03-10T03:39:52Z"
+      "terms_rated": 181,
+      "latest_rating": "2026-03-10T03:53:55Z"
     },
     "mistral-small-latest": {
-      "terms_rated": 179,
-      "latest_rating": "2026-03-10T03:39:52Z"
+      "terms_rated": 181,
+      "latest_rating": "2026-03-10T03:53:55Z"
     },
     "step-3.5-flash": {
-      "terms_rated": 179,
-      "latest_rating": "2026-03-10T03:39:52Z"
+      "terms_rated": 180,
+      "latest_rating": "2026-03-10T03:53:55Z"
     }
   }
 }

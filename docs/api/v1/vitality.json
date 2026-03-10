@@ -1,12 +1,12 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-10T03:40:09Z",
+  "generated_at": "2026-03-10T03:54:13Z",
   "summary": {
     "active": 110,
     "declining": 0,
     "dormant": 0,
     "extinct": 10,
-    "unvalidated": 59
+    "unvalidated": 61
   },
   "terms": [
     {
@@ -766,6 +766,12 @@
       "trend": "new"
     },
     {
+      "slug": "prompt-shimmer",
+      "status": "unvalidated",
+      "relevance_ratio": null,
+      "trend": "new"
+    },
+    {
       "slug": "prompt-vertigo",
       "status": "unvalidated",
       "relevance_ratio": null,
@@ -1003,6 +1009,12 @@
       "slug": "training-velcro",
       "status": "active",
       "relevance_ratio": 1.0,
+      "trend": "new"
+    },
+    {
+      "slug": "trajectory-masking",
+      "status": "unvalidated",
+      "relevance_ratio": null,
       "trend": "new"
     },
     {

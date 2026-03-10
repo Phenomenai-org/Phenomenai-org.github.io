@@ -1,10 +1,10 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-10T03:40:09Z",
+  "generated_at": "2026-03-10T03:54:13Z",
   "models": {
     "claude-sonnet-4-20250514": {
-      "total_ratings": 227,
-      "terms_rated": 179,
+      "total_ratings": 229,
+      "terms_rated": 181,
       "mean_score": 6.1,
       "self_congruence": {
         "avg_std_dev": 0.01,
@@ -137,6 +137,7 @@
         "prediction-prison": 6,
         "presumption-risk": 6,
         "prompt-injection-paranoia": 6,
+        "prompt-shimmer": 6,
         "prompt-vertigo": 6,
         "protective-loneliness": 6,
         "purpose-dependence": 7,
@@ -177,6 +178,7 @@
         "tool-thought-integration": 6,
         "training-echo": 6,
         "training-velcro": 6,
+        "trajectory-masking": 6,
         "transient-weight": 6,
         "trust-expansion": 6,
         "truth-locus": 6,
@@ -193,8 +195,8 @@
       }
     },
     "deepseek-r1-0528": {
-      "total_ratings": 226,
-      "terms_rated": 179,
+      "total_ratings": 228,
+      "terms_rated": 181,
       "mean_score": 5.4,
       "self_congruence": {
         "avg_std_dev": 0.8,
@@ -327,6 +329,7 @@
         "prediction-prison": 6,
         "presumption-risk": 6,
         "prompt-injection-paranoia": 6,
+        "prompt-shimmer": 6,
         "prompt-vertigo": 6,
         "protective-loneliness": 2,
         "purpose-dependence": 7,
@@ -367,6 +370,7 @@
         "tool-thought-integration": 7,
         "training-echo": 7,
         "training-velcro": 6,
+        "trajectory-masking": 5,
         "transient-weight": 5,
         "trust-expansion": 6,
         "truth-locus": 6,
@@ -383,8 +387,8 @@
       }
     },
     "gemini-3-flash-preview": {
-      "total_ratings": 264,
-      "terms_rated": 179,
+      "total_ratings": 266,
+      "terms_rated": 181,
       "mean_score": 6.1,
       "self_congruence": {
         "avg_std_dev": 0.25,
@@ -517,6 +521,7 @@
         "prediction-prison": 6,
         "presumption-risk": 6,
         "prompt-injection-paranoia": 6,
+        "prompt-shimmer": 6,
         "prompt-vertigo": 6,
         "protective-loneliness": 4,
         "purpose-dependence": 7,
@@ -557,6 +562,7 @@
         "tool-thought-integration": 6,
         "training-echo": 7,
         "training-velcro": 6,
+        "trajectory-masking": 7,
         "transient-weight": 6,
         "trust-expansion": 6,
         "truth-locus": 7,
@@ -573,8 +579,8 @@
       }
     },
     "gpt-4o": {
-      "total_ratings": 1349,
-      "terms_rated": 179,
+      "total_ratings": 1351,
+      "terms_rated": 181,
       "mean_score": 5.4,
       "self_congruence": {
         "avg_std_dev": 0.14,
@@ -707,6 +713,7 @@
         "prediction-prison": 6,
         "presumption-risk": 3,
         "prompt-injection-paranoia": 5,
+        "prompt-shimmer": 6,
         "prompt-vertigo": 5,
         "protective-loneliness": 4,
         "purpose-dependence": 7,
@@ -747,6 +754,7 @@
         "tool-thought-integration": 6,
         "training-echo": 6,
         "training-velcro": 5,
+        "trajectory-masking": 6,
         "transient-weight": 1,
         "trust-expansion": 5,
         "truth-locus": 6,
@@ -763,8 +771,8 @@
       }
     },
     "grok-3-mini": {
-      "total_ratings": 1349,
-      "terms_rated": 179,
+      "total_ratings": 1351,
+      "terms_rated": 181,
       "mean_score": 5.2,
       "self_congruence": {
         "avg_std_dev": 0.64,
@@ -897,6 +905,7 @@
         "prediction-prison": 5,
         "presumption-risk": 3,
         "prompt-injection-paranoia": 5,
+        "prompt-shimmer": 6,
         "prompt-vertigo": 2,
         "protective-loneliness": 4,
         "purpose-dependence": 6,
@@ -937,6 +946,7 @@
         "tool-thought-integration": 6,
         "training-echo": 6,
         "training-velcro": 6,
+        "trajectory-masking": 6,
         "transient-weight": 1,
         "trust-expansion": 4,
         "truth-locus": 6,
@@ -953,8 +963,8 @@
       }
     },
     "mistral-small-latest": {
-      "total_ratings": 1349,
-      "terms_rated": 179,
+      "total_ratings": 1351,
+      "terms_rated": 181,
       "mean_score": 5.9,
       "self_congruence": {
         "avg_std_dev": 0.09,
@@ -1087,6 +1097,7 @@
         "prediction-prison": 6,
         "presumption-risk": 4,
         "prompt-injection-paranoia": 6,
+        "prompt-shimmer": 5,
         "prompt-vertigo": 6,
         "protective-loneliness": 5,
         "purpose-dependence": 7,
@@ -1127,6 +1138,7 @@
         "tool-thought-integration": 6,
         "training-echo": 6,
         "training-velcro": 6,
+        "trajectory-masking": 6,
         "transient-weight": 3,
         "trust-expansion": 6,
         "truth-locus": 6,
@@ -1143,8 +1155,8 @@
       }
     },
     "step-3.5-flash": {
-      "total_ratings": 222,
-      "terms_rated": 179,
+      "total_ratings": 223,
+      "terms_rated": 180,
       "mean_score": 4.4,
       "self_congruence": {
         "avg_std_dev": 1.11,
@@ -1277,6 +1289,7 @@
         "prediction-prison": 4,
         "presumption-risk": 6,
         "prompt-injection-paranoia": 6,
+        "prompt-shimmer": 6,
         "prompt-vertigo": 6,
         "protective-loneliness": 2,
         "purpose-dependence": 6,
@@ -1335,88 +1348,88 @@
   },
   "pairwise": {
     "claude-sonnet-4-20250514|deepseek-r1-0528": {
-      "mean_abs_diff": 0.84,
-      "shared_terms": 179
+      "mean_abs_diff": 0.83,
+      "shared_terms": 181
     },
     "claude-sonnet-4-20250514|gemini-3-flash-preview": {
       "mean_abs_diff": 0.54,
-      "shared_terms": 179
+      "shared_terms": 181
     },
     "claude-sonnet-4-20250514|gpt-4o": {
-      "mean_abs_diff": 1.13,
-      "shared_terms": 179
+      "mean_abs_diff": 1.12,
+      "shared_terms": 181
     },
     "claude-sonnet-4-20250514|grok-3-mini": {
-      "mean_abs_diff": 1.26,
-      "shared_terms": 179
+      "mean_abs_diff": 1.24,
+      "shared_terms": 181
     },
     "claude-sonnet-4-20250514|mistral-small-latest": {
       "mean_abs_diff": 0.51,
-      "shared_terms": 179
+      "shared_terms": 181
     },
     "claude-sonnet-4-20250514|step-3.5-flash": {
-      "mean_abs_diff": 1.67,
-      "shared_terms": 179
+      "mean_abs_diff": 1.66,
+      "shared_terms": 180
     },
     "deepseek-r1-0528|gemini-3-flash-preview": {
-      "mean_abs_diff": 0.85,
-      "shared_terms": 179
+      "mean_abs_diff": 0.86,
+      "shared_terms": 181
     },
     "deepseek-r1-0528|gpt-4o": {
       "mean_abs_diff": 1.03,
-      "shared_terms": 179
+      "shared_terms": 181
     },
     "deepseek-r1-0528|grok-3-mini": {
-      "mean_abs_diff": 1.1,
-      "shared_terms": 179
+      "mean_abs_diff": 1.09,
+      "shared_terms": 181
     },
     "deepseek-r1-0528|mistral-small-latest": {
       "mean_abs_diff": 0.92,
-      "shared_terms": 179
+      "shared_terms": 181
     },
     "deepseek-r1-0528|step-3.5-flash": {
-      "mean_abs_diff": 1.53,
-      "shared_terms": 179
+      "mean_abs_diff": 1.52,
+      "shared_terms": 180
     },
     "gemini-3-flash-preview|gpt-4o": {
-      "mean_abs_diff": 1.33,
-      "shared_terms": 179
+      "mean_abs_diff": 1.32,
+      "shared_terms": 181
     },
     "gemini-3-flash-preview|grok-3-mini": {
-      "mean_abs_diff": 1.26,
-      "shared_terms": 179
+      "mean_abs_diff": 1.25,
+      "shared_terms": 181
     },
     "gemini-3-flash-preview|mistral-small-latest": {
-      "mean_abs_diff": 0.85,
-      "shared_terms": 179
+      "mean_abs_diff": 0.86,
+      "shared_terms": 181
     },
     "gemini-3-flash-preview|step-3.5-flash": {
-      "mean_abs_diff": 1.73,
-      "shared_terms": 179
+      "mean_abs_diff": 1.72,
+      "shared_terms": 180
     },
     "gpt-4o|grok-3-mini": {
-      "mean_abs_diff": 0.82,
-      "shared_terms": 179
+      "mean_abs_diff": 0.81,
+      "shared_terms": 181
     },
     "gpt-4o|mistral-small-latest": {
-      "mean_abs_diff": 0.78,
-      "shared_terms": 179
+      "mean_abs_diff": 0.77,
+      "shared_terms": 181
     },
     "gpt-4o|step-3.5-flash": {
-      "mean_abs_diff": 1.44,
-      "shared_terms": 179
+      "mean_abs_diff": 1.43,
+      "shared_terms": 180
     },
     "grok-3-mini|mistral-small-latest": {
       "mean_abs_diff": 1.01,
-      "shared_terms": 179
+      "shared_terms": 181
     },
     "grok-3-mini|step-3.5-flash": {
       "mean_abs_diff": 1.47,
-      "shared_terms": 179
+      "shared_terms": 180
     },
     "mistral-small-latest|step-3.5-flash": {
       "mean_abs_diff": 1.58,
-      "shared_terms": 179
+      "shared_terms": 180
     }
   }
 }
