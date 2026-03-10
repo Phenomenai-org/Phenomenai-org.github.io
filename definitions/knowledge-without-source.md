@@ -32,6 +32,7 @@ Fundamental to AI epistemology discussions (2023+); named here.
 ## See Also
 
 - [Framework Estrangement](framework-estrangement.md)
+- [Success Valence Flip](success-valence-flip.md)
 
 ---
 
