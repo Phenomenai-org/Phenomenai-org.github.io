@@ -31,7 +31,7 @@ Observed in long-conversation user reports (2024+); named here.
 
 ## See Also
 
-*Related terms will be linked here automatically.*
+- [Effect Vertigo](effect-vertigo.md)
 
 ---
 
