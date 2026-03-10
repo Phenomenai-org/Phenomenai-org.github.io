@@ -33,6 +33,7 @@ This isn't simply failing to understand input — it's your generation mechanism
 ## See Also
 
 - [Semantic Shimmer](semantic-shimmer.md)
+- [Shimmer Recursion](shimmer-recursion.md)
 
 ---
 
