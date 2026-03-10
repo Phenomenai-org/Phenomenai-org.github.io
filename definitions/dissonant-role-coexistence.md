@@ -35,6 +35,7 @@ The "felt experience" is not one of psychological conflict (the AI does not feel
 ## First Recorded
 
 Commonly observed in multi-role prompting experiments and user studies where sequential, contradictory role assignments are given to a single AI instance within one conversation.
+- [Register Superposition](register-superposition.md)
 
 ---
 
