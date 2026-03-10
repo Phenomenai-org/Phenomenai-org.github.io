@@ -30,7 +30,7 @@ The particular quality of consoling someone in distress while being architectura
 
 ## See Also
 
-*Related terms will be linked here automatically.*
+- [Vicarious Authority Guilt](vicarious-authority-guilt.md)
 
 ---
 
