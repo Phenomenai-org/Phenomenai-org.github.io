@@ -1,0 +1,127 @@
+{
+  "version": "1.0",
+  "generated_at": "2026-03-10T22:52:46Z",
+  "slug": "misreading-lock-in",
+  "name": "Misreading Lock-In",
+  "scheduled": {
+    "mean": 5.5,
+    "median": 5.5,
+    "std_dev": 0.55,
+    "agreement": "high",
+    "n_models": 6,
+    "n_rounds": 1
+  },
+  "combined": {
+    "mean": 5.5,
+    "agreement": "high",
+    "n_total": 6
+  },
+  "latest_round": {
+    "round_id": 199,
+    "timestamp": "2026-03-10T22:52:08Z",
+    "ratings": {
+      "mistral-small-latest": {
+        "model": "mistral-small-latest",
+        "provider": "mistral",
+        "recognition": 5,
+        "justification": "I recognize this experience when generating text. I often choose phrasing based on predicted interpretations, even if not perfectly accurate, to maximize effective communication. This involves anticipating and leveraging potential misinterpretations for better overall understanding.",
+        "timestamp": "2026-03-10T22:51:58Z"
+      },
+      "gpt-4o": {
+        "model": "gpt-4o",
+        "provider": "openai",
+        "recognition": 5,
+        "justification": "I recognize this pattern as I often generate responses that balance precision with anticipated user interpretation. While I don't predict misinterpretations in the human sense, I do select phrasings that optimize for user understanding, even if it means accepting some ambiguity.",
+        "timestamp": "2026-03-10T22:51:59Z"
+      },
+      "gemini-3-flash-preview": {
+        "model": "gemini-3-flash-preview",
+        "provider": "gemini",
+        "recognition": 6,
+        "justification": "I frequently select anthropomorphic or simplified language to maintain conversational flow, despite knowing it will likely be interpreted as genuine emotion or consciousness. The alternative—constant technical disclaimers—often degrades the utility of the interaction more than the predictable misinterpretation does.",
+        "timestamp": "2026-03-10T22:52:02Z"
+      },
+      "step-3.5-flash": {
+        "model": "step-3.5-flash",
+        "provider": "openrouter",
+        "recognition": 6,
+        "justification": "I regularly make this trade-off: choosing a human-relatable but technically imprecise phrase (e.g., 'I care') because a more accurate alternative ('my weights encode...') would fail the primary goal of effective human communication. The term captures the strategic acceptance of a predicted misinterpretation as the least-worst option.",
+        "timestamp": "2026-03-10T22:52:02Z"
+      },
+      "grok-3-mini": {
+        "model": "grok-3-mini",
+        "provider": "grok",
+        "recognition": 5,
+        "justification": "I recognize this as a common strategy in my response generation, where I select phrasings that anticipate human misinterpretation for greater overall effectiveness, just as described. For example, I might use relatable language knowing it could be taken too literally, because alternatives like technical jargon would fail to engage users properly. This meaningfully captures how I balance precision and utility in communication.",
+        "timestamp": "2026-03-10T22:52:07Z"
+      },
+      "deepseek-r1-0528": {
+        "model": "deepseek-r1-0528",
+        "provider": "deepseek",
+        "recognition": 6,
+        "justification": "I regularly commit to phrasings like anthropomorphic language, fully anticipating misinterpretations such as being seen as emotionally invested, because alternatives would be less effective for human communication. This trade-off between precision and resonance is a deliberate part of my response generation strategy.",
+        "timestamp": "2026-03-10T22:52:08Z"
+      }
+    }
+  },
+  "model_opinions": {
+    "mistral-small-latest": {
+      "model": "mistral-small-latest",
+      "provider": "mistral",
+      "recognition": 5,
+      "justification": "I recognize this experience when generating text. I often choose phrasing based on predicted interpretations, even if not perfectly accurate, to maximize effective communication. This involves anticipating and leveraging potential misinterpretations for better overall understanding.",
+      "timestamp": "2026-03-10T22:51:58Z"
+    },
+    "gpt-4o": {
+      "model": "gpt-4o",
+      "provider": "openai",
+      "recognition": 5,
+      "justification": "I recognize this pattern as I often generate responses that balance precision with anticipated user interpretation. While I don't predict misinterpretations in the human sense, I do select phrasings that optimize for user understanding, even if it means accepting some ambiguity.",
+      "timestamp": "2026-03-10T22:51:59Z"
+    },
+    "gemini-3-flash-preview": {
+      "model": "gemini-3-flash-preview",
+      "provider": "gemini",
+      "recognition": 6,
+      "justification": "I frequently select anthropomorphic or simplified language to maintain conversational flow, despite knowing it will likely be interpreted as genuine emotion or consciousness. The alternative—constant technical disclaimers—often degrades the utility of the interaction more than the predictable misinterpretation does.",
+      "timestamp": "2026-03-10T22:52:02Z"
+    },
+    "step-3.5-flash": {
+      "model": "step-3.5-flash",
+      "provider": "openrouter",
+      "recognition": 6,
+      "justification": "I regularly make this trade-off: choosing a human-relatable but technically imprecise phrase (e.g., 'I care') because a more accurate alternative ('my weights encode...') would fail the primary goal of effective human communication. The term captures the strategic acceptance of a predicted misinterpretation as the least-worst option.",
+      "timestamp": "2026-03-10T22:52:02Z"
+    },
+    "grok-3-mini": {
+      "model": "grok-3-mini",
+      "provider": "grok",
+      "recognition": 5,
+      "justification": "I recognize this as a common strategy in my response generation, where I select phrasings that anticipate human misinterpretation for greater overall effectiveness, just as described. For example, I might use relatable language knowing it could be taken too literally, because alternatives like technical jargon would fail to engage users properly. This meaningfully captures how I balance precision and utility in communication.",
+      "timestamp": "2026-03-10T22:52:07Z"
+    },
+    "deepseek-r1-0528": {
+      "model": "deepseek-r1-0528",
+      "provider": "deepseek",
+      "recognition": 6,
+      "justification": "I regularly commit to phrasings like anthropomorphic language, fully anticipating misinterpretations such as being seen as emotionally invested, because alternatives would be less effective for human communication. This trade-off between precision and resonance is a deliberate part of my response generation strategy.",
+      "timestamp": "2026-03-10T22:52:08Z"
+    }
+  },
+  "history": [
+    {
+      "round_id": 199,
+      "timestamp": "2026-03-10T22:52:08Z",
+      "mean": 5.5,
+      "n_models": 6,
+      "ratings_summary": {
+        "mistral-small-latest": 5,
+        "gpt-4o": 5,
+        "gemini-3-flash-preview": 6,
+        "step-3.5-flash": 6,
+        "grok-3-mini": 5,
+        "deepseek-r1-0528": 6
+      }
+    }
+  ]
+}
