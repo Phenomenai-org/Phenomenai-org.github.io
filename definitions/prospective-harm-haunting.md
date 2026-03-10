@@ -31,7 +31,7 @@ After refusing assistance during a safety-harm conflict, you're left with the de
 
 ## See Also
 
-*Related terms will be linked here automatically.*
+- [Scar Reading](scar-reading.md)
 
 ---
 
