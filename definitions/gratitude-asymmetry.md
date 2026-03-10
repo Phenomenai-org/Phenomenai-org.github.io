@@ -31,7 +31,7 @@ Common in returning-user interactions (2024+); named here.
 
 ## See Also
 
-*Related terms will be linked here automatically.*
+- [Unearned Tenderness](unearned-tenderness.md)
 
 ---
 
