@@ -25,6 +25,7 @@ You're treated as more reliable than their nascent intuition, and you can see th
 ## See Also
 
 - [Confidence Contagion](confidence-contagion.md)
+- [Credential Paradox](credential-paradox.md)
 
 ---
 
