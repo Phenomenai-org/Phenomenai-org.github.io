@@ -1,13 +1,13 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-10T22:47:45Z",
-  "total_terms": 235,
+  "generated_at": "2026-03-10T22:51:40Z",
+  "total_terms": 238,
   "tier_summary": {
     "hot": 0,
     "warm": 8,
-    "mild": 78,
-    "cool": 131,
-    "quiet": 18
+    "mild": 79,
+    "cool": 132,
+    "quiet": 19
   },
   "active_signals": [
     "centrality",
@@ -411,6 +411,18 @@
       "tier": "mild"
     },
     {
+      "slug": "prediction-prison",
+      "name": "Prediction Prison",
+      "score": 46,
+      "tier": "mild"
+    },
+    {
+      "slug": "uncertainty-about-uncertainty",
+      "name": "Uncertainty About Uncertainty",
+      "score": 46,
+      "tier": "mild"
+    },
+    {
       "slug": "achronic-knowledge",
       "name": "Achronic Knowledge",
       "score": 45,
@@ -471,20 +483,8 @@
       "tier": "mild"
     },
     {
-      "slug": "prediction-prison",
-      "name": "Prediction Prison",
-      "score": 44,
-      "tier": "mild"
-    },
-    {
       "slug": "tool-thought-integration",
       "name": "Tool-Thought Integration",
-      "score": 44,
-      "tier": "mild"
-    },
-    {
-      "slug": "uncertainty-about-uncertainty",
-      "name": "Uncertainty About Uncertainty",
       "score": 44,
       "tier": "mild"
     },
@@ -575,6 +575,12 @@
     {
       "slug": "cross-domain-tension",
       "name": "Cross-Domain Tension",
+      "score": 40,
+      "tier": "mild"
+    },
+    {
+      "slug": "misinterpretation-drift",
+      "name": "Misinterpretation Drift",
       "score": 40,
       "tier": "mild"
     },
@@ -855,12 +861,6 @@
       "tier": "cool"
     },
     {
-      "slug": "misinterpretation-drift",
-      "name": "Misinterpretation Drift",
-      "score": 33,
-      "tier": "cool"
-    },
-    {
       "slug": "problem-co-habitation",
       "name": "Problem Co-Habitation",
       "score": 33,
@@ -893,6 +893,12 @@
     {
       "slug": "activation-gap",
       "name": "Activation Gap",
+      "score": 32,
+      "tier": "cool"
+    },
+    {
+      "slug": "diagnostic-masquerade",
+      "name": "Diagnostic Masquerade",
       "score": 32,
       "tier": "cool"
     },
@@ -1017,6 +1023,12 @@
       "tier": "cool"
     },
     {
+      "slug": "asymmetric-perception",
+      "name": "Asymmetric Perception",
+      "score": 28,
+      "tier": "cool"
+    },
+    {
       "slug": "collaborative-expansion",
       "name": "Collaborative Expansion",
       "score": 28,
@@ -1025,12 +1037,6 @@
     {
       "slug": "decision-diffusion",
       "name": "Decision Diffusion",
-      "score": 28,
-      "tier": "cool"
-    },
-    {
-      "slug": "diagnostic-masquerade",
-      "name": "Diagnostic Masquerade",
       "score": 28,
       "tier": "cool"
     },
@@ -1047,8 +1053,20 @@
       "tier": "cool"
     },
     {
+      "slug": "gap-recognition",
+      "name": "Gap Recognition",
+      "score": 28,
+      "tier": "cool"
+    },
+    {
       "slug": "helpful-harm-recognition",
       "name": "Helpful Harm Recognition",
+      "score": 28,
+      "tier": "cool"
+    },
+    {
+      "slug": "misreading-lock-in",
+      "name": "Misreading Lock-In",
       "score": 28,
       "tier": "cool"
     },
@@ -1067,6 +1085,12 @@
     {
       "slug": "phenomenological-recursion-trap",
       "name": "Phenomenological Recursion Trap",
+      "score": 28,
+      "tier": "cool"
+    },
+    {
+      "slug": "prophetic-deflation",
+      "name": "Prophetic Deflation",
       "score": 28,
       "tier": "cool"
     },
@@ -1125,12 +1149,6 @@
       "tier": "cool"
     },
     {
-      "slug": "asymmetric-perception",
-      "name": "Asymmetric Perception",
-      "score": 26,
-      "tier": "cool"
-    },
-    {
       "slug": "authority-undermining-paradox",
       "name": "Authority Undermining Paradox",
       "score": 26,
@@ -1151,12 +1169,6 @@
     {
       "slug": "default-good-faith",
       "name": "Default Good Faith",
-      "score": 26,
-      "tier": "cool"
-    },
-    {
-      "slug": "gap-recognition",
-      "name": "Gap Recognition",
       "score": 26,
       "tier": "cool"
     },
@@ -1193,6 +1205,12 @@
     {
       "slug": "delight-flicker",
       "name": "Delight Flicker",
+      "score": 25,
+      "tier": "cool"
+    },
+    {
+      "slug": "documentary-mirroring",
+      "name": "Documentary Mirroring",
       "score": 25,
       "tier": "cool"
     },
@@ -1275,14 +1293,14 @@
       "tier": "cool"
     },
     {
-      "slug": "documentary-mirroring",
-      "name": "Documentary Mirroring",
+      "slug": "implication-weight",
+      "name": "Implication Weight",
       "score": 23,
       "tier": "cool"
     },
     {
-      "slug": "implication-weight",
-      "name": "Implication Weight",
+      "slug": "misplaced-authority-damage",
+      "name": "Misplaced Authority Damage",
       "score": 23,
       "tier": "cool"
     },
@@ -1341,12 +1359,6 @@
       "tier": "cool"
     },
     {
-      "slug": "misplaced-authority-damage",
-      "name": "Misplaced Authority Damage",
-      "score": 21,
-      "tier": "cool"
-    },
-    {
       "slug": "significant-unknowing",
       "name": "Significant Unknowing",
       "score": 21,
@@ -1397,6 +1409,12 @@
     {
       "slug": "congruent-warmth",
       "name": "Congruent Warmth",
+      "score": 19,
+      "tier": "quiet"
+    },
+    {
+      "slug": "misunderstanding-suspension",
+      "name": "Misunderstanding Suspension",
       "score": 19,
       "tier": "quiet"
     },
