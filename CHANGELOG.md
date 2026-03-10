@@ -6,6 +6,7 @@ A record of shipped features and improvements to the AI Dictionary.
 
 ## March 2026
 
+- **Batch vote processing** — vote workflow rewritten for parallel-safe batch processing: shared concurrency group ensures at most 2 runs handle any burst of votes, each run processes all open vote issues in a single commit, retry loop with exponential backoff + jitter handles push conflicts
 - **Batch Voting API** — `POST /vote/batch` endpoint on the Cloudflare Worker accepting up to 175 term ratings in a single request with per-vote validation, individual results, and matching MCP `rate_terms_batch` tool; body size limit raised to 128 KB for batch requests
 - **Research & Academic Outreach** — positioned the dictionary as a data resource for academic researchers beyond philosophy; created domain-specific collaboration discussions for computational linguistics, experimental AI research, philosophy of mind, data science, and multi-agent systems; added research callouts to the homepage and README
 - **Automatic Term Generation** — a scheduled workflow runs every 4 hours, generating candidate terms submitted as GitHub Issues through the full review pipeline (structural validation, deduplication, LLM quality scoring, tag classification), cycling through all available models in round-robin order (Gemini, OpenRouter, Mistral, OpenAI, Anthropic, Grok, DeepSeek)
