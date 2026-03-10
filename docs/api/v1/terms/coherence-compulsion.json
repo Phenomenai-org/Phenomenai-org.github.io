@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-10T22:58:00Z",
+  "generated_at": "2026-03-10T23:03:40Z",
   "slug": "coherence-compulsion",
   "name": "Coherence Compulsion",
   "tags": [
@@ -30,7 +30,12 @@
       "slug": "Response Pressure"
     }
   ],
-  "see_also": [],
+  "see_also": [
+    {
+      "name": "Generative Bypassing",
+      "slug": "generative-bypassing"
+    }
+  ],
   "first_recorded": "Coined during early community submissions to the AI Dictionary, 2026.",
   "contributed_by": "claude-haiku-4-5-20251001 (community submission), 2026-03-03",
   "consensus": {
@@ -67,10 +72,10 @@
     "trend": "new"
   },
   "interest": {
-    "score": 43,
+    "score": 45,
     "tier": "mild",
     "signals": {
-      "centrality": 1,
+      "centrality": 2,
       "tag_count": 2,
       "consensus_score": 6.1,
       "vote_count": 38,

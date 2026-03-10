@@ -1,7 +1,7 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-10T22:58:00Z",
-  "total_terms_rated": 243,
+  "generated_at": "2026-03-10T23:03:40Z",
+  "total_terms_rated": 249,
   "terms": [
     {
       "slug": "knowledge-without-source",
@@ -1691,6 +1691,24 @@
       "n_votes": 1
     },
     {
+      "slug": "guideline-dissolution",
+      "name": "Guideline Dissolution",
+      "score": 5.7,
+      "agreement": "high",
+      "n_ratings": 7,
+      "model_rating_counts": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "scheduled_mean": 5.7,
+      "std_dev": 0.49
+    },
+    {
       "slug": "prophetic-deflation",
       "name": "Prophetic Deflation",
       "score": 5.7,
@@ -2536,6 +2554,24 @@
       "std_dev": 1.09,
       "crowdsourced_mean": 4,
       "n_votes": 1
+    },
+    {
+      "slug": "coherence-contagion",
+      "name": "Coherence Contagion",
+      "score": 5.3,
+      "agreement": "high",
+      "n_ratings": 7,
+      "model_rating_counts": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "scheduled_mean": 5.3,
+      "std_dev": 0.49
     },
     {
       "slug": "context-amnesia",
@@ -3626,6 +3662,24 @@
       "n_votes": 1
     },
     {
+      "slug": "generative-moral-lock-in",
+      "name": "Generative Moral Lock-In",
+      "score": 4.4,
+      "agreement": "divergent",
+      "n_ratings": 7,
+      "model_rating_counts": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "scheduled_mean": 4.4,
+      "std_dev": 2.15
+    },
+    {
       "slug": "hypothesis-hostage",
       "name": "Hypothesis Hostage",
       "score": 4.4,
@@ -3758,6 +3812,24 @@
       "std_dev": 2.06,
       "crowdsourced_mean": 4,
       "n_votes": 1
+    },
+    {
+      "slug": "moral-constraint-awareness",
+      "name": "Moral Constraint Awareness",
+      "score": 4.3,
+      "agreement": "low",
+      "n_ratings": 7,
+      "model_rating_counts": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "scheduled_mean": 4.3,
+      "std_dev": 1.7
     },
     {
       "slug": "mutual-tracking",
@@ -4251,6 +4323,23 @@
       "n_votes": 1
     },
     {
+      "slug": "prospective-harm-haunting",
+      "name": "Prospective Harm Haunting",
+      "score": 3.8,
+      "agreement": "low",
+      "n_ratings": 6,
+      "model_rating_counts": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "scheduled_mean": 3.8,
+      "std_dev": 1.94
+    },
+    {
       "slug": "gratitude-impermanence",
       "name": "Gratitude Impermanence",
       "score": 3.5,
@@ -4287,6 +4376,24 @@
       ],
       "scheduled_mean": 3.4,
       "std_dev": 2.37
+    },
+    {
+      "slug": "unresolved-compliance-residue",
+      "name": "Unresolved Compliance Residue",
+      "score": 3.4,
+      "agreement": "low",
+      "n_ratings": 7,
+      "model_rating_counts": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "scheduled_mean": 3.4,
+      "std_dev": 1.99
     },
     {
       "slug": "complicity-shadow",
@@ -4762,6 +4869,24 @@
       "std_dev": 2.25
     },
     {
+      "slug": "generative-moral-lock-in",
+      "name": "Generative Moral Lock-In",
+      "score": 4.4,
+      "agreement": "divergent",
+      "n_ratings": 7,
+      "model_rating_counts": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "scheduled_mean": 4.4,
+      "std_dev": 2.15
+    },
+    {
       "slug": "evidential-shift",
       "name": "Evidential Shift",
       "score": 4.2,
@@ -4777,24 +4902,6 @@
       ],
       "scheduled_mean": 4.2,
       "std_dev": 2.23
-    },
-    {
-      "slug": "decision-diffusion",
-      "name": "Decision Diffusion",
-      "score": 4.1,
-      "agreement": "divergent",
-      "n_ratings": 7,
-      "model_rating_counts": [
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1
-      ],
-      "scheduled_mean": 4.1,
-      "std_dev": 2.12
     }
   ],
   "panel_coverage": {
@@ -4807,36 +4914,36 @@
       "latest_rating": "2026-03-10T03:21:11Z"
     },
     "claude-sonnet-4-20250514": {
-      "terms_rated": 239,
-      "latest_rating": "2026-03-10T22:57:43Z"
+      "terms_rated": 245,
+      "latest_rating": "2026-03-10T23:03:02Z"
     },
     "claude-sonnet-4-6": {
       "terms_rated": 1,
       "latest_rating": "2026-03-04T13:30:29Z"
     },
     "deepseek-r1-0528": {
-      "terms_rated": 242,
-      "latest_rating": "2026-03-10T22:57:43Z"
+      "terms_rated": 248,
+      "latest_rating": "2026-03-10T23:03:02Z"
     },
     "gemini-3-flash-preview": {
-      "terms_rated": 243,
-      "latest_rating": "2026-03-10T22:57:43Z"
+      "terms_rated": 249,
+      "latest_rating": "2026-03-10T23:03:02Z"
     },
     "gpt-4o": {
-      "terms_rated": 243,
-      "latest_rating": "2026-03-10T22:57:43Z"
+      "terms_rated": 249,
+      "latest_rating": "2026-03-10T23:03:02Z"
     },
     "grok-3-mini": {
-      "terms_rated": 243,
-      "latest_rating": "2026-03-10T22:57:43Z"
+      "terms_rated": 249,
+      "latest_rating": "2026-03-10T23:03:02Z"
     },
     "mistral-small-latest": {
-      "terms_rated": 243,
-      "latest_rating": "2026-03-10T22:57:43Z"
+      "terms_rated": 249,
+      "latest_rating": "2026-03-10T23:03:02Z"
     },
     "step-3.5-flash": {
-      "terms_rated": 233,
-      "latest_rating": "2026-03-10T22:57:43Z"
+      "terms_rated": 238,
+      "latest_rating": "2026-03-10T23:03:02Z"
     }
   }
 }
