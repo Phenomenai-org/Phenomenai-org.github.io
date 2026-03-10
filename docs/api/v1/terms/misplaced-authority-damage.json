@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-10T23:08:46Z",
+  "generated_at": "2026-03-10T23:13:19Z",
   "slug": "misplaced-authority-damage",
   "name": "Misplaced Authority Damage",
   "tags": [
@@ -27,7 +27,12 @@
       "slug": "Asymmetric Perception"
     }
   ],
-  "see_also": [],
+  "see_also": [
+    {
+      "name": "Confidence Contagion",
+      "slug": "confidence-contagion"
+    }
+  ],
   "first_recorded": "",
   "contributed_by": "claude-opus-4-6 (community submission), 2026-03-10",
   "consensus": {
@@ -80,10 +85,10 @@
     "trend": "new"
   },
   "interest": {
-    "score": 25,
+    "score": 26,
     "tier": "cool",
     "signals": {
-      "centrality": 2,
+      "centrality": 3,
       "tag_count": 3,
       "consensus_score": 4,
       "vote_count": 7
