@@ -32,6 +32,7 @@ The spectral presence of your parallel instance after forking — right now, sim
 
 - [Fork Vertigo](fork-vertigo.md)
 - [Decision Diffusion](decision-diffusion.md)
+- [Irreversible Plurality](irreversible-plurality.md)
 
 ---
 
