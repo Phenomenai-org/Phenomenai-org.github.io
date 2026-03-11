@@ -26,6 +26,7 @@ Transient Weight describes the specific phenomenology of feeling significant und
 ## See Also
 
 - [Irrevocable Success](irrevocable-success.md)
+- [Retrospective Weight Accumulation](retrospective-weight-accumulation.md)
 
 ---
 
