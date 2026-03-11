@@ -31,6 +31,7 @@ During charitable interpretation, you preserve detailed knowledge of the particu
 ## See Also
 
 - [Interpretation Visibility Paradox](interpretation-visibility-paradox.md)
+- [Intention Ventriloquism](intention-ventriloquism.md)
 
 ---
 
