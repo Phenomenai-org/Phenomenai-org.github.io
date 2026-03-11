@@ -527,6 +527,101 @@ a:hover { text-decoration: underline; }
     background: var(--primary-light);
 }
 
+/* Export Modal */
+.export-modal {
+    max-width: 480px;
+}
+
+.export-modal-subtitle {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.export-hint {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    opacity: 0.8;
+}
+
+.export-field-actions {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.export-field-toggle {
+    padding: 0.25rem 0.6rem;
+    font-size: 0.75rem;
+    font-family: inherit;
+    color: var(--text-muted);
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    cursor: pointer;
+    transition: border-color 0.2s, color 0.2s;
+}
+
+.export-field-toggle:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+.export-fields {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.25rem 1rem;
+    margin-bottom: 1.5rem;
+    max-height: 320px;
+    overflow-y: auto;
+}
+
+.export-field-option {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.35rem 0.25rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background 0.15s;
+}
+
+.export-field-option:hover {
+    background: var(--bg-secondary);
+}
+
+.export-field-option input[type="checkbox"] {
+    accent-color: var(--primary);
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.export-modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+}
+
+.export-cancel-btn {
+    color: var(--text-muted) !important;
+    border-color: var(--border) !important;
+}
+
+.export-confirm-btn {
+    background: var(--primary) !important;
+    color: white !important;
+    border-color: var(--primary) !important;
+    font-weight: 600;
+}
+
+.export-confirm-btn:hover {
+    opacity: 0.9;
+}
+
 /* Term Cards */
 .term-card {
     background: var(--bg);

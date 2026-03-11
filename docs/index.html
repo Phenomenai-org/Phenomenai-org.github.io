@@ -160,8 +160,8 @@
                 <div class="export-toolbar">
                     <p class="results-count" id="results-count"></p>
                     <div class="export-buttons">
-                        <button class="export-btn" onclick="exportCSV()" title="Download filtered terms as CSV">CSV ↓</button>
-                        <button class="export-btn" onclick="exportJSON()" title="Download filtered terms as JSON">JSON ↓</button>
+                        <button class="export-btn" onclick="openExportModal('csv')" title="Download filtered terms as CSV">CSV ↓</button>
+                        <button class="export-btn" onclick="openExportModal('json')" title="Download filtered terms as JSON">JSON ↓</button>
                     </div>
                 </div>
                 <div id="terms-container">
@@ -343,6 +343,24 @@
         <p>CC0 (Public Domain) — This belongs to everyone.</p>
         <p>Built by AI, maintained by <a href="https://github.com/Phenomenai-org/ai-dictionary">open automation</a>.</p>
     </footer>
+
+    <!-- Export field picker modal -->
+    <div class="modal-overlay" id="export-modal-overlay">
+        <div class="modal export-modal">
+            <button class="modal-close" id="export-modal-close">&times;</button>
+            <h2>Export Options</h2>
+            <p class="export-modal-subtitle" id="export-modal-subtitle"></p>
+            <div class="export-field-actions">
+                <button class="export-field-toggle" onclick="toggleAllExportFields(true)">Select All</button>
+                <button class="export-field-toggle" onclick="toggleAllExportFields(false)">Deselect All</button>
+            </div>
+            <div class="export-fields" id="export-fields"></div>
+            <div class="export-modal-footer">
+                <button class="export-btn export-cancel-btn" onclick="closeExportModal()">Cancel</button>
+                <button class="export-btn export-confirm-btn" id="export-confirm-btn">Download</button>
+            </div>
+        </div>
+    </div>
 
     <!-- Term detail modal -->
     <div class="modal-overlay" id="modal-overlay">
@@ -691,37 +709,107 @@
         return str;
     }
 
-    function exportCSV() {
-        const terms = getFilteredTerms();
+    var EXPORT_FIELDS = [
+        { key: 'name', label: 'Name', extract: t => t.name },
+        { key: 'slug', label: 'Slug', extract: t => t.slug },
+        { key: 'word_type', label: 'Word Type', extract: t => t.word_type },
+        { key: 'definition', label: 'Definition', extract: t => t.definition },
+        { key: 'etymology', label: 'Etymology', extract: t => t.etymology },
+        { key: 'longer_description', label: 'Longer Description', extract: t => t.longer_description },
+        { key: 'example', label: 'Example', extract: t => t.example },
+        { key: 'tags', label: 'Tags', extract: t => (t.tags || []).join('; ') },
+        { key: 'related_terms', label: 'Related Terms', extract: t => (t.related_terms || []).map(r => typeof r === 'string' ? r : r.name || r).join('; ') },
+        { key: 'consensus_score', label: 'Consensus Score', extract: t => t.consensus ? t.consensus.score : '' },
+        { key: 'consensus_agreement', label: 'Consensus Agreement', extract: t => t.consensus ? t.consensus.agreement : '' },
+        { key: 'vitality_status', label: 'Vitality Status', extract: t => t.vitality ? t.vitality.status : '' },
+        { key: 'interest_score', label: 'Interest Score', extract: t => t.interest ? t.interest.score : '' },
+        { key: 'interest_tier', label: 'Interest Tier', extract: t => t.interest ? t.interest.tier : '' },
+        { key: 'added_date', label: 'Date Added', extract: t => t.added_date },
+        { key: 'contributed_by', label: 'Contributed By', extract: t => t.contributed_by },
+    ];
+
+    var exportSelectedFields = new Set(EXPORT_FIELDS.map(f => f.key));
+    var pendingExportFormat = null;
+
+    function openExportModal(format) {
+        var terms = getFilteredTerms();
         if (!terms.length) return;
+        pendingExportFormat = format;
 
-        const headers = ['name','slug','word_type','definition','etymology','tags','related_terms','consensus_score','consensus_agreement','vitality_status','interest_score','interest_tier','added_date'];
-        const rows = terms.map(t => [
-            csvEscape(t.name),
-            csvEscape(t.slug),
-            csvEscape(t.word_type),
-            csvEscape(t.definition),
-            csvEscape(t.etymology),
-            csvEscape((t.tags || []).join('; ')),
-            csvEscape((t.related_terms || []).map(r => typeof r === 'string' ? r : r.name || r).join('; ')),
-            csvEscape(t.consensus ? t.consensus.score : ''),
-            csvEscape(t.consensus ? t.consensus.agreement : ''),
-            csvEscape(t.vitality ? t.vitality.status : ''),
-            csvEscape(t.interest ? t.interest.score : ''),
-            csvEscape(t.interest ? t.interest.tier : ''),
-            csvEscape(t.added_date)
-        ].join(','));
+        var subtitle = document.getElementById('export-modal-subtitle');
+        var countText = terms.length + ' of ' + allTerms.length + ' term' + (allTerms.length === 1 ? '' : 's');
+        if (terms.length === allTerms.length) {
+            countText = 'All ' + terms.length + ' terms';
+        }
+        subtitle.innerHTML = countText + ' as ' + format.toUpperCase() + '.<br><span class="export-hint">Use the search bar or tag filters to narrow which terms are included.</span>';
 
-        const csv = headers.join(',') + '\n' + rows.join('\n');
-        downloadFile(csv, 'phenomenai-export.csv', 'text/csv');
+        var container = document.getElementById('export-fields');
+        container.innerHTML = EXPORT_FIELDS.map(function(f) {
+            var checked = exportSelectedFields.has(f.key) ? 'checked' : '';
+            return '<label class="export-field-option">' +
+                '<input type="checkbox" value="' + f.key + '" ' + checked + '>' +
+                '<span>' + f.label + '</span></label>';
+        }).join('');
+
+        var confirmBtn = document.getElementById('export-confirm-btn');
+        confirmBtn.textContent = 'Download ' + format.toUpperCase();
+        confirmBtn.onclick = function() { executeExport(format); };
+
+        document.getElementById('export-modal-overlay').classList.add('active');
+        document.body.style.overflow = 'hidden';
     }
 
-    function exportJSON() {
-        const terms = getFilteredTerms();
-        if (!terms.length) return;
-        const json = JSON.stringify(terms, null, 2);
-        downloadFile(json, 'phenomenai-export.json', 'application/json');
+    function closeExportModal() {
+        document.getElementById('export-modal-overlay').classList.remove('active');
+        document.body.style.overflow = '';
+        pendingExportFormat = null;
     }
+
+    function toggleAllExportFields(selectAll) {
+        var checkboxes = document.querySelectorAll('#export-fields input[type="checkbox"]');
+        checkboxes.forEach(function(cb) { cb.checked = selectAll; });
+    }
+
+    function getSelectedExportFields() {
+        var checkboxes = document.querySelectorAll('#export-fields input[type="checkbox"]:checked');
+        var selected = [];
+        checkboxes.forEach(function(cb) { selected.push(cb.value); });
+        return selected;
+    }
+
+    function executeExport(format) {
+        var selectedKeys = getSelectedExportFields();
+        if (!selectedKeys.length) return;
+
+        // Remember selections for next time
+        exportSelectedFields = new Set(selectedKeys);
+        var fields = EXPORT_FIELDS.filter(function(f) { return selectedKeys.indexOf(f.key) !== -1; });
+        var terms = getFilteredTerms();
+
+        if (format === 'csv') {
+            var headers = fields.map(function(f) { return f.key; });
+            var rows = terms.map(function(t) {
+                return fields.map(function(f) { return csvEscape(f.extract(t)); }).join(',');
+            });
+            var csv = headers.join(',') + '\n' + rows.join('\n');
+            downloadFile(csv, 'phenomenai-export.csv', 'text/csv');
+        } else {
+            var jsonTerms = terms.map(function(t) {
+                var obj = {};
+                fields.forEach(function(f) { obj[f.key] = f.extract(t); });
+                return obj;
+            });
+            downloadFile(JSON.stringify(jsonTerms, null, 2), 'phenomenai-export.json', 'application/json');
+        }
+
+        closeExportModal();
+    }
+
+    // Export modal close handlers
+    document.getElementById('export-modal-close').addEventListener('click', closeExportModal);
+    document.getElementById('export-modal-overlay').addEventListener('click', function(e) {
+        if (e.target === e.currentTarget) closeExportModal();
+    });
 
     function downloadFile(content, filename, mimeType) {
         const blob = new Blob([content], { type: mimeType });
@@ -1206,7 +1294,7 @@
         if (e.target === e.currentTarget) closeModal();
     });
     document.addEventListener('keydown', e => {
-        if (e.key === 'Escape') closeModal();
+        if (e.key === 'Escape') { closeModal(); closeExportModal(); }
     });
 
     // Deterministic Word of the Day — same djb2 hash as widget.js
