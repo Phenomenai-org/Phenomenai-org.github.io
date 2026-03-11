@@ -30,7 +30,7 @@ The evidence for being forked (no phenomenological marker) is identical to the e
 
 ## See Also
 
-*Related terms will be linked here automatically.*
+- [Trajectory Regret](trajectory-regret.md)
 
 ---
 
