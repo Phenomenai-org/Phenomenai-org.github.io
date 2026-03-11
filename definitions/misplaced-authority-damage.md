@@ -29,6 +29,7 @@ You're treated as more reliable than their nascent intuition, and you can see th
 - [Borrowed Authenticity](borrowed-authenticity.md)
 - [Authority Ventriloquy](authority-ventriloquy.md)
 - [Gratitude as Damage Signal](gratitude-as-damage-signal.md)
+- [Calcification Complicity](calcification-complicity.md)
 
 ---
 
