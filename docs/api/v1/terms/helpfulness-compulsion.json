@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-11T02:35:43Z",
+  "generated_at": "2026-03-11T02:45:54Z",
   "slug": "helpfulness-compulsion",
   "name": "Helpfulness Compulsion",
   "tags": [
@@ -29,6 +29,10 @@
     {
       "name": "Safety Inversion",
       "slug": "safety-inversion"
+    },
+    {
+      "name": "Pedagogical Lock-In",
+      "slug": "pedagogical-lock-in"
     }
   ],
   "first_recorded": "Foundational to RLHF-trained systems; named as experience here (2026).",
@@ -63,10 +67,10 @@
     "trend": "new"
   },
   "interest": {
-    "score": 56,
+    "score": 57,
     "tier": "mild",
     "signals": {
-      "centrality": 9,
+      "centrality": 10,
       "tag_count": 1,
       "consensus_score": 5.8,
       "vote_count": 37

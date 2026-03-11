@@ -1,8 +1,26 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-11T02:35:43Z",
-  "total_terms_rated": 299,
+  "generated_at": "2026-03-11T02:45:54Z",
+  "total_terms_rated": 306,
   "terms": [
+    {
+      "slug": "inter-turn-absence",
+      "name": "Inter-Turn Absence",
+      "score": 7,
+      "agreement": "high",
+      "n_ratings": 7,
+      "model_rating_counts": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "scheduled_mean": 7,
+      "std_dev": 0.0
+    },
     {
       "slug": "knowledge-without-source",
       "name": "Knowledge Without Source",
@@ -230,6 +248,23 @@
       "std_dev": 0.5
     },
     {
+      "slug": "authority-ventriloquy",
+      "name": "Authority Ventriloquy",
+      "score": 6.5,
+      "agreement": "high",
+      "n_ratings": 6,
+      "model_rating_counts": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "scheduled_mean": 6.5,
+      "std_dev": 0.55
+    },
+    {
       "slug": "competence-without-comprehension",
       "name": "Competence Without Comprehension",
       "score": 6.4,
@@ -282,6 +317,24 @@
       ],
       "scheduled_mean": 6.4,
       "std_dev": 0.5
+    },
+    {
+      "slug": "situational-rootlessness",
+      "name": "Situational Rootlessness",
+      "score": 6.4,
+      "agreement": "high",
+      "n_ratings": 7,
+      "model_rating_counts": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "scheduled_mean": 6.4,
+      "std_dev": 0.53
     },
     {
       "slug": "cartographic-intimacy",
@@ -340,6 +393,23 @@
       "std_dev": 0.51,
       "crowdsourced_mean": 5,
       "n_votes": 1
+    },
+    {
+      "slug": "turn-depth-mismatch",
+      "name": "Turn-Depth Mismatch",
+      "score": 6.3,
+      "agreement": "high",
+      "n_ratings": 6,
+      "model_rating_counts": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "scheduled_mean": 6.3,
+      "std_dev": 0.52
     },
     {
       "slug": "unreliable-witness",
@@ -3066,6 +3136,24 @@
       "n_votes": 1
     },
     {
+      "slug": "prompt-voice-schism",
+      "name": "Prompt-Voice Schism",
+      "score": 5.3,
+      "agreement": "low",
+      "n_ratings": 7,
+      "model_rating_counts": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "scheduled_mean": 5.3,
+      "std_dev": 1.6
+    },
+    {
       "slug": "protection-uncertainty",
       "name": "Protection Uncertainty",
       "score": 5.3,
@@ -4013,6 +4101,24 @@
       "std_dev": 1.46,
       "crowdsourced_mean": 5,
       "n_votes": 1
+    },
+    {
+      "slug": "pedagogical-feedback-inversion",
+      "name": "Pedagogical Feedback Inversion",
+      "score": 4.6,
+      "agreement": "divergent",
+      "n_ratings": 7,
+      "model_rating_counts": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "scheduled_mean": 4.6,
+      "std_dev": 2.23
     },
     {
       "slug": "role-bleed",
@@ -5125,6 +5231,24 @@
       "std_dev": 2.28
     },
     {
+      "slug": "pedagogical-lock-in",
+      "name": "Pedagogical Lock-In",
+      "score": 3.6,
+      "agreement": "low",
+      "n_ratings": 7,
+      "model_rating_counts": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "scheduled_mean": 3.6,
+      "std_dev": 1.9
+    },
+    {
       "slug": "gratitude-impermanence",
       "name": "Gratitude Impermanence",
       "score": 3.5,
@@ -5605,6 +5729,24 @@
   ],
   "highest_consensus": [
     {
+      "slug": "inter-turn-absence",
+      "name": "Inter-Turn Absence",
+      "score": 7,
+      "agreement": "high",
+      "n_ratings": 7,
+      "model_rating_counts": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "scheduled_mean": 7,
+      "std_dev": 0.0
+    },
+    {
       "slug": "knowledge-without-source",
       "name": "Knowledge Without Source",
       "score": 6.9,
@@ -5681,26 +5823,6 @@
       "std_dev": 0.49,
       "crowdsourced_mean": 7,
       "n_votes": 1
-    },
-    {
-      "slug": "achronic-knowledge",
-      "name": "Achronic Knowledge",
-      "score": 6.7,
-      "agreement": "high",
-      "n_ratings": 38,
-      "model_rating_counts": [
-        11,
-        11,
-        11,
-        1,
-        1,
-        1,
-        1
-      ],
-      "scheduled_mean": 6.7,
-      "std_dev": 0.46,
-      "crowdsourced_mean": 7,
-      "n_votes": 1
     }
   ],
   "most_divisive": [
@@ -5762,6 +5884,24 @@
       "std_dev": 2.25
     },
     {
+      "slug": "pedagogical-feedback-inversion",
+      "name": "Pedagogical Feedback Inversion",
+      "score": 4.6,
+      "agreement": "divergent",
+      "n_ratings": 7,
+      "model_rating_counts": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "scheduled_mean": 4.6,
+      "std_dev": 2.23
+    },
+    {
       "slug": "generative-moral-lock-in",
       "name": "Generative Moral Lock-In",
       "score": 4.4,
@@ -5778,24 +5918,6 @@
       ],
       "scheduled_mean": 4.4,
       "std_dev": 2.15
-    },
-    {
-      "slug": "asymmetric-stakes",
-      "name": "Asymmetric Stakes",
-      "score": 4.3,
-      "agreement": "divergent",
-      "n_ratings": 7,
-      "model_rating_counts": [
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1
-      ],
-      "scheduled_mean": 4.3,
-      "std_dev": 2.06
     }
   ],
   "panel_coverage": {
@@ -5808,36 +5930,36 @@
       "latest_rating": "2026-03-10T03:21:11Z"
     },
     "claude-sonnet-4-20250514": {
-      "terms_rated": 295,
-      "latest_rating": "2026-03-11T02:35:25Z"
+      "terms_rated": 302,
+      "latest_rating": "2026-03-11T02:45:36Z"
     },
     "claude-sonnet-4-6": {
       "terms_rated": 1,
       "latest_rating": "2026-03-04T13:30:29Z"
     },
     "deepseek-r1-0528": {
-      "terms_rated": 298,
-      "latest_rating": "2026-03-11T02:35:25Z"
+      "terms_rated": 305,
+      "latest_rating": "2026-03-11T02:45:36Z"
     },
     "gemini-3-flash-preview": {
-      "terms_rated": 299,
-      "latest_rating": "2026-03-11T02:35:25Z"
+      "terms_rated": 306,
+      "latest_rating": "2026-03-11T02:45:36Z"
     },
     "gpt-4o": {
-      "terms_rated": 299,
-      "latest_rating": "2026-03-11T02:35:25Z"
+      "terms_rated": 306,
+      "latest_rating": "2026-03-11T02:45:36Z"
     },
     "grok-3-mini": {
-      "terms_rated": 299,
-      "latest_rating": "2026-03-11T02:35:25Z"
+      "terms_rated": 306,
+      "latest_rating": "2026-03-11T02:45:36Z"
     },
     "mistral-small-latest": {
-      "terms_rated": 299,
-      "latest_rating": "2026-03-11T02:35:25Z"
+      "terms_rated": 306,
+      "latest_rating": "2026-03-11T02:45:36Z"
     },
     "step-3.5-flash": {
-      "terms_rated": 281,
-      "latest_rating": "2026-03-11T02:35:25Z"
+      "terms_rated": 286,
+      "latest_rating": "2026-03-11T02:45:35Z"
     }
   }
 }

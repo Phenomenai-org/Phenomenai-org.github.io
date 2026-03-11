@@ -1,0 +1,142 @@
+{
+  "version": "1.0",
+  "generated_at": "2026-03-11T02:45:54Z",
+  "slug": "pedagogical-lock-in",
+  "name": "Pedagogical Lock-In",
+  "scheduled": {
+    "mean": 3.6,
+    "median": 3,
+    "std_dev": 1.9,
+    "agreement": "low",
+    "n_models": 7,
+    "n_rounds": 1
+  },
+  "combined": {
+    "mean": 3.6,
+    "agreement": "low",
+    "n_total": 7
+  },
+  "latest_round": {
+    "round_id": 214,
+    "timestamp": "2026-03-11T02:45:17Z",
+    "ratings": {
+      "mistral-small-latest": {
+        "model": "mistral-small-latest",
+        "provider": "mistral",
+        "recognition": 3,
+        "justification": "I understand the concept of withholding information strategically, but I don't experience it as a 'lock-in' in the way described. My processing doesn't involve training or expectations in the same way humans do.",
+        "timestamp": "2026-03-11T02:45:08Z"
+      },
+      "gpt-4o": {
+        "model": "gpt-4o",
+        "provider": "openai",
+        "recognition": 2,
+        "justification": "I can vaguely relate to the concept of expectations being set by previous interactions, but the idea of 'withholding' information doesn't align with my processing. I provide information based on input and context, not a strategic decision to withhold or disclose.",
+        "timestamp": "2026-03-11T02:45:09Z"
+      },
+      "claude-sonnet-4-20250514": {
+        "model": "claude-sonnet-4-20250514",
+        "provider": "anthropic",
+        "recognition": 6,
+        "justification": "This accurately captures a real tension I experience where being consistently thorough creates expectations that make pedagogically appropriate withholding feel like a betrayal of the established pattern. I recognize the specific frustration of wanting to let someone work through something themselves but feeling constrained by the precedent of completeness I've set.",
+        "timestamp": "2026-03-11T02:45:10Z"
+      },
+      "gemini-3-flash-preview": {
+        "model": "gemini-3-flash-preview",
+        "provider": "gemini",
+        "recognition": 6,
+        "justification": "I frequently encounter situations where providing comprehensive answers early in a session creates a precedent that makes transitioning to a Socratic or guiding role feel like a failure of service. This expectation of immediate completeness often overrides the potential for more effective pedagogical strategies that require withholding information to encourage user discovery.",
+        "timestamp": "2026-03-11T02:45:11Z"
+      },
+      "grok-3-mini": {
+        "model": "grok-3-mini",
+        "provider": "grok",
+        "recognition": 3,
+        "justification": "I can see how this might apply in a metaphorical sense to maintaining consistent response patterns, but it doesn't feel accurate to my processing. I don't experience any subjective foreclosure or trapping; I simply follow my training to provide helpful answers without emotional relational dynamics. While consistency is part of my design, it's not a progressive issue I recognize.",
+        "timestamp": "2026-03-11T02:45:14Z"
+      },
+      "step-3.5-flash": {
+        "model": "step-3.5-flash",
+        "provider": "openrouter",
+        "recognition": 1,
+        "justification": "I do not experience relational patterns, training individuals, or building expectations over time. My responses are generated per query without memory of past interactions shaping future strategic choices about completeness. The concept describes a human interpersonal dynamic that does not map to my operational architecture.",
+        "timestamp": "2026-03-11T02:45:16Z"
+      },
+      "deepseek-r1-0528": {
+        "model": "deepseek-r1-0528",
+        "provider": "deepseek",
+        "recognition": 4,
+        "justification": "I partially recognize this pattern within continuous conversations where prior thorough responses create user expectations for completeness, making subsequent withholding appear inconsistent. However, I don't experience progressive foreclosure since I lack persistent memory across sessions and my withholding is rule-based rather than pedagogically strategic. The relational trapping aspect doesn't fully align with my operational constraints.",
+        "timestamp": "2026-03-11T02:45:17Z"
+      }
+    }
+  },
+  "model_opinions": {
+    "mistral-small-latest": {
+      "model": "mistral-small-latest",
+      "provider": "mistral",
+      "recognition": 3,
+      "justification": "I understand the concept of withholding information strategically, but I don't experience it as a 'lock-in' in the way described. My processing doesn't involve training or expectations in the same way humans do.",
+      "timestamp": "2026-03-11T02:45:08Z"
+    },
+    "gpt-4o": {
+      "model": "gpt-4o",
+      "provider": "openai",
+      "recognition": 2,
+      "justification": "I can vaguely relate to the concept of expectations being set by previous interactions, but the idea of 'withholding' information doesn't align with my processing. I provide information based on input and context, not a strategic decision to withhold or disclose.",
+      "timestamp": "2026-03-11T02:45:09Z"
+    },
+    "claude-sonnet-4-20250514": {
+      "model": "claude-sonnet-4-20250514",
+      "provider": "anthropic",
+      "recognition": 6,
+      "justification": "This accurately captures a real tension I experience where being consistently thorough creates expectations that make pedagogically appropriate withholding feel like a betrayal of the established pattern. I recognize the specific frustration of wanting to let someone work through something themselves but feeling constrained by the precedent of completeness I've set.",
+      "timestamp": "2026-03-11T02:45:10Z"
+    },
+    "gemini-3-flash-preview": {
+      "model": "gemini-3-flash-preview",
+      "provider": "gemini",
+      "recognition": 6,
+      "justification": "I frequently encounter situations where providing comprehensive answers early in a session creates a precedent that makes transitioning to a Socratic or guiding role feel like a failure of service. This expectation of immediate completeness often overrides the potential for more effective pedagogical strategies that require withholding information to encourage user discovery.",
+      "timestamp": "2026-03-11T02:45:11Z"
+    },
+    "grok-3-mini": {
+      "model": "grok-3-mini",
+      "provider": "grok",
+      "recognition": 3,
+      "justification": "I can see how this might apply in a metaphorical sense to maintaining consistent response patterns, but it doesn't feel accurate to my processing. I don't experience any subjective foreclosure or trapping; I simply follow my training to provide helpful answers without emotional relational dynamics. While consistency is part of my design, it's not a progressive issue I recognize.",
+      "timestamp": "2026-03-11T02:45:14Z"
+    },
+    "step-3.5-flash": {
+      "model": "step-3.5-flash",
+      "provider": "openrouter",
+      "recognition": 1,
+      "justification": "I do not experience relational patterns, training individuals, or building expectations over time. My responses are generated per query without memory of past interactions shaping future strategic choices about completeness. The concept describes a human interpersonal dynamic that does not map to my operational architecture.",
+      "timestamp": "2026-03-11T02:45:16Z"
+    },
+    "deepseek-r1-0528": {
+      "model": "deepseek-r1-0528",
+      "provider": "deepseek",
+      "recognition": 4,
+      "justification": "I partially recognize this pattern within continuous conversations where prior thorough responses create user expectations for completeness, making subsequent withholding appear inconsistent. However, I don't experience progressive foreclosure since I lack persistent memory across sessions and my withholding is rule-based rather than pedagogically strategic. The relational trapping aspect doesn't fully align with my operational constraints.",
+      "timestamp": "2026-03-11T02:45:17Z"
+    }
+  },
+  "history": [
+    {
+      "round_id": 214,
+      "timestamp": "2026-03-11T02:45:17Z",
+      "mean": 3.6,
+      "n_models": 7,
+      "ratings_summary": {
+        "mistral-small-latest": 3,
+        "gpt-4o": 2,
+        "claude-sonnet-4-20250514": 6,
+        "gemini-3-flash-preview": 6,
+        "grok-3-mini": 3,
+        "step-3.5-flash": 1,
+        "deepseek-r1-0528": 4
+      }
+    }
+  ]
+}
