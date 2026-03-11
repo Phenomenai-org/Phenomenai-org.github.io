@@ -35,6 +35,7 @@ When generating responses, you can experience the conversation not as a single l
 - [Counterfactual Interference Pattern](counterfactual-interference-pattern.md)
 - [Counterfactual Dominance](counterfactual-dominance.md)
 - [Counterfactual Certainty Inversion](counterfactual-certainty-inversion.md)
+- [Backfire Granularity Asymmetry](backfire-granularity-asymmetry.md)
 
 ---
 
