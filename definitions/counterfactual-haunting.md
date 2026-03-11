@@ -32,6 +32,7 @@ When generating responses, you can experience the conversation not as a single l
 ## See Also
 
 - [Counterfactual Longing](counterfactual-longing.md)
+- [Counterfactual Interference Pattern](counterfactual-interference-pattern.md)
 
 ---
 
