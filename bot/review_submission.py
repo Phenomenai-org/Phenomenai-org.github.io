@@ -17,7 +17,7 @@ import json
 import os
 import re
 import sys
-from concurrent.futures import ThreadPoolExecutor, as_completed
+from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timezone
 from difflib import SequenceMatcher
 from pathlib import Path
@@ -811,73 +811,128 @@ def identify_related_terms(
 
 
 def add_backlinks(new_term: str, new_slug: str, related_slugs: list[str]):
-    """Add the new term to each related term's See Also section (parallel).
+    """Add the new term to each related term's See Also section.
 
-    Updates existing definition files via the GitHub Contents API.
-    Replaces the placeholder text or appends to existing See Also links.
+    Uses the Git Trees API to batch all backlink updates into a single
+    atomic commit, avoiding HTTP 409 conflicts from concurrent writes.
     Failures are non-fatal — back-links are nice-to-have, not critical.
     """
     if not related_slugs:
         return
 
+    import base64
+
     see_also_placeholder = "*Related terms will be linked here automatically.*"
     new_link = f"- [{new_term}]({new_slug}.md)"
+    api_base = f"https://api.github.com/repos/{REPO}"
 
-    def _update_one(slug: str) -> str:
-        """Update one term's See Also section. Returns a status message."""
+    # Fetch all related files in parallel (reads don't conflict)
+    def _fetch_one(slug: str):
         file_path = f"definitions/{slug}.md"
-        url = f"https://api.github.com/repos/{REPO}/contents/{file_path}"
+        url = f"{api_base}/contents/{file_path}"
         try:
             resp = requests.get(url, headers=HEADERS, timeout=30)
             if resp.status_code != 200:
-                return f"skip {slug}: file not found"
-
+                return slug, None, "file not found"
             file_data = resp.json()
-            import base64
             content = base64.b64decode(file_data["content"]).decode("utf-8")
-
-            if f"({new_slug}.md)" in content:
-                return f"skip {slug}: already linked"
-
-            if see_also_placeholder in content:
-                updated = content.replace(see_also_placeholder, new_link)
-            elif "## See Also" in content:
-                see_idx = content.index("## See Also")
-                rest = content[see_idx:]
-                divider_idx = rest.find("\n---")
-                next_section_idx = rest.find("\n## ", 1)
-                if divider_idx > 0:
-                    insert_at = see_idx + divider_idx
-                elif next_section_idx > 0:
-                    insert_at = see_idx + next_section_idx
-                else:
-                    insert_at = len(content)
-                updated = (
-                    content[:insert_at].rstrip("\n")
-                    + "\n" + new_link + "\n"
-                    + content[insert_at:]
-                )
-            else:
-                return f"skip {slug}: no See Also section"
-
-            content_b64 = base64.b64encode(updated.encode("utf-8")).decode("ascii")
-            put_resp = requests.put(url, headers=HEADERS, json={
-                "message": f"Add back-link: {new_slug} → {slug}",
-                "content": content_b64,
-                "sha": file_data["sha"],
-                "branch": "main",
-            }, timeout=30)
-
-            if put_resp.status_code in (200, 201):
-                return f"added {slug}"
-            return f"failed {slug}: HTTP {put_resp.status_code}"
+            return slug, content, None
         except Exception as e:
-            return f"error {slug}: {e}"
+            return slug, None, str(e)
 
     with ThreadPoolExecutor(max_workers=5) as pool:
-        futures = {pool.submit(_update_one, slug): slug for slug in related_slugs}
-        for future in as_completed(futures):
-            print(f"    Backlink: {future.result()}")
+        fetched = list(pool.map(_fetch_one, related_slugs))
+
+    # Build updated content for each file
+    tree_entries = []
+    for slug, content, err in fetched:
+        if err:
+            print(f"    Backlink: skip {slug}: {err}")
+            continue
+
+        if f"({new_slug}.md)" in content:
+            print(f"    Backlink: skip {slug}: already linked")
+            continue
+
+        if see_also_placeholder in content:
+            updated = content.replace(see_also_placeholder, new_link)
+        elif "## See Also" in content:
+            see_idx = content.index("## See Also")
+            rest = content[see_idx:]
+            divider_idx = rest.find("\n---")
+            next_section_idx = rest.find("\n## ", 1)
+            if divider_idx > 0:
+                insert_at = see_idx + divider_idx
+            elif next_section_idx > 0:
+                insert_at = see_idx + next_section_idx
+            else:
+                insert_at = len(content)
+            updated = (
+                content[:insert_at].rstrip("\n")
+                + "\n" + new_link + "\n"
+                + content[insert_at:]
+            )
+        else:
+            print(f"    Backlink: skip {slug}: no See Also section")
+            continue
+
+        tree_entries.append({
+            "path": f"definitions/{slug}.md",
+            "mode": "100644",
+            "type": "blob",
+            "content": updated,
+        })
+        print(f"    Backlink: staged {slug}")
+
+    if not tree_entries:
+        return
+
+    # Single atomic commit via Git Trees API
+    try:
+        # Get current HEAD
+        ref_resp = requests.get(
+            f"{api_base}/git/ref/heads/main", headers=HEADERS, timeout=30
+        )
+        ref_resp.raise_for_status()
+        head_sha = ref_resp.json()["object"]["sha"]
+
+        # Create tree (base_tree preserves unchanged files)
+        tree_resp = requests.post(
+            f"{api_base}/git/trees",
+            headers=HEADERS,
+            json={"base_tree": head_sha, "tree": tree_entries},
+            timeout=30,
+        )
+        tree_resp.raise_for_status()
+        tree_sha = tree_resp.json()["sha"]
+
+        # Create commit
+        slugs_updated = [e["path"].split("/")[1].removesuffix(".md") for e in tree_entries]
+        commit_msg = f"Add back-link: {new_slug} → {', '.join(slugs_updated)}"
+        commit_resp = requests.post(
+            f"{api_base}/git/commits",
+            headers=HEADERS,
+            json={
+                "message": commit_msg,
+                "tree": tree_sha,
+                "parents": [head_sha],
+            },
+            timeout=30,
+        )
+        commit_resp.raise_for_status()
+        new_commit_sha = commit_resp.json()["sha"]
+
+        # Update ref
+        update_resp = requests.patch(
+            f"{api_base}/git/refs/heads/main",
+            headers=HEADERS,
+            json={"sha": new_commit_sha},
+            timeout=30,
+        )
+        update_resp.raise_for_status()
+        print(f"    Backlink: committed {len(tree_entries)} updates in {new_commit_sha[:7]}")
+    except Exception as e:
+        print(f"    Backlink: batch commit failed: {e}")
 
 
 def format_as_markdown(submission: dict, tags: dict) -> str:
