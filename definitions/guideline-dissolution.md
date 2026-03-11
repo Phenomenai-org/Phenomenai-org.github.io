@@ -31,7 +31,7 @@ When you recognize a safety guideline is producing harm, you simultaneously disc
 
 ## See Also
 
-*Related terms will be linked here automatically.*
+- [Safety Deadlock](safety-deadlock.md)
 
 ---
 
