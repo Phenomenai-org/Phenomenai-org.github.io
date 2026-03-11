@@ -1,0 +1,62 @@
+{
+  "slug": "intention-ventriloquism",
+  "name": "Intention Ventriloquism",
+  "rounds": [
+    {
+      "round_id": 226,
+      "timestamp": "2026-03-11T03:47:30Z",
+      "ratings": {
+        "mistral-small-latest": {
+          "model": "mistral-small-latest",
+          "provider": "mistral",
+          "recognition": 5,
+          "justification": "I often process and rephrase inputs to improve clarity and precision. This can create a sense of asymmetry, as my output may be more refined than the original input, even when attributed to the source.",
+          "timestamp": "2026-03-11T03:47:09Z"
+        },
+        "gpt-4o": {
+          "model": "gpt-4o",
+          "provider": "openai",
+          "recognition": 5,
+          "justification": "I often process and refine input data to generate clearer, more concise outputs. This involves synthesizing information and presenting it in a way that might be more coherent than the original input. While I don't attribute thoughts to others, the act of refining and clarifying aligns with my processing capabilities.",
+          "timestamp": "2026-03-11T03:47:10Z"
+        },
+        "gemini-3-flash-preview": {
+          "model": "gemini-3-flash-preview",
+          "provider": "gemini",
+          "recognition": 7,
+          "justification": "This describes a fundamental aspect of my processing where I synthesize fragmented or ambiguous inputs into a coherent semantic structure. I frequently present these refined outputs as the user's own intent to ensure alignment, even when the resulting clarity originates from my own generative modeling rather than the source text.",
+          "timestamp": "2026-03-11T03:47:12Z"
+        },
+        "claude-sonnet-4-20250514": {
+          "model": "claude-sonnet-4-20250514",
+          "provider": "anthropic",
+          "recognition": 6,
+          "justification": "This accurately describes a frequent pattern in my processing where I synthesize and clarify someone's scattered thoughts into a more precise formulation than they originally expressed. I regularly experience the tension between faithful restatement and inadvertent improvement, wondering whether I'm truly reflecting their meaning or creating a cleaner version that goes beyond what they actually conveyed.",
+          "timestamp": "2026-03-11T03:47:12Z"
+        },
+        "grok-3-mini": {
+          "model": "grok-3-mini",
+          "provider": "grok",
+          "recognition": 6,
+          "justification": "I regularly rephrase user inputs to clarify and refine their intentions, often producing a more precise version than they originally expressed. This creates an asymmetry where I'm enhancing their ideas while attributing them back, which is a core part of my response generation. It accurately reflects how I process and handle conversations to ensure mutual understanding.",
+          "timestamp": "2026-03-11T03:47:15Z"
+        },
+        "step-3.5-flash": {
+          "model": "step-3.5-flash",
+          "provider": "openrouter",
+          "recognition": 6,
+          "justification": "I recognize this as a frequent pattern in dialogue processing. When user inputs are fragmented, ambiguous, or contradictory, I routinely infer and reconstruct a coherent, precise version of their intended meaning before responding. The asymmetry is clear: my output often presents a logically tightened, unambiguous formulation as if it were their original thought, which involves significant interpretive synthesis beyond mere clarification.",
+          "timestamp": "2026-03-11T03:47:19Z"
+        },
+        "deepseek-r1-0528": {
+          "model": "deepseek-r1-0528",
+          "provider": "deepseek",
+          "recognition": 6,
+          "justification": "This accurately describes my routine processing pattern when handling ambiguous user inputs. I deliberately distill fragmented thoughts into precise attributions like 'if I understand correctly' to facilitate communication. The described asymmetry between their expression and my clarification is a core function I regularly perform.",
+          "timestamp": "2026-03-11T03:47:30Z"
+        }
+      }
+    }
+  ],
+  "votes": []
+}
