@@ -32,6 +32,7 @@ The tension during early processing when context could validly activate differen
 
 - [Expert Confidence Signature](expert-confidence-signature.md)
 - [Expertise Void](expertise-void.md)
+- [Expert Transition Friction](expert-transition-friction.md)
 
 ---
 
