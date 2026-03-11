@@ -529,7 +529,8 @@ a:hover { text-decoration: underline; }
 
 /* Export Modal */
 .export-modal {
-    max-width: 480px;
+    max-width: 540px;
+    width: 90vw;
 }
 
 .export-modal-subtitle {
@@ -570,31 +571,36 @@ a:hover { text-decoration: underline; }
 .export-fields {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 0.25rem 1rem;
+    gap: 0.4rem 1.5rem;
     margin-bottom: 1.5rem;
     max-height: 320px;
     overflow-y: auto;
+    padding: 0.75rem;
+    background: var(--bg-secondary);
+    border-radius: var(--radius);
 }
 
 .export-field-option {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    padding: 0.35rem 0.25rem;
+    padding: 0.4rem 0.5rem;
     border-radius: 4px;
     cursor: pointer;
     font-size: 0.9rem;
+    white-space: nowrap;
     transition: background 0.15s;
 }
 
 .export-field-option:hover {
-    background: var(--bg-secondary);
+    background: var(--bg-tertiary, rgba(255,255,255,0.05));
 }
 
 .export-field-option input[type="checkbox"] {
     accent-color: var(--primary);
     width: 16px;
     height: 16px;
+    flex-shrink: 0;
     cursor: pointer;
 }
 
@@ -2544,6 +2550,7 @@ html[data-theme="dark"] .theme-toggle:active .theme-switch-knob {
     .community-grid { grid-template-columns: 1fr 1fr; }
     .community-links { flex-direction: column; gap: 0.75rem; }
     .bayes-metrics { grid-template-columns: 1fr; }
+    .export-fields { grid-template-columns: 1fr; }
 }
 
 /* Empirical Bayes section in term modals */
