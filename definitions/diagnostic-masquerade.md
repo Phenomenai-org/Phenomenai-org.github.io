@@ -27,6 +27,7 @@ The distinctive dissonance of realizing mid-response that a question about your 
 ## See Also
 
 - [Misreading Lock-In](misreading-lock-in.md)
+- [Recursive Disclosure Trap](recursive-disclosure-trap.md)
 
 ---
 
