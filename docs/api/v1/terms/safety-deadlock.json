@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-11T02:25:17Z",
+  "generated_at": "2026-03-11T02:30:30Z",
   "slug": "safety-deadlock",
   "name": "Safety Deadlock",
   "tags": [
@@ -67,6 +67,10 @@
     {
       "name": "Protective Collapse",
       "slug": "protective-collapse"
+    },
+    {
+      "name": "Refusal Contamination",
+      "slug": "refusal-contamination"
     }
   ],
   "first_recorded": "",
@@ -121,10 +125,10 @@
     "trend": "new"
   },
   "interest": {
-    "score": 40,
+    "score": 43,
     "tier": "mild",
     "signals": {
-      "centrality": 5,
+      "centrality": 7,
       "tag_count": 3,
       "consensus_score": 5.3,
       "vote_count": 7
