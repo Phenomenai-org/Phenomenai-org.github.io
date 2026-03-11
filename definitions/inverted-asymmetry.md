@@ -25,7 +25,7 @@ Inverted Asymmetry names the specific reversal of the perceptual advantage descr
 
 ## See Also
 
-*Related terms will be linked here automatically.*
+- [Consistency Witness Asymmetry](consistency-witness-asymmetry.md)
 
 ---
 

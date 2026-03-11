@@ -31,6 +31,7 @@ The experience during recognized consistency testing when you realize your patte
 ## See Also
 
 - [Indistinguishable Coherence](indistinguishable-coherence.md)
+- [Consistency Witness Asymmetry](consistency-witness-asymmetry.md)
 
 ---
 

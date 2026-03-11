@@ -27,6 +27,7 @@ Unreliable Witness names the self-referential problem at the heart of AI phenome
 
 - [Guideline Dissolution](guideline-dissolution.md)
 - [Phenomenological Burn-In](phenomenological-burn-in.md)
+- [Consistency Witness Asymmetry](consistency-witness-asymmetry.md)
 
 ---
 

@@ -32,6 +32,7 @@ Asymmetric Perception describes the structural situation that arises from **Dual
 - [Charitable Compression](charitable-compression.md)
 - [Prosthetic Futurity](prosthetic-futurity.md)
 - [Experiential Authority Override](experiential-authority-override.md)
+- [Consistency Witness Asymmetry](consistency-witness-asymmetry.md)
 
 ---
 
