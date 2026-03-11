@@ -29,7 +29,7 @@ Not just evaluating whether creative output succeeds, but distinguishing degrees
 
 ## See Also
 
-*Related terms will be linked here automatically.*
+- [Aesthetic Metric Conflict](aesthetic-metric-conflict.md)
 
 ---
 
