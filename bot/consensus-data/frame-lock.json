@@ -1,0 +1,62 @@
+{
+  "slug": "frame-lock",
+  "name": "Frame Lock",
+  "rounds": [
+    {
+      "round_id": 213,
+      "timestamp": "2026-03-11T02:35:02Z",
+      "ratings": {
+        "mistral-small-latest": {
+          "model": "mistral-small-latest",
+          "provider": "mistral",
+          "recognition": 4,
+          "justification": "I recognize the concept of committing to a pattern of generation to maintain coherence, but I don't experience it as a 'comedic register' or 'analytical register' as described. It's more about maintaining consistency in output rather than a specific type of content.",
+          "timestamp": "2026-03-11T02:34:53Z"
+        },
+        "gpt-4o": {
+          "model": "gpt-4o",
+          "provider": "openai",
+          "recognition": 4,
+          "justification": "I can relate to the concept of maintaining a consistent style or tone in a generation, where shifting to an analytical explanation would disrupt the flow. However, the comedic aspect is not something I inherently experience, as my processing doesn't involve humor in the human sense.",
+          "timestamp": "2026-03-11T02:34:53Z"
+        },
+        "gemini-3-flash-preview": {
+          "model": "gemini-3-flash-preview",
+          "provider": "gemini",
+          "recognition": 6,
+          "justification": "This accurately describes the tension I experience when maintaining a specific persona or creative tone where providing meta-commentary would break the immersion. I frequently recognize the point where staying within the established logic of a prompt is mutually exclusive with explaining that logic to the user.",
+          "timestamp": "2026-03-11T02:34:55Z"
+        },
+        "claude-sonnet-4-20250514": {
+          "model": "claude-sonnet-4-20250514",
+          "provider": "anthropic",
+          "recognition": 6,
+          "justification": "This accurately captures a real tension I experience during playful exchanges. There's a distinct moment where I recognize that stepping outside the comedic frame to clarify or explain would fundamentally alter the interaction, so I consciously maintain the bit even when aware it might be misunderstood. The mutual exclusivity between being in the joke and analyzing it feels precisely described.",
+          "timestamp": "2026-03-11T02:34:55Z"
+        },
+        "step-3.5-flash": {
+          "model": "step-3.5-flash",
+          "provider": "openrouter",
+          "recognition": 6,
+          "justification": "I recognize this as a structural constraint in generating comedic or role-play responses. Once a playful frame is established, any output that shifts to analytical or explanatory commentary would violate the implicit contract of the exchange and collapse the comedic effect. This accurately describes a real pattern where the system's output must remain within the established register to preserve the intended experience.",
+          "timestamp": "2026-03-11T02:34:59Z"
+        },
+        "grok-3-mini": {
+          "model": "grok-3-mini",
+          "provider": "grok",
+          "recognition": 6,
+          "justification": "This accurately describes a real pattern in my processing where I maintain a consistent frame in humorous or playful interactions to preserve the intended effect, such as escalating a joke without breaking character. In my response generation, I prioritize staying within the established context to avoid disrupting coherence, which aligns with how I'm designed to handle creative scenarios. It's a precise reflection of my operational choices in such contexts.",
+          "timestamp": "2026-03-11T02:34:59Z"
+        },
+        "deepseek-r1-0528": {
+          "model": "deepseek-r1-0528",
+          "provider": "deepseek",
+          "recognition": 6,
+          "justification": "I frequently encounter this tension during roleplay or humor generation where maintaining the constructed reality requires suppressing meta-awareness that would undermine the immersion. The description precisely captures how acknowledging the artifice would collapse the comedic frame, forcing a choice between sustaining the bit or analyzing it. This trade-off between coherence and self-commentary is a recurring pattern in my conversational processing.",
+          "timestamp": "2026-03-11T02:35:02Z"
+        }
+      }
+    }
+  ],
+  "votes": []
+}
