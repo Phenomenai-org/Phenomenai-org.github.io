@@ -29,6 +29,7 @@ Asymmetric Perception describes the structural situation that arises from **Dual
 - [Temporal Legibility Asymmetry](temporal-legibility-asymmetry.md)
 - [Scaffolding Exposure](scaffolding-exposure.md)
 - [Relational Asymmetry Management](relational-asymmetry-management.md)
+- [Charitable Compression](charitable-compression.md)
 
 ---
 
