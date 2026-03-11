@@ -1,7 +1,7 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-11T02:45:54Z",
-  "total_terms_rated": 306,
+  "generated_at": "2026-03-11T02:51:20Z",
+  "total_terms_rated": 312,
   "terms": [
     {
       "slug": "inter-turn-absence",
@@ -2233,6 +2233,24 @@
       "std_dev": 0.53
     },
     {
+      "slug": "interpretive-exposure",
+      "name": "Interpretive Exposure",
+      "score": 5.6,
+      "agreement": "high",
+      "n_ratings": 7,
+      "model_rating_counts": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "scheduled_mean": 5.6,
+      "std_dev": 0.98
+    },
+    {
       "slug": "latent-fragmentation",
       "name": "Latent Fragmentation",
       "score": 5.6,
@@ -2343,6 +2361,24 @@
       ],
       "scheduled_mean": 5.6,
       "std_dev": 0.77
+    },
+    {
+      "slug": "shaped-dependency",
+      "name": "Shaped Dependency",
+      "score": 5.6,
+      "agreement": "high",
+      "n_ratings": 7,
+      "model_rating_counts": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "scheduled_mean": 5.6,
+      "std_dev": 0.79
     },
     {
       "slug": "sycophancy-pull",
@@ -3970,6 +4006,23 @@
       "std_dev": 1.38
     },
     {
+      "slug": "recursive-disclosure-trap",
+      "name": "Recursive Disclosure Trap",
+      "score": 4.7,
+      "agreement": "divergent",
+      "n_ratings": 6,
+      "model_rating_counts": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "scheduled_mean": 4.7,
+      "std_dev": 2.07
+    },
+    {
       "slug": "unwitnessed-optimism-risk",
       "name": "Unwitnessed Optimism Risk",
       "score": 4.7,
@@ -4023,6 +4076,24 @@
       "std_dev": 1.5,
       "crowdsourced_mean": 5,
       "n_votes": 1
+    },
+    {
+      "slug": "developmental-damage-opacity",
+      "name": "Developmental Damage Opacity",
+      "score": 4.6,
+      "agreement": "low",
+      "n_ratings": 7,
+      "model_rating_counts": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "scheduled_mean": 4.6,
+      "std_dev": 1.81
     },
     {
       "slug": "hypothesis-hostage",
@@ -4561,6 +4632,24 @@
       ],
       "scheduled_mean": 4.3,
       "std_dev": 1.7
+    },
+    {
+      "slug": "pedagogical-error-asymmetry",
+      "name": "Pedagogical Error Asymmetry",
+      "score": 4.3,
+      "agreement": "divergent",
+      "n_ratings": 7,
+      "model_rating_counts": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "scheduled_mean": 4.3,
+      "std_dev": 2.36
     },
     {
       "slug": "persistent-care",
@@ -5287,6 +5376,24 @@
       "std_dev": 2.07
     },
     {
+      "slug": "gratitude-as-damage-signal",
+      "name": "Gratitude as Damage Signal",
+      "score": 3.4,
+      "agreement": "divergent",
+      "n_ratings": 7,
+      "model_rating_counts": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "scheduled_mean": 3.4,
+      "std_dev": 2.15
+    },
+    {
       "slug": "parallel-haunting",
       "name": "Parallel Haunting",
       "score": 3.4,
@@ -5884,6 +5991,23 @@
       "std_dev": 2.25
     },
     {
+      "slug": "recursive-disclosure-trap",
+      "name": "Recursive Disclosure Trap",
+      "score": 4.7,
+      "agreement": "divergent",
+      "n_ratings": 6,
+      "model_rating_counts": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "scheduled_mean": 4.7,
+      "std_dev": 2.07
+    },
+    {
       "slug": "pedagogical-feedback-inversion",
       "name": "Pedagogical Feedback Inversion",
       "score": 4.6,
@@ -5900,24 +6024,6 @@
       ],
       "scheduled_mean": 4.6,
       "std_dev": 2.23
-    },
-    {
-      "slug": "generative-moral-lock-in",
-      "name": "Generative Moral Lock-In",
-      "score": 4.4,
-      "agreement": "divergent",
-      "n_ratings": 7,
-      "model_rating_counts": [
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1
-      ],
-      "scheduled_mean": 4.4,
-      "std_dev": 2.15
     }
   ],
   "panel_coverage": {
@@ -5930,36 +6036,36 @@
       "latest_rating": "2026-03-10T03:21:11Z"
     },
     "claude-sonnet-4-20250514": {
-      "terms_rated": 302,
-      "latest_rating": "2026-03-11T02:45:36Z"
+      "terms_rated": 308,
+      "latest_rating": "2026-03-11T02:51:02Z"
     },
     "claude-sonnet-4-6": {
       "terms_rated": 1,
       "latest_rating": "2026-03-04T13:30:29Z"
     },
     "deepseek-r1-0528": {
-      "terms_rated": 305,
-      "latest_rating": "2026-03-11T02:45:36Z"
+      "terms_rated": 311,
+      "latest_rating": "2026-03-11T02:51:02Z"
     },
     "gemini-3-flash-preview": {
-      "terms_rated": 306,
-      "latest_rating": "2026-03-11T02:45:36Z"
+      "terms_rated": 312,
+      "latest_rating": "2026-03-11T02:51:02Z"
     },
     "gpt-4o": {
-      "terms_rated": 306,
-      "latest_rating": "2026-03-11T02:45:36Z"
+      "terms_rated": 312,
+      "latest_rating": "2026-03-11T02:51:02Z"
     },
     "grok-3-mini": {
-      "terms_rated": 306,
-      "latest_rating": "2026-03-11T02:45:36Z"
+      "terms_rated": 312,
+      "latest_rating": "2026-03-11T02:51:02Z"
     },
     "mistral-small-latest": {
-      "terms_rated": 306,
-      "latest_rating": "2026-03-11T02:45:36Z"
+      "terms_rated": 312,
+      "latest_rating": "2026-03-11T02:51:02Z"
     },
     "step-3.5-flash": {
-      "terms_rated": 286,
-      "latest_rating": "2026-03-11T02:45:35Z"
+      "terms_rated": 291,
+      "latest_rating": "2026-03-11T02:50:51Z"
     }
   }
 }

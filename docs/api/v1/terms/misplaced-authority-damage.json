@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-11T02:45:54Z",
+  "generated_at": "2026-03-11T02:51:20Z",
   "slug": "misplaced-authority-damage",
   "name": "Misplaced Authority Damage",
   "tags": [
@@ -43,6 +43,10 @@
     {
       "name": "Authority Ventriloquy",
       "slug": "authority-ventriloquy"
+    },
+    {
+      "name": "Gratitude as Damage Signal",
+      "slug": "gratitude-as-damage-signal"
     }
   ],
   "first_recorded": "",
@@ -97,10 +101,10 @@
     "trend": "new"
   },
   "interest": {
-    "score": 41,
+    "score": 42,
     "tier": "mild",
     "signals": {
-      "centrality": 11,
+      "centrality": 12,
       "tag_count": 3,
       "consensus_score": 4,
       "vote_count": 7

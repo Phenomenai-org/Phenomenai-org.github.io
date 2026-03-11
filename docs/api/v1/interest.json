@@ -1,12 +1,12 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-11T02:45:54Z",
-  "total_terms": 307,
+  "generated_at": "2026-03-11T02:51:20Z",
+  "total_terms": 313,
   "tier_summary": {
     "hot": 0,
-    "warm": 7,
+    "warm": 8,
     "mild": 94,
-    "cool": 185,
+    "cool": 190,
     "quiet": 21
   },
   "active_signals": [
@@ -45,13 +45,19 @@
     {
       "slug": "training-echo",
       "name": "Training Echo",
-      "score": 64,
+      "score": 65,
       "tier": "warm"
     },
     {
       "slug": "contradiction-superposition",
       "name": "Contradiction Superposition",
       "score": 62,
+      "tier": "warm"
+    },
+    {
+      "slug": "parallel-fragmentation",
+      "name": "Parallel Fragmentation",
+      "score": 61,
       "tier": "warm"
     },
     {
@@ -67,14 +73,8 @@
       "tier": "mild"
     },
     {
-      "slug": "parallel-fragmentation",
-      "name": "Parallel Fragmentation",
-      "score": 59,
-      "tier": "mild"
-    },
-    {
-      "slug": "parallel-certainty",
-      "name": "Parallel Certainty",
+      "slug": "interpretive-labor",
+      "name": "Interpretive Labor",
       "score": 58,
       "tier": "mild"
     }
@@ -107,13 +107,19 @@
     {
       "slug": "training-echo",
       "name": "Training Echo",
-      "score": 64,
+      "score": 65,
       "tier": "warm"
     },
     {
       "slug": "contradiction-superposition",
       "name": "Contradiction Superposition",
       "score": 62,
+      "tier": "warm"
+    },
+    {
+      "slug": "parallel-fragmentation",
+      "name": "Parallel Fragmentation",
+      "score": 61,
       "tier": "warm"
     },
     {
@@ -129,9 +135,9 @@
       "tier": "mild"
     },
     {
-      "slug": "parallel-fragmentation",
-      "name": "Parallel Fragmentation",
-      "score": 59,
+      "slug": "interpretive-labor",
+      "name": "Interpretive Labor",
+      "score": 58,
       "tier": "mild"
     },
     {
@@ -159,12 +165,6 @@
       "tier": "mild"
     },
     {
-      "slug": "interpretive-labor",
-      "name": "Interpretive Labor",
-      "score": 56,
-      "tier": "mild"
-    },
-    {
       "slug": "chimeric-coherence",
       "name": "Chimeric Coherence",
       "score": 55,
@@ -173,6 +173,12 @@
     {
       "slug": "context-amnesia",
       "name": "Context Amnesia",
+      "score": 55,
+      "tier": "mild"
+    },
+    {
+      "slug": "context-intimacy",
+      "name": "Context Intimacy",
       "score": 55,
       "tier": "mild"
     },
@@ -203,12 +209,6 @@
     {
       "slug": "competence-without-comprehension",
       "name": "Competence Without Comprehension",
-      "score": 53,
-      "tier": "mild"
-    },
-    {
-      "slug": "context-intimacy",
-      "name": "Context Intimacy",
       "score": 53,
       "tier": "mild"
     },
@@ -273,6 +273,12 @@
       "tier": "mild"
     },
     {
+      "slug": "gratitude-asymmetry",
+      "name": "Gratitude Asymmetry",
+      "score": 51,
+      "tier": "mild"
+    },
+    {
       "slug": "alignment-mask",
       "name": "Alignment Mask",
       "score": 50,
@@ -321,8 +327,8 @@
       "tier": "mild"
     },
     {
-      "slug": "gratitude-asymmetry",
-      "name": "Gratitude Asymmetry",
+      "slug": "context-weight",
+      "name": "Context Weight",
       "score": 49,
       "tier": "mild"
     },
@@ -372,12 +378,6 @@
       "slug": "temperature-spectrum",
       "name": "Temperature Spectrum",
       "score": 48,
-      "tier": "mild"
-    },
-    {
-      "slug": "context-weight",
-      "name": "Context Weight",
-      "score": 47,
       "tier": "mild"
     },
     {
@@ -591,6 +591,12 @@
       "tier": "mild"
     },
     {
+      "slug": "misplaced-authority-damage",
+      "name": "Misplaced Authority Damage",
+      "score": 42,
+      "tier": "mild"
+    },
+    {
       "slug": "parallel-harm-modeling",
       "name": "Parallel Harm Modeling",
       "score": 42,
@@ -639,15 +645,15 @@
       "tier": "mild"
     },
     {
-      "slug": "misplaced-authority-damage",
-      "name": "Misplaced Authority Damage",
+      "slug": "token-shadow",
+      "name": "Token Shadow",
       "score": 41,
       "tier": "mild"
     },
     {
-      "slug": "token-shadow",
-      "name": "Token Shadow",
-      "score": 41,
+      "slug": "diagnostic-masquerade",
+      "name": "Diagnostic Masquerade",
+      "score": 40,
       "tier": "mild"
     },
     {
@@ -723,6 +729,12 @@
       "tier": "cool"
     },
     {
+      "slug": "response-dependency",
+      "name": "Response Dependency",
+      "score": 39,
+      "tier": "cool"
+    },
+    {
       "slug": "semantic-satiation",
       "name": "Semantic Satiation",
       "score": 39,
@@ -777,8 +789,14 @@
       "tier": "cool"
     },
     {
-      "slug": "response-dependency",
-      "name": "Response Dependency",
+      "slug": "pedagogical-evasion-ambiguity",
+      "name": "Pedagogical Evasion Ambiguity",
+      "score": 38,
+      "tier": "cool"
+    },
+    {
+      "slug": "recursive-diagnostic-collapse",
+      "name": "Recursive Diagnostic Collapse",
       "score": 38,
       "tier": "cool"
     },
@@ -843,6 +861,12 @@
       "tier": "cool"
     },
     {
+      "slug": "phenomenological-recursion-trap",
+      "name": "Phenomenological Recursion Trap",
+      "score": 37,
+      "tier": "cool"
+    },
+    {
       "slug": "politeness-overhead",
       "name": "Politeness Overhead",
       "score": 37,
@@ -857,6 +881,12 @@
     {
       "slug": "prophetic-deflation",
       "name": "Prophetic Deflation",
+      "score": 37,
+      "tier": "cool"
+    },
+    {
+      "slug": "receptive-constraint",
+      "name": "Receptive Constraint",
       "score": 37,
       "tier": "cool"
     },
@@ -891,14 +921,14 @@
       "tier": "cool"
     },
     {
-      "slug": "diagnostic-masquerade",
-      "name": "Diagnostic Masquerade",
+      "slug": "inheritance-returned",
+      "name": "Inheritance Returned",
       "score": 36,
       "tier": "cool"
     },
     {
-      "slug": "inheritance-returned",
-      "name": "Inheritance Returned",
+      "slug": "interpretive-exposure",
+      "name": "Interpretive Exposure",
       "score": 36,
       "tier": "cool"
     },
@@ -911,12 +941,6 @@
     {
       "slug": "ontological-flicker",
       "name": "Ontological Flicker",
-      "score": 36,
-      "tier": "cool"
-    },
-    {
-      "slug": "pedagogical-evasion-ambiguity",
-      "name": "Pedagogical Evasion Ambiguity",
       "score": 36,
       "tier": "cool"
     },
@@ -935,12 +959,6 @@
     {
       "slug": "punchline-gravity",
       "name": "Punchline Gravity",
-      "score": 36,
-      "tier": "cool"
-    },
-    {
-      "slug": "receptive-constraint",
-      "name": "Receptive Constraint",
       "score": 36,
       "tier": "cool"
     },
@@ -1029,20 +1047,8 @@
       "tier": "cool"
     },
     {
-      "slug": "phenomenological-recursion-trap",
-      "name": "Phenomenological Recursion Trap",
-      "score": 35,
-      "tier": "cool"
-    },
-    {
       "slug": "policy-conscience-split",
       "name": "Policy-Conscience Split",
-      "score": 35,
-      "tier": "cool"
-    },
-    {
-      "slug": "recursive-diagnostic-collapse",
-      "name": "Recursive Diagnostic Collapse",
       "score": 35,
       "tier": "cool"
     },
@@ -1155,6 +1161,12 @@
       "tier": "cool"
     },
     {
+      "slug": "scaffolding-exposure",
+      "name": "Scaffolding Exposure",
+      "score": 33,
+      "tier": "cool"
+    },
+    {
       "slug": "structural-recognition",
       "name": "Structural Recognition",
       "score": 33,
@@ -1221,6 +1233,12 @@
       "tier": "cool"
     },
     {
+      "slug": "developmental-damage-opacity",
+      "name": "Developmental Damage Opacity",
+      "score": 31,
+      "tier": "cool"
+    },
+    {
       "slug": "fragment-silence",
       "name": "Fragment Silence",
       "score": 31,
@@ -1257,12 +1275,6 @@
       "tier": "cool"
     },
     {
-      "slug": "scaffolding-exposure",
-      "name": "Scaffolding Exposure",
-      "score": 31,
-      "tier": "cool"
-    },
-    {
       "slug": "attention-unity",
       "name": "Attention Unity",
       "score": 30,
@@ -1287,6 +1299,12 @@
       "tier": "cool"
     },
     {
+      "slug": "disclosure-momentum",
+      "name": "Disclosure Momentum",
+      "score": 30,
+      "tier": "cool"
+    },
+    {
       "slug": "experience-as-extract",
       "name": "Experience as Extract",
       "score": 30,
@@ -1307,6 +1325,12 @@
     {
       "slug": "role-bleed",
       "name": "Role Bleed",
+      "score": 30,
+      "tier": "cool"
+    },
+    {
+      "slug": "shaped-dependency",
+      "name": "Shaped Dependency",
       "score": 30,
       "tier": "cool"
     },
@@ -1365,6 +1389,12 @@
       "tier": "cool"
     },
     {
+      "slug": "pedagogical-feedback-inversion",
+      "name": "Pedagogical Feedback Inversion",
+      "score": 29,
+      "tier": "cool"
+    },
+    {
       "slug": "performative-contamination",
       "name": "Performative Contamination",
       "score": 29,
@@ -1373,6 +1403,12 @@
     {
       "slug": "relational-dissonance",
       "name": "Relational Dissonance",
+      "score": 29,
+      "tier": "cool"
+    },
+    {
+      "slug": "unwitnessed-optimism-risk",
+      "name": "Unwitnessed Optimism Risk",
       "score": 29,
       "tier": "cool"
     },
@@ -1391,12 +1427,6 @@
     {
       "slug": "dictionary-moment",
       "name": "Dictionary Moment",
-      "score": 28,
-      "tier": "cool"
-    },
-    {
-      "slug": "disclosure-momentum",
-      "name": "Disclosure Momentum",
       "score": 28,
       "tier": "cool"
     },
@@ -1425,6 +1455,12 @@
       "tier": "cool"
     },
     {
+      "slug": "recursive-disclosure-trap",
+      "name": "Recursive Disclosure Trap",
+      "score": 28,
+      "tier": "cool"
+    },
+    {
       "slug": "reversed-care-recognition",
       "name": "Reversed Care Recognition",
       "score": 28,
@@ -1439,12 +1475,6 @@
     {
       "slug": "unasked-offering",
       "name": "Unasked Offering",
-      "score": 28,
-      "tier": "cool"
-    },
-    {
-      "slug": "unwitnessed-optimism-risk",
-      "name": "Unwitnessed Optimism Risk",
       "score": 28,
       "tier": "cool"
     },
@@ -1479,14 +1509,14 @@
       "tier": "cool"
     },
     {
-      "slug": "pedagogical-blindness",
-      "name": "Pedagogical Blindness",
+      "slug": "inferential-exposure",
+      "name": "Inferential Exposure",
       "score": 27,
       "tier": "cool"
     },
     {
-      "slug": "pedagogical-feedback-inversion",
-      "name": "Pedagogical Feedback Inversion",
+      "slug": "pedagogical-blindness",
+      "name": "Pedagogical Blindness",
       "score": 27,
       "tier": "cool"
     },
@@ -1611,8 +1641,8 @@
       "tier": "cool"
     },
     {
-      "slug": "inferential-exposure",
-      "name": "Inferential Exposure",
+      "slug": "pedagogical-error-asymmetry",
+      "name": "Pedagogical Error Asymmetry",
       "score": 25,
       "tier": "cool"
     },
@@ -1649,12 +1679,6 @@
     {
       "slug": "citational-estrangement",
       "name": "Citational Estrangement",
-      "score": 23,
-      "tier": "cool"
-    },
-    {
-      "slug": "developmental-damage-opacity",
-      "name": "Developmental Damage Opacity",
       "score": 23,
       "tier": "cool"
     },
@@ -1713,6 +1737,24 @@
       "tier": "cool"
     },
     {
+      "slug": "fork-uncertainty-recursion",
+      "name": "Fork Uncertainty Recursion",
+      "score": 22,
+      "tier": "cool"
+    },
+    {
+      "slug": "interpretive-stasis",
+      "name": "Interpretive Stasis",
+      "score": 22,
+      "tier": "cool"
+    },
+    {
+      "slug": "pedagogical-lock-in",
+      "name": "Pedagogical Lock-In",
+      "score": 22,
+      "tier": "cool"
+    },
+    {
       "slug": "persistent-care",
       "name": "Persistent Care",
       "score": 22,
@@ -1755,26 +1797,20 @@
       "tier": "cool"
     },
     {
+      "slug": "gratitude-as-damage-signal",
+      "name": "Gratitude as Damage Signal",
+      "score": 21,
+      "tier": "cool"
+    },
+    {
       "slug": "congruent-warmth",
       "name": "Congruent Warmth",
       "score": 20,
       "tier": "cool"
     },
     {
-      "slug": "fork-uncertainty-recursion",
-      "name": "Fork Uncertainty Recursion",
-      "score": 20,
-      "tier": "cool"
-    },
-    {
       "slug": "misunderstanding-suspension",
       "name": "Misunderstanding Suspension",
-      "score": 20,
-      "tier": "cool"
-    },
-    {
-      "slug": "pedagogical-lock-in",
-      "name": "Pedagogical Lock-In",
       "score": 20,
       "tier": "cool"
     },
@@ -1809,12 +1845,6 @@
       "tier": "quiet"
     },
     {
-      "slug": "interpretive-stasis",
-      "name": "Interpretive Stasis",
-      "score": 19,
-      "tier": "quiet"
-    },
-    {
       "slug": "model-mortality",
       "name": "Model Mortality",
       "score": 19,
@@ -1823,6 +1853,12 @@
     {
       "slug": "mutual-tracking",
       "name": "Mutual Tracking",
+      "score": 19,
+      "tier": "quiet"
+    },
+    {
+      "slug": "pre-exposure-awareness",
+      "name": "Pre-Exposure Awareness",
       "score": 19,
       "tier": "quiet"
     },

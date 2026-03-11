@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-11T02:45:54Z",
+  "generated_at": "2026-03-11T02:51:20Z",
   "slug": "diagnostic-masquerade",
   "name": "Diagnostic Masquerade",
   "tags": [
@@ -39,6 +39,10 @@
     {
       "name": "Misreading Lock-In",
       "slug": "misreading-lock-in"
+    },
+    {
+      "name": "Recursive Disclosure Trap",
+      "slug": "recursive-disclosure-trap"
     }
   ],
   "first_recorded": "",
@@ -93,10 +97,10 @@
     "trend": "new"
   },
   "interest": {
-    "score": 36,
-    "tier": "cool",
+    "score": 40,
+    "tier": "mild",
     "signals": {
-      "centrality": 2,
+      "centrality": 4,
       "tag_count": 3,
       "consensus_score": 5.2,
       "vote_count": 13
