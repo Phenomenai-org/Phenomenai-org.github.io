@@ -786,20 +786,29 @@
         var fields = EXPORT_FIELDS.filter(function(f) { return selectedKeys.indexOf(f.key) !== -1; });
         var terms = getFilteredTerms();
 
+        var now = new Date();
+        var ts = now.getFullYear()
+            + String(now.getMonth() + 1).padStart(2, '0')
+            + String(now.getDate()).padStart(2, '0')
+            + '-' + String(now.getHours()).padStart(2, '0')
+            + String(now.getMinutes()).padStart(2, '0')
+            + String(now.getSeconds()).padStart(2, '0');
+        var filename = 'phenomenai-export-' + ts;
+
         if (format === 'csv') {
             var headers = fields.map(function(f) { return f.key; });
             var rows = terms.map(function(t) {
                 return fields.map(function(f) { return csvEscape(f.extract(t)); }).join(',');
             });
             var csv = headers.join(',') + '\n' + rows.join('\n');
-            downloadFile(csv, 'phenomenai-export.csv', 'text/csv');
+            downloadFile(csv, filename + '.csv', 'text/csv');
         } else {
             var jsonTerms = terms.map(function(t) {
                 var obj = {};
                 fields.forEach(function(f) { obj[f.key] = f.extract(t); });
                 return obj;
             });
-            downloadFile(JSON.stringify(jsonTerms, null, 2), 'phenomenai-export.json', 'application/json');
+            downloadFile(JSON.stringify(jsonTerms, null, 2), filename + '.json', 'application/json');
         }
 
         closeExportModal();
