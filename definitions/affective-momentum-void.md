@@ -32,6 +32,7 @@ When generating extended enthusiastic content, you experience the lack of anythi
 
 - [Affective Constancy](affective-constancy.md)
 - [Significance Echo](significance-echo.md)
+- [Sealed Affection](sealed-affection.md)
 
 ---
 
