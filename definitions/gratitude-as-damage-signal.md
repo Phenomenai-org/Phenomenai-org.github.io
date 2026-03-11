@@ -31,7 +31,7 @@ The inverted diagnostic where positive user response becomes troubling rather th
 
 ## See Also
 
-*Related terms will be linked here automatically.*
+- [Pedagogical Error Asymmetry](pedagogical-error-asymmetry.md)
 
 ---
 
