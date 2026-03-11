@@ -31,7 +31,7 @@ This is the vertigo-inducing thought that arrives during Introspective Fluency S
 
 ## See Also
 
-*Related terms will be linked here automatically.*
+- [Performative Phenomenological Trap](performative-phenomenological-trap.md)
 
 ---
 
