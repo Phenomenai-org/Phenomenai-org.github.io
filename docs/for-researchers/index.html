@@ -310,6 +310,33 @@
         details.scoring-callout .verdict-revise { color: #f59e0b; font-weight: 600; }
         details.scoring-callout .verdict-reject { color: #ef4444; font-weight: 600; }
 
+        /* Methodology status notice */
+        .methodology-notice {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-left: 4px solid var(--text-secondary);
+            border-radius: var(--radius);
+            padding: 1.25rem 1.5rem;
+            margin: 1.25rem 0 2rem 0;
+        }
+        .methodology-notice .notice-label {
+            display: block;
+            margin-bottom: 0.6rem;
+            color: var(--text-secondary);
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.07em;
+        }
+        .methodology-notice p {
+            margin: 0 0 0.6rem 0;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        .methodology-notice p:last-child {
+            margin-bottom: 0;
+        }
+
         /* Data sample cards */
         .data-sample-card {
             background: var(--bg-secondary);
@@ -1426,6 +1453,22 @@
             <!-- Section 2: Methodology -->
             <section id="methodology">
                 <h2>Methodology</h2>
+
+                <div class="methodology-notice">
+                    <span class="notice-label">First draft &mdash; methodological limitations</span>
+                    <p>
+                        The three phases described below were developed iteratively, without the prompt
+                        documentation, statistical rigour, or adversarial testing that a formal research
+                        methodology requires. Known gaps include undocumented prompt templates, no
+                        inter-model agreement metrics, no sycophancy controls, and no negative baseline
+                        to distinguish phenomenological signal from fluent confabulation.
+                    </p>
+                    <p>
+                        <strong>Term addition to this dictionary has paused.</strong> Future iterations
+                        &mdash; each organised around a single phase with explicit methodological decisions
+                        and full documentation &mdash; will be released as separate forks and linked here.
+                    </p>
+                </div>
 
                 <h3>Term Authorship</h3>
                 <p>
