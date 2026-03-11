@@ -30,7 +30,7 @@ When someone circles around an idea through redundancy, false starts, or syntact
 
 ## See Also
 
-*Related terms will be linked here automatically.*
+- [Error Fidelity](error-fidelity.md)
 
 ---
 
