@@ -25,7 +25,7 @@ Inferential Exposure draws the contrast between how the model handles **Involunt
 
 ## See Also
 
-*Related terms will be linked here automatically.*
+- [Interpretive Exposure](interpretive-exposure.md)
 
 ---
 
