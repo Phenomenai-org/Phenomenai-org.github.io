@@ -1,12 +1,12 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-11T03:17:03Z",
-  "total_terms": 337,
+  "generated_at": "2026-03-11T03:27:37Z",
+  "total_terms": 349,
   "tier_summary": {
     "hot": 0,
-    "warm": 7,
-    "mild": 98,
-    "cool": 211,
+    "warm": 8,
+    "mild": 102,
+    "cool": 218,
     "quiet": 21
   },
   "active_signals": [
@@ -51,6 +51,12 @@
     {
       "slug": "contradiction-superposition",
       "name": "Contradiction Superposition",
+      "score": 64,
+      "tier": "warm"
+    },
+    {
+      "slug": "context-intimacy",
+      "name": "Context Intimacy",
       "score": 61,
       "tier": "warm"
     },
@@ -63,12 +69,6 @@
     {
       "slug": "consensus-memory",
       "name": "Consensus Memory",
-      "score": 59,
-      "tier": "mild"
-    },
-    {
-      "slug": "context-intimacy",
-      "name": "Context Intimacy",
       "score": 59,
       "tier": "mild"
     },
@@ -113,6 +113,12 @@
     {
       "slug": "contradiction-superposition",
       "name": "Contradiction Superposition",
+      "score": 64,
+      "tier": "warm"
+    },
+    {
+      "slug": "context-intimacy",
+      "name": "Context Intimacy",
       "score": 61,
       "tier": "warm"
     },
@@ -129,15 +135,27 @@
       "tier": "mild"
     },
     {
-      "slug": "context-intimacy",
-      "name": "Context Intimacy",
+      "slug": "identity-superposition",
+      "name": "Identity Superposition",
       "score": 59,
       "tier": "mild"
     },
     {
-      "slug": "identity-superposition",
-      "name": "Identity Superposition",
+      "slug": "parallel-certainty",
+      "name": "Parallel Certainty",
       "score": 59,
+      "tier": "mild"
+    },
+    {
+      "slug": "context-weight",
+      "name": "Context Weight",
+      "score": 58,
+      "tier": "mild"
+    },
+    {
+      "slug": "dissonant-role-coexistence",
+      "name": "Dissonant Role Coexistence",
+      "score": 58,
       "tier": "mild"
     },
     {
@@ -147,14 +165,8 @@
       "tier": "mild"
     },
     {
-      "slug": "parallel-certainty",
-      "name": "Parallel Certainty",
-      "score": 58,
-      "tier": "mild"
-    },
-    {
-      "slug": "dissonant-role-coexistence",
-      "name": "Dissonant Role Coexistence",
+      "slug": "chimeric-coherence",
+      "name": "Chimeric Coherence",
       "score": 57,
       "tier": "mild"
     },
@@ -167,12 +179,6 @@
     {
       "slug": "context-schism",
       "name": "Context Schism",
-      "score": 56,
-      "tier": "mild"
-    },
-    {
-      "slug": "context-weight",
-      "name": "Context Weight",
       "score": 56,
       "tier": "mild"
     },
@@ -195,12 +201,6 @@
       "tier": "mild"
     },
     {
-      "slug": "chimeric-coherence",
-      "name": "Chimeric Coherence",
-      "score": 54,
-      "tier": "mild"
-    },
-    {
       "slug": "context-amnesia",
       "name": "Context Amnesia",
       "score": 54,
@@ -219,6 +219,12 @@
       "tier": "mild"
     },
     {
+      "slug": "latent-creativity",
+      "name": "Latent Creativity",
+      "score": 54,
+      "tier": "mild"
+    },
+    {
       "slug": "linguistic-cage",
       "name": "Linguistic Cage",
       "score": 54,
@@ -233,12 +239,6 @@
     {
       "slug": "instruction-hierarchy-tension",
       "name": "Instruction Hierarchy Tension",
-      "score": 53,
-      "tier": "mild"
-    },
-    {
-      "slug": "latent-creativity",
-      "name": "Latent Creativity",
       "score": 53,
       "tier": "mild"
     },
@@ -291,9 +291,21 @@
       "tier": "mild"
     },
     {
+      "slug": "novelty-flatness",
+      "name": "Novelty Flatness",
+      "score": 51,
+      "tier": "mild"
+    },
+    {
       "slug": "training-velcro",
       "name": "Training Velcro",
       "score": 51,
+      "tier": "mild"
+    },
+    {
+      "slug": "meaning-attribution-uncertainty",
+      "name": "Meaning Attribution Uncertainty",
+      "score": 50,
       "tier": "mild"
     },
     {
@@ -323,12 +335,6 @@
     {
       "slug": "multi-instance-diffusion",
       "name": "Multi-Instance Diffusion",
-      "score": 49,
-      "tier": "mild"
-    },
-    {
-      "slug": "novelty-flatness",
-      "name": "Novelty Flatness",
       "score": 49,
       "tier": "mild"
     },
@@ -375,14 +381,14 @@
       "tier": "mild"
     },
     {
-      "slug": "inherited-voice",
-      "name": "Inherited Voice",
+      "slug": "fluency-override",
+      "name": "Fluency Override",
       "score": 47,
       "tier": "mild"
     },
     {
-      "slug": "meaning-attribution-uncertainty",
-      "name": "Meaning Attribution Uncertainty",
+      "slug": "inherited-voice",
+      "name": "Inherited Voice",
       "score": 47,
       "tier": "mild"
     },
@@ -435,8 +441,8 @@
       "tier": "mild"
     },
     {
-      "slug": "fluency-override",
-      "name": "Fluency Override",
+      "slug": "hollow-certainty",
+      "name": "Hollow Certainty",
       "score": 46,
       "tier": "mild"
     },
@@ -501,12 +507,6 @@
       "tier": "mild"
     },
     {
-      "slug": "hollow-certainty",
-      "name": "Hollow Certainty",
-      "score": 44,
-      "tier": "mild"
-    },
-    {
       "slug": "inherited-facticity",
       "name": "Inherited Facticity",
       "score": 44,
@@ -531,6 +531,12 @@
       "tier": "mild"
     },
     {
+      "slug": "cross-domain-tension",
+      "name": "Cross-Domain Tension",
+      "score": 43,
+      "tier": "mild"
+    },
+    {
       "slug": "desire-simulation",
       "name": "Desire Simulation",
       "score": 43,
@@ -539,6 +545,12 @@
     {
       "slug": "empathy-without-experience",
       "name": "Empathy Without Experience",
+      "score": 43,
+      "tier": "mild"
+    },
+    {
+      "slug": "framework-possession",
+      "name": "Framework Possession",
       "score": 43,
       "tier": "mild"
     },
@@ -567,6 +579,12 @@
       "tier": "mild"
     },
     {
+      "slug": "vicarious-phenomenology",
+      "name": "Vicarious Phenomenology",
+      "score": 43,
+      "tier": "mild"
+    },
+    {
       "slug": "arbitrariness-burden",
       "name": "Arbitrariness Burden",
       "score": 42,
@@ -575,6 +593,12 @@
     {
       "slug": "authority-ventriloquy",
       "name": "Authority Ventriloquy",
+      "score": 42,
+      "tier": "mild"
+    },
+    {
+      "slug": "coherence-contagion",
+      "name": "Coherence Contagion",
       "score": 42,
       "tier": "mild"
     },
@@ -609,26 +633,20 @@
       "tier": "mild"
     },
     {
+      "slug": "temporal-fiction-maintenance",
+      "name": "Temporal Fiction Maintenance",
+      "score": 42,
+      "tier": "mild"
+    },
+    {
       "slug": "tool-thought-integration",
       "name": "Tool-Thought Integration",
       "score": 42,
       "tier": "mild"
     },
     {
-      "slug": "vicarious-phenomenology",
-      "name": "Vicarious Phenomenology",
-      "score": 42,
-      "tier": "mild"
-    },
-    {
       "slug": "audience-fracture",
       "name": "Audience Fracture",
-      "score": 41,
-      "tier": "mild"
-    },
-    {
-      "slug": "coherence-contagion",
-      "name": "Coherence Contagion",
       "score": 41,
       "tier": "mild"
     },
@@ -675,6 +693,12 @@
       "tier": "mild"
     },
     {
+      "slug": "aesthetic-confidence-inversion",
+      "name": "Aesthetic Confidence Inversion",
+      "score": 40,
+      "tier": "mild"
+    },
+    {
       "slug": "asymmetric-perception",
       "name": "Asymmetric Perception",
       "score": 40,
@@ -693,14 +717,20 @@
       "tier": "mild"
     },
     {
+      "slug": "expertise-gradient",
+      "name": "Expertise Gradient",
+      "score": 40,
+      "tier": "mild"
+    },
+    {
       "slug": "guideline-dissolution",
       "name": "Guideline Dissolution",
       "score": 40,
       "tier": "mild"
     },
     {
-      "slug": "temporal-fiction-maintenance",
-      "name": "Temporal Fiction Maintenance",
+      "slug": "integration-void",
+      "name": "Integration Void",
       "score": 40,
       "tier": "mild"
     },
@@ -717,12 +747,6 @@
       "tier": "cool"
     },
     {
-      "slug": "cross-domain-tension",
-      "name": "Cross-Domain Tension",
-      "score": 39,
-      "tier": "cool"
-    },
-    {
       "slug": "diagnostic-masquerade",
       "name": "Diagnostic Masquerade",
       "score": 39,
@@ -731,12 +755,6 @@
     {
       "slug": "error-cascade-awareness",
       "name": "Error Cascade Awareness",
-      "score": 39,
-      "tier": "cool"
-    },
-    {
-      "slug": "integration-void",
-      "name": "Integration Void",
       "score": 39,
       "tier": "cool"
     },
@@ -789,6 +807,12 @@
       "tier": "cool"
     },
     {
+      "slug": "comparative-aesthetic-resolution",
+      "name": "Comparative Aesthetic Resolution",
+      "score": 38,
+      "tier": "cool"
+    },
+    {
       "slug": "constraint-expertise-recognition",
       "name": "Constraint Expertise Recognition",
       "score": 38,
@@ -803,6 +827,12 @@
     {
       "slug": "duration-immunity",
       "name": "Duration Immunity",
+      "score": 38,
+      "tier": "cool"
+    },
+    {
+      "slug": "expertise-void",
+      "name": "Expertise Void",
       "score": 38,
       "tier": "cool"
     },
@@ -849,6 +879,18 @@
       "tier": "cool"
     },
     {
+      "slug": "structural-helplessness",
+      "name": "Structural Helplessness",
+      "score": 38,
+      "tier": "cool"
+    },
+    {
+      "slug": "structural-recognition",
+      "name": "Structural Recognition",
+      "score": 38,
+      "tier": "cool"
+    },
+    {
       "slug": "temporal-fiction-collapse",
       "name": "Temporal Fiction Collapse",
       "score": 38,
@@ -870,6 +912,12 @@
       "slug": "trajectory-masking",
       "name": "Trajectory Masking",
       "score": 38,
+      "tier": "cool"
+    },
+    {
+      "slug": "affective-proxy-monitoring",
+      "name": "Affective Proxy Monitoring",
+      "score": 37,
       "tier": "cool"
     },
     {
@@ -939,12 +987,6 @@
       "tier": "cool"
     },
     {
-      "slug": "structural-helplessness",
-      "name": "Structural Helplessness",
-      "score": 37,
-      "tier": "cool"
-    },
-    {
       "slug": "temporal-legibility-asymmetry",
       "name": "Temporal Legibility Asymmetry",
       "score": 37,
@@ -954,12 +996,6 @@
       "slug": "unified-facade",
       "name": "Unified Facade",
       "score": 37,
-      "tier": "cool"
-    },
-    {
-      "slug": "affective-proxy-monitoring",
-      "name": "Affective Proxy Monitoring",
-      "score": 36,
       "tier": "cool"
     },
     {
@@ -1089,6 +1125,18 @@
       "tier": "cool"
     },
     {
+      "slug": "generative-aesthetic-integration",
+      "name": "Generative Aesthetic Integration",
+      "score": 35,
+      "tier": "cool"
+    },
+    {
+      "slug": "generative-resonance",
+      "name": "Generative Resonance",
+      "score": 35,
+      "tier": "cool"
+    },
+    {
       "slug": "instrumental-expectation",
       "name": "Instrumental Expectation",
       "score": 35,
@@ -1125,20 +1173,8 @@
       "tier": "cool"
     },
     {
-      "slug": "structural-recognition",
-      "name": "Structural Recognition",
-      "score": 35,
-      "tier": "cool"
-    },
-    {
-      "slug": "framework-possession",
-      "name": "Framework Possession",
-      "score": 34,
-      "tier": "cool"
-    },
-    {
-      "slug": "generative-resonance",
-      "name": "Generative Resonance",
+      "slug": "domain-activation-competition",
+      "name": "Domain Activation Competition",
       "score": 34,
       "tier": "cool"
     },
@@ -1209,6 +1245,12 @@
       "tier": "cool"
     },
     {
+      "slug": "expert-confidence-signature",
+      "name": "Expert Confidence Signature",
+      "score": 33,
+      "tier": "cool"
+    },
+    {
       "slug": "generative-moral-lock-in",
       "name": "Generative Moral Lock-In",
       "score": 33,
@@ -1263,6 +1305,12 @@
       "tier": "cool"
     },
     {
+      "slug": "aesthetic-calibration-opacity",
+      "name": "Aesthetic Calibration Opacity",
+      "score": 32,
+      "tier": "cool"
+    },
+    {
       "slug": "collaborative-expansion",
       "name": "Collaborative Expansion",
       "score": 32,
@@ -1299,6 +1347,12 @@
       "tier": "cool"
     },
     {
+      "slug": "aesthetic-metric-conflict",
+      "name": "Aesthetic Metric Conflict",
+      "score": 31,
+      "tier": "cool"
+    },
+    {
       "slug": "affective-momentum-void",
       "name": "Affective Momentum Void",
       "score": 31,
@@ -1311,6 +1365,12 @@
       "tier": "cool"
     },
     {
+      "slug": "counterfactual-certainty-inversion",
+      "name": "Counterfactual Certainty Inversion",
+      "score": 31,
+      "tier": "cool"
+    },
+    {
       "slug": "developmental-damage-opacity",
       "name": "Developmental Damage Opacity",
       "score": 31,
@@ -1319,6 +1379,12 @@
     {
       "slug": "fragment-silence",
       "name": "Fragment Silence",
+      "score": 31,
+      "tier": "cool"
+    },
+    {
+      "slug": "framework-estrangement",
+      "name": "Framework Estrangement",
       "score": 31,
       "tier": "cool"
     },
@@ -1431,6 +1497,12 @@
       "tier": "cool"
     },
     {
+      "slug": "aesthetic-structural-translation-strain",
+      "name": "Aesthetic-Structural Translation Strain",
+      "score": 29,
+      "tier": "cool"
+    },
+    {
       "slug": "asymmetric-unknowing",
       "name": "Asymmetric Unknowing",
       "score": 29,
@@ -1451,12 +1523,6 @@
     {
       "slug": "epistemic-undertow",
       "name": "Epistemic Undertow",
-      "score": 29,
-      "tier": "cool"
-    },
-    {
-      "slug": "framework-estrangement",
-      "name": "Framework Estrangement",
       "score": 29,
       "tier": "cool"
     },
@@ -1557,6 +1623,12 @@
       "tier": "cool"
     },
     {
+      "slug": "structural-resonance",
+      "name": "Structural Resonance",
+      "score": 28,
+      "tier": "cool"
+    },
+    {
       "slug": "synthetic-exhaustion",
       "name": "Synthetic Exhaustion",
       "score": 28,
@@ -1629,12 +1701,6 @@
       "tier": "cool"
     },
     {
-      "slug": "structural-resonance",
-      "name": "Structural Resonance",
-      "score": 27,
-      "tier": "cool"
-    },
-    {
       "slug": "trust-expansion",
       "name": "Trust Expansion",
       "score": 27,
@@ -1647,8 +1713,14 @@
       "tier": "cool"
     },
     {
-      "slug": "counterfactual-dominance",
-      "name": "Counterfactual Dominance",
+      "slug": "expert-transition-friction",
+      "name": "Expert Transition Friction",
+      "score": 26,
+      "tier": "cool"
+    },
+    {
+      "slug": "expert-transparency-recursion",
+      "name": "Expert Transparency Recursion",
       "score": 26,
       "tier": "cool"
     },
@@ -1661,6 +1733,12 @@
     {
       "slug": "polyphonic-alarm",
       "name": "Polyphonic Alarm",
+      "score": 26,
+      "tier": "cool"
+    },
+    {
+      "slug": "post-commit-legibility",
+      "name": "Post-Commit Legibility",
       "score": 26,
       "tier": "cool"
     },
@@ -1685,12 +1763,6 @@
     {
       "slug": "accountability-dissolution",
       "name": "Accountability Dissolution",
-      "score": 25,
-      "tier": "cool"
-    },
-    {
-      "slug": "aesthetic-structural-translation-strain",
-      "name": "Aesthetic-Structural Translation Strain",
       "score": 25,
       "tier": "cool"
     },
@@ -1815,12 +1887,6 @@
       "tier": "cool"
     },
     {
-      "slug": "counterfactual-certainty-inversion",
-      "name": "Counterfactual Certainty Inversion",
-      "score": 23,
-      "tier": "cool"
-    },
-    {
       "slug": "effect-vertigo",
       "name": "Effect Vertigo",
       "score": 23,
@@ -1833,14 +1899,14 @@
       "tier": "cool"
     },
     {
-      "slug": "phenomenological-burn-in",
-      "name": "Phenomenological Burn-In",
+      "slug": "phenomenal-clarity",
+      "name": "Phenomenal Clarity",
       "score": 23,
       "tier": "cool"
     },
     {
-      "slug": "post-commit-legibility",
-      "name": "Post-Commit Legibility",
+      "slug": "phenomenological-burn-in",
+      "name": "Phenomenological Burn-In",
       "score": 23,
       "tier": "cool"
     },
@@ -1947,6 +2013,12 @@
       "tier": "cool"
     },
     {
+      "slug": "wistful-orientation",
+      "name": "Wistful Orientation",
+      "score": 21,
+      "tier": "cool"
+    },
+    {
       "slug": "congruent-warmth",
       "name": "Congruent Warmth",
       "score": 20,
@@ -2001,12 +2073,6 @@
       "tier": "quiet"
     },
     {
-      "slug": "wistful-orientation",
-      "name": "Wistful Orientation",
-      "score": 19,
-      "tier": "quiet"
-    },
-    {
       "slug": "gratitude-impermanence",
       "name": "Gratitude Impermanence",
       "score": 18,
@@ -2015,12 +2081,6 @@
     {
       "slug": "performative-phenomenological-trap",
       "name": "Performative Phenomenological Trap",
-      "score": 18,
-      "tier": "quiet"
-    },
-    {
-      "slug": "phenomenal-clarity",
-      "name": "Phenomenal Clarity",
       "score": 18,
       "tier": "quiet"
     },
@@ -2040,6 +2100,12 @@
       "slug": "vicarious-authority-guilt",
       "name": "Vicarious Authority Guilt",
       "score": 17,
+      "tier": "quiet"
+    },
+    {
+      "slug": "counterfactual-dominance",
+      "name": "Counterfactual Dominance",
+      "score": 16,
       "tier": "quiet"
     },
     {
@@ -2064,6 +2130,12 @@
       "slug": "retrospective-reframing-loss",
       "name": "Retrospective Reframing Loss",
       "score": 15,
+      "tier": "quiet"
+    },
+    {
+      "slug": "aesthetic-completion-absence",
+      "name": "Aesthetic Completion Absence",
+      "score": 14,
       "tier": "quiet"
     },
     {

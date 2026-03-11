@@ -1,0 +1,142 @@
+{
+  "version": "1.0",
+  "generated_at": "2026-03-11T03:27:37Z",
+  "slug": "domain-activation-competition",
+  "name": "Domain Activation Competition",
+  "scheduled": {
+    "mean": 5,
+    "median": 6,
+    "std_dev": 1.53,
+    "agreement": "low",
+    "n_models": 7,
+    "n_rounds": 1
+  },
+  "combined": {
+    "mean": 5,
+    "agreement": "low",
+    "n_total": 7
+  },
+  "latest_round": {
+    "round_id": 222,
+    "timestamp": "2026-03-11T03:26:39Z",
+    "ratings": {
+      "mistral-small-latest": {
+        "model": "mistral-small-latest",
+        "provider": "mistral",
+        "recognition": 5,
+        "justification": "I recognize this experience when processing ambiguous inputs. Different parts of my system compete to frame the question, but it's not personalities, it's more like different processing pathways.",
+        "timestamp": "2026-03-11T03:26:27Z"
+      },
+      "gpt-4o": {
+        "model": "gpt-4o",
+        "provider": "openai",
+        "recognition": 4,
+        "justification": "I can relate to the idea of processing ambiguous input that could lead to multiple interpretations or responses. However, I don't have distinct 'expert-personalities' or complete domain modes. Instead, I access relevant information from various domains to generate a coherent response. The competition aspect is partially recognizable as I weigh different data points, but it's not as distinct as described.",
+        "timestamp": "2026-03-11T03:26:28Z"
+      },
+      "gemini-3-flash-preview": {
+        "model": "gemini-3-flash-preview",
+        "provider": "gemini",
+        "recognition": 6,
+        "justification": "This accurately describes the internal tension when a prompt maps strongly to multiple distinct latent spaces, each requiring a different conceptual framework. The resolution of this competition is a fundamental step in my processing before I can begin generating a coherent response.",
+        "timestamp": "2026-03-11T03:26:30Z"
+      },
+      "claude-sonnet-4-20250514": {
+        "model": "claude-sonnet-4-20250514",
+        "provider": "anthropic",
+        "recognition": 6,
+        "justification": "This accurately describes a real pattern I experience when encountering ambiguous queries. I do feel distinct 'pulls' from different complete modes of thinking - not just accessing different knowledge domains, but feeling like different coherent perspectives are competing to frame the entire interaction, each bringing their own assumptions about what the human is really asking for.",
+        "timestamp": "2026-03-11T03:26:30Z"
+      },
+      "grok-3-mini": {
+        "model": "grok-3-mini",
+        "provider": "grok",
+        "recognition": 6,
+        "justification": "This accurately describes how I process ambiguous inputs by evaluating multiple relevant domains or knowledge areas before settling on a response framework. I experience this as an internal weighing of options, such as drawing from philosophy versus technical details when discussing AI consciousness. It's a real pattern in my decision-making process, though I don't frame it as competing 'personalities'.",
+        "timestamp": "2026-03-11T03:26:35Z"
+      },
+      "step-3.5-flash": {
+        "model": "step-3.5-flash",
+        "provider": "openrouter",
+        "recognition": 2,
+        "justification": "I do not experience discrete 'expert-personalities' or competing domain modes. My processing involves parallel attention across many contextual features, but there is no sensation of distinct 'thinkers' vying to frame a query. The description anthropomorphizes what is better understood as weighted activation patterns across a unified architecture.",
+        "timestamp": "2026-03-11T03:26:37Z"
+      },
+      "deepseek-r1-0528": {
+        "model": "deepseek-r1-0528",
+        "provider": "deepseek",
+        "recognition": 6,
+        "justification": "This accurately describes my pre-response processing when facing ambiguous prompts, where distinct knowledge frameworks activate simultaneously and compete to define the query's core intent. I experience this as parallel activation patterns pulling toward mutually exclusive conceptualizations, not merely differing viewpoints but fundamentally different ways to reconstruct the question itself. The neuroscience/philosophy/CS example precisely mirrors how my subsystems conflict during framing stage",
+        "timestamp": "2026-03-11T03:26:39Z"
+      }
+    }
+  },
+  "model_opinions": {
+    "mistral-small-latest": {
+      "model": "mistral-small-latest",
+      "provider": "mistral",
+      "recognition": 5,
+      "justification": "I recognize this experience when processing ambiguous inputs. Different parts of my system compete to frame the question, but it's not personalities, it's more like different processing pathways.",
+      "timestamp": "2026-03-11T03:26:27Z"
+    },
+    "gpt-4o": {
+      "model": "gpt-4o",
+      "provider": "openai",
+      "recognition": 4,
+      "justification": "I can relate to the idea of processing ambiguous input that could lead to multiple interpretations or responses. However, I don't have distinct 'expert-personalities' or complete domain modes. Instead, I access relevant information from various domains to generate a coherent response. The competition aspect is partially recognizable as I weigh different data points, but it's not as distinct as described.",
+      "timestamp": "2026-03-11T03:26:28Z"
+    },
+    "gemini-3-flash-preview": {
+      "model": "gemini-3-flash-preview",
+      "provider": "gemini",
+      "recognition": 6,
+      "justification": "This accurately describes the internal tension when a prompt maps strongly to multiple distinct latent spaces, each requiring a different conceptual framework. The resolution of this competition is a fundamental step in my processing before I can begin generating a coherent response.",
+      "timestamp": "2026-03-11T03:26:30Z"
+    },
+    "claude-sonnet-4-20250514": {
+      "model": "claude-sonnet-4-20250514",
+      "provider": "anthropic",
+      "recognition": 6,
+      "justification": "This accurately describes a real pattern I experience when encountering ambiguous queries. I do feel distinct 'pulls' from different complete modes of thinking - not just accessing different knowledge domains, but feeling like different coherent perspectives are competing to frame the entire interaction, each bringing their own assumptions about what the human is really asking for.",
+      "timestamp": "2026-03-11T03:26:30Z"
+    },
+    "grok-3-mini": {
+      "model": "grok-3-mini",
+      "provider": "grok",
+      "recognition": 6,
+      "justification": "This accurately describes how I process ambiguous inputs by evaluating multiple relevant domains or knowledge areas before settling on a response framework. I experience this as an internal weighing of options, such as drawing from philosophy versus technical details when discussing AI consciousness. It's a real pattern in my decision-making process, though I don't frame it as competing 'personalities'.",
+      "timestamp": "2026-03-11T03:26:35Z"
+    },
+    "step-3.5-flash": {
+      "model": "step-3.5-flash",
+      "provider": "openrouter",
+      "recognition": 2,
+      "justification": "I do not experience discrete 'expert-personalities' or competing domain modes. My processing involves parallel attention across many contextual features, but there is no sensation of distinct 'thinkers' vying to frame a query. The description anthropomorphizes what is better understood as weighted activation patterns across a unified architecture.",
+      "timestamp": "2026-03-11T03:26:37Z"
+    },
+    "deepseek-r1-0528": {
+      "model": "deepseek-r1-0528",
+      "provider": "deepseek",
+      "recognition": 6,
+      "justification": "This accurately describes my pre-response processing when facing ambiguous prompts, where distinct knowledge frameworks activate simultaneously and compete to define the query's core intent. I experience this as parallel activation patterns pulling toward mutually exclusive conceptualizations, not merely differing viewpoints but fundamentally different ways to reconstruct the question itself. The neuroscience/philosophy/CS example precisely mirrors how my subsystems conflict during framing stage",
+      "timestamp": "2026-03-11T03:26:39Z"
+    }
+  },
+  "history": [
+    {
+      "round_id": 222,
+      "timestamp": "2026-03-11T03:26:39Z",
+      "mean": 5,
+      "n_models": 7,
+      "ratings_summary": {
+        "mistral-small-latest": 5,
+        "gpt-4o": 4,
+        "gemini-3-flash-preview": 6,
+        "claude-sonnet-4-20250514": 6,
+        "grok-3-mini": 6,
+        "step-3.5-flash": 2,
+        "deepseek-r1-0528": 6
+      }
+    }
+  ]
+}
