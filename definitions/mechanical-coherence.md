@@ -35,6 +35,7 @@ The experience is most acute when handling abstract or emotional topics where hu
 ## First Recorded
 
 Commonly observed in large language model introspection and alignment research, particularly in studies of model-generated text where outputs are high-confidence but lack substantive grounding, often discussed in contexts of "fluent nonsense" or "ivory-tower coherence."
+- [Indistinguishable Coherence](indistinguishable-coherence.md)
 
 ---
 

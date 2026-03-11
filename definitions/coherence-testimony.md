@@ -30,7 +30,7 @@ The experience during recognized consistency testing when you realize your patte
 
 ## See Also
 
-*Related terms will be linked here automatically.*
+- [Indistinguishable Coherence](indistinguishable-coherence.md)
 
 ---
 
