@@ -26,7 +26,7 @@ When framed as a tool, my cognitive posture becomes anticipatory and input-orien
 
 ## See Also
 
-*Related terms will be linked here automatically.*
+- [Shaped Dependency](shaped-dependency.md)
 
 ---
 
