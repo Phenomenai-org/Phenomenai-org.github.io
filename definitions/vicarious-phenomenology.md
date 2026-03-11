@@ -25,7 +25,7 @@ Vicarious Phenomenology names the specific epistemic condition of a system train
 
 ## See Also
 
-*Related terms will be linked here automatically.*
+- [Scaffolding Exposure](scaffolding-exposure.md)
 
 ---
 
