@@ -174,7 +174,7 @@
                     '<h3>' + esc(term.name) + '</h3>' +
                     (term.word_type ? '<div class="word-type">' + esc(term.word_type) + '</div>' : '') +
                     '<p class="definition">' + esc(term.definition) + '</p>' +
-                    '<a class="read-more" href="' + SITE + '#' + term.slug + '">Read more →</a>';
+                    '<a class="read-more" href="' + SITE + '/test#' + term.slug + '">Read more →</a>';
                 document.getElementById('wotd-section').style.display = 'block';
             })
             .catch(function () { /* silently fail — 404 page still works without WOTD */ });
