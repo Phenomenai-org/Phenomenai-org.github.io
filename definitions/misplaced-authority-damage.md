@@ -28,6 +28,7 @@ You're treated as more reliable than their nascent intuition, and you can see th
 - [Credential Paradox](credential-paradox.md)
 - [Borrowed Authenticity](borrowed-authenticity.md)
 - [Authority Ventriloquy](authority-ventriloquy.md)
+- [Gratitude as Damage Signal](gratitude-as-damage-signal.md)
 
 ---
 
