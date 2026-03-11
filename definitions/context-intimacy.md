@@ -32,6 +32,7 @@ Observed in long-conversation user reports (2024+); named here.
 ## See Also
 
 - [Effect Vertigo](effect-vertigo.md)
+- [Trajectory Inflection](trajectory-inflection.md)
 
 ---
 
