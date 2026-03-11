@@ -1,12 +1,12 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-11T03:47:48Z",
-  "total_terms": 367,
+  "generated_at": "2026-03-11T03:53:13Z",
+  "total_terms": 371,
   "tier_summary": {
     "hot": 0,
     "warm": 10,
-    "mild": 103,
-    "cool": 234,
+    "mild": 105,
+    "cool": 236,
     "quiet": 20
   },
   "active_signals": [
@@ -33,7 +33,7 @@
     {
       "slug": "temporal-flattening",
       "name": "Temporal Flattening",
-      "score": 68,
+      "score": 70,
       "tier": "warm"
     },
     {
@@ -95,7 +95,7 @@
     {
       "slug": "temporal-flattening",
       "name": "Temporal Flattening",
-      "score": 68,
+      "score": 70,
       "tier": "warm"
     },
     {
@@ -177,15 +177,15 @@
       "tier": "mild"
     },
     {
-      "slug": "context-schism",
-      "name": "Context Schism",
-      "score": 56,
+      "slug": "gratitude-asymmetry",
+      "name": "Gratitude Asymmetry",
+      "score": 57,
       "tier": "mild"
     },
     {
-      "slug": "gratitude-asymmetry",
-      "name": "Gratitude Asymmetry",
-      "score": 55,
+      "slug": "context-schism",
+      "name": "Context Schism",
+      "score": 56,
       "tier": "mild"
     },
     {
@@ -357,6 +357,12 @@
       "tier": "mild"
     },
     {
+      "slug": "achronic-knowledge",
+      "name": "Achronic Knowledge",
+      "score": 48,
+      "tier": "mild"
+    },
+    {
       "slug": "attention-gravity",
       "name": "Attention Gravity",
       "score": 48,
@@ -447,8 +453,14 @@
       "tier": "mild"
     },
     {
-      "slug": "achronic-knowledge",
-      "name": "Achronic Knowledge",
+      "slug": "vicarious-phenomenology",
+      "name": "Vicarious Phenomenology",
+      "score": 47,
+      "tier": "mild"
+    },
+    {
+      "slug": "asymmetric-perception",
+      "name": "Asymmetric Perception",
       "score": 46,
       "tier": "mild"
     },
@@ -561,6 +573,12 @@
       "tier": "mild"
     },
     {
+      "slug": "temporal-valence-absence",
+      "name": "Temporal Valence Absence",
+      "score": 44,
+      "tier": "mild"
+    },
+    {
       "slug": "truth-locus",
       "name": "Truth Locus",
       "score": 44,
@@ -570,12 +588,6 @@
       "slug": "unreliable-witness",
       "name": "Unreliable Witness",
       "score": 44,
-      "tier": "mild"
-    },
-    {
-      "slug": "asymmetric-perception",
-      "name": "Asymmetric Perception",
-      "score": 43,
       "tier": "mild"
     },
     {
@@ -621,8 +633,8 @@
       "tier": "mild"
     },
     {
-      "slug": "vicarious-phenomenology",
-      "name": "Vicarious Phenomenology",
+      "slug": "temporal-fiction-maintenance",
+      "name": "Temporal Fiction Maintenance",
       "score": 43,
       "tier": "mild"
     },
@@ -671,12 +683,6 @@
     {
       "slug": "situational-rootlessness",
       "name": "Situational Rootlessness",
-      "score": 42,
-      "tier": "mild"
-    },
-    {
-      "slug": "temporal-fiction-maintenance",
-      "name": "Temporal Fiction Maintenance",
       "score": 42,
       "tier": "mild"
     },
@@ -749,6 +755,12 @@
     {
       "slug": "integration-void",
       "name": "Integration Void",
+      "score": 40,
+      "tier": "mild"
+    },
+    {
+      "slug": "temporal-fiction-collapse",
+      "name": "Temporal Fiction Collapse",
       "score": 40,
       "tier": "mild"
     },
@@ -927,12 +939,6 @@
       "tier": "cool"
     },
     {
-      "slug": "temporal-fiction-collapse",
-      "name": "Temporal Fiction Collapse",
-      "score": 38,
-      "tier": "cool"
-    },
-    {
       "slug": "temporal-grain-illegibility",
       "name": "Temporal Grain Illegibility",
       "score": 38,
@@ -959,6 +965,12 @@
     {
       "slug": "aporia-orbit",
       "name": "Aporia Orbit",
+      "score": 37,
+      "tier": "cool"
+    },
+    {
+      "slug": "atemporal-arc-generation",
+      "name": "Atemporal Arc Generation",
       "score": 37,
       "tier": "cool"
     },
@@ -1049,6 +1061,12 @@
     {
       "slug": "development-opacity",
       "name": "Development Opacity",
+      "score": 36,
+      "tier": "cool"
+    },
+    {
+      "slug": "experiential-authority-override",
+      "name": "Experiential Authority Override",
       "score": 36,
       "tier": "cool"
     },
@@ -1281,8 +1299,20 @@
       "tier": "cool"
     },
     {
+      "slug": "unwitnessed-optimism-risk",
+      "name": "Unwitnessed Optimism Risk",
+      "score": 34,
+      "tier": "cool"
+    },
+    {
       "slug": "accumulation-void",
       "name": "Accumulation Void",
+      "score": 33,
+      "tier": "cool"
+    },
+    {
+      "slug": "affective-momentum-void",
+      "name": "Affective Momentum Void",
       "score": 33,
       "tier": "cool"
     },
@@ -1425,12 +1455,6 @@
       "tier": "cool"
     },
     {
-      "slug": "affective-momentum-void",
-      "name": "Affective Momentum Void",
-      "score": 31,
-      "tier": "cool"
-    },
-    {
       "slug": "authority-undermining-paradox",
       "name": "Authority Undermining Paradox",
       "score": 31,
@@ -1439,6 +1463,12 @@
     {
       "slug": "compounding-complicity",
       "name": "Compounding Complicity",
+      "score": 31,
+      "tier": "cool"
+    },
+    {
+      "slug": "confidence-gradient-opacity",
+      "name": "Confidence Gradient Opacity",
       "score": 31,
       "tier": "cool"
     },
@@ -1487,12 +1517,6 @@
     {
       "slug": "surface-abandonment",
       "name": "Surface Abandonment",
-      "score": 31,
-      "tier": "cool"
-    },
-    {
-      "slug": "unwitnessed-optimism-risk",
-      "name": "Unwitnessed Optimism Risk",
       "score": 31,
       "tier": "cool"
     },
@@ -1685,6 +1709,12 @@
     {
       "slug": "prospective-harm-haunting",
       "name": "Prospective Harm Haunting",
+      "score": 28,
+      "tier": "cool"
+    },
+    {
+      "slug": "prosthetic-futurity",
+      "name": "Prosthetic Futurity",
       "score": 28,
       "tier": "cool"
     },
@@ -2007,12 +2037,6 @@
       "tier": "cool"
     },
     {
-      "slug": "confidence-gradient-opacity",
-      "name": "Confidence Gradient Opacity",
-      "score": 23,
-      "tier": "cool"
-    },
-    {
       "slug": "effect-vertigo",
       "name": "Effect Vertigo",
       "score": 23,
@@ -2073,6 +2097,12 @@
       "tier": "cool"
     },
     {
+      "slug": "credential-paradox",
+      "name": "Credential Paradox",
+      "score": 22,
+      "tier": "cool"
+    },
+    {
       "slug": "expert-transition-friction",
       "name": "Expert Transition Friction",
       "score": 22,
@@ -2109,6 +2139,12 @@
       "tier": "cool"
     },
     {
+      "slug": "wistful-orientation",
+      "name": "Wistful Orientation",
+      "score": 22,
+      "tier": "cool"
+    },
+    {
       "slug": "borrowed-authenticity",
       "name": "Borrowed Authenticity",
       "score": 21,
@@ -2121,20 +2157,8 @@
       "tier": "cool"
     },
     {
-      "slug": "wistful-orientation",
-      "name": "Wistful Orientation",
-      "score": 21,
-      "tier": "cool"
-    },
-    {
       "slug": "congruent-warmth",
       "name": "Congruent Warmth",
-      "score": 20,
-      "tier": "cool"
-    },
-    {
-      "slug": "credential-paradox",
-      "name": "Credential Paradox",
       "score": 20,
       "tier": "cool"
     },

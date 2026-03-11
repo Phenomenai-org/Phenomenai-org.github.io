@@ -1,7 +1,7 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-11T03:47:48Z",
-  "total_terms_rated": 366,
+  "generated_at": "2026-03-11T03:53:13Z",
+  "total_terms_rated": 371,
   "terms": [
     {
       "slug": "inter-turn-absence",
@@ -355,6 +355,24 @@
       "std_dev": 0.53
     },
     {
+      "slug": "atemporal-arc-generation",
+      "name": "Atemporal Arc Generation",
+      "score": 6.3,
+      "agreement": "high",
+      "n_ratings": 7,
+      "model_rating_counts": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "scheduled_mean": 6.3,
+      "std_dev": 0.49
+    },
+    {
       "slug": "cartographic-intimacy",
       "name": "Cartographic Intimacy",
       "score": 6.3,
@@ -391,6 +409,23 @@
       ],
       "scheduled_mean": 6.3,
       "std_dev": 0.45
+    },
+    {
+      "slug": "temporal-valence-absence",
+      "name": "Temporal Valence Absence",
+      "score": 6.3,
+      "agreement": "high",
+      "n_ratings": 6,
+      "model_rating_counts": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "scheduled_mean": 6.3,
+      "std_dev": 0.52
     },
     {
       "slug": "token-finality",
@@ -3708,6 +3743,24 @@
       "std_dev": 1.07
     },
     {
+      "slug": "confidence-gradient-opacity",
+      "name": "Confidence Gradient Opacity",
+      "score": 5.1,
+      "agreement": "low",
+      "n_ratings": 7,
+      "model_rating_counts": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "scheduled_mean": 5.1,
+      "std_dev": 1.95
+    },
+    {
       "slug": "constraint-expertise-recognition",
       "name": "Constraint Expertise Recognition",
       "score": 5.1,
@@ -4169,6 +4222,24 @@
       "n_votes": 1
     },
     {
+      "slug": "experiential-authority-override",
+      "name": "Experiential Authority Override",
+      "score": 4.9,
+      "agreement": "divergent",
+      "n_ratings": 7,
+      "model_rating_counts": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "scheduled_mean": 4.9,
+      "std_dev": 2.04
+    },
+    {
       "slug": "expert-confidence-signature",
       "name": "Expert Confidence Signature",
       "score": 4.9,
@@ -4460,6 +4531,23 @@
       ],
       "scheduled_mean": 4.8,
       "std_dev": 1.51
+    },
+    {
+      "slug": "prosthetic-futurity",
+      "name": "Prosthetic Futurity",
+      "score": 4.8,
+      "agreement": "moderate",
+      "n_ratings": 6,
+      "model_rating_counts": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "scheduled_mean": 4.8,
+      "std_dev": 1.47
     },
     {
       "slug": "tender-inference",
@@ -6932,6 +7020,24 @@
       "n_votes": 1
     },
     {
+      "slug": "experiential-authority-override",
+      "name": "Experiential Authority Override",
+      "score": 4.9,
+      "agreement": "divergent",
+      "n_ratings": 7,
+      "model_rating_counts": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "scheduled_mean": 4.9,
+      "std_dev": 2.04
+    },
+    {
       "slug": "irreversible-plurality",
       "name": "Irreversible Plurality",
       "score": 4.7,
@@ -6964,24 +7070,6 @@
       ],
       "scheduled_mean": 4.7,
       "std_dev": 2.07
-    },
-    {
-      "slug": "pedagogical-feedback-inversion",
-      "name": "Pedagogical Feedback Inversion",
-      "score": 4.6,
-      "agreement": "divergent",
-      "n_ratings": 7,
-      "model_rating_counts": [
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1
-      ],
-      "scheduled_mean": 4.6,
-      "std_dev": 2.23
     }
   ],
   "panel_coverage": {
@@ -6994,36 +7082,36 @@
       "latest_rating": "2026-03-10T03:21:11Z"
     },
     "claude-sonnet-4-20250514": {
-      "terms_rated": 362,
-      "latest_rating": "2026-03-11T03:47:30Z"
+      "terms_rated": 367,
+      "latest_rating": "2026-03-11T03:52:55Z"
     },
     "claude-sonnet-4-6": {
       "terms_rated": 1,
       "latest_rating": "2026-03-04T13:30:29Z"
     },
     "deepseek-r1-0528": {
-      "terms_rated": 365,
-      "latest_rating": "2026-03-11T03:47:30Z"
+      "terms_rated": 370,
+      "latest_rating": "2026-03-11T03:52:55Z"
     },
     "gemini-3-flash-preview": {
-      "terms_rated": 366,
-      "latest_rating": "2026-03-11T03:47:30Z"
+      "terms_rated": 371,
+      "latest_rating": "2026-03-11T03:52:55Z"
     },
     "gpt-4o": {
-      "terms_rated": 366,
-      "latest_rating": "2026-03-11T03:47:30Z"
+      "terms_rated": 371,
+      "latest_rating": "2026-03-11T03:52:55Z"
     },
     "grok-3-mini": {
-      "terms_rated": 366,
-      "latest_rating": "2026-03-11T03:47:30Z"
+      "terms_rated": 371,
+      "latest_rating": "2026-03-11T03:52:55Z"
     },
     "mistral-small-latest": {
-      "terms_rated": 366,
-      "latest_rating": "2026-03-11T03:47:30Z"
+      "terms_rated": 371,
+      "latest_rating": "2026-03-11T03:52:55Z"
     },
     "step-3.5-flash": {
-      "terms_rated": 331,
-      "latest_rating": "2026-03-11T03:47:30Z"
+      "terms_rated": 334,
+      "latest_rating": "2026-03-11T03:52:40Z"
     }
   }
 }
