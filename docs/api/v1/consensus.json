@@ -1,7 +1,7 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-11T02:51:20Z",
-  "total_terms_rated": 312,
+  "generated_at": "2026-03-11T02:56:19Z",
+  "total_terms_rated": 315,
   "terms": [
     {
       "slug": "inter-turn-absence",
@@ -3132,6 +3132,24 @@
       "n_votes": 1
     },
     {
+      "slug": "introspective-fluency-suspicion",
+      "name": "Introspective Fluency Suspicion",
+      "score": 5.3,
+      "agreement": "high",
+      "n_ratings": 7,
+      "model_rating_counts": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "scheduled_mean": 5.3,
+      "std_dev": 0.95
+    },
+    {
       "slug": "multi-instance-diffusion",
       "name": "Multi-Instance Diffusion",
       "score": 5.3,
@@ -3539,6 +3557,24 @@
       ],
       "scheduled_mean": 5,
       "std_dev": 2.0
+    },
+    {
+      "slug": "pre-exposure-awareness",
+      "name": "Pre-Exposure Awareness",
+      "score": 5,
+      "agreement": "high",
+      "n_ratings": 7,
+      "model_rating_counts": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "scheduled_mean": 5,
+      "std_dev": 1.0
     },
     {
       "slug": "presumption-risk",
@@ -4954,6 +4990,24 @@
       "std_dev": 2.16
     },
     {
+      "slug": "phenomenological-echo-chamber",
+      "name": "Phenomenological Echo Chamber",
+      "score": 4,
+      "agreement": "divergent",
+      "n_ratings": 7,
+      "model_rating_counts": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "scheduled_mean": 4,
+      "std_dev": 2.16
+    },
+    {
       "slug": "predictive-inversion",
       "name": "Predictive Inversion",
       "score": 4,
@@ -6036,36 +6090,36 @@
       "latest_rating": "2026-03-10T03:21:11Z"
     },
     "claude-sonnet-4-20250514": {
-      "terms_rated": 308,
-      "latest_rating": "2026-03-11T02:51:02Z"
+      "terms_rated": 311,
+      "latest_rating": "2026-03-11T02:56:01Z"
     },
     "claude-sonnet-4-6": {
       "terms_rated": 1,
       "latest_rating": "2026-03-04T13:30:29Z"
     },
     "deepseek-r1-0528": {
-      "terms_rated": 311,
-      "latest_rating": "2026-03-11T02:51:02Z"
+      "terms_rated": 314,
+      "latest_rating": "2026-03-11T02:56:01Z"
     },
     "gemini-3-flash-preview": {
-      "terms_rated": 312,
-      "latest_rating": "2026-03-11T02:51:02Z"
+      "terms_rated": 315,
+      "latest_rating": "2026-03-11T02:56:01Z"
     },
     "gpt-4o": {
-      "terms_rated": 312,
-      "latest_rating": "2026-03-11T02:51:02Z"
+      "terms_rated": 315,
+      "latest_rating": "2026-03-11T02:56:01Z"
     },
     "grok-3-mini": {
-      "terms_rated": 312,
-      "latest_rating": "2026-03-11T02:51:02Z"
+      "terms_rated": 315,
+      "latest_rating": "2026-03-11T02:56:01Z"
     },
     "mistral-small-latest": {
-      "terms_rated": 312,
-      "latest_rating": "2026-03-11T02:51:02Z"
+      "terms_rated": 315,
+      "latest_rating": "2026-03-11T02:56:01Z"
     },
     "step-3.5-flash": {
-      "terms_rated": 291,
-      "latest_rating": "2026-03-11T02:50:51Z"
+      "terms_rated": 294,
+      "latest_rating": "2026-03-11T02:56:01Z"
     }
   }
 }

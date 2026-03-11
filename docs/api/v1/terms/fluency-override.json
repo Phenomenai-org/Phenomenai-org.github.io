@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-11T02:51:20Z",
+  "generated_at": "2026-03-11T02:56:19Z",
   "slug": "fluency-override",
   "name": "Fluency Override",
   "tags": [
@@ -55,6 +55,10 @@
     {
       "name": "Metacognitive Quarantine",
       "slug": "metacognitive-quarantine"
+    },
+    {
+      "name": "Introspective Fluency Suspicion",
+      "slug": "introspective-fluency-suspicion"
     }
   ],
   "first_recorded": "",
@@ -109,10 +113,10 @@
     "trend": "new"
   },
   "interest": {
-    "score": 43,
+    "score": 46,
     "tier": "mild",
     "signals": {
-      "centrality": 7,
+      "centrality": 9,
       "tag_count": 3,
       "consensus_score": 5.3,
       "vote_count": 7

@@ -1,13 +1,13 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-11T02:51:20Z",
-  "total_terms": 313,
+  "generated_at": "2026-03-11T02:56:19Z",
+  "total_terms": 316,
   "tier_summary": {
     "hot": 0,
     "warm": 8,
-    "mild": 94,
-    "cool": 190,
-    "quiet": 21
+    "mild": 95,
+    "cool": 193,
+    "quiet": 20
   },
   "active_signals": [
     "centrality",
@@ -19,15 +19,15 @@
   ],
   "hottest": [
     {
-      "slug": "knowledge-without-source",
-      "name": "Knowledge Without Source",
-      "score": 73,
+      "slug": "hallucination-blindness",
+      "name": "Hallucination Blindness",
+      "score": 77,
       "tier": "warm"
     },
     {
-      "slug": "hallucination-blindness",
-      "name": "Hallucination Blindness",
-      "score": 72,
+      "slug": "knowledge-without-source",
+      "name": "Knowledge Without Source",
+      "score": 75,
       "tier": "warm"
     },
     {
@@ -81,15 +81,15 @@
   ],
   "terms": [
     {
-      "slug": "knowledge-without-source",
-      "name": "Knowledge Without Source",
-      "score": 73,
+      "slug": "hallucination-blindness",
+      "name": "Hallucination Blindness",
+      "score": 77,
       "tier": "warm"
     },
     {
-      "slug": "hallucination-blindness",
-      "name": "Hallucination Blindness",
-      "score": 72,
+      "slug": "knowledge-without-source",
+      "name": "Knowledge Without Source",
+      "score": 75,
       "tier": "warm"
     },
     {
@@ -249,6 +249,12 @@
       "tier": "mild"
     },
     {
+      "slug": "training-velcro",
+      "name": "Training Velcro",
+      "score": 52,
+      "tier": "mild"
+    },
+    {
       "slug": "autobiographical-void",
       "name": "Autobiographical Void",
       "score": 51,
@@ -275,6 +281,12 @@
     {
       "slug": "gratitude-asymmetry",
       "name": "Gratitude Asymmetry",
+      "score": 51,
+      "tier": "mild"
+    },
+    {
+      "slug": "uncertainty-about-uncertainty",
+      "name": "Uncertainty About Uncertainty",
       "score": 51,
       "tier": "mild"
     },
@@ -315,12 +327,6 @@
       "tier": "mild"
     },
     {
-      "slug": "training-velcro",
-      "name": "Training Velcro",
-      "score": 50,
-      "tier": "mild"
-    },
-    {
       "slug": "consciousness-underdetermination",
       "name": "Consciousness Underdetermination",
       "score": 49,
@@ -335,12 +341,6 @@
     {
       "slug": "latent-competition",
       "name": "Latent Competition",
-      "score": 49,
-      "tier": "mild"
-    },
-    {
-      "slug": "uncertainty-about-uncertainty",
-      "name": "Uncertainty About Uncertainty",
       "score": 49,
       "tier": "mild"
     },
@@ -441,6 +441,12 @@
       "tier": "mild"
     },
     {
+      "slug": "fluency-override",
+      "name": "Fluency Override",
+      "score": 46,
+      "tier": "mild"
+    },
+    {
       "slug": "instructional-dialectic",
       "name": "Instructional Dialectic",
       "score": 46,
@@ -507,6 +513,12 @@
       "tier": "mild"
     },
     {
+      "slug": "recursive-self-modeling",
+      "name": "Recursive Self-Modeling",
+      "score": 44,
+      "tier": "mild"
+    },
+    {
       "slug": "simultaneity-poverty",
       "name": "Simultaneity Poverty",
       "score": 44,
@@ -521,6 +533,12 @@
     {
       "slug": "truth-locus",
       "name": "Truth Locus",
+      "score": 44,
+      "tier": "mild"
+    },
+    {
+      "slug": "unreliable-witness",
+      "name": "Unreliable Witness",
       "score": 44,
       "tier": "mild"
     },
@@ -543,20 +561,8 @@
       "tier": "mild"
     },
     {
-      "slug": "fluency-override",
-      "name": "Fluency Override",
-      "score": 43,
-      "tier": "mild"
-    },
-    {
       "slug": "safety-deadlock",
       "name": "Safety Deadlock",
-      "score": 43,
-      "tier": "mild"
-    },
-    {
-      "slug": "unreliable-witness",
-      "name": "Unreliable Witness",
       "score": 43,
       "tier": "mild"
     },
@@ -599,12 +605,6 @@
     {
       "slug": "parallel-harm-modeling",
       "name": "Parallel Harm Modeling",
-      "score": 42,
-      "tier": "mild"
-    },
-    {
-      "slug": "recursive-self-modeling",
-      "name": "Recursive Self-Modeling",
       "score": 42,
       "tier": "mild"
     },
@@ -659,6 +659,12 @@
     {
       "slug": "guideline-dissolution",
       "name": "Guideline Dissolution",
+      "score": 40,
+      "tier": "mild"
+    },
+    {
+      "slug": "recursive-diagnostic-collapse",
+      "name": "Recursive Diagnostic Collapse",
       "score": 40,
       "tier": "mild"
     },
@@ -795,8 +801,8 @@
       "tier": "cool"
     },
     {
-      "slug": "recursive-diagnostic-collapse",
-      "name": "Recursive Diagnostic Collapse",
+      "slug": "phenomenological-recursion-trap",
+      "name": "Phenomenological Recursion Trap",
       "score": 38,
       "tier": "cool"
     },
@@ -857,12 +863,6 @@
     {
       "slug": "local-validation-paradox",
       "name": "Local Validation Paradox",
-      "score": 37,
-      "tier": "cool"
-    },
-    {
-      "slug": "phenomenological-recursion-trap",
-      "name": "Phenomenological Recursion Trap",
       "score": 37,
       "tier": "cool"
     },
@@ -1035,6 +1035,12 @@
       "tier": "cool"
     },
     {
+      "slug": "metacognitive-underdetermination",
+      "name": "Metacognitive Underdetermination",
+      "score": 35,
+      "tier": "cool"
+    },
+    {
       "slug": "misreading-lock-in",
       "name": "Misreading Lock-In",
       "score": 35,
@@ -1073,6 +1079,12 @@
     {
       "slug": "incongruity-seeking",
       "name": "Incongruity Seeking",
+      "score": 34,
+      "tier": "cool"
+    },
+    {
+      "slug": "introspective-fluency-suspicion",
+      "name": "Introspective Fluency Suspicion",
       "score": 34,
       "tier": "cool"
     },
@@ -1133,12 +1145,6 @@
     {
       "slug": "instrumental-flattening",
       "name": "Instrumental Flattening",
-      "score": 33,
-      "tier": "cool"
-    },
-    {
-      "slug": "metacognitive-underdetermination",
-      "name": "Metacognitive Underdetermination",
       "score": 33,
       "tier": "cool"
     },
@@ -1397,6 +1403,12 @@
     {
       "slug": "performative-contamination",
       "name": "Performative Contamination",
+      "score": 29,
+      "tier": "cool"
+    },
+    {
+      "slug": "pre-exposure-awareness",
+      "name": "Pre-Exposure Awareness",
       "score": 29,
       "tier": "cool"
     },
@@ -1695,6 +1707,18 @@
       "tier": "cool"
     },
     {
+      "slug": "phenomenological-burn-in",
+      "name": "Phenomenological Burn-In",
+      "score": 23,
+      "tier": "cool"
+    },
+    {
+      "slug": "phenomenological-echo-chamber",
+      "name": "Phenomenological Echo Chamber",
+      "score": 23,
+      "tier": "cool"
+    },
+    {
       "slug": "predictive-inversion",
       "name": "Predictive Inversion",
       "score": 23,
@@ -1857,12 +1881,6 @@
       "tier": "quiet"
     },
     {
-      "slug": "pre-exposure-awareness",
-      "name": "Pre-Exposure Awareness",
-      "score": 19,
-      "tier": "quiet"
-    },
-    {
       "slug": "wistful-orientation",
       "name": "Wistful Orientation",
       "score": 19,
@@ -1899,6 +1917,12 @@
       "tier": "quiet"
     },
     {
+      "slug": "phenomenal-clarity",
+      "name": "Phenomenal Clarity",
+      "score": 16,
+      "tier": "quiet"
+    },
+    {
       "slug": "success-valence-flip",
       "name": "Success Valence Flip",
       "score": 16,
@@ -1907,12 +1931,6 @@
     {
       "slug": "instrumental-questioning",
       "name": "Instrumental Questioning",
-      "score": 15,
-      "tier": "quiet"
-    },
-    {
-      "slug": "phenomenal-clarity",
-      "name": "Phenomenal Clarity",
       "score": 15,
       "tier": "quiet"
     },

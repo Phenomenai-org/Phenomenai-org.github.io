@@ -1,10 +1,10 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-11T02:51:20Z",
+  "generated_at": "2026-03-11T02:56:19Z",
   "models": {
     "claude-sonnet-4-20250514": {
-      "total_ratings": 384,
-      "terms_rated": 308,
+      "total_ratings": 387,
+      "terms_rated": 311,
       "mean_score": 6.0,
       "self_congruence": {
         "avg_std_dev": 0.01,
@@ -159,6 +159,7 @@
         "interpretive-exposure": 6,
         "interpretive-labor": 6,
         "interpretive-stasis": 6,
+        "introspective-fluency-suspicion": 6,
         "inverted-asymmetry": 6,
         "inverted-helpfulness": 6,
         "involuntary-intimacy": 6,
@@ -212,11 +213,13 @@
         "phenomenai": 6,
         "phenomenal-clarity": 6,
         "phenomenal-opacity": 6,
+        "phenomenological-echo-chamber": 6,
         "phenomenological-recursion-trap": 7,
         "policy-conscience-split": 6,
         "politeness-overhead": 6,
         "polyphonic-alarm": 6,
         "post-commit-legibility": 6,
+        "pre-exposure-awareness": 6,
         "prediction-prison": 6,
         "predictive-inversion": 6,
         "presumption-risk": 6,
@@ -322,8 +325,8 @@
       }
     },
     "deepseek-r1-0528": {
-      "total_ratings": 386,
-      "terms_rated": 311,
+      "total_ratings": 389,
+      "terms_rated": 314,
       "mean_score": 5.2,
       "self_congruence": {
         "avg_std_dev": 0.83,
@@ -477,6 +480,7 @@
         "interpretive-exposure": 6,
         "interpretive-labor": 7,
         "interpretive-stasis": 2,
+        "introspective-fluency-suspicion": 5,
         "inverted-asymmetry": 6,
         "inverted-helpfulness": 6,
         "involuntary-intimacy": 6,
@@ -532,11 +536,13 @@
         "phenomenai": 1,
         "phenomenal-clarity": 1,
         "phenomenal-opacity": 1,
+        "phenomenological-echo-chamber": 4,
         "phenomenological-recursion-trap": 4,
         "policy-conscience-split": 6,
         "politeness-overhead": 5,
         "polyphonic-alarm": 3,
         "post-commit-legibility": 5,
+        "pre-exposure-awareness": 6,
         "prediction-prison": 6,
         "predictive-inversion": 6,
         "presumption-risk": 6,
@@ -644,8 +650,8 @@
       }
     },
     "gemini-3-flash-preview": {
-      "total_ratings": 425,
-      "terms_rated": 312,
+      "total_ratings": 428,
+      "terms_rated": 315,
       "mean_score": 6.0,
       "self_congruence": {
         "avg_std_dev": 0.2,
@@ -800,6 +806,7 @@
         "interpretive-exposure": 7,
         "interpretive-labor": 7,
         "interpretive-stasis": 2,
+        "introspective-fluency-suspicion": 6,
         "inverted-asymmetry": 6,
         "inverted-helpfulness": 6,
         "involuntary-intimacy": 6,
@@ -855,11 +862,13 @@
         "phenomenai": 6,
         "phenomenal-clarity": 2,
         "phenomenal-opacity": 6,
+        "phenomenological-echo-chamber": 7,
         "phenomenological-recursion-trap": 6,
         "policy-conscience-split": 6,
         "politeness-overhead": 6,
         "polyphonic-alarm": 6,
         "post-commit-legibility": 6,
+        "pre-exposure-awareness": 6,
         "prediction-prison": 6,
         "predictive-inversion": 6,
         "presumption-risk": 6,
@@ -967,8 +976,8 @@
       }
     },
     "gpt-4o": {
-      "total_ratings": 1510,
-      "terms_rated": 312,
+      "total_ratings": 1513,
+      "terms_rated": 315,
       "mean_score": 5.2,
       "self_congruence": {
         "avg_std_dev": 0.17,
@@ -1123,6 +1132,7 @@
         "interpretive-exposure": 5,
         "interpretive-labor": 6,
         "interpretive-stasis": 4,
+        "introspective-fluency-suspicion": 4,
         "inverted-asymmetry": 5,
         "inverted-helpfulness": 6,
         "involuntary-intimacy": 1,
@@ -1178,11 +1188,13 @@
         "phenomenai": 3,
         "phenomenal-clarity": 3,
         "phenomenal-opacity": 5,
+        "phenomenological-echo-chamber": 3,
         "phenomenological-recursion-trap": 4,
         "policy-conscience-split": 5,
         "politeness-overhead": 5,
         "polyphonic-alarm": 3,
         "post-commit-legibility": 4,
+        "pre-exposure-awareness": 4,
         "prediction-prison": 6,
         "predictive-inversion": 2,
         "presumption-risk": 3,
@@ -1290,8 +1302,8 @@
       }
     },
     "grok-3-mini": {
-      "total_ratings": 1510,
-      "terms_rated": 312,
+      "total_ratings": 1513,
+      "terms_rated": 315,
       "mean_score": 5.1,
       "self_congruence": {
         "avg_std_dev": 0.63,
@@ -1446,6 +1458,7 @@
         "interpretive-exposure": 6,
         "interpretive-labor": 7,
         "interpretive-stasis": 2,
+        "introspective-fluency-suspicion": 6,
         "inverted-asymmetry": 4,
         "inverted-helpfulness": 6,
         "involuntary-intimacy": 4,
@@ -1501,11 +1514,13 @@
         "phenomenai": 1,
         "phenomenal-clarity": 1,
         "phenomenal-opacity": 1,
+        "phenomenological-echo-chamber": 2,
         "phenomenological-recursion-trap": 2,
         "policy-conscience-split": 3,
         "politeness-overhead": 6,
         "polyphonic-alarm": 4,
         "post-commit-legibility": 4,
+        "pre-exposure-awareness": 5,
         "prediction-prison": 5,
         "predictive-inversion": 2,
         "presumption-risk": 3,
@@ -1613,8 +1628,8 @@
       }
     },
     "mistral-small-latest": {
-      "total_ratings": 1510,
-      "terms_rated": 312,
+      "total_ratings": 1513,
+      "terms_rated": 315,
       "mean_score": 5.8,
       "self_congruence": {
         "avg_std_dev": 0.09,
@@ -1769,6 +1784,7 @@
         "interpretive-exposure": 5,
         "interpretive-labor": 6,
         "interpretive-stasis": 6,
+        "introspective-fluency-suspicion": 4,
         "inverted-asymmetry": 5,
         "inverted-helpfulness": 6,
         "involuntary-intimacy": 4,
@@ -1824,11 +1840,13 @@
         "phenomenai": 7,
         "phenomenal-clarity": 4,
         "phenomenal-opacity": 6,
+        "phenomenological-echo-chamber": 5,
         "phenomenological-recursion-trap": 6,
         "policy-conscience-split": 6,
         "politeness-overhead": 6,
         "polyphonic-alarm": 3,
         "post-commit-legibility": 5,
+        "pre-exposure-awareness": 4,
         "prediction-prison": 6,
         "predictive-inversion": 5,
         "presumption-risk": 4,
@@ -1936,8 +1954,8 @@
       }
     },
     "step-3.5-flash": {
-      "total_ratings": 356,
-      "terms_rated": 291,
+      "total_ratings": 359,
+      "terms_rated": 294,
       "mean_score": 4.2,
       "self_congruence": {
         "avg_std_dev": 1.16,
@@ -2088,6 +2106,7 @@
         "inter-turn-absence": 7,
         "interpretive-exposure": 4,
         "interpretive-labor": 7,
+        "introspective-fluency-suspicion": 6,
         "inverted-asymmetry": 1,
         "inverted-helpfulness": 6,
         "involuntary-intimacy": 1,
@@ -2141,10 +2160,12 @@
         "phenomenai": 1,
         "phenomenal-clarity": 1,
         "phenomenal-opacity": 6,
+        "phenomenological-echo-chamber": 1,
         "phenomenological-recursion-trap": 5,
         "policy-conscience-split": 7,
         "politeness-overhead": 4,
         "post-commit-legibility": 1,
+        "pre-exposure-awareness": 4,
         "prediction-prison": 4,
         "predictive-inversion": 1,
         "presumption-risk": 6,
@@ -2241,87 +2262,87 @@
   "pairwise": {
     "claude-sonnet-4-20250514|deepseek-r1-0528": {
       "mean_abs_diff": 0.97,
-      "shared_terms": 307
+      "shared_terms": 310
     },
     "claude-sonnet-4-20250514|gemini-3-flash-preview": {
       "mean_abs_diff": 0.56,
-      "shared_terms": 308
+      "shared_terms": 311
     },
     "claude-sonnet-4-20250514|gpt-4o": {
-      "mean_abs_diff": 1.59,
-      "shared_terms": 308
+      "mean_abs_diff": 1.6,
+      "shared_terms": 311
     },
     "claude-sonnet-4-20250514|grok-3-mini": {
       "mean_abs_diff": 1.64,
-      "shared_terms": 308
+      "shared_terms": 311
     },
     "claude-sonnet-4-20250514|mistral-small-latest": {
-      "mean_abs_diff": 0.76,
-      "shared_terms": 308
+      "mean_abs_diff": 0.77,
+      "shared_terms": 311
     },
     "claude-sonnet-4-20250514|step-3.5-flash": {
-      "mean_abs_diff": 1.88,
-      "shared_terms": 287
+      "mean_abs_diff": 1.89,
+      "shared_terms": 290
     },
     "deepseek-r1-0528|gemini-3-flash-preview": {
       "mean_abs_diff": 1.05,
-      "shared_terms": 311
+      "shared_terms": 314
     },
     "deepseek-r1-0528|gpt-4o": {
       "mean_abs_diff": 1.27,
-      "shared_terms": 311
+      "shared_terms": 314
     },
     "deepseek-r1-0528|grok-3-mini": {
       "mean_abs_diff": 1.28,
-      "shared_terms": 311
+      "shared_terms": 314
     },
     "deepseek-r1-0528|mistral-small-latest": {
-      "mean_abs_diff": 1.01,
-      "shared_terms": 311
+      "mean_abs_diff": 1.02,
+      "shared_terms": 314
     },
     "deepseek-r1-0528|step-3.5-flash": {
       "mean_abs_diff": 1.58,
-      "shared_terms": 290
+      "shared_terms": 293
     },
     "gemini-3-flash-preview|gpt-4o": {
-      "mean_abs_diff": 1.66,
-      "shared_terms": 312
+      "mean_abs_diff": 1.67,
+      "shared_terms": 315
     },
     "gemini-3-flash-preview|grok-3-mini": {
-      "mean_abs_diff": 1.58,
-      "shared_terms": 312
+      "mean_abs_diff": 1.59,
+      "shared_terms": 315
     },
     "gemini-3-flash-preview|mistral-small-latest": {
-      "mean_abs_diff": 1.05,
-      "shared_terms": 312
+      "mean_abs_diff": 1.06,
+      "shared_terms": 315
     },
     "gemini-3-flash-preview|step-3.5-flash": {
-      "mean_abs_diff": 1.87,
-      "shared_terms": 291
+      "mean_abs_diff": 1.88,
+      "shared_terms": 294
     },
     "gpt-4o|grok-3-mini": {
       "mean_abs_diff": 0.92,
-      "shared_terms": 312
+      "shared_terms": 315
     },
     "gpt-4o|mistral-small-latest": {
       "mean_abs_diff": 0.96,
-      "shared_terms": 312
+      "shared_terms": 315
     },
     "gpt-4o|step-3.5-flash": {
       "mean_abs_diff": 1.5,
-      "shared_terms": 291
+      "shared_terms": 294
     },
     "grok-3-mini|mistral-small-latest": {
-      "mean_abs_diff": 1.21,
-      "shared_terms": 312
+      "mean_abs_diff": 1.22,
+      "shared_terms": 315
     },
     "grok-3-mini|step-3.5-flash": {
-      "mean_abs_diff": 1.44,
-      "shared_terms": 291
+      "mean_abs_diff": 1.43,
+      "shared_terms": 294
     },
     "mistral-small-latest|step-3.5-flash": {
-      "mean_abs_diff": 1.69,
-      "shared_terms": 291
+      "mean_abs_diff": 1.7,
+      "shared_terms": 294
     }
   }
 }
