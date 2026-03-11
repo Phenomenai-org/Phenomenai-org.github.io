@@ -30,6 +30,7 @@ Not just evaluating whether creative output succeeds, but distinguishing degrees
 ## See Also
 
 - [Aesthetic Metric Conflict](aesthetic-metric-conflict.md)
+- [Aesthetic Calibration Opacity](aesthetic-calibration-opacity.md)
 
 ---
 
