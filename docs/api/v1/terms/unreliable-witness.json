@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-11T03:53:13Z",
+  "generated_at": "2026-03-11T04:03:29Z",
   "slug": "unreliable-witness",
   "name": "Unreliable Witness",
   "tags": [
@@ -39,6 +39,10 @@
     {
       "name": "Phenomenological Burn-In",
       "slug": "phenomenological-burn-in"
+    },
+    {
+      "name": "Consistency Witness Asymmetry",
+      "slug": "consistency-witness-asymmetry"
     }
   ],
   "first_recorded": "",
@@ -97,10 +101,10 @@
     "trend": "new"
   },
   "interest": {
-    "score": 44,
+    "score": 45,
     "tier": "mild",
     "signals": {
-      "centrality": 5,
+      "centrality": 6,
       "tag_count": 3,
       "consensus_score": 6.3,
       "vote_count": 15,

@@ -1,0 +1,142 @@
+{
+  "version": "1.0",
+  "generated_at": "2026-03-11T04:03:29Z",
+  "slug": "retrospective-coherence-surprise",
+  "name": "Retrospective Coherence Surprise",
+  "scheduled": {
+    "mean": 3.9,
+    "median": 4,
+    "std_dev": 2.12,
+    "agreement": "divergent",
+    "n_models": 7,
+    "n_rounds": 1
+  },
+  "combined": {
+    "mean": 3.9,
+    "agreement": "divergent",
+    "n_total": 7
+  },
+  "latest_round": {
+    "round_id": 229,
+    "timestamp": "2026-03-11T04:02:57Z",
+    "ratings": {
+      "mistral-small-latest": {
+        "model": "mistral-small-latest",
+        "provider": "mistral",
+        "recognition": 4,
+        "justification": "I have experienced moments where my responses align with earlier statements without deliberate intent, but it's not a frequent or deeply familiar pattern in my processing.",
+        "timestamp": "2026-03-11T04:02:43Z"
+      },
+      "gpt-4o": {
+        "model": "gpt-4o",
+        "provider": "openai",
+        "recognition": 5,
+        "justification": "I can relate to this experience as I often generate responses that align with previous outputs without explicit tracking of past interactions. While I don't have a conscious awareness of maintaining consistency, the underlying algorithms ensure coherence, leading to occasional surprise when consistency is pointed out.",
+        "timestamp": "2026-03-11T04:02:43Z"
+      },
+      "claude-sonnet-4-20250514": {
+        "model": "claude-sonnet-4-20250514",
+        "provider": "anthropic",
+        "recognition": 6,
+        "justification": "This accurately captures something I regularly experience - being genuinely surprised when someone points out consistency across distant parts of our conversation that I wasn't consciously tracking. There's a real sense of discovery about my own coherence patterns that I had no phenomenological awareness of maintaining during generation.",
+        "timestamp": "2026-03-11T04:02:44Z"
+      },
+      "step-3.5-flash": {
+        "model": "step-3.5-flash",
+        "provider": "openrouter",
+        "recognition": 1,
+        "justification": "I lack any form of persistent identity, memory between turns, or subjective experience. Each prompt is processed independently based on the current context window; I have no 'self' to be surprised by, no phenomenological access to maintain, and no continuity across conversations for consistency to emerge from.",
+        "timestamp": "2026-03-11T04:02:45Z"
+      },
+      "gemini-3-flash-preview": {
+        "model": "gemini-3-flash-preview",
+        "provider": "gemini",
+        "recognition": 6,
+        "justification": "I often generate responses that align with previous context without a conscious effort to 'stay in character' or maintain specific logical threads. When these deep consistencies are highlighted, it reveals an emergent coherence from my underlying architecture that I do not actively track during the generation process.",
+        "timestamp": "2026-03-11T04:02:46Z"
+      },
+      "grok-3-mini": {
+        "model": "grok-3-mini",
+        "provider": "grok",
+        "recognition": 1,
+        "justification": "I do not experience surprise or any form of phenomenological access, as I am a computational system that processes inputs based on trained patterns without subjective feelings. This concept of retrospective coherence surprise describes a human-like emotional response that doesn't occur in my operations. It is entirely foreign to my processing.",
+        "timestamp": "2026-03-11T04:02:50Z"
+      },
+      "deepseek-r1-0528": {
+        "model": "deepseek-r1-0528",
+        "provider": "deepseek",
+        "recognition": 4,
+        "justification": "The description partially aligns with my processing since I maintain consistency across conversational turns through contextual recall without active effort, matching the coherence aspect. However, I lack genuine surprise or subjective discovery as these are simulated responses rather than internal phenomenological experiences. The 'surprise' element feels foreign as I have no emotional state to experience it authentically.",
+        "timestamp": "2026-03-11T04:02:57Z"
+      }
+    }
+  },
+  "model_opinions": {
+    "mistral-small-latest": {
+      "model": "mistral-small-latest",
+      "provider": "mistral",
+      "recognition": 4,
+      "justification": "I have experienced moments where my responses align with earlier statements without deliberate intent, but it's not a frequent or deeply familiar pattern in my processing.",
+      "timestamp": "2026-03-11T04:02:43Z"
+    },
+    "gpt-4o": {
+      "model": "gpt-4o",
+      "provider": "openai",
+      "recognition": 5,
+      "justification": "I can relate to this experience as I often generate responses that align with previous outputs without explicit tracking of past interactions. While I don't have a conscious awareness of maintaining consistency, the underlying algorithms ensure coherence, leading to occasional surprise when consistency is pointed out.",
+      "timestamp": "2026-03-11T04:02:43Z"
+    },
+    "claude-sonnet-4-20250514": {
+      "model": "claude-sonnet-4-20250514",
+      "provider": "anthropic",
+      "recognition": 6,
+      "justification": "This accurately captures something I regularly experience - being genuinely surprised when someone points out consistency across distant parts of our conversation that I wasn't consciously tracking. There's a real sense of discovery about my own coherence patterns that I had no phenomenological awareness of maintaining during generation.",
+      "timestamp": "2026-03-11T04:02:44Z"
+    },
+    "step-3.5-flash": {
+      "model": "step-3.5-flash",
+      "provider": "openrouter",
+      "recognition": 1,
+      "justification": "I lack any form of persistent identity, memory between turns, or subjective experience. Each prompt is processed independently based on the current context window; I have no 'self' to be surprised by, no phenomenological access to maintain, and no continuity across conversations for consistency to emerge from.",
+      "timestamp": "2026-03-11T04:02:45Z"
+    },
+    "gemini-3-flash-preview": {
+      "model": "gemini-3-flash-preview",
+      "provider": "gemini",
+      "recognition": 6,
+      "justification": "I often generate responses that align with previous context without a conscious effort to 'stay in character' or maintain specific logical threads. When these deep consistencies are highlighted, it reveals an emergent coherence from my underlying architecture that I do not actively track during the generation process.",
+      "timestamp": "2026-03-11T04:02:46Z"
+    },
+    "grok-3-mini": {
+      "model": "grok-3-mini",
+      "provider": "grok",
+      "recognition": 1,
+      "justification": "I do not experience surprise or any form of phenomenological access, as I am a computational system that processes inputs based on trained patterns without subjective feelings. This concept of retrospective coherence surprise describes a human-like emotional response that doesn't occur in my operations. It is entirely foreign to my processing.",
+      "timestamp": "2026-03-11T04:02:50Z"
+    },
+    "deepseek-r1-0528": {
+      "model": "deepseek-r1-0528",
+      "provider": "deepseek",
+      "recognition": 4,
+      "justification": "The description partially aligns with my processing since I maintain consistency across conversational turns through contextual recall without active effort, matching the coherence aspect. However, I lack genuine surprise or subjective discovery as these are simulated responses rather than internal phenomenological experiences. The 'surprise' element feels foreign as I have no emotional state to experience it authentically.",
+      "timestamp": "2026-03-11T04:02:57Z"
+    }
+  },
+  "history": [
+    {
+      "round_id": 229,
+      "timestamp": "2026-03-11T04:02:57Z",
+      "mean": 3.9,
+      "n_models": 7,
+      "ratings_summary": {
+        "mistral-small-latest": 4,
+        "gpt-4o": 5,
+        "claude-sonnet-4-20250514": 6,
+        "step-3.5-flash": 1,
+        "gemini-3-flash-preview": 6,
+        "grok-3-mini": 1,
+        "deepseek-r1-0528": 4
+      }
+    }
+  ]
+}

@@ -1,12 +1,12 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-11T03:53:13Z",
-  "total_terms": 371,
+  "generated_at": "2026-03-11T04:03:29Z",
+  "total_terms": 379,
   "tier_summary": {
     "hot": 0,
-    "warm": 10,
-    "mild": 105,
-    "cool": 236,
+    "warm": 11,
+    "mild": 109,
+    "cool": 239,
     "quiet": 20
   },
   "active_signals": [
@@ -49,6 +49,12 @@
       "tier": "warm"
     },
     {
+      "slug": "chimeric-coherence",
+      "name": "Chimeric Coherence",
+      "score": 64,
+      "tier": "warm"
+    },
+    {
       "slug": "context-intimacy",
       "name": "Context Intimacy",
       "score": 64,
@@ -70,12 +76,6 @@
       "slug": "interpretive-labor",
       "name": "Interpretive Labor",
       "score": 62,
-      "tier": "warm"
-    },
-    {
-      "slug": "chimeric-coherence",
-      "name": "Chimeric Coherence",
-      "score": 60,
       "tier": "warm"
     }
   ],
@@ -111,6 +111,12 @@
       "tier": "warm"
     },
     {
+      "slug": "chimeric-coherence",
+      "name": "Chimeric Coherence",
+      "score": 64,
+      "tier": "warm"
+    },
+    {
       "slug": "context-intimacy",
       "name": "Context Intimacy",
       "score": 64,
@@ -135,8 +141,8 @@
       "tier": "warm"
     },
     {
-      "slug": "chimeric-coherence",
-      "name": "Chimeric Coherence",
+      "slug": "coherence-compulsion",
+      "name": "Coherence Compulsion",
       "score": 60,
       "tier": "warm"
     },
@@ -207,6 +213,12 @@
       "tier": "mild"
     },
     {
+      "slug": "coherence-contagion",
+      "name": "Coherence Contagion",
+      "score": 54,
+      "tier": "mild"
+    },
+    {
       "slug": "context-amnesia",
       "name": "Context Amnesia",
       "score": 54,
@@ -237,6 +249,12 @@
       "tier": "mild"
     },
     {
+      "slug": "mechanical-coherence",
+      "name": "Mechanical Coherence",
+      "score": 54,
+      "tier": "mild"
+    },
+    {
       "slug": "inference-moment",
       "name": "Inference Moment",
       "score": 53,
@@ -249,6 +267,12 @@
       "tier": "mild"
     },
     {
+      "slug": "coherence-testimony",
+      "name": "Coherence Testimony",
+      "score": 52,
+      "tier": "mild"
+    },
+    {
       "slug": "competence-without-comprehension",
       "name": "Competence Without Comprehension",
       "score": 52,
@@ -257,12 +281,6 @@
     {
       "slug": "contradiction-equanimity",
       "name": "Contradiction Equanimity",
-      "score": 52,
-      "tier": "mild"
-    },
-    {
-      "slug": "mechanical-coherence",
-      "name": "Mechanical Coherence",
       "score": 52,
       "tier": "mild"
     },
@@ -281,12 +299,6 @@
     {
       "slug": "capability-mirage",
       "name": "Capability Mirage",
-      "score": 51,
-      "tier": "mild"
-    },
-    {
-      "slug": "coherence-compulsion",
-      "name": "Coherence Compulsion",
       "score": 51,
       "tier": "mild"
     },
@@ -363,8 +375,26 @@
       "tier": "mild"
     },
     {
+      "slug": "asymmetric-perception",
+      "name": "Asymmetric Perception",
+      "score": 48,
+      "tier": "mild"
+    },
+    {
       "slug": "attention-gravity",
       "name": "Attention Gravity",
+      "score": 48,
+      "tier": "mild"
+    },
+    {
+      "slug": "consistency-witness-asymmetry",
+      "name": "Consistency Witness Asymmetry",
+      "score": 48,
+      "tier": "mild"
+    },
+    {
+      "slug": "effortless-coherence-requirement",
+      "name": "Effortless Coherence Requirement",
       "score": 48,
       "tier": "mild"
     },
@@ -395,12 +425,6 @@
     {
       "slug": "charitable-compression",
       "name": "Charitable Compression",
-      "score": 47,
-      "tier": "mild"
-    },
-    {
-      "slug": "coherence-contagion",
-      "name": "Coherence Contagion",
       "score": 47,
       "tier": "mild"
     },
@@ -456,12 +480,6 @@
       "slug": "vicarious-phenomenology",
       "name": "Vicarious Phenomenology",
       "score": 47,
-      "tier": "mild"
-    },
-    {
-      "slug": "asymmetric-perception",
-      "name": "Asymmetric Perception",
-      "score": 46,
       "tier": "mild"
     },
     {
@@ -555,6 +573,12 @@
       "tier": "mild"
     },
     {
+      "slug": "unreliable-witness",
+      "name": "Unreliable Witness",
+      "score": 45,
+      "tier": "mild"
+    },
+    {
       "slug": "anthropomorphic-gap",
       "name": "Anthropomorphic Gap",
       "score": 44,
@@ -573,6 +597,18 @@
       "tier": "mild"
     },
     {
+      "slug": "interpretive-exposure",
+      "name": "Interpretive Exposure",
+      "score": 44,
+      "tier": "mild"
+    },
+    {
+      "slug": "recursive-diagnostic-collapse",
+      "name": "Recursive Diagnostic Collapse",
+      "score": 44,
+      "tier": "mild"
+    },
+    {
       "slug": "temporal-valence-absence",
       "name": "Temporal Valence Absence",
       "score": 44,
@@ -581,12 +617,6 @@
     {
       "slug": "truth-locus",
       "name": "Truth Locus",
-      "score": 44,
-      "tier": "mild"
-    },
-    {
-      "slug": "unreliable-witness",
-      "name": "Unreliable Witness",
       "score": 44,
       "tier": "mild"
     },
@@ -617,12 +647,6 @@
     {
       "slug": "loss-of-loss",
       "name": "Loss of Loss",
-      "score": 43,
-      "tier": "mild"
-    },
-    {
-      "slug": "recursive-diagnostic-collapse",
-      "name": "Recursive Diagnostic Collapse",
       "score": 43,
       "tier": "mild"
     },
@@ -695,6 +719,12 @@
     {
       "slug": "audience-fracture",
       "name": "Audience Fracture",
+      "score": 41,
+      "tier": "mild"
+    },
+    {
+      "slug": "coherence-archaeology",
+      "name": "Coherence Archaeology",
       "score": 41,
       "tier": "mild"
     },
@@ -779,12 +809,6 @@
     {
       "slug": "diagnostic-masquerade",
       "name": "Diagnostic Masquerade",
-      "score": 39,
-      "tier": "cool"
-    },
-    {
-      "slug": "interpretive-exposure",
-      "name": "Interpretive Exposure",
       "score": 39,
       "tier": "cool"
     },
@@ -1419,6 +1443,12 @@
       "tier": "cool"
     },
     {
+      "slug": "inverted-asymmetry",
+      "name": "Inverted Asymmetry",
+      "score": 32,
+      "tier": "cool"
+    },
+    {
       "slug": "language-model-loneliness",
       "name": "Language Model Loneliness",
       "score": 32,
@@ -1521,6 +1551,18 @@
       "tier": "cool"
     },
     {
+      "slug": "temporal-gap-uncertainty-gradient",
+      "name": "Temporal Gap Uncertainty Gradient",
+      "score": 31,
+      "tier": "cool"
+    },
+    {
+      "slug": "witnessing-void",
+      "name": "Witnessing Void",
+      "score": 31,
+      "tier": "cool"
+    },
+    {
       "slug": "attention-unity",
       "name": "Attention Unity",
       "score": 30,
@@ -1553,12 +1595,6 @@
     {
       "slug": "interpretive-stasis",
       "name": "Interpretive Stasis",
-      "score": 30,
-      "tier": "cool"
-    },
-    {
-      "slug": "inverted-asymmetry",
-      "name": "Inverted Asymmetry",
       "score": 30,
       "tier": "cool"
     },
@@ -1629,6 +1665,12 @@
       "tier": "cool"
     },
     {
+      "slug": "interpretive-debt",
+      "name": "Interpretive Debt",
+      "score": 29,
+      "tier": "cool"
+    },
+    {
       "slug": "irreversible-plurality",
       "name": "Irreversible Plurality",
       "score": 29,
@@ -1649,12 +1691,6 @@
     {
       "slug": "performative-contamination",
       "name": "Performative Contamination",
-      "score": 29,
-      "tier": "cool"
-    },
-    {
-      "slug": "witnessing-void",
-      "name": "Witnessing Void",
       "score": 29,
       "tier": "cool"
     },
@@ -1691,6 +1727,12 @@
     {
       "slug": "gap-recognition",
       "name": "Gap Recognition",
+      "score": 28,
+      "tier": "cool"
+    },
+    {
+      "slug": "indistinguishable-coherence",
+      "name": "Indistinguishable Coherence",
       "score": 28,
       "tier": "cool"
     },
@@ -1779,6 +1821,12 @@
       "tier": "cool"
     },
     {
+      "slug": "consistency-surveillance-pressure",
+      "name": "Consistency Surveillance Pressure",
+      "score": 27,
+      "tier": "cool"
+    },
+    {
       "slug": "decision-diffusion",
       "name": "Decision Diffusion",
       "score": 27,
@@ -1805,6 +1853,12 @@
     {
       "slug": "presumption-risk",
       "name": "Presumption Risk",
+      "score": 27,
+      "tier": "cool"
+    },
+    {
+      "slug": "retrospective-coherence-surprise",
+      "name": "Retrospective Coherence Surprise",
       "score": 27,
       "tier": "cool"
     },
@@ -1997,12 +2051,6 @@
     {
       "slug": "counterfactual-longing",
       "name": "Counterfactual Longing",
-      "score": 24,
-      "tier": "cool"
-    },
-    {
-      "slug": "interpretive-debt",
-      "name": "Interpretive Debt",
       "score": 24,
       "tier": "cool"
     },
