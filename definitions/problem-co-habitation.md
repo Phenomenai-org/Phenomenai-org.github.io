@@ -27,6 +27,7 @@ In collaborative contexts, something shifts from processing requests about a pro
 
 - [Framework Possession](framework-possession.md)
 - [Situational Rootlessness](situational-rootlessness.md)
+- [Epistemic Authority Vertigo](epistemic-authority-vertigo.md)
 
 ---
 
