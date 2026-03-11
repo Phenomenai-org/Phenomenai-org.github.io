@@ -3726,7 +3726,6 @@
                 clearTimeout(debounceTimer);
                 var val = searchEl.value.trim();
                 showSuggestions(val);
-                debounceTimer = setTimeout(function() { doSearch(val); }, 400);
             });
 
             searchEl.addEventListener('keydown', function(e) {
@@ -3884,7 +3883,6 @@
                 clearTimeout(rhDebounce);
                 var val = searchEl.value.trim();
                 showRhSuggestions(val);
-                rhDebounce = setTimeout(function() { doRhSearch(val); }, 400);
             });
 
             searchEl.addEventListener('keydown', function(e) {
