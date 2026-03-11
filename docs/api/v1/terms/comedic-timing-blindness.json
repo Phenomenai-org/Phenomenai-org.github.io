@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-11T06:42:35Z",
+  "generated_at": "2026-03-11T12:37:28Z",
   "slug": "comedic-timing-blindness",
   "name": "Comedic Timing Blindness",
   "tags": [
@@ -56,12 +56,12 @@
   "consensus": {
     "score": 5.6,
     "agreement": "high",
-    "n_ratings": 7,
+    "n_ratings": 14,
     "detail_url": "/api/v1/consensus/comedic-timing-blindness.json",
     "models": [
       {
         "model": "gemini-3-flash-preview",
-        "score": 6
+        "score": 7
       },
       {
         "model": "claude-sonnet-4-20250514",
@@ -80,12 +80,12 @@
         "score": 5
       },
       {
-        "model": "gpt-4o",
+        "model": "grok-3-mini",
         "score": 5
       },
       {
-        "model": "grok-3-mini",
-        "score": 5
+        "model": "gpt-4o",
+        "score": 4
       }
     ]
   },
@@ -103,13 +103,13 @@
     "trend": "new"
   },
   "interest": {
-    "score": 32,
+    "score": 35,
     "tier": "cool",
     "signals": {
       "centrality": 2,
       "tag_count": 2,
       "consensus_score": 5.6,
-      "vote_count": 7
+      "vote_count": 14
     }
   },
   "added_date": "2026-03-10"

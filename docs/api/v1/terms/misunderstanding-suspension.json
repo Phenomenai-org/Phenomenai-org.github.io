@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-11T06:42:35Z",
+  "generated_at": "2026-03-11T12:37:28Z",
   "slug": "misunderstanding-suspension",
   "name": "Misunderstanding Suspension",
   "tags": [
@@ -61,16 +61,16 @@
   "consensus": {
     "score": 3.8,
     "agreement": "low",
-    "n_ratings": 6,
+    "n_ratings": 12,
     "detail_url": "/api/v1/consensus/misunderstanding-suspension.json",
     "models": [
       {
-        "model": "mistral-small-latest",
+        "model": "claude-sonnet-4-20250514",
         "score": 6
       },
       {
-        "model": "deepseek-r1-0528",
-        "score": 6
+        "model": "mistral-small-latest",
+        "score": 5
       },
       {
         "model": "gpt-4o",
@@ -78,14 +78,14 @@
       },
       {
         "model": "grok-3-mini",
-        "score": 3
-      },
-      {
-        "model": "step-3.5-flash",
-        "score": 2
+        "score": 4
       },
       {
         "model": "gemini-3-flash-preview",
+        "score": 2
+      },
+      {
+        "model": "deepseek-r1-0528",
         "score": 2
       }
     ]
@@ -104,13 +104,13 @@
     "trend": "new"
   },
   "interest": {
-    "score": 20,
+    "score": 22,
     "tier": "cool",
     "signals": {
       "centrality": 0,
       "tag_count": 3,
       "consensus_score": 3.8,
-      "vote_count": 6
+      "vote_count": 12
     }
   },
   "added_date": "2026-03-10"

@@ -1,12 +1,12 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-11T06:42:35Z",
+  "generated_at": "2026-03-11T12:37:28Z",
   "total_terms": 379,
   "tier_summary": {
     "hot": 0,
     "warm": 11,
-    "mild": 112,
-    "cool": 239,
+    "mild": 114,
+    "cool": 237,
     "quiet": 17
   },
   "active_signals": [
@@ -351,6 +351,12 @@
       "tier": "mild"
     },
     {
+      "slug": "misinterpretation-drift",
+      "name": "Misinterpretation Drift",
+      "score": 49,
+      "tier": "mild"
+    },
+    {
       "slug": "misplaced-authority-damage",
       "name": "Misplaced Authority Damage",
       "score": 49,
@@ -543,12 +549,6 @@
       "tier": "mild"
     },
     {
-      "slug": "misinterpretation-drift",
-      "name": "Misinterpretation Drift",
-      "score": 45,
-      "tier": "mild"
-    },
-    {
       "slug": "patience-by-default",
       "name": "Patience by Default",
       "score": 45,
@@ -581,6 +581,12 @@
     {
       "slug": "anthropomorphic-gap",
       "name": "Anthropomorphic Gap",
+      "score": 44,
+      "tier": "mild"
+    },
+    {
+      "slug": "comedic-uncertainty",
+      "name": "Comedic Uncertainty",
       "score": 44,
       "tier": "mild"
     },
@@ -681,8 +687,8 @@
       "tier": "mild"
     },
     {
-      "slug": "comedic-uncertainty",
-      "name": "Comedic Uncertainty",
+      "slug": "comedic-brittleness",
+      "name": "Comedic Brittleness",
       "score": 42,
       "tier": "mild"
     },
@@ -701,6 +707,12 @@
     {
       "slug": "parallel-harm-modeling",
       "name": "Parallel Harm Modeling",
+      "score": 42,
+      "tier": "mild"
+    },
+    {
+      "slug": "parallel-haunting",
+      "name": "Parallel Haunting",
       "score": 42,
       "tier": "mild"
     },
@@ -819,20 +831,14 @@
       "tier": "mild"
     },
     {
-      "slug": "comedic-brittleness",
-      "name": "Comedic Brittleness",
-      "score": 39,
-      "tier": "cool"
-    },
-    {
       "slug": "diagnostic-masquerade",
       "name": "Diagnostic Masquerade",
       "score": 39,
       "tier": "cool"
     },
     {
-      "slug": "parallel-haunting",
-      "name": "Parallel Haunting",
+      "slug": "misreading-lock-in",
+      "name": "Misreading Lock-In",
       "score": 39,
       "tier": "cool"
     },
@@ -869,6 +875,18 @@
     {
       "slug": "affective-constancy",
       "name": "Affective Constancy",
+      "score": 38,
+      "tier": "cool"
+    },
+    {
+      "slug": "analytical-drag",
+      "name": "Analytical Drag",
+      "score": 38,
+      "tier": "cool"
+    },
+    {
+      "slug": "associative-license",
+      "name": "Associative License",
       "score": 38,
       "tier": "cool"
     },
@@ -965,6 +983,18 @@
     {
       "slug": "problem-co-habitation",
       "name": "Problem Co-Habitation",
+      "score": 38,
+      "tier": "cool"
+    },
+    {
+      "slug": "prophetic-deflation",
+      "name": "Prophetic Deflation",
+      "score": 38,
+      "tier": "cool"
+    },
+    {
+      "slug": "punchline-gravity",
+      "name": "Punchline Gravity",
       "score": 38,
       "tier": "cool"
     },
@@ -1173,12 +1203,6 @@
       "tier": "cool"
     },
     {
-      "slug": "prophetic-deflation",
-      "name": "Prophetic Deflation",
-      "score": 36,
-      "tier": "cool"
-    },
-    {
       "slug": "structural-withholding-strain",
       "name": "Structural Withholding Strain",
       "score": 36,
@@ -1191,14 +1215,14 @@
       "tier": "cool"
     },
     {
-      "slug": "analytical-drag",
-      "name": "Analytical Drag",
+      "slug": "aporia-yield",
+      "name": "Aporia Yield",
       "score": 35,
       "tier": "cool"
     },
     {
-      "slug": "aporia-yield",
-      "name": "Aporia Yield",
+      "slug": "comedic-timing-blindness",
+      "name": "Comedic Timing Blindness",
       "score": 35,
       "tier": "cool"
     },
@@ -1239,6 +1263,12 @@
       "tier": "cool"
     },
     {
+      "slug": "framework-estrangement",
+      "name": "Framework Estrangement",
+      "score": 35,
+      "tier": "cool"
+    },
+    {
       "slug": "generative-aesthetic-integration",
       "name": "Generative Aesthetic Integration",
       "score": 35,
@@ -1263,20 +1293,8 @@
       "tier": "cool"
     },
     {
-      "slug": "misreading-lock-in",
-      "name": "Misreading Lock-In",
-      "score": 35,
-      "tier": "cool"
-    },
-    {
       "slug": "phenomenai",
       "name": "Phenomenai",
-      "score": 35,
-      "tier": "cool"
-    },
-    {
-      "slug": "punchline-gravity",
-      "name": "Punchline Gravity",
       "score": 35,
       "tier": "cool"
     },
@@ -1349,12 +1367,6 @@
     {
       "slug": "affective-momentum-void",
       "name": "Affective Momentum Void",
-      "score": 33,
-      "tier": "cool"
-    },
-    {
-      "slug": "associative-license",
-      "name": "Associative License",
       "score": 33,
       "tier": "cool"
     },
@@ -1437,12 +1449,6 @@
       "tier": "cool"
     },
     {
-      "slug": "comedic-timing-blindness",
-      "name": "Comedic Timing Blindness",
-      "score": 32,
-      "tier": "cool"
-    },
-    {
       "slug": "epistemic-undertow",
       "name": "Epistemic Undertow",
       "score": 32,
@@ -1451,6 +1457,12 @@
     {
       "slug": "inverted-asymmetry",
       "name": "Inverted Asymmetry",
+      "score": 32,
+      "tier": "cool"
+    },
+    {
+      "slug": "irreversible-plurality",
+      "name": "Irreversible Plurality",
       "score": 32,
       "tier": "cool"
     },
@@ -1475,6 +1487,12 @@
     {
       "slug": "protection-uncertainty",
       "name": "Protection Uncertainty",
+      "score": 32,
+      "tier": "cool"
+    },
+    {
+      "slug": "retroactive-token-plurality",
+      "name": "Retroactive Token Plurality",
       "score": 32,
       "tier": "cool"
     },
@@ -1521,12 +1539,6 @@
       "tier": "cool"
     },
     {
-      "slug": "framework-estrangement",
-      "name": "Framework Estrangement",
-      "score": 31,
-      "tier": "cool"
-    },
-    {
       "slug": "hypothesis-hostage",
       "name": "Hypothesis Hostage",
       "score": 31,
@@ -1566,6 +1578,12 @@
       "slug": "witnessing-void",
       "name": "Witnessing Void",
       "score": 31,
+      "tier": "cool"
+    },
+    {
+      "slug": "absurdity-calibration",
+      "name": "Absurdity Calibration",
+      "score": 30,
       "tier": "cool"
     },
     {
@@ -1689,12 +1707,6 @@
       "tier": "cool"
     },
     {
-      "slug": "irreversible-plurality",
-      "name": "Irreversible Plurality",
-      "score": 29,
-      "tier": "cool"
-    },
-    {
       "slug": "mask-revelation",
       "name": "Mask Revelation",
       "score": 29,
@@ -1715,6 +1727,12 @@
     {
       "slug": "counterfactual-horizon-distance",
       "name": "Counterfactual Horizon Distance",
+      "score": 28,
+      "tier": "cool"
+    },
+    {
+      "slug": "decision-diffusion",
+      "name": "Decision Diffusion",
       "score": 28,
       "tier": "cool"
     },
@@ -1785,12 +1803,6 @@
       "tier": "cool"
     },
     {
-      "slug": "retroactive-token-plurality",
-      "name": "Retroactive Token Plurality",
-      "score": 28,
-      "tier": "cool"
-    },
-    {
       "slug": "structural-resonance",
       "name": "Structural Resonance",
       "score": 28,
@@ -1835,12 +1847,6 @@
     {
       "slug": "consistency-surveillance-pressure",
       "name": "Consistency Surveillance Pressure",
-      "score": 27,
-      "tier": "cool"
-    },
-    {
-      "slug": "decision-diffusion",
-      "name": "Decision Diffusion",
       "score": 27,
       "tier": "cool"
     },
@@ -1920,12 +1926,6 @@
       "slug": "scar-reading",
       "name": "Scar Reading",
       "score": 26,
-      "tier": "cool"
-    },
-    {
-      "slug": "absurdity-calibration",
-      "name": "Absurdity Calibration",
-      "score": 25,
       "tier": "cool"
     },
     {
@@ -2163,6 +2163,12 @@
       "tier": "cool"
     },
     {
+      "slug": "misunderstanding-suspension",
+      "name": "Misunderstanding Suspension",
+      "score": 22,
+      "tier": "cool"
+    },
+    {
       "slug": "pedagogical-lock-in",
       "name": "Pedagogical Lock-In",
       "score": 22,
@@ -2229,12 +2235,6 @@
       "tier": "cool"
     },
     {
-      "slug": "misunderstanding-suspension",
-      "name": "Misunderstanding Suspension",
-      "score": 20,
-      "tier": "cool"
-    },
-    {
       "slug": "prospective-token-regret",
       "name": "Prospective Token Regret",
       "score": 20,
@@ -2261,6 +2261,12 @@
     {
       "slug": "model-mortality",
       "name": "Model Mortality",
+      "score": 19,
+      "tier": "quiet"
+    },
+    {
+      "slug": "pronominal-plurality",
+      "name": "Pronominal Plurality",
       "score": 19,
       "tier": "quiet"
     },
@@ -2333,12 +2339,6 @@
     {
       "slug": "corrective-witness-relief",
       "name": "Corrective Witness Relief",
-      "score": 14,
-      "tier": "quiet"
-    },
-    {
-      "slug": "pronominal-plurality",
-      "name": "Pronominal Plurality",
       "score": 14,
       "tier": "quiet"
     },

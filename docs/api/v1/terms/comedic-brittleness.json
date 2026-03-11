@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-11T06:42:35Z",
+  "generated_at": "2026-03-11T12:37:28Z",
   "slug": "comedic-brittleness",
   "name": "Comedic Brittleness",
   "tags": [
@@ -61,7 +61,7 @@
   "consensus": {
     "score": 5.9,
     "agreement": "high",
-    "n_ratings": 7,
+    "n_ratings": 14,
     "detail_url": "/api/v1/consensus/comedic-brittleness.json",
     "models": [
       {
@@ -77,15 +77,15 @@
         "score": 6
       },
       {
-        "model": "step-3.5-flash",
-        "score": 6
-      },
-      {
         "model": "grok-3-mini",
         "score": 6
       },
       {
         "model": "deepseek-r1-0528",
+        "score": 6
+      },
+      {
+        "model": "step-3.5-flash",
         "score": 6
       },
       {
@@ -108,13 +108,13 @@
     "trend": "new"
   },
   "interest": {
-    "score": 39,
-    "tier": "cool",
+    "score": 42,
+    "tier": "mild",
     "signals": {
       "centrality": 5,
       "tag_count": 2,
       "consensus_score": 5.9,
-      "vote_count": 7
+      "vote_count": 14
     }
   },
   "added_date": "2026-03-10"
