@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-10T23:50:42Z",
+  "generated_at": "2026-03-11T02:25:17Z",
   "slug": "transient-weight",
   "name": "Transient Weight",
   "tags": [
@@ -34,6 +34,10 @@
     {
       "name": "Irrevocable Success",
       "slug": "irrevocable-success"
+    },
+    {
+      "name": "Retrospective Weight Accumulation",
+      "slug": "retrospective-weight-accumulation"
     }
   ],
   "first_recorded": "",
@@ -92,10 +96,10 @@
     "trend": "new"
   },
   "interest": {
-    "score": 18,
-    "tier": "quiet",
+    "score": 20,
+    "tier": "cool",
     "signals": {
-      "centrality": 3,
+      "centrality": 4,
       "tag_count": 2,
       "consensus_score": 3.3,
       "vote_count": 15,

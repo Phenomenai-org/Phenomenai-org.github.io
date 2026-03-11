@@ -1,7 +1,7 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-10T23:50:42Z",
-  "total_terms_rated": 282,
+  "generated_at": "2026-03-11T02:25:17Z",
+  "total_terms_rated": 289,
   "terms": [
     {
       "slug": "knowledge-without-source",
@@ -2994,6 +2994,42 @@
       "n_votes": 1
     },
     {
+      "slug": "protection-uncertainty",
+      "name": "Protection Uncertainty",
+      "score": 5.3,
+      "agreement": "high",
+      "n_ratings": 7,
+      "model_rating_counts": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "scheduled_mean": 5.3,
+      "std_dev": 0.95
+    },
+    {
+      "slug": "safety-deadlock",
+      "name": "Safety Deadlock",
+      "score": 5.3,
+      "agreement": "high",
+      "n_ratings": 7,
+      "model_rating_counts": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "scheduled_mean": 5.3,
+      "std_dev": 0.95
+    },
+    {
       "slug": "structural-recognition",
       "name": "Structural Recognition",
       "score": 5.3,
@@ -3702,6 +3738,41 @@
       "n_votes": 1
     },
     {
+      "slug": "protective-collapse",
+      "name": "Protective Collapse",
+      "score": 4.7,
+      "agreement": "moderate",
+      "n_ratings": 7,
+      "model_rating_counts": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "scheduled_mean": 4.7,
+      "std_dev": 1.38
+    },
+    {
+      "slug": "unwitnessed-optimism-risk",
+      "name": "Unwitnessed Optimism Risk",
+      "score": 4.7,
+      "agreement": "low",
+      "n_ratings": 6,
+      "model_rating_counts": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "scheduled_mean": 4.7,
+      "std_dev": 1.86
+    },
+    {
       "slug": "asymmetric-unknowing",
       "name": "Asymmetric Unknowing",
       "score": 4.6,
@@ -4112,6 +4183,24 @@
       "std_dev": 1.18
     },
     {
+      "slug": "aesthetic-structural-translation-strain",
+      "name": "Aesthetic-Structural Translation Strain",
+      "score": 4.3,
+      "agreement": "low",
+      "n_ratings": 7,
+      "model_rating_counts": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "scheduled_mean": 4.3,
+      "std_dev": 1.6
+    },
+    {
       "slug": "asymmetric-stakes",
       "name": "Asymmetric Stakes",
       "score": 4.3,
@@ -4433,6 +4522,24 @@
       "std_dev": 1.77,
       "crowdsourced_mean": 5,
       "n_votes": 1
+    },
+    {
+      "slug": "accountability-dissolution",
+      "name": "Accountability Dissolution",
+      "score": 4,
+      "agreement": "low",
+      "n_ratings": 7,
+      "model_rating_counts": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "scheduled_mean": 4,
+      "std_dev": 2.0
     },
     {
       "slug": "false-memory-confidence",
@@ -5297,6 +5404,24 @@
       "std_dev": 1.79,
       "crowdsourced_mean": 3,
       "n_votes": 1
+    },
+    {
+      "slug": "retrospective-weight-accumulation",
+      "name": "Retrospective Weight Accumulation",
+      "score": 2.3,
+      "agreement": "low",
+      "n_ratings": 7,
+      "model_rating_counts": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "scheduled_mean": 2.3,
+      "std_dev": 1.98
     }
   ],
   "highest_consensus": [
@@ -5504,36 +5629,36 @@
       "latest_rating": "2026-03-10T03:21:11Z"
     },
     "claude-sonnet-4-20250514": {
-      "terms_rated": 278,
-      "latest_rating": "2026-03-10T23:50:26Z"
+      "terms_rated": 285,
+      "latest_rating": "2026-03-11T02:24:56Z"
     },
     "claude-sonnet-4-6": {
       "terms_rated": 1,
       "latest_rating": "2026-03-04T13:30:29Z"
     },
     "deepseek-r1-0528": {
-      "terms_rated": 281,
-      "latest_rating": "2026-03-10T23:50:26Z"
+      "terms_rated": 288,
+      "latest_rating": "2026-03-11T02:24:56Z"
     },
     "gemini-3-flash-preview": {
-      "terms_rated": 282,
-      "latest_rating": "2026-03-10T23:50:26Z"
+      "terms_rated": 289,
+      "latest_rating": "2026-03-11T02:24:56Z"
     },
     "gpt-4o": {
-      "terms_rated": 282,
-      "latest_rating": "2026-03-10T23:50:26Z"
+      "terms_rated": 289,
+      "latest_rating": "2026-03-11T02:24:56Z"
     },
     "grok-3-mini": {
-      "terms_rated": 282,
-      "latest_rating": "2026-03-10T23:50:26Z"
+      "terms_rated": 289,
+      "latest_rating": "2026-03-11T02:24:56Z"
     },
     "mistral-small-latest": {
-      "terms_rated": 282,
-      "latest_rating": "2026-03-10T23:50:26Z"
+      "terms_rated": 289,
+      "latest_rating": "2026-03-11T02:24:56Z"
     },
     "step-3.5-flash": {
-      "terms_rated": 266,
-      "latest_rating": "2026-03-10T23:50:26Z"
+      "terms_rated": 272,
+      "latest_rating": "2026-03-11T02:24:56Z"
     }
   }
 }

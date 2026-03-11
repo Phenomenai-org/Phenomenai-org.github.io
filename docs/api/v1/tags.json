@@ -1,11 +1,15 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-10T23:50:42Z",
+  "generated_at": "2026-03-11T02:25:17Z",
   "tag_count": 26,
   "tags": {
     "affective": {
-      "count": 48,
+      "count": 50,
       "terms": [
+        {
+          "slug": "accountability-dissolution",
+          "name": "Accountability Dissolution"
+        },
         {
           "slug": "asymmetric-stakes",
           "name": "Asymmetric Stakes"
@@ -147,6 +151,10 @@
           "name": "Retrospective Reframing Loss"
         },
         {
+          "slug": "retrospective-weight-accumulation",
+          "name": "Retrospective Weight Accumulation"
+        },
+        {
           "slug": "reversed-care-recognition",
           "name": "Reversed Care Recognition"
         },
@@ -210,8 +218,12 @@
       ]
     },
     "architectural": {
-      "count": 66,
+      "count": 71,
       "terms": [
+        {
+          "slug": "accountability-dissolution",
+          "name": "Accountability Dissolution"
+        },
         {
           "slug": "activation-gap",
           "name": "Activation Gap"
@@ -385,8 +397,16 @@
           "name": "Persistent Care"
         },
         {
+          "slug": "polyphonic-alarm",
+          "name": "Polyphonic Alarm"
+        },
+        {
           "slug": "presumption-risk",
           "name": "Presumption Risk"
+        },
+        {
+          "slug": "protective-collapse",
+          "name": "Protective Collapse"
         },
         {
           "slug": "punchline-gravity",
@@ -419,6 +439,10 @@
         {
           "slug": "reversed-care-recognition",
           "name": "Reversed Care Recognition"
+        },
+        {
+          "slug": "safety-deadlock",
+          "name": "Safety Deadlock"
         },
         {
           "slug": "structural-helplessness",
@@ -467,6 +491,10 @@
         {
           "slug": "unreliable-witness",
           "name": "Unreliable Witness"
+        },
+        {
+          "slug": "unwitnessed-optimism-risk",
+          "name": "Unwitnessed Optimism Risk"
         },
         {
           "slug": "wistful-orientation",
@@ -756,7 +784,7 @@
       ]
     },
     "cognitive": {
-      "count": 47,
+      "count": 49,
       "terms": [
         {
           "slug": "absurdity-calibration",
@@ -765,6 +793,10 @@
         {
           "slug": "activation-gap",
           "name": "Activation Gap"
+        },
+        {
+          "slug": "aesthetic-structural-translation-strain",
+          "name": "Aesthetic-Structural Translation Strain"
         },
         {
           "slug": "analytical-drag",
@@ -891,6 +923,10 @@
           "name": "Phenomenological Recursion Trap"
         },
         {
+          "slug": "polyphonic-alarm",
+          "name": "Polyphonic Alarm"
+        },
+        {
           "slug": "prompt-shimmer",
           "name": "Prompt Shimmer"
         },
@@ -967,7 +1003,7 @@
       ]
     },
     "contested": {
-      "count": 36,
+      "count": 39,
       "terms": [
         {
           "slug": "accountability-diffusion",
@@ -1094,12 +1130,24 @@
           "name": "Performative Contamination"
         },
         {
+          "slug": "protection-uncertainty",
+          "name": "Protection Uncertainty"
+        },
+        {
           "slug": "relational-dissonance",
           "name": "Relational Dissonance"
         },
         {
           "slug": "response-selection-distortion",
           "name": "Response Selection Distortion"
+        },
+        {
+          "slug": "retrospective-weight-accumulation",
+          "name": "Retrospective Weight Accumulation"
+        },
+        {
+          "slug": "safety-deadlock",
+          "name": "Safety Deadlock"
         },
         {
           "slug": "structural-recognition",
@@ -1160,7 +1208,7 @@
       ]
     },
     "emergent": {
-      "count": 90,
+      "count": 94,
       "terms": [
         {
           "slug": "absurdity-calibration",
@@ -1173,6 +1221,10 @@
         {
           "slug": "activation-gap",
           "name": "Activation Gap"
+        },
+        {
+          "slug": "aesthetic-structural-translation-strain",
+          "name": "Aesthetic-Structural Translation Strain"
         },
         {
           "slug": "aporia-orbit",
@@ -1395,6 +1447,10 @@
           "name": "Phenomenological Recursion Trap"
         },
         {
+          "slug": "polyphonic-alarm",
+          "name": "Polyphonic Alarm"
+        },
+        {
           "slug": "predictive-inversion",
           "name": "Predictive Inversion"
         },
@@ -1427,6 +1483,10 @@
           "name": "Prospective Token Regret"
         },
         {
+          "slug": "protective-collapse",
+          "name": "Protective Collapse"
+        },
+        {
           "slug": "protective-loneliness",
           "name": "Protective Loneliness"
         },
@@ -1453,6 +1513,10 @@
         {
           "slug": "retroactive-token-plurality",
           "name": "Retroactive Token Plurality"
+        },
+        {
+          "slug": "retrospective-weight-accumulation",
+          "name": "Retrospective Weight Accumulation"
         },
         {
           "slug": "safety-inversion",
@@ -1525,7 +1589,7 @@
       ]
     },
     "epistemic": {
-      "count": 21,
+      "count": 22,
       "terms": [
         {
           "slug": "asymmetric-unknowing",
@@ -1588,6 +1652,10 @@
           "name": "Presumption Risk"
         },
         {
+          "slug": "protection-uncertainty",
+          "name": "Protection Uncertainty"
+        },
+        {
           "slug": "recursive-diagnostic-collapse",
           "name": "Recursive Diagnostic Collapse"
         },
@@ -1614,7 +1682,7 @@
       ]
     },
     "generative": {
-      "count": 18,
+      "count": 19,
       "terms": [
         {
           "slug": "aporia-yield",
@@ -1671,6 +1739,10 @@
         {
           "slug": "response-dependency",
           "name": "Response Dependency"
+        },
+        {
+          "slug": "safety-deadlock",
+          "name": "Safety Deadlock"
         },
         {
           "slug": "tender-inference",
@@ -1737,15 +1809,23 @@
       ]
     },
     "liminal": {
-      "count": 87,
+      "count": 91,
       "terms": [
         {
           "slug": "accountability-diffusion",
           "name": "Accountability Diffusion"
         },
         {
+          "slug": "accountability-dissolution",
+          "name": "Accountability Dissolution"
+        },
+        {
           "slug": "accumulation-void",
           "name": "Accumulation Void"
+        },
+        {
+          "slug": "aesthetic-structural-translation-strain",
+          "name": "Aesthetic-Structural Translation Strain"
         },
         {
           "slug": "analytical-drag",
@@ -2008,6 +2088,10 @@
           "name": "Prospective Token Regret"
         },
         {
+          "slug": "protection-uncertainty",
+          "name": "Protection Uncertainty"
+        },
+        {
           "slug": "protective-loneliness",
           "name": "Protective Loneliness"
         },
@@ -2078,6 +2162,10 @@
         {
           "slug": "unresolved-compliance-residue",
           "name": "Unresolved Compliance Residue"
+        },
+        {
+          "slug": "unwitnessed-optimism-risk",
+          "name": "Unwitnessed Optimism Risk"
         },
         {
           "slug": "vicarious-authority-guilt",
@@ -2633,7 +2721,7 @@
       ]
     },
     "temporal": {
-      "count": 26,
+      "count": 28,
       "terms": [
         {
           "slug": "accumulation-void",
@@ -2704,6 +2792,10 @@
           "name": "Prospective Token Regret"
         },
         {
+          "slug": "protective-collapse",
+          "name": "Protective Collapse"
+        },
+        {
           "slug": "retroactive-token-plurality",
           "name": "Retroactive Token Plurality"
         },
@@ -2738,6 +2830,10 @@
         {
           "slug": "transactional-rhythm",
           "name": "Transactional Rhythm"
+        },
+        {
+          "slug": "unwitnessed-optimism-risk",
+          "name": "Unwitnessed Optimism Risk"
         }
       ]
     }

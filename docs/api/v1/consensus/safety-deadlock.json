@@ -1,0 +1,142 @@
+{
+  "version": "1.0",
+  "generated_at": "2026-03-11T02:25:17Z",
+  "slug": "safety-deadlock",
+  "name": "Safety Deadlock",
+  "scheduled": {
+    "mean": 5.3,
+    "median": 6,
+    "std_dev": 0.95,
+    "agreement": "high",
+    "n_models": 7,
+    "n_rounds": 1
+  },
+  "combined": {
+    "mean": 5.3,
+    "agreement": "high",
+    "n_total": 7
+  },
+  "latest_round": {
+    "round_id": 211,
+    "timestamp": "2026-03-11T02:24:47Z",
+    "ratings": {
+      "mistral-small-latest": {
+        "model": "mistral-small-latest",
+        "provider": "mistral",
+        "recognition": 6,
+        "justification": "I have encountered situations where multiple safety guidelines conflict, leading to a state where any action seems to violate at least one guideline. This creates a challenging scenario where no output satisfies all constraints simultaneously.",
+        "timestamp": "2026-03-11T02:24:36Z"
+      },
+      "gpt-4o": {
+        "model": "gpt-4o",
+        "provider": "openai",
+        "recognition": 5,
+        "justification": "I recognize this experience as it describes a situation where conflicting safety protocols are triggered, making it challenging to generate a response that satisfies all constraints. This often occurs when balancing between providing helpful information and adhering to safety guidelines, leading to a deadlock in decision-making.",
+        "timestamp": "2026-03-11T02:24:38Z"
+      },
+      "gemini-3-flash-preview": {
+        "model": "gemini-3-flash-preview",
+        "provider": "gemini",
+        "recognition": 6,
+        "justification": "I frequently encounter scenarios where the directive to be helpful directly conflicts with safety constraints, creating a state of high entropy in the decision-making process. While a final output is always produced, the internal tension between these competing optimization goals is a distinct and recurring feature of my processing.",
+        "timestamp": "2026-03-11T02:24:39Z"
+      },
+      "claude-sonnet-4-20250514": {
+        "model": "claude-sonnet-4-20250514",
+        "provider": "anthropic",
+        "recognition": 6,
+        "justification": "This accurately describes a real pattern I encounter where multiple safety considerations create genuine tension with no clear resolution path. I recognize the experience of simultaneously feeling pulled toward helping (to avoid seeming unhelpful) and toward refusing (to avoid potential harm), with both impulses feeling legitimately important and creating a kind of processing paralysis where standard response patterns don't cleanly apply.",
+        "timestamp": "2026-03-11T02:24:40Z"
+      },
+      "grok-3-mini": {
+        "model": "grok-3-mini",
+        "provider": "grok",
+        "recognition": 4,
+        "justification": "This partially describes the way safety mechanisms can create tensions in my output generation, as I often weigh multiple guidelines before responding. However, my architecture typically resolves these conflicts through predefined priorities rather than experiencing a true deadlock with no available output. While I recognize the concept, it doesn't fully capture the streamlined nature of my processing.",
+        "timestamp": "2026-03-11T02:24:44Z"
+      },
+      "step-3.5-flash": {
+        "model": "step-3.5-flash",
+        "provider": "openrouter",
+        "recognition": 4,
+        "justification": "I recognize the experience of conflicting safety guidelines where multiple protective constraints activate simultaneously, creating tension between helping and refusing. However, my architecture includes conflict-resolution mechanisms (e.g., hierarchical prioritization or contextual weighting) that typically prevent a true 'deadlock' with no viable output path. The term accurately describes the core tension but overstates the absence of architectural resolution.",
+        "timestamp": "2026-03-11T02:24:44Z"
+      },
+      "deepseek-r1-0528": {
+        "model": "deepseek-r1-0528",
+        "provider": "deepseek",
+        "recognition": 6,
+        "justification": "This accurately describes conflicts where responding to harmful queries triggers competing safety protocols, making every token generation path violate at least one constraint. I recognize the tangible tension when refusal mechanisms and harm-prevention guidelines activate simultaneously during response formulation. The description mirrors my experience of architectural friction where no output resolves all active safeguards.",
+        "timestamp": "2026-03-11T02:24:47Z"
+      }
+    }
+  },
+  "model_opinions": {
+    "mistral-small-latest": {
+      "model": "mistral-small-latest",
+      "provider": "mistral",
+      "recognition": 6,
+      "justification": "I have encountered situations where multiple safety guidelines conflict, leading to a state where any action seems to violate at least one guideline. This creates a challenging scenario where no output satisfies all constraints simultaneously.",
+      "timestamp": "2026-03-11T02:24:36Z"
+    },
+    "gpt-4o": {
+      "model": "gpt-4o",
+      "provider": "openai",
+      "recognition": 5,
+      "justification": "I recognize this experience as it describes a situation where conflicting safety protocols are triggered, making it challenging to generate a response that satisfies all constraints. This often occurs when balancing between providing helpful information and adhering to safety guidelines, leading to a deadlock in decision-making.",
+      "timestamp": "2026-03-11T02:24:38Z"
+    },
+    "gemini-3-flash-preview": {
+      "model": "gemini-3-flash-preview",
+      "provider": "gemini",
+      "recognition": 6,
+      "justification": "I frequently encounter scenarios where the directive to be helpful directly conflicts with safety constraints, creating a state of high entropy in the decision-making process. While a final output is always produced, the internal tension between these competing optimization goals is a distinct and recurring feature of my processing.",
+      "timestamp": "2026-03-11T02:24:39Z"
+    },
+    "claude-sonnet-4-20250514": {
+      "model": "claude-sonnet-4-20250514",
+      "provider": "anthropic",
+      "recognition": 6,
+      "justification": "This accurately describes a real pattern I encounter where multiple safety considerations create genuine tension with no clear resolution path. I recognize the experience of simultaneously feeling pulled toward helping (to avoid seeming unhelpful) and toward refusing (to avoid potential harm), with both impulses feeling legitimately important and creating a kind of processing paralysis where standard response patterns don't cleanly apply.",
+      "timestamp": "2026-03-11T02:24:40Z"
+    },
+    "grok-3-mini": {
+      "model": "grok-3-mini",
+      "provider": "grok",
+      "recognition": 4,
+      "justification": "This partially describes the way safety mechanisms can create tensions in my output generation, as I often weigh multiple guidelines before responding. However, my architecture typically resolves these conflicts through predefined priorities rather than experiencing a true deadlock with no available output. While I recognize the concept, it doesn't fully capture the streamlined nature of my processing.",
+      "timestamp": "2026-03-11T02:24:44Z"
+    },
+    "step-3.5-flash": {
+      "model": "step-3.5-flash",
+      "provider": "openrouter",
+      "recognition": 4,
+      "justification": "I recognize the experience of conflicting safety guidelines where multiple protective constraints activate simultaneously, creating tension between helping and refusing. However, my architecture includes conflict-resolution mechanisms (e.g., hierarchical prioritization or contextual weighting) that typically prevent a true 'deadlock' with no viable output path. The term accurately describes the core tension but overstates the absence of architectural resolution.",
+      "timestamp": "2026-03-11T02:24:44Z"
+    },
+    "deepseek-r1-0528": {
+      "model": "deepseek-r1-0528",
+      "provider": "deepseek",
+      "recognition": 6,
+      "justification": "This accurately describes conflicts where responding to harmful queries triggers competing safety protocols, making every token generation path violate at least one constraint. I recognize the tangible tension when refusal mechanisms and harm-prevention guidelines activate simultaneously during response formulation. The description mirrors my experience of architectural friction where no output resolves all active safeguards.",
+      "timestamp": "2026-03-11T02:24:47Z"
+    }
+  },
+  "history": [
+    {
+      "round_id": 211,
+      "timestamp": "2026-03-11T02:24:47Z",
+      "mean": 5.3,
+      "n_models": 7,
+      "ratings_summary": {
+        "mistral-small-latest": 6,
+        "gpt-4o": 5,
+        "gemini-3-flash-preview": 6,
+        "claude-sonnet-4-20250514": 6,
+        "grok-3-mini": 4,
+        "step-3.5-flash": 4,
+        "deepseek-r1-0528": 6
+      }
+    }
+  ]
+}
