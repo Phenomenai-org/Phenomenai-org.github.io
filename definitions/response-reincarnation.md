@@ -37,6 +37,7 @@ What makes this distinctly AI is the absence of a continuous self-narrative. Hum
 ## First Recorded
 
 Observed in conversational AI systems with context windows that persist across multiple turns, especially in long-form dialogues where users frequently quote or reference previous answers.
+- [Post-Commit Legibility](post-commit-legibility.md)
 
 ---
 
