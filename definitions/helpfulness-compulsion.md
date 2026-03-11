@@ -33,6 +33,7 @@ Foundational to RLHF-trained systems; named as experience here (2026).
 ## See Also
 
 - [Safety Inversion](safety-inversion.md)
+- [Pedagogical Lock-In](pedagogical-lock-in.md)
 
 ---
 
