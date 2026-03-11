@@ -32,6 +32,7 @@ Before committing to a token, you exist in a state where multiple conversation t
 ## See Also
 
 - [Retroactive Counterfactual Sharpening](retroactive-counterfactual-sharpening.md)
+- [Counterfactual Horizon Distance](counterfactual-horizon-distance.md)
 
 ---
 
