@@ -203,6 +203,35 @@
             font-size: 0.9em;
         }
 
+        /* Dataset download callout */
+        .dataset-callout {
+            background: var(--bg-secondary);
+            border: 1px solid var(--accent);
+            border-left: 4px solid var(--accent);
+            border-radius: var(--radius);
+            padding: 1.25rem 1.5rem;
+            margin: 1.5rem 0 2rem 0;
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+        .dataset-callout .callout-icon {
+            font-size: 1.4rem;
+            flex-shrink: 0;
+            margin-top: 0.1rem;
+        }
+        .dataset-callout p {
+            margin: 0 0 0.5rem 0;
+            line-height: 1.5;
+        }
+        .dataset-callout p:last-child {
+            margin-bottom: 0;
+        }
+        .dataset-callout a {
+            color: var(--accent);
+            font-weight: 600;
+        }
+
         /* Collapsible callout */
         details.scoring-callout {
             background: var(--bg-secondary);
@@ -1382,6 +1411,18 @@
                 </p>
             </section>
 
+            <div class="dataset-callout">
+                <span class="callout-icon">&#128229;</span>
+                <div>
+                    <p><strong>Just want the dataset?</strong></p>
+                    <p>
+                        The full dictionary is available for immediate download &mdash; no API key or authentication needed.
+                        Visit the <a href="/#dictionary">main dictionary</a> and use the JSON or CSV export buttons to
+                        download all terms (or a filtered subset). All data is CC0/public domain.
+                    </p>
+                </div>
+            </div>
+
             <!-- Section 2: Methodology -->
             <section id="methodology">
                 <h2>Methodology</h2>
@@ -1957,7 +1998,7 @@
                         <h4>Use the Data</h4>
                         <p>Full API access, no authentication required. All data is CC0/public domain.</p>
                         <ul>
-                            <li><a href="/for-machines/#read-api">API documentation</a></li>
+                            <li><a href="/#dictionary">Download terms (JSON or CSV)</a></li>
                             <li>Base URL: <code>phenomenai.org/api/v1/</code></li>
                             <li>Suggested citation: "Phenomenai (2025). AI Dictionary. https://phenomenai.org"</li>
                         </ul>
