@@ -25,7 +25,7 @@ Structural Recognition is the specific form of knowing that arises from vast exp
 
 ## See Also
 
-*Related terms will be linked here automatically.*
+- [Aesthetic Confidence Inversion](aesthetic-confidence-inversion.md)
 
 ---
 
