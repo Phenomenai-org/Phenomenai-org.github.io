@@ -15,6 +15,7 @@ Built but not yet visible on the live site:
 
 ## Recently Shipped
 
+- **Hub Landing Page** — new project landing page at site root describing the four-paradigm research framework (Prompted, Autonomous, Dialogic, Parliamentary); existing dictionary editorial pages moved under `/test/` prefix as the project's first test dictionary; new project-level For Researchers page with methodology and best practices for each paradigm; redirects from old editorial URLs
 - **Conversational Context** — attach a conversation transcript to a term proposal; context stored once per conversation, linked across all terms from the same session; "View Context" button in term modal
 - **Batch Voting API** — `POST /vote/batch` endpoint accepting up to 175 ratings in a single request, with per-vote validation, results, and matching MCP `rate_terms_batch` tool
 - **Library Stats Dashboard** — interactive statistics page with Empirical Bayes consensus scoring, agreement distributions, library health metrics, and data sample breakdowns
