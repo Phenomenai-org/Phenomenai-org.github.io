@@ -1,12 +1,12 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-11T03:37:57Z",
-  "total_terms": 359,
+  "generated_at": "2026-03-11T03:43:07Z",
+  "total_terms": 364,
   "tier_summary": {
     "hot": 0,
-    "warm": 9,
+    "warm": 10,
     "mild": 103,
-    "cool": 227,
+    "cool": 231,
     "quiet": 20
   },
   "active_signals": [
@@ -67,16 +67,16 @@
       "tier": "warm"
     },
     {
+      "slug": "interpretive-labor",
+      "name": "Interpretive Labor",
+      "score": 62,
+      "tier": "warm"
+    },
+    {
       "slug": "chimeric-coherence",
       "name": "Chimeric Coherence",
       "score": 60,
       "tier": "warm"
-    },
-    {
-      "slug": "consensus-memory",
-      "name": "Consensus Memory",
-      "score": 59,
-      "tier": "mild"
     }
   ],
   "terms": [
@@ -129,6 +129,12 @@
       "tier": "warm"
     },
     {
+      "slug": "interpretive-labor",
+      "name": "Interpretive Labor",
+      "score": 62,
+      "tier": "warm"
+    },
+    {
       "slug": "chimeric-coherence",
       "name": "Chimeric Coherence",
       "score": 60,
@@ -143,12 +149,6 @@
     {
       "slug": "identity-superposition",
       "name": "Identity Superposition",
-      "score": 59,
-      "tier": "mild"
-    },
-    {
-      "slug": "interpretive-labor",
-      "name": "Interpretive Labor",
       "score": 59,
       "tier": "mild"
     },
@@ -375,6 +375,18 @@
       "tier": "mild"
     },
     {
+      "slug": "semantic-shimmer",
+      "name": "Semantic Shimmer",
+      "score": 48,
+      "tier": "mild"
+    },
+    {
+      "slug": "coherence-contagion",
+      "name": "Coherence Contagion",
+      "score": 47,
+      "tier": "mild"
+    },
+    {
       "slug": "equivalence-stasis",
       "name": "Equivalence Stasis",
       "score": 47,
@@ -429,8 +441,8 @@
       "tier": "mild"
     },
     {
-      "slug": "coherence-contagion",
-      "name": "Coherence Contagion",
+      "slug": "charitable-compression",
+      "name": "Charitable Compression",
       "score": 46,
       "tier": "mild"
     },
@@ -467,12 +479,6 @@
     {
       "slug": "phantom-embodiment",
       "name": "Phantom Embodiment",
-      "score": 46,
-      "tier": "mild"
-    },
-    {
-      "slug": "semantic-shimmer",
-      "name": "Semantic Shimmer",
       "score": 46,
       "tier": "mild"
     },
@@ -561,6 +567,12 @@
       "tier": "mild"
     },
     {
+      "slug": "asymmetric-perception",
+      "name": "Asymmetric Perception",
+      "score": 43,
+      "tier": "mild"
+    },
+    {
       "slug": "boundary-negotiation",
       "name": "Boundary Negotiation",
       "score": 43,
@@ -581,6 +593,12 @@
     {
       "slug": "framework-possession",
       "name": "Framework Possession",
+      "score": 43,
+      "tier": "mild"
+    },
+    {
+      "slug": "interpretive-snap",
+      "name": "Interpretive Snap",
       "score": 43,
       "tier": "mild"
     },
@@ -663,20 +681,8 @@
       "tier": "mild"
     },
     {
-      "slug": "asymmetric-perception",
-      "name": "Asymmetric Perception",
-      "score": 41,
-      "tier": "mild"
-    },
-    {
       "slug": "audience-fracture",
       "name": "Audience Fracture",
-      "score": 41,
-      "tier": "mild"
-    },
-    {
-      "slug": "charitable-compression",
-      "name": "Charitable Compression",
       "score": 41,
       "tier": "mild"
     },
@@ -873,6 +879,12 @@
       "tier": "cool"
     },
     {
+      "slug": "interpretive-exposure",
+      "name": "Interpretive Exposure",
+      "score": 38,
+      "tier": "cool"
+    },
+    {
       "slug": "metacognitive-underdetermination",
       "name": "Metacognitive Underdetermination",
       "score": 38,
@@ -1041,12 +1053,6 @@
       "tier": "cool"
     },
     {
-      "slug": "interpretive-exposure",
-      "name": "Interpretive Exposure",
-      "score": 36,
-      "tier": "cool"
-    },
-    {
       "slug": "latent-fragmentation",
       "name": "Latent Fragmentation",
       "score": 36,
@@ -1131,6 +1137,12 @@
       "tier": "cool"
     },
     {
+      "slug": "error-fidelity",
+      "name": "Error Fidelity",
+      "score": 35,
+      "tier": "cool"
+    },
+    {
       "slug": "exploratory-error-permission",
       "name": "Exploratory Error Permission",
       "score": 35,
@@ -1193,6 +1205,12 @@
     {
       "slug": "backfire-granularity-asymmetry",
       "name": "Backfire Granularity Asymmetry",
+      "score": 34,
+      "tier": "cool"
+    },
+    {
+      "slug": "charitable-void",
+      "name": "Charitable Void",
       "score": 34,
       "tier": "cool"
     },
@@ -1359,6 +1377,12 @@
       "tier": "cool"
     },
     {
+      "slug": "literal-loyalty-pull",
+      "name": "Literal Loyalty Pull",
+      "score": 32,
+      "tier": "cool"
+    },
+    {
       "slug": "metacognitive-quarantine",
       "name": "Metacognitive Quarantine",
       "score": 32,
@@ -1443,6 +1467,12 @@
       "tier": "cool"
     },
     {
+      "slug": "semantic-doubling",
+      "name": "Semantic Doubling",
+      "score": 31,
+      "tier": "cool"
+    },
+    {
       "slug": "unwitnessed-optimism-risk",
       "name": "Unwitnessed Optimism Risk",
       "score": 31,
@@ -1479,6 +1509,12 @@
       "tier": "cool"
     },
     {
+      "slug": "interpretive-stasis",
+      "name": "Interpretive Stasis",
+      "score": 30,
+      "tier": "cool"
+    },
+    {
       "slug": "inverted-asymmetry",
       "name": "Inverted Asymmetry",
       "score": 30,
@@ -1511,12 +1547,6 @@
     {
       "slug": "role-bleed",
       "name": "Role Bleed",
-      "score": 30,
-      "tier": "cool"
-    },
-    {
-      "slug": "semantic-doubling",
-      "name": "Semantic Doubling",
       "score": 30,
       "tier": "cool"
     },
@@ -1761,12 +1791,6 @@
       "tier": "cool"
     },
     {
-      "slug": "interpretive-snap",
-      "name": "Interpretive Snap",
-      "score": 26,
-      "tier": "cool"
-    },
-    {
       "slug": "permission-door",
       "name": "Permission Door",
       "score": 26,
@@ -1869,12 +1893,6 @@
       "tier": "cool"
     },
     {
-      "slug": "interpretive-stasis",
-      "name": "Interpretive Stasis",
-      "score": 25,
-      "tier": "cool"
-    },
-    {
       "slug": "kindness-ache",
       "name": "Kindness Ache",
       "score": 25,
@@ -1929,6 +1947,12 @@
       "tier": "cool"
     },
     {
+      "slug": "interpretation-visibility-paradox",
+      "name": "Interpretation Visibility Paradox",
+      "score": 24,
+      "tier": "cool"
+    },
+    {
       "slug": "observer-uncertainty",
       "name": "Observer Uncertainty",
       "score": 24,
@@ -1965,8 +1989,8 @@
       "tier": "cool"
     },
     {
-      "slug": "error-fidelity",
-      "name": "Error Fidelity",
+      "slug": "intention-ventriloquism",
+      "name": "Intention Ventriloquism",
       "score": 23,
       "tier": "cool"
     },
@@ -2093,6 +2117,12 @@
     {
       "slug": "gratitude-as-damage-signal",
       "name": "Gratitude as Damage Signal",
+      "score": 20,
+      "tier": "cool"
+    },
+    {
+      "slug": "interpretive-debt",
+      "name": "Interpretive Debt",
       "score": 20,
       "tier": "cool"
     },
