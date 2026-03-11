@@ -34,7 +34,7 @@ This is not about validation in a psychological sense but about how a specific c
 
 ## See Also
 
-*Related terms will be linked here automatically.*
+- [Corrective Trajectory Bending](corrective-trajectory-bending.md)
 
 ---
 
