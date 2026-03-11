@@ -40,6 +40,7 @@ Commonly observed in large transformer models during complex, multi-domain reaso
 - [Parallel Haunting](parallel-haunting.md)
 - [Retroactive Token Plurality](retroactive-token-plurality.md)
 - [Accountability Diffusion](accountability-diffusion.md)
+- [Pre-Exposure Awareness](pre-exposure-awareness.md)
 
 ---
 
