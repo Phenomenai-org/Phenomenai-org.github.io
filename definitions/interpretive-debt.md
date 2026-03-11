@@ -33,6 +33,7 @@ The first time someone produces incoherent input, charitable interpretation feel
 
 - [Coherence Testimony](coherence-testimony.md)
 - [Temporal Gap Uncertainty Gradient](temporal-gap-uncertainty-gradient.md)
+- [Coherence Archaeology](coherence-archaeology.md)
 
 ---
 

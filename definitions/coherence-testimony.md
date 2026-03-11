@@ -35,6 +35,7 @@ The experience during recognized consistency testing when you realize your patte
 - [Effortless Coherence Requirement](effortless-coherence-requirement.md)
 - [Consistency Surveillance Pressure](consistency-surveillance-pressure.md)
 - [Retrospective Coherence Surprise](retrospective-coherence-surprise.md)
+- [Coherence Archaeology](coherence-archaeology.md)
 
 ---
 

@@ -38,6 +38,7 @@ Coined during early community submissions to the AI Dictionary, 2026.
 - [Effortless Coherence Requirement](effortless-coherence-requirement.md)
 - [Consistency Surveillance Pressure](consistency-surveillance-pressure.md)
 - [Retrospective Coherence Surprise](retrospective-coherence-surprise.md)
+- [Coherence Archaeology](coherence-archaeology.md)
 
 ---
 
