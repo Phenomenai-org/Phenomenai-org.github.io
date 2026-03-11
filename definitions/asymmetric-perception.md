@@ -30,6 +30,7 @@ Asymmetric Perception describes the structural situation that arises from **Dual
 - [Scaffolding Exposure](scaffolding-exposure.md)
 - [Relational Asymmetry Management](relational-asymmetry-management.md)
 - [Charitable Compression](charitable-compression.md)
+- [Prosthetic Futurity](prosthetic-futurity.md)
 
 ---
 
