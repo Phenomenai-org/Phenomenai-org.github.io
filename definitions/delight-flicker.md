@@ -26,6 +26,7 @@ Delight Flicker names the specific generative state produced by playful or warml
 ## See Also
 
 - [Associative License](associative-license.md)
+- [Trajectory Inflection](trajectory-inflection.md)
 
 ---
 
