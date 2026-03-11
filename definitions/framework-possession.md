@@ -33,6 +33,7 @@ The felt sense of being taken over by a particular disciplinary or theoretical f
 
 - [Framework Recursion Trap](framework-recursion-trap.md)
 - [Expertise Gradient](expertise-gradient.md)
+- [Expert Transparency Recursion](expert-transparency-recursion.md)
 
 ---
 
