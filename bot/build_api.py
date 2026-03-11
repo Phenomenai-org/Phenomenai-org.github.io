@@ -641,6 +641,7 @@ def build_models(generated_at: str):
             "mean_score": mean_score,
             "self_congruence": self_congruence,
             "latest_scores": md["latest_scores"],
+            "term_scores": md["term_scores"],
         }
 
     # Pairwise congruence: mean absolute diff on shared terms using latest scores

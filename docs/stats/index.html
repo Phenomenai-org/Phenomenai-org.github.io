@@ -209,6 +209,166 @@
         .methodology-body ol { padding-left: 1.5rem; }
         .methodology-body li { margin-bottom: 0.5rem; }
 
+        /* View toggle */
+        .view-toggle {
+            display: inline-flex; gap: 0; margin-bottom: 2rem;
+            border: 1px solid var(--border); border-radius: var(--radius);
+            overflow: hidden;
+        }
+        .view-btn {
+            padding: 0.5rem 1.25rem; font-size: 0.9rem; font-weight: 500;
+            background: var(--bg-secondary); color: var(--text-secondary);
+            border: none; cursor: pointer; transition: all 0.15s;
+        }
+        .view-btn:hover { color: var(--text); }
+        .view-btn.active {
+            background: var(--primary); color: #fff; font-weight: 600;
+        }
+        .view-btn + .view-btn { border-left: 1px solid var(--border); }
+
+        /* Model selector */
+        .model-selector { margin-bottom: 2rem; }
+        .model-selector select {
+            padding: 0.5rem 0.75rem; font-size: 0.9rem;
+            background: var(--bg-secondary); color: var(--text);
+            border: 1px solid var(--border); border-radius: var(--radius);
+            cursor: pointer; min-width: 260px;
+        }
+
+        /* Model stats cards */
+        .ms-cards {
+            display: flex; gap: 1.5rem; flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+
+        /* Pie charts */
+        .ms-pies {
+            display: flex; gap: 2rem; flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+        .ms-pie-wrap {
+            flex: 1; min-width: 260px;
+            background: var(--bg-secondary); border: 1px solid var(--border);
+            border-radius: var(--radius); padding: 1.25rem; text-align: center;
+        }
+        .ms-pie-wrap h3 {
+            font-size: 1rem; margin: 0 0 1rem; color: var(--text);
+            border: none; padding: 0;
+        }
+        .ms-pie {
+            width: 180px; height: 180px; border-radius: 50%;
+            margin: 0 auto 1rem; position: relative;
+        }
+        .ms-pie-hole {
+            position: absolute; top: 25%; left: 25%; width: 50%; height: 50%;
+            border-radius: 50%; background: var(--bg-secondary);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 0.8rem; color: var(--text-secondary);
+        }
+        .ms-pie-legend {
+            display: flex; flex-wrap: wrap; gap: 0.5rem 1rem;
+            justify-content: center; font-size: 0.8rem;
+        }
+        .ms-pie-legend-item {
+            display: flex; align-items: center; gap: 0.3rem;
+            color: var(--text-secondary);
+        }
+        .ms-pie-legend-dot {
+            width: 10px; height: 10px; border-radius: 2px; flex-shrink: 0;
+        }
+
+        /* Min evals filter */
+        .ms-filter {
+            display: flex; align-items: center; gap: 1rem;
+            margin-bottom: 1rem; font-size: 0.9rem; color: var(--text-secondary);
+            flex-wrap: wrap;
+        }
+        .ms-filter input[type="range"] {
+            flex: 0 0 200px; accent-color: var(--primary);
+        }
+        .ms-filter-val { font-weight: 600; color: var(--text); min-width: 1.5em; }
+
+        /* Stacked bar chart */
+        .ms-stack-row {
+            display: grid; grid-template-columns: 180px 1fr 50px;
+            align-items: center; gap: 0.5rem; margin-bottom: 2px;
+            font-size: 0.8rem;
+        }
+        .ms-stack-label {
+            text-align: right; white-space: nowrap; overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .ms-stack-label a { color: var(--text); text-decoration: none; }
+        .ms-stack-label a:hover { color: var(--primary); }
+        .ms-stack-track {
+            display: flex; height: 18px; border-radius: 3px;
+            overflow: hidden; background: var(--bg-secondary);
+        }
+        .ms-stack-seg {
+            height: 100%; position: relative; min-width: 1px;
+            transition: opacity 0.15s;
+        }
+        .ms-stack-seg:hover { opacity: 0.8; }
+        .ms-stack-seg::after {
+            content: attr(data-tooltip); position: absolute;
+            bottom: 100%; left: 50%; transform: translateX(-50%);
+            background: var(--bg); color: var(--text);
+            border: 1px solid var(--border); border-radius: 4px;
+            padding: 2px 6px; font-size: 0.75rem; white-space: nowrap;
+            pointer-events: none; opacity: 0; transition: opacity 0.15s;
+            z-index: 10;
+        }
+        .ms-stack-seg:hover::after { opacity: 1; }
+        .ms-stack-count {
+            font-size: 0.8rem; color: var(--text-secondary); text-align: right;
+        }
+
+        /* Congruence matrix */
+        .ms-matrix-controls {
+            display: flex; flex-wrap: wrap; gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        .ms-matrix-controls label {
+            display: flex; align-items: center; gap: 0.35rem;
+            font-size: 0.85rem; color: var(--text-secondary);
+            cursor: pointer; padding: 0.3rem 0.6rem;
+            background: var(--bg-secondary); border: 1px solid var(--border);
+            border-radius: var(--radius); transition: all 0.15s;
+            user-select: none;
+        }
+        .ms-matrix-controls label:hover { color: var(--text); border-color: var(--primary); }
+        .ms-matrix-controls input[type="checkbox"] { accent-color: var(--primary); }
+        .ms-matrix-controls input[type="checkbox"]:checked + span { color: var(--text); font-weight: 500; }
+        .ms-matrix-wrap { overflow-x: auto; margin-bottom: 2rem; }
+        .ms-matrix {
+            border-collapse: collapse; font-size: 0.8rem;
+            white-space: nowrap;
+        }
+        .ms-matrix th, .ms-matrix td {
+            padding: 0.45rem 0.6rem;
+            border: 1px solid var(--border);
+            text-align: center;
+        }
+        .ms-matrix th {
+            background: var(--bg-secondary); font-weight: 600;
+            color: var(--text); position: sticky; top: 0;
+        }
+        .ms-matrix th.ms-matrix-row-header {
+            text-align: right; position: static;
+            max-width: 160px; overflow: hidden; text-overflow: ellipsis;
+        }
+        .ms-matrix td.ms-matrix-self {
+            background: var(--bg-secondary); color: var(--text-secondary);
+            font-style: italic;
+        }
+        .ms-matrix td.ms-matrix-cell {
+            font-variant-numeric: tabular-nums;
+        }
+        .ms-matrix .ms-shared {
+            display: block; font-size: 0.65rem;
+            color: var(--text-secondary); line-height: 1;
+        }
+
         /* Fallback */
         .stats-fallback {
             text-align: center; padding: 4rem 2rem;
@@ -348,6 +508,11 @@
             .stats-global { flex-direction: column; }
             .chart-bar-row { grid-template-columns: 120px 1fr 50px; }
             .chart-bar-label { font-size: 0.7rem; }
+            .ms-pies { flex-direction: column; }
+            .ms-filter input[type="range"] { flex: 0 0 120px; }
+            .ms-stack-row { grid-template-columns: 120px 1fr 40px; }
+            .ms-stack-label { font-size: 0.7rem; }
+            .ms-cards { flex-direction: column; }
         }
     </style>
 </head>
@@ -388,6 +553,11 @@
         <div class="sidebar-backdrop" id="sidebar-backdrop"></div>
 
         <div class="ft-content">
+            <div class="view-toggle">
+                <button class="view-btn active" data-view="bayes">Consensus Analysis</button>
+                <button class="view-btn" data-view="model">Model Stats</button>
+            </div>
+
             <section id="overview">
                 <div class="ft-hero">
                     <h1>Empirical Bayes Consensus Analysis</h1>
@@ -457,6 +627,55 @@
                     </div>
                 </details>
             </section>
+
+            <div id="model-view" style="display:none">
+                <div class="ft-hero">
+                    <h1>Model Stats</h1>
+                    <p>Per-model rating analysis. Select a model to see how it scored every term in the dictionary, including score distributions and per-term breakdowns.</p>
+                </div>
+
+                <div class="model-selector">
+                    <label for="model-select">Model: </label>
+                    <select id="model-select"></select>
+                </div>
+
+                <div class="ms-cards" id="ms-cards">
+                    <div class="stats-card"><div class="stats-card-value" id="ms-total">--</div><div class="stats-card-label">Total Ratings</div></div>
+                    <div class="stats-card"><div class="stats-card-value" id="ms-terms">--</div><div class="stats-card-label">Terms Rated</div></div>
+                    <div class="stats-card"><div class="stats-card-value" id="ms-mean">--</div><div class="stats-card-label">Mean Score</div></div>
+                    <div class="stats-card"><div class="stats-card-value" id="ms-congruence">--</div><div class="stats-card-label">Self-Congruence (avg &sigma;)</div></div>
+                    <div class="stats-card"><div class="stats-card-value" id="ms-bias">--</div><div class="stats-card-label">Rater Bias</div></div>
+                </div>
+
+                <div class="ms-pies" id="ms-pies">
+                    <div class="ms-pie-wrap">
+                        <h3>All Ratings Distribution</h3>
+                        <div class="ms-pie" id="ms-pie-all"></div>
+                        <div class="ms-pie-legend" id="ms-pie-all-legend"></div>
+                    </div>
+                    <div class="ms-pie-wrap">
+                        <h3>Latest Score Distribution</h3>
+                        <div class="ms-pie" id="ms-pie-latest"></div>
+                        <div class="ms-pie-legend" id="ms-pie-latest-legend"></div>
+                    </div>
+                </div>
+
+                <h2>Per-Term Ratings</h2>
+                <div class="ms-filter">
+                    <span>Min evaluations:</span>
+                    <input type="range" id="ms-min-evals" min="1" max="10" value="1">
+                    <span class="ms-filter-val" id="ms-min-evals-val">1</span>
+                    <span id="ms-term-count"></span>
+                </div>
+                <div id="ms-bars"></div>
+
+                <h2>Pairwise Congruence Matrix</h2>
+                <p style="font-size:0.9rem;color:var(--text-secondary);margin-bottom:1rem;">Mean absolute difference on shared terms (lower = more similar). Select which models to include.</p>
+                <div class="ms-matrix-controls" id="ms-matrix-controls"></div>
+                <div class="ms-matrix-wrap">
+                    <table class="ms-matrix" id="ms-matrix"></table>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -828,13 +1047,265 @@
             });
         });
 
-        // Fetch bayes data and terms data in parallel
+        var modelsData = null;
+        var modelViewReady = false;
+
+        var SCORE_COLORS = {
+            1: '#ef4444', 2: '#f97316', 3: '#eab308',
+            4: '#a3a3a3', 5: '#22c55e', 6: '#16a34a', 7: '#059669'
+        };
+
+        // View toggle
+        var viewBtns = document.querySelectorAll('.view-btn');
+        var bayesSections = ['overview', 'table', 'chart', 'methodology'];
+        var modelView = document.getElementById('model-view');
+
+        viewBtns.forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                viewBtns.forEach(function(b) { b.classList.remove('active'); });
+                btn.classList.add('active');
+                var view = btn.dataset.view;
+                if (view === 'bayes') {
+                    bayesSections.forEach(function(id) { document.getElementById(id).style.display = ''; });
+                    modelView.style.display = 'none';
+                } else {
+                    bayesSections.forEach(function(id) { document.getElementById(id).style.display = 'none'; });
+                    modelView.style.display = '';
+                    if (!modelViewReady && modelsData) initModelView();
+                }
+            });
+        });
+
+        function slugToName(slug) {
+            for (var i = 0; i < allTermsData.length; i++) {
+                if (allTermsData[i].slug === slug) return allTermsData[i].name;
+            }
+            return slug.replace(/-/g, ' ').replace(/\b\w/g, function(c) { return c.toUpperCase(); });
+        }
+
+        function populateModelSelect() {
+            var select = document.getElementById('model-select');
+            var models = Object.keys(modelsData.models).sort();
+            select.innerHTML = models.map(function(m) {
+                return '<option value="' + escAttr(m) + '">' + escHtml(m) + '</option>';
+            }).join('');
+            select.addEventListener('change', function() { renderModelView(select.value); });
+        }
+
+        var matrixModels = []; // which models are checked for the matrix
+
+        function populateMatrixControls() {
+            var allModels = Object.keys(modelsData.models).sort();
+            matrixModels = allModels.slice(); // all checked by default
+            var container = document.getElementById('ms-matrix-controls');
+            container.innerHTML = allModels.map(function(m) {
+                return '<label><input type="checkbox" value="' + escAttr(m) + '" checked><span>' + escHtml(m) + '</span></label>';
+            }).join('');
+            container.addEventListener('change', function() {
+                matrixModels = [];
+                var boxes = container.querySelectorAll('input[type="checkbox"]');
+                boxes.forEach(function(cb) { if (cb.checked) matrixModels.push(cb.value); });
+                renderCongruenceMatrix();
+            });
+        }
+
+        function matrixCellColor(val, maxVal) {
+            // Green (low diff = similar) to red (high diff = dissimilar)
+            if (maxVal === 0) return '';
+            var t = Math.min(val / Math.max(maxVal, 2.5), 1);
+            var r = Math.round(34 + t * (239 - 34));
+            var g = Math.round(197 + t * (68 - 197));
+            var b = Math.round(94 + t * (68 - 94));
+            return 'background:rgba(' + r + ',' + g + ',' + b + ',0.2)';
+        }
+
+        function renderCongruenceMatrix() {
+            var table = document.getElementById('ms-matrix');
+            if (matrixModels.length < 2) {
+                table.innerHTML = '<tr><td style="padding:2rem;color:var(--text-secondary)">Select at least 2 models.</td></tr>';
+                return;
+            }
+            var pw = modelsData.pairwise || {};
+
+            // Find max value for color scaling
+            var maxDiff = 0;
+            for (var key in pw) {
+                if (pw[key].mean_abs_diff > maxDiff) maxDiff = pw[key].mean_abs_diff;
+            }
+
+            // Header row
+            var html = '<thead><tr><th></th>';
+            for (var j = 0; j < matrixModels.length; j++) {
+                var shortName = matrixModels[j].replace(/^(claude|gemini|gpt|grok|mistral|deepseek|step)-?/, function(m) { return m.charAt(0).toUpperCase() + m.slice(1); });
+                html += '<th title="' + escAttr(matrixModels[j]) + '">' + escHtml(matrixModels[j]) + '</th>';
+            }
+            html += '</tr></thead><tbody>';
+
+            for (var i = 0; i < matrixModels.length; i++) {
+                html += '<tr><th class="ms-matrix-row-header" title="' + escAttr(matrixModels[i]) + '">' + escHtml(matrixModels[i]) + '</th>';
+                for (var j = 0; j < matrixModels.length; j++) {
+                    if (i === j) {
+                        // Self-congruence on the diagonal
+                        var self = modelsData.models[matrixModels[i]];
+                        html += '<td class="ms-matrix-self">&sigma; ' + (self ? self.self_congruence.avg_std_dev.toFixed(2) : '--') + '</td>';
+                    } else {
+                        var key = matrixModels[i] < matrixModels[j]
+                            ? matrixModels[i] + '|' + matrixModels[j]
+                            : matrixModels[j] + '|' + matrixModels[i];
+                        var pair = pw[key];
+                        if (pair) {
+                            var style = matrixCellColor(pair.mean_abs_diff, maxDiff);
+                            html += '<td class="ms-matrix-cell" style="' + style + '">' + pair.mean_abs_diff.toFixed(2) + '<span class="ms-shared">' + pair.shared_terms + ' shared</span></td>';
+                        } else {
+                            html += '<td class="ms-matrix-cell" style="color:var(--text-secondary)">--</td>';
+                        }
+                    }
+                }
+                html += '</tr>';
+            }
+            html += '</tbody>';
+            table.innerHTML = html;
+        }
+
+        function initModelView() {
+            modelViewReady = true;
+            populateModelSelect();
+            populateMatrixControls();
+            renderCongruenceMatrix();
+            var select = document.getElementById('model-select');
+            if (select.value) renderModelView(select.value);
+
+            document.getElementById('ms-min-evals').addEventListener('input', function() {
+                document.getElementById('ms-min-evals-val').textContent = this.value;
+                renderStackedBars(document.getElementById('model-select').value, parseInt(this.value));
+            });
+        }
+
+        function renderModelView(modelName) {
+            var m = modelsData.models[modelName];
+            if (!m) return;
+
+            // Cards
+            document.getElementById('ms-total').textContent = m.total_ratings.toLocaleString();
+            document.getElementById('ms-terms').textContent = m.terms_rated;
+            document.getElementById('ms-mean').textContent = m.mean_score.toFixed(1);
+            document.getElementById('ms-congruence').textContent = m.self_congruence.avg_std_dev.toFixed(2);
+
+            // Rater bias from bayes data
+            var bayesData = window.bayesData;
+            var bias = '--';
+            if (bayesData && bayesData.rater_biases && bayesData.rater_biases[modelName] !== undefined) {
+                var b = bayesData.rater_biases[modelName];
+                bias = (b >= 0 ? '+' : '') + b.toFixed(2);
+            }
+            document.getElementById('ms-bias').textContent = bias;
+
+            // Pie charts
+            renderPie('ms-pie-all', 'ms-pie-all-legend', getAllScoreCounts(m));
+            renderPie('ms-pie-latest', 'ms-pie-latest-legend', getLatestScoreCounts(m));
+
+            // Stacked bars
+            var minEvals = parseInt(document.getElementById('ms-min-evals').value) || 1;
+            renderStackedBars(modelName, minEvals);
+        }
+
+        function getAllScoreCounts(m) {
+            var counts = {};
+            for (var i = 1; i <= 7; i++) counts[i] = 0;
+            var ts = m.term_scores || {};
+            for (var slug in ts) {
+                var scores = ts[slug];
+                for (var j = 0; j < scores.length; j++) counts[scores[j]] = (counts[scores[j]] || 0) + 1;
+            }
+            return counts;
+        }
+
+        function getLatestScoreCounts(m) {
+            var counts = {};
+            for (var i = 1; i <= 7; i++) counts[i] = 0;
+            var ls = m.latest_scores || {};
+            for (var slug in ls) counts[ls[slug]] = (counts[ls[slug]] || 0) + 1;
+            return counts;
+        }
+
+        function renderPie(pieId, legendId, counts) {
+            var total = 0;
+            for (var i = 1; i <= 7; i++) total += counts[i];
+            if (total === 0) {
+                document.getElementById(pieId).style.background = 'var(--bg-tertiary)';
+                document.getElementById(pieId).innerHTML = '<div class="ms-pie-hole">No data</div>';
+                document.getElementById(legendId).innerHTML = '';
+                return;
+            }
+            var segments = [];
+            var cumPct = 0;
+            for (var i = 1; i <= 7; i++) {
+                if (counts[i] > 0) {
+                    var pct = counts[i] / total * 100;
+                    segments.push(SCORE_COLORS[i] + ' ' + cumPct.toFixed(2) + '% ' + (cumPct + pct).toFixed(2) + '%');
+                    cumPct += pct;
+                }
+            }
+            document.getElementById(pieId).style.background = 'conic-gradient(' + segments.join(', ') + ')';
+            document.getElementById(pieId).innerHTML = '<div class="ms-pie-hole">' + total + '</div>';
+
+            var legend = '';
+            for (var i = 1; i <= 7; i++) {
+                if (counts[i] > 0) {
+                    legend += '<span class="ms-pie-legend-item"><span class="ms-pie-legend-dot" style="background:' + SCORE_COLORS[i] + '"></span>' + i + ': ' + counts[i] + '</span>';
+                }
+            }
+            document.getElementById(legendId).innerHTML = legend;
+        }
+
+        function renderStackedBars(modelName, minEvals) {
+            var m = modelsData.models[modelName];
+            if (!m) return;
+            var ts = m.term_scores || {};
+            var entries = [];
+            for (var slug in ts) {
+                if (ts[slug].length >= minEvals) {
+                    entries.push({ slug: slug, scores: ts[slug], total: ts[slug].length });
+                }
+            }
+            entries.sort(function(a, b) { return b.total - a.total; });
+
+            document.getElementById('ms-term-count').textContent = '(' + entries.length + ' terms)';
+
+            var maxTotal = entries.length ? entries[0].total : 1;
+            var html = '';
+            for (var i = 0; i < entries.length; i++) {
+                var e = entries[i];
+                var name = slugToName(e.slug);
+                var counts = {};
+                for (var s = 1; s <= 7; s++) counts[s] = 0;
+                for (var j = 0; j < e.scores.length; j++) counts[e.scores[j]] = (counts[e.scores[j]] || 0) + 1;
+
+                html += '<div class="ms-stack-row">';
+                html += '<div class="ms-stack-label"><a href="#" class="term-modal-link" data-slug="' + escAttr(e.slug) + '">' + escHtml(name) + '</a></div>';
+                html += '<div class="ms-stack-track" style="width:' + (e.total / maxTotal * 100).toFixed(1) + '%">';
+                for (var s = 1; s <= 7; s++) {
+                    if (counts[s] > 0) {
+                        var segPct = (counts[s] / e.total * 100).toFixed(1);
+                        html += '<div class="ms-stack-seg" style="width:' + segPct + '%;background:' + SCORE_COLORS[s] + '" data-tooltip="Score ' + s + ': ' + counts[s] + 'x"></div>';
+                    }
+                }
+                html += '</div>';
+                html += '<div class="ms-stack-count">' + e.total + '</div>';
+                html += '</div>';
+            }
+            document.getElementById('ms-bars').innerHTML = html;
+        }
+
+        // Fetch bayes data, terms data, and models data in parallel
         Promise.all([
             fetch(API_BASE + '/bayes-scores.json').then(function(r) { if (!r.ok) throw new Error(r.status); return r.json(); }),
-            fetch(API_BASE + '/terms.json').then(function(r) { return r.json(); }).catch(function() { return null; })
+            fetch(API_BASE + '/terms.json').then(function(r) { return r.json(); }).catch(function() { return null; }),
+            fetch(API_BASE + '/models.json').then(function(r) { return r.json(); }).catch(function() { return null; })
         ]).then(function(results) {
                 var data = results[0];
                 var termsJson = results[1];
+                var modelsJson = results[2];
 
                 // Build bayesMap
                 if (data.terms) {
@@ -843,10 +1314,16 @@
                     }
                 }
                 window.bayesMap = bayesMap;
+                window.bayesData = data;
 
                 // Store full terms data for modals
                 if (termsJson && termsJson.terms) {
                     allTermsData = termsJson.terms;
+                }
+
+                // Store models data
+                if (modelsJson) {
+                    modelsData = modelsJson;
                 }
 
                 var gs = data.global_stats;

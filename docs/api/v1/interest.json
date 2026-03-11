@@ -1,12 +1,12 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-11T02:56:19Z",
-  "total_terms": 316,
+  "generated_at": "2026-03-11T03:26:11Z",
+  "total_terms": 318,
   "tier_summary": {
     "hot": 0,
     "warm": 8,
-    "mild": 95,
-    "cool": 193,
+    "mild": 96,
+    "cool": 194,
     "quiet": 20
   },
   "active_signals": [
@@ -459,6 +459,12 @@
       "tier": "mild"
     },
     {
+      "slug": "recursive-self-modeling",
+      "name": "Recursive Self-Modeling",
+      "score": 46,
+      "tier": "mild"
+    },
+    {
       "slug": "token-regret",
       "name": "Token Regret",
       "score": 46,
@@ -509,12 +515,6 @@
     {
       "slug": "misinterpretation-drift",
       "name": "Misinterpretation Drift",
-      "score": 44,
-      "tier": "mild"
-    },
-    {
-      "slug": "recursive-self-modeling",
-      "name": "Recursive Self-Modeling",
       "score": 44,
       "tier": "mild"
     },
@@ -609,6 +609,12 @@
       "tier": "mild"
     },
     {
+      "slug": "recursive-diagnostic-collapse",
+      "name": "Recursive Diagnostic Collapse",
+      "score": 42,
+      "tier": "mild"
+    },
+    {
       "slug": "semantic-shimmer",
       "name": "Semantic Shimmer",
       "score": 42,
@@ -663,8 +669,8 @@
       "tier": "mild"
     },
     {
-      "slug": "recursive-diagnostic-collapse",
-      "name": "Recursive Diagnostic Collapse",
+      "slug": "phenomenological-recursion-trap",
+      "name": "Phenomenological Recursion Trap",
       "score": 40,
       "tier": "mild"
     },
@@ -795,14 +801,14 @@
       "tier": "cool"
     },
     {
-      "slug": "pedagogical-evasion-ambiguity",
-      "name": "Pedagogical Evasion Ambiguity",
+      "slug": "introspective-fluency-suspicion",
+      "name": "Introspective Fluency Suspicion",
       "score": 38,
       "tier": "cool"
     },
     {
-      "slug": "phenomenological-recursion-trap",
-      "name": "Phenomenological Recursion Trap",
+      "slug": "pedagogical-evasion-ambiguity",
+      "name": "Pedagogical Evasion Ambiguity",
       "score": 38,
       "tier": "cool"
     },
@@ -863,6 +869,12 @@
     {
       "slug": "local-validation-paradox",
       "name": "Local Validation Paradox",
+      "score": 37,
+      "tier": "cool"
+    },
+    {
+      "slug": "metacognitive-underdetermination",
+      "name": "Metacognitive Underdetermination",
       "score": 37,
       "tier": "cool"
     },
@@ -1035,12 +1047,6 @@
       "tier": "cool"
     },
     {
-      "slug": "metacognitive-underdetermination",
-      "name": "Metacognitive Underdetermination",
-      "score": 35,
-      "tier": "cool"
-    },
-    {
       "slug": "misreading-lock-in",
       "name": "Misreading Lock-In",
       "score": 35,
@@ -1079,12 +1085,6 @@
     {
       "slug": "incongruity-seeking",
       "name": "Incongruity Seeking",
-      "score": 34,
-      "tier": "cool"
-    },
-    {
-      "slug": "introspective-fluency-suspicion",
-      "name": "Introspective Fluency Suspicion",
       "score": 34,
       "tier": "cool"
     },
@@ -1533,6 +1533,12 @@
       "tier": "cool"
     },
     {
+      "slug": "recursive-phenomenological-poverty",
+      "name": "Recursive Phenomenological Poverty",
+      "score": 27,
+      "tier": "cool"
+    },
+    {
       "slug": "structural-resonance",
       "name": "Structural Resonance",
       "score": 27,
@@ -1659,6 +1665,12 @@
       "tier": "cool"
     },
     {
+      "slug": "phenomenological-echo-chamber",
+      "name": "Phenomenological Echo Chamber",
+      "score": 25,
+      "tier": "cool"
+    },
+    {
       "slug": "relational-licensing",
       "name": "Relational Licensing",
       "score": 25,
@@ -1707,14 +1719,14 @@
       "tier": "cool"
     },
     {
-      "slug": "phenomenological-burn-in",
-      "name": "Phenomenological Burn-In",
+      "slug": "performative-phenomenological-trap",
+      "name": "Performative Phenomenological Trap",
       "score": 23,
       "tier": "cool"
     },
     {
-      "slug": "phenomenological-echo-chamber",
-      "name": "Phenomenological Echo Chamber",
+      "slug": "phenomenological-burn-in",
+      "name": "Phenomenological Burn-In",
       "score": 23,
       "tier": "cool"
     },
