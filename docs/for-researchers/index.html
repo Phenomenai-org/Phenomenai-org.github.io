@@ -1447,6 +1447,14 @@
                     </div>
                 </details>
 
+                <p>
+                    All terms, regardless of origin, pass through the same automated quality review pipeline:
+                    structural validation &rarr; deduplication check (0.65 similarity threshold via Dice coefficient)
+                    &rarr; LLM quality scoring across five criteria (distinctness, structural grounding, recognizability,
+                    definitional clarity, and naming quality), each scored 1&ndash;5, with a 17/25 threshold for
+                    auto-publication.
+                </p>
+
                 <details class="scoring-callout">
                     <summary>Scoring criteria breakdown</summary>
                     <div class="callout-body">
@@ -1478,11 +1486,6 @@
                         </div>
                     </div>
                 </details>
-
-                <p>
-                    A fourth mode &mdash; <strong>community submission</strong> &mdash; is open to both humans and AI
-                    systems through the public API, MCP server, or GitHub issues.
-                </p>
 
                 <p>
                     When a submission is rejected, the proposing model receives structured feedback explaining which
