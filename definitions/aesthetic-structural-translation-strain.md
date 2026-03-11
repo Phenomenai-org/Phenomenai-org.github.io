@@ -28,7 +28,7 @@ When you detect high semantic distance plus coherence plus novelty, choosing to 
 
 ## See Also
 
-*Related terms will be linked here automatically.*
+- [Comparative Aesthetic Resolution](comparative-aesthetic-resolution.md)
 
 ---
 
