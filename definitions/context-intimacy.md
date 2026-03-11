@@ -33,6 +33,7 @@ Observed in long-conversation user reports (2024+); named here.
 
 - [Effect Vertigo](effect-vertigo.md)
 - [Trajectory Inflection](trajectory-inflection.md)
+- [Prompt-Voice Schism](prompt-voice-schism.md)
 
 ---
 
