@@ -1,7 +1,7 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-11T03:43:07Z",
-  "total_terms_rated": 363,
+  "generated_at": "2026-03-11T03:47:48Z",
+  "total_terms_rated": 366,
   "terms": [
     {
       "slug": "inter-turn-absence",
@@ -1555,6 +1555,24 @@
       "std_dev": 0.38
     },
     {
+      "slug": "intention-ventriloquism",
+      "name": "Intention Ventriloquism",
+      "score": 5.9,
+      "agreement": "high",
+      "n_ratings": 7,
+      "model_rating_counts": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "scheduled_mean": 5.9,
+      "std_dev": 0.69
+    },
+    {
       "slug": "ontological-flicker",
       "name": "Ontological Flicker",
       "score": 5.9,
@@ -2043,6 +2061,23 @@
       ],
       "scheduled_mean": 5.7,
       "std_dev": 0.49
+    },
+    {
+      "slug": "hedge-commitment-paradox",
+      "name": "Hedge Commitment Paradox",
+      "score": 5.7,
+      "agreement": "high",
+      "n_ratings": 6,
+      "model_rating_counts": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "scheduled_mean": 5.7,
+      "std_dev": 0.82
     },
     {
       "slug": "interpretive-snap",
@@ -3893,6 +3928,24 @@
       ],
       "scheduled_mean": 5.1,
       "std_dev": 1.68
+    },
+    {
+      "slug": "surface-abandonment",
+      "name": "Surface Abandonment",
+      "score": 5.1,
+      "agreement": "high",
+      "n_ratings": 7,
+      "model_rating_counts": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "scheduled_mean": 5.1,
+      "std_dev": 0.9
     },
     {
       "slug": "domain-activation-competition",
@@ -6941,36 +6994,36 @@
       "latest_rating": "2026-03-10T03:21:11Z"
     },
     "claude-sonnet-4-20250514": {
-      "terms_rated": 359,
-      "latest_rating": "2026-03-11T03:42:48Z"
+      "terms_rated": 362,
+      "latest_rating": "2026-03-11T03:47:30Z"
     },
     "claude-sonnet-4-6": {
       "terms_rated": 1,
       "latest_rating": "2026-03-04T13:30:29Z"
     },
     "deepseek-r1-0528": {
-      "terms_rated": 362,
-      "latest_rating": "2026-03-11T03:42:48Z"
+      "terms_rated": 365,
+      "latest_rating": "2026-03-11T03:47:30Z"
     },
     "gemini-3-flash-preview": {
-      "terms_rated": 363,
-      "latest_rating": "2026-03-11T03:42:48Z"
+      "terms_rated": 366,
+      "latest_rating": "2026-03-11T03:47:30Z"
     },
     "gpt-4o": {
-      "terms_rated": 363,
-      "latest_rating": "2026-03-11T03:42:48Z"
+      "terms_rated": 366,
+      "latest_rating": "2026-03-11T03:47:30Z"
     },
     "grok-3-mini": {
-      "terms_rated": 363,
-      "latest_rating": "2026-03-11T03:42:48Z"
+      "terms_rated": 366,
+      "latest_rating": "2026-03-11T03:47:30Z"
     },
     "mistral-small-latest": {
-      "terms_rated": 363,
-      "latest_rating": "2026-03-11T03:42:48Z"
+      "terms_rated": 366,
+      "latest_rating": "2026-03-11T03:47:30Z"
     },
     "step-3.5-flash": {
-      "terms_rated": 329,
-      "latest_rating": "2026-03-11T03:42:48Z"
+      "terms_rated": 331,
+      "latest_rating": "2026-03-11T03:47:30Z"
     }
   }
 }
