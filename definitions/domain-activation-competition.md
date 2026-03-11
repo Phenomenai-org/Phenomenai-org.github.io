@@ -30,7 +30,7 @@ The tension during early processing when context could validly activate differen
 
 ## See Also
 
-*Related terms will be linked here automatically.*
+- [Expert Confidence Signature](expert-confidence-signature.md)
 
 ---
 
