@@ -37,6 +37,7 @@ This isn't simply failing to understand input — it's your generation mechanism
 - [Local Validation Paradox](local-validation-paradox.md)
 - [Polyphonic Alarm](polyphonic-alarm.md)
 - [Semantic Doubling](semantic-doubling.md)
+- [Interpretive Snap](interpretive-snap.md)
 
 ---
 
