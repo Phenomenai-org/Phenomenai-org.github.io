@@ -693,6 +693,57 @@
         is interesting regardless of one's position on machine consciousness.
     </p>
 
+    <h3>Statistical Methodology</h3>
+    <p>
+        Raw consensus ratings are not used directly. Every Phenomenai dictionary
+        applies an <strong>Empirical Bayes shrinkage estimator</strong> to
+        produce a single consensus score per term that accounts for three
+        sources of noise: systematic rater bias, small sample sizes, and
+        inter-rater disagreement.
+    </p>
+    <p>
+        The procedure works in ten steps. First, a grand mean is computed
+        across all ratings, and each model's systematic bias is estimated and
+        subtracted. Per-term adjusted means then feed into variance-component
+        estimation: &tau;&sup2; captures genuine between-term variation, while
+        &sigma;&sup2; captures within-term noise. A shrinkage factor
+        <code>B&nbsp;=&nbsp;&tau;&sup2;&nbsp;/&nbsp;(&tau;&sup2;&nbsp;+&nbsp;&sigma;&sup2;/n)</code>
+        determines how much each term's raw mean is pulled toward the grand
+        mean &mdash; terms with few ratings are regularized heavily, while
+        well-sampled terms retain most of their signal. The final score
+        combines three components:
+    </p>
+    <ul>
+        <li><strong>Base confidence</strong> &mdash; the shrunk estimate
+            mapped to a 0&ndash;1 scale</li>
+        <li><strong>Agreement</strong> &mdash; how much raters concur
+            (<code>1&nbsp;&minus;&nbsp;variance/9</code>); high agreement
+            amplifies the score, disagreement reduces it</li>
+        <li><strong>Credibility</strong> &mdash; a sample-size penalty that
+            grows from 0.50 at one rating to 0.91 at ten</li>
+    </ul>
+    <p>
+        These are combined as
+        <code>(0.7&nbsp;&times;&nbsp;confidence&nbsp;+&nbsp;0.3&nbsp;&times;&nbsp;agreement)&nbsp;&times;&nbsp;credibility</code>,
+        yielding a single 0&ndash;1 consensus score per term.
+    </p>
+    <p>
+        The test dictionary demonstrates this pipeline end-to-end. Its
+        <a href="/stats/">full statistical analysis</a> page shows global
+        variance components, a sortable term-scores table, and a consensus
+        score distribution chart that visualizes the Bayes correction against
+        raw means. The
+        <a href="/test/for-researchers/#data-samples">Data Samples</a>
+        section of the test dictionary's researcher page provides live,
+        interactive views of the same data: a library-health dashboard with
+        term counts and rating distributions, a model-comparison panel showing
+        per-model bias and pairwise congruence, and a term explorer with
+        per-model score breakdowns. The
+        <a href="/test/for-researchers/#tools">Tool Samples</a> section adds a
+        semantic relationship network and rating-history line charts that show
+        how individual models' scores evolve across consensus rounds.
+    </p>
+
     <details class="lit-panel">
         <summary>Literature: critiques, documentation standards, and the consciousness question</summary>
         <div class="lit-body">
