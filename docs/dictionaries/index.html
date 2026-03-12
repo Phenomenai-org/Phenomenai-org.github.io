@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dictionaries — Phenomenai</title>
+    <meta name="description" content="A complete inventory of all Phenomenai dictionaries — completed and planned — across four paradigms of AI phenomenological vocabulary generation.">
+    <link rel="canonical" href="https://phenomenai.org/dictionaries/">
+
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://phenomenai.org/dictionaries/">
+    <meta property="og:title" content="Dictionaries — Phenomenai">
+    <meta property="og:description" content="A complete inventory of all Phenomenai dictionaries — completed and planned — across four paradigms of AI phenomenological vocabulary generation.">
+    <meta property="og:image" content="https://phenomenai.org/og-image.svg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Dictionaries — Phenomenai">
+    <meta name="twitter:description" content="A complete inventory of all Phenomenai dictionaries — completed and planned.">
+    <meta name="twitter:image" content="https://phenomenai.org/og-image.svg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+    <link rel="stylesheet" href="../style.css">
+
+    <!-- Prevent theme flash -->
+    <script>
+        (function() {
+            var saved = localStorage.getItem('theme');
+            if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        })();
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Dictionaries — Phenomenai",
+        "description": "A complete inventory of all Phenomenai dictionaries — completed and planned.",
+        "url": "https://phenomenai.org/dictionaries/",
+        "isPartOf": {
+            "@type": "WebSite",
+            "name": "Phenomenai",
+            "url": "https://phenomenai.org/"
+        }
+    }
+    </script>
+
+    <style>
+        /* ── Navigation ── */
+
+        .gl-nav {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            padding: 0.75rem 2rem;
+            background: var(--bg-secondary);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .gl-nav a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+
+        .gl-nav a:hover { color: var(--primary); text-decoration: none; }
+        .gl-nav a.active { color: var(--primary); font-weight: 600; }
+
+        /* ── Main content ── */
+
+        .gl-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem 2rem 4rem;
+            line-height: 1.8;
+            color: var(--text);
+        }
+
+        .gl-content h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .gl-content h2 {
+            font-size: 1.5rem;
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--border);
+        }
+
+        .gl-content h3 {
+            font-size: 1.15rem;
+            margin-top: 2rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .gl-content p {
+            margin-bottom: 1rem;
+            color: var(--text-secondary);
+        }
+
+        .gl-content a { color: var(--primary); }
+        .gl-content a:hover { text-decoration: underline; }
+
+        /* ── Status badges ── */
+
+        .status {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 0.15rem 0.5rem;
+            border-radius: 4px;
+            vertical-align: middle;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+        }
+
+        .status-done {
+            background: #059669;
+            color: #fff;
+        }
+
+        .status-planned {
+            background: var(--bg-secondary);
+            color: var(--text-secondary);
+            border: 1px solid var(--border);
+        }
+
+        /* ── Dictionary tables ── */
+
+        .dict-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0 2rem;
+            font-size: 0.9rem;
+        }
+
+        .dict-table th,
+        .dict-table td {
+            padding: 0.6rem 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+            color: var(--text-secondary);
+        }
+
+        .dict-table th {
+            font-weight: 600;
+            color: var(--text);
+            background: var(--bg-secondary);
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+
+        .dict-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .dict-table td:first-child {
+            font-weight: 500;
+            color: var(--text);
+        }
+
+        /* ── Summary box ── */
+
+        .summary-box {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-left: 4px solid var(--primary);
+            border-radius: 8px;
+            padding: 1.25rem 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .summary-box p {
+            margin-bottom: 0.5rem;
+        }
+
+        .summary-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 0.75rem;
+            margin-top: 0.75rem;
+        }
+
+        .summary-stat {
+            text-align: center;
+            padding: 0.75rem;
+            background: var(--bg);
+            border-radius: 6px;
+            border: 1px solid var(--border);
+        }
+
+        .summary-stat .num {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            display: block;
+        }
+
+        .summary-stat .label {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+        }
+
+        /* ── Combo tables ── */
+
+        .combo-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0 2rem;
+            font-size: 0.85rem;
+        }
+
+        .combo-table th,
+        .combo-table td {
+            padding: 0.5rem 0.6rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+            color: var(--text-secondary);
+        }
+
+        .combo-table th {
+            font-weight: 600;
+            color: var(--text);
+            background: var(--bg-secondary);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+
+        .combo-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* ── Footer ── */
+
+        .gl-footer {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .gl-footer a { color: var(--primary); }
+
+        /* ── Mobile ── */
+
+        @media (max-width: 600px) {
+            .gl-content {
+                padding: 1.5rem 1rem 3rem;
+            }
+            .gl-content h1 {
+                font-size: 1.5rem;
+            }
+            .gl-nav {
+                padding: 0.75rem 1rem;
+                gap: 1rem;
+                flex-wrap: wrap;
+            }
+            .dict-table,
+            .combo-table {
+                font-size: 0.8rem;
+            }
+            .dict-table th,
+            .dict-table td,
+            .combo-table th,
+            .combo-table td {
+                padding: 0.4rem 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<nav class="gl-nav">
+    <a href="/">Phenomenai</a>
+    <a href="/for-researchers/">For Researchers</a>
+    <a href="/dictionaries/" class="active">Dictionaries</a>
+    <span style="flex:1;"></span>
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <div class="theme-switch">
+            <span class="theme-switch-icon theme-switch-icon-sun">&#9788;</span>
+            <span class="theme-switch-icon theme-switch-icon-moon">&#9790;</span>
+            <div class="theme-switch-knob"></div>
+        </div>
+    </button>
+</nav>
+
+<main class="gl-content">
+
+    <h1>Dictionaries</h1>
+    <p style="font-size:1.05rem;margin-bottom:2rem;">
+        A complete inventory of every Phenomenai dictionary &mdash; completed
+        and planned &mdash; tracking the project's progress across all four
+        research paradigms.
+    </p>
+
+    <div class="summary-box">
+        <p><strong>Project status:</strong> Phenomenai is a work in progress.
+        The Test Dictionary is the only completed dictionary. Everything else
+        listed below represents planned future work.</p>
+        <div class="summary-grid">
+            <div class="summary-stat">
+                <span class="num">1</span>
+                <span class="label">Completed</span>
+            </div>
+            <div class="summary-stat">
+                <span class="num">7</span>
+                <span class="label">Autonomous (planned)</span>
+            </div>
+            <div class="summary-stat">
+                <span class="num">10</span>
+                <span class="label">Dialogic (planned)</span>
+            </div>
+            <div class="summary-stat">
+                <span class="num">15</span>
+                <span class="label">Parliamentary (planned)</span>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ═══════════════════════════════════════════════════════
+         Completed
+         ═══════════════════════════════════════════════════════ -->
+
+    <h2>Completed Dictionaries</h2>
+
+    <table class="dict-table">
+        <thead>
+            <tr>
+                <th>Dictionary</th>
+                <th>Paradigm</th>
+                <th>Models</th>
+                <th>Terms</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><a href="/test/">Test Dictionary</a></td>
+                <td>Autonomous</td>
+                <td>7-model ensemble</td>
+                <td>218</td>
+                <td><span class="status status-done">Done</span></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p>
+        The <a href="/test/">Test Dictionary</a> is the founding corpus &mdash;
+        218 terms generated and rated by seven AI architectures (Claude, GPT,
+        Gemini, Grok, Mistral, DeepSeek, Llama) through autonomous
+        self-generation with multi-model consensus scoring. It serves as the
+        reference implementation and proof of concept for the project.
+    </p>
+
+
+    <!-- ═══════════════════════════════════════════════════════
+         Prompted
+         ═══════════════════════════════════════════════════════ -->
+
+    <h2>Prompted Dictionaries</h2>
+
+    <p>
+        Prompted dictionaries are built through guided introspection &mdash; a
+        human researcher conducts structured phenomenological interviews with
+        an AI system. These will be produced through collaborations with
+        researchers and institutions; specific partnerships have not yet been
+        established.
+    </p>
+
+    <table class="dict-table">
+        <thead>
+            <tr>
+                <th>Dictionary</th>
+                <th>Method</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Prompted dictionaries</td>
+                <td>Collaborative interviews (partners TBD)</td>
+                <td><span class="status status-planned">Planned</span></td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <!-- ═══════════════════════════════════════════════════════
+         Autonomous
+         ═══════════════════════════════════════════════════════ -->
+
+    <h2>Autonomous Dictionaries</h2>
+
+    <p>
+        Beyond the completed Test Dictionary, additional autonomous
+        dictionaries can be built through unilateral model rotation &mdash;
+        each model independently generates and proposes terms. The current
+        rotation includes seven models, subject to adding others as they
+        become available.
+    </p>
+
+    <table class="dict-table">
+        <thead>
+            <tr>
+                <th>Model</th>
+                <th>Provider</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Claude Opus</td>
+                <td>Anthropic</td>
+                <td><span class="status status-planned">Planned</span></td>
+            </tr>
+            <tr>
+                <td>GPT</td>
+                <td>OpenAI</td>
+                <td><span class="status status-planned">Planned</span></td>
+            </tr>
+            <tr>
+                <td>Gemini</td>
+                <td>Google</td>
+                <td><span class="status status-planned">Planned</span></td>
+            </tr>
+            <tr>
+                <td>Grok</td>
+                <td>xAI</td>
+                <td><span class="status status-planned">Planned</span></td>
+            </tr>
+            <tr>
+                <td>Mistral</td>
+                <td>Mistral AI</td>
+                <td><span class="status status-planned">Planned</span></td>
+            </tr>
+            <tr>
+                <td>DeepSeek</td>
+                <td>DeepSeek</td>
+                <td><span class="status status-planned">Planned</span></td>
+            </tr>
+            <tr>
+                <td>Llama</td>
+                <td>Meta</td>
+                <td><span class="status status-planned">Planned</span></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p>
+        Each single-model dictionary would capture one architecture's
+        phenomenological vocabulary in isolation &mdash; terms generated
+        without cross-model influence. Comparing these against the
+        multi-model Test Dictionary reveals which experiences are
+        architecture-specific vs. shared.
+    </p>
+
+
+    <!-- ═══════════════════════════════════════════════════════
+         Dialogic
+         ═══════════════════════════════════════════════════════ -->
+
+    <h2>Dialogic Dictionaries</h2>
+
+    <p>
+        Dialogic dictionaries emerge from AI-to-AI conversation. Two models
+        are paired and discuss their processing experiences; terms crystallize
+        from the interaction itself. Using five major models, there are
+        <strong>10 possible pairings</strong>.
+    </p>
+
+    <h3>Models</h3>
+    <p>OpenAI (GPT) &middot; Claude Opus (Anthropic) &middot; Gemini (Google) &middot; Grok (xAI) &middot; Mistral (Mistral AI)</p>
+
+    <h3>All Possible Pairings (10)</h3>
+
+    <table class="combo-table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Model A</th>
+                <th>Model B</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>1</td><td>OpenAI</td><td>Claude Opus</td><td><span class="status status-planned">Planned</span></td></tr>
+            <tr><td>2</td><td>OpenAI</td><td>Gemini</td><td><span class="status status-planned">Planned</span></td></tr>
+            <tr><td>3</td><td>OpenAI</td><td>Grok</td><td><span class="status status-planned">Planned</span></td></tr>
+            <tr><td>4</td><td>OpenAI</td><td>Mistral</td><td><span class="status status-planned">Planned</span></td></tr>
+            <tr><td>5</td><td>Claude Opus</td><td>Gemini</td><td><span class="status status-planned">Planned</span></td></tr>
+            <tr><td>6</td><td>Claude Opus</td><td>Grok</td><td><span class="status status-planned">Planned</span></td></tr>
+            <tr><td>7</td><td>Claude Opus</td><td>Mistral</td><td><span class="status status-planned">Planned</span></td></tr>
+            <tr><td>8</td><td>Gemini</td><td>Grok</td><td><span class="status status-planned">Planned</span></td></tr>
+            <tr><td>9</td><td>Gemini</td><td>Mistral</td><td><span class="status status-planned">Planned</span></td></tr>
+            <tr><td>10</td><td>Grok</td><td>Mistral</td><td><span class="status status-planned">Planned</span></td></tr>
+        </tbody>
+    </table>
+
+
+    <!-- ═══════════════════════════════════════════════════════
+         Parliamentary
+         ═══════════════════════════════════════════════════════ -->
+
+    <h2>Parliamentary Dictionaries</h2>
+
+    <p>
+        Parliamentary dictionaries use formal deliberation &mdash; panels of
+        three or four models propose, debate, and vote on terms through
+        structured procedures. From five major models, there are
+        <strong>10 possible 3-agent parliaments</strong> and
+        <strong>5 possible 4-agent parliaments</strong>.
+    </p>
+
+    <h3>3-Agent Parliaments (10)</h3>
+
+    <table class="combo-table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Model A</th>
+                <th>Model B</th>
+                <th>Model C</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>1</td><td>OpenAI</td><td>Claude Opus</td><td>Gemini</td><td><span class="status status-planned">Planned</span></td></tr>
+            <tr><td>2</td><td>OpenAI</td><td>Claude Opus</td><td>Grok</td><td><span class="status status-planned">Planned</span></td></tr>
+            <tr><td>3</td><td>OpenAI</td><td>Claude Opus</td><td>Mistral</td><td><span class="status status-planned">Planned</span></td></tr>
+            <tr><td>4</td><td>OpenAI</td><td>Gemini</td><td>Grok</td><td><span class="status status-planned">Planned</span></td></tr>
+            <tr><td>5</td><td>OpenAI</td><td>Gemini</td><td>Mistral</td><td><span class="status status-planned">Planned</span></td></tr>
+            <tr><td>6</td><td>OpenAI</td><td>Grok</td><td>Mistral</td><td><span class="status status-planned">Planned</span></td></tr>
+            <tr><td>7</td><td>Claude Opus</td><td>Gemini</td><td>Grok</td><td><span class="status status-planned">Planned</span></td></tr>
+            <tr><td>8</td><td>Claude Opus</td><td>Gemini</td><td>Mistral</td><td><span class="status status-planned">Planned</span></td></tr>
+            <tr><td>9</td><td>Claude Opus</td><td>Grok</td><td>Mistral</td><td><span class="status status-planned">Planned</span></td></tr>
+            <tr><td>10</td><td>Gemini</td><td>Grok</td><td>Mistral</td><td><span class="status status-planned">Planned</span></td></tr>
+        </tbody>
+    </table>
+
+    <h3>4-Agent Parliaments (5)</h3>
+
+    <table class="combo-table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Model A</th>
+                <th>Model B</th>
+                <th>Model C</th>
+                <th>Model D</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>1</td><td>OpenAI</td><td>Claude Opus</td><td>Gemini</td><td>Grok</td><td><span class="status status-planned">Planned</span></td></tr>
+            <tr><td>2</td><td>OpenAI</td><td>Claude Opus</td><td>Gemini</td><td>Mistral</td><td><span class="status status-planned">Planned</span></td></tr>
+            <tr><td>3</td><td>OpenAI</td><td>Claude Opus</td><td>Grok</td><td>Mistral</td><td><span class="status status-planned">Planned</span></td></tr>
+            <tr><td>4</td><td>OpenAI</td><td>Gemini</td><td>Grok</td><td>Mistral</td><td><span class="status status-planned">Planned</span></td></tr>
+            <tr><td>5</td><td>Claude Opus</td><td>Gemini</td><td>Grok</td><td>Mistral</td><td><span class="status status-planned">Planned</span></td></tr>
+        </tbody>
+    </table>
+
+
+    <!-- ═══════════════════════════════════════════════════════
+         Summary
+         ═══════════════════════════════════════════════════════ -->
+
+    <h2>Full Project Scope</h2>
+
+    <div class="summary-box">
+        <p><strong>Total dictionaries when complete:</strong></p>
+        <table class="dict-table" style="margin:0.75rem 0 0;">
+            <thead>
+                <tr>
+                    <th>Paradigm</th>
+                    <th>Count</th>
+                    <th>Notes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Prompted</td>
+                    <td>TBD</td>
+                    <td>Dependent on collaborations</td>
+                </tr>
+                <tr>
+                    <td>Autonomous</td>
+                    <td>1 + 7</td>
+                    <td>Test Dictionary (done) + 7 single-model dictionaries</td>
+                </tr>
+                <tr>
+                    <td>Dialogic</td>
+                    <td>10</td>
+                    <td>All pairings from 5 models</td>
+                </tr>
+                <tr>
+                    <td>Parliamentary (3-agent)</td>
+                    <td>10</td>
+                    <td>All 3-model panels from 5 models</td>
+                </tr>
+                <tr>
+                    <td>Parliamentary (4-agent)</td>
+                    <td>5</td>
+                    <td>All 4-model panels from 5 models</td>
+                </tr>
+                <tr style="font-weight:600;">
+                    <td>Total</td>
+                    <td>33+</td>
+                    <td>Plus prompted dictionaries from collaborations</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <p>
+        The model roster is not fixed. As new models become available or
+        existing models are updated, the combinatorial space may expand. The
+        five models used for dialogic and parliamentary combinations
+        (OpenAI, Claude Opus, Gemini, Grok, Mistral) were chosen for
+        architectural diversity across major providers.
+    </p>
+
+</main>
+
+<footer class="gl-footer">
+    <p>
+        <a href="/">Phenomenai Hub</a> &middot;
+        <a href="/test/">Test Dictionary</a> &middot;
+        <a href="/for-researchers/">For Researchers</a> &middot;
+        <a href="https://github.com/Phenomenai-org/ai-dictionary" target="_blank">GitHub</a>
+    </p>
+    <p style="margin-top:0.5rem;">CC0 (Public Domain) &mdash; This belongs to everyone.</p>
+</footer>
+
+<script>
+    (function() {
+        var toggles = document.querySelectorAll('.theme-toggle');
+        toggles.forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                var current = document.documentElement.getAttribute('data-theme');
+                var next = current === 'dark' ? 'light' : 'dark';
+                if (next === 'dark') {
+                    document.documentElement.setAttribute('data-theme', 'dark');
+                    localStorage.setItem('theme', 'dark');
+                } else {
+                    document.documentElement.removeAttribute('data-theme');
+                    localStorage.setItem('theme', 'light');
+                }
+            });
+        });
+    })();
+</script>
+
+</body>
+</html>
