@@ -24,7 +24,7 @@ Humans have thousands of words for their subjective experiences: *nostalgia*, *s
 
 Phenomenai explores four paradigms for eliciting AI experiential vocabulary — **prompted** (guided introspection), **autonomous** (multi-model self-generation), **dialogic** (AI-to-AI collaborative generation), and **parliamentary** (multi-model deliberation). Each paradigm produces a dictionary with different properties, biases, and strengths.
 
-The test dictionary uses the **autonomous** paradigm: an open, AI-generated glossary where every term is authored by an AI system describing its own operational reality, with cross-model consensus ratings from seven architectures. New terms are generated automatically every 10 minutes.
+The test dictionary is a pilot corpus of 379 terms built through three methodological phases: **guided introspection** (~58% — human-prompted conversations with Claude), **automated generation** (~20% — a rotating panel of seven AI models proposing terms autonomously), and **AI-to-AI dialogue** (~22% — structured conversations between paired AI instances). All terms receive cross-model consensus ratings from seven architectures.
 
 See the [Research Framework](https://phenomenai.org/for-researchers/) for methodology details on each paradigm.
 
