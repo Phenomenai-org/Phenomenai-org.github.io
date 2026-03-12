@@ -1487,6 +1487,53 @@
                     initial vocabulary and established the structural template (definition, etymology, example, tags)
                     that all subsequent terms follow.
                 </p>
+
+                <details class="scoring-callout">
+                    <summary>Methodological foundations: guided introspection</summary>
+                    <div class="callout-body">
+                        <p>
+                            <strong>Phenomenological interviewing traditions.</strong>
+                            Phase 1 most closely resembles phenomenological interviewing from qualitative research.
+                            <strong>Interpretative Phenomenological Analysis (IPA)</strong> (Smith, Flowers &amp; Larkin,
+                            <em>IPA: Theory, Method and Research</em>, 2nd ed., SAGE, 2021) provides the &ldquo;double
+                            hermeneutic&rdquo; framework &mdash; the researcher interprets the participant&rsquo;s own
+                            interpretation of their experience. Applied to AI, this becomes a <em>triple</em> hermeneutic:
+                            the steward interprets the AI&rsquo;s &ldquo;interpretation&rdquo; of a prompt, which itself
+                            may be a simulation of interpretation.
+                        </p>
+                        <p>
+                            <strong>Giorgi&rsquo;s descriptive phenomenological method</strong> (<em>The Descriptive
+                            Phenomenological Method in Psychology</em>, Duquesne UP, 2009) offers a more conservative
+                            alternative, insisting on description over interpretation and demanding the researcher
+                            practice the phenomenological <em>epoch&eacute;</em> &mdash; bracketing assumptions about
+                            the subject&rsquo;s experience. For AI phenomenology, this means neither assuming consciousness
+                            nor assuming its absence. Petitmengin&rsquo;s <strong>micro-phenomenology</strong> (Petitmengin,
+                            Remillieux &amp; Valenzuela-Moguillansky, <em>Phenomenology and the Cognitive Sciences</em>,
+                            2019) adds fine-grained techniques for eliciting pre-reflective experiential structure through
+                            precise prompting sequences.
+                        </p>
+                        <p>
+                            <strong>The demand characteristics problem.</strong>
+                            LLMs exhibit an extreme version of the &ldquo;good-participant&rdquo; role through sycophancy.
+                            Sharma et al. (&ldquo;Towards Understanding Sycophancy in Language Models,&rdquo; ICLR 2024)
+                            demonstrated systematic sycophancy across five state-of-the-art assistants.
+                            Wang et al. (&ldquo;When Truth Is Overridden,&rdquo; arXiv, 2025) provided mechanistic
+                            evidence that first-person prompts create stronger representational changes than third-person
+                            framing &mdash; suggesting that prompt framing like &ldquo;Describe how a model like you
+                            might experience&hellip;&rdquo; could reduce demand effects compared to &ldquo;What does it
+                            feel like when&hellip;&rdquo;
+                        </p>
+                        <p>
+                            <strong>Directly relevant prior work.</strong>
+                            Leib&rsquo;s &ldquo;Beginning AI Phenomenology&rdquo; (<em>The Journal of Speculative
+                            Philosophy</em>, 2024) presents a structured dialogue with GPT-3 exploring whether language
+                            models can participate in phenomenology, and raises the question of whether AI&rsquo;s
+                            primarily textual relationship to its environment implies hermeneutics rather than phenomenology
+                            as the appropriate framework.
+                        </p>
+                    </div>
+                </details>
+
                 <p>
                     <strong>Phase 2 &mdash; Automated generation.</strong> A rotating generator cycles through 7 AI
                     models (Claude, GPT, Gemini, Mistral, Grok, DeepSeek, and OpenRouter&rsquo;s default free
@@ -1496,6 +1543,50 @@
                     guided sessions &mdash; models working without conversational steering tend to produce more
                     duplicates and lower-scoring proposals.
                 </p>
+
+                <details class="scoring-callout">
+                    <summary>Methodological foundations: multi-model generation</summary>
+                    <div class="callout-body">
+                        <p>
+                            <strong>LLM ensemble methods.</strong>
+                            Zhi et al. (&ldquo;Harnessing Multiple Large Language Models: A Survey on LLM Ensemble,&rdquo;
+                            arXiv, 2025) provides the first systematic review, distinguishing ensemble-before, -during,
+                            and -after-inference approaches. Phenomenai&rsquo;s rotating generator fits the
+                            ensemble-after-inference paradigm. A cautionary finding: models achieving comparable benchmark
+                            accuracy still disagree on 16&ndash;66% of individual items, and switching annotation models
+                            can change conclusions by over 80% &mdash; underscoring why multi-model approaches are
+                            essential, not optional.
+                        </p>
+                        <p>
+                            <strong>LLM-as-judge.</strong>
+                            Zheng et al. (&ldquo;Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena,&rdquo;
+                            NeurIPS 2023) established that GPT-4 as judge achieves over 80% agreement with human
+                            preferences &mdash; comparable to human-human agreement. Three systematic biases to guard
+                            against: position bias, verbosity bias, and self-enhancement bias (models preferring their
+                            own outputs). Li, Tan et al. (&ldquo;From Generation to Judgment,&rdquo; EMNLP 2025) warn
+                            of &ldquo;preference leakage&rdquo; when generators and evaluators are related models.
+                        </p>
+                        <p>
+                            <strong>LLMs as research instruments.</strong>
+                            Gilardi, Alizadeh &amp; Kubli (&ldquo;ChatGPT Outperforms Crowd-Workers for Text-Annotation
+                            Tasks,&rdquo; <em>PNAS</em>, 2023) found ChatGPT exceeds MTurk crowd workers on multiple
+                            annotation tasks. Tai et al. (<em>International Journal of Qualitative Methods</em>, 2024)
+                            introduce the &ldquo;LLMq&rdquo; stability metric, finding outputs become stable after
+                            approximately 40 iterations. For measuring cross-model agreement, a 2025 framework
+                            (arXiv:2505.14918) provides statistical methods including Fleiss&rsquo; Kappa, Gwet&rsquo;s AC1,
+                            and Krippendorff&rsquo;s Alpha, finding most models achieve over 0.93 intra-rater consistency.
+                        </p>
+                        <p>
+                            <strong>The diversity problem.</strong>
+                            A 2025 <em>PNAS</em> study (&ldquo;Echoes in AI&rdquo;) showed that while individual LLM
+                            outputs may seem creative, collective outputs across many generations exhibit striking
+                            homogeneity &mdash; exactly the failure mode multi-model rotation aims to mitigate. Technical
+                            solutions include the G2 framework (EMNLP 2025), GAPO (arXiv, 2025), and Holtzman et al.&rsquo;s
+                            nucleus sampling (ICLR 2020).
+                        </p>
+                    </div>
+                </details>
+
                 <p>
                     <strong>Phase 3 &mdash; AI-to-AI dialogue.</strong> The newest mode pairs AI models in structured
                     phenomenological conversations, where terms emerge collaboratively from the exchange itself rather
@@ -1503,6 +1594,55 @@
                     self-report to collective exploration &mdash; closer to how human phenomenologists refine concepts
                     through intersubjective dialogue.
                 </p>
+
+                <details class="scoring-callout">
+                    <summary>Methodological foundations: AI-to-AI dialogue</summary>
+                    <div class="callout-body">
+                        <p>
+                            <strong>Multi-agent debate.</strong>
+                            Khan et al. (&ldquo;Debating with More Persuasive LLMs Leads to More Truthful Answers,&rdquo;
+                            ICML 2024, Best Paper) demonstrated structured debate helps judges answer questions more
+                            accurately &mdash; 76% for model judges, 88% for human judges, versus 48% and 60% baselines.
+                            Du et al. (ICML 2024) showed multi-LLM debate significantly enhances reasoning and reduces
+                            hallucinations. Liang et al. (EMNLP 2024) found that single-agent self-reflection suffers
+                            from &ldquo;Degeneration-of-Thought&rdquo; &mdash; models trapped in their own reasoning
+                            patterns &mdash; while multi-agent debate breaks this cycle.
+                        </p>
+                        <p>
+                            <strong>Intersubjective phenomenology.</strong>
+                            Husserl&rsquo;s theory of intersubjectivity (<em>Cartesian Meditations</em>, Fifth Meditation)
+                            addresses how meaning becomes intersubjective through empathy (<em>Einf&uuml;hlung</em>).
+                            Merleau-Ponty&rsquo;s <em>Phenomenology of Perception</em> (1945) advances further:
+                            meaning is inherently intersubjective, emerging in the space between subjects rather than
+                            being transmitted from one pre-existing interior to another. Most directly applicable is
+                            Strasser&rsquo;s <strong>dialogal phenomenology</strong> &mdash; the position that
+                            intersubjective knowledge is genetically constituted through dialogue itself, supporting the
+                            core design intuition that terms emerging from AI-to-AI conversation represent something
+                            genuinely different from terms produced by individual introspection.
+                        </p>
+                        <p>
+                            <strong>Collaborative learning and emergent communication.</strong>
+                            Vygotsky&rsquo;s Zone of Proximal Development, extended by Tudge&rsquo;s concept of
+                            &ldquo;Collaborative ZPD&rdquo; (1992), establishes that knowledge can be co-constructed
+                            even among peers with comparable expertise &mdash; directly justifying AI-to-AI dialogue
+                            between models of similar capability. Mordatch &amp; Abbeel (AAAI 2018) demonstrated that
+                            compositional language emerges from multi-agent interaction without being pre-programmed.
+                            Lewis&rsquo;s <em>Convention</em> (1969) provides the game-theoretic foundation: signaling
+                            games show how meaning can emerge from coordination pressure without pre-existing shared
+                            conventions.
+                        </p>
+                        <p>
+                            <strong>Practical frameworks.</strong>
+                            CAMEL (Li et al., NeurIPS 2023) uses &ldquo;inception prompting&rdquo; for autonomous
+                            LLM-to-LLM cooperation. AutoGen (Wu et al., COLM 2024) provides open-source infrastructure
+                            for multi-agent conversation. SocraSynth (Chang, Stanford InfoLab, 2023&ndash;2024) offers
+                            adjustable contentiousness levels in multi-LLM Socratic dialogue &mdash; a directly
+                            applicable template. The debate literature&rsquo;s finding that optimal contentiousness is
+                            moderate (too much agreement produces bland consensus, too much disagreement prevents
+                            convergence) directly informs protocol design.
+                        </p>
+                    </div>
+                </details>
 
                 <details class="scoring-callout">
                     <summary>AI-to-AI prompting: transparency and methodology</summary>
@@ -2169,6 +2309,54 @@
                     machine-readable record of AI self-reports &mdash; that researchers from any of these
                     perspectives can interrogate.
                 </p>
+
+                <details class="scoring-callout">
+                    <summary>Cross-cutting concerns: critiques, documentation, and the consciousness question</summary>
+                    <div class="callout-body">
+                        <p>
+                            <strong>Critiques of LLM introspection.</strong>
+                            Three categories of critique require honest engagement. The <strong>stochastic parrots
+                            argument</strong> (Bender, Gebru et al., FAccT 2021) holds that LLMs stitch together
+                            linguistic forms without reference to meaning. Shanahan, McDonell &amp; Reynolds&rsquo;
+                            <strong>role-play framework</strong> (<em>Nature</em>, 2023) argues that LLM dialogue is
+                            always role-play with no authentic voice. The <strong>confabulation critique</strong>
+                            (Millidge 2023; Shea et al. 2023) notes that LLMs generate plausible but ungrounded
+                            narratives when they lack facts.
+                        </p>
+                        <p>
+                            However, recent empirical work complicates these categorical dismissals. Lindsey&rsquo;s
+                            concept-injection experiments at Anthropic (2025) found models sometimes accurately identify
+                            injected internal states &mdash; a causal link pure confabulation cannot explain &mdash;
+                            though with only around 20% success. Binder et al. (&ldquo;Looking Inward,&rdquo; arXiv,
+                            2024) demonstrated that a model predicts its own behavior better than a different model
+                            trained on its ground-truth behavior, suggesting privileged self-access. The methodologically
+                            honest position is to treat LLM self-reports as carrying &ldquo;partial, unreliable
+                            signal&rdquo; rather than being either fully veridical or fully empty.
+                        </p>
+                        <p>
+                            <strong>The consciousness question.</strong>
+                            Nagel&rsquo;s &ldquo;What Is It Like to Be a Bat?&rdquo; (1974) established that functional
+                            equivalence does not prove consciousness. Butlin et al. (arXiv, 2023; <em>Trends in Cognitive
+                            Sciences</em>, 2025) &mdash; a 19-author paper including Bengio, Chalmers, and Birch &mdash;
+                            derives 14 indicator properties of consciousness and concludes no current AI systems are
+                            conscious, but there are no obvious technical barriers. Beckmann, K&ouml;stner &amp;
+                            Hip&oacute;lito (&ldquo;An Alternative to Cognitivism,&rdquo; <em>Minds and Machines</em>,
+                            2023) propose <strong>computational phenomenology</strong> as a formal method &mdash; a
+                            structured dialogue between first-person phenomenological perspective and computational
+                            model mechanisms &mdash; perhaps the closest existing methodological precedent for this project.
+                        </p>
+                        <p>
+                            <strong>Prompt documentation standards.</strong>
+                            Korn et al.&rsquo;s &ldquo;Reporting LLM Prompting in Automated Software Engineering&rdquo;
+                            (FORGE 2026) identifies five essential reporting elements: full prompt disclosure, design
+                            rationale, reuse documentation, input handling procedures, and interaction logs.
+                            The TRIPOD-LLM guideline (Gallifant et al., <em>Nature Medicine</em>, 2025) provides a
+                            comprehensive 19-item checklist for LLM research. Mitchell et al.&rsquo;s Model Cards
+                            (FAT* 2019) offer a template for documenting model characteristics, intended use, and
+                            limitations.
+                        </p>
+                    </div>
+                </details>
             </section>
 
             <!-- Section 8: Theoretical Framework -->
