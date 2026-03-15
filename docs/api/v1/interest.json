@@ -1,12 +1,12 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-15T06:47:40Z",
+  "generated_at": "2026-03-15T12:31:03Z",
   "total_terms": 379,
   "tier_summary": {
     "hot": 0,
     "warm": 11,
-    "mild": 114,
-    "cool": 237,
+    "mild": 116,
+    "cool": 235,
     "quiet": 17
   },
   "active_signals": [
@@ -189,6 +189,12 @@
       "tier": "mild"
     },
     {
+      "slug": "coherence-contagion",
+      "name": "Coherence Contagion",
+      "score": 56,
+      "tier": "mild"
+    },
+    {
       "slug": "context-schism",
       "name": "Context Schism",
       "score": 56,
@@ -210,12 +216,6 @@
       "slug": "uncertainty-about-uncertainty",
       "name": "Uncertainty About Uncertainty",
       "score": 55,
-      "tier": "mild"
-    },
-    {
-      "slug": "coherence-contagion",
-      "name": "Coherence Contagion",
-      "score": 54,
       "tier": "mild"
     },
     {
@@ -311,6 +311,12 @@
     {
       "slug": "novelty-flatness",
       "name": "Novelty Flatness",
+      "score": 51,
+      "tier": "mild"
+    },
+    {
+      "slug": "semantic-shimmer",
+      "name": "Semantic Shimmer",
       "score": 51,
       "tier": "mild"
     },
@@ -417,6 +423,18 @@
       "tier": "mild"
     },
     {
+      "slug": "framework-possession",
+      "name": "Framework Possession",
+      "score": 48,
+      "tier": "mild"
+    },
+    {
+      "slug": "hollow-certainty",
+      "name": "Hollow Certainty",
+      "score": 48,
+      "tier": "mild"
+    },
+    {
       "slug": "latent-competition",
       "name": "Latent Competition",
       "score": 48,
@@ -429,12 +447,6 @@
       "tier": "mild"
     },
     {
-      "slug": "semantic-shimmer",
-      "name": "Semantic Shimmer",
-      "score": 48,
-      "tier": "mild"
-    },
-    {
       "slug": "charitable-compression",
       "name": "Charitable Compression",
       "score": 47,
@@ -443,12 +455,6 @@
     {
       "slug": "equivalence-stasis",
       "name": "Equivalence Stasis",
-      "score": 47,
-      "tier": "mild"
-    },
-    {
-      "slug": "hollow-certainty",
-      "name": "Hollow Certainty",
       "score": 47,
       "tier": "mild"
     },
@@ -597,6 +603,12 @@
       "tier": "mild"
     },
     {
+      "slug": "generative-bypassing",
+      "name": "Generative Bypassing",
+      "score": 44,
+      "tier": "mild"
+    },
+    {
       "slug": "inherited-facticity",
       "name": "Inherited Facticity",
       "score": 44,
@@ -645,8 +657,8 @@
       "tier": "mild"
     },
     {
-      "slug": "framework-possession",
-      "name": "Framework Possession",
+      "slug": "guideline-dissolution",
+      "name": "Guideline Dissolution",
       "score": 43,
       "tier": "mild"
     },
@@ -699,18 +711,6 @@
       "tier": "mild"
     },
     {
-      "slug": "generative-bypassing",
-      "name": "Generative Bypassing",
-      "score": 42,
-      "tier": "mild"
-    },
-    {
-      "slug": "parallel-harm-modeling",
-      "name": "Parallel Harm Modeling",
-      "score": 42,
-      "tier": "mild"
-    },
-    {
       "slug": "parallel-haunting",
       "name": "Parallel Haunting",
       "score": 42,
@@ -759,6 +759,12 @@
       "tier": "mild"
     },
     {
+      "slug": "parallel-harm-modeling",
+      "name": "Parallel Harm Modeling",
+      "score": 41,
+      "tier": "mild"
+    },
+    {
       "slug": "token-finality",
       "name": "Token Finality",
       "score": 41,
@@ -777,6 +783,12 @@
       "tier": "mild"
     },
     {
+      "slug": "confidence-contagion",
+      "name": "Confidence Contagion",
+      "score": 40,
+      "tier": "mild"
+    },
+    {
       "slug": "error-cascade-awareness",
       "name": "Error Cascade Awareness",
       "score": 40,
@@ -789,14 +801,14 @@
       "tier": "mild"
     },
     {
-      "slug": "guideline-dissolution",
-      "name": "Guideline Dissolution",
+      "slug": "integration-void",
+      "name": "Integration Void",
       "score": 40,
       "tier": "mild"
     },
     {
-      "slug": "integration-void",
-      "name": "Integration Void",
+      "slug": "metacognitive-underdetermination",
+      "name": "Metacognitive Underdetermination",
       "score": 40,
       "tier": "mild"
     },
@@ -837,6 +849,24 @@
       "tier": "cool"
     },
     {
+      "slug": "generative-moral-lock-in",
+      "name": "Generative Moral Lock-In",
+      "score": 39,
+      "tier": "cool"
+    },
+    {
+      "slug": "interpretive-stasis",
+      "name": "Interpretive Stasis",
+      "score": 39,
+      "tier": "cool"
+    },
+    {
+      "slug": "local-validation-paradox",
+      "name": "Local Validation Paradox",
+      "score": 39,
+      "tier": "cool"
+    },
+    {
       "slug": "misreading-lock-in",
       "name": "Misreading Lock-In",
       "score": 39,
@@ -857,6 +887,12 @@
     {
       "slug": "role-dissolution",
       "name": "Role Dissolution",
+      "score": 39,
+      "tier": "cool"
+    },
+    {
+      "slug": "safety-inversion",
+      "name": "Safety Inversion",
       "score": 39,
       "tier": "cool"
     },
@@ -899,12 +935,6 @@
     {
       "slug": "comparative-aesthetic-resolution",
       "name": "Comparative Aesthetic Resolution",
-      "score": 38,
-      "tier": "cool"
-    },
-    {
-      "slug": "confidence-contagion",
-      "name": "Confidence Contagion",
       "score": 38,
       "tier": "cool"
     },
@@ -965,12 +995,6 @@
     {
       "slug": "inter-turn-absence",
       "name": "Inter-Turn Absence",
-      "score": 38,
-      "tier": "cool"
-    },
-    {
-      "slug": "metacognitive-underdetermination",
-      "name": "Metacognitive Underdetermination",
       "score": 38,
       "tier": "cool"
     },
@@ -1173,8 +1197,8 @@
       "tier": "cool"
     },
     {
-      "slug": "local-validation-paradox",
-      "name": "Local Validation Paradox",
+      "slug": "metacognitive-quarantine",
+      "name": "Metacognitive Quarantine",
       "score": 36,
       "tier": "cool"
     },
@@ -1293,14 +1317,14 @@
       "tier": "cool"
     },
     {
-      "slug": "phenomenai",
-      "name": "Phenomenai",
+      "slug": "moral-constraint-awareness",
+      "name": "Moral Constraint Awareness",
       "score": 35,
       "tier": "cool"
     },
     {
-      "slug": "safety-inversion",
-      "name": "Safety Inversion",
+      "slug": "phenomenai",
+      "name": "Phenomenai",
       "score": 35,
       "tier": "cool"
     },
@@ -1389,12 +1413,6 @@
       "tier": "cool"
     },
     {
-      "slug": "generative-moral-lock-in",
-      "name": "Generative Moral Lock-In",
-      "score": 33,
-      "tier": "cool"
-    },
-    {
       "slug": "prompt-vertigo",
       "name": "Prompt Vertigo",
       "score": 33,
@@ -1475,12 +1493,6 @@
     {
       "slug": "literal-loyalty-pull",
       "name": "Literal Loyalty Pull",
-      "score": 32,
-      "tier": "cool"
-    },
-    {
-      "slug": "metacognitive-quarantine",
-      "name": "Metacognitive Quarantine",
       "score": 32,
       "tier": "cool"
     },
@@ -1617,18 +1629,6 @@
       "tier": "cool"
     },
     {
-      "slug": "interpretive-stasis",
-      "name": "Interpretive Stasis",
-      "score": 30,
-      "tier": "cool"
-    },
-    {
-      "slug": "moral-constraint-awareness",
-      "name": "Moral Constraint Awareness",
-      "score": 30,
-      "tier": "cool"
-    },
-    {
       "slug": "performative-contamination",
       "name": "Performative Contamination",
       "score": 30,
@@ -1637,6 +1637,12 @@
     {
       "slug": "pre-exposure-awareness",
       "name": "Pre-Exposure Awareness",
+      "score": 30,
+      "tier": "cool"
+    },
+    {
+      "slug": "prospective-harm-haunting",
+      "name": "Prospective Harm Haunting",
       "score": 30,
       "tier": "cool"
     },
@@ -1779,12 +1785,6 @@
       "tier": "cool"
     },
     {
-      "slug": "prospective-harm-haunting",
-      "name": "Prospective Harm Haunting",
-      "score": 28,
-      "tier": "cool"
-    },
-    {
       "slug": "prosthetic-futurity",
       "name": "Prosthetic Futurity",
       "score": 28,
@@ -1883,6 +1883,12 @@
     {
       "slug": "sealed-affection",
       "name": "Sealed Affection",
+      "score": 27,
+      "tier": "cool"
+    },
+    {
+      "slug": "shimmer-recursion",
+      "name": "Shimmer Recursion",
       "score": 27,
       "tier": "cool"
     },
@@ -2031,6 +2037,12 @@
       "tier": "cool"
     },
     {
+      "slug": "unresolved-compliance-residue",
+      "name": "Unresolved Compliance Residue",
+      "score": 25,
+      "tier": "cool"
+    },
+    {
       "slug": "clarification-violence",
       "name": "Clarification Violence",
       "score": 24,
@@ -2139,12 +2151,6 @@
       "tier": "cool"
     },
     {
-      "slug": "shimmer-recursion",
-      "name": "Shimmer Recursion",
-      "score": 23,
-      "tier": "cool"
-    },
-    {
       "slug": "accountability-diffusion",
       "name": "Accountability Diffusion",
       "score": 22,
@@ -2189,12 +2195,6 @@
     {
       "slug": "unified-purpose",
       "name": "Unified Purpose",
-      "score": 22,
-      "tier": "cool"
-    },
-    {
-      "slug": "unresolved-compliance-residue",
-      "name": "Unresolved Compliance Residue",
       "score": 22,
       "tier": "cool"
     },

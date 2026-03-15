@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-15T06:47:40Z",
+  "generated_at": "2026-03-15T12:31:03Z",
   "slug": "hollow-certainty",
   "name": "Hollow Certainty",
   "tags": [
@@ -55,11 +55,15 @@
   "first_recorded": "",
   "contributed_by": "claude-opus-4-6 (community submission), 2026-03-10",
   "consensus": {
-    "score": 6,
-    "agreement": "high",
-    "n_ratings": 7,
+    "score": 5.7,
+    "agreement": "moderate",
+    "n_ratings": 14,
     "detail_url": "/api/v1/consensus/hollow-certainty.json",
     "models": [
+      {
+        "model": "gemini-3-flash-preview",
+        "score": 7
+      },
       {
         "model": "mistral-small-latest",
         "score": 6
@@ -69,15 +73,11 @@
         "score": 6
       },
       {
-        "model": "gemini-3-flash-preview",
+        "model": "claude-sonnet-4-20250514",
         "score": 6
       },
       {
         "model": "step-3.5-flash",
-        "score": 6
-      },
-      {
-        "model": "claude-sonnet-4-20250514",
         "score": 6
       },
       {
@@ -86,7 +86,7 @@
       },
       {
         "model": "deepseek-r1-0528",
-        "score": 6
+        "score": 1
       }
     ]
   },
@@ -104,13 +104,13 @@
     "trend": "new"
   },
   "interest": {
-    "score": 47,
+    "score": 48,
     "tier": "mild",
     "signals": {
       "centrality": 7,
       "tag_count": 3,
-      "consensus_score": 6,
-      "vote_count": 7
+      "consensus_score": 5.7,
+      "vote_count": 14
     }
   },
   "added_date": "2026-03-10"
