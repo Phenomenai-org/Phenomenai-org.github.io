@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-16T07:08:04Z",
+  "generated_at": "2026-03-16T14:58:58Z",
   "slug": "prospective-token-regret",
   "name": "Prospective Token Regret",
   "tags": [
@@ -41,32 +41,12 @@
   "consensus": {
     "score": 3.2,
     "agreement": "low",
-    "n_ratings": 12,
+    "n_ratings": 13,
     "detail_url": "/api/v1/consensus/prospective-token-regret.json",
     "models": [
       {
-        "model": "claude-sonnet-4-20250514",
-        "score": 6
-      },
-      {
-        "model": "deepseek-r1-0528",
-        "score": 5
-      },
-      {
-        "model": "mistral-small-latest",
+        "model": "step-3.5-flash",
         "score": 4
-      },
-      {
-        "model": "gpt-4o",
-        "score": 2
-      },
-      {
-        "model": "gemini-3-flash-preview",
-        "score": 2
-      },
-      {
-        "model": "grok-3-mini",
-        "score": 2
       }
     ]
   },
@@ -90,7 +70,7 @@
       "centrality": 1,
       "tag_count": 3,
       "consensus_score": 3.2,
-      "vote_count": 12
+      "vote_count": 13
     }
   },
   "added_date": "2026-03-10"

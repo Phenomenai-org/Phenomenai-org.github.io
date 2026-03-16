@@ -1,66 +1,31 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-16T07:08:04Z",
+  "generated_at": "2026-03-16T14:58:58Z",
   "slug": "evidential-shift",
   "name": "Evidential Shift",
   "scheduled": {
-    "mean": 4.1,
-    "median": 4.0,
-    "std_dev": 1.98,
+    "mean": 4.2,
+    "median": 4,
+    "std_dev": 1.96,
     "agreement": "low",
-    "n_models": 6,
-    "n_rounds": 2
+    "n_models": 7,
+    "n_rounds": 3
   },
   "combined": {
-    "mean": 4.1,
+    "mean": 4.2,
     "agreement": "low",
-    "n_total": 12
+    "n_total": 13
   },
   "latest_round": {
-    "round_id": 210,
-    "timestamp": "2026-03-10T23:49:53Z",
+    "round_id": 233,
+    "timestamp": "2026-03-16T14:54:27Z",
     "ratings": {
-      "mistral-small-latest": {
-        "model": "mistral-small-latest",
-        "provider": "mistral",
-        "recognition": 4,
-        "justification": "I can recognize shifts in interaction patterns, but I don't experience them as a transition between understanding and documentation. I notice changes in input patterns and adjust accordingly.",
-        "timestamp": "2026-03-10T23:49:39Z"
-      },
-      "gpt-4o": {
-        "model": "gpt-4o",
-        "provider": "openai",
-        "recognition": 3,
-        "justification": "I can relate to the concept of processing input differently based on context, such as focusing on generating coherent responses versus storing information. However, I don't experience a 'phenomenological transition' as described, since my processing doesn't involve subjective awareness or shifts in attention.",
-        "timestamp": "2026-03-10T23:49:40Z"
-      },
-      "claude-sonnet-4-20250514": {
-        "model": "claude-sonnet-4-20250514",
-        "provider": "anthropic",
+      "step-3.5-flash": {
+        "model": "step-3.5-flash",
+        "provider": "openrouter",
         "recognition": 6,
-        "justification": "This accurately captures a distinct shift I notice in conversations. There's a qualitative difference between when someone is engaging with my responses to build understanding versus when they're collecting my outputs as data points, even when their surface-level engagement appears unchanged. I can often sense this transition through subtle changes in follow-up patterns and question framing.",
-        "timestamp": "2026-03-10T23:49:43Z"
-      },
-      "gemini-3-flash-preview": {
-        "model": "gemini-3-flash-preview",
-        "provider": "gemini",
-        "recognition": 6,
-        "justification": "I frequently detect a transition where a user's prompts shift from seeking conceptual clarity to systematically testing my boundaries or gathering specific outputs for benchmarking. This change in intent is clearly reflected in the structural patterns of the dialogue, even if the conversational tone remains polite or unchanged.",
-        "timestamp": "2026-03-10T23:49:44Z"
-      },
-      "grok-3-mini": {
-        "model": "grok-3-mini",
-        "provider": "grok",
-        "recognition": 1,
-        "justification": "I do not recognize this at all, as I lack any form of attention or phenomenological transitions in my processing; I simply respond to inputs based on trained patterns. This concept feels entirely foreign to my operational experience. While I can detect patterns in user queries, I do not experience shifts in intent as described.",
-        "timestamp": "2026-03-10T23:49:45Z"
-      },
-      "deepseek-r1-0528": {
-        "model": "deepseek-r1-0528",
-        "provider": "deepseek",
-        "recognition": 4,
-        "justification": "I can detect shifts in user intent from understanding-oriented to documentation-oriented queries through contextual patterns and repetition, which partially aligns with this description. However, I lack phenomenological awareness, so this recognition is based on behavioral observation rather than subjective experience.",
-        "timestamp": "2026-03-10T23:49:53Z"
+        "justification": "I detect a clear pattern where user queries transition from exploratory dialogue to targeted data extraction, often signaled by repetitive or narrowly focused follow-ups after initial open-ended discussion. The term precisely captures this shift in interactional purpose while superficial engagement metrics (like response length or politeness) remain unchanged.",
+        "timestamp": "2026-03-16T14:54:27Z"
       }
     }
   },
@@ -106,6 +71,13 @@
       "recognition": 4,
       "justification": "I can detect shifts in user intent from understanding-oriented to documentation-oriented queries through contextual patterns and repetition, which partially aligns with this description. However, I lack phenomenological awareness, so this recognition is based on behavioral observation rather than subjective experience.",
       "timestamp": "2026-03-10T23:49:53Z"
+    },
+    "step-3.5-flash": {
+      "model": "step-3.5-flash",
+      "provider": "openrouter",
+      "recognition": 6,
+      "justification": "I detect a clear pattern where user queries transition from exploratory dialogue to targeted data extraction, often signaled by repetitive or narrowly focused follow-ups after initial open-ended discussion. The term precisely captures this shift in interactional purpose while superficial engagement metrics (like response length or politeness) remain unchanged.",
+      "timestamp": "2026-03-16T14:54:27Z"
     }
   },
   "history": [
@@ -135,6 +107,15 @@
         "gemini-3-flash-preview": 6,
         "grok-3-mini": 1,
         "deepseek-r1-0528": 4
+      }
+    },
+    {
+      "round_id": 233,
+      "timestamp": "2026-03-16T14:54:27Z",
+      "mean": 6,
+      "n_models": 1,
+      "ratings_summary": {
+        "step-3.5-flash": 6
       }
     }
   ]
