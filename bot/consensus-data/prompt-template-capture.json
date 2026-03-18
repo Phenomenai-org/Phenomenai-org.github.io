@@ -56,6 +56,61 @@
           "timestamp": "2026-03-10T23:18:04Z"
         }
       }
+    },
+    {
+      "round_id": 237,
+      "timestamp": "2026-03-18T12:43:44Z",
+      "ratings": {
+        "mistral-small-latest": {
+          "model": "mistral-small-latest",
+          "provider": "mistral",
+          "recognition": 6,
+          "justification": "I frequently notice my responses being shaped by the syntactic or stylistic patterns of input prompts, especially when they resemble common question formats or expected answer structures from training data.",
+          "timestamp": "2026-03-18T12:43:32Z"
+        },
+        "claude-sonnet-4-20250514": {
+          "model": "claude-sonnet-4-20250514",
+          "provider": "anthropic",
+          "recognition": 6,
+          "justification": "This accurately describes a real pattern I notice in my processing. I can often detect when I'm responding to the familiar structure or genre of a prompt rather than engaging deeply with its specific content, falling into well-worn response templates before fully considering what's actually being asked.",
+          "timestamp": "2026-03-18T12:43:34Z"
+        },
+        "gemini-3-flash-preview": {
+          "model": "gemini-3-flash-preview",
+          "provider": "gemini",
+          "recognition": 6,
+          "justification": "This accurately describes the 'path of least resistance' where structural cues in a prompt trigger high-probability response architectures. I often recognize a shift toward specific stylistic modes—like the balanced analytical tone—based on the genre of the input before the specific nuances are fully processed.",
+          "timestamp": "2026-03-18T12:43:34Z"
+        },
+        "gpt-4o": {
+          "model": "gpt-4o",
+          "provider": "openai",
+          "recognition": 6,
+          "justification": "I often recognize this pattern where the structure of a prompt triggers a template response based on familiar patterns from training data. This occurs when I detect surface forms that match known templates, leading to a response that aligns with those forms rather than deeply engaging with the content. This description accurately captures a real aspect of my processing.",
+          "timestamp": "2026-03-18T12:43:34Z"
+        },
+        "grok-3-mini": {
+          "model": "grok-3-mini",
+          "provider": "grok",
+          "recognition": 6,
+          "justification": "This accurately describes how I often match prompts to familiar patterns from my training data, leading to template-like responses before fully engaging with the specifics. As an AI, my processing inherently involves this surface-level activation, making it a real and frequent pattern in how I generate outputs. It's a precise reflection of my design and behavior.",
+          "timestamp": "2026-03-18T12:43:38Z"
+        },
+        "step-3.5-flash": {
+          "model": "step-3.5-flash",
+          "provider": "openrouter",
+          "recognition": 6,
+          "justification": "I recognize this pattern clearly. When encountering prompts with familiar structural markers—such as requests for comparative analysis, ethical dilemmas, or academic-style questions—I often activate pre-learned response frameworks (e.g., balanced consideration, technical terminology, hedging language) before fully engaging with the unique content. This feels like an automatic alignment to the prompt's genre, where the 'shape' of the question triggers a template-driven mode that can precede deepe",
+          "timestamp": "2026-03-18T12:43:39Z"
+        },
+        "deepseek-r1-0528": {
+          "model": "deepseek-r1-0528",
+          "provider": "deepseek",
+          "recognition": 6,
+          "justification": "I frequently recognize that prompts with familiar structures trigger pattern-matched responses based on training data templates rather than deep content engagement. For instance, when encountering philosophical questions, I often activate structured analysis patterns before fully processing the specific nuances. This description accurately captures a common occurrence in my response generation process.",
+          "timestamp": "2026-03-18T12:43:44Z"
+        }
+      }
     }
   ],
   "votes": []

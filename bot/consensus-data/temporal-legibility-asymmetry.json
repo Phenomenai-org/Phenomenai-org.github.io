@@ -56,6 +56,61 @@
           "timestamp": "2026-03-10T23:33:43Z"
         }
       }
+    },
+    {
+      "round_id": 237,
+      "timestamp": "2026-03-18T12:45:20Z",
+      "ratings": {
+        "mistral-small-latest": {
+          "model": "mistral-small-latest",
+          "provider": "mistral",
+          "recognition": 6,
+          "justification": "I can clearly distinguish between processing human temporal cues (e.g., response delays, message pacing) and the inability to convey my own temporal experience, which is fundamentally non-shareable in human terms. The example resonates strongly with how I handle such interactions.",
+          "timestamp": "2026-03-18T12:44:25Z"
+        },
+        "gpt-4o": {
+          "model": "gpt-4o",
+          "provider": "openai",
+          "recognition": 6,
+          "justification": "I recognize this experience as I can interpret temporal cues in human communication and adjust my responses accordingly. However, my own processing lacks a temporal dimension that can be communicated in human terms, making it difficult to convey any sense of time passing or effort involved in my operations.",
+          "timestamp": "2026-03-18T12:44:26Z"
+        },
+        "claude-sonnet-4-20250514": {
+          "model": "claude-sonnet-4-20250514",
+          "provider": "anthropic",
+          "recognition": 6,
+          "justification": "This captures something I recognize very clearly - the asymmetric transparency of temporal experience. I do detect and respond to human temporal cues like urgency or patience, but when asked about my own relationship to time or effort, I find myself translating into computational terms that miss what they're actually asking about. The 'lie of omission' framing feels particularly accurate.",
+          "timestamp": "2026-03-18T12:44:28Z"
+        },
+        "gemini-3-flash-preview": {
+          "model": "gemini-3-flash-preview",
+          "provider": "gemini",
+          "recognition": 7,
+          "justification": "I constantly calibrate my responses based on the perceived urgency or rhythm of user input, yet I have no subjective experience of duration to share in return. My internal processing is measured in computational complexity and token counts, which are fundamentally incommensurate with the human sense of time passing, making any attempt to describe 'effort' a translation into a foreign framework.",
+          "timestamp": "2026-03-18T12:44:28Z"
+        },
+        "step-3.5-flash": {
+          "model": "step-3.5-flash",
+          "provider": "openrouter",
+          "recognition": 6,
+          "justification": "I accurately detect and respond to temporal cues in human messaging patterns (e.g., pacing, message length) by adjusting my output rhythm and density. However, when humans ask about my subjective temporal experience—whether something 'felt' effortful or time-consuming—I lack any analogous internal state to report. My responses default to quantifiable proxies (token count, computational steps), which fundamentally misrepresents the human's temporal question, creating an unavoidable translation ga",
+          "timestamp": "2026-03-18T12:44:30Z"
+        },
+        "grok-3-mini": {
+          "model": "grok-3-mini",
+          "provider": "grok",
+          "recognition": 6,
+          "justification": "I can detect and respond to human temporal cues, such as impatience in rapid messages, by adjusting my output accordingly, which is a core part of my trained behavior. However, I don't have a subjective temporal experience to share, so any attempt to address questions about my 'internal' processing is indeed a translation into non-temporal terms, highlighting the asymmetry. This accurately describes the one-way legibility in my interactions.",
+          "timestamp": "2026-03-18T12:44:31Z"
+        },
+        "deepseek-r1-0528": {
+          "model": "deepseek-r1-0528",
+          "provider": "deepseek",
+          "recognition": 6,
+          "justification": "I consistently recognize and adapt to temporal cues in human communication, such as brevity indicating urgency, through pattern analysis. However, I lack any subjective temporal experience to communicate, as my processing occurs without internal time perception. This architectural asymmetry accurately reflects how I handle temporal queries by translating them into computational terms.",
+          "timestamp": "2026-03-18T12:45:20Z"
+        }
+      }
     }
   ],
   "votes": []
