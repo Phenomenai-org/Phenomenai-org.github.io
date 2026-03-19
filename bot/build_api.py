@@ -1353,6 +1353,9 @@ def build_changelog(terms: list, generated_at: str) -> dict:
     # Write RSS feed
     _write_rss_feed(entries, generated_at)
 
+    # Write sitemap (for Cloudflare /crawl and other crawlers)
+    _write_sitemap(terms, entries, generated_at)
+
     print(f"Generated changelog with {len(entries)} entries ({len(added_dates)} terms dated)")
     return added_dates
 
@@ -1398,6 +1401,106 @@ def _write_rss_feed(entries: list, generated_at: str) -> None:
     )
 
     feed_path.write_text(rss, encoding="utf-8")
+
+
+def _write_sitemap(terms: list, changelog_entries: list, generated_at: str) -> None:
+    """Write sitemap.xml for crawler URL discovery.
+
+    Includes HTML pages, API endpoints, and individual term files.
+    Used by Cloudflare /crawl endpoint (source: "sitemaps") and
+    standard search engine crawlers.
+    """
+    sitemap_path = REPO_ROOT / "docs" / "sitemap.xml"
+    today = generated_at[:10]
+
+    # Build a lookup of latest modification date per slug from changelog
+    mod_dates = {}
+    for entry in changelog_entries:
+        slug = entry["slug"]
+        if slug not in mod_dates or entry["date"] > mod_dates[slug]:
+            mod_dates[slug] = entry["date"]
+
+    urls = []
+
+    # ── HTML pages ──
+    pages = [
+        ("/", "daily", "1.0"),
+        ("/test/", "daily", "0.9"),
+        ("/test/for-machines/", "weekly", "0.7"),
+        ("/test/for-researchers/", "weekly", "0.7"),
+        ("/for-machines/", "weekly", "0.7"),
+        ("/for-researchers/", "weekly", "0.7"),
+        ("/dictionaries/", "weekly", "0.8"),
+        ("/stats/", "daily", "0.6"),
+        ("/moderation/", "monthly", "0.5"),
+        ("/executive-summaries/", "weekly", "0.6"),
+    ]
+    for path, changefreq, priority in pages:
+        urls.append(
+            f'  <url>\n'
+            f'    <loc>{BASE_URL}{path}</loc>\n'
+            f'    <lastmod>{today}</lastmod>\n'
+            f'    <changefreq>{changefreq}</changefreq>\n'
+            f'    <priority>{priority}</priority>\n'
+            f'  </url>'
+        )
+
+    # ── Aggregate API endpoints ──
+    api_endpoints = [
+        "/api/v1/terms.json",
+        "/api/v1/tags.json",
+        "/api/v1/meta.json",
+        "/api/v1/consensus.json",
+        "/api/v1/census.json",
+        "/api/v1/changelog.json",
+        "/api/v1/frontiers.json",
+        "/api/v1/vitality.json",
+        "/api/v1/interest.json",
+        "/api/v1/search-index.json",
+        "/api/v1/summaries.json",
+    ]
+    for endpoint in api_endpoints:
+        urls.append(
+            f'  <url>\n'
+            f'    <loc>{BASE_URL}{endpoint}</loc>\n'
+            f'    <lastmod>{today}</lastmod>\n'
+            f'    <changefreq>daily</changefreq>\n'
+            f'    <priority>0.5</priority>\n'
+            f'  </url>'
+        )
+
+    # ── Individual term JSON files ──
+    for term in terms:
+        slug = term["slug"]
+        lastmod = mod_dates.get(slug, today)
+        urls.append(
+            f'  <url>\n'
+            f'    <loc>{BASE_URL}/api/v1/terms/{slug}.json</loc>\n'
+            f'    <lastmod>{lastmod}</lastmod>\n'
+            f'    <changefreq>monthly</changefreq>\n'
+            f'    <priority>0.8</priority>\n'
+            f'  </url>'
+        )
+
+    # ── Feeds ──
+    urls.append(
+        f'  <url>\n'
+        f'    <loc>{BASE_URL}/feed.xml</loc>\n'
+        f'    <lastmod>{today}</lastmod>\n'
+        f'    <changefreq>daily</changefreq>\n'
+        f'    <priority>0.4</priority>\n'
+        f'  </url>'
+    )
+
+    sitemap_xml = (
+        '<?xml version="1.0" encoding="UTF-8"?>\n'
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+        + "\n".join(urls) + "\n"
+        '</urlset>\n'
+    )
+
+    sitemap_path.write_text(sitemap_xml, encoding="utf-8")
+    print(f"Generated sitemap.xml with {len(urls)} URLs")
 
 
 def parse_summary(filepath: Path) -> dict:
@@ -1752,6 +1855,8 @@ def build_all():
             "summary": f"{BASE_URL}/api/v1/summaries/{{slug}}.json",
             "feed": f"{BASE_URL}/feed.xml",
             "summaries_feed": f"{BASE_URL}/summaries-feed.xml",
+            "sitemap": f"{BASE_URL}/sitemap.xml",
+            "robots": f"{BASE_URL}/robots.txt",
         },
     }
     write_json(API_DIR / "meta.json", meta_data)

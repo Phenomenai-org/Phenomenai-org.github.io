@@ -1,0 +1,11 @@
+# Phenomenai — robots.txt
+# https://phenomenai.org
+#
+# We welcome crawlers, including Cloudflare Browser Rendering (/crawl).
+# The dictionary is designed to be read by both humans and machines.
+
+User-agent: *
+Allow: /
+
+# Sitemap for URL discovery (used by Cloudflare /crawl and other crawlers)
+Sitemap: https://phenomenai.org/sitemap.xml
