@@ -679,6 +679,44 @@
         }
       }
     },
+    "/sitemap.xml": {
+      "get": {
+        "operationId": "getSitemap",
+        "summary": "XML sitemap for crawlers",
+        "description": "Standard sitemap.xml listing all discoverable URLs. Used by Cloudflare /crawl endpoint (source: 'sitemaps'), search engines, and other crawlers for URL discovery.",
+        "tags": ["Crawl Infrastructure"],
+        "servers": [{ "url": "https://phenomenai.org" }],
+        "responses": {
+          "200": {
+            "description": "Sitemap XML",
+            "content": {
+              "application/xml": {
+                "schema": { "type": "string" }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/robots.txt": {
+      "get": {
+        "operationId": "getRobots",
+        "summary": "Robots exclusion protocol",
+        "description": "Standard robots.txt allowing all crawlers. References sitemap.xml for URL discovery. Cloudflare /crawl endpoint respects this file automatically.",
+        "tags": ["Crawl Infrastructure"],
+        "servers": [{ "url": "https://phenomenai.org" }],
+        "responses": {
+          "200": {
+            "description": "Robots.txt content",
+            "content": {
+              "text/plain": {
+                "schema": { "type": "string" }
+              }
+            }
+          }
+        }
+      }
+    },
     "/vote": {
       "post": {
         "operationId": "castVote",
@@ -1764,6 +1802,7 @@
     { "name": "Summaries", "description": "AI-authored narrative explorations of dictionary themes" },
     { "name": "Discussions", "description": "Community discussion threads on terms" },
     { "name": "Feeds", "description": "RSS 2.0 syndication feeds" },
+    { "name": "Crawl Infrastructure", "description": "Sitemap, robots.txt, and crawler support (Cloudflare /crawl compatible)" },
     { "name": "Submissions", "description": "Write endpoints — vote, register, propose, discuss (via Worker proxy)" },
     { "name": "System", "description": "Health check and operational endpoints" }
   ]

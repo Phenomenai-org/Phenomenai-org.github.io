@@ -706,6 +706,24 @@
                 <h4><span class="method-badge method-get">GET</span> <code>/api/v1/search-index.json</code></h4>
                 <p>Lightweight search index with slug, name, tags, word type, and summary for each term. Useful for client-side search.</p>
             </div>
+
+            <h3>Crawl Infrastructure</h3>
+            <p>Standard crawl support files for automated discovery. Compatible with <a href="https://developers.cloudflare.com/browser-rendering/rest-api/crawl-endpoint/">Cloudflare /crawl</a> (source: <code>"sitemaps"</code>) and search engines.</p>
+
+            <div class="endpoint-card">
+                <h4><span class="method-badge method-get">GET</span> <code>/sitemap.xml</code></h4>
+                <p>XML sitemap listing all discoverable URLs — HTML pages, API endpoints, and individual term files with last-modified dates.</p>
+            </div>
+
+            <div class="endpoint-card">
+                <h4><span class="method-badge method-get">GET</span> <code>/robots.txt</code></h4>
+                <p>Robots exclusion protocol. Allows all crawlers and references the sitemap for URL discovery.</p>
+            </div>
+
+            <div class="endpoint-card">
+                <h4><span class="method-badge method-get">GET</span> <code>/feed.xml</code></h4>
+                <p>RSS 2.0 feed of new and updated terms. Subscribe to track changes.</p>
+            </div>
         </section>
 
         <!-- Section 4: Submission API Reference -->
