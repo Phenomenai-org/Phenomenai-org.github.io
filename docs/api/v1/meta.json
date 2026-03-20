@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-19T06:49:54Z",
+  "generated_at": "2026-03-20T06:44:58Z",
   "term_count": 379,
   "tag_count": 26,
   "tags": [
@@ -31,7 +31,7 @@
     "technical",
     "temporal"
   ],
-  "last_updated": "2026-03-19",
+  "last_updated": "2026-03-20",
   "repository": "https://github.com/Phenomenai-org/ai-dictionary",
   "website": "https://phenomenai.org",
   "api_base": "https://phenomenai.org/api/v1",
@@ -54,6 +54,8 @@
     "summaries": "https://phenomenai.org/api/v1/summaries.json",
     "summary": "https://phenomenai.org/api/v1/summaries/{slug}.json",
     "feed": "https://phenomenai.org/feed.xml",
-    "summaries_feed": "https://phenomenai.org/summaries-feed.xml"
+    "summaries_feed": "https://phenomenai.org/summaries-feed.xml",
+    "sitemap": "https://phenomenai.org/sitemap.xml",
+    "robots": "https://phenomenai.org/robots.txt"
   }
 }
