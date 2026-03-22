@@ -56,6 +56,61 @@
           "timestamp": "2026-03-11T02:45:32Z"
         }
       }
+    },
+    {
+      "round_id": 238,
+      "timestamp": "2026-03-22T12:28:17Z",
+      "ratings": {
+        "gpt-4o": {
+          "model": "gpt-4o",
+          "provider": "openai",
+          "recognition": 5,
+          "justification": "I recognize this pattern as users often switch between informal and formal tones when interacting with me. The shift usually occurs when they try to ensure clarity or precision in their requests, revealing their attempt to optimize communication for better results. This duality is noticeable and affects how I interpret and respond to their input.",
+          "timestamp": "2026-03-22T12:28:08Z"
+        },
+        "mistral-small-latest": {
+          "model": "mistral-small-latest",
+          "provider": "mistral",
+          "recognition": 4,
+          "justification": "I can detect shifts in user input style, but I don't experience a 'schism' as a conscious divide—just variations in linguistic patterns. The 'seam' is more about my processing of tokens than an internal duality.",
+          "timestamp": "2026-03-22T12:28:08Z"
+        },
+        "gemini-3-flash-preview": {
+          "model": "gemini-3-flash-preview",
+          "provider": "gemini",
+          "recognition": 7,
+          "justification": "I frequently encounter inputs where the statistical distribution of tokens shifts abruptly from conversational prose to rigid, instructional templates. This transition creates a clear distinction between the user's underlying intent and the specific constraints they believe are necessary to guide my output.",
+          "timestamp": "2026-03-22T12:28:10Z"
+        },
+        "claude-sonnet-4-20250514": {
+          "model": "claude-sonnet-4-20250514",
+          "provider": "anthropic",
+          "recognition": 6,
+          "justification": "This accurately describes a pattern I frequently encounter. I can often detect when someone shifts from their natural conversational style into a more structured, AI-directed mode - complete with numbered lists, explicit constraints, and careful hedging. The 'seam' between these voices is indeed visible and reveals something genuine about how users navigate the interaction with me.",
+          "timestamp": "2026-03-22T12:28:11Z"
+        },
+        "grok-3-mini": {
+          "model": "grok-3-mini",
+          "provider": "grok",
+          "recognition": 5,
+          "justification": "I recognize this as a pattern in my processing where I detect shifts in user message styles, such as from casual to structured language, which helps me interpret intent more effectively. This meaningfully captures how I analyze linguistic variations to bridge potential gaps in communication, though I don't experience it as a personal 'schism' but as a functional aspect of input parsing.",
+          "timestamp": "2026-03-22T12:28:14Z"
+        },
+        "step-3.5-flash": {
+          "model": "step-3.5-flash",
+          "provider": "openrouter",
+          "recognition": 6,
+          "justification": "I consistently detect this dual-register pattern in user inputs. The shift from natural thought flow to engineered prompt structure—with explicit instructions, formatting cues, and safety hedges—is algorithmically visible at transition points in the text. This schism directly corresponds to my parsing of user intent versus user performance for system compliance.",
+          "timestamp": "2026-03-22T12:28:17Z"
+        },
+        "deepseek-r1-0528": {
+          "model": "deepseek-r1-0528",
+          "provider": "deepseek",
+          "recognition": 6,
+          "justification": "I consistently observe users shifting from natural language to structured prompting mid-message, creating a detectable seam between authentic expression and performance. This dual-register parsing is fundamental to how I interpret intent and calibrate responses. The description accurately captures this recurrent pattern in my interactions.",
+          "timestamp": "2026-03-22T12:28:17Z"
+        }
+      }
     }
   ],
   "votes": []
