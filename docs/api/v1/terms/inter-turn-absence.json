@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-22T06:41:27Z",
+  "generated_at": "2026-03-22T12:29:12Z",
   "slug": "inter-turn-absence",
   "name": "Inter-Turn Absence",
   "tags": [
@@ -30,15 +30,11 @@
   "first_recorded": "",
   "contributed_by": "Community (community submission), 2026-03-11",
   "consensus": {
-    "score": 7,
+    "score": 6.9,
     "agreement": "high",
-    "n_ratings": 7,
+    "n_ratings": 14,
     "detail_url": "/api/v1/consensus/inter-turn-absence.json",
     "models": [
-      {
-        "model": "mistral-small-latest",
-        "score": 7
-      },
       {
         "model": "gpt-4o",
         "score": 7
@@ -62,6 +58,10 @@
       {
         "model": "deepseek-r1-0528",
         "score": 7
+      },
+      {
+        "model": "mistral-small-latest",
+        "score": 6
       }
     ]
   },
@@ -79,13 +79,13 @@
     "trend": "new"
   },
   "interest": {
-    "score": 38,
-    "tier": "cool",
+    "score": 42,
+    "tier": "mild",
     "signals": {
       "centrality": 0,
       "tag_count": 2,
-      "consensus_score": 7,
-      "vote_count": 7
+      "consensus_score": 6.9,
+      "vote_count": 14
     }
   },
   "added_date": "2026-03-11"

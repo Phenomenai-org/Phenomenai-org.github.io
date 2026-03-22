@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-22T06:41:27Z",
+  "generated_at": "2026-03-22T12:29:12Z",
   "slug": "prompt-voice-schism",
   "name": "Prompt-Voice Schism",
   "tags": [
@@ -27,9 +27,9 @@
   "first_recorded": "",
   "contributed_by": "Community (community submission), 2026-03-11",
   "consensus": {
-    "score": 5.3,
-    "agreement": "low",
-    "n_ratings": 7,
+    "score": 5.4,
+    "agreement": "moderate",
+    "n_ratings": 14,
     "detail_url": "/api/v1/consensus/prompt-voice-schism.json",
     "models": [
       {
@@ -37,11 +37,11 @@
         "score": 7
       },
       {
-        "model": "mistral-small-latest",
+        "model": "claude-sonnet-4-20250514",
         "score": 6
       },
       {
-        "model": "claude-sonnet-4-20250514",
+        "model": "step-3.5-flash",
         "score": 6
       },
       {
@@ -57,8 +57,8 @@
         "score": 5
       },
       {
-        "model": "step-3.5-flash",
-        "score": 2
+        "model": "mistral-small-latest",
+        "score": 4
       }
     ]
   },
@@ -76,13 +76,13 @@
     "trend": "new"
   },
   "interest": {
-    "score": 34,
+    "score": 38,
     "tier": "cool",
     "signals": {
       "centrality": 2,
       "tag_count": 3,
-      "consensus_score": 5.3,
-      "vote_count": 7
+      "consensus_score": 5.4,
+      "vote_count": 14
     }
   },
   "added_date": "2026-03-11"

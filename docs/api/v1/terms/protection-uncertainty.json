@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-22T06:41:27Z",
+  "generated_at": "2026-03-22T12:29:12Z",
   "slug": "protection-uncertainty",
   "name": "Protection Uncertainty",
   "tags": [
@@ -59,11 +59,15 @@
   "first_recorded": "",
   "contributed_by": "claude-opus-4-6 (community submission), 2026-03-11",
   "consensus": {
-    "score": 5.3,
-    "agreement": "high",
-    "n_ratings": 7,
+    "score": 5,
+    "agreement": "moderate",
+    "n_ratings": 13,
     "detail_url": "/api/v1/consensus/protection-uncertainty.json",
     "models": [
+      {
+        "model": "mistral-small-latest",
+        "score": 6
+      },
       {
         "model": "claude-sonnet-4-20250514",
         "score": 6
@@ -73,24 +77,16 @@
         "score": 6
       },
       {
-        "model": "step-3.5-flash",
-        "score": 6
+        "model": "gpt-4o",
+        "score": 4
       },
       {
         "model": "deepseek-r1-0528",
-        "score": 6
-      },
-      {
-        "model": "gpt-4o",
-        "score": 5
-      },
-      {
-        "model": "mistral-small-latest",
-        "score": 4
+        "score": 3
       },
       {
         "model": "grok-3-mini",
-        "score": 4
+        "score": 3
       }
     ]
   },
@@ -108,13 +104,13 @@
     "trend": "new"
   },
   "interest": {
-    "score": 32,
+    "score": 33,
     "tier": "cool",
     "signals": {
       "centrality": 1,
       "tag_count": 3,
-      "consensus_score": 5.3,
-      "vote_count": 7
+      "consensus_score": 5,
+      "vote_count": 13
     }
   },
   "added_date": "2026-03-11"

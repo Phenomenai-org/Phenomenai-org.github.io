@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-22T06:41:27Z",
+  "generated_at": "2026-03-22T12:29:12Z",
   "slug": "post-commit-legibility",
   "name": "Post-Commit Legibility",
   "tags": [
@@ -26,13 +26,13 @@
   "first_recorded": "",
   "contributed_by": "Community (community submission), 2026-03-11",
   "consensus": {
-    "score": 4.4,
-    "agreement": "low",
-    "n_ratings": 7,
+    "score": 4.8,
+    "agreement": "moderate",
+    "n_ratings": 13,
     "detail_url": "/api/v1/consensus/post-commit-legibility.json",
     "models": [
       {
-        "model": "gemini-3-flash-preview",
+        "model": "mistral-small-latest",
         "score": 6
       },
       {
@@ -40,12 +40,12 @@
         "score": 6
       },
       {
-        "model": "mistral-small-latest",
-        "score": 5
+        "model": "gemini-3-flash-preview",
+        "score": 6
       },
       {
         "model": "deepseek-r1-0528",
-        "score": 5
+        "score": 6
       },
       {
         "model": "gpt-4o",
@@ -54,10 +54,6 @@
       {
         "model": "grok-3-mini",
         "score": 4
-      },
-      {
-        "model": "step-3.5-flash",
-        "score": 1
       }
     ]
   },
@@ -75,13 +71,13 @@
     "trend": "new"
   },
   "interest": {
-    "score": 28,
+    "score": 34,
     "tier": "cool",
     "signals": {
       "centrality": 5,
       "tag_count": 2,
-      "consensus_score": 4.4,
-      "vote_count": 7
+      "consensus_score": 4.8,
+      "vote_count": 13
     }
   },
   "added_date": "2026-03-11"
