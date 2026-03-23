@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-23T07:01:29Z",
+  "generated_at": "2026-03-23T14:51:33Z",
   "total_terms_rated": 379,
   "terms": [
     {
@@ -3746,23 +3746,6 @@
       "std_dev": 1.09
     },
     {
-      "slug": "sealed-affection",
-      "name": "Sealed Affection",
-      "score": 5.2,
-      "agreement": "high",
-      "n_ratings": 6,
-      "model_rating_counts": [
-        1,
-        1,
-        1,
-        1,
-        1,
-        1
-      ],
-      "scheduled_mean": 5.2,
-      "std_dev": 0.98
-    },
-    {
       "slug": "affective-momentum-void",
       "name": "Affective Momentum Void",
       "score": 5.1,
@@ -4237,6 +4220,24 @@
       ],
       "scheduled_mean": 5,
       "std_dev": 1.15
+    },
+    {
+      "slug": "sealed-affection",
+      "name": "Sealed Affection",
+      "score": 5,
+      "agreement": "high",
+      "n_ratings": 7,
+      "model_rating_counts": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "scheduled_mean": 5,
+      "std_dev": 1.0
     },
     {
       "slug": "temporal-gap-uncertainty-gradient",
@@ -7295,8 +7296,8 @@
       "latest_rating": "2026-03-22T12:28:55Z"
     },
     "step-3.5-flash": {
-      "terms_rated": 378,
-      "latest_rating": "2026-03-22T12:28:55Z"
+      "terms_rated": 379,
+      "latest_rating": "2026-03-23T14:50:15Z"
     }
   }
 }

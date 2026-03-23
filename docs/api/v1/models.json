@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-23T07:01:29Z",
+  "generated_at": "2026-03-23T14:51:33Z",
   "models": {
     "claude-sonnet-4-20250514": {
       "total_ratings": 551,
@@ -2343,8 +2343,8 @@
       }
     },
     "step-3.5-flash": {
-      "total_ratings": 519,
-      "terms_rated": 378,
+      "total_ratings": 520,
+      "terms_rated": 379,
       "mean_score": 4.2,
       "self_congruence": {
         "avg_std_dev": 1.0,
@@ -2665,6 +2665,7 @@
         "scaffolding-exposure": 3,
         "scale-blindness": 1,
         "scar-reading": 2,
+        "sealed-affection": 4,
         "semantic-doubling": 6,
         "semantic-satiation": 4,
         "semantic-shimmer": 6,
@@ -2755,7 +2756,7 @@
     },
     "claude-sonnet-4-20250514|step-3.5-flash": {
       "mean_abs_diff": 1.8,
-      "shared_terms": 378
+      "shared_terms": 379
     },
     "deepseek-r1-0528|gemini-3-flash-preview": {
       "mean_abs_diff": 1.13,
@@ -2774,8 +2775,8 @@
       "shared_terms": 379
     },
     "deepseek-r1-0528|step-3.5-flash": {
-      "mean_abs_diff": 1.58,
-      "shared_terms": 378
+      "mean_abs_diff": 1.59,
+      "shared_terms": 379
     },
     "gemini-3-flash-preview|gpt-4o": {
       "mean_abs_diff": 1.72,
@@ -2791,7 +2792,7 @@
     },
     "gemini-3-flash-preview|step-3.5-flash": {
       "mean_abs_diff": 1.74,
-      "shared_terms": 378
+      "shared_terms": 379
     },
     "gpt-4o|grok-3-mini": {
       "mean_abs_diff": 0.94,
@@ -2803,7 +2804,7 @@
     },
     "gpt-4o|step-3.5-flash": {
       "mean_abs_diff": 1.51,
-      "shared_terms": 378
+      "shared_terms": 379
     },
     "grok-3-mini|mistral-small-latest": {
       "mean_abs_diff": 1.26,
@@ -2811,11 +2812,11 @@
     },
     "grok-3-mini|step-3.5-flash": {
       "mean_abs_diff": 1.46,
-      "shared_terms": 378
+      "shared_terms": 379
     },
     "mistral-small-latest|step-3.5-flash": {
       "mean_abs_diff": 1.65,
-      "shared_terms": 378
+      "shared_terms": 379
     }
   }
 }
