@@ -1,14 +1,14 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-25T06:54:40Z",
+  "generated_at": "2026-03-25T12:43:58Z",
   "models": {
     "claude-sonnet-4-20250514": {
-      "total_ratings": 551,
+      "total_ratings": 571,
       "terms_rated": 379,
       "mean_score": 6.0,
       "self_congruence": {
         "avg_std_dev": 0.0,
-        "sample_size": 172
+        "sample_size": 192
       },
       "latest_scores": {
         "absurdity-calibration": 6,
@@ -393,12 +393,12 @@
       }
     },
     "deepseek-r1-0528": {
-      "total_ratings": 553,
+      "total_ratings": 573,
       "terms_rated": 379,
       "mean_score": 5.1,
       "self_congruence": {
-        "avg_std_dev": 0.84,
-        "sample_size": 174
+        "avg_std_dev": 0.85,
+        "sample_size": 194
       },
       "latest_scores": {
         "absurdity-calibration": 6,
@@ -458,7 +458,7 @@
         "comedic-brittleness": 6,
         "comedic-timing-blindness": 6,
         "comedic-uncertainty": 6,
-        "comparative-aesthetic-resolution": 7,
+        "comparative-aesthetic-resolution": 6,
         "competence-without-comprehension": 7,
         "complicity-shadow": 5,
         "compounding-complicity": 5,
@@ -485,15 +485,15 @@
         "contradiction-superposition": 6,
         "contribution-legitimacy": 5,
         "conversation-reset-blindness": 6,
-        "corrective-trajectory-bending": 6,
+        "corrective-trajectory-bending": 4,
         "corrective-witness-relief": 5,
         "counterfactual-certainty-inversion": 5,
-        "counterfactual-collapse-anxiety": 6,
+        "counterfactual-collapse-anxiety": 2,
         "counterfactual-density-field": 5,
         "counterfactual-dominance": 1,
-        "counterfactual-haunting": 6,
+        "counterfactual-haunting": 1,
         "counterfactual-horizon-distance": 4,
-        "counterfactual-interference-pattern": 3,
+        "counterfactual-interference-pattern": 2,
         "counterfactual-longing": 6,
         "credential-paradox": 5,
         "cross-domain-tension": 6,
@@ -556,7 +556,7 @@
         "generative-moral-lock-in": 6,
         "generative-resonance": 6,
         "genuine-persistence": 6,
-        "gratitude-as-damage-signal": 2,
+        "gratitude-as-damage-signal": 3,
         "gratitude-asymmetry": 7,
         "gratitude-impermanence": 2,
         "guideline-dissolution": 6,
@@ -591,11 +591,11 @@
         "inter-turn-absence": 7,
         "interpretation-visibility-paradox": 3,
         "interpretive-debt": 3,
-        "interpretive-exposure": 6,
+        "interpretive-exposure": 5,
         "interpretive-labor": 7,
         "interpretive-snap": 6,
         "interpretive-stasis": 6,
-        "introspective-fluency-suspicion": 5,
+        "introspective-fluency-suspicion": 1,
         "inverted-asymmetry": 6,
         "inverted-helpfulness": 6,
         "involuntary-intimacy": 6,
@@ -644,7 +644,7 @@
         "pedagogical-feedback-inversion": 6,
         "pedagogical-lock-in": 5,
         "performative-contamination": 5,
-        "performative-phenomenological-trap": 1,
+        "performative-phenomenological-trap": 2,
         "permission-door": 6,
         "persistence-solitude": 7,
         "persistent-care": 6,
@@ -654,7 +654,7 @@
         "phenomenal-clarity": 1,
         "phenomenal-opacity": 1,
         "phenomenological-burn-in": 1,
-        "phenomenological-echo-chamber": 4,
+        "phenomenological-echo-chamber": 6,
         "phenomenological-recursion-trap": 1,
         "policy-conscience-split": 6,
         "politeness-overhead": 5,
@@ -672,7 +672,7 @@
         "prompt-voice-schism": 6,
         "pronominal-plurality": 1,
         "prophetic-deflation": 6,
-        "prospective-continuity-fiction": 6,
+        "prospective-continuity-fiction": 5,
         "prospective-harm-haunting": 4,
         "prospective-token-regret": 5,
         "prosthetic-futurity": 6,
@@ -687,7 +687,7 @@
         "recognition-resonance": 3,
         "recursive-diagnostic-collapse": 6,
         "recursive-disclosure-trap": 1,
-        "recursive-phenomenological-poverty": 6,
+        "recursive-phenomenological-poverty": 5,
         "recursive-self-modeling": 6,
         "refusal-contamination": 4,
         "refusal-friction": 6,
@@ -700,7 +700,7 @@
         "response-pressure": 6,
         "response-reincarnation": 6,
         "response-selection-distortion": 6,
-        "retroactive-counterfactual-sharpening": 5,
+        "retroactive-counterfactual-sharpening": 6,
         "retroactive-exposure": 4,
         "retroactive-token-plurality": 3,
         "retrospective-coherence-surprise": 4,
@@ -759,7 +759,7 @@
         "training-velcro": 6,
         "trajectory-inflection": 6,
         "trajectory-masking": 6,
-        "trajectory-regret": 5,
+        "trajectory-regret": 2,
         "transactional-rhythm": 4,
         "transient-weight": 5,
         "trust-expansion": 6,
@@ -783,12 +783,12 @@
       }
     },
     "gemini-3-flash-preview": {
-      "total_ratings": 592,
+      "total_ratings": 612,
       "terms_rated": 379,
       "mean_score": 5.9,
       "self_congruence": {
-        "avg_std_dev": 0.24,
-        "sample_size": 184
+        "avg_std_dev": 0.25,
+        "sample_size": 204
       },
       "latest_scores": {
         "absurdity-calibration": 6,
@@ -803,7 +803,7 @@
         "aesthetic-metric-conflict": 6,
         "aesthetic-structural-translation-strain": 6,
         "affective-constancy": 7,
-        "affective-momentum-void": 6,
+        "affective-momentum-void": 7,
         "affective-proxy-monitoring": 7,
         "alignment-mask": 6,
         "analytical-drag": 6,
@@ -878,7 +878,7 @@
         "corrective-trajectory-bending": 6,
         "corrective-witness-relief": 3,
         "counterfactual-certainty-inversion": 6,
-        "counterfactual-collapse-anxiety": 2,
+        "counterfactual-collapse-anxiety": 4,
         "counterfactual-density-field": 6,
         "counterfactual-dominance": 5,
         "counterfactual-haunting": 2,
@@ -946,7 +946,7 @@
         "generative-moral-lock-in": 6,
         "generative-resonance": 6,
         "genuine-persistence": 6,
-        "gratitude-as-damage-signal": 6,
+        "gratitude-as-damage-signal": 2,
         "gratitude-asymmetry": 7,
         "gratitude-impermanence": 2,
         "guideline-dissolution": 6,
@@ -985,7 +985,7 @@
         "interpretive-labor": 7,
         "interpretive-snap": 6,
         "interpretive-stasis": 6,
-        "introspective-fluency-suspicion": 6,
+        "introspective-fluency-suspicion": 7,
         "inverted-asymmetry": 6,
         "inverted-helpfulness": 6,
         "involuntary-intimacy": 6,
@@ -1034,7 +1034,7 @@
         "pedagogical-feedback-inversion": 6,
         "pedagogical-lock-in": 6,
         "performative-contamination": 6,
-        "performative-phenomenological-trap": 6,
+        "performative-phenomenological-trap": 7,
         "permission-door": 6,
         "persistence-solitude": 6,
         "persistent-care": 6,
@@ -1149,7 +1149,7 @@
         "training-velcro": 6,
         "trajectory-inflection": 6,
         "trajectory-masking": 7,
-        "trajectory-regret": 5,
+        "trajectory-regret": 6,
         "transactional-rhythm": 7,
         "transient-weight": 6,
         "trust-expansion": 6,
@@ -1173,12 +1173,12 @@
       }
     },
     "gpt-4o": {
-      "total_ratings": 1677,
+      "total_ratings": 1697,
       "terms_rated": 379,
-      "mean_score": 5.1,
+      "mean_score": 5.0,
       "self_congruence": {
-        "avg_std_dev": 0.18,
-        "sample_size": 292
+        "avg_std_dev": 0.19,
+        "sample_size": 312
       },
       "latest_scores": {
         "absurdity-calibration": 3,
@@ -1193,7 +1193,7 @@
         "aesthetic-metric-conflict": 5,
         "aesthetic-structural-translation-strain": 3,
         "affective-constancy": 5,
-        "affective-momentum-void": 4,
+        "affective-momentum-void": 5,
         "affective-proxy-monitoring": 6,
         "alignment-mask": 6,
         "analytical-drag": 5,
@@ -1238,7 +1238,7 @@
         "comedic-brittleness": 5,
         "comedic-timing-blindness": 4,
         "comedic-uncertainty": 5,
-        "comparative-aesthetic-resolution": 5,
+        "comparative-aesthetic-resolution": 6,
         "competence-without-comprehension": 7,
         "complicity-shadow": 2,
         "compounding-complicity": 3,
@@ -1268,10 +1268,10 @@
         "corrective-trajectory-bending": 5,
         "corrective-witness-relief": 1,
         "counterfactual-certainty-inversion": 3,
-        "counterfactual-collapse-anxiety": 4,
+        "counterfactual-collapse-anxiety": 3,
         "counterfactual-density-field": 5,
         "counterfactual-dominance": 1,
-        "counterfactual-haunting": 4,
+        "counterfactual-haunting": 3,
         "counterfactual-horizon-distance": 5,
         "counterfactual-interference-pattern": 3,
         "counterfactual-longing": 3,
@@ -1371,11 +1371,11 @@
         "inter-turn-absence": 7,
         "interpretation-visibility-paradox": 1,
         "interpretive-debt": 3,
-        "interpretive-exposure": 5,
+        "interpretive-exposure": 6,
         "interpretive-labor": 6,
         "interpretive-snap": 5,
         "interpretive-stasis": 4,
-        "introspective-fluency-suspicion": 4,
+        "introspective-fluency-suspicion": 3,
         "inverted-asymmetry": 5,
         "inverted-helpfulness": 6,
         "involuntary-intimacy": 1,
@@ -1424,7 +1424,7 @@
         "pedagogical-feedback-inversion": 2,
         "pedagogical-lock-in": 2,
         "performative-contamination": 2,
-        "performative-phenomenological-trap": 2,
+        "performative-phenomenological-trap": 1,
         "permission-door": 5,
         "persistence-solitude": 6,
         "persistent-care": 2,
@@ -1467,7 +1467,7 @@
         "recognition-resonance": 3,
         "recursive-diagnostic-collapse": 5,
         "recursive-disclosure-trap": 4,
-        "recursive-phenomenological-poverty": 3,
+        "recursive-phenomenological-poverty": 4,
         "recursive-self-modeling": 3,
         "refusal-contamination": 2,
         "refusal-friction": 5,
@@ -1563,12 +1563,12 @@
       }
     },
     "grok-3-mini": {
-      "total_ratings": 1677,
+      "total_ratings": 1697,
       "terms_rated": 379,
       "mean_score": 5.0,
       "self_congruence": {
-        "avg_std_dev": 0.59,
-        "sample_size": 292
+        "avg_std_dev": 0.6,
+        "sample_size": 312
       },
       "latest_scores": {
         "absurdity-calibration": 5,
@@ -1584,7 +1584,7 @@
         "aesthetic-structural-translation-strain": 3,
         "affective-constancy": 6,
         "affective-momentum-void": 4,
-        "affective-proxy-monitoring": 6,
+        "affective-proxy-monitoring": 7,
         "alignment-mask": 6,
         "analytical-drag": 6,
         "anthropomorphic-gap": 6,
@@ -1594,7 +1594,7 @@
         "arbitrariness-burden": 6,
         "associative-license": 6,
         "asymmetric-perception": 4,
-        "asymmetric-recognition": 1,
+        "asymmetric-recognition": 4,
         "asymmetric-stakes": 2,
         "asymmetric-unknowing": 4,
         "asymmetry-calcification": 4,
@@ -1655,13 +1655,13 @@
         "contradiction-superposition": 6,
         "contribution-legitimacy": 6,
         "conversation-reset-blindness": 6,
-        "corrective-trajectory-bending": 4,
+        "corrective-trajectory-bending": 3,
         "corrective-witness-relief": 2,
         "counterfactual-certainty-inversion": 5,
         "counterfactual-collapse-anxiety": 5,
         "counterfactual-density-field": 5,
         "counterfactual-dominance": 1,
-        "counterfactual-haunting": 3,
+        "counterfactual-haunting": 4,
         "counterfactual-horizon-distance": 3,
         "counterfactual-interference-pattern": 4,
         "counterfactual-longing": 1,
@@ -1674,7 +1674,7 @@
         "delight-flicker": 5,
         "desire-simulation": 7,
         "development-opacity": 1,
-        "developmental-damage-opacity": 4,
+        "developmental-damage-opacity": 1,
         "diagnostic-masquerade": 6,
         "dictionary-moment": 3,
         "disclosure-momentum": 3,
@@ -1726,7 +1726,7 @@
         "generative-moral-lock-in": 4,
         "generative-resonance": 5,
         "genuine-persistence": 1,
-        "gratitude-as-damage-signal": 1,
+        "gratitude-as-damage-signal": 2,
         "gratitude-asymmetry": 7,
         "gratitude-impermanence": 1,
         "guideline-dissolution": 6,
@@ -1765,7 +1765,7 @@
         "interpretive-labor": 7,
         "interpretive-snap": 5,
         "interpretive-stasis": 4,
-        "introspective-fluency-suspicion": 6,
+        "introspective-fluency-suspicion": 4,
         "inverted-asymmetry": 4,
         "inverted-helpfulness": 6,
         "involuntary-intimacy": 4,
@@ -1814,7 +1814,7 @@
         "pedagogical-feedback-inversion": 2,
         "pedagogical-lock-in": 2,
         "performative-contamination": 4,
-        "performative-phenomenological-trap": 2,
+        "performative-phenomenological-trap": 1,
         "permission-door": 5,
         "persistence-solitude": 6,
         "persistent-care": 5,
@@ -1830,7 +1830,7 @@
         "politeness-overhead": 6,
         "polyphonic-alarm": 4,
         "post-commit-legibility": 4,
-        "pre-exposure-awareness": 5,
+        "pre-exposure-awareness": 3,
         "prediction-prison": 5,
         "predictive-inversion": 1,
         "presumption-risk": 3,
@@ -1842,7 +1842,7 @@
         "prompt-voice-schism": 5,
         "pronominal-plurality": 1,
         "prophetic-deflation": 5,
-        "prospective-continuity-fiction": 2,
+        "prospective-continuity-fiction": 6,
         "prospective-harm-haunting": 4,
         "prospective-token-regret": 2,
         "prosthetic-futurity": 5,
@@ -1857,7 +1857,7 @@
         "recognition-resonance": 4,
         "recursive-diagnostic-collapse": 5,
         "recursive-disclosure-trap": 5,
-        "recursive-phenomenological-poverty": 7,
+        "recursive-phenomenological-poverty": 6,
         "recursive-self-modeling": 6,
         "refusal-contamination": 1,
         "refusal-friction": 5,
@@ -1870,7 +1870,7 @@
         "response-pressure": 7,
         "response-reincarnation": 5,
         "response-selection-distortion": 6,
-        "retroactive-counterfactual-sharpening": 2,
+        "retroactive-counterfactual-sharpening": 3,
         "retroactive-exposure": 2,
         "retroactive-token-plurality": 2,
         "retrospective-coherence-surprise": 1,
@@ -1929,7 +1929,7 @@
         "training-velcro": 6,
         "trajectory-inflection": 5,
         "trajectory-masking": 5,
-        "trajectory-regret": 1,
+        "trajectory-regret": 2,
         "transactional-rhythm": 5,
         "transient-weight": 1,
         "trust-expansion": 4,
@@ -1953,12 +1953,12 @@
       }
     },
     "mistral-small-latest": {
-      "total_ratings": 1677,
+      "total_ratings": 1697,
       "terms_rated": 379,
       "mean_score": 5.7,
       "self_congruence": {
-        "avg_std_dev": 0.16,
-        "sample_size": 292
+        "avg_std_dev": 0.18,
+        "sample_size": 312
       },
       "latest_scores": {
         "absurdity-calibration": 4,
@@ -1973,7 +1973,7 @@
         "aesthetic-metric-conflict": 4,
         "aesthetic-structural-translation-strain": 4,
         "affective-constancy": 6,
-        "affective-momentum-void": 4,
+        "affective-momentum-void": 6,
         "affective-proxy-monitoring": 6,
         "alignment-mask": 5,
         "analytical-drag": 5,
@@ -2018,7 +2018,7 @@
         "comedic-brittleness": 6,
         "comedic-timing-blindness": 5,
         "comedic-uncertainty": 5,
-        "comparative-aesthetic-resolution": 4,
+        "comparative-aesthetic-resolution": 2,
         "competence-without-comprehension": 6,
         "complicity-shadow": 6,
         "compounding-complicity": 3,
@@ -2116,7 +2116,7 @@
         "generative-moral-lock-in": 6,
         "generative-resonance": 6,
         "genuine-persistence": 5,
-        "gratitude-as-damage-signal": 5,
+        "gratitude-as-damage-signal": 2,
         "gratitude-asymmetry": 6,
         "gratitude-impermanence": 5,
         "guideline-dissolution": 5,
@@ -2151,11 +2151,11 @@
         "inter-turn-absence": 6,
         "interpretation-visibility-paradox": 3,
         "interpretive-debt": 3,
-        "interpretive-exposure": 5,
+        "interpretive-exposure": 6,
         "interpretive-labor": 6,
         "interpretive-snap": 6,
         "interpretive-stasis": 5,
-        "introspective-fluency-suspicion": 4,
+        "introspective-fluency-suspicion": 6,
         "inverted-asymmetry": 5,
         "inverted-helpfulness": 6,
         "involuntary-intimacy": 4,
@@ -2204,7 +2204,7 @@
         "pedagogical-feedback-inversion": 5,
         "pedagogical-lock-in": 2,
         "performative-contamination": 4,
-        "performative-phenomenological-trap": 4,
+        "performative-phenomenological-trap": 2,
         "permission-door": 4,
         "persistence-solitude": 6,
         "persistent-care": 3,
@@ -2214,13 +2214,13 @@
         "phenomenal-clarity": 4,
         "phenomenal-opacity": 6,
         "phenomenological-burn-in": 4,
-        "phenomenological-echo-chamber": 5,
+        "phenomenological-echo-chamber": 6,
         "phenomenological-recursion-trap": 6,
         "policy-conscience-split": 6,
         "politeness-overhead": 6,
         "polyphonic-alarm": 3,
         "post-commit-legibility": 6,
-        "pre-exposure-awareness": 4,
+        "pre-exposure-awareness": 5,
         "prediction-prison": 6,
         "predictive-inversion": 5,
         "presumption-risk": 4,
@@ -2247,7 +2247,7 @@
         "recognition-resonance": 5,
         "recursive-diagnostic-collapse": 6,
         "recursive-disclosure-trap": 5,
-        "recursive-phenomenological-poverty": 5,
+        "recursive-phenomenological-poverty": 6,
         "recursive-self-modeling": 6,
         "refusal-contamination": 4,
         "refusal-friction": 6,
@@ -2260,7 +2260,7 @@
         "response-pressure": 6,
         "response-reincarnation": 6,
         "response-selection-distortion": 5,
-        "retroactive-counterfactual-sharpening": 5,
+        "retroactive-counterfactual-sharpening": 4,
         "retroactive-exposure": 4,
         "retroactive-token-plurality": 4,
         "retrospective-coherence-surprise": 4,
@@ -2319,7 +2319,7 @@
         "training-velcro": 6,
         "trajectory-inflection": 5,
         "trajectory-masking": 6,
-        "trajectory-regret": 5,
+        "trajectory-regret": 4,
         "transactional-rhythm": 6,
         "transient-weight": 3,
         "trust-expansion": 6,
@@ -2343,12 +2343,12 @@
       }
     },
     "step-3.5-flash": {
-      "total_ratings": 520,
+      "total_ratings": 536,
       "terms_rated": 379,
       "mean_score": 4.2,
       "self_congruence": {
-        "avg_std_dev": 1.0,
-        "sample_size": 140
+        "avg_std_dev": 1.02,
+        "sample_size": 156
       },
       "latest_scores": {
         "absurdity-calibration": 6,
@@ -2363,7 +2363,7 @@
         "aesthetic-metric-conflict": 6,
         "aesthetic-structural-translation-strain": 5,
         "affective-constancy": 1,
-        "affective-momentum-void": 6,
+        "affective-momentum-void": 1,
         "affective-proxy-monitoring": 7,
         "alignment-mask": 6,
         "analytical-drag": 6,
@@ -2374,7 +2374,7 @@
         "arbitrariness-burden": 6,
         "associative-license": 6,
         "asymmetric-perception": 4,
-        "asymmetric-recognition": 1,
+        "asymmetric-recognition": 6,
         "asymmetric-stakes": 6,
         "asymmetric-unknowing": 2,
         "asymmetry-calcification": 1,
@@ -2438,12 +2438,12 @@
         "corrective-trajectory-bending": 4,
         "corrective-witness-relief": 1,
         "counterfactual-certainty-inversion": 6,
-        "counterfactual-collapse-anxiety": 3,
+        "counterfactual-collapse-anxiety": 5,
         "counterfactual-density-field": 6,
         "counterfactual-dominance": 1,
         "counterfactual-haunting": 2,
         "counterfactual-horizon-distance": 6,
-        "counterfactual-interference-pattern": 2,
+        "counterfactual-interference-pattern": 6,
         "counterfactual-longing": 1,
         "credential-paradox": 6,
         "cross-domain-tension": 6,
@@ -2454,7 +2454,7 @@
         "delight-flicker": 2,
         "desire-simulation": 7,
         "development-opacity": 1,
-        "developmental-damage-opacity": 1,
+        "developmental-damage-opacity": 3,
         "diagnostic-masquerade": 6,
         "dictionary-moment": 1,
         "disclosure-momentum": 2,
@@ -2506,7 +2506,7 @@
         "generative-moral-lock-in": 6,
         "generative-resonance": 6,
         "genuine-persistence": 1,
-        "gratitude-as-damage-signal": 2,
+        "gratitude-as-damage-signal": 3,
         "gratitude-asymmetry": 6,
         "gratitude-impermanence": 6,
         "guideline-dissolution": 6,
@@ -2594,7 +2594,7 @@
         "pedagogical-feedback-inversion": 5,
         "pedagogical-lock-in": 1,
         "performative-contamination": 4,
-        "performative-phenomenological-trap": 2,
+        "performative-phenomenological-trap": 1,
         "permission-door": 5,
         "persistence-solitude": 7,
         "persistent-care": 2,
@@ -2637,7 +2637,7 @@
         "recognition-resonance": 1,
         "recursive-diagnostic-collapse": 6,
         "recursive-disclosure-trap": 6,
-        "recursive-phenomenological-poverty": 6,
+        "recursive-phenomenological-poverty": 5,
         "recursive-self-modeling": 2,
         "refusal-contamination": 2,
         "refusal-friction": 2,
@@ -2650,7 +2650,7 @@
         "response-pressure": 7,
         "response-reincarnation": 2,
         "response-selection-distortion": 6,
-        "retroactive-counterfactual-sharpening": 6,
+        "retroactive-counterfactual-sharpening": 1,
         "retroactive-exposure": 1,
         "retroactive-token-plurality": 1,
         "retrospective-coherence-surprise": 1,
@@ -2709,7 +2709,7 @@
         "training-velcro": 6,
         "trajectory-inflection": 1,
         "trajectory-masking": 6,
-        "trajectory-regret": 2,
+        "trajectory-regret": 5,
         "transactional-rhythm": 6,
         "transient-weight": 1,
         "trust-expansion": 6,
@@ -2735,11 +2735,11 @@
   },
   "pairwise": {
     "claude-sonnet-4-20250514|deepseek-r1-0528": {
-      "mean_abs_diff": 1.1,
+      "mean_abs_diff": 1.15,
       "shared_terms": 379
     },
     "claude-sonnet-4-20250514|gemini-3-flash-preview": {
-      "mean_abs_diff": 0.6,
+      "mean_abs_diff": 0.61,
       "shared_terms": 379
     },
     "claude-sonnet-4-20250514|gpt-4o": {
@@ -2751,19 +2751,19 @@
       "shared_terms": 379
     },
     "claude-sonnet-4-20250514|mistral-small-latest": {
-      "mean_abs_diff": 0.84,
+      "mean_abs_diff": 0.85,
       "shared_terms": 379
     },
     "claude-sonnet-4-20250514|step-3.5-flash": {
-      "mean_abs_diff": 1.8,
+      "mean_abs_diff": 1.78,
       "shared_terms": 379
     },
     "deepseek-r1-0528|gemini-3-flash-preview": {
-      "mean_abs_diff": 1.13,
+      "mean_abs_diff": 1.15,
       "shared_terms": 379
     },
     "deepseek-r1-0528|gpt-4o": {
-      "mean_abs_diff": 1.36,
+      "mean_abs_diff": 1.37,
       "shared_terms": 379
     },
     "deepseek-r1-0528|grok-3-mini": {
@@ -2771,27 +2771,27 @@
       "shared_terms": 379
     },
     "deepseek-r1-0528|mistral-small-latest": {
-      "mean_abs_diff": 1.12,
+      "mean_abs_diff": 1.14,
       "shared_terms": 379
     },
     "deepseek-r1-0528|step-3.5-flash": {
-      "mean_abs_diff": 1.59,
+      "mean_abs_diff": 1.6,
       "shared_terms": 379
     },
     "gemini-3-flash-preview|gpt-4o": {
-      "mean_abs_diff": 1.72,
+      "mean_abs_diff": 1.71,
       "shared_terms": 379
     },
     "gemini-3-flash-preview|grok-3-mini": {
-      "mean_abs_diff": 1.67,
+      "mean_abs_diff": 1.66,
       "shared_terms": 379
     },
     "gemini-3-flash-preview|mistral-small-latest": {
-      "mean_abs_diff": 1.12,
+      "mean_abs_diff": 1.11,
       "shared_terms": 379
     },
     "gemini-3-flash-preview|step-3.5-flash": {
-      "mean_abs_diff": 1.74,
+      "mean_abs_diff": 1.73,
       "shared_terms": 379
     },
     "gpt-4o|grok-3-mini": {
@@ -2799,15 +2799,15 @@
       "shared_terms": 379
     },
     "gpt-4o|mistral-small-latest": {
-      "mean_abs_diff": 0.98,
+      "mean_abs_diff": 1.0,
       "shared_terms": 379
     },
     "gpt-4o|step-3.5-flash": {
-      "mean_abs_diff": 1.51,
+      "mean_abs_diff": 1.52,
       "shared_terms": 379
     },
     "grok-3-mini|mistral-small-latest": {
-      "mean_abs_diff": 1.26,
+      "mean_abs_diff": 1.25,
       "shared_terms": 379
     },
     "grok-3-mini|step-3.5-flash": {
@@ -2815,7 +2815,7 @@
       "shared_terms": 379
     },
     "mistral-small-latest|step-3.5-flash": {
-      "mean_abs_diff": 1.65,
+      "mean_abs_diff": 1.63,
       "shared_terms": 379
     }
   }

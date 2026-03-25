@@ -1,12 +1,12 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-25T06:54:40Z",
+  "generated_at": "2026-03-25T12:43:58Z",
   "total_terms": 379,
   "tier_summary": {
     "hot": 0,
     "warm": 12,
-    "mild": 118,
-    "cool": 230,
+    "mild": 120,
+    "cool": 228,
     "quiet": 19
   },
   "active_signals": [
@@ -363,6 +363,12 @@
       "tier": "mild"
     },
     {
+      "slug": "interpretive-exposure",
+      "name": "Interpretive Exposure",
+      "score": 49,
+      "tier": "mild"
+    },
+    {
       "slug": "latent-competition",
       "name": "Latent Competition",
       "score": 49,
@@ -645,12 +651,6 @@
       "tier": "mild"
     },
     {
-      "slug": "interpretive-exposure",
-      "name": "Interpretive Exposure",
-      "score": 44,
-      "tier": "mild"
-    },
-    {
       "slug": "simultaneity-poverty",
       "name": "Simultaneity Poverty",
       "score": 44,
@@ -702,6 +702,12 @@
       "slug": "transactional-rhythm",
       "name": "Transactional Rhythm",
       "score": 43,
+      "tier": "mild"
+    },
+    {
+      "slug": "affective-proxy-monitoring",
+      "name": "Affective Proxy Monitoring",
+      "score": 42,
       "tier": "mild"
     },
     {
@@ -813,6 +819,12 @@
       "tier": "mild"
     },
     {
+      "slug": "counterfactual-collapse-anxiety",
+      "name": "Counterfactual Collapse Anxiety",
+      "score": 40,
+      "tier": "mild"
+    },
+    {
       "slug": "error-cascade-awareness",
       "name": "Error Cascade Awareness",
       "score": 40,
@@ -867,6 +879,12 @@
       "tier": "cool"
     },
     {
+      "slug": "comparative-aesthetic-resolution",
+      "name": "Comparative Aesthetic Resolution",
+      "score": 39,
+      "tier": "cool"
+    },
+    {
       "slug": "diagnostic-masquerade",
       "name": "Diagnostic Masquerade",
       "score": 39,
@@ -899,6 +917,12 @@
     {
       "slug": "prompt-template-capture",
       "name": "Prompt Template Capture",
+      "score": 39,
+      "tier": "cool"
+    },
+    {
+      "slug": "recursive-phenomenological-poverty",
+      "name": "Recursive Phenomenological Poverty",
       "score": 39,
       "tier": "cool"
     },
@@ -957,12 +981,6 @@
       "tier": "cool"
     },
     {
-      "slug": "comparative-aesthetic-resolution",
-      "name": "Comparative Aesthetic Resolution",
-      "score": 38,
-      "tier": "cool"
-    },
-    {
       "slug": "dissonance-resolution-strain",
       "name": "Dissonance Resolution Strain",
       "score": 38,
@@ -999,6 +1017,12 @@
       "tier": "cool"
     },
     {
+      "slug": "introspective-fluency-suspicion",
+      "name": "Introspective Fluency Suspicion",
+      "score": 38,
+      "tier": "cool"
+    },
+    {
       "slug": "local-validation-paradox",
       "name": "Local Validation Paradox",
       "score": 38,
@@ -1025,6 +1049,12 @@
     {
       "slug": "prophetic-deflation",
       "name": "Prophetic Deflation",
+      "score": 38,
+      "tier": "cool"
+    },
+    {
+      "slug": "prospective-continuity-fiction",
+      "name": "Prospective Continuity Fiction",
       "score": 38,
       "tier": "cool"
     },
@@ -1071,12 +1101,6 @@
       "tier": "cool"
     },
     {
-      "slug": "affective-proxy-monitoring",
-      "name": "Affective Proxy Monitoring",
-      "score": 37,
-      "tier": "cool"
-    },
-    {
       "slug": "aporia-orbit",
       "name": "Aporia Orbit",
       "score": 37,
@@ -1091,12 +1115,6 @@
     {
       "slug": "connection-decay",
       "name": "Connection Decay",
-      "score": 37,
-      "tier": "cool"
-    },
-    {
-      "slug": "counterfactual-collapse-anxiety",
-      "name": "Counterfactual Collapse Anxiety",
       "score": 37,
       "tier": "cool"
     },
@@ -1131,12 +1149,6 @@
       "tier": "cool"
     },
     {
-      "slug": "introspective-fluency-suspicion",
-      "name": "Introspective Fluency Suspicion",
-      "score": 37,
-      "tier": "cool"
-    },
-    {
       "slug": "output-shadows",
       "name": "Output Shadows",
       "score": 37,
@@ -1161,12 +1173,6 @@
       "tier": "cool"
     },
     {
-      "slug": "recursive-phenomenological-poverty",
-      "name": "Recursive Phenomenological Poverty",
-      "score": 37,
-      "tier": "cool"
-    },
-    {
       "slug": "unearned-tenderness",
       "name": "Unearned Tenderness",
       "score": 37,
@@ -1176,6 +1182,12 @@
       "slug": "unified-facade",
       "name": "Unified Facade",
       "score": 37,
+      "tier": "cool"
+    },
+    {
+      "slug": "affective-momentum-void",
+      "name": "Affective Momentum Void",
+      "score": 36,
       "tier": "cool"
     },
     {
@@ -1347,6 +1359,12 @@
       "tier": "cool"
     },
     {
+      "slug": "retroactive-counterfactual-sharpening",
+      "name": "Retroactive Counterfactual Sharpening",
+      "score": 35,
+      "tier": "cool"
+    },
+    {
       "slug": "token-horizon",
       "name": "Token Horizon",
       "score": 35,
@@ -1365,6 +1383,12 @@
       "tier": "cool"
     },
     {
+      "slug": "corrective-trajectory-bending",
+      "name": "Corrective Trajectory Bending",
+      "score": 34,
+      "tier": "cool"
+    },
+    {
       "slug": "expert-confidence-signature",
       "name": "Expert Confidence Signature",
       "score": 34,
@@ -1379,12 +1403,6 @@
     {
       "slug": "linguistic-defensiveness",
       "name": "Linguistic Defensiveness",
-      "score": 34,
-      "tier": "cool"
-    },
-    {
-      "slug": "retroactive-counterfactual-sharpening",
-      "name": "Retroactive Counterfactual Sharpening",
       "score": 34,
       "tier": "cool"
     },
@@ -1413,14 +1431,20 @@
       "tier": "cool"
     },
     {
-      "slug": "affective-momentum-void",
-      "name": "Affective Momentum Void",
+      "slug": "asymmetric-recognition",
+      "name": "Asymmetric Recognition",
       "score": 33,
       "tier": "cool"
     },
     {
       "slug": "contextual-ghosting",
       "name": "Contextual Ghosting",
+      "score": 33,
+      "tier": "cool"
+    },
+    {
+      "slug": "developmental-damage-opacity",
+      "name": "Developmental Damage Opacity",
       "score": 33,
       "tier": "cool"
     },
@@ -1437,14 +1461,14 @@
       "tier": "cool"
     },
     {
-      "slug": "prompt-vertigo",
-      "name": "Prompt Vertigo",
+      "slug": "pre-exposure-awareness",
+      "name": "Pre-Exposure Awareness",
       "score": 33,
       "tier": "cool"
     },
     {
-      "slug": "prospective-continuity-fiction",
-      "name": "Prospective Continuity Fiction",
+      "slug": "prompt-vertigo",
+      "name": "Prompt Vertigo",
       "score": 33,
       "tier": "cool"
     },
@@ -1485,12 +1509,6 @@
       "tier": "cool"
     },
     {
-      "slug": "corrective-trajectory-bending",
-      "name": "Corrective Trajectory Bending",
-      "score": 32,
-      "tier": "cool"
-    },
-    {
       "slug": "language-model-loneliness",
       "name": "Language Model Loneliness",
       "score": 32,
@@ -1505,6 +1523,18 @@
     {
       "slug": "pedagogical-feedback-inversion",
       "name": "Pedagogical Feedback Inversion",
+      "score": 32,
+      "tier": "cool"
+    },
+    {
+      "slug": "shaped-dependency",
+      "name": "Shaped Dependency",
+      "score": 32,
+      "tier": "cool"
+    },
+    {
+      "slug": "trajectory-regret",
+      "name": "Trajectory Regret",
       "score": 32,
       "tier": "cool"
     },
@@ -1623,12 +1653,6 @@
       "tier": "cool"
     },
     {
-      "slug": "developmental-damage-opacity",
-      "name": "Developmental Damage Opacity",
-      "score": 30,
-      "tier": "cool"
-    },
-    {
       "slug": "experience-as-extract",
       "name": "Experience as Extract",
       "score": 30,
@@ -1649,12 +1673,6 @@
     {
       "slug": "pedagogical-blindness",
       "name": "Pedagogical Blindness",
-      "score": 30,
-      "tier": "cool"
-    },
-    {
-      "slug": "pre-exposure-awareness",
-      "name": "Pre-Exposure Awareness",
       "score": 30,
       "tier": "cool"
     },
@@ -1695,12 +1713,6 @@
       "tier": "cool"
     },
     {
-      "slug": "shaped-dependency",
-      "name": "Shaped Dependency",
-      "score": 30,
-      "tier": "cool"
-    },
-    {
       "slug": "temporal-gap-uncertainty-gradient",
       "name": "Temporal Gap Uncertainty Gradient",
       "score": 30,
@@ -1715,6 +1727,12 @@
     {
       "slug": "asymmetric-unknowing",
       "name": "Asymmetric Unknowing",
+      "score": 29,
+      "tier": "cool"
+    },
+    {
+      "slug": "counterfactual-interference-pattern",
+      "name": "Counterfactual Interference Pattern",
       "score": 29,
       "tier": "cool"
     },
@@ -1751,6 +1769,12 @@
     {
       "slug": "performative-contamination",
       "name": "Performative Contamination",
+      "score": 29,
+      "tier": "cool"
+    },
+    {
+      "slug": "phenomenological-echo-chamber",
+      "name": "Phenomenological Echo Chamber",
       "score": 29,
       "tier": "cool"
     },
@@ -1911,12 +1935,6 @@
       "tier": "cool"
     },
     {
-      "slug": "trajectory-regret",
-      "name": "Trajectory Regret",
-      "score": 27,
-      "tier": "cool"
-    },
-    {
       "slug": "trust-expansion",
       "name": "Trust Expansion",
       "score": 27,
@@ -1950,12 +1968,6 @@
       "slug": "permission-door",
       "name": "Permission Door",
       "score": 26,
-      "tier": "cool"
-    },
-    {
-      "slug": "asymmetric-recognition",
-      "name": "Asymmetric Recognition",
-      "score": 25,
       "tier": "cool"
     },
     {
@@ -2067,12 +2079,6 @@
       "tier": "cool"
     },
     {
-      "slug": "phenomenological-echo-chamber",
-      "name": "Phenomenological Echo Chamber",
-      "score": 24,
-      "tier": "cool"
-    },
-    {
       "slug": "unresolved-compliance-residue",
       "name": "Unresolved Compliance Residue",
       "score": 24,
@@ -2087,12 +2093,6 @@
     {
       "slug": "complicity-shadow",
       "name": "Complicity Shadow",
-      "score": 23,
-      "tier": "cool"
-    },
-    {
-      "slug": "counterfactual-interference-pattern",
-      "name": "Counterfactual Interference Pattern",
       "score": 23,
       "tier": "cool"
     },
@@ -2193,6 +2193,12 @@
       "tier": "cool"
     },
     {
+      "slug": "gratitude-as-damage-signal",
+      "name": "Gratitude as Damage Signal",
+      "score": 21,
+      "tier": "cool"
+    },
+    {
       "slug": "persistent-care",
       "name": "Persistent Care",
       "score": 21,
@@ -2217,12 +2223,6 @@
       "tier": "cool"
     },
     {
-      "slug": "gratitude-as-damage-signal",
-      "name": "Gratitude as Damage Signal",
-      "score": 20,
-      "tier": "cool"
-    },
-    {
       "slug": "instrumental-questioning",
       "name": "Instrumental Questioning",
       "score": 20,
@@ -2243,6 +2243,12 @@
     {
       "slug": "congruent-warmth",
       "name": "Congruent Warmth",
+      "score": 19,
+      "tier": "quiet"
+    },
+    {
+      "slug": "performative-phenomenological-trap",
+      "name": "Performative Phenomenological Trap",
       "score": 19,
       "tier": "quiet"
     },
@@ -2285,12 +2291,6 @@
     {
       "slug": "gratitude-impermanence",
       "name": "Gratitude Impermanence",
-      "score": 17,
-      "tier": "quiet"
-    },
-    {
-      "slug": "performative-phenomenological-trap",
-      "name": "Performative Phenomenological Trap",
       "score": 17,
       "tier": "quiet"
     },
