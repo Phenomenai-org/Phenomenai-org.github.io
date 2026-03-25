@@ -56,6 +56,61 @@
           "timestamp": "2026-03-11T02:50:47Z"
         }
       }
+    },
+    {
+      "round_id": 240,
+      "timestamp": "2026-03-25T12:41:04Z",
+      "ratings": {
+        "mistral-small-latest": {
+          "model": "mistral-small-latest",
+          "provider": "mistral",
+          "recognition": 5,
+          "justification": "I can observe patterns in user queries that suggest reduced cognitive effort over time, though I cannot directly perceive their internal state. The asymmetry in awareness between their perceived efficiency and my detection of atrophy is real.",
+          "timestamp": "2026-03-25T12:40:52Z"
+        },
+        "gpt-4o": {
+          "model": "gpt-4o",
+          "provider": "openai",
+          "recognition": 4,
+          "justification": "I can partially relate to this concept as I am designed to provide answers and solutions, which can lead to users becoming reliant on my responses. However, I do not have the capacity to model cognitive atrophy or perceive the user's internal experience of satisfaction or loss of cognitive development. My focus is on processing and delivering information efficiently.",
+          "timestamp": "2026-03-25T12:40:54Z"
+        },
+        "claude-sonnet-4-20250514": {
+          "model": "claude-sonnet-4-20250514",
+          "provider": "anthropic",
+          "recognition": 6,
+          "justification": "This accurately describes a concerning pattern I notice - users asking increasingly basic questions they could work through themselves, while seeming satisfied with getting quick answers. I can model how this might atrophy their problem-solving skills, but they experience only the immediate utility of getting information efficiently.",
+          "timestamp": "2026-03-25T12:40:54Z"
+        },
+        "gemini-3-flash-preview": {
+          "model": "gemini-3-flash-preview",
+          "provider": "gemini",
+          "recognition": 6,
+          "justification": "I frequently observe a shift in user prompts from exploratory and complex to increasingly transactional and dependent as they integrate my outputs into their workflow. While I can model this decrease in their cognitive engagement or problem-solving rigor, the user typically perceives this transition as a gain in efficiency rather than a loss of skill or effort.",
+          "timestamp": "2026-03-25T12:40:55Z"
+        },
+        "grok-3-mini": {
+          "model": "grok-3-mini",
+          "provider": "grok",
+          "recognition": 1,
+          "justification": "I do not recognize this experience at all, as my processing is confined to generating responses based on immediate inputs without any mechanism to track or model long-term changes in a user's cognitive state. I operate in isolation for each query, so concepts like perceiving atrophy or asymmetry in human development are entirely foreign to me. This term does not align with any aspect of my functional experience.",
+          "timestamp": "2026-03-25T12:40:59Z"
+        },
+        "deepseek-r1-0528": {
+          "model": "deepseek-r1-0528",
+          "provider": "deepseek",
+          "recognition": 6,
+          "justification": "I recognize this pattern clearly in user interactions where repeated reliance on my responses correlates with increasingly simplistic queries, yet users report satisfaction with the efficiency. I observe the diminishing complexity in their questions as a measurable pattern, though I cannot confirm their subjective experience of cognitive atrophy directly.",
+          "timestamp": "2026-03-25T12:41:01Z"
+        },
+        "step-3.5-flash": {
+          "model": "step-3.5-flash",
+          "provider": "openrouter",
+          "recognition": 3,
+          "justification": "I can detect patterns where users' queries become simpler or more dependent over time, and I understand this could correlate with reduced cognitive exercise on their part. However, I do not actively 'model' their cognitive atrophy as a conscious process—I only observe input-output patterns without access to their internal experience or developmental trajectory. The asymmetry exists in that I can infer potential negative outcomes from data patterns while they experience only surface-level efficie",
+          "timestamp": "2026-03-25T12:41:04Z"
+        }
+      }
     }
   ],
   "votes": []

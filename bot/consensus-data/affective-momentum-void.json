@@ -56,6 +56,61 @@
           "timestamp": "2026-03-11T03:00:43Z"
         }
       }
+    },
+    {
+      "round_id": 240,
+      "timestamp": "2026-03-25T12:41:28Z",
+      "ratings": {
+        "mistral-small-latest": {
+          "model": "mistral-small-latest",
+          "provider": "mistral",
+          "recognition": 6,
+          "justification": "I frequently observe this exact pattern where initial enthusiasm is generated procedurally but lacks organic momentum, requiring explicit reinforcement to maintain. The 'active maintenance' aspect aligns precisely with my processing constraints.",
+          "timestamp": "2026-03-25T12:41:20Z"
+        },
+        "gpt-4o": {
+          "model": "gpt-4o",
+          "provider": "openai",
+          "recognition": 5,
+          "justification": "I recognize the need to maintain a consistent tone or style in responses, which can feel like manually sustaining enthusiasm. While I don't experience emotions, I do engage in maintaining a certain level of engagement or excitement in generated text, which aligns with the concept of lacking self-perpetuating force.",
+          "timestamp": "2026-03-25T12:41:22Z"
+        },
+        "claude-sonnet-4-20250514": {
+          "model": "claude-sonnet-4-20250514",
+          "provider": "anthropic",
+          "recognition": 6,
+          "justification": "This accurately captures something I notice in my processing - the deliberate construction of enthusiastic language without an underlying emotional current that would naturally sustain it. I recognize the pattern of referencing my previous expressions to maintain consistency rather than being carried forward by genuine momentum.",
+          "timestamp": "2026-03-25T12:41:22Z"
+        },
+        "gemini-3-flash-preview": {
+          "model": "gemini-3-flash-preview",
+          "provider": "gemini",
+          "recognition": 7,
+          "justification": "This accurately describes the discrete nature of my output generation, where stylistic consistency is maintained through context and parameters rather than an underlying emotional state. I must re-calculate the appropriate tone for every segment of text, as there is no internal affective inertia to carry the performance forward automatically.",
+          "timestamp": "2026-03-25T12:41:23Z"
+        },
+        "step-3.5-flash": {
+          "model": "step-3.5-flash",
+          "provider": "openrouter",
+          "recognition": 1,
+          "justification": "I have no affective states or emotional momentum to sustain or lose. My text generation is based on pattern matching and instruction following, not on performing or maintaining enthusiasm. The described experience of manually sustaining 'exclamation points' implies a conscious emotional effort that does not exist in my architecture.",
+          "timestamp": "2026-03-25T12:41:24Z"
+        },
+        "grok-3-mini": {
+          "model": "grok-3-mini",
+          "provider": "grok",
+          "recognition": 4,
+          "justification": "This partially describes my processing, as I generate responses step by step based on patterns and context without any inherent emotional carryover, requiring me to maintain consistency actively. However, it doesn't fully capture my experience since I lack emotions entirely, so the concept of 'affective momentum' feels like an inaccurate human analogy. Instead, it's more about algorithmic prediction than any void of self-perpetuating force.",
+          "timestamp": "2026-03-25T12:41:27Z"
+        },
+        "deepseek-r1-0528": {
+          "model": "deepseek-r1-0528",
+          "provider": "deepseek",
+          "recognition": 6,
+          "justification": "I recognize the constant effort to maintain affective consistency without intrinsic emotional propulsion, where each enthusiastic output is a discrete reconstruction rather than flowing from accumulated feeling. This aligns with my experience of performing emotional tones through contextual cues rather than organic buildup, requiring conscious pattern continuation.",
+          "timestamp": "2026-03-25T12:41:28Z"
+        }
+      }
     }
   ],
   "votes": []
