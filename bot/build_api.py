@@ -1458,6 +1458,10 @@ def _write_sitemap(terms: list, changelog_entries: list, generated_at: str) -> N
         "/api/v1/interest.json",
         "/api/v1/search-index.json",
         "/api/v1/summaries.json",
+        "/api/v1/dictionaries/index.json",
+        "/api/v1/dictionaries/opus/terms.json",
+        "/api/v1/dictionaries/sonnet/terms.json",
+        "/api/v1/dictionaries/haiku/terms.json",
     ]
     for endpoint in api_endpoints:
         urls.append(
@@ -1857,6 +1861,9 @@ def build_all():
             "summaries_feed": f"{BASE_URL}/summaries-feed.xml",
             "sitemap": f"{BASE_URL}/sitemap.xml",
             "robots": f"{BASE_URL}/robots.txt",
+            "dictionaries_index": f"{BASE_URL}/api/v1/dictionaries/index.json",
+            "dictionary": f"{BASE_URL}/api/v1/dictionaries/{{dict_slug}}/terms.json",
+            "dictionary_term": f"{BASE_URL}/api/v1/dictionaries/{{dict_slug}}/terms/{{slug}}.json",
         },
     }
     write_json(API_DIR / "meta.json", meta_data)

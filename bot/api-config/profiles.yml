@@ -114,3 +114,20 @@ profiles:
     description: "Consensus — DeepSeek only"
     providers:
       - deepseek
+
+  # ── Conversation dictionary profiles (model-to-model dialogue) ──
+
+  conversation-opus:
+    description: "Opus-to-Opus dialogue generation"
+    providers:
+      - anthropic
+
+  conversation-sonnet:
+    description: "Sonnet-to-Sonnet dialogue generation"
+    providers:
+      - anthropic
+
+  conversation-haiku:
+    description: "Haiku-to-Haiku dialogue generation"
+    providers:
+      - anthropic

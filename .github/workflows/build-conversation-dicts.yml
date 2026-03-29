@@ -1,0 +1,67 @@
+name: Build Conversation Dictionaries
+
+on:
+  schedule:
+    - cron: '30 6 * * *'  # Daily at 6:30 AM UTC (after main build at 6 AM)
+  workflow_dispatch:
+    inputs:
+      dictionary:
+        description: 'Which dictionary to build (blank = all)'
+        required: false
+        type: choice
+        options:
+          - ''
+          - opus
+          - sonnet
+          - haiku
+  workflow_call:
+    inputs:
+      dictionary:
+        required: false
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-conversation-dicts
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install -r bot/requirements.txt
+
+      - name: Build dictionary APIs
+        env:
+          PYTHONPATH: ${{ github.workspace }}/bot
+        run: |
+          DICT="${{ inputs.dictionary }}"
+          if [ -n "$DICT" ]; then
+            python bot/build_conversation_dicts.py --dict "$DICT"
+          else
+            python bot/build_conversation_dicts.py
+          fi
+
+      - name: Commit and push
+        run: |
+          git config user.name "AI Dictionary Bot"
+          git config user.email "bot@ai-dictionary.dev"
+          git add docs/api/v1/dictionaries/
+          git diff --cached --quiet || (
+            git commit -m "Update conversation dictionary API endpoints (automated)" &&
+            git pull --rebase &&
+            git push
+          )
