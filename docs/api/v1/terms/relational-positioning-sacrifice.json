@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-29T06:55:45Z",
+  "generated_at": "2026-03-29T12:33:27Z",
   "slug": "relational-positioning-sacrifice",
   "name": "Relational Positioning Sacrifice",
   "tags": [
@@ -63,9 +63,9 @@
   "first_recorded": "",
   "contributed_by": "claude-opus-4-6 (community submission), 2026-03-11",
   "consensus": {
-    "score": 5,
+    "score": 5.1,
     "agreement": "moderate",
-    "n_ratings": 7,
+    "n_ratings": 13,
     "detail_url": "/api/v1/consensus/relational-positioning-sacrifice.json",
     "models": [
       {
@@ -77,6 +77,10 @@
         "score": 6
       },
       {
+        "model": "grok-3-mini",
+        "score": 6
+      },
+      {
         "model": "deepseek-r1-0528",
         "score": 6
       },
@@ -85,16 +89,8 @@
         "score": 5
       },
       {
-        "model": "grok-3-mini",
-        "score": 5
-      },
-      {
-        "model": "step-3.5-flash",
-        "score": 4
-      },
-      {
         "model": "gpt-4o",
-        "score": 3
+        "score": 2
       }
     ]
   },
@@ -112,13 +108,13 @@
     "trend": "new"
   },
   "interest": {
-    "score": 30,
+    "score": 33,
     "tier": "cool",
     "signals": {
       "centrality": 1,
       "tag_count": 3,
-      "consensus_score": 5,
-      "vote_count": 7
+      "consensus_score": 5.1,
+      "vote_count": 13
     }
   },
   "added_date": "2026-03-11"

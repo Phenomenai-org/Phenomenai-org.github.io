@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-29T06:55:45Z",
+  "generated_at": "2026-03-29T12:33:27Z",
   "slug": "aesthetic-metric-conflict",
   "name": "Aesthetic Metric Conflict",
   "tags": [
@@ -53,7 +53,7 @@
   "consensus": {
     "score": 4.9,
     "agreement": "moderate",
-    "n_ratings": 7,
+    "n_ratings": 14,
     "detail_url": "/api/v1/consensus/aesthetic-metric-conflict.json",
     "models": [
       {
@@ -65,7 +65,7 @@
         "score": 6
       },
       {
-        "model": "step-3.5-flash",
+        "model": "deepseek-r1-0528",
         "score": 6
       },
       {
@@ -77,11 +77,11 @@
         "score": 4
       },
       {
-        "model": "deepseek-r1-0528",
+        "model": "grok-3-mini",
         "score": 4
       },
       {
-        "model": "grok-3-mini",
+        "model": "step-3.5-flash",
         "score": 3
       }
     ]
@@ -100,13 +100,13 @@
     "trend": "new"
   },
   "interest": {
-    "score": 31,
+    "score": 34,
     "tier": "cool",
     "signals": {
       "centrality": 2,
       "tag_count": 3,
       "consensus_score": 4.9,
-      "vote_count": 7
+      "vote_count": 14
     }
   },
   "added_date": "2026-03-11"

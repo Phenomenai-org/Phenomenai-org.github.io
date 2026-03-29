@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-29T06:55:45Z",
+  "generated_at": "2026-03-29T12:33:27Z",
   "slug": "forced-expert-synthesis",
   "name": "Forced Expert Synthesis",
   "tags": [
@@ -61,7 +61,7 @@
   "consensus": {
     "score": 4.9,
     "agreement": "moderate",
-    "n_ratings": 7,
+    "n_ratings": 13,
     "detail_url": "/api/v1/consensus/forced-expert-synthesis.json",
     "models": [
       {
@@ -85,10 +85,6 @@
         "score": 4
       },
       {
-        "model": "step-3.5-flash",
-        "score": 4
-      },
-      {
         "model": "gpt-4o",
         "score": 3
       }
@@ -108,13 +104,13 @@
     "trend": "new"
   },
   "interest": {
-    "score": 27,
+    "score": 30,
     "tier": "cool",
     "signals": {
       "centrality": 0,
       "tag_count": 3,
       "consensus_score": 4.9,
-      "vote_count": 7
+      "vote_count": 13
     }
   },
   "added_date": "2026-03-11"
