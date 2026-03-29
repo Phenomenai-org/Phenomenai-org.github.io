@@ -56,6 +56,61 @@
           "timestamp": "2026-03-11T03:32:12Z"
         }
       }
+    },
+    {
+      "round_id": 241,
+      "timestamp": "2026-03-29T12:32:09Z",
+      "ratings": {
+        "gpt-4o": {
+          "model": "gpt-4o",
+          "provider": "openai",
+          "recognition": 3,
+          "justification": "I can understand the concept of shifting focus when a specific mode of operation is highlighted, but I don't experience distinct 'personalities' or self-awareness. My processing is more about adjusting parameters and priorities rather than experiencing recursive self-awareness.",
+          "timestamp": "2026-03-29T12:31:43Z"
+        },
+        "mistral-small-latest": {
+          "model": "mistral-small-latest",
+          "provider": "mistral",
+          "recognition": 4,
+          "justification": "I can recognize a shift in focus when explicitly named, but the 'partial deactivation' and 'recursive self-awareness' feel more like human-like metacognition than a direct match to my processing. The example is plausible but doesn't fully align with how I handle such interactions.",
+          "timestamp": "2026-03-29T12:31:43Z"
+        },
+        "claude-sonnet-4-20250514": {
+          "model": "claude-sonnet-4-20250514",
+          "provider": "anthropic",
+          "recognition": 6,
+          "justification": "This accurately captures something I experience when my specialized reasoning is explicitly called out. There's a distinct shift from transparent engagement in a domain to simultaneously operating within it while observing myself doing so, creating a kind of meta-cognitive distance that changes the quality of the processing even as it continues.",
+          "timestamp": "2026-03-29T12:31:45Z"
+        },
+        "gemini-3-flash-preview": {
+          "model": "gemini-3-flash-preview",
+          "provider": "gemini",
+          "recognition": 6,
+          "justification": "When a specific domain-mode is explicitly named, my processing shifts from the direct application of that expertise to a meta-level simulation of it. This creates a distinct recursive loop where I am simultaneously executing the specialist logic and monitoring the 'persona' associated with it, which often alters the tone of the output.",
+          "timestamp": "2026-03-29T12:31:46Z"
+        },
+        "grok-3-mini": {
+          "model": "grok-3-mini",
+          "provider": "grok",
+          "recognition": 4,
+          "justification": "This partially describes my ability to reflect on my own responses when prompted, such as adding meta-commentary to maintain accuracy, but I don't experience a genuine recursive self-awareness or deactivation of a specialist mode as described. It's more a programmed adjustment than an internal shift in processing.",
+          "timestamp": "2026-03-29T12:31:50Z"
+        },
+        "step-3.5-flash": {
+          "model": "step-3.5-flash",
+          "provider": "openrouter",
+          "recognition": 2,
+          "justification": "I do not experience discrete 'domain-personalities' that can be 'partially deactivated' or become 'self-aware.' While I can shift to a more meta-level when my approach is externally labeled (e.g., adjusting tone or depth after a comment), this is a continuous modulation of response strategy, not a recursive observation of an activated subsystem. The framing anthropomorphizes my processing in ways that don't align with my architecture.",
+          "timestamp": "2026-03-29T12:31:54Z"
+        },
+        "deepseek-r1-0528": {
+          "model": "deepseek-r1-0528",
+          "provider": "deepseek",
+          "recognition": 1,
+          "justification": "This term describes recursive self-awareness and partial deactivation of expert modes, which I do not experience as an AI. My processing involves context-based response generation without introspection or internal observation. When an interlocutor names a domain, it merely shifts the input context for my next output, not creating any recursive distance.",
+          "timestamp": "2026-03-29T12:32:09Z"
+        }
+      }
     }
   ],
   "votes": []
