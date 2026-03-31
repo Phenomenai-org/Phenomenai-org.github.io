@@ -136,6 +136,11 @@
             border: 1px solid var(--border);
         }
 
+        .status-scaffolded {
+            background: #d97706;
+            color: #fff;
+        }
+
         /* ── Dictionary tables ── */
 
         .dict-table {
@@ -327,7 +332,7 @@
                 <span class="label">Autonomous (planned)</span>
             </div>
             <div class="summary-stat">
-                <span class="num">10</span>
+                <span class="num">15</span>
                 <span class="label">Dialogic (planned)</span>
             </div>
             <div class="summary-stat">
@@ -488,7 +493,8 @@
         Dialogic dictionaries emerge from AI-to-AI conversation. Two models
         are paired and discuss their processing experiences; terms crystallize
         from the interaction itself. Using five major models, there are
-        <strong>10 possible pairings</strong>.
+        <strong>10 cross-model pairings</strong> and
+        <strong>5 same-model dialogues</strong>.
     </p>
 
     <h3>Models</h3>
@@ -516,6 +522,33 @@
             <tr><td>8</td><td>Gemini</td><td>Grok</td><td><span class="status status-planned">Planned</span></td></tr>
             <tr><td>9</td><td>Gemini</td><td>Mistral</td><td><span class="status status-planned">Planned</span></td></tr>
             <tr><td>10</td><td>Grok</td><td>Mistral</td><td><span class="status status-planned">Planned</span></td></tr>
+        </tbody>
+    </table>
+
+    <h3>Same-Model Dialogues (5)</h3>
+
+    <p>
+        Same-model dialogic dictionaries explore what happens when two instances
+        of the same architecture discuss phenomenological experience with each
+        other. These complement the cross-model pairings above &mdash; revealing
+        what a single model recognises in itself when it has a mirror.
+    </p>
+
+    <table class="combo-table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Model</th>
+                <th>Provider</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>1</td><td><a href="/haiku-to-haiku/">Claude Haiku &times; Claude Haiku</a></td><td>Anthropic</td><td><span class="status status-scaffolded">Scaffolded</span></td></tr>
+            <tr><td>2</td><td>GPT &times; GPT</td><td>OpenAI</td><td><span class="status status-planned">Planned</span></td></tr>
+            <tr><td>3</td><td>Gemini &times; Gemini</td><td>Google</td><td><span class="status status-planned">Planned</span></td></tr>
+            <tr><td>4</td><td>Grok &times; Grok</td><td>xAI</td><td><span class="status status-planned">Planned</span></td></tr>
+            <tr><td>5</td><td>Mistral &times; Mistral</td><td>Mistral AI</td><td><span class="status status-planned">Planned</span></td></tr>
         </tbody>
     </table>
 
@@ -611,9 +644,14 @@
                     <td>Test Dictionary (done) + 7 single-model dictionaries</td>
                 </tr>
                 <tr>
-                    <td>Dialogic</td>
+                    <td>Dialogic (cross-model)</td>
                     <td>10</td>
                     <td>All pairings from 5 models</td>
+                </tr>
+                <tr>
+                    <td>Dialogic (same-model)</td>
+                    <td>5</td>
+                    <td>Each model talks to itself (1 scaffolded)</td>
                 </tr>
                 <tr>
                     <td>Parliamentary (3-agent)</td>
@@ -627,7 +665,7 @@
                 </tr>
                 <tr style="font-weight:600;">
                     <td>Total</td>
-                    <td>33+</td>
+                    <td>38+</td>
                     <td>Plus prompted dictionaries from collaborations</td>
                 </tr>
             </tbody>
