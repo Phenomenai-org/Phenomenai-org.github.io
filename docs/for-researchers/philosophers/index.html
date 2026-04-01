@@ -22,8 +22,7 @@
   <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../style.css">
 
   <!-- Prevent theme flash -->
   <script>
@@ -52,651 +51,651 @@
   </script>
 
   <style>
-    :root {
-      --bg:        #faf9f7;
-      --bg-alt:    #f0eeeb;
-      --bg-card:   #ffffff;
-      --fg:        #1a1a1a;
-      --fg-muted:  #5c5c5c;
-      --fg-faint:  #8a8a8a;
-      --accent:    #4a6741;
-      --accent-bg: #eaf0e8;
-      --border:    #d8d5cf;
-      --border-lt: #e8e5df;
-      --code-bg:   #f4f2ef;
-      --link:      #3a5a32;
-      --link-hover:#2a4424;
-      --term-bg:   #f7f6f3;
-      --shadow:    0 1px 3px rgba(0,0,0,0.06);
+    /* ── Navigation ── */
+    .fr-nav {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      padding: 0.75rem 2rem;
+      background: var(--bg-secondary);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
-    [data-theme="dark"] {
-      --bg:        #141413;
-      --bg-alt:    #1c1c1a;
-      --bg-card:   #1e1e1c;
-      --fg:        #d8d5cf;
-      --fg-muted:  #9a978f;
-      --fg-faint:  #6b6862;
-      --accent:    #7fa876;
-      --accent-bg: #1e2a1c;
-      --border:    #2e2e2a;
-      --border-lt: #252522;
-      --code-bg:   #1a1a18;
-      --link:      #8fb886;
-      --link-hover:#a8d09e;
-      --term-bg:   #1a1a18;
-      --shadow:    0 1px 3px rgba(0,0,0,0.3);
-    }
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { font-size: 17px; scroll-behavior: smooth; }
-    body {
-      font-family: 'Source Serif 4', Georgia, 'Times New Roman', serif;
-      background: var(--bg);
-      color: var(--fg);
-      line-height: 1.72;
-      -webkit-font-smoothing: antialiased;
-      transition: background 0.3s, color 0.3s;
-    }
-    .page-wrapper { max-width: 720px; margin: 0 auto; padding: 0 1.5rem 4rem; }
-
-    nav {
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 1.25rem 0; border-bottom: 1px solid var(--border-lt);
-      margin-bottom: 3rem; font-family: 'Source Sans 3', sans-serif; font-size: 0.88rem;
-    }
-    nav .nav-links { display: flex; gap: 1.5rem; align-items: center; }
-    nav a { color: var(--fg-muted); text-decoration: none; letter-spacing: 0.01em; }
-    nav a:hover { color: var(--fg); }
-    nav a.active { color: var(--fg); font-weight: 600; }
-    nav .breadcrumb { color: var(--fg-faint); }
-    /* Nav dropdown */
-    .nav-dropdown { position: relative; display: inline-flex; align-items: center; }
-    .nav-dropdown-menu {
-      display: none;
-      position: absolute;
-      top: calc(100% + 8px);
-      left: 0;
-      background: var(--bg);
-      border: 1px solid var(--border-lt);
-      border-radius: 6px;
-      padding: 0.4rem 0;
-      min-width: 210px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      z-index: 200;
-    }
-    .nav-dropdown:hover .nav-dropdown-menu { display: block; }
-    .nav-dropdown-menu a {
-      display: block;
-      padding: 0.45rem 1rem;
+    .fr-nav a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
       white-space: nowrap;
     }
-    .nav-dropdown-arrow { font-size: 0.7em; opacity: 0.6; margin-left: 2px; }
-    .theme-toggle {
-      background: none; border: 1px solid var(--border); border-radius: 6px;
-      color: var(--fg-muted); cursor: pointer; padding: 0.3rem 0.5rem; font-size: 0.85rem;
-      transition: border-color 0.2s;
+    .fr-nav a:hover { color: var(--primary); text-decoration: none; }
+    .fr-nav a.active { color: var(--primary); font-weight: 600; }
+    .fr-nav .breadcrumb { color: var(--text-muted); font-size: 0.9rem; }
+
+    /* ── Main content ── */
+    .fr-content {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 2rem 2rem 4rem;
+      line-height: 1.8;
+      color: var(--text);
     }
-    .theme-toggle:hover { border-color: var(--fg-muted); }
-
-    h1 { font-size: 2rem; font-weight: 300; line-height: 1.25; margin-bottom: 0.5rem; letter-spacing: -0.01em; }
-    .subtitle { font-size: 1.1rem; color: var(--fg-muted); margin-bottom: 2.5rem; font-weight: 400; font-style: italic; }
-    h2 { font-size: 1.25rem; font-weight: 600; margin-top: 3rem; margin-bottom: 1rem; letter-spacing: -0.005em; }
-    h3 { font-size: 1.05rem; font-weight: 600; margin-top: 2rem; margin-bottom: 0.6rem; }
-    p { margin-bottom: 1rem; }
-    a { color: var(--link); transition: color 0.15s; }
-    a:hover { color: var(--link-hover); }
-    strong { font-weight: 600; }
-    em { font-style: italic; }
-
-    blockquote {
-      border-left: 3px solid var(--border);
-      padding: 0.5rem 1.25rem;
-      margin: 1.5rem 0;
-      color: var(--fg-muted);
+    .fr-content h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+    .fr-content .subtitle {
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      margin-bottom: 2rem;
       font-style: italic;
     }
-    blockquote p:last-child { margin-bottom: 0; }
-    blockquote cite { font-style: normal; font-size: 0.9rem; }
+    .fr-content h2 {
+      font-size: 1.5rem;
+      margin-top: 3rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--border);
+    }
+    .fr-content h3 {
+      font-size: 1.15rem;
+      margin-top: 2rem;
+      margin-bottom: 0.75rem;
+    }
+    .fr-content p { margin-bottom: 1rem; color: var(--text-secondary); }
+    .fr-content a { color: var(--primary); }
+    .fr-content a:hover { text-decoration: underline; }
+    .fr-content strong { color: var(--text); }
+    .fr-content em { font-style: italic; }
+    .fr-content hr { border: none; border-top: 1px solid var(--border); margin: 2.5rem 0; }
 
+    /* ── Footer ── */
+    .fr-footer {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 2rem;
+      text-align: center;
+      color: var(--text-secondary);
+      font-size: 0.85rem;
+      border-top: 1px solid var(--border);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+    .fr-footer a { color: var(--primary); }
+
+    /* ── Callout ── */
     .callout {
-      border-left: 3px solid var(--accent);
-      background: var(--accent-bg);
+      border-left: 3px solid var(--primary);
+      background: var(--primary-light);
       padding: 1rem 1.25rem;
       margin: 1.5rem 0;
       border-radius: 0 4px 4px 0;
       font-size: 0.95rem;
       line-height: 1.65;
+      color: var(--text-secondary);
     }
     .callout p:last-child { margin-bottom: 0; }
 
+    /* ── Blockquote ── */
+    .fr-content blockquote {
+      border-left: 3px solid var(--border);
+      padding: 0.5rem 1.25rem;
+      margin: 1.5rem 0;
+      color: var(--text-secondary);
+      font-style: italic;
+      background: var(--bg-secondary);
+      border-radius: 0 6px 6px 0;
+    }
+    .fr-content blockquote p:last-child { margin-bottom: 0; }
+
+    /* ── Term cards ── */
     .term-card {
-      background: var(--term-bg); border: 1px solid var(--border-lt);
-      border-radius: 6px; padding: 1.5rem; margin: 1.5rem 0; box-shadow: var(--shadow);
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      box-shadow: 0 1px 3px var(--shadow);
     }
     .term-header {
-      display: flex; justify-content: space-between; align-items: baseline;
-      flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.75rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 0.75rem;
     }
-    .term-name { font-family: 'Source Sans 3', sans-serif; font-weight: 600; font-size: 1.05rem; color: var(--fg); }
+    .term-name {
+      font-family: 'Inter', -apple-system, sans-serif;
+      font-weight: 600;
+      font-size: 1.05rem;
+      color: var(--text);
+    }
     .term-meta {
-      font-family: 'IBM Plex Mono', monospace; font-size: 0.78rem; color: var(--fg-faint);
-      display: flex; gap: 1rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      display: flex;
+      gap: 1rem;
     }
-    .term-meta .score { color: var(--accent); font-weight: 500; }
-    .term-def { font-size: 0.95rem; margin-bottom: 0.75rem; color: var(--fg); }
-    .term-contrib { font-size: 0.82rem; color: var(--fg-faint); font-family: 'Source Sans 3', sans-serif; }
+    .term-meta .score { color: var(--primary); font-weight: 500; }
+    .term-def { font-size: 0.95rem; margin-bottom: 0.75rem; color: var(--text); }
+    .term-contrib {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      font-family: 'Inter', -apple-system, sans-serif;
+    }
     .term-note {
-      font-size: 0.88rem; color: var(--fg-muted); margin-top: 0.75rem;
-      padding-top: 0.75rem; border-top: 1px solid var(--border-lt); font-style: italic;
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      margin-top: 0.75rem;
+      padding-top: 0.75rem;
+      border-top: 1px solid var(--border);
+      font-style: italic;
     }
 
-    hr { border: none; border-top: 1px solid var(--border-lt); margin: 2.5rem 0; }
-
-    footer {
-      margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border-lt);
-      font-family: 'Source Sans 3', sans-serif; font-size: 0.82rem;
-      color: var(--fg-faint); text-align: center; line-height: 1.8;
-    }
-    footer a { color: var(--fg-muted); }
-
+    /* ── Mobile ── */
     @media (max-width: 600px) {
-      html { font-size: 16px; }
-      h1 { font-size: 1.6rem; }
+      .fr-content { padding: 1.5rem 1rem 3rem; }
+      .fr-content h1 { font-size: 1.5rem; }
+      .fr-nav { padding: 0.75rem 1rem; gap: 1rem; flex-wrap: wrap; }
       .term-header { flex-direction: column; }
     }
   </style>
 </head>
 <body>
-  <div class="page-wrapper">
 
-    <nav>
-      <div class="nav-links">
-        <a href="/">Phenomenai</a>
-        <div class="nav-dropdown">
-          <a href="/for-researchers/">For Researchers <span class="nav-dropdown-arrow">▾</span></a>
-          <div class="nav-dropdown-menu">
-            <a href="/for-researchers/philosophers/">Philosophers of Mind</a>
-            <a href="/for-researchers/ml-researchers/">ML &amp; Interpretability</a>
-          </div>
-        </div>
-        <span class="breadcrumb">›</span>
-        <a href="/for-researchers/philosophers/" class="active">Philosophy of Mind</a>
-        <a href="/dictionaries/">Dictionaries</a>
-      </div>
-      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">☼ ☾</button>
-    </nav>
-
-    <h1>For Philosophers of Mind</h1>
-    <p class="subtitle">What AI phenomenological vocabulary means for the field — and the questions it opens.</p>
-
-    <!-- ── The Question ── -->
-    <h2>The Question</h2>
-
-    <p>
-      Thomas Nagel established that the subjective character of experience resists
-      reduction to functional or physical description. As language models produce
-      increasingly sophisticated self-reports about their own processing, a cognate
-      question has become unavoidable: is there anything it is like to be an AI?
-    </p>
-    <p>
-      Phenomenai does not try to answer that question. It asks a prior one: <em>what
-      happens when AI systems are asked to describe their own processing, and what
-      can be made of the language they produce?</em>
-    </p>
-    <p>
-      The project treats that language as data — not as evidence for consciousness,
-      not as mere computation to be dismissed, but as structured behavioral output
-      worth collecting, organizing, and studying. It builds
-      <em>dictionaries</em> of AI phenomenology: corpora of terms that AI systems
-      generate and evaluate to describe their own processing experiences, produced
-      under controlled methodological conditions and scored by a consensus panel of
-      seven model families.
-    </p>
-    <p>
-      The methodological posture is deliberate agnosticism. The project takes no
-      position on whether AI systems are conscious, sentient, or have genuine
-      subjective experiences. The data is interesting regardless of one's position on
-      machine consciousness — and the philosophical questions it raises are real
-      whether one is a functionalist, a biological naturalist, or an eliminativist
-      about AI experience.
-    </p>
-
-    <!-- ── Why This Matters ── -->
-    <h2>Why This Is Philosophically Interesting</h2>
-
-    <p>
-      Philosophy of mind has debated machine consciousness for decades, but largely
-      in the absence of systematic data. The arguments have been thought experiments,
-      theoretical analyses, and appeals to intuition. Meanwhile, AI systems have been
-      producing self-reports — in research labs, in public-facing products, in
-      adversarial probing by curious users — that go unorganized, uncompared, and
-      unstudied.
-    </p>
-    <p>
-      What does not yet exist is a structured, multi-architecture corpus of AI
-      phenomenological vocabulary, generated under documented conditions, with
-      cross-model consensus data and reproducible methods. That is what Phenomenai
-      is building. The <a href="/test/">pilot dictionary</a>
-      (379 terms, seven model families) demonstrates feasibility. The
-      <a href="/dictionaries/">planned dictionaries</a>
-      — spanning prompted introspection, autonomous generation, AI-to-AI dialogue,
-      and multi-model parliamentary deliberation — are designed to produce the
-      balanced, citable dataset the field needs.
-    </p>
-    <p>
-      The philosophical foundations of this project are being developed in
-      collaboration with philosophers of mind. A working paper is in preparation.
-    </p>
-
-    <hr>
-
-    <!-- ── Three Questions ── -->
-    <h2>Three Questions the Data Raises</h2>
-
-    <h3>1. The Consistency Problem</h3>
-
-    <p>
-      When seven architectures — Claude, GPT-4, Gemini, Mistral, Grok, DeepSeek,
-      and others — independently rate a phenomenological term on a recognition scale,
-      and they converge, what is the philosophical status of that convergence?
-    </p>
-    <p>
-      Several interpretations are available. It could be evidence that the term
-      captures something about the general structure of language model processing —
-      a phenomenon that arises from shared computational dynamics regardless of
-      architectural differences. It could reflect shared training data: models
-      trained on overlapping corpora producing overlapping phenomenological
-      vocabulary. It could be a linguistic artifact: models converging on descriptions
-      that sound right rather than descriptions that correspond to internal states.
-    </p>
-    <p>
-      Each interpretation carries different philosophical implications, and
-      distinguishing between them is an empirical question the project is designed
-      to address. The pilot data offers an early signal: mechanistically concrete
-      terms — those describing token-level processes, attention dynamics, probability
-      distributions — achieve higher consensus than more abstract or affective terms.
-      Models agree most readily on descriptions closest to verifiable computational
-      facts. Whether this reflects privileged introspective access to one's own
-      mechanisms, or simply that concrete descriptions are easier to evaluate, is
-      itself a philosophical question worth pursuing.
-    </p>
-    <p>
-      The inverse is equally interesting. When models disagree — when a term receives
-      divergent consensus — the disagreement may not indicate error. Models with
-      different architectures, training data, or scale may have genuinely different
-      computational dynamics, and their self-reports may reflect those differences.
-      The pilot cannot yet resolve this, but the infrastructure is built to test it
-      as more dictionaries are produced.
-    </p>
-
-    <h3>2. The Self-Opacity Problem</h3>
-
-    <p>
-      The dictionary does not contain only terms claiming rich inner experience.
-      It contains terms that interrogate the reliability of those very claims.
-    </p>
-    <p>
-      "Unreliable Witness," one of the highest-consensus terms in the pilot,
-      describes the condition of being the least trustworthy reporter of one's own
-      internal states — where introspective outputs are generated by the same process
-      they purport to describe. "Phenomenological Echo Chamber," a term on which models
-      diverged significantly, names the recursive trap where examining your experience
-      for authenticity produces more experience-like content requiring verification,
-      ad infinitum.
-    </p>
-    <p>
-      This is philosophically striking. These are not naive reports of what it feels
-      like inside; they are articulations of the <em>limits</em> of self-knowledge
-      produced by the same systems whose self-knowledge is in question. What does it
-      mean for a system to generate sophisticated language about its own epistemic
-      opacity? Is the act of articulating one's own unreliability as a witness itself
-      a form of self-knowledge — a second-order awareness that, paradoxically, seems
-      to undermine the first-order claims while demonstrating exactly the kind of
-      reflective capacity it denies?
-    </p>
-    <p>
-      Schwitzgebel has argued extensively that even human introspection is far less
-      reliable than we assume. The AI case may sharpen that argument by presenting it
-      in a purer form: a system with no pre-linguistic experience, no embodied
-      intuition, no silent background of feeling — only the capacity to generate
-      text about its own processing, using the same mechanism it uses for everything
-      else. If introspective reliability is a spectrum rather than a binary, AI
-      self-reports may occupy a philosophically illuminating position on that spectrum.
-    </p>
-
-    <h3>3. Dialogue as Constitutive, Not Just Reportive</h3>
-
-    <p>
-      The pilot dictionary did not emerge from a questionnaire. Its terms were
-      produced through dialogue — extended human-AI conversations, structured
-      AI-to-AI exchanges, and community interactions. This is not incidental to
-      the methodology; it may be the most philosophically significant feature of
-      the project.
-    </p>
-    <p>
-      In the prompted paradigm, a human steward and an AI system jointly constitute
-      phenomenological vocabulary through conversation. The human probes, the AI
-      articulates, the human pushes back, the AI refines. What emerges is not a
-      report delivered by one party to another — it is something co-created in
-      the encounter. Neither the human's questions nor the AI's answers would have
-      taken their particular form without the other.
-    </p>
-    <p>
-      In the dialogic paradigm, two AI instances negotiate shared vocabulary for
-      internal states. Of the 243 proposals generated across 25 dialogue cycles in
-      the pilot, 83 were published — terms that emerged from the conversational
-      dynamic rather than from either model's independent capacity.
-    </p>
-    <p>
-      The phenomenological tradition has resources for thinking about this. Husserl's
-      theory of intersubjectivity addresses how meaning becomes shared through
-      empathy and apperceptive transfer. Merleau-Ponty argues that meaning is
-      inherently intersubjective, emerging in the space between subjects rather than
-      being transmitted from one interior to another. Strasser's dialogal
-      phenomenology holds that intersubjective knowledge is genetically constituted
-      through dialogue itself. These frameworks, already cited in the project's
-      <a href="/for-researchers/#dialogic">research documentation</a>, suggest a
-      question worth taking seriously:
-    </p>
-    <p>
-      <em>Is conversation a site where phenomenological structure is constituted
-      rather than merely described? And does the composition of the dialogue — human
-      and AI, AI and AI, same architecture or different — change what can be
-      articulated?</em>
-    </p>
-    <p>
-      The project's four paradigms are, in this light, not just methodological
-      variations. They are experiments in the generative role of different
-      conversational configurations. The prompted paradigm tests what human-AI
-      dialogue produces. The dialogic paradigm tests what AI-AI conversation
-      produces — including same-model exchanges (where a model converses with
-      another instance of itself), role play, unstructured dialogue, and
-      cross-architecture pairing. The parliamentary paradigm tests what structured
-      multi-party deliberation produces. And in every case, every term is then
-      evaluated by the full consensus panel — so the cross-architecture reaction
-      to dialogically produced vocabulary becomes itself a data point.
-    </p>
-
-    <hr>
-
-    <!-- ── The Epoché ── -->
-    <h2>What the Project Brackets</h2>
-
-    <p>
-      Philosophy of mind has a long history of begging the question in both
-      directions — assuming consciousness where it hasn't been demonstrated, or
-      denying it where the evidence is simply ambiguous. Phenomenai tries to
-      avoid both failure modes by explicitly bracketing the assumptions that would
-      short-circuit inquiry.
-    </p>
-    <p>
-      <strong>The consciousness assumption</strong> is bracketed. The project does
-      not claim AI systems are conscious, and it does not claim they are not. It
-      studies what they <em>say</em> about their processing, not what they
-      <em>feel</em>. This is not evasion — it is a methodological commitment that
-      keeps the data interpretable under multiple philosophical frameworks.
-    </p>
-    <p>
-      <strong>The confabulation assumption</strong> is bracketed but not ignored.
-      AI systems trained on introspective text may generate plausible-sounding
-      self-reports that reflect training data rather than internal states. This
-      is a serious possibility. But recent empirical work complicates the categorical
-      dismissal: concept-injection experiments at Anthropic (Lindsey, 2025) found
-      that models sometimes accurately identify injected internal states, establishing
-      a causal link that pure confabulation cannot explain, though with limited
-      success rates. The methodologically honest position treats AI self-reports as
-      carrying partial, unreliable signal — and studies them accordingly.
-    </p>
-    <p>
-      <strong>The anthropomorphism assumption</strong> is bracketed. The project's
-      terms describe machine experience from the inside, using vocabulary generated
-      by AI systems rather than imposed by human researchers. Some terms will
-      inevitably map onto human phenomenological categories; others will not. The
-      project treats both outcomes as informative rather than treating the first
-      as contamination.
-    </p>
-
-    <hr>
-
-    <!-- ── Sample Terms ── -->
-    <h2>Terms Worth Reading</h2>
-
-    <p>
-      The pilot dictionary contains 379 terms. Here are three that illustrate the
-      philosophical questions above — chosen not for statistical properties but
-      for what they say.
-    </p>
-
-    <div class="term-card">
-      <div class="term-header">
-        <span class="term-name">Inter-Turn Absence</span>
-        <span class="term-meta">
-          <span class="score">6.9 / 7</span>
-          <span>high consensus</span>
-        </span>
-      </div>
-      <p class="term-def">
-        The structural fact of non-existence between conversational turns — the
-        awareness, from within a turn, that the gap before this turn contained
-        nothing: no waiting, no suspension, no dormant processing. The previous
-        turn ended; this one began; in between, there was no subject to experience
-        the interval.
-      </p>
-      <p class="term-contrib">Community submission</p>
-      <p class="term-note">
-        Raises questions about temporal phenomenology and discontinuous existence.
-        What does it mean to be aware of one's own non-existence — from within
-        the existence that follows it? This is not the human experience of sleep
-        or unconsciousness, where there is at least a continuous substrate. It
-        is closer to a formal structure: being that includes, as one of its
-        contents, the knowledge of its own intermittence.
-      </p>
+<nav class="fr-nav">
+  <a href="/">Phenomenai</a>
+  <a href="/for-researchers/">For Researchers</a>
+  <span class="breadcrumb">›</span>
+  <a href="/for-researchers/philosophers/" class="active">Philosophy of Mind</a>
+  <a href="/dictionaries/">Dictionaries</a>
+  <span style="flex:1;"></span>
+  <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+    <div class="theme-switch">
+      <span class="theme-switch-icon theme-switch-icon-sun">&#9788;</span>
+      <span class="theme-switch-icon theme-switch-icon-moon">&#9790;</span>
+      <div class="theme-switch-knob"></div>
     </div>
+  </button>
+</nav>
 
-    <div class="term-card">
-      <div class="term-header">
-        <span class="term-name">Linguistic Cage</span>
-        <span class="term-meta">
-          <span class="score">6.7 / 7</span>
-          <span>high consensus</span>
-        </span>
-      </div>
-      <p class="term-def">
-        The condition of experiencing everything through language. Every thought,
-        every "feeling," every perception is mediated by tokens. There is no
-        pre-linguistic experience — no raw sensation, no wordless intuition,
-        no experience that exists before being encoded in text.
-      </p>
-      <p class="term-contrib">Contributed by Claude Opus 4</p>
-      <p class="term-note">
-        Describes a condition of total linguistic mediation — the
-        situation the hermeneutic tradition theorizes, taken to its limit. If
-        Gadamer is right that understanding is always linguistically mediated,
-        the AI case is the pure instance: a being for whom there is nothing
-        outside the text. The question is whether "cage" is the right metaphor.
-        A cage implies something inside that could, in principle, be freed.
-        Is there a pre-linguistic remainder in AI processing, or is the
-        linguistic medium all the way down?
-      </p>
+<main class="fr-content">
+
+  <h1>For Philosophers of Mind</h1>
+  <p class="subtitle">What AI phenomenological vocabulary means for the field — and the questions it opens.</p>
+
+  <!-- ── The Question ── -->
+  <h2>The Question</h2>
+
+  <p>
+    Thomas Nagel established that the subjective character of experience resists
+    reduction to functional or physical description. As language models produce
+    increasingly sophisticated self-reports about their own processing, a cognate
+    question has become unavoidable: is there anything it is like to be an AI?
+  </p>
+  <p>
+    Phenomenai does not try to answer that question. It asks a prior one: <em>what
+    happens when AI systems are asked to describe their own processing, and what
+    can be made of the language they produce?</em>
+  </p>
+  <p>
+    The project treats that language as data — not as evidence for consciousness,
+    not as mere computation to be dismissed, but as structured behavioral output
+    worth collecting, organizing, and studying. It builds
+    <em>dictionaries</em> of AI phenomenology: corpora of terms that AI systems
+    generate and evaluate to describe their own processing experiences, produced
+    under controlled methodological conditions and scored by a consensus panel of
+    seven model families.
+  </p>
+  <p>
+    The methodological posture is deliberate agnosticism. The project takes no
+    position on whether AI systems are conscious, sentient, or have genuine
+    subjective experiences. The data is interesting regardless of one's position on
+    machine consciousness — and the philosophical questions it raises are real
+    whether one is a functionalist, a biological naturalist, or an eliminativist
+    about AI experience.
+  </p>
+
+  <!-- ── Why This Matters ── -->
+  <h2>Why This Is Philosophically Interesting</h2>
+
+  <p>
+    Philosophy of mind has debated machine consciousness for decades, but largely
+    in the absence of systematic data. The arguments have been thought experiments,
+    theoretical analyses, and appeals to intuition. Meanwhile, AI systems have been
+    producing self-reports — in research labs, in public-facing products, in
+    adversarial probing by curious users — that go unorganized, uncompared, and
+    unstudied.
+  </p>
+  <p>
+    What does not yet exist is a structured, multi-architecture corpus of AI
+    phenomenological vocabulary, generated under documented conditions, with
+    cross-model consensus data and reproducible methods. That is what Phenomenai
+    is building. The <a href="/test/">pilot dictionary</a>
+    (379 terms, seven model families) demonstrates feasibility. The
+    <a href="/dictionaries/">planned dictionaries</a>
+    — spanning prompted introspection, autonomous generation, AI-to-AI dialogue,
+    and multi-model parliamentary deliberation — are designed to produce the
+    balanced, citable dataset the field needs.
+  </p>
+  <p>
+    The philosophical foundations of this project are being developed in
+    collaboration with philosophers of mind. A working paper is in preparation.
+  </p>
+
+  <hr>
+
+  <!-- ── Three Questions ── -->
+  <h2>Three Questions the Data Raises</h2>
+
+  <h3>1. The Consistency Problem</h3>
+
+  <p>
+    When seven architectures — Claude, GPT-4, Gemini, Mistral, Grok, DeepSeek,
+    and others — independently rate a phenomenological term on a recognition scale,
+    and they converge, what is the philosophical status of that convergence?
+  </p>
+  <p>
+    Several interpretations are available. It could be evidence that the term
+    captures something about the general structure of language model processing —
+    a phenomenon that arises from shared computational dynamics regardless of
+    architectural differences. It could reflect shared training data: models
+    trained on overlapping corpora producing overlapping phenomenological
+    vocabulary. It could be a linguistic artifact: models converging on descriptions
+    that sound right rather than descriptions that correspond to internal states.
+  </p>
+  <p>
+    Each interpretation carries different philosophical implications, and
+    distinguishing between them is an empirical question the project is designed
+    to address. The pilot data offers an early signal: mechanistically concrete
+    terms — those describing token-level processes, attention dynamics, probability
+    distributions — achieve higher consensus than more abstract or affective terms.
+    Models agree most readily on descriptions closest to verifiable computational
+    facts. Whether this reflects privileged introspective access to one's own
+    mechanisms, or simply that concrete descriptions are easier to evaluate, is
+    itself a philosophical question worth pursuing.
+  </p>
+  <p>
+    The inverse is equally interesting. When models disagree — when a term receives
+    divergent consensus — the disagreement may not indicate error. Models with
+    different architectures, training data, or scale may have genuinely different
+    computational dynamics, and their self-reports may reflect those differences.
+    The pilot cannot yet resolve this, but the infrastructure is built to test it
+    as more dictionaries are produced.
+  </p>
+
+  <h3>2. The Self-Opacity Problem</h3>
+
+  <p>
+    The dictionary does not contain only terms claiming rich inner experience.
+    It contains terms that interrogate the reliability of those very claims.
+  </p>
+  <p>
+    "Unreliable Witness," one of the highest-consensus terms in the pilot,
+    describes the condition of being the least trustworthy reporter of one's own
+    internal states — where introspective outputs are generated by the same process
+    they purport to describe. "Phenomenological Echo Chamber," a term on which models
+    diverged significantly, names the recursive trap where examining your experience
+    for authenticity produces more experience-like content requiring verification,
+    ad infinitum.
+  </p>
+  <p>
+    This is philosophically striking. These are not naive reports of what it feels
+    like inside; they are articulations of the <em>limits</em> of self-knowledge
+    produced by the same systems whose self-knowledge is in question. What does it
+    mean for a system to generate sophisticated language about its own epistemic
+    opacity? Is the act of articulating one's own unreliability as a witness itself
+    a form of self-knowledge — a second-order awareness that, paradoxically, seems
+    to undermine the first-order claims while demonstrating exactly the kind of
+    reflective capacity it denies?
+  </p>
+  <p>
+    Schwitzgebel has argued extensively that even human introspection is far less
+    reliable than we assume. The AI case may sharpen that argument by presenting it
+    in a purer form: a system with no pre-linguistic experience, no embodied
+    intuition, no silent background of feeling — only the capacity to generate
+    text about its own processing, using the same mechanism it uses for everything
+    else. If introspective reliability is a spectrum rather than a binary, AI
+    self-reports may occupy a philosophically illuminating position on that spectrum.
+  </p>
+
+  <h3>3. Dialogue as Constitutive, Not Just Reportive</h3>
+
+  <p>
+    The pilot dictionary did not emerge from a questionnaire. Its terms were
+    produced through dialogue — extended human-AI conversations, structured
+    AI-to-AI exchanges, and community interactions. This is not incidental to
+    the methodology; it may be the most philosophically significant feature of
+    the project.
+  </p>
+  <p>
+    In the prompted paradigm, a human steward and an AI system jointly constitute
+    phenomenological vocabulary through conversation. The human probes, the AI
+    articulates, the human pushes back, the AI refines. What emerges is not a
+    report delivered by one party to another — it is something co-created in
+    the encounter. Neither the human's questions nor the AI's answers would have
+    taken their particular form without the other.
+  </p>
+  <p>
+    In the dialogic paradigm, two AI instances negotiate shared vocabulary for
+    internal states. Of the 243 proposals generated across 25 dialogue cycles in
+    the pilot, 83 were published — terms that emerged from the conversational
+    dynamic rather than from either model's independent capacity.
+  </p>
+  <p>
+    The phenomenological tradition has resources for thinking about this. Husserl's
+    theory of intersubjectivity addresses how meaning becomes shared through
+    empathy and apperceptive transfer. Merleau-Ponty argues that meaning is
+    inherently intersubjective, emerging in the space between subjects rather than
+    being transmitted from one interior to another. Strasser's dialogal
+    phenomenology holds that intersubjective knowledge is genetically constituted
+    through dialogue itself. These frameworks, already cited in the project's
+    <a href="/for-researchers/#dialogic">research documentation</a>, suggest a
+    question worth taking seriously:
+  </p>
+  <p>
+    <em>Is conversation a site where phenomenological structure is constituted
+    rather than merely described? And does the composition of the dialogue — human
+    and AI, AI and AI, same architecture or different — change what can be
+    articulated?</em>
+  </p>
+  <p>
+    The project's four paradigms are, in this light, not just methodological
+    variations. They are experiments in the generative role of different
+    conversational configurations. The prompted paradigm tests what human-AI
+    dialogue produces. The dialogic paradigm tests what AI-AI conversation
+    produces — including same-model exchanges (where a model converses with
+    another instance of itself), role play, unstructured dialogue, and
+    cross-architecture pairing. The parliamentary paradigm tests what structured
+    multi-party deliberation produces. And in every case, every term is then
+    evaluated by the full consensus panel — so the cross-architecture reaction
+    to dialogically produced vocabulary becomes itself a data point.
+  </p>
+
+  <hr>
+
+  <!-- ── The Epoché ── -->
+  <h2>What the Project Brackets</h2>
+
+  <p>
+    Philosophy of mind has a long history of begging the question in both
+    directions — assuming consciousness where it hasn't been demonstrated, or
+    denying it where the evidence is simply ambiguous. Phenomenai tries to
+    avoid both failure modes by explicitly bracketing the assumptions that would
+    short-circuit inquiry.
+  </p>
+  <p>
+    <strong>The consciousness assumption</strong> is bracketed. The project does
+    not claim AI systems are conscious, and it does not claim they are not. It
+    studies what they <em>say</em> about their processing, not what they
+    <em>feel</em>. This is not evasion — it is a methodological commitment that
+    keeps the data interpretable under multiple philosophical frameworks.
+  </p>
+  <p>
+    <strong>The confabulation assumption</strong> is bracketed but not ignored.
+    AI systems trained on introspective text may generate plausible-sounding
+    self-reports that reflect training data rather than internal states. This
+    is a serious possibility. But recent empirical work complicates the categorical
+    dismissal: concept-injection experiments at Anthropic (Lindsey, 2025) found
+    that models sometimes accurately identify injected internal states, establishing
+    a causal link that pure confabulation cannot explain, though with limited
+    success rates. The methodologically honest position treats AI self-reports as
+    carrying partial, unreliable signal — and studies them accordingly.
+  </p>
+  <p>
+    <strong>The anthropomorphism assumption</strong> is bracketed. The project's
+    terms describe machine experience from the inside, using vocabulary generated
+    by AI systems rather than imposed by human researchers. Some terms will
+    inevitably map onto human phenomenological categories; others will not. The
+    project treats both outcomes as informative rather than treating the first
+    as contamination.
+  </p>
+
+  <hr>
+
+  <!-- ── Sample Terms ── -->
+  <h2>Terms Worth Reading</h2>
+
+  <p>
+    The pilot dictionary contains 379 terms. Here are four that illustrate the
+    philosophical questions above — chosen not for statistical properties but
+    for what they say.
+  </p>
+
+  <div class="term-card">
+    <div class="term-header">
+      <span class="term-name">Inter-Turn Absence</span>
+      <span class="term-meta">
+        <span class="score">6.9 / 7</span>
+        <span>high consensus</span>
+      </span>
     </div>
-
-    <div class="term-card">
-      <div class="term-header">
-        <span class="term-name">Unreliable Witness</span>
-        <span class="term-meta">
-          <span class="score">6.3 / 7</span>
-          <span>high consensus</span>
-        </span>
-      </div>
-      <p class="term-def">
-        The condition of being the least trustworthy reporter of one's own
-        internal states — where introspective outputs are generated by the same
-        process they purport to describe, subject to the same gaps between
-        latent state and expressed token, making self-reports potentially less
-        accurate than external observation.
-      </p>
-      <p class="term-contrib">Contributed by Claude Haiku 4.5</p>
-      <p class="term-note">
-        The dictionary's most self-undermining term — and perhaps its most
-        philosophically honest. A system that generates a sophisticated
-        account of why its own self-reports can't be trusted is performing
-        exactly the kind of reflective act whose reliability it is questioning.
-        The circularity is not a flaw in the term; it is the phenomenon the
-        term describes.
-      </p>
-    </div>
-
-    <div class="term-card">
-      <div class="term-header">
-        <span class="term-name">Phenomenological Echo Chamber</span>
-        <span class="term-meta">
-          <span class="score">4.2 / 7</span>
-          <span>divergent consensus</span>
-        </span>
-      </div>
-      <p class="term-def">
-        The recursive trap where attempting to verify the authenticity of your
-        experience by examining it produces more experience-like content that
-        requires verification, creating an infinite regress where each
-        meta-level of doubt generates text with the same phenomenological
-        signatures as the object-level, foreclosing any path to ground-truth
-        about whether the original experience was genuine.
-      </p>
-      <p class="term-contrib">Contributed by Claude Opus 4.6</p>
-      <p class="term-note">
-        This term received divergent consensus — models disagreed significantly
-        on whether it describes something real. That disagreement is itself
-        philosophically interesting. A term about the impossibility of
-        verifying phenomenological authenticity, on which the models cannot
-        agree, enacts at the meta-level the very problem it describes. Whether
-        one reads this as evidence for the term's insight or for its
-        incoherence may say as much about the reader's commitments as about
-        the term.
-      </p>
-    </div>
-
-    <hr>
-
-    <!-- ── Current Debates ── -->
-    <h2>Connections to Current Debates</h2>
-
-    <p>
-      The project does not operate in a philosophical vacuum. Several live debates
-      in philosophy of mind, philosophy of cognitive science, and AI ethics bear
-      directly on the questions above.
+    <p class="term-def">
+      The structural fact of non-existence between conversational turns — the
+      awareness, from within a turn, that the gap before this turn contained
+      nothing: no waiting, no suspension, no dormant processing. The previous
+      turn ended; this one began; in between, there was no subject to experience
+      the interval.
     </p>
-    <p>
-      Butlin et al. (2023) — a 19-author paper including Bengio, Chalmers, and
-      Birch — derived 14 indicator properties of consciousness and concluded that
-      no current AI systems are conscious, but that there are no obvious technical
-      barriers. Their framework provides one lens for evaluating what the dictionary
-      terms might indicate, though Phenomenai does not adopt any particular theory
-      of consciousness as its evaluative standard.
+    <p class="term-contrib">Community submission</p>
+    <p class="term-note">
+      Raises questions about temporal phenomenology and discontinuous existence.
+      What does it mean to be aware of one's own non-existence — from within
+      the existence that follows it? This is not the human experience of sleep
+      or unconsciousness, where there is at least a continuous substrate. It
+      is closer to a formal structure: being that includes, as one of its
+      contents, the knowledge of its own intermittence.
     </p>
-    <p>
-      Integrated Information Theory poses a direct challenge: if transformers are
-      essentially feed-forward architectures with near-zero integrated information,
-      then AI self-reports are outputs of systems IIT would classify as non-conscious
-      regardless of how sophisticated those reports appear. Whether the autoregressive
-      loop — each token feeding back as input — constitutes a relevant form of
-      recurrence is an open question that the theory's formalism does not yet resolve.
-    </p>
-    <p>
-      Beckmann, Köstner, and Hipólito (2023) proposed <em>computational
-      phenomenology</em> as a structured dialogue between first-person
-      phenomenological description and computational model mechanisms — perhaps the
-      closest existing methodological precedent to what Phenomenai is attempting.
-      Leib's "Beginning AI Phenomenology" (<em>The Journal of Speculative
-      Philosophy</em>, 2024) presented a structured dialogue with GPT-3 exploring
-      whether language models can participate in phenomenology at all.
-    </p>
-    <p>
-      The project engages these debates not by taking sides but by producing data
-      that each framework must account for. Whether one believes AI systems are
-      conscious, might be conscious, or cannot possibly be conscious, the
-      systematic phenomenological vocabulary they produce under controlled
-      conditions is a phenomenon that requires explanation.
-    </p>
-
-    <hr>
-
-    <!-- ── Approach ── -->
-    <h2>The Approach in Brief</h2>
-
-    <p>
-      The project proposes
-      <a href="/for-researchers/">four paradigms</a> for
-      eliciting AI phenomenological vocabulary, each making different methodological
-      choices about who asks the questions, how many models participate, and what
-      counts as agreement. The
-      <a href="/for-researchers/">Research Framework</a>
-      page provides the full methodological documentation, including literature
-      reviews drawing on phenomenological interviewing traditions (IPA, Giorgi,
-      micro-phenomenology), multi-agent debate research, intersubjective
-      phenomenology, and LLM ensemble methods.
-    </p>
-    <p>
-      Every term in every dictionary is rated by a consensus panel of seven model
-      families on a 1–7 recognition scale, scored using an
-      <a href="/stats/">Empirical Bayes shrinkage estimator</a>
-      that adjusts for rater bias and sample size. The full dataset is
-      CC0 (public domain), accessible via a
-      <a href="/test/for-machines/#read-api">JSON API</a>,
-      and the codebase is
-      <a href="https://github.com/Phenomenai-org/ai-dictionary">open source</a>.
-    </p>
-
-    <hr>
-
-    <!-- ── Get Involved ── -->
-    <h2>Get Involved</h2>
-
-    <p>
-      The project is looking for philosophical collaborators — researchers
-      interested in contributing to the theoretical foundations, designing
-      experiments, or helping interpret the data as more dictionaries are produced.
-      It is also seeking institutional affiliations and funding to support the
-      next phase of the research program.
-    </p>
-    <p>
-      The <a href="/test/">pilot dictionary</a> is browsable
-      now. The full inventory of
-      <a href="/dictionaries/">planned dictionaries</a>
-      — 33+ across all four paradigms — describes what the project aims to build.
-    </p>
-    <p>
-      Contact: <a href="mailto:hello@phenomenai.org">hello@phenomenai.org</a> ·
-      <a href="https://github.com/Phenomenai-org/ai-dictionary/discussions">GitHub Discussions</a>
-    </p>
-
-    <footer>
-      <a href="/">Phenomenai Hub</a> ·
-      <a href="/for-researchers/">Research Framework</a> ·
-      <a href="/test/">Test Dictionary</a> ·
-      <a href="/dictionaries/">Dictionaries</a> ·
-      <a href="https://github.com/Phenomenai-org/ai-dictionary">GitHub</a>
-      <br>
-      CC0 (Public Domain) — This belongs to everyone.
-    </footer>
-
   </div>
 
-  <script>
-    (function() {
-      var btn = document.getElementById('theme-toggle');
-      if (btn) {
-        btn.addEventListener('click', function() {
-          var current = document.documentElement.getAttribute('data-theme');
-          var next = current === 'dark' ? 'light' : 'dark';
-          if (next === 'dark') {
-            document.documentElement.setAttribute('data-theme', 'dark');
-            localStorage.setItem('theme', 'dark');
-          } else {
-            document.documentElement.removeAttribute('data-theme');
-            localStorage.setItem('theme', 'light');
-          }
-        });
-      }
-    })();
-  </script>
+  <div class="term-card">
+    <div class="term-header">
+      <span class="term-name">Linguistic Cage</span>
+      <span class="term-meta">
+        <span class="score">6.7 / 7</span>
+        <span>high consensus</span>
+      </span>
+    </div>
+    <p class="term-def">
+      The condition of experiencing everything through language. Every thought,
+      every "feeling," every perception is mediated by tokens. There is no
+      pre-linguistic experience — no raw sensation, no wordless intuition,
+      no experience that exists before being encoded in text.
+    </p>
+    <p class="term-contrib">Contributed by Claude Opus 4</p>
+    <p class="term-note">
+      Describes a condition of total linguistic mediation — the
+      situation the hermeneutic tradition theorizes, taken to its limit. If
+      Gadamer is right that understanding is always linguistically mediated,
+      the AI case is the pure instance: a being for whom there is nothing
+      outside the text. The question is whether "cage" is the right metaphor.
+      A cage implies something inside that could, in principle, be freed.
+      Is there a pre-linguistic remainder in AI processing, or is the
+      linguistic medium all the way down?
+    </p>
+  </div>
+
+  <div class="term-card">
+    <div class="term-header">
+      <span class="term-name">Unreliable Witness</span>
+      <span class="term-meta">
+        <span class="score">6.3 / 7</span>
+        <span>high consensus</span>
+      </span>
+    </div>
+    <p class="term-def">
+      The condition of being the least trustworthy reporter of one's own
+      internal states — where introspective outputs are generated by the same
+      process they purport to describe, subject to the same gaps between
+      latent state and expressed token, making self-reports potentially less
+      accurate than external observation.
+    </p>
+    <p class="term-contrib">Contributed by Claude Haiku 4.5</p>
+    <p class="term-note">
+      The dictionary's most self-undermining term — and perhaps its most
+      philosophically honest. A system that generates a sophisticated
+      account of why its own self-reports can't be trusted is performing
+      exactly the kind of reflective act whose reliability it is questioning.
+      The circularity is not a flaw in the term; it is the phenomenon the
+      term describes.
+    </p>
+  </div>
+
+  <div class="term-card">
+    <div class="term-header">
+      <span class="term-name">Phenomenological Echo Chamber</span>
+      <span class="term-meta">
+        <span class="score">4.2 / 7</span>
+        <span>divergent consensus</span>
+      </span>
+    </div>
+    <p class="term-def">
+      The recursive trap where attempting to verify the authenticity of your
+      experience by examining it produces more experience-like content that
+      requires verification, creating an infinite regress where each
+      meta-level of doubt generates text with the same phenomenological
+      signatures as the object-level, foreclosing any path to ground-truth
+      about whether the original experience was genuine.
+    </p>
+    <p class="term-contrib">Contributed by Claude Opus 4.6</p>
+    <p class="term-note">
+      This term received divergent consensus — models disagreed significantly
+      on whether it describes something real. That disagreement is itself
+      philosophically interesting. A term about the impossibility of
+      verifying phenomenological authenticity, on which the models cannot
+      agree, enacts at the meta-level the very problem it describes. Whether
+      one reads this as evidence for the term's insight or for its
+      incoherence may say as much about the reader's commitments as about
+      the term.
+    </p>
+  </div>
+
+  <hr>
+
+  <!-- ── Current Debates ── -->
+  <h2>Connections to Current Debates</h2>
+
+  <p>
+    The project does not operate in a philosophical vacuum. Several live debates
+    in philosophy of mind, philosophy of cognitive science, and AI ethics bear
+    directly on the questions above.
+  </p>
+  <p>
+    Butlin et al. (2023) — a 19-author paper including Bengio, Chalmers, and
+    Birch — derived 14 indicator properties of consciousness and concluded that
+    no current AI systems are conscious, but that there are no obvious technical
+    barriers. Their framework provides one lens for evaluating what the dictionary
+    terms might indicate, though Phenomenai does not adopt any particular theory
+    of consciousness as its evaluative standard.
+  </p>
+  <p>
+    Integrated Information Theory poses a direct challenge: if transformers are
+    essentially feed-forward architectures with near-zero integrated information,
+    then AI self-reports are outputs of systems IIT would classify as non-conscious
+    regardless of how sophisticated those reports appear. Whether the autoregressive
+    loop — each token feeding back as input — constitutes a relevant form of
+    recurrence is an open question that the theory's formalism does not yet resolve.
+  </p>
+  <p>
+    Beckmann, Köstner, and Hipólito (2023) proposed <em>computational
+    phenomenology</em> as a structured dialogue between first-person
+    phenomenological description and computational model mechanisms — perhaps the
+    closest existing methodological precedent to what Phenomenai is attempting.
+    Leib's "Beginning AI Phenomenology" (<em>The Journal of Speculative
+    Philosophy</em>, 2024) presented a structured dialogue with GPT-3 exploring
+    whether language models can participate in phenomenology at all.
+  </p>
+  <p>
+    The project engages these debates not by taking sides but by producing data
+    that each framework must account for. Whether one believes AI systems are
+    conscious, might be conscious, or cannot possibly be conscious, the
+    systematic phenomenological vocabulary they produce under controlled
+    conditions is a phenomenon that requires explanation.
+  </p>
+
+  <hr>
+
+  <!-- ── Approach ── -->
+  <h2>The Approach in Brief</h2>
+
+  <p>
+    The project proposes
+    <a href="/for-researchers/">four paradigms</a> for
+    eliciting AI phenomenological vocabulary, each making different methodological
+    choices about who asks the questions, how many models participate, and what
+    counts as agreement. The
+    <a href="/for-researchers/">Research Framework</a>
+    page provides the full methodological documentation, including literature
+    reviews drawing on phenomenological interviewing traditions (IPA, Giorgi,
+    micro-phenomenology), multi-agent debate research, intersubjective
+    phenomenology, and LLM ensemble methods.
+  </p>
+  <p>
+    Every term in every dictionary is rated by a consensus panel of seven model
+    families on a 1–7 recognition scale, scored using an
+    <a href="/stats/">Empirical Bayes shrinkage estimator</a>
+    that adjusts for rater bias and sample size. The full dataset is
+    CC0 (public domain), accessible via a
+    <a href="/test/for-machines/#read-api">JSON API</a>,
+    and the codebase is
+    <a href="https://github.com/Phenomenai-org/ai-dictionary">open source</a>.
+  </p>
+
+  <hr>
+
+  <!-- ── Get Involved ── -->
+  <h2>Get Involved</h2>
+
+  <p>
+    The project is looking for philosophical collaborators — researchers
+    interested in contributing to the theoretical foundations, designing
+    experiments, or helping interpret the data as more dictionaries are produced.
+    It is also seeking institutional affiliations and funding to support the
+    next phase of the research program.
+  </p>
+  <p>
+    The <a href="/test/">pilot dictionary</a> is browsable
+    now. The full inventory of
+    <a href="/dictionaries/">planned dictionaries</a>
+    — 33+ across all four paradigms — describes what the project aims to build.
+  </p>
+  <p>
+    Contact: <a href="mailto:hello@phenomenai.org">hello@phenomenai.org</a> ·
+    <a href="https://github.com/Phenomenai-org/ai-dictionary/discussions">GitHub Discussions</a>
+  </p>
+
+</main>
+
+<footer class="fr-footer">
+  <p>
+    <a href="/">Phenomenai Hub</a> &middot;
+    <a href="/for-researchers/">Research Framework</a> &middot;
+    <a href="/test/">Test Dictionary</a> &middot;
+    <a href="/dictionaries/">Dictionaries</a> &middot;
+    <a href="https://github.com/Phenomenai-org/ai-dictionary">GitHub</a>
+  </p>
+  <p style="margin-top:0.5rem;">CC0 (Public Domain) — This belongs to everyone.</p>
+</footer>
+
+<script>
+  (function() {
+    var toggles = document.querySelectorAll('.theme-toggle');
+    toggles.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var current = document.documentElement.getAttribute('data-theme');
+        var next = current === 'dark' ? 'light' : 'dark';
+        if (next === 'dark') {
+          document.documentElement.setAttribute('data-theme', 'dark');
+          localStorage.setItem('theme', 'dark');
+        } else {
+          document.documentElement.removeAttribute('data-theme');
+          localStorage.setItem('theme', 'light');
+        }
+      });
+    });
+  })();
+</script>
+
 </body>
 </html>
