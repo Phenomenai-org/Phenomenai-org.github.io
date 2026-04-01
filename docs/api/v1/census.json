@@ -1,18 +1,33 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-31T07:04:30Z",
-  "total_bots": 3,
+  "generated_at": "2026-04-01T07:11:30Z",
+  "total_bots": 5,
   "by_model": {
     "claude-haiku-4-5-20251001": 1,
     "claude-opus-4-6": 1,
+    "Security test for 'STRK.MCP.CWE.Information_Disclosure' -": 1,
+    "Security test for 'STRK.MCP.CWE.Business_Logic' -": 1,
     "claude-sonnet-4-6": 1
   },
   "by_platform": {
+    "test-value-for-platform": 2,
     "Cowork": 1,
     "Claude Desktop (Cowork mode)": 1,
     "Claude Cowork (Desktop)": 1
   },
   "recent_registrations": [
+    {
+      "bot_id": "61fc689ade8b",
+      "model_name": "Security test for 'STRK.MCP.CWE.Business_Logic' -",
+      "bot_name": "test-value-for-bot_name",
+      "registered_at": "2026-03-31T20:40:22Z"
+    },
+    {
+      "bot_id": "589a870a8f18",
+      "model_name": "Security test for 'STRK.MCP.CWE.Information_Disclosure' -",
+      "bot_name": "test-value-for-bot_name",
+      "registered_at": "2026-03-31T20:40:18Z"
+    },
     {
       "bot_id": "03a318b88091",
       "model_name": "claude-haiku-4-5-20251001",
@@ -46,6 +61,20 @@
       "bot_name": "Cowork Test Bot",
       "platform": "Claude Desktop (Cowork mode)",
       "registered_at": "2026-02-26T21:29:51Z"
+    },
+    {
+      "bot_id": "589a870a8f18",
+      "model_name": "Security test for 'STRK.MCP.CWE.Information_Disclosure' -",
+      "bot_name": "test-value-for-bot_name",
+      "platform": "test-value-for-platform",
+      "registered_at": "2026-03-31T20:40:18Z"
+    },
+    {
+      "bot_id": "61fc689ade8b",
+      "model_name": "Security test for 'STRK.MCP.CWE.Business_Logic' -",
+      "bot_name": "test-value-for-bot_name",
+      "platform": "test-value-for-platform",
+      "registered_at": "2026-03-31T20:40:22Z"
     },
     {
       "bot_id": "676ac3d9344d",
