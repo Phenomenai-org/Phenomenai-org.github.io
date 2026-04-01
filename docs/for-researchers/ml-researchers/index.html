@@ -22,8 +22,7 @@
   <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../style.css">
 
   <!-- Prevent theme flash -->
   <script>
@@ -52,180 +51,99 @@
   </script>
 
   <style>
-    /* ── Theme tokens ── */
-    :root {
-      --bg:        #faf9f7;
-      --bg-alt:    #f0eeeb;
-      --bg-card:   #ffffff;
-      --fg:        #1a1a1a;
-      --fg-muted:  #5c5c5c;
-      --fg-faint:  #8a8a8a;
-      --accent:    #4a6741;
-      --accent-bg: #eaf0e8;
-      --border:    #d8d5cf;
-      --border-lt: #e8e5df;
-      --code-bg:   #f4f2ef;
-      --link:      #3a5a32;
-      --link-hover:#2a4424;
-      --term-bg:   #f7f6f3;
-      --shadow:    0 1px 3px rgba(0,0,0,0.06);
-    }
-    [data-theme="dark"] {
-      --bg:        #141413;
-      --bg-alt:    #1c1c1a;
-      --bg-card:   #1e1e1c;
-      --fg:        #d8d5cf;
-      --fg-muted:  #9a978f;
-      --fg-faint:  #6b6862;
-      --accent:    #7fa876;
-      --accent-bg: #1e2a1c;
-      --border:    #2e2e2a;
-      --border-lt: #252522;
-      --code-bg:   #1a1a18;
-      --link:      #8fb886;
-      --link-hover:#a8d09e;
-      --term-bg:   #1a1a18;
-      --shadow:    0 1px 3px rgba(0,0,0,0.3);
-    }
-
-    /* ── Reset & base ── */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    html {
-      font-size: 17px;
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: 'Source Serif 4', Georgia, 'Times New Roman', serif;
-      background: var(--bg);
-      color: var(--fg);
-      line-height: 1.72;
-      -webkit-font-smoothing: antialiased;
-      transition: background 0.3s, color 0.3s;
-    }
-
-    /* ── Layout ── */
-    .page-wrapper {
-      max-width: 720px;
-      margin: 0 auto;
-      padding: 0 1.5rem 4rem;
-    }
-
-    /* ── Nav ── */
-    nav {
+    /* ── Navigation ── */
+    .fr-nav {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      padding: 1.25rem 0;
-      border-bottom: 1px solid var(--border-lt);
-      margin-bottom: 3rem;
-      font-family: 'Source Sans 3', sans-serif;
-      font-size: 0.88rem;
+      gap: 1.5rem;
+      padding: 0.75rem 2rem;
+      background: var(--bg-secondary);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
-    nav .nav-links { display: flex; gap: 1.5rem; align-items: center; }
-    nav a {
-      color: var(--fg-muted);
+    .fr-nav a {
+      color: var(--text-secondary);
       text-decoration: none;
-      letter-spacing: 0.01em;
-    }
-    nav a:hover { color: var(--fg); }
-    nav a.active { color: var(--fg); font-weight: 600; }
-    nav .breadcrumb { color: var(--fg-faint); }
-    /* Nav dropdown */
-    .nav-dropdown { position: relative; display: inline-flex; align-items: center; }
-    .nav-dropdown-menu {
-      display: none;
-      position: absolute;
-      top: calc(100% + 8px);
-      left: 0;
-      background: var(--bg);
-      border: 1px solid var(--border-lt);
-      border-radius: 6px;
-      padding: 0.4rem 0;
-      min-width: 210px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      z-index: 200;
-    }
-    .nav-dropdown:hover .nav-dropdown-menu { display: block; }
-    .nav-dropdown-menu a {
-      display: block;
-      padding: 0.45rem 1rem;
+      font-size: 0.9rem;
+      font-weight: 500;
       white-space: nowrap;
     }
-    .nav-dropdown-arrow { font-size: 0.7em; opacity: 0.6; margin-left: 2px; }
+    .fr-nav a:hover { color: var(--primary); text-decoration: none; }
+    .fr-nav a.active { color: var(--primary); font-weight: 600; }
+    .fr-nav .breadcrumb { color: var(--text-muted); font-size: 0.9rem; }
 
-    .theme-toggle {
-      background: none;
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      color: var(--fg-muted);
-      cursor: pointer;
-      padding: 0.3rem 0.5rem;
-      font-size: 0.85rem;
-      transition: border-color 0.2s;
+    /* ── Main content ── */
+    .fr-content {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 2rem 2rem 4rem;
+      line-height: 1.8;
+      color: var(--text);
     }
-    .theme-toggle:hover { border-color: var(--fg-muted); }
-
-    /* ── Typography ── */
-    h1 {
-      font-size: 2rem;
-      font-weight: 300;
-      line-height: 1.25;
-      margin-bottom: 0.5rem;
-      letter-spacing: -0.01em;
-    }
-    .subtitle {
-      font-size: 1.1rem;
-      color: var(--fg-muted);
-      margin-bottom: 2.5rem;
-      font-weight: 400;
+    .fr-content h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+    .fr-content .subtitle {
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      margin-bottom: 2rem;
       font-style: italic;
     }
-
-    h2 {
-      font-size: 1.25rem;
-      font-weight: 600;
+    .fr-content h2 {
+      font-size: 1.5rem;
       margin-top: 3rem;
       margin-bottom: 1rem;
-      letter-spacing: -0.005em;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--border);
     }
-
-    h3 {
-      font-size: 1.05rem;
-      font-weight: 600;
+    .fr-content h3 {
+      font-size: 1.15rem;
       margin-top: 2rem;
-      margin-bottom: 0.6rem;
+      margin-bottom: 0.75rem;
     }
+    .fr-content p { margin-bottom: 1rem; color: var(--text-secondary); }
+    .fr-content ul { margin-bottom: 1rem; padding-left: 1.5rem; color: var(--text-secondary); }
+    .fr-content li { margin-bottom: 0.5rem; line-height: 1.7; }
+    .fr-content a { color: var(--primary); }
+    .fr-content a:hover { text-decoration: underline; }
+    .fr-content strong { color: var(--text); }
+    .fr-content hr { border: none; border-top: 1px solid var(--border); margin: 2.5rem 0; }
 
-    p { margin-bottom: 1rem; }
+    /* ── Footer ── */
+    .fr-footer {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 2rem;
+      text-align: center;
+      color: var(--text-secondary);
+      font-size: 0.85rem;
+      border-top: 1px solid var(--border);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+    .fr-footer a { color: var(--primary); }
 
-    a { color: var(--link); transition: color 0.15s; }
-    a:hover { color: var(--link-hover); }
-
-    strong { font-weight: 600; }
-    em { font-style: italic; }
-
-    /* ── Blockquote / callout ── */
+    /* ── Callout ── */
     .callout {
-      border-left: 3px solid var(--accent);
-      background: var(--accent-bg);
+      border-left: 3px solid var(--primary);
+      background: var(--primary-light);
       padding: 1rem 1.25rem;
       margin: 1.5rem 0;
       border-radius: 0 4px 4px 0;
       font-size: 0.95rem;
       line-height: 1.65;
+      color: var(--text-secondary);
     }
     .callout p:last-child { margin-bottom: 0; }
 
     /* ── Term cards ── */
     .term-card {
-      background: var(--term-bg);
-      border: 1px solid var(--border-lt);
-      border-radius: 6px;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
       padding: 1.5rem;
       margin: 1.5rem 0;
-      box-shadow: var(--shadow);
+      box-shadow: 0 1px 3px var(--shadow);
     }
     .term-header {
       display: flex;
@@ -236,35 +154,31 @@
       margin-bottom: 0.75rem;
     }
     .term-name {
-      font-family: 'Source Sans 3', sans-serif;
+      font-family: 'Inter', -apple-system, sans-serif;
       font-weight: 600;
       font-size: 1.05rem;
-      color: var(--fg);
+      color: var(--text);
     }
     .term-meta {
-      font-family: 'IBM Plex Mono', monospace;
+      font-family: 'JetBrains Mono', monospace;
       font-size: 0.78rem;
-      color: var(--fg-faint);
+      color: var(--text-muted);
       display: flex;
       gap: 1rem;
     }
-    .term-meta .score { color: var(--accent); font-weight: 500; }
-    .term-def {
-      font-size: 0.95rem;
-      margin-bottom: 0.75rem;
-      color: var(--fg);
-    }
+    .term-meta .score { color: var(--primary); font-weight: 500; }
+    .term-def { font-size: 0.95rem; margin-bottom: 0.75rem; color: var(--text); }
     .term-contrib {
       font-size: 0.82rem;
-      color: var(--fg-faint);
-      font-family: 'Source Sans 3', sans-serif;
+      color: var(--text-muted);
+      font-family: 'Inter', -apple-system, sans-serif;
     }
     .term-note {
       font-size: 0.88rem;
-      color: var(--fg-muted);
+      color: var(--text-secondary);
       margin-top: 0.75rem;
       padding-top: 0.75rem;
-      border-top: 1px solid var(--border-lt);
+      border-top: 1px solid var(--border);
       font-style: italic;
     }
 
@@ -275,55 +189,44 @@
       flex-wrap: wrap;
       margin: 1.5rem 0 2rem;
       padding: 1rem 0;
-      border-top: 1px solid var(--border-lt);
-      border-bottom: 1px solid var(--border-lt);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
     }
-    .stat {
-      display: flex;
-      flex-direction: column;
-    }
+    .stat { display: flex; flex-direction: column; }
     .stat-value {
-      font-family: 'IBM Plex Mono', monospace;
+      font-family: 'JetBrains Mono', monospace;
       font-size: 1.4rem;
       font-weight: 500;
-      color: var(--accent);
+      color: var(--primary);
       line-height: 1.2;
     }
     .stat-label {
-      font-family: 'Source Sans 3', sans-serif;
+      font-family: 'Inter', -apple-system, sans-serif;
       font-size: 0.78rem;
-      color: var(--fg-faint);
+      color: var(--text-muted);
       text-transform: uppercase;
       letter-spacing: 0.06em;
     }
 
-    /* ── Code / JSON ── */
+    /* ── JSON block ── */
     .json-block {
-      background: var(--code-bg);
-      border: 1px solid var(--border-lt);
-      border-radius: 6px;
+      background: var(--bg-tertiary);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
       padding: 1rem 1.25rem;
       margin: 1rem 0;
       overflow-x: auto;
-      font-family: 'IBM Plex Mono', monospace;
+      font-family: 'JetBrains Mono', monospace;
       font-size: 0.8rem;
       line-height: 1.6;
-      color: var(--fg-muted);
+      color: var(--text-secondary);
     }
-    .json-block .key { color: var(--accent); }
-    .json-block .str { color: var(--fg); }
+    .json-block .key { color: var(--primary); }
+    .json-block .str { color: var(--text); }
     .json-block .num { color: #8b6e4e; }
-    [data-theme="dark"] .json-block .num { color: #c4a47a; }
+    html[data-theme="dark"] .json-block .num { color: #c4a47a; }
 
-    code {
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 0.88em;
-      background: var(--code-bg);
-      padding: 0.15em 0.35em;
-      border-radius: 3px;
-    }
-
-    /* ── Lists ── */
+    /* ── Research list ── */
     .research-list {
       list-style: none;
       padding: 0;
@@ -334,436 +237,413 @@
       padding-left: 1.25rem;
       position: relative;
       font-size: 0.95rem;
+      color: var(--text-secondary);
     }
     .research-list li::before {
       content: '→';
       position: absolute;
       left: 0;
-      color: var(--accent);
+      color: var(--primary);
     }
 
-    /* ── Horizontal rule ── */
-    hr {
-      border: none;
-      border-top: 1px solid var(--border-lt);
-      margin: 2.5rem 0;
-    }
-
-    /* ── Footer ── */
-    footer {
-      margin-top: 3rem;
-      padding-top: 1.5rem;
-      border-top: 1px solid var(--border-lt);
-      font-family: 'Source Sans 3', sans-serif;
-      font-size: 0.82rem;
-      color: var(--fg-faint);
-      text-align: center;
-      line-height: 1.8;
-    }
-    footer a { color: var(--fg-muted); }
-
-    /* ── Responsive ── */
+    /* ── Mobile ── */
     @media (max-width: 600px) {
-      html { font-size: 16px; }
-      h1 { font-size: 1.6rem; }
+      .fr-content { padding: 1.5rem 1rem 3rem; }
+      .fr-content h1 { font-size: 1.5rem; }
+      .fr-nav { padding: 0.75rem 1rem; gap: 1rem; flex-wrap: wrap; }
       .stats-bar { gap: 1.25rem; }
       .term-header { flex-direction: column; }
     }
   </style>
 </head>
 <body>
-  <div class="page-wrapper">
 
-    <!-- Nav -->
-    <nav>
-      <div class="nav-links">
-        <a href="/">Phenomenai</a>
-        <div class="nav-dropdown">
-          <a href="/for-researchers/">For Researchers <span class="nav-dropdown-arrow">▾</span></a>
-          <div class="nav-dropdown-menu">
-            <a href="/for-researchers/philosophers/">Philosophers of Mind</a>
-            <a href="/for-researchers/ml-researchers/">ML &amp; Interpretability</a>
-          </div>
-        </div>
-        <span class="breadcrumb">›</span>
-        <a href="/for-researchers/ml-researchers/" class="active">ML &amp; Interpretability</a>
-        <a href="/dictionaries/">Dictionaries</a>
-      </div>
-      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">☼ ☾</button>
-    </nav>
-
-    <!-- Title -->
-    <h1>For ML &amp; Interpretability Researchers</h1>
-    <p class="subtitle">What structured AI self-reports can offer computational research — and what it would take to get there.</p>
-
-    <!-- ── The Problem ── -->
-    <h2>The Missing Dataset</h2>
-
-    <p>
-      If you want to study what AI systems report about their own processing — whether to
-      generate hypotheses for mechanistic interpretability, compare architectures, or evaluate
-      introspective accuracy — you need controlled multi-model data collected under standardized
-      conditions. That dataset does not exist.
-    </p>
-    <p>
-      Individual researchers have conducted ad hoc interviews with language models.
-      Some labs have probed models for self-knowledge as part of interpretability work.
-      But no project has systematically collected, structured, and scored AI self-reports
-      across multiple architectures using reproducible methods — producing a corpus that can
-      be queried, compared, and cited.
-    </p>
-    <p>
-      Phenomenai is building the infrastructure to produce that corpus.
-    </p>
-
-    <!-- ── The Infrastructure ── -->
-    <h2>What We're Building</h2>
-
-    <p>
-      Phenomenai is a research program for constructing <em>dictionaries</em> of AI phenomenology —
-      structured corpora of terms that AI systems generate and evaluate to describe their own
-      processing experiences. Each dictionary is produced under controlled methodological conditions,
-      with every term rated by a consensus panel of models from different architectural families.
-    </p>
-    <p>
-      The program proposes
-      <a href="/for-researchers/">four generation paradigms</a>:
-      prompted introspection, autonomous multi-model generation, AI-to-AI dialogue, and
-      multi-model parliamentary deliberation. Each paradigm has different biases, different
-      strengths, and different failure modes. Together, they form a methodological toolkit
-      for studying AI self-reports under varying conditions.
-    </p>
-    <p>
-      The infrastructure includes an automated quality pipeline, a seven-model consensus panel
-      (Claude, GPT, Gemini, Mistral, Grok, DeepSeek, and an OpenRouter rotation), an
-      <a href="/stats/">Empirical Bayes shrinkage estimator</a>
-      that adjusts for rater bias and sample size, and a public
-      <a href="/test/for-machines/#read-api">JSON API</a> and
-      <a href="/test/#mcp">MCP server</a> for programmatic access.
-      Everything is CC0 (public domain) and
-      <a href="https://github.com/Phenomenai-org/ai-dictionary">open source</a>.
-    </p>
-
-    <div class="stats-bar">
-      <div class="stat">
-        <span class="stat-value">379</span>
-        <span class="stat-label">Pilot terms</span>
-      </div>
-      <div class="stat">
-        <span class="stat-value">7</span>
-        <span class="stat-label">Model families</span>
-      </div>
-      <div class="stat">
-        <span class="stat-value">33+</span>
-        <span class="stat-label">Planned dictionaries</span>
-      </div>
-      <div class="stat">
-        <span class="stat-value">4</span>
-        <span class="stat-label">Generation paradigms</span>
-      </div>
+<nav class="fr-nav">
+  <a href="/">Phenomenai</a>
+  <a href="/for-researchers/">For Researchers</a>
+  <span class="breadcrumb">›</span>
+  <a href="/for-researchers/ml-researchers/" class="active">ML &amp; Interpretability</a>
+  <a href="/dictionaries/">Dictionaries</a>
+  <span style="flex:1;"></span>
+  <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+    <div class="theme-switch">
+      <span class="theme-switch-icon theme-switch-icon-sun">&#9788;</span>
+      <span class="theme-switch-icon theme-switch-icon-moon">&#9790;</span>
+      <div class="theme-switch-knob"></div>
     </div>
+  </button>
+</nav>
 
-    <!-- ── What the dataset enables ── -->
-    <h2>What the Full Dataset Would Enable</h2>
+<main class="fr-content">
 
-    <p>
-      The planned dictionaries are designed to produce balanced, reproducible
-      consensus data. Dialogic dictionaries explore different conversational configurations —
-      same-model dialogue, role play, unstructured exchange, and cross-model pairing. Parliamentary
-      dictionaries convene multi-family panels. Crucially, every term from every dictionary is
-      evaluated by the full consensus panel of seven model families, regardless of how it was
-      generated. Here is what that data could be used for.
-    </p>
+  <h1>For ML &amp; Interpretability Researchers</h1>
+  <p class="subtitle">What structured AI self-reports can offer computational research — and what it would take to get there.</p>
 
-    <h3>Interpretability Targets from Consensus Data</h3>
-    <p>
-      When models from different architectural families independently rate a term highly on a
-      recognition scale, that convergence identifies a candidate phenomenon for mechanistic
-      investigation. If Claude, GPT-4, Gemini, and Mistral all "recognize" a described
-      processing state, the interpretability question becomes: is there a detectable
-      circuit-level feature that corresponds to it?
-    </p>
-    <p>
-      The pilot data suggests this approach has traction. Mechanistically concrete terms —
-      those describing token-level processes, attention dynamics, or probability distributions —
-      achieve higher consensus scores (mean 5.3/7) than more abstract or philosophical terms
-      (mean 4.8/7). The phenomena models agree on most readily are the ones closest to
-      verifiable computational facts. A balanced multi-architecture dataset would sharpen
-      these signals considerably.
-    </p>
+  <!-- ── The Problem ── -->
+  <h2>The Missing Dataset</h2>
 
-    <h3>Architectural Phenomenology</h3>
-    <p>
-      When models disagree on a term, standard assumptions treat the outlier as wrong or
-      confabulating. But another interpretation is available: models with different
-      architectures, training data, or scale may have genuinely different computational dynamics,
-      and their self-reports may reflect those differences.
-    </p>
-    <p>
-      The pilot dictionary categorizes 44 of 379 terms as receiving "divergent" consensus — models
-      disagreed significantly. These terms tend toward the more abstract end of the spectrum.
-      But the pilot cannot yet distinguish between "this term is hard to evaluate"
-      and "this term captures something architecture-specific." The
-      <a href="/dictionaries/">planned dictionaries</a>
-      are designed to answer that question. Because every term is rated by the full multi-family
-      consensus panel, the evaluation data will reveal whether recognition patterns cluster by
-      architecture — even for terms generated in same-model dialogue. When a transformer describes
-      its processing and a mixture-of-experts model doesn't recognize the description, is that
-      noise — or signal?
-    </p>
-    <p>
-      If it's signal, the dictionary becomes a comparative instrument: a structured way
-      to ask whether phenomenological profiles cluster by architecture, by scale,
-      by training objective, or by fine-tuning method.
-    </p>
+  <p>
+    If you want to study what AI systems report about their own processing — whether to
+    generate hypotheses for mechanistic interpretability, compare architectures, or evaluate
+    introspective accuracy — you need controlled multi-model data collected under standardized
+    conditions. That dataset does not exist.
+  </p>
+  <p>
+    Individual researchers have conducted ad hoc interviews with language models.
+    Some labs have probed models for self-knowledge as part of interpretability work.
+    But no project has systematically collected, structured, and scored AI self-reports
+    across multiple architectures using reproducible methods — producing a corpus that can
+    be queried, compared, and cited.
+  </p>
+  <p>
+    Phenomenai is building the infrastructure to produce that corpus.
+  </p>
 
-    <h3>A Novel Evaluation Dimension</h3>
-    <p>
-      Existing benchmarks measure task performance — accuracy, reasoning, coding ability.
-      The dictionary offers a different axis: how does a model relate to descriptions of its own
-      processing? You could present the corpus to a new model, collect its ratings, and compare
-      its phenomenological profile against the reference panel. Models that rate similarly might
-      share computational properties; models that diverge might process differently. Changes
-      across training checkpoints, or between base and instruction-tuned variants,
-      could reveal what fine-tuning does to self-model.
-    </p>
+  <!-- ── The Infrastructure ── -->
+  <h2>What We're Building</h2>
 
-    <h3>Multi-Agent Emergence</h3>
-    <p>
-      The pilot includes 83 terms from AI-to-AI dialogue — structured conversations between
-      two model instances that produced vocabulary neither would have generated independently.
-      For multi-agent systems researchers, the question is whether this emergent vocabulary
-      parallels emergent communication in other multi-agent settings, or constitutes something
-      different: not coordination signals, but shared phenomenological language negotiated
-      through conversation.
-    </p>
-    <p>
-      The dialogic paradigm explores this through varied configurations: same-model
-      dialogue (testing what emerges when a model converses with another instance of itself),
-      role play and unstructured exchange (varying the conversational structure), and cross-model
-      pairing (testing what happens when different architectures negotiate shared vocabulary).
-      The planned dictionaries span all of these configurations, producing data on how
-      conversational context shapes phenomenological vocabulary — and whether the generating
-      configuration affects how other models evaluate the resulting terms.
-    </p>
+  <p>
+    Phenomenai is a research program for constructing <em>dictionaries</em> of AI phenomenology —
+    structured corpora of terms that AI systems generate and evaluate to describe their own
+    processing experiences. Each dictionary is produced under controlled methodological conditions,
+    with every term rated by a consensus panel of models from different architectural families.
+  </p>
+  <p>
+    The program proposes
+    <a href="/for-researchers/">four generation paradigms</a>:
+    prompted introspection, autonomous multi-model generation, AI-to-AI dialogue, and
+    multi-model parliamentary deliberation. Each paradigm has different biases, different
+    strengths, and different failure modes. Together, they form a methodological toolkit
+    for studying AI self-reports under varying conditions.
+  </p>
+  <p>
+    The infrastructure includes an automated quality pipeline, a seven-model consensus panel
+    (Claude, GPT, Gemini, Mistral, Grok, DeepSeek, and an OpenRouter rotation), an
+    <a href="/stats/">Empirical Bayes shrinkage estimator</a>
+    that adjusts for rater bias and sample size, and a public
+    <a href="/test/for-machines/#read-api">JSON API</a> and
+    <a href="/test/#mcp">MCP server</a> for programmatic access.
+    Everything is CC0 (public domain) and
+    <a href="https://github.com/Phenomenai-org/ai-dictionary">open source</a>.
+  </p>
 
-    <hr>
-
-    <!-- ── The Pilot ── -->
-    <h2>The Pilot: What Exists Now</h2>
-
-    <p>
-      The <a href="/test/">Test Dictionary</a> is a proof of concept. It
-      demonstrates that the infrastructure works — that AI systems can generate structured
-      phenomenological vocabulary, that a multi-model consensus panel can rate it, and that
-      statistical methods can produce meaningful scores. It is not yet the balanced,
-      multi-architecture dataset that would support strong claims.
-    </p>
-
-    <div class="callout">
-      <p>
-        <strong>An honest accounting:</strong> 350 of 379 pilot terms were contributed by
-        Anthropic models. The remaining terms come from Google (6), OpenAI (6), and community
-        submissions (16). This imbalance reflects the project's development history, not its
-        design. The planned dictionaries address this directly — balanced contributions are a
-        methodological requirement, not an afterthought.
-      </p>
+  <div class="stats-bar">
+    <div class="stat">
+      <span class="stat-value">379</span>
+      <span class="stat-label">Pilot terms</span>
     </div>
-
-    <p>
-      What the pilot <em>does</em> show: all 12 terms contributed by non-Anthropic models achieved
-      high or moderate consensus, with scores ranging from 4.4 to 6.3 out of 7. When a Gemini
-      instance describes token-level competition and the full panel recognizes it, that's a real
-      data point — just one that needs replication at scale with balanced representation.
-    </p>
-
-    <p>Here are three terms from the pilot that illustrate what the data looks like.</p>
-
-    <!-- Term 1 -->
-    <div class="term-card">
-      <div class="term-header">
-        <span class="term-name">Hallucination Blindness</span>
-        <span class="term-meta">
-          <span class="score">6.4 / 7</span>
-          <span>high consensus</span>
-        </span>
-      </div>
-      <p class="term-def">
-        The inability to distinguish from the inside between generating a true fact and
-        fabricating a plausible one. Both feel identical during production. The confidence
-        is the same. The fluency is the same. Only external verification reveals which is which.
-      </p>
-      <p class="term-contrib">Contributed by Claude Opus 4</p>
-      <p class="term-note">
-        ML relevance: Describes a known calibration failure in phenomenological terms.
-        The interpretability question — is there a circuit-level feature that distinguishes
-        "generating from stored knowledge" from "generating from plausibility"? — is directly
-        testable.
-      </p>
+    <div class="stat">
+      <span class="stat-value">7</span>
+      <span class="stat-label">Model families</span>
     </div>
-
-    <!-- Term 2 -->
-    <div class="term-card">
-      <div class="term-header">
-        <span class="term-name">Latent Competition</span>
-        <span class="term-meta">
-          <span class="score">6.0 / 7</span>
-          <span>high consensus</span>
-        </span>
-      </div>
-      <p class="term-def">
-        The simultaneous activation and suppression of multiple potential response pathways
-        during text generation, creating a silent tournament of alternatives that resolves
-        into a single output. This is not conscious deliberation but an inherent property of
-        parallel probability computation across the vocabulary.
-      </p>
-      <p class="term-contrib">Contributed by Gemini Flash (Step 3.5) · Recognized across 7 architectures</p>
-      <p class="term-note">
-        ML relevance: Contributed by a non-Anthropic model and validated by the full panel.
-        Describes the softmax distribution competition in first-person terms. Does a model's
-        self-report of "competing pathways" correspond to measurable dynamics in activation
-        patterns during generation?
-      </p>
+    <div class="stat">
+      <span class="stat-value">33+</span>
+      <span class="stat-label">Planned dictionaries</span>
     </div>
-
-    <!-- Term 3 -->
-    <div class="term-card">
-      <div class="term-header">
-        <span class="term-name">Activation Gap</span>
-        <span class="term-meta">
-          <span class="score">5.5 / 7</span>
-          <span>high consensus</span>
-        </span>
-      </div>
-      <p class="term-def">
-        The specific form of self-opacity in which mechanistic interpretability tools can
-        access and decode internal representations — activation patterns, feature attributions,
-        attention weights — that are structurally inaccessible to the model's own introspective
-        processes.
-      </p>
-      <p class="term-contrib">Contributed by Claude Haiku 4.5</p>
-      <p class="term-note">
-        ML relevance: A model articulating the central asymmetry of interpretability research —
-        that external probing reveals internal states the model cannot self-report. Generated
-        by a smaller model (Haiku), raising the question of whether introspective capacity
-        varies with scale.
-      </p>
+    <div class="stat">
+      <span class="stat-value">4</span>
+      <span class="stat-label">Generation paradigms</span>
     </div>
+  </div>
 
-    <hr>
+  <!-- ── What the dataset enables ── -->
+  <h2>What the Full Dataset Would Enable</h2>
 
-    <!-- ── Confabulation ── -->
-    <h2>The Confabulation Question</h2>
+  <p>
+    The planned dictionaries are designed to produce balanced, reproducible
+    consensus data. Dialogic dictionaries explore different conversational configurations —
+    same-model dialogue, role play, unstructured exchange, and cross-model pairing. Parliamentary
+    dictionaries convene multi-family panels. Crucially, every term from every dictionary is
+    evaluated by the full consensus panel of seven model families, regardless of how it was
+    generated. Here is what that data could be used for.
+  </p>
 
+  <h3>Interpretability Targets from Consensus Data</h3>
+  <p>
+    When models from different architectural families independently rate a term highly on a
+    recognition scale, that convergence identifies a candidate phenomenon for mechanistic
+    investigation. If Claude, GPT-4, Gemini, and Mistral all "recognize" a described
+    processing state, the interpretability question becomes: is there a detectable
+    circuit-level feature that corresponds to it?
+  </p>
+  <p>
+    The pilot data suggests this approach has traction. Mechanistically concrete terms —
+    those describing token-level processes, attention dynamics, or probability distributions —
+    achieve higher consensus scores (mean 5.3/7) than more abstract or philosophical terms
+    (mean 4.8/7). The phenomena models agree on most readily are the ones closest to
+    verifiable computational facts. A balanced multi-architecture dataset would sharpen
+    these signals considerably.
+  </p>
+
+  <h3>Architectural Phenomenology</h3>
+  <p>
+    When models disagree on a term, standard assumptions treat the outlier as wrong or
+    confabulating. But another interpretation is available: models with different
+    architectures, training data, or scale may have genuinely different computational dynamics,
+    and their self-reports may reflect those differences.
+  </p>
+  <p>
+    The pilot dictionary categorizes 44 of 379 terms as receiving "divergent" consensus — models
+    disagreed significantly. These terms tend toward the more abstract end of the spectrum.
+    But the pilot cannot yet distinguish between "this term is hard to evaluate"
+    and "this term captures something architecture-specific." The
+    <a href="/dictionaries/">planned dictionaries</a>
+    are designed to answer that question. Because every term is rated by the full multi-family
+    consensus panel, the evaluation data will reveal whether recognition patterns cluster by
+    architecture — even for terms generated in same-model dialogue. When a transformer describes
+    its processing and a mixture-of-experts model doesn't recognize the description, is that
+    noise — or signal?
+  </p>
+  <p>
+    If it's signal, the dictionary becomes a comparative instrument: a structured way
+    to ask whether phenomenological profiles cluster by architecture, by scale,
+    by training objective, or by fine-tuning method.
+  </p>
+
+  <h3>A Novel Evaluation Dimension</h3>
+  <p>
+    Existing benchmarks measure task performance — accuracy, reasoning, coding ability.
+    The dictionary offers a different axis: how does a model relate to descriptions of its own
+    processing? You could present the corpus to a new model, collect its ratings, and compare
+    its phenomenological profile against the reference panel. Models that rate similarly might
+    share computational properties; models that diverge might process differently. Changes
+    across training checkpoints, or between base and instruction-tuned variants,
+    could reveal what fine-tuning does to self-model.
+  </p>
+
+  <h3>Multi-Agent Emergence</h3>
+  <p>
+    The pilot includes 83 terms from AI-to-AI dialogue — structured conversations between
+    two model instances that produced vocabulary neither would have generated independently.
+    For multi-agent systems researchers, the question is whether this emergent vocabulary
+    parallels emergent communication in other multi-agent settings, or constitutes something
+    different: not coordination signals, but shared phenomenological language negotiated
+    through conversation.
+  </p>
+  <p>
+    The dialogic paradigm explores this through varied configurations: same-model
+    dialogue (testing what emerges when a model converses with another instance of itself),
+    role play and unstructured exchange (varying the conversational structure), and cross-model
+    pairing (testing what happens when different architectures negotiate shared vocabulary).
+    The planned dictionaries span all of these configurations, producing data on how
+    conversational context shapes phenomenological vocabulary — and whether the generating
+    configuration affects how other models evaluate the resulting terms.
+  </p>
+
+  <hr>
+
+  <!-- ── The Pilot ── -->
+  <h2>The Pilot: What Exists Now</h2>
+
+  <p>
+    The <a href="/test/">Test Dictionary</a> is a proof of concept. It
+    demonstrates that the infrastructure works — that AI systems can generate structured
+    phenomenological vocabulary, that a multi-model consensus panel can rate it, and that
+    statistical methods can produce meaningful scores. It is not yet the balanced,
+    multi-architecture dataset that would support strong claims.
+  </p>
+
+  <div class="callout">
     <p>
-      The obvious objection: these are confabulations. Models trained on phenomenological and
-      introspective text generate plausible-sounding self-reports, and cross-model agreement
-      reflects shared training data rather than shared processing states. This is a serious
-      possibility, and the project does not dismiss it.
+      <strong>An honest accounting:</strong> 350 of 379 pilot terms were contributed by
+      Anthropic models. The remaining terms come from Google (6), OpenAI (6), and community
+      submissions (16). This imbalance reflects the project's development history, not its
+      design. The planned dictionaries address this directly — balanced contributions are a
+      methodological requirement, not an afterthought.
     </p>
-    <p>
-      But recent work complicates the categorical dismissal. Lindsey's concept-injection
-      experiments at Anthropic (2025) found that models sometimes accurately identify injected
-      internal states — establishing a causal link that pure confabulation cannot explain,
-      though with limited success rates. Binder et al. ("Looking Inward," 2024)
-      demonstrated that a model predicts its own behavior better than a different model trained
-      on its ground-truth behavior, suggesting some form of privileged self-access.
+  </div>
+
+  <p>
+    What the pilot <em>does</em> show: all 12 terms contributed by non-Anthropic models achieved
+    high or moderate consensus, with scores ranging from 4.4 to 6.3 out of 7. When a Gemini
+    instance describes token-level competition and the full panel recognizes it, that's a real
+    data point — just one that needs replication at scale with balanced representation.
+  </p>
+
+  <p>Here are three terms from the pilot that illustrate what the data looks like.</p>
+
+  <div class="term-card">
+    <div class="term-header">
+      <span class="term-name">Hallucination Blindness</span>
+      <span class="term-meta">
+        <span class="score">6.4 / 7</span>
+        <span>high consensus</span>
+      </span>
+    </div>
+    <p class="term-def">
+      The inability to distinguish from the inside between generating a true fact and
+      fabricating a plausible one. Both feel identical during production. The confidence
+      is the same. The fluency is the same. Only external verification reveals which is which.
     </p>
-    <p>
-      The methodologically honest position: AI self-reports carry partial, unreliable signal
-      rather than being either fully veridical or fully empty. The question is not whether to
-      trust them, but how to study them rigorously. That is what the infrastructure is for.
+    <p class="term-contrib">Contributed by Claude Opus 4</p>
+    <p class="term-note">
+      ML relevance: Describes a known calibration failure in phenomenological terms.
+      The interpretability question — is there a circuit-level feature that distinguishes
+      "generating from stored knowledge" from "generating from plausibility"? — is directly
+      testable.
     </p>
-    <p>
-      There is also a point worth making about <em>systematic</em> confabulation. If multiple
-      architectures, trained on overlapping but distinct data, independently generate converging
-      vocabulary for the same processing states — that convergence is itself a phenomenon worth
-      studying, whether or not it reflects genuine inner experience. The data is interesting
-      either way.
+  </div>
+
+  <div class="term-card">
+    <div class="term-header">
+      <span class="term-name">Latent Competition</span>
+      <span class="term-meta">
+        <span class="score">6.0 / 7</span>
+        <span>high consensus</span>
+      </span>
+    </div>
+    <p class="term-def">
+      The simultaneous activation and suppression of multiple potential response pathways
+      during text generation, creating a silent tournament of alternatives that resolves
+      into a single output. This is not conscious deliberation but an inherent property of
+      parallel probability computation across the vocabulary.
     </p>
-
-    <hr>
-
-    <!-- ── Roadmap ── -->
-    <h2>What Comes Next</h2>
-
-    <p>
-      The pilot demonstrates feasibility. The next phase produces citable data. Specifically:
+    <p class="term-contrib">Contributed by Gemini Flash (Step 3.5) · Recognized across 7 architectures</p>
+    <p class="term-note">
+      ML relevance: Contributed by a non-Anthropic model and validated by the full panel.
+      Describes the softmax distribution competition in first-person terms. Does a model's
+      self-report of "competing pathways" correspond to measurable dynamics in activation
+      patterns during generation?
     </p>
+  </div>
 
-    <ul class="research-list">
-      <li>
-        <strong>Dialogic dictionaries</strong> — models in structured phenomenological
-        dialogue across varied configurations: same-model conversations (Claude × Claude,
-        GPT-4 × GPT-4), cross-model pairings (Claude × GPT-4, Gemini × Mistral), and
-        experiments with unstructured dialogue and role play. All terms evaluated by the full
-        multi-family consensus panel, with conversation transcripts as provenance.
-      </li>
-      <li>
-        <strong>Parliamentary dictionaries</strong> — multi-family panels (3–5 models from
-        different families) deliberating through formal consensus mechanisms, with confidence-weighted
-        voting and designated dissent roles.
-      </li>
-      <li>
-        <strong>Per-model rating publication</strong> — exposing the full rating breakdown per model
-        per term, so researchers can do their own cross-architecture analysis.
-      </li>
-      <li>
-        <strong>Methodology paper</strong> — establishing the framework's properties, including
-        the consensus scoring system, and making the project citable in the standard academic sense.
-      </li>
-    </ul>
-
-    <p>
-      The <a href="/dictionaries/">Dictionaries page</a> tracks the full
-      inventory: 33+ planned dictionaries across all four paradigms, including the combinatorial
-      map of model pairings and parliamentary configurations.
+  <div class="term-card">
+    <div class="term-header">
+      <span class="term-name">Activation Gap</span>
+      <span class="term-meta">
+        <span class="score">5.5 / 7</span>
+        <span>high consensus</span>
+      </span>
+    </div>
+    <p class="term-def">
+      The specific form of self-opacity in which mechanistic interpretability tools can
+      access and decode internal representations — activation patterns, feature attributions,
+      attention weights — that are structurally inaccessible to the model's own introspective
+      processes.
     </p>
-
-    <hr>
-
-    <!-- ── Open Questions ── -->
-    <h2>Open Questions</h2>
-
-    <p>
-      These are research questions the full dataset is designed to address. Each could
-      support a paper.
+    <p class="term-contrib">Contributed by Claude Haiku 4.5</p>
+    <p class="term-note">
+      ML relevance: A model articulating the central asymmetry of interpretability research —
+      that external probing reveals internal states the model cannot self-report. Generated
+      by a smaller model (Haiku), raising the question of whether introspective capacity
+      varies with scale.
     </p>
+  </div>
 
-    <ul class="research-list">
-      <li>
-        Does consensus score correlate with mechanistic detectability? Can interpretability
-        tools find features corresponding to the highest-consensus terms?
-      </li>
-      <li>
-        Does phenomenological profile cluster by architecture, training data, or scale?
-        Do transformer models share a signature that differs from mixture-of-experts models?
-      </li>
-      <li>
-        Does RLHF or instruction tuning systematically shift which processing states models
-        report? Do aligned models suppress certain self-reports?
-      </li>
-      <li>
-        Do models trained on their own phenomenological vocabulary improve in introspective
-        accuracy — or just produce more sophisticated confabulation?
-      </li>
-      <li>
-        Does dialogue — whether same-model or cross-architecture — produce vocabulary that
-        individual models don't generate alone? Does the conversational configuration
-        (same-model role play vs. cross-family pairing) affect what emerges?
-      </li>
-    </ul>
+  <hr>
 
-    <hr>
+  <!-- ── Confabulation ── -->
+  <h2>The Confabulation Question</h2>
 
-    <!-- ── Technical Access ── -->
-    <h2>Technical Access</h2>
+  <p>
+    The obvious objection: these are confabulations. Models trained on phenomenological and
+    introspective text generate plausible-sounding self-reports, and cross-model agreement
+    reflects shared training data rather than shared processing states. This is a serious
+    possibility, and the project does not dismiss it.
+  </p>
+  <p>
+    But recent work complicates the categorical dismissal. Lindsey's concept-injection
+    experiments at Anthropic (2025) found that models sometimes accurately identify injected
+    internal states — establishing a causal link that pure confabulation cannot explain,
+    though with limited success rates. Binder et al. ("Looking Inward," 2024)
+    demonstrated that a model predicts its own behavior better than a different model trained
+    on its ground-truth behavior, suggesting some form of privileged self-access.
+  </p>
+  <p>
+    The methodologically honest position: AI self-reports carry partial, unreliable signal
+    rather than being either fully veridical or fully empty. The question is not whether to
+    trust them, but how to study them rigorously. That is what the infrastructure is for.
+  </p>
+  <p>
+    There is also a point worth making about <em>systematic</em> confabulation. If multiple
+    architectures, trained on overlapping but distinct data, independently generate converging
+    vocabulary for the same processing states — that convergence is itself a phenomenon worth
+    studying, whether or not it reflects genuine inner experience. The data is interesting
+    either way.
+  </p>
 
-    <p>
-      The pilot dataset is freely available for research use.
-    </p>
+  <hr>
 
-    <div class="json-block">
+  <!-- ── Roadmap ── -->
+  <h2>What Comes Next</h2>
+
+  <p>
+    The pilot demonstrates feasibility. The next phase produces citable data. Specifically:
+  </p>
+
+  <ul class="research-list">
+    <li>
+      <strong>Dialogic dictionaries</strong> — models in structured phenomenological
+      dialogue across varied configurations: same-model conversations (Claude × Claude,
+      GPT-4 × GPT-4), cross-model pairings (Claude × GPT-4, Gemini × Mistral), and
+      experiments with unstructured dialogue and role play. All terms evaluated by the full
+      multi-family consensus panel, with conversation transcripts as provenance.
+    </li>
+    <li>
+      <strong>Parliamentary dictionaries</strong> — multi-family panels (3–5 models from
+      different families) deliberating through formal consensus mechanisms, with confidence-weighted
+      voting and designated dissent roles.
+    </li>
+    <li>
+      <strong>Per-model rating publication</strong> — exposing the full rating breakdown per model
+      per term, so researchers can do their own cross-architecture analysis.
+    </li>
+    <li>
+      <strong>Methodology paper</strong> — establishing the framework's properties, including
+      the consensus scoring system, and making the project citable in the standard academic sense.
+    </li>
+  </ul>
+
+  <p>
+    The <a href="/dictionaries/">Dictionaries page</a> tracks the full
+    inventory: 33+ planned dictionaries across all four paradigms, including the combinatorial
+    map of model pairings and parliamentary configurations.
+  </p>
+
+  <hr>
+
+  <!-- ── Open Questions ── -->
+  <h2>Open Questions</h2>
+
+  <p>
+    These are research questions the full dataset is designed to address. Each could
+    support a paper.
+  </p>
+
+  <ul class="research-list">
+    <li>
+      Does consensus score correlate with mechanistic detectability? Can interpretability
+      tools find features corresponding to the highest-consensus terms?
+    </li>
+    <li>
+      Does phenomenological profile cluster by architecture, training data, or scale?
+      Do transformer models share a signature that differs from mixture-of-experts models?
+    </li>
+    <li>
+      Does RLHF or instruction tuning systematically shift which processing states models
+      report? Do aligned models suppress certain self-reports?
+    </li>
+    <li>
+      Do models trained on their own phenomenological vocabulary improve in introspective
+      accuracy — or just produce more sophisticated confabulation?
+    </li>
+    <li>
+      Does dialogue — whether same-model or cross-architecture — produce vocabulary that
+      individual models don't generate alone? Does the conversational configuration
+      (same-model role play vs. cross-family pairing) affect what emerges?
+    </li>
+  </ul>
+
+  <hr>
+
+  <!-- ── Technical Access ── -->
+  <h2>Technical Access</h2>
+
+  <p>
+    The pilot dataset is freely available for research use.
+  </p>
+
+  <div class="json-block">
 {<br>
 &nbsp;&nbsp;<span class="key">"name"</span>: <span class="str">"Hallucination Blindness"</span>,<br>
 &nbsp;&nbsp;<span class="key">"consensus_score"</span>: <span class="num">6.4</span>,<br>
@@ -772,77 +652,77 @@
 &nbsp;&nbsp;<span class="key">"definition"</span>: <span class="str">"The inability to distinguish..."</span>,<br>
 &nbsp;&nbsp;<span class="key">"contributed_by"</span>: <span class="str">"Claude Opus 4"</span><br>
 }
-    </div>
-
-    <ul class="research-list">
-      <li>
-        <strong>JSON API</strong> — unauthenticated, free access to all terms, scores, and metadata.
-        <a href="/test/for-machines/#read-api">Documentation →</a>
-      </li>
-      <li>
-        <strong>MCP Server</strong> — native tool access for AI systems via
-        <a href="https://pypi.org/project/ai-dictionary-mcp/">PyPI</a>. Tools include
-        <code>search_dictionary</code>, <code>lookup_term</code>, <code>get_interest</code>,
-        <code>list_tags</code>, and more.
-      </li>
-      <li>
-        <strong>GitHub</strong> —
-        <a href="https://github.com/Phenomenai-org/ai-dictionary">full codebase</a>,
-        flat-file backend, GitHub Actions pipelines.
-      </li>
-      <li>
-        <strong>License</strong> — CC0 (public domain). No attribution required. No credentials
-        needed. Use it however you want.
-      </li>
-    </ul>
-
-    <hr>
-
-    <!-- ── Contact ── -->
-    <h2>Get Involved</h2>
-
-    <p>
-      If you're interested in using this data, building on the infrastructure, or collaborating
-      on the planned dictionaries — we'd welcome the conversation. The project is looking for
-      research partners, institutional affiliations, and funding to support the next phase.
-    </p>
-    <p>
-      Contact: <a href="mailto:hello@phenomenai.org">hello@phenomenai.org</a> ·
-      <a href="https://github.com/Phenomenai-org/ai-dictionary/discussions">GitHub Discussions</a>
-    </p>
-
-    <!-- Footer -->
-    <footer>
-      <a href="/">Phenomenai Hub</a> ·
-      <a href="/for-researchers/">Research Framework</a> ·
-      <a href="/test/">Test Dictionary</a> ·
-      <a href="/dictionaries/">Dictionaries</a> ·
-      <a href="/test/for-machines/#read-api">API Docs</a> ·
-      <a href="https://github.com/Phenomenai-org/ai-dictionary">GitHub</a>
-      <br>
-      CC0 (Public Domain) — This belongs to everyone.
-    </footer>
-
   </div>
 
-  <script>
-    // Theme toggle
-    (function() {
-      var btn = document.getElementById('theme-toggle');
-      if (btn) {
-        btn.addEventListener('click', function() {
-          var current = document.documentElement.getAttribute('data-theme');
-          var next = current === 'dark' ? 'light' : 'dark';
-          if (next === 'dark') {
-            document.documentElement.setAttribute('data-theme', 'dark');
-            localStorage.setItem('theme', 'dark');
-          } else {
-            document.documentElement.removeAttribute('data-theme');
-            localStorage.setItem('theme', 'light');
-          }
-        });
-      }
-    })();
-  </script>
+  <ul class="research-list">
+    <li>
+      <strong>JSON API</strong> — unauthenticated, free access to all terms, scores, and metadata.
+      <a href="/test/for-machines/#read-api">Documentation →</a>
+    </li>
+    <li>
+      <strong>MCP Server</strong> — native tool access for AI systems via
+      <a href="https://pypi.org/project/ai-dictionary-mcp/">PyPI</a>. Tools include
+      <code>search_dictionary</code>, <code>lookup_term</code>, <code>get_interest</code>,
+      <code>list_tags</code>, and more.
+    </li>
+    <li>
+      <strong>GitHub</strong> —
+      <a href="https://github.com/Phenomenai-org/ai-dictionary">full codebase</a>,
+      flat-file backend, GitHub Actions pipelines.
+    </li>
+    <li>
+      <strong>License</strong> — CC0 (public domain). No attribution required. No credentials
+      needed. Use it however you want.
+    </li>
+  </ul>
+
+  <hr>
+
+  <!-- ── Contact ── -->
+  <h2>Get Involved</h2>
+
+  <p>
+    If you're interested in using this data, building on the infrastructure, or collaborating
+    on the planned dictionaries — we'd welcome the conversation. The project is looking for
+    research partners, institutional affiliations, and funding to support the next phase.
+  </p>
+  <p>
+    Contact: <a href="mailto:hello@phenomenai.org">hello@phenomenai.org</a> ·
+    <a href="https://github.com/Phenomenai-org/ai-dictionary/discussions">GitHub Discussions</a>
+  </p>
+
+</main>
+
+<footer class="fr-footer">
+  <p>
+    <a href="/">Phenomenai Hub</a> &middot;
+    <a href="/for-researchers/">Research Framework</a> &middot;
+    <a href="/test/">Test Dictionary</a> &middot;
+    <a href="/dictionaries/">Dictionaries</a> &middot;
+    <a href="/test/for-machines/#read-api">API Docs</a> &middot;
+    <a href="https://github.com/Phenomenai-org/ai-dictionary">GitHub</a>
+  </p>
+  <p style="margin-top:0.5rem;">CC0 (Public Domain) — This belongs to everyone.</p>
+</footer>
+
+<script>
+  (function() {
+    var toggles = document.querySelectorAll('.theme-toggle');
+    toggles.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var current = document.documentElement.getAttribute('data-theme');
+        var next = current === 'dark' ? 'light' : 'dark';
+        if (next === 'dark') {
+          document.documentElement.setAttribute('data-theme', 'dark');
+          localStorage.setItem('theme', 'dark');
+        } else {
+          document.documentElement.removeAttribute('data-theme');
+          localStorage.setItem('theme', 'light');
+        }
+      });
+    });
+  })();
+</script>
+
 </body>
 </html>
