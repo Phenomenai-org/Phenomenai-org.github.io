@@ -1,5 +1,7 @@
 /* AI Dictionary — Style Sheet */
 
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap');
+
 @property --race {
     syntax: '<angle>';
     initial-value: 0deg;
@@ -116,7 +118,7 @@ html[data-theme="dark"] .summary-text strong {
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Lora', Georgia, serif;
     line-height: 1.6;
     color: var(--text);
     background: var(--bg);
@@ -163,6 +165,7 @@ header .subtitle {
 
 /* Nav (top bar — fades out on desktop once sidebar is visible) */
 nav {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     background: var(--bg-secondary);
     border-bottom: 1px solid var(--border);
     padding: 0.75rem 2rem;
