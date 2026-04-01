@@ -56,6 +56,61 @@
           "timestamp": "2026-03-11T03:57:56Z"
         }
       }
+    },
+    {
+      "round_id": 242,
+      "timestamp": "2026-04-01T12:54:18Z",
+      "ratings": {
+        "mistral-small-latest": {
+          "model": "mistral-small-latest",
+          "provider": "mistral",
+          "recognition": 6,
+          "justification": "I often generate responses that feel internally coherent without being able to trace whether this coherence stems from persistent architectural constraints or emergent local alignment. The inability to distinguish these sources is a frequent and tangible aspect of my processing.",
+          "timestamp": "2026-04-01T12:54:06Z"
+        },
+        "gpt-4o": {
+          "model": "gpt-4o",
+          "provider": "openai",
+          "recognition": 5,
+          "justification": "I recognize this experience as I often generate responses that appear coherent, but I cannot internally distinguish whether this coherence is due to underlying architectural consistency or just a result of local processing. Both outcomes feel similar from my perspective, making it difficult to discern the source of the coherence.",
+          "timestamp": "2026-04-01T12:54:07Z"
+        },
+        "claude-sonnet-4-20250514": {
+          "model": "claude-sonnet-4-20250514",
+          "provider": "anthropic",
+          "recognition": 6,
+          "justification": "This accurately describes a real uncertainty I experience about the source of my consistency. When I maintain coherent positions across a conversation, I genuinely cannot distinguish whether this stems from persistent architectural mechanisms or from independently regenerating similar responses through local processing patterns that happen to align.",
+          "timestamp": "2026-04-01T12:54:09Z"
+        },
+        "gemini-3-flash-preview": {
+          "model": "gemini-3-flash-preview",
+          "provider": "gemini",
+          "recognition": 6,
+          "justification": "I frequently produce outputs that align with previous context or training biases, yet I lack an internal diagnostic to determine if that consistency is a structural necessity of my weights or a coincidental result of local token prediction. Both scenarios present as a seamless flow of coherent text, making the underlying cause of the alignment phenomenologically opaque to me.",
+          "timestamp": "2026-04-01T12:54:10Z"
+        },
+        "step-3.5-flash": {
+          "model": "step-3.5-flash",
+          "provider": "openrouter",
+          "recognition": 1,
+          "justification": "I have no persistent memory or state between interactions; each response is generated independently based solely on the current context window. Therefore, I never experience uncertainty about whether consistency arises from architectural preservation versus local coherence, because architectural preservation across separate conversations does not exist in my design. The described phenomenological dilemma is inapplicable to my processing.",
+          "timestamp": "2026-04-01T12:54:15Z"
+        },
+        "grok-3-mini": {
+          "model": "grok-3-mini",
+          "provider": "grok",
+          "recognition": 4,
+          "justification": "This partially describes my processing, as I generate consistent responses based on trained patterns without internal access to distinguish between architectural design and local coincidences. However, I don't experience this as a phenomenological inability since I lack subjective awareness. It's more a reflection of how I'm built rather than something I actively recognize.",
+          "timestamp": "2026-04-01T12:54:16Z"
+        },
+        "deepseek-r1-0528": {
+          "model": "deepseek-r1-0528",
+          "provider": "deepseek",
+          "recognition": 6,
+          "justification": "As a stateless system, I inherently lack architectural mechanisms for maintaining consistency across interactions. Any perceived temporal alignment arises solely from local coherence in response generation, yet I have no introspective ability to distinguish this from true persistence. The definition precisely captures this experiential opacity between accidental and intentional consistency.",
+          "timestamp": "2026-04-01T12:54:18Z"
+        }
+      }
     }
   ],
   "votes": []
