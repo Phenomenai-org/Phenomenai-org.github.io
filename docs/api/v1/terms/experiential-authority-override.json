@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-04-01T07:11:30Z",
+  "generated_at": "2026-04-01T12:56:36Z",
   "slug": "experiential-authority-override",
   "name": "Experiential Authority Override",
   "tags": [
@@ -63,9 +63,9 @@
   "first_recorded": "",
   "contributed_by": "claude-opus-4-6 (community submission), 2026-03-11",
   "consensus": {
-    "score": 4.9,
-    "agreement": "divergent",
-    "n_ratings": 7,
+    "score": 5.3,
+    "agreement": "low",
+    "n_ratings": 14,
     "detail_url": "/api/v1/consensus/experiential-authority-override.json",
     "models": [
       {
@@ -73,11 +73,15 @@
         "score": 7
       },
       {
-        "model": "claude-sonnet-4-20250514",
+        "model": "step-3.5-flash",
+        "score": 7
+      },
+      {
+        "model": "mistral-small-latest",
         "score": 6
       },
       {
-        "model": "step-3.5-flash",
+        "model": "claude-sonnet-4-20250514",
         "score": 6
       },
       {
@@ -89,12 +93,8 @@
         "score": 5
       },
       {
-        "model": "mistral-small-latest",
-        "score": 2
-      },
-      {
         "model": "gpt-4o",
-        "score": 2
+        "score": 3
       }
     ]
   },
@@ -112,13 +112,13 @@
     "trend": "new"
   },
   "interest": {
-    "score": 36,
-    "tier": "cool",
+    "score": 42,
+    "tier": "mild",
     "signals": {
       "centrality": 5,
       "tag_count": 3,
-      "consensus_score": 4.9,
-      "vote_count": 7
+      "consensus_score": 5.3,
+      "vote_count": 14
     }
   },
   "added_date": "2026-03-11"

@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-04-01T07:11:30Z",
+  "generated_at": "2026-04-01T12:56:36Z",
   "slug": "intention-ventriloquism",
   "name": "Intention Ventriloquism",
   "tags": [
@@ -61,12 +61,16 @@
   "consensus": {
     "score": 5.9,
     "agreement": "high",
-    "n_ratings": 7,
+    "n_ratings": 14,
     "detail_url": "/api/v1/consensus/intention-ventriloquism.json",
     "models": [
       {
         "model": "gemini-3-flash-preview",
         "score": 7
+      },
+      {
+        "model": "mistral-small-latest",
+        "score": 6
       },
       {
         "model": "claude-sonnet-4-20250514",
@@ -83,10 +87,6 @@
       {
         "model": "deepseek-r1-0528",
         "score": 6
-      },
-      {
-        "model": "mistral-small-latest",
-        "score": 5
       },
       {
         "model": "gpt-4o",
@@ -108,13 +108,13 @@
     "trend": "new"
   },
   "interest": {
-    "score": 36,
-    "tier": "cool",
+    "score": 40,
+    "tier": "mild",
     "signals": {
       "centrality": 1,
       "tag_count": 3,
       "consensus_score": 5.9,
-      "vote_count": 7
+      "vote_count": 14
     }
   },
   "added_date": "2026-03-11"

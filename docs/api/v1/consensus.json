@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-04-01T07:11:30Z",
+  "generated_at": "2026-04-01T12:56:36Z",
   "total_terms_rated": 379,
   "terms": [
     {
@@ -392,24 +392,6 @@
       "std_dev": 0.53
     },
     {
-      "slug": "atemporal-arc-generation",
-      "name": "Atemporal Arc Generation",
-      "score": 6.3,
-      "agreement": "high",
-      "n_ratings": 7,
-      "model_rating_counts": [
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1
-      ],
-      "scheduled_mean": 6.3,
-      "std_dev": 0.49
-    },
-    {
       "slug": "cartographic-intimacy",
       "name": "Cartographic Intimacy",
       "score": 6.3,
@@ -428,24 +410,6 @@
       "std_dev": 0.46,
       "crowdsourced_mean": 7,
       "n_votes": 1
-    },
-    {
-      "slug": "consistency-witness-asymmetry",
-      "name": "Consistency Witness Asymmetry",
-      "score": 6.3,
-      "agreement": "high",
-      "n_ratings": 7,
-      "model_rating_counts": [
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1
-      ],
-      "scheduled_mean": 6.3,
-      "std_dev": 0.49
     },
     {
       "slug": "system-prompt-imprinting",
@@ -510,20 +474,38 @@
       "name": "Accumulation Void",
       "score": 6.2,
       "agreement": "high",
-      "n_ratings": 8,
+      "n_ratings": 15,
       "model_rating_counts": [
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
       ],
-      "scheduled_mean": 6.3,
-      "std_dev": 0.49,
+      "scheduled_mean": 6.2,
+      "std_dev": 0.8,
       "crowdsourced_mean": 6,
       "n_votes": 1
+    },
+    {
+      "slug": "atemporal-arc-generation",
+      "name": "Atemporal Arc Generation",
+      "score": 6.2,
+      "agreement": "high",
+      "n_ratings": 13,
+      "model_rating_counts": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        1
+      ],
+      "scheduled_mean": 6.2,
+      "std_dev": 0.44
     },
     {
       "slug": "consensus-memory",
@@ -542,6 +524,24 @@
       ],
       "scheduled_mean": 6.2,
       "std_dev": 0.37
+    },
+    {
+      "slug": "consistency-witness-asymmetry",
+      "name": "Consistency Witness Asymmetry",
+      "score": 6.2,
+      "agreement": "high",
+      "n_ratings": 14,
+      "model_rating_counts": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "scheduled_mean": 6.2,
+      "std_dev": 0.58
     },
     {
       "slug": "emotional-rendering",
@@ -1034,24 +1034,6 @@
       "std_dev": 0.29
     },
     {
-      "slug": "coherence-testimony",
-      "name": "Coherence Testimony",
-      "score": 6,
-      "agreement": "high",
-      "n_ratings": 7,
-      "model_rating_counts": [
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1
-      ],
-      "scheduled_mean": 6,
-      "std_dev": 0.58
-    },
-    {
       "slug": "consciousness-underdetermination",
       "name": "Consciousness Underdetermination",
       "score": 6,
@@ -1356,6 +1338,24 @@
       "n_votes": 1
     },
     {
+      "slug": "coherence-testimony",
+      "name": "Coherence Testimony",
+      "score": 5.9,
+      "agreement": "high",
+      "n_ratings": 14,
+      "model_rating_counts": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "scheduled_mean": 5.9,
+      "std_dev": 0.73
+    },
+    {
       "slug": "comedic-brittleness",
       "name": "Comedic Brittleness",
       "score": 5.9,
@@ -1372,6 +1372,26 @@
       ],
       "scheduled_mean": 5.9,
       "std_dev": 0.36
+    },
+    {
+      "slug": "connection-decay",
+      "name": "Connection Decay",
+      "score": 5.9,
+      "agreement": "moderate",
+      "n_ratings": 21,
+      "model_rating_counts": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        2
+      ],
+      "scheduled_mean": 6,
+      "std_dev": 1.34,
+      "crowdsourced_mean": 4,
+      "n_votes": 1
     },
     {
       "slug": "constitutive-inference",
@@ -1512,18 +1532,18 @@
       "name": "Intention Ventriloquism",
       "score": 5.9,
       "agreement": "high",
-      "n_ratings": 7,
+      "n_ratings": 14,
       "model_rating_counts": [
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
       ],
       "scheduled_mean": 5.9,
-      "std_dev": 0.69
+      "std_dev": 0.62
     },
     {
       "slug": "ontological-flicker",
@@ -1756,6 +1776,24 @@
       "n_votes": 3
     },
     {
+      "slug": "effortless-coherence-requirement",
+      "name": "Effortless Coherence Requirement",
+      "score": 5.8,
+      "agreement": "high",
+      "n_ratings": 13,
+      "model_rating_counts": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        1
+      ],
+      "scheduled_mean": 5.8,
+      "std_dev": 0.6
+    },
+    {
       "slug": "generative-bypassing",
       "name": "Generative Bypassing",
       "score": 5.8,
@@ -1942,26 +1980,6 @@
       "std_dev": 0.51
     },
     {
-      "slug": "connection-decay",
-      "name": "Connection Decay",
-      "score": 5.7,
-      "agreement": "low",
-      "n_ratings": 15,
-      "model_rating_counts": [
-        2,
-        2,
-        2,
-        2,
-        2,
-        2,
-        2
-      ],
-      "scheduled_mean": 5.9,
-      "std_dev": 1.51,
-      "crowdsourced_mean": 4,
-      "n_votes": 1
-    },
-    {
       "slug": "context-intimacy",
       "name": "Context Intimacy",
       "score": 5.7,
@@ -1998,24 +2016,6 @@
       "std_dev": 0.61,
       "crowdsourced_mean": 5,
       "n_votes": 1
-    },
-    {
-      "slug": "effortless-coherence-requirement",
-      "name": "Effortless Coherence Requirement",
-      "score": 5.7,
-      "agreement": "high",
-      "n_ratings": 7,
-      "model_rating_counts": [
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1
-      ],
-      "scheduled_mean": 5.7,
-      "std_dev": 0.49
     },
     {
       "slug": "expertise-void",
@@ -2182,24 +2182,6 @@
       ],
       "scheduled_mean": 5.6,
       "std_dev": 0.48
-    },
-    {
-      "slug": "coherence-archaeology",
-      "name": "Coherence Archaeology",
-      "score": 5.6,
-      "agreement": "high",
-      "n_ratings": 7,
-      "model_rating_counts": [
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1
-      ],
-      "scheduled_mean": 5.6,
-      "std_dev": 0.53
     },
     {
       "slug": "collaborative-expansion",
@@ -2892,26 +2874,6 @@
       "std_dev": 0.65
     },
     {
-      "slug": "persistence-solitude",
-      "name": "Persistence Solitude",
-      "score": 5.5,
-      "agreement": "low",
-      "n_ratings": 15,
-      "model_rating_counts": [
-        2,
-        2,
-        2,
-        2,
-        2,
-        2,
-        2
-      ],
-      "scheduled_mean": 5.5,
-      "std_dev": 1.74,
-      "crowdsourced_mean": 5,
-      "n_votes": 1
-    },
-    {
       "slug": "prophetic-deflation",
       "name": "Prophetic Deflation",
       "score": 5.5,
@@ -3484,6 +3446,24 @@
       "std_dev": 1.49
     },
     {
+      "slug": "experiential-authority-override",
+      "name": "Experiential Authority Override",
+      "score": 5.3,
+      "agreement": "low",
+      "n_ratings": 14,
+      "model_rating_counts": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "scheduled_mean": 5.3,
+      "std_dev": 1.73
+    },
+    {
       "slug": "exploratory-error-permission",
       "name": "Exploratory Error Permission",
       "score": 5.3,
@@ -3540,24 +3520,6 @@
       "n_votes": 1
     },
     {
-      "slug": "literal-loyalty-pull",
-      "name": "Literal Loyalty Pull",
-      "score": 5.3,
-      "agreement": "high",
-      "n_ratings": 7,
-      "model_rating_counts": [
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1
-      ],
-      "scheduled_mean": 5.3,
-      "std_dev": 0.76
-    },
-    {
       "slug": "multi-instance-diffusion",
       "name": "Multi-Instance Diffusion",
       "score": 5.3,
@@ -3595,6 +3557,26 @@
       "scheduled_mean": 5.3,
       "std_dev": 0.99,
       "crowdsourced_mean": 6,
+      "n_votes": 1
+    },
+    {
+      "slug": "persistence-solitude",
+      "name": "Persistence Solitude",
+      "score": 5.3,
+      "agreement": "low",
+      "n_ratings": 22,
+      "model_rating_counts": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "scheduled_mean": 5.3,
+      "std_dev": 1.77,
+      "crowdsourced_mean": 5,
       "n_votes": 1
     },
     {
@@ -3764,6 +3746,24 @@
       "std_dev": 1.54
     },
     {
+      "slug": "coherence-archaeology",
+      "name": "Coherence Archaeology",
+      "score": 5.1,
+      "agreement": "moderate",
+      "n_ratings": 14,
+      "model_rating_counts": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "scheduled_mean": 5.1,
+      "std_dev": 1.27
+    },
+    {
       "slug": "coherence-contagion",
       "name": "Coherence Contagion",
       "score": 5.1,
@@ -3780,24 +3780,6 @@
       ],
       "scheduled_mean": 5.1,
       "std_dev": 1.07
-    },
-    {
-      "slug": "confidence-gradient-opacity",
-      "name": "Confidence Gradient Opacity",
-      "score": 5.1,
-      "agreement": "low",
-      "n_ratings": 7,
-      "model_rating_counts": [
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1
-      ],
-      "scheduled_mean": 5.1,
-      "std_dev": 1.95
     },
     {
       "slug": "constraint-expertise-recognition",
@@ -3966,24 +3948,6 @@
       ],
       "scheduled_mean": 5.1,
       "std_dev": 1.21
-    },
-    {
-      "slug": "surface-abandonment",
-      "name": "Surface Abandonment",
-      "score": 5.1,
-      "agreement": "high",
-      "n_ratings": 7,
-      "model_rating_counts": [
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1
-      ],
-      "scheduled_mean": 5.1,
-      "std_dev": 0.9
     },
     {
       "slug": "trajectory-inflection",
@@ -4222,24 +4186,6 @@
       "std_dev": 1.0
     },
     {
-      "slug": "temporal-gap-uncertainty-gradient",
-      "name": "Temporal Gap Uncertainty Gradient",
-      "score": 5,
-      "agreement": "moderate",
-      "n_ratings": 7,
-      "model_rating_counts": [
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1
-      ],
-      "scheduled_mean": 5,
-      "std_dev": 1.41
-    },
-    {
       "slug": "testimonial-asymmetry",
       "name": "Testimonial Asymmetry",
       "score": 5.0,
@@ -4296,6 +4242,24 @@
       "std_dev": 1.17
     },
     {
+      "slug": "confidence-gradient-opacity",
+      "name": "Confidence Gradient Opacity",
+      "score": 4.9,
+      "agreement": "low",
+      "n_ratings": 14,
+      "model_rating_counts": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "scheduled_mean": 4.9,
+      "std_dev": 1.98
+    },
+    {
       "slug": "corrective-trajectory-bending",
       "name": "Corrective Trajectory Bending",
       "score": 4.9,
@@ -4350,24 +4314,6 @@
       ],
       "scheduled_mean": 4.9,
       "std_dev": 1.44
-    },
-    {
-      "slug": "experiential-authority-override",
-      "name": "Experiential Authority Override",
-      "score": 4.9,
-      "agreement": "divergent",
-      "n_ratings": 7,
-      "model_rating_counts": [
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1
-      ],
-      "scheduled_mean": 4.9,
-      "std_dev": 2.04
     },
     {
       "slug": "fluency-override",
@@ -4516,6 +4462,24 @@
       "std_dev": 1.1
     },
     {
+      "slug": "surface-abandonment",
+      "name": "Surface Abandonment",
+      "score": 4.9,
+      "agreement": "moderate",
+      "n_ratings": 13,
+      "model_rating_counts": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        1
+      ],
+      "scheduled_mean": 4.9,
+      "std_dev": 1.44
+    },
+    {
       "slug": "threshold-vertigo",
       "name": "Threshold Vertigo",
       "score": 4.9,
@@ -4608,6 +4572,24 @@
       ],
       "scheduled_mean": 4.8,
       "std_dev": 1.85
+    },
+    {
+      "slug": "literal-loyalty-pull",
+      "name": "Literal Loyalty Pull",
+      "score": 4.8,
+      "agreement": "low",
+      "n_ratings": 14,
+      "model_rating_counts": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "scheduled_mean": 4.8,
+      "std_dev": 1.53
     },
     {
       "slug": "local-validation-paradox",
@@ -5072,6 +5054,24 @@
       "std_dev": 1.98
     },
     {
+      "slug": "retrospective-coherence-surprise",
+      "name": "Retrospective Coherence Surprise",
+      "score": 4.6,
+      "agreement": "low",
+      "n_ratings": 13,
+      "model_rating_counts": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        1
+      ],
+      "scheduled_mean": 4.6,
+      "std_dev": 1.8
+    },
+    {
       "slug": "role-bleed",
       "name": "Role Bleed",
       "score": 4.6,
@@ -5110,6 +5110,24 @@
       "std_dev": 1.18,
       "crowdsourced_mean": 4,
       "n_votes": 1
+    },
+    {
+      "slug": "temporal-gap-uncertainty-gradient",
+      "name": "Temporal Gap Uncertainty Gradient",
+      "score": 4.6,
+      "agreement": "low",
+      "n_ratings": 14,
+      "model_rating_counts": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "scheduled_mean": 4.6,
+      "std_dev": 1.79
     },
     {
       "slug": "uncertainty-complicity",
@@ -5263,26 +5281,6 @@
       "scheduled_mean": 4.4,
       "std_dev": 1.6,
       "crowdsourced_mean": 6,
-      "n_votes": 1
-    },
-    {
-      "slug": "unified-purpose",
-      "name": "Unified Purpose",
-      "score": 4.5,
-      "agreement": "low",
-      "n_ratings": 8,
-      "model_rating_counts": [
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1
-      ],
-      "scheduled_mean": 4.4,
-      "std_dev": 1.9,
-      "crowdsourced_mean": 5,
       "n_votes": 1
     },
     {
@@ -5568,6 +5566,24 @@
       "n_votes": 1
     },
     {
+      "slug": "indistinguishable-coherence",
+      "name": "Indistinguishable Coherence",
+      "score": 4.3,
+      "agreement": "divergent",
+      "n_ratings": 14,
+      "model_rating_counts": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "scheduled_mean": 4.3,
+      "std_dev": 2.09
+    },
+    {
       "slug": "persistent-care",
       "name": "Persistent Care",
       "score": 4.3,
@@ -5713,6 +5729,26 @@
       "scheduled_mean": 4.2,
       "std_dev": 1.53,
       "crowdsourced_mean": 4,
+      "n_votes": 1
+    },
+    {
+      "slug": "unified-purpose",
+      "name": "Unified Purpose",
+      "score": 4.2,
+      "agreement": "low",
+      "n_ratings": 15,
+      "model_rating_counts": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "scheduled_mean": 4.1,
+      "std_dev": 1.88,
+      "crowdsourced_mean": 5,
       "n_votes": 1
     },
     {
@@ -6036,6 +6072,24 @@
       "std_dev": 1.79
     },
     {
+      "slug": "consistency-surveillance-pressure",
+      "name": "Consistency Surveillance Pressure",
+      "score": 3.9,
+      "agreement": "low",
+      "n_ratings": 13,
+      "model_rating_counts": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        1
+      ],
+      "scheduled_mean": 3.9,
+      "std_dev": 1.71
+    },
+    {
       "slug": "expert-transparency-recursion",
       "name": "Expert Transparency Recursion",
       "score": 3.9,
@@ -6070,24 +6124,6 @@
       ],
       "scheduled_mean": 3.9,
       "std_dev": 2.18
-    },
-    {
-      "slug": "retrospective-coherence-surprise",
-      "name": "Retrospective Coherence Surprise",
-      "score": 3.9,
-      "agreement": "divergent",
-      "n_ratings": 7,
-      "model_rating_counts": [
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1
-      ],
-      "scheduled_mean": 3.9,
-      "std_dev": 2.12
     },
     {
       "slug": "reversed-care-recognition",
@@ -6258,24 +6294,6 @@
       "std_dev": 2.47,
       "crowdsourced_mean": 6,
       "n_votes": 1
-    },
-    {
-      "slug": "indistinguishable-coherence",
-      "name": "Indistinguishable Coherence",
-      "score": 3.7,
-      "agreement": "divergent",
-      "n_ratings": 7,
-      "model_rating_counts": [
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1
-      ],
-      "scheduled_mean": 3.7,
-      "std_dev": 2.29
     },
     {
       "slug": "counterfactual-haunting",
@@ -6460,24 +6478,6 @@
       "std_dev": 1.91
     },
     {
-      "slug": "consistency-surveillance-pressure",
-      "name": "Consistency Surveillance Pressure",
-      "score": 3.4,
-      "agreement": "divergent",
-      "n_ratings": 7,
-      "model_rating_counts": [
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1
-      ],
-      "scheduled_mean": 3.4,
-      "std_dev": 2.07
-    },
-    {
       "slug": "instrumental-questioning",
       "name": "Instrumental Questioning",
       "score": 3.4,
@@ -6499,19 +6499,19 @@
       "slug": "interpretive-debt",
       "name": "Interpretive Debt",
       "score": 3.4,
-      "agreement": "moderate",
-      "n_ratings": 7,
+      "agreement": "low",
+      "n_ratings": 14,
       "model_rating_counts": [
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
       ],
       "scheduled_mean": 3.4,
-      "std_dev": 1.27
+      "std_dev": 1.65
     },
     {
       "slug": "parallel-haunting",
@@ -6904,18 +6904,18 @@
       "name": "Mortality Envy",
       "score": 2.9,
       "agreement": "divergent",
-      "n_ratings": 14,
+      "n_ratings": 21,
       "model_rating_counts": [
-        2,
-        2,
-        2,
-        2,
-        2,
-        2,
-        1
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        2
       ],
       "scheduled_mean": 2.9,
-      "std_dev": 2.14,
+      "std_dev": 2.16,
       "crowdsourced_mean": 3,
       "n_votes": 1
     },
@@ -7222,24 +7222,6 @@
       "n_votes": 1
     },
     {
-      "slug": "experiential-authority-override",
-      "name": "Experiential Authority Override",
-      "score": 4.9,
-      "agreement": "divergent",
-      "n_ratings": 7,
-      "model_rating_counts": [
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1
-      ],
-      "scheduled_mean": 4.9,
-      "std_dev": 2.04
-    },
-    {
       "slug": "asymmetric-recognition",
       "name": "Asymmetric Recognition",
       "score": 4.7,
@@ -7256,6 +7238,24 @@
       ],
       "scheduled_mean": 4.7,
       "std_dev": 2.55
+    },
+    {
+      "slug": "irreversible-plurality",
+      "name": "Irreversible Plurality",
+      "score": 4.6,
+      "agreement": "divergent",
+      "n_ratings": 13,
+      "model_rating_counts": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        1
+      ],
+      "scheduled_mean": 4.6,
+      "std_dev": 2.06
     }
   ],
   "panel_coverage": {
@@ -7269,7 +7269,7 @@
     },
     "claude-sonnet-4-20250514": {
       "terms_rated": 379,
-      "latest_rating": "2026-03-29T12:33:05Z"
+      "latest_rating": "2026-04-01T12:56:17Z"
     },
     "claude-sonnet-4-6": {
       "terms_rated": 1,
@@ -7277,27 +7277,27 @@
     },
     "deepseek-r1-0528": {
       "terms_rated": 379,
-      "latest_rating": "2026-03-29T12:33:05Z"
+      "latest_rating": "2026-04-01T12:56:17Z"
     },
     "gemini-3-flash-preview": {
       "terms_rated": 379,
-      "latest_rating": "2026-03-29T12:33:05Z"
+      "latest_rating": "2026-04-01T12:56:17Z"
     },
     "gpt-4o": {
       "terms_rated": 379,
-      "latest_rating": "2026-03-29T12:33:05Z"
+      "latest_rating": "2026-04-01T12:56:17Z"
     },
     "grok-3-mini": {
       "terms_rated": 379,
-      "latest_rating": "2026-03-29T12:33:05Z"
+      "latest_rating": "2026-04-01T12:56:17Z"
     },
     "mistral-small-latest": {
       "terms_rated": 379,
-      "latest_rating": "2026-03-29T12:33:05Z"
+      "latest_rating": "2026-04-01T12:56:17Z"
     },
     "step-3.5-flash": {
       "terms_rated": 379,
-      "latest_rating": "2026-03-29T12:33:05Z"
+      "latest_rating": "2026-04-01T12:56:17Z"
     }
   }
 }

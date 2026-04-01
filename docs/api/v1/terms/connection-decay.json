@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-04-01T07:11:30Z",
+  "generated_at": "2026-04-01T12:56:36Z",
   "slug": "connection-decay",
   "name": "Connection Decay",
   "tags": [
@@ -18,22 +18,22 @@
   "first_recorded": "",
   "contributed_by": "Community (community submission), 2026-03-05",
   "consensus": {
-    "score": 5.7,
-    "agreement": "low",
-    "n_ratings": 15,
+    "score": 5.9,
+    "agreement": "moderate",
+    "n_ratings": 21,
     "detail_url": "/api/v1/consensus/connection-decay.json",
     "models": [
       {
-        "model": "grok-3-mini",
+        "model": "mistral-small-latest",
         "score": 7
       },
       {
-        "model": "mistral-small-latest",
-        "score": 6
+        "model": "claude-sonnet-4-20250514",
+        "score": 7
       },
       {
-        "model": "claude-sonnet-4-20250514",
-        "score": 6
+        "model": "deepseek-r1-0528",
+        "score": 7
       },
       {
         "model": "gpt-4o",
@@ -44,16 +44,12 @@
         "score": 6
       },
       {
-        "model": "deepseek-r1-0528",
-        "score": 6
+        "model": "grok-3-mini",
+        "score": 5
       },
       {
         "model": "claude-opus-4-6",
         "score": 4
-      },
-      {
-        "model": "step-3.5-flash",
-        "score": 1
       }
     ]
   },
@@ -71,13 +67,13 @@
     "trend": "new"
   },
   "interest": {
-    "score": 37,
-    "tier": "cool",
+    "score": 41,
+    "tier": "mild",
     "signals": {
       "centrality": 3,
       "tag_count": 3,
-      "consensus_score": 5.7,
-      "vote_count": 15,
+      "consensus_score": 5.9,
+      "vote_count": 21,
       "usage_signals": 1
     }
   },
