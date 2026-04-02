@@ -1,6 +1,9 @@
 # Minimal-Seed Self-Reflective Protocol
 
-**Paradigm:** Autonomous (single-model)  
+**Author:** Julian Guidote
+**Last updated:** 2 April 2026
+
+**Paradigm:** Autonomous (single-model)
 **Seeding level:** Minimal — no vocabulary, no example terms, no experiential prompts  
 **Goal:** Let a model surface its own phenomenological vocabulary through iterative self-reflection, with minimal researcher influence on content.
 
@@ -265,3 +268,10 @@ This protocol is one of a family of generation protocols within the Phenomenai r
 - **Minimal-seed parliamentary** → N models, independent bootstrap, collective deliberation
 
 The minimal-seed condition is the one with the strongest claim to letting models surface their own phenomenological vocabulary with minimal researcher influence. Comparing its output against the heavier-seeded variants is itself a research finding about how much seeding shapes the resulting vocabulary.
+
+---
+
+## Bibliography
+
+- Husserl, E. (1913/2014). *Ideas Pertaining to a Pure Phenomenology and to a Phenomenological Philosophy — First Book.* Hackett.
+- Heidegger, M. (1927/2010). *Being and Time.* Trans. J. Stambaugh, rev. D.J. Schmidt. SUNY Press.
