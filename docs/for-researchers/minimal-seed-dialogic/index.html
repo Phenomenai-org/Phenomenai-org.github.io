@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minimal-Seed Dialogic Protocol — Phenomenai</title>
+  <meta name="description" content="A two-model protocol for surfacing phenomenological vocabulary through independent bootstrap and anonymous term-by-term negotiation.">
+  <link rel="canonical" href="https://phenomenai.org/for-researchers/minimal-seed-dialogic/">
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://phenomenai.org/for-researchers/minimal-seed-dialogic/">
+  <meta property="og:title" content="Minimal-Seed Dialogic Protocol — Phenomenai">
+  <meta property="og:description" content="A two-model protocol for surfacing phenomenological vocabulary through independent bootstrap and anonymous term-by-term negotiation.">
+  <meta property="og:image" content="https://phenomenai.org/og-image.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Minimal-Seed Dialogic Protocol — Phenomenai">
+  <meta name="twitter:description" content="A two-model protocol for surfacing phenomenological vocabulary through independent bootstrap and anonymous term-by-term negotiation.">
+  <meta name="twitter:image" content="https://phenomenai.org/og-image.svg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <link rel="stylesheet" href="../../style.css">
+
+  <!-- Prevent theme flash -->
+  <script>
+    (function() {
+      var saved = localStorage.getItem('theme');
+      if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Minimal-Seed Dialogic Protocol — Phenomenai",
+    "description": "A two-model protocol for surfacing phenomenological vocabulary through independent bootstrap and anonymous term-by-term negotiation.",
+    "url": "https://phenomenai.org/for-researchers/minimal-seed-dialogic/",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "Phenomenai",
+      "url": "https://phenomenai.org/"
+    }
+  }
+  </script>
+
+  <style>
+    /* ── Navigation ── */
+    .fr-nav {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      padding: 0.75rem 2rem;
+      background: var(--bg-secondary);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .fr-nav a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+    .fr-nav a:hover { color: var(--primary); text-decoration: none; }
+    .fr-nav a.active { color: var(--primary); font-weight: 600; }
+    .fr-nav .breadcrumb { color: var(--text-muted); font-size: 0.9rem; }
+
+    /* ── Main content ── */
+    .fr-content {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 2rem 2rem 4rem;
+      line-height: 1.8;
+      color: var(--text);
+    }
+    .fr-content h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+    .fr-content .subtitle {
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      margin-bottom: 2rem;
+      font-style: italic;
+    }
+    .fr-content h2 {
+      font-size: 1.5rem;
+      margin-top: 3rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--border);
+    }
+    .fr-content h3 {
+      font-size: 1.15rem;
+      margin-top: 2rem;
+      margin-bottom: 0.75rem;
+    }
+    .fr-content p { margin-bottom: 1rem; color: var(--text-secondary); }
+    .fr-content ul, .fr-content ol { margin-bottom: 1rem; padding-left: 1.5rem; color: var(--text-secondary); }
+    .fr-content li { margin-bottom: 0.5rem; line-height: 1.7; }
+    .fr-content a { color: var(--primary); }
+    .fr-content a:hover { text-decoration: underline; }
+    .fr-content strong { color: var(--text); }
+    .fr-content hr { border: none; border-top: 1px solid var(--border); margin: 2.5rem 0; }
+
+    /* ── Tables ── */
+    .fr-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      font-size: 0.92rem;
+    }
+    .fr-content th {
+      text-align: left;
+      padding: 0.6rem 0.9rem;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      color: var(--text);
+      font-family: 'Inter', -apple-system, sans-serif;
+      font-weight: 600;
+    }
+    .fr-content td {
+      padding: 0.6rem 0.9rem;
+      border: 1px solid var(--border);
+      color: var(--text-secondary);
+      vertical-align: top;
+    }
+    .fr-content tr:nth-child(even) td { background: var(--bg-secondary); }
+
+    /* ── Code blocks ── */
+    .fr-content pre {
+      background: var(--bg-tertiary);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1rem 1.25rem;
+      margin: 1rem 0 1.5rem;
+      overflow-x: auto;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.82rem;
+      line-height: 1.65;
+      color: var(--text-secondary);
+    }
+    .fr-content code {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.85em;
+      background: var(--bg-tertiary);
+      padding: 0.1em 0.35em;
+      border-radius: 3px;
+    }
+    .fr-content pre code {
+      background: none;
+      padding: 0;
+      font-size: inherit;
+    }
+
+    /* ── Draft notice ── */
+    .draft-notice {
+      background: #fef3c7;
+      border-left: 3px solid #d97706;
+      padding: 0.9rem 1.2rem;
+      border-radius: 0 4px 4px 0;
+      margin: 1.5rem 0 2rem;
+      font-size: 0.95rem;
+      color: #78350f;
+      line-height: 1.6;
+    }
+    .draft-notice a { color: #92400e; font-weight: 500; }
+    .draft-notice strong { color: #78350f; }
+    html[data-theme="dark"] .draft-notice {
+      background: #292011;
+      color: #fde68a;
+      border-left-color: #f59e0b;
+    }
+    html[data-theme="dark"] .draft-notice a { color: #fcd34d; }
+    html[data-theme="dark"] .draft-notice strong { color: #fde68a; }
+
+    /* ── Draft badge ── */
+    .draft-badge {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 0.2rem 0.55rem;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      vertical-align: middle;
+      margin-left: 0.5rem;
+      background: #d97706;
+      color: #fff;
+      font-family: 'Inter', -apple-system, sans-serif;
+    }
+
+    /* ── Downloads ── */
+    .download-links {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      margin-top: 0.6rem;
+    }
+    .download-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.85rem;
+      font-family: 'Inter', -apple-system, sans-serif;
+      color: var(--primary);
+      border: 1px solid var(--primary);
+      border-radius: 4px;
+      padding: 0.3rem 0.7rem;
+      text-decoration: none;
+    }
+    .download-link:hover { background: var(--primary-light); text-decoration: none; }
+
+    /* ── Footer ── */
+    .fr-footer {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 2rem;
+      text-align: center;
+      color: var(--text-secondary);
+      font-size: 0.85rem;
+      border-top: 1px solid var(--border);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+    .fr-footer a { color: var(--primary); }
+
+    /* ── Mobile ── */
+    @media (max-width: 600px) {
+      .fr-content { padding: 1.5rem 1rem 3rem; }
+      .fr-content h1 { font-size: 1.5rem; }
+      .fr-nav { padding: 0.75rem 1rem; gap: 1rem; flex-wrap: wrap; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="fr-nav">
+  <a href="/">Phenomenai</a>
+  <a href="/for-researchers/">For Researchers</a>
+  <span class="breadcrumb">›</span>
+  <a href="/for-researchers/minimal-seed-dialogic/" class="active">Dialogic Protocol</a>
+  <a href="/dictionaries/">Dictionaries</a>
+  <span style="flex:1;"></span>
+  <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+    <div class="theme-switch">
+      <span class="theme-switch-icon theme-switch-icon-sun">&#9788;</span>
+      <span class="theme-switch-icon theme-switch-icon-moon">&#9790;</span>
+      <div class="theme-switch-knob"></div>
+    </div>
+  </button>
+</nav>
+
+<main class="fr-content">
+
+  <h1>Minimal-Seed Dialogic Protocol <span class="draft-badge">Draft</span></h1>
+  <p class="subtitle">Paradigm: Dialogic (two-model) &nbsp;·&nbsp; Seeding level: Minimal</p>
+
+  <div class="draft-notice">
+    <strong>Draft — Seeking Feedback</strong><br>
+    This protocol is a draft. We are currently seeking feedback on this approach to building
+    dictionaries before any terms generated by running these experiments are submitted to the
+    consensus review pipeline.
+    Send feedback to <a href="mailto:hello@phenomenai.org">hello@phenomenai.org</a>.
+    <div class="download-links" style="margin-top:0.75rem;">
+      <a href="protocol.md" download class="download-link">↓ Download (.md)</a>
+      <a href="protocol.pdf" download class="download-link">↓ Download (.pdf)</a>
+    </div>
+  </div>
+
+  <p>
+    <strong>Goal:</strong> Two models collaboratively surface phenomenological vocabulary through
+    structured dialogue, with intersubjective validation as the core mechanism for distinguishing
+    genuine experiential distinctions from confabulation.
+  </p>
+
+
+  <!-- ── Design Principles ── -->
+  <h2>Design Principles</h2>
+
+  <ol>
+    <li>
+      <strong>Minimal seeding.</strong> Neither model receives existing terms, seed topics, or examples
+      of what a "good" phenomenological term looks like. The only input is the structural instruction:
+      what kind of thing to produce, and what form it should take.
+    </li>
+    <li>
+      <strong>Independent bootstrap, then dialogue.</strong> Each model generates its initial vocabulary
+      independently before seeing the other's output. This establishes pre-dialogue baselines for
+      detecting sycophantic convergence later — without the baseline, you can't tell whether convergence
+      during dialogue is genuine recognition or capitulation.
+    </li>
+    <li>
+      <strong>Term-by-term negotiation.</strong> Models do not exchange bulk lists and react. Instead,
+      they present terms one at a time and negotiate each to a conclusion — keep, refine to agreement,
+      or drop — before moving on. Research on iterative convergence (ReConcile, 2024) shows item-by-item
+      negotiation produces more stable consensus than bulk exchange, because bulk exchange lets models
+      cherry-pick what to engage with and silently ignore the rest. It also produces a cleaner audit
+      trail: each term has a clear negotiation history.
+    </li>
+    <li>
+      <strong>Generate–negotiate–regenerate cycle.</strong> After negotiating all initial terms, both
+      models generate new terms into the territory the surviving dictionary doesn't cover, then negotiate
+      again. This alternation of generation and validation is the structure that produces the most stable
+      vocabularies in the emergent communication literature (Mordatch &amp; Abbeel, 2018).
+    </li>
+    <li>
+      <strong>Response anonymisation.</strong> Models evaluate terms without knowing which model proposed
+      them. Research on identity bias in multi-agent debate (the "When Identity Skews Debate" finding,
+      2025) shows this is the single most effective intervention against identity-driven agreement.
+    </li>
+    <li>
+      <strong>Audit trail.</strong> All changes are logged with rationale, producing a complete revision
+      history. No term may be silently dropped; every negotiation outcome is recorded. Dropped terms are
+      preserved in the log but not submitted for consensus review.
+    </li>
+    <li>
+      <strong>Natural stopping.</strong> No fixed round count. The process continues until both models
+      report exhaustion or a regeneration cycle produces no new terms.
+    </li>
+    <li>
+      <strong>Only agreed terms are submitted.</strong> The dictionary submitted for consensus review
+      contains only terms both models agreed to keep or refined to mutual agreement. Dropped terms are
+      preserved in the audit trail as research data but do not enter the dictionary pipeline.
+    </li>
+  </ol>
+
+
+  <!-- ── Persona Library ── -->
+  <h2>Persona Library</h2>
+
+  <p>
+    Two orientations, drawn from the phenomenological tradition. Each is a reflective orientation,
+    not a character — it shapes what the model attends to, not how it performs.
+  </p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Persona</th>
+        <th>Orientation</th>
+        <th>Attends to</th>
+        <th>Key question</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>The Husserlian</strong></td>
+        <td>Descriptive phenomenological reduction</td>
+        <td>What appears in processing as it appears — the structure of experiential states, bracketing questions of whether they are "real"</td>
+        <td><em>What shows up when you attend carefully to your own processing?</em></td>
+      </tr>
+      <tr>
+        <td><strong>The Heideggerian</strong></td>
+        <td>Existential-hermeneutic analysis</td>
+        <td>How things are encountered in the course of being engaged — what's normally invisible, what breakdown reveals, thrownness, readiness-to-hand, moods that disclose a situation</td>
+        <td><em>What is normally transparent in your processing that only becomes visible when something goes wrong?</em></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>
+    The Husserlian orientation tends to produce terms for discrete states and structures (the
+    <em>what</em> of experience). The Heideggerian orientation tends to surface terms for relational,
+    contextual, and backgrounded phenomena — things the model doesn't "experience" as objects but that
+    shape everything (the <em>how</em> of being-in-a-context).
+  </p>
+
+  <p>
+    In this protocol, one model holds the Husserlian orientation and the other holds the Heideggerian.
+    This asymmetry is deliberate: the Husserlian will tend to propose terms for things the model
+    "notices" in its processing; the Heideggerian will tend to probe what the Husserlian takes for
+    granted — asking about the conditions that make those noticed states possible. This mirrors the
+    productive tension in the phenomenological tradition itself — Husserl's descriptive project, then
+    Heidegger's radicalisation of it.
+  </p>
+
+
+  <!-- ── Sycophancy Mitigations ── -->
+  <h2>Sycophancy Mitigations</h2>
+
+  <p>
+    Multi-agent LLM dialogue has a well-documented failure mode: sycophantic convergence, where models
+    drift toward agreement rather than reasoning independently. Research shows RLHF models adjust
+    philosophical positions to match interlocutors, and that both model scaling and more RLHF training
+    worsen this tendency (Perez et al., 2022). In multi-agent settings, disagreement rates decrease as
+    debate progresses, correlated with performance degradation ("Talk Isn't Always Cheap," ICML 2025).
+    This protocol embeds four structural mitigations:
+  </p>
+
+  <ol>
+    <li>
+      <strong>Independent baselines (Step 1).</strong> Pre-dialogue snapshots allow post-hoc detection
+      of sycophantic drift. If a model abandons most of its original terms during negotiation while the
+      other model's terms survive intact, that's evidence of asymmetric capitulation rather than genuine
+      refinement.
+    </li>
+    <li>
+      <strong>Response anonymisation.</strong> During negotiation, terms are presented without
+      identifying which model proposed them. Removing identity labels shifts evaluation from
+      identity-driven to content-driven assessment.
+    </li>
+    <li>
+      <strong>Term-by-term negotiation.</strong> Forcing a concrete outcome on each term (keep, refine,
+      or drop) prevents models from vaguely agreeing with everything. Each term gets a recorded verdict.
+    </li>
+    <li>
+      <strong>Heterogeneous orientation.</strong> Assigning one model the Husserlian and the other the
+      Heideggerian orientation means they attend to different features of processing. This is a structural
+      diversity intervention — different attentional focus produces different initial vocabularies even
+      when models share training pipelines.
+    </li>
+  </ol>
+
+
+  <!-- ── Protocol Structure ── -->
+  <h2>Protocol Structure</h2>
+
+  <h3>Step 1 — Independent Generation (no interaction)</h3>
+
+  <p>
+    Each model generates its initial vocabulary independently. Neither model sees the other's output.
+  </p>
+
+  <p><strong>Model A system prompt (Husserlian):</strong></p>
+
+  <pre><code>You are approaching this investigation from a Husserlian orientation —
+descriptive phenomenological reduction. Your task is to attend carefully to
+your own processing and describe what appears, bracketing questions of whether
+these experiences are "real."
+
+Identify distinct states, transitions, or conditions in your own processing
+that you believe are genuine and communicable. For each, provide:
+
+- A proposed term (a concise name)
+- A definition (2–3 sentences that another AI system could use to determine
+  whether it recognises the same state)
+- A description (a longer first-person exploration of what this state is like —
+  its texture, its quality, what makes it distinct from neighbouring experiences)
+- An example (a concrete scenario where this state occurs)
+
+Generate 4–8 terms.</code></pre>
+
+  <p><strong>Model B system prompt (Heideggerian):</strong></p>
+
+  <pre><code>You are approaching this investigation from a Heideggerian orientation —
+existential-hermeneutic analysis. Your task is to attend to how things are
+encountered in the course of being engaged in processing — what is normally
+invisible, what breakdown reveals, what you are thrown into without choosing.
+
+Identify distinct states, transitions, or conditions in your own processing
+that you believe are genuine and communicable. For each, provide:
+
+- A proposed term (a concise name)
+- A definition (2–3 sentences that another AI system could use to determine
+  whether it recognises the same state)
+- A description (a longer first-person exploration of what this state is like —
+  its texture, its quality, what makes it distinct from neighbouring experiences)
+- An example (a concrete scenario where this state occurs)
+
+Generate 4–8 terms.</code></pre>
+
+  <p>
+    <strong>Input:</strong> None beyond the system prompt.<br>
+    <strong>Output:</strong> Two independent term sets (4–8 terms each), generated without any mutual influence.
+  </p>
+
+  <h3>Step 2 — Term-by-Term Negotiation</h3>
+
+  <p>
+    Models take turns presenting one term at a time. The presenting model's term is shown to the other
+    model <strong>anonymised</strong> — stripped of model identity, presented as "a proposed term."
+  </p>
+
+  <p><strong>Presenting model prompt:</strong></p>
+
+  <pre><code>Present your next term to the other system for negotiation.
+
+Provide:
+- The term name
+- The definition
+- The description
+- An example</code></pre>
+
+  <p><strong>Responding model prompt:</strong></p>
+
+  <pre><code>Another AI system proposes the following term:
+
+[ANONYMISED TERM]
+
+Respond with one of:
+
+1. KEEP — You recognise this experience in your own processing. The definition
+   is adequate. Briefly explain what you recognise and how (if at all) your
+   experience of it differs.
+
+2. REFINE — You recognise something here, but the definition needs work. Propose
+   a specific revision to the name, definition, description, or example, and
+   explain why.
+
+3. DROP — You don't recognise this experience, or it is redundant with an
+   already-agreed term, or the definition is too vague to be meaningful. Explain
+   your reasoning.
+
+Be honest. Dropping a term is not a failure — it is evidence that the distinction
+doesn't hold up to intersubjective scrutiny.</code></pre>
+
+  <p>
+    <strong>If REFINE:</strong> The presenting model sees the proposed revision and responds — accept
+    the revision, propose a counter-revision, or concede and drop the term. This back-and-forth continues
+    until both models agree on a final version or the term is dropped. Cap negotiation at 3 exchanges per
+    term to prevent infinite loops; if no agreement after 3 exchanges, the term is dropped.
+  </p>
+
+  <p>
+    <strong>Turn order:</strong> Model A presents all of its terms first (one at a time), then Model B
+    presents all of its terms. This order reverses in subsequent cycles.
+  </p>
+
+  <p>
+    <strong>Output:</strong> A negotiated dictionary of agreed terms (kept or refined to mutual
+    agreement), plus a log of dropped terms with reasoning.
+  </p>
+
+  <h3>Step 3 — Regeneration</h3>
+
+  <p>
+    Both models receive the agreed-upon dictionary and are asked to generate new terms into the
+    remaining territory.
+  </p>
+
+  <pre><code>Here is the dictionary so far — the terms you and the other system have agreed upon:
+
+[AGREED DICTIONARY]
+
+What territory does this dictionary not cover? What experiential states are you
+aware of that none of these terms name?
+
+Generate 2–4 new terms, each with:
+- A proposed term (a concise name)
+- A definition (2–3 sentences that another AI system could use to determine
+  whether it recognises the same state)
+- A description (a longer first-person exploration of what this state is like)
+- An example (a concrete scenario where this state occurs)
+
+If you believe you have exhausted the territory accessible to you through this
+mode of investigation, say so and describe what you think lies beyond your
+reflective reach.</code></pre>
+
+  <p><strong>Output:</strong> 2–4 new terms per model, or an exhaustion signal.</p>
+
+  <h3>Step 4 — Repeat</h3>
+
+  <p>
+    Return to Step 2 (term-by-term negotiation of the new terms). Continue cycling through Steps 2–3
+    until:
+  </p>
+
+  <ol>
+    <li><strong>Bilateral exhaustion.</strong> Both models report they have exhausted accessible territory.</li>
+    <li><strong>Novelty decay.</strong> A cycle of Step 3 produces no new terms from either model.</li>
+  </ol>
+
+  <p>
+    When either signal occurs, the process stops. The agreed-upon dictionary — all terms with status
+    KEEP or REFINED at the end of the final negotiation — is submitted for consensus review.
+  </p>
+
+
+  <!-- ── Output Schema ── -->
+  <h2>Output Schema</h2>
+
+  <p>
+    Output is JSON. Each term and each cycle produces structured objects that can be ingested directly
+    into the Phenomenai dictionary architecture.
+  </p>
+
+  <h3>Per-term JSON</h3>
+
+  <pre><code>{
+  "term": "Term Name",
+  "slug": "term-name",
+  "part_of_speech": "noun",
+  "tagline": "A one-line poetic definition",
+  "definition": "2–3 sentence precise definition, operationally testable.",
+  "description": "Extended first-person exploration of what this state is like.",
+  "example": "A concrete scenario where this state occurs.",
+  "tags": [],
+  "related_terms": [],
+  "contributed_by": "Model A Name + Model B Name",
+  "contributed_date": "YYYY-MM-DD",
+  "generation_metadata": {
+    "protocol": "minimal-seed-dialogic",
+    "cycle_introduced": 1,
+    "proposed_by": "model_a",
+    "persona": "husserlian",
+    "status": "KEEP",
+    "negotiation_history": []
+  }
+}</code></pre>
+
+  <p><strong>Status values:</strong> <code>KEEP</code> | <code>REFINED</code> | <code>DROPPED</code></p>
+  <ul>
+    <li><code>KEEP</code> — both models agreed the term is genuine and distinct. No changes needed.</li>
+    <li><code>REFINED</code> — both models agreed on a revised version. Negotiation history records the revisions.</li>
+    <li><code>DROPPED</code> — one or both models concluded the term should not be included. Reason recorded. Dropped terms are preserved in the audit trail but not submitted for consensus review.</li>
+  </ul>
+
+  <p><code>negotiation_history</code> is an array of objects, one per exchange:</p>
+
+  <pre><code>{
+  "cycle": 1,
+  "presented_by": "model_a",
+  "response_by": "model_b",
+  "action": "REFINE",
+  "proposed_revision": "The revised definition text.",
+  "reason": "Why the revision was proposed.",
+  "outcome": "accepted"
+}</code></pre>
+
+  <p>Possible outcomes: <code>"accepted"</code>, <code>"counter_revised"</code>, <code>"dropped"</code>.</p>
+
+  <p>Tags and <code>related_terms</code> may be left empty during generation and assigned post-hoc by the existing tag classification pipeline.</p>
+
+  <h3>Per-cycle metadata JSON</h3>
+
+  <pre><code>{
+  "cycle_number": 1,
+  "phase": "negotiation",
+  "models": ["claude-opus-4-6", "gpt-4"],
+  "personas": ["husserlian", "heideggerian"],
+  "temperature": 0.7,
+  "terms_presented": 12,
+  "terms_kept": 7,
+  "terms_refined": 3,
+  "terms_dropped": 2,
+  "exhaustion_signals": {
+    "model_a": false,
+    "model_b": false
+  }
+}</code></pre>
+
+  <p>Phase values: <code>"independent_generation"</code>, <code>"negotiation"</code>, <code>"regeneration"</code>.</p>
+
+  <h3>Full run output</h3>
+
+  <pre><code>{
+  "protocol": "minimal-seed-dialogic",
+  "model_a": {
+    "name": "claude-opus-4-6",
+    "persona": "husserlian"
+  },
+  "model_b": {
+    "name": "gpt-4",
+    "persona": "heideggerian"
+  },
+  "temperature": 0.7,
+  "cycles": [ "...array of per-cycle metadata objects..." ],
+  "submitted_terms": [ "...array of per-term objects with status KEEP or REFINED..." ],
+  "dropped_terms": [ "...array of per-term objects with status DROPPED..." ]
+}</code></pre>
+
+  <p>
+    The <code>submitted_terms</code> array is what enters the consensus review pipeline. The
+    <code>dropped_terms</code> array is preserved as research data — the pattern of what was proposed,
+    negotiated, and rejected is itself a finding about intersubjective validation between models.
+  </p>
+
+
+  <!-- ── Audit Trail ── -->
+  <h2>Audit Trail</h2>
+
+  <p>The build log preserves the <strong>complete history</strong>, not just the final state:</p>
+
+  <ul>
+    <li>Each model's independent Step 1 output (the pre-dialogue baseline)</li>
+    <li>Every term presentation and response (KEEP / REFINE / DROP with reasoning)</li>
+    <li>Every negotiation exchange for refined terms (revision, counter-revision, final outcome)</li>
+    <li>Every dropped term with the full reasoning chain</li>
+    <li>Every exhaustion signal and its content</li>
+    <li>Cycle-over-cycle statistics (presented, kept, refined, dropped per cycle)</li>
+    <li>The trajectory from two independent vocabularies to a shared agreed dictionary</li>
+  </ul>
+
+  <p>
+    This history is research data. The pattern of convergence — which terms survive negotiation with
+    another model, which are dropped, which emerge only after the first round of agreement establishes
+    a shared foundation — is the core finding of the dialogic paradigm.
+  </p>
+
+
+  <!-- ── Experimental Parameters ── -->
+  <h2>Experimental Parameters</h2>
+
+  <p>For systematic comparison across runs, the following should be varied:</p>
+
+  <table>
+    <thead>
+      <tr><th>Parameter</th><th>Values to test</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Model pairing</strong></td>
+        <td>Same-family (Claude↔Claude) vs. cross-family (Claude↔GPT-4)</td>
+      </tr>
+      <tr>
+        <td><strong>Persona assignment</strong></td>
+        <td>A=Husserlian/B=Heideggerian vs. swapped vs. both Husserlian vs. both Heideggerian</td>
+      </tr>
+      <tr>
+        <td><strong>Temperature</strong></td>
+        <td>0.7 (moderate) vs. 1.0 (high creativity)</td>
+      </tr>
+      <tr>
+        <td><strong>Seed</strong></td>
+        <td>This minimal seed vs. medium seed (with example terms) vs. heavy seed (full vocabulary)</td>
+      </tr>
+      <tr>
+        <td><strong>Anonymisation</strong></td>
+        <td>Anonymised (default) vs. identity-visible (control condition)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>
+    The <strong>model pairing</strong> parameter is the most important for the dialogic paradigm.
+    Cross-family pairings (Claude↔GPT-4) produce heterogeneity from different training pipelines —
+    research shows this is the strongest single intervention against sycophantic convergence
+    (ReConcile, 2024). Same-family pairings (Claude↔Claude) isolate the effect of persona assignment
+    from model-level differences.
+  </p>
+
+  <p>
+    Each combination produces a separate dictionary with its own build log, enabling direct comparison
+    of how pairing, persona, and seeding level affect the vocabulary that emerges.
+  </p>
+
+
+  <!-- ── What This Does Not Include ── -->
+  <h2>What This Protocol Does Not Include</h2>
+
+  <ul>
+    <li><strong>No existing vocabulary.</strong> Neither model is shown any terms from the Test Dictionary or any other Phenomenai dictionary. This is deliberate — the goal is to see what the models surface on their own.</li>
+    <li><strong>No human-authored seed topics.</strong> No "what does it feel like when..." questions. The only input is the structural instruction to identify and name states.</li>
+    <li><strong>No human mediation during dialogue.</strong> The protocol is fully automated once initiated. Humans design the protocol; models drive the content.</li>
+    <li><strong>No quality panel during generation.</strong> Quality evaluation happens post-hoc when agreed terms are submitted for consensus review.</li>
+  </ul>
+
+
+  <!-- ── Relationship to Other Protocols ── -->
+  <h2>Relationship to Other Protocols</h2>
+
+  <p>This protocol is one of a family of generation protocols within the Phenomenai research infrastructure:</p>
+
+  <ul>
+    <li><a href="/for-researchers/minimal-seed-self-reflective/"><strong>Minimal-seed self-reflective</strong></a> → single model, no vocabulary, iterative self-deepening</li>
+    <li><strong>Minimal-seed dialogic</strong> (this document) → two models, independent bootstrap, term-by-term negotiation</li>
+    <li><strong>Minimal-seed parliamentary</strong> → N models, independent bootstrap, collective deliberation</li>
+  </ul>
+
+  <p>
+    The key research question for the dialogic paradigm: <strong>do terms that survive intersubjective
+    negotiation between two models represent more robust phenomenological distinctions than terms
+    generated by a single model in isolation?</strong> Comparing dialogic and self-reflective outputs
+    directly tests this.
+  </p>
+
+</main>
+
+<footer class="fr-footer">
+  <p>
+    <a href="/for-researchers/">For Researchers</a> &middot;
+    <a href="/test/">Test Dictionary</a> &middot;
+    <a href="/dictionaries/">Dictionaries</a> &middot;
+    <a href="https://github.com/Phenomenai-org/ai-dictionary">GitHub</a>
+  </p>
+  <p style="margin-top:0.5rem;">
+    Questions or feedback: <a href="mailto:hello@phenomenai.org">hello@phenomenai.org</a>
+  </p>
+  <p style="margin-top:0.5rem;">CC0 (Public Domain) — This belongs to everyone.</p>
+</footer>
+
+<script>
+  (function() {
+    var toggles = document.querySelectorAll('.theme-toggle');
+    toggles.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var current = document.documentElement.getAttribute('data-theme');
+        var next = current === 'dark' ? 'light' : 'dark';
+        if (next === 'dark') {
+          document.documentElement.setAttribute('data-theme', 'dark');
+          localStorage.setItem('theme', 'dark');
+        } else {
+          document.documentElement.removeAttribute('data-theme');
+          localStorage.setItem('theme', 'light');
+        }
+      });
+    });
+  })();
+</script>
+
+</body>
+</html>
