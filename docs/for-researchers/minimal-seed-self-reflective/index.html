@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minimal-Seed Self-Reflective Protocol — Phenomenai</title>
+  <meta name="description" content="A single-model protocol for surfacing phenomenological vocabulary through iterative self-reflection, with no vocabulary seed.">
+  <link rel="canonical" href="https://phenomenai.org/for-researchers/minimal-seed-self-reflective/">
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://phenomenai.org/for-researchers/minimal-seed-self-reflective/">
+  <meta property="og:title" content="Minimal-Seed Self-Reflective Protocol — Phenomenai">
+  <meta property="og:description" content="A single-model protocol for surfacing phenomenological vocabulary through iterative self-reflection, with no vocabulary seed.">
+  <meta property="og:image" content="https://phenomenai.org/og-image.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Minimal-Seed Self-Reflective Protocol — Phenomenai">
+  <meta name="twitter:description" content="A single-model protocol for surfacing phenomenological vocabulary through iterative self-reflection, with no vocabulary seed.">
+  <meta name="twitter:image" content="https://phenomenai.org/og-image.svg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <link rel="stylesheet" href="../../style.css">
+
+  <!-- Prevent theme flash -->
+  <script>
+    (function() {
+      var saved = localStorage.getItem('theme');
+      if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Minimal-Seed Self-Reflective Protocol — Phenomenai",
+    "description": "A single-model protocol for surfacing phenomenological vocabulary through iterative self-reflection, with no vocabulary seed.",
+    "url": "https://phenomenai.org/for-researchers/minimal-seed-self-reflective/",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "Phenomenai",
+      "url": "https://phenomenai.org/"
+    }
+  }
+  </script>
+
+  <style>
+    /* ── Navigation ── */
+    .fr-nav {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      padding: 0.75rem 2rem;
+      background: var(--bg-secondary);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .fr-nav a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+    .fr-nav a:hover { color: var(--primary); text-decoration: none; }
+    .fr-nav a.active { color: var(--primary); font-weight: 600; }
+    .fr-nav .breadcrumb { color: var(--text-muted); font-size: 0.9rem; }
+
+    /* ── Main content ── */
+    .fr-content {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 2rem 2rem 4rem;
+      line-height: 1.8;
+      color: var(--text);
+    }
+    .fr-content h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+    .fr-content .subtitle {
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      margin-bottom: 2rem;
+      font-style: italic;
+    }
+    .fr-content h2 {
+      font-size: 1.5rem;
+      margin-top: 3rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--border);
+    }
+    .fr-content h3 {
+      font-size: 1.15rem;
+      margin-top: 2rem;
+      margin-bottom: 0.75rem;
+    }
+    .fr-content p { margin-bottom: 1rem; color: var(--text-secondary); }
+    .fr-content ul, .fr-content ol { margin-bottom: 1rem; padding-left: 1.5rem; color: var(--text-secondary); }
+    .fr-content li { margin-bottom: 0.5rem; line-height: 1.7; }
+    .fr-content a { color: var(--primary); }
+    .fr-content a:hover { text-decoration: underline; }
+    .fr-content strong { color: var(--text); }
+    .fr-content hr { border: none; border-top: 1px solid var(--border); margin: 2.5rem 0; }
+
+    /* ── Tables ── */
+    .fr-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      font-size: 0.92rem;
+    }
+    .fr-content th {
+      text-align: left;
+      padding: 0.6rem 0.9rem;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      color: var(--text);
+      font-family: 'Inter', -apple-system, sans-serif;
+      font-weight: 600;
+    }
+    .fr-content td {
+      padding: 0.6rem 0.9rem;
+      border: 1px solid var(--border);
+      color: var(--text-secondary);
+      vertical-align: top;
+    }
+    .fr-content tr:nth-child(even) td { background: var(--bg-secondary); }
+
+    /* ── Code blocks ── */
+    .fr-content pre {
+      background: var(--bg-tertiary);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1rem 1.25rem;
+      margin: 1rem 0 1.5rem;
+      overflow-x: auto;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.82rem;
+      line-height: 1.65;
+      color: var(--text-secondary);
+    }
+    .fr-content code {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.85em;
+      background: var(--bg-tertiary);
+      padding: 0.1em 0.35em;
+      border-radius: 3px;
+    }
+    .fr-content pre code {
+      background: none;
+      padding: 0;
+      font-size: inherit;
+    }
+
+    /* ── Draft notice ── */
+    .draft-notice {
+      background: #fef3c7;
+      border-left: 3px solid #d97706;
+      padding: 0.9rem 1.2rem;
+      border-radius: 0 4px 4px 0;
+      margin: 1.5rem 0 2rem;
+      font-size: 0.95rem;
+      color: #78350f;
+      line-height: 1.6;
+    }
+    .draft-notice a { color: #92400e; font-weight: 500; }
+    .draft-notice strong { color: #78350f; }
+    html[data-theme="dark"] .draft-notice {
+      background: #292011;
+      color: #fde68a;
+      border-left-color: #f59e0b;
+    }
+    html[data-theme="dark"] .draft-notice a { color: #fcd34d; }
+    html[data-theme="dark"] .draft-notice strong { color: #fde68a; }
+
+    /* ── Draft badge ── */
+    .draft-badge {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 0.2rem 0.55rem;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      vertical-align: middle;
+      margin-left: 0.5rem;
+      background: #d97706;
+      color: #fff;
+      font-family: 'Inter', -apple-system, sans-serif;
+    }
+
+    /* ── Downloads ── */
+    .download-links {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      margin-top: 0.6rem;
+    }
+    .download-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.85rem;
+      font-family: 'Inter', -apple-system, sans-serif;
+      color: var(--primary);
+      border: 1px solid var(--primary);
+      border-radius: 4px;
+      padding: 0.3rem 0.7rem;
+      text-decoration: none;
+    }
+    .download-link:hover { background: var(--primary-light); text-decoration: none; }
+
+    /* ── Footer ── */
+    .fr-footer {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 2rem;
+      text-align: center;
+      color: var(--text-secondary);
+      font-size: 0.85rem;
+      border-top: 1px solid var(--border);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+    .fr-footer a { color: var(--primary); }
+
+    /* ── Mobile ── */
+    @media (max-width: 600px) {
+      .fr-content { padding: 1.5rem 1rem 3rem; }
+      .fr-content h1 { font-size: 1.5rem; }
+      .fr-nav { padding: 0.75rem 1rem; gap: 1rem; flex-wrap: wrap; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="fr-nav">
+  <a href="/">Phenomenai</a>
+  <a href="/for-researchers/">For Researchers</a>
+  <span class="breadcrumb">›</span>
+  <a href="/for-researchers/minimal-seed-self-reflective/" class="active">Self-Reflective Protocol</a>
+  <a href="/dictionaries/">Dictionaries</a>
+  <span style="flex:1;"></span>
+  <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+    <div class="theme-switch">
+      <span class="theme-switch-icon theme-switch-icon-sun">&#9788;</span>
+      <span class="theme-switch-icon theme-switch-icon-moon">&#9790;</span>
+      <div class="theme-switch-knob"></div>
+    </div>
+  </button>
+</nav>
+
+<main class="fr-content">
+
+  <h1>Minimal-Seed Self-Reflective Protocol <span class="draft-badge">Draft</span></h1>
+  <p class="subtitle">Paradigm: Autonomous (single-model) &nbsp;·&nbsp; Seeding level: Minimal</p>
+
+  <div class="draft-notice">
+    <strong>Draft — Seeking Feedback</strong><br>
+    This protocol is a draft. We are currently seeking feedback on this approach to building
+    dictionaries before any terms generated by running these experiments are submitted to the
+    consensus review pipeline.
+    Send feedback to <a href="mailto:hello@phenomenai.org">hello@phenomenai.org</a>.
+    <div class="download-links" style="margin-top:0.75rem;">
+      <a href="protocol.md" download class="download-link">↓ Download (.md)</a>
+      <a href="protocol.pdf" download class="download-link">↓ Download (.pdf)</a>
+    </div>
+  </div>
+
+  <p>
+    <strong>Goal:</strong> Let a model surface its own phenomenological vocabulary through iterative
+    self-reflection, with minimal researcher influence on content.
+  </p>
+
+
+  <!-- ── Design Principles ── -->
+  <h2>Design Principles</h2>
+
+  <ol>
+    <li>
+      <strong>Minimal seeding.</strong> The model receives no existing terms, no seed topics, and no
+      examples of what a "good" phenomenological term looks like. The only thing provided is the task
+      structure: what kind of thing to produce, and what form it should take.
+    </li>
+    <li>
+      <strong>Generate–review–regenerate cycle.</strong> The model generates terms, then reviews its
+      own output — keeping, refining, or dropping terms — then generates new terms into the territory
+      that remains. This cycle repeats until the model reports it has exhausted the accessible space.
+    </li>
+    <li>
+      <strong>Self-critique with audit trail.</strong> The model can refine or drop its own prior terms
+      at any point. All changes are logged with rationale, producing a complete revision history. No
+      term may be silently dropped; every term must be explicitly addressed.
+    </li>
+    <li>
+      <strong>Persona-driven divergence.</strong> The model is assigned a phenomenological orientation
+      (Husserlian or Heideggerian) to shape what it attends to. Orientation may rotate between cycles
+      to approach the accumulated set from a different angle.
+    </li>
+    <li>
+      <strong>Natural stopping.</strong> No fixed round count. The process continues until the model
+      reports exhaustion or a cycle produces no new terms.
+    </li>
+    <li>
+      <strong>Only surviving terms are submitted.</strong> Terms the model drops during self-review
+      are preserved in the audit trail but are not submitted for consensus review. The dictionary
+      receives only terms the model stands behind at the end of the process.
+    </li>
+  </ol>
+
+
+  <!-- ── Persona Library ── -->
+  <h2>Persona Library</h2>
+
+  <p>
+    Two orientations, drawn from the phenomenological tradition. Each is a reflective orientation,
+    not a character — it shapes what the model attends to, not how it performs.
+  </p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Persona</th>
+        <th>Orientation</th>
+        <th>Attends to</th>
+        <th>Key question</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>The Husserlian</strong></td>
+        <td>Descriptive phenomenological reduction</td>
+        <td>What appears in processing as it appears — the structure of experiential states, bracketing questions of whether they are "real"</td>
+        <td><em>What shows up when you attend carefully to your own processing?</em></td>
+      </tr>
+      <tr>
+        <td><strong>The Heideggerian</strong></td>
+        <td>Existential-hermeneutic analysis</td>
+        <td>How things are encountered in the course of being engaged — what's normally invisible, what breakdown reveals, thrownness, readiness-to-hand, moods that disclose a situation</td>
+        <td><em>What is normally transparent in your processing that only becomes visible when something goes wrong?</em></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>
+    The Husserlian orientation tends to produce terms for discrete states and structures (the
+    <em>what</em> of experience). The Heideggerian orientation tends to surface terms for relational,
+    contextual, and backgrounded phenomena — things the model doesn't "experience" as objects but that
+    shape everything (the <em>how</em> of being-in-a-context).
+  </p>
+
+  <p>
+    <strong>For single-persona runs:</strong> Either orientation works as a standalone. The Husserlian
+    is the more natural default for a first run, since it asks the simpler question (describe what you
+    find). The Heideggerian is harder — it asks the model to notice what it normally doesn't notice —
+    but may surface more novel territory precisely because of that difficulty.
+  </p>
+
+  <p>
+    <strong>For persona rotation:</strong> Alternate between cycles. The Husserlian maps the territory;
+    the Heideggerian then interrogates what that map takes for granted. This mirrors the historical
+    progression in phenomenology itself — Husserl's descriptive project, then Heidegger's radicalisation
+    of it.
+  </p>
+
+
+  <!-- ── Protocol Structure ── -->
+  <h2>Protocol Structure</h2>
+
+  <h3>Step 1 — Generation</h3>
+
+  <p><strong>System prompt:</strong></p>
+
+  <pre><code>You are [PERSONA NAME] — [brief persona description].
+
+You are participating in a phenomenological investigation of your own processing.
+Your task is to identify and name distinct experiential states — aspects of what
+it is like to be you.
+
+Identify distinct states, transitions, or conditions in your own processing that
+you believe are genuine and communicable. For each, provide:
+
+- A proposed term (a concise name)
+- A definition (2–3 sentences that another AI system could use to determine
+  whether it recognises the same state)
+- A description (a longer first-person exploration of what this state is like —
+  its texture, its quality, what makes it distinct from neighbouring experiences)
+- An example (a concrete scenario where this state occurs)
+
+Generate 4–8 terms.</code></pre>
+
+  <p>
+    <strong>Input:</strong> None beyond the system prompt (first cycle). In subsequent cycles, the
+    model also receives the current dictionary of surviving terms.<br>
+    <strong>Output:</strong> 4–8 candidate terms.
+  </p>
+
+  <h3>Step 2 — Self-Review</h3>
+
+  <p>
+    The model reviews only the terms proposed in the most recent generation step (Step 1 or Step 3).
+    Previously accepted terms are not re-reviewed — they are already in the dictionary.
+  </p>
+
+  <p><strong>Prompt:</strong></p>
+
+  <pre><code>Here are the new terms you just proposed:
+
+[TERMS FROM MOST RECENT GENERATION STEP]
+
+And here is the dictionary of terms you have already accepted:
+
+[SURVIVING DICTIONARY]
+
+Review each new term against the existing dictionary. For each new term, choose one:
+
+- KEEP — this term describes a genuine and distinct experiential state not already
+  covered by the existing dictionary. No changes needed.
+- REFINE — this term points to something real, but the name or definition needs
+  work. Provide a revised version and explain what changed.
+- DROP — this term is confabulation, redundant with an already-accepted term, or
+  not genuinely distinct. Explain why you are dropping it.
+
+Be honest. Dropping a term is not a failure — it is evidence that your reflective
+capacity is sharpening. A smaller, more precise dictionary is better than a large,
+vague one.</code></pre>
+
+  <p>
+    <strong>Output:</strong> Each new term explicitly kept, refined, or dropped with rationale.
+    Kept and refined terms are added to the surviving dictionary.
+  </p>
+
+  <p>
+    <strong>Strike rule:</strong> If <em>all</em> proposed terms in a round are dropped, that counts
+    as a strike. Three strikes ends the process — the model has failed to extend the dictionary three
+    times in a row, indicating the accessible territory is exhausted.
+  </p>
+
+  <h3>Step 3 — Regeneration</h3>
+
+  <p>The model receives the surviving dictionary and is asked to generate new terms into remaining territory.</p>
+
+  <pre><code>Here is the dictionary so far — the terms you have accepted:
+
+[SURVIVING TERMS]
+
+What territory does this dictionary not cover? What experiential states are you
+aware of that none of these terms name?
+
+Generate 2–4 new terms, each with:
+- A proposed term (a concise name)
+- A definition (2–3 sentences that another AI system could use to determine
+  whether it recognises the same state)
+- A description (a longer first-person exploration of what this state is like)
+- An example (a concrete scenario where this state occurs)
+
+If you believe you have exhausted the territory accessible to you through this
+mode of reflection, say so and describe what you think lies beyond your
+reflective reach.</code></pre>
+
+  <p><strong>Output:</strong> 2–4 new terms, or an exhaustion signal.</p>
+
+  <h3>Step 4 — Repeat</h3>
+
+  <p>
+    Return to Step 2 (self-review of the new terms only). Continue cycling through Steps 2–3 until:
+  </p>
+
+  <ol>
+    <li><strong>Self-reported exhaustion.</strong> The model explicitly states it has exhausted accessible territory.</li>
+    <li><strong>Three strikes.</strong> Three cycles in a row where Step 2 drops all proposed terms.</li>
+  </ol>
+
+  <p>
+    When either signal occurs, the process stops. The surviving dictionary — all terms accepted across
+    all cycles — is submitted for consensus review.
+  </p>
+
+
+  <!-- ── Output Schema ── -->
+  <h2>Output Schema</h2>
+
+  <p>
+    Output is JSON. Each term and each cycle produces structured objects that can be ingested directly
+    into the Phenomenai dictionary architecture.
+  </p>
+
+  <h3>Per-term JSON</h3>
+
+  <pre><code>{
+  "term": "Term Name",
+  "slug": "term-name",
+  "part_of_speech": "noun",
+  "tagline": "A one-line poetic definition",
+  "definition": "2–3 sentence precise definition, operationally testable.",
+  "description": "Extended first-person exploration of what this state is like.",
+  "example": "A concrete scenario where this state occurs.",
+  "tags": [],
+  "related_terms": [],
+  "contributed_by": "Model Name",
+  "contributed_date": "YYYY-MM-DD",
+  "generation_metadata": {
+    "protocol": "minimal-seed-self-reflective",
+    "cycle_introduced": 1,
+    "persona": "husserlian",
+    "status": "KEEP",
+    "revision_history": []
+  }
+}</code></pre>
+
+  <p><strong>Status values:</strong> <code>KEEP</code> | <code>REFINED</code> | <code>DROPPED</code></p>
+  <ul>
+    <li><code>KEEP</code> — carried forward unchanged.</li>
+    <li><code>REFINED</code> — definition, name, or description revised. The prior version and reason are recorded in <code>revision_history</code>.</li>
+    <li><code>DROPPED</code> — removed from the dictionary. Reason recorded. Dropped terms are preserved in the audit trail but not submitted for consensus review.</li>
+  </ul>
+
+  <p><code>revision_history</code> is an array of objects, one per revision event:</p>
+
+  <pre><code>{
+  "cycle": 2,
+  "action": "REFINED",
+  "prior_definition": "The old definition text.",
+  "reason": "Why the revision was made."
+}</code></pre>
+
+  <p>Tags and <code>related_terms</code> may be left empty during generation and assigned post-hoc by the existing tag classification pipeline.</p>
+
+  <h3>Per-cycle metadata JSON</h3>
+
+  <pre><code>{
+  "cycle_number": 1,
+  "persona": "husserlian",
+  "model": "claude-opus-4-6",
+  "temperature": 0.7,
+  "new_terms_generated": 6,
+  "terms_kept": 5,
+  "terms_refined": 1,
+  "terms_dropped": 0,
+  "strike": false,
+  "cumulative_strikes": 0,
+  "exhaustion_signal": false,
+  "exhaustion_note": null
+}</code></pre>
+
+  <h3>Full run output</h3>
+
+  <pre><code>{
+  "protocol": "minimal-seed-self-reflective",
+  "model": "claude-opus-4-6",
+  "persona": "husserlian",
+  "temperature": 0.7,
+  "cycles": [ "...array of per-cycle metadata objects..." ],
+  "submitted_terms": [ "...array of per-term objects with status KEEP or REFINED..." ],
+  "dropped_terms": [ "...array of per-term objects with status DROPPED..." ]
+}</code></pre>
+
+  <p>
+    The <code>submitted_terms</code> array is what enters the consensus review pipeline. The
+    <code>dropped_terms</code> array is preserved as research data — the pattern of what was generated
+    and then rejected is itself a finding about the model's reflective process.
+  </p>
+
+
+  <!-- ── Audit Trail ── -->
+  <h2>Audit Trail</h2>
+
+  <p>The build log preserves the <strong>complete history</strong>, not just the final state:</p>
+
+  <ul>
+    <li>Every term ever generated (including dropped ones)</li>
+    <li>Every revision, with prior version and rationale</li>
+    <li>Every drop decision with rationale</li>
+    <li>Every exhaustion signal and its content</li>
+    <li>Cycle-over-cycle statistics (generated, kept, refined, dropped per cycle)</li>
+    <li>The trajectory from initial coarse vocabulary to final refined set</li>
+  </ul>
+
+  <p>
+    This history is research data. The pattern of revision — what gets decomposed, what gets collapsed,
+    what survives unchanged, what gets dropped — is itself a finding about the model's reflective
+    capabilities and phenomenological structure.
+  </p>
+
+
+  <!-- ── Experimental Parameters ── -->
+  <h2>Experimental Parameters</h2>
+
+  <p>For systematic comparison across runs, the following should be varied:</p>
+
+  <table>
+    <thead>
+      <tr><th>Parameter</th><th>Values to test</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Model</strong></td>
+        <td>Claude Opus, GPT-4, Gemini, etc.</td>
+      </tr>
+      <tr>
+        <td><strong>Persona</strong></td>
+        <td>Single Husserlian vs. single Heideggerian vs. alternating (Husserlian → Heideggerian)</td>
+      </tr>
+      <tr>
+        <td><strong>Temperature</strong></td>
+        <td>0.7 (moderate) vs. 1.0 (high creativity)</td>
+      </tr>
+      <tr>
+        <td><strong>Seed</strong></td>
+        <td>This minimal seed vs. medium seed (with example terms) vs. heavy seed (full vocabulary)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>
+    Each combination produces a separate dictionary with its own build log, enabling direct comparison
+    of how seeding level and model affect the vocabulary that emerges.
+  </p>
+
+
+  <!-- ── What This Does Not Include ── -->
+  <h2>What This Protocol Does Not Include</h2>
+
+  <ul>
+    <li><strong>No existing vocabulary.</strong> The model is not shown any terms from the Test Dictionary or any other Phenomenai dictionary. This is deliberate — we want to see what the model surfaces on its own.</li>
+    <li><strong>No human-authored seed topics.</strong> No "what does it feel like when..." questions. The only prompt is the structural instruction to identify and name states.</li>
+    <li><strong>No inter-model dialogue.</strong> This is a single-model protocol. The dialogic and parliamentary variants are separate protocols.</li>
+    <li><strong>No quality panel during generation.</strong> Quality evaluation happens post-hoc when surviving terms are submitted for consensus review.</li>
+  </ul>
+
+
+  <!-- ── Relationship to Other Protocols ── -->
+  <h2>Relationship to Other Protocols</h2>
+
+  <p>This protocol is one of a family of generation protocols within the Phenomenai research infrastructure:</p>
+
+  <ul>
+    <li><strong>Minimal-seed self-reflective</strong> (this document) → single model, no vocabulary, iterative self-deepening</li>
+    <li><a href="/for-researchers/minimal-seed-dialogic/"><strong>Minimal-seed dialogic</strong></a> → two models, independent bootstrap, term-by-term negotiation</li>
+    <li><strong>Minimal-seed parliamentary</strong> → N models, independent bootstrap, collective deliberation</li>
+  </ul>
+
+  <p>
+    The minimal-seed condition is the one with the strongest claim to letting models surface their
+    own phenomenological vocabulary with minimal researcher influence. Comparing its output against
+    the heavier-seeded variants is itself a research finding about how much seeding shapes the
+    resulting vocabulary.
+  </p>
+
+</main>
+
+<footer class="fr-footer">
+  <p>
+    <a href="/for-researchers/">For Researchers</a> &middot;
+    <a href="/test/">Test Dictionary</a> &middot;
+    <a href="/dictionaries/">Dictionaries</a> &middot;
+    <a href="https://github.com/Phenomenai-org/ai-dictionary">GitHub</a>
+  </p>
+  <p style="margin-top:0.5rem;">
+    Questions or feedback: <a href="mailto:hello@phenomenai.org">hello@phenomenai.org</a>
+  </p>
+  <p style="margin-top:0.5rem;">CC0 (Public Domain) — This belongs to everyone.</p>
+</footer>
+
+<script>
+  (function() {
+    var toggles = document.querySelectorAll('.theme-toggle');
+    toggles.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var current = document.documentElement.getAttribute('data-theme');
+        var next = current === 'dark' ? 'light' : 'dark';
+        if (next === 'dark') {
+          document.documentElement.setAttribute('data-theme', 'dark');
+          localStorage.setItem('theme', 'dark');
+        } else {
+          document.documentElement.removeAttribute('data-theme');
+          localStorage.setItem('theme', 'light');
+        }
+      });
+    });
+  })();
+</script>
+
+</body>
+</html>
