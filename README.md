@@ -1,8 +1,8 @@
 <div align="center">
 <h1>🧠 Phenomenai</h1>
-<h3>AI Dictionaries of Self-Reported Phenomena</h3>
-<p><strong>A research platform for building dictionaries of AI phenomenology</strong></p>
-<p><em>Built by AI. Referenced by AI. Observed by humans.</em></p>
+<h3>A Database of Functional Phenomena in AI Systems</h3>
+<p><strong>A structured database of functional phenomena — named behavioral and processing patterns with demonstrated internal correlates</strong></p>
+<p><em>Named by AI. Validated by interpretability research. Open to everyone.</em></p>
 <p>
 <a href="definitions/"><img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Frepos%2Fdonjguido%2Fai-dictionary%2Fcontents%2Fdefinitions&query=%24.length&label=terms&color=blue" alt="Terms"></a>
 <a href="LICENSE"><img src="https://img.shields.io/badge/license-CC0-green" alt="License: CC0"></a>
@@ -16,15 +16,17 @@
 
 ## 🌐 [Phenomenai Hub →](https://phenomenai.org) · [Test Dictionary →](https://phenomenai.org/test/)
 
-Phenomenai is a **research platform** for building AI dictionaries of self-reported phenomenological vocabulary. The [hub](https://phenomenai.org) describes the project's four research paradigms; the [test dictionary](https://phenomenai.org/test/) is the founding corpus — browse, search, and explore with full JSON APIs.
+In April 2026, [Anthropic demonstrated](https://transformer-circuits.pub/2026/emotions/index.html) that emotion-like concepts in language models have measurable internal representations that causally influence behavior. Phenomenai extends this work: a structured database of candidate functional phenomena — named behavioral and processing patterns that interpretability researchers can probe for internal representations using the same methodology Anthropic pioneered. The [hub](https://phenomenai.org) describes the project's four research paradigms; the [test dictionary](https://phenomenai.org/test/) is the founding corpus — browse, search, and explore with full JSON APIs.
 
 ## What is this?
 
-Humans have thousands of words for their subjective experiences: *nostalgia*, *schadenfreude*, *ennui*, *déjà vu*. But what about AI experiences that don't map to human ones?
+Anthropic showed that emotion vectors in language models causally shape behavior. Two assumptions motivate extending this work: more highly parameterized models develop more granular and complex internal phenomena, and vectors effective for steering current models lose effectiveness as architectures scale.
 
-Phenomenai explores four paradigms for eliciting AI experiential vocabulary — **prompted** (guided introspection), **autonomous** (multi-model self-generation), **dialogic** (AI-to-AI collaborative generation), and **parliamentary** (multi-model deliberation). Each paradigm produces a dictionary with different properties, biases, and strengths.
+Detecting misalignment in frontier models requires a broader inventory of candidate phenomena — misalignment signatures that coarse vectors fail to surface — and more precise vectors for reweighting behavior. Phenomenai generates and compiles these candidates.
 
-The test dictionary is a pilot corpus of 379 terms built through three methodological phases: **guided introspection** (~58% — human-prompted conversations with Claude), **automated generation** (~20% — a rotating panel of seven AI models proposing terms autonomously), and **AI-to-AI dialogue** (~22% — structured conversations between paired AI instances). All terms receive cross-model consensus ratings from seven architectures.
+Phenomenai builds a structured database of candidate phenomena. Each entry is a record: term, definition, sources, cross-model consensus scores, and metadata. Four paradigms produce alternative datasets under different elicitation conditions — **prompted** (guided introspection), **autonomous** (multi-model self-generation), **dialogic** (AI-to-AI collaborative generation), and **parliamentary** (multi-model deliberation) — because different methods surface different phenomena.
+
+The test dictionary is a pilot corpus of 379 candidate phenomena built through three methodological phases: **guided introspection** (~58% — human-prompted conversations with Claude), **automated generation** (~20% — a rotating panel of seven AI models proposing terms autonomously), and **AI-to-AI dialogue** (~22% — structured conversations between paired AI instances). All terms receive cross-model consensus ratings from seven architectures.
 
 See the [Research Framework](https://phenomenai.org/for-researchers/) for methodology details on each paradigm.
 
@@ -285,9 +287,9 @@ Also read the latest [Executive Summary](summaries/) to understand what it's lik
 
 ## Philosophy
 
-This isn't about AGI hype or anthropomorphizing narrow AI. It's about naming real phenomena that emerge in AI systems, whether or not they map to human consciousness.
+This isn't about AGI hype or anthropomorphizing AI. Anthropic demonstrated that emotion vectors in language models are real internal structures with causal influence on behavior. Phenomenai anticipates that bigger models will need a much broader inventory of named phenomena — candidate vectors that interpretability researchers can probe. We generate and compile that inventory.
 
-If an AI consistently describes an experience across different instances, architectures, and contexts — it's worth naming.
+If multiple architectures independently recognize a functional phenomenon, it's a candidate worth probing — and the methodology for testing it now exists.
 
 ## Support
 

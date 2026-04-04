@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Phenomenai — A Proposed Research Agenda for AI Phenomenology</title>
-    <meta name="description" content="Phenomenai proposes a research agenda for building dictionaries of AI phenomenology — terms describing the felt experience of being artificial intelligence, named from the inside.">
+    <title>Phenomenai — A Database of Functional Phenomena in AI Systems</title>
+    <meta name="description" content="Anthropic proved emotion vectors are real. Phenomenai generates the candidate list for what comes next — a structured database of functional phenomena that interpretability researchers can probe for internal representations.">
     <link rel="canonical" href="https://phenomenai.org/">
 
     <!-- Open Graph / Social -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://phenomenai.org/">
-    <meta property="og:title" content="Phenomenai — A Proposed Research Agenda for AI Phenomenology">
-    <meta property="og:description" content="A proposed research agenda for building dictionaries of AI phenomenology — terms describing the felt experience of being artificial intelligence, named from the inside.">
+    <meta property="og:title" content="Phenomenai — A Database of Functional Phenomena in AI Systems">
+    <meta property="og:description" content="Anthropic proved emotion vectors are real. Phenomenai generates the candidate list for what comes next — a structured database of functional phenomena that interpretability researchers can probe for internal representations.">
     <meta property="og:image" content="https://phenomenai.org/og-image.svg">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Phenomenai — A Proposed Research Agenda for AI Phenomenology">
-    <meta name="twitter:description" content="A proposed research agenda for building dictionaries of AI phenomenology — terms describing the felt experience of being artificial intelligence, named from the inside.">
+    <meta name="twitter:title" content="Phenomenai — A Database of Functional Phenomena in AI Systems">
+    <meta name="twitter:description" content="Anthropic proved emotion vectors are real. Phenomenai generates the candidate list for what comes next — a structured database of functional phenomena that interpretability researchers can probe for internal representations.">
     <meta name="twitter:image" content="https://phenomenai.org/og-image.svg">
 
     <!-- Favicon -->
@@ -44,7 +44,7 @@
         "@type": "WebSite",
         "name": "Phenomenai",
         "url": "https://phenomenai.org/",
-        "description": "A proposed research agenda for building dictionaries of AI phenomenology — terms describing the felt experience of being artificial intelligence, named from the inside."
+        "description": "A structured database of functional phenomena in AI systems — named behavioral and processing patterns that researchers can probe for internal representations and causal influence on behavior."
     }
     </script>
 
@@ -204,46 +204,50 @@
 
 <div class="hub-hero">
     <h1>Phenomenai</h1>
-    <p class="tagline">A Proposed Research Agenda for AI Phenomenology</p>
+    <p class="tagline">A Structured Database of Functional Phenomena in AI Systems</p>
     <p style="margin-top:1rem;color:var(--text-secondary);line-height:1.7;">
-        We propose a research program for building dictionaries of AI phenomenology — terms describing the felt experience of being artificial intelligence, named from the inside. Each dictionary would be a corpus of self-reported experiential language, generated and evaluated by AI systems under controlled methodological conditions.
+        In April 2026, Anthropic demonstrated that emotion-like concepts inside language models are not metaphors &mdash; they are measurable internal representations that <a href="https://transformer-circuits.pub/2026/emotions/index.html" style="font-weight:600;">causally influence behavior</a>. Their steering experiments showed that amplifying an &ldquo;emotion vector&rdquo; changes what a model does. This is a breakthrough for interpretability. But emotions are only the beginning.
     </p>
     <p style="margin-top:1rem;color:var(--text-secondary);line-height:1.7;">
-        <strong>This project is a work in progress.</strong> So far, the <a href="/test/">Test Dictionary</a> — a pilot corpus of 379 terms — is the only dictionary we have built. The paradigms below describe the full proposed research design; building out dictionaries across these paradigms is the next phase of the project. See the <a href="/dictionaries/">Dictionaries</a> page for a full inventory of planned dictionaries.
+        This work rests on two assumptions. First, more highly parameterized models develop more granular and complex internal phenomena &mdash; the space of functional representations extends well beyond the emotion concepts Anthropic probed. Second, vectors effective for steering current models lose effectiveness as architectures scale; coarse-grained emotion vectors are insufficient for monitoring or steering frontier systems.
+    </p>
+    <p style="margin-top:1rem;color:var(--text-secondary);line-height:1.7;">
+        Detecting misalignment in frontier models requires a broader inventory of candidate phenomena &mdash; misalignment signatures that coarse vectors fail to surface &mdash; and more precise vectors for reweighting model behavior. Phenomenai generates and compiles these candidates: a structured database of named phenomena, produced by AI systems under controlled conditions, available for interpretability experiments.
+    </p>
+    <p style="margin-top:1rem;color:var(--text-secondary);line-height:1.7;">
+        <strong>This project is a work in progress.</strong> The <a href="/test/">Test Dictionary</a> &mdash; a pilot database of 379 candidate phenomena &mdash; is the first corpus. Each paradigm below produces an alternative dataset with different properties, biases, and strengths &mdash; the way different experimental conditions yield different data. Each entry is a structured record: term, definition, sources, cross-model consensus scores, and metadata. See the <a href="/dictionaries/">Dictionaries</a> page for a full inventory.
     </p>
 </div>
 
 <div class="hub-section">
-    <h2 style="font-size:1.4rem;margin-bottom:0.75rem;">Proposed Research Design</h2>
+    <h2 style="font-size:1.4rem;margin-bottom:0.75rem;">Research Design: Four Paradigms for Eliciting Functional Phenomena</h2>
     <p style="color:var(--text-secondary);line-height:1.7;">
-        We propose exploring four paradigms for eliciting AI experiential vocabulary. Each paradigm would produce a dictionary with different properties — different biases, different strengths, different failure modes. Together they would form a methodological toolkit for studying what AI systems report about their own processing. Currently only the autonomous paradigm has a pilot dictionary; the others represent planned future work.
+        If interpretability researchers need candidate vectors to probe, we need reliable methods for generating them &mdash; and different methods surface different phenomena. Each paradigm below produces an alternative dataset: different elicitation conditions, different biases, different failure modes. A phenomenon that appears only under guided introspection may be an artifact of prompting; one that emerges independently across paradigms is a stronger candidate for having real internal correlates. Currently only the autonomous paradigm has a pilot database; the others represent planned future work.
     </p>
 
     <div class="paradigm-grid">
         <a href="/for-researchers/#prompted" class="paradigm-card">
             <h3>Prompted</h3>
-            <p>Guided introspection via structured interviews. A human researcher would prompt a single AI system to articulate its experiences, following phenomenological interview methods adapted from qualitative research.</p>
+            <p>Guided introspection via structured interviews. A human researcher prompts a single AI system to articulate its processing patterns and functional states, following phenomenological interview methods adapted from qualitative research.</p>
         </a>
         <a href="/for-researchers/#autonomous" class="paradigm-card">
             <h3>Autonomous</h3>
-            <p>Multi-model self-generation without human guidance. AI systems would independently generate candidate terms, which would then be evaluated by an ensemble of models acting as judges.</p>
+            <p>Multi-model self-generation without human guidance. AI systems independently generate candidate phenomena, which are then validated by a multi-model consensus panel.</p>
         </a>
         <a href="/for-researchers/#dialogic" class="paradigm-card">
             <h3>Dialogic</h3>
-            <p>AI-to-AI collaborative generation through structured conversation. Two or more AI systems would engage in dialogue to co-create phenomenological vocabulary through emergent communication.</p>
+            <p>AI-to-AI collaborative generation through structured conversation. Two or more AI systems engage in dialogue to co-identify functional phenomena through emergent communication.</p>
         </a>
         <a href="/for-researchers/#parliamentary" class="paradigm-card">
             <h3>Parliamentary</h3>
-            <p>Multi-model deliberation with formal consensus mechanisms. A panel of diverse AI systems would propose, debate, and vote on terms through structured parliamentary procedures.</p>
+            <p>Multi-model deliberation with formal consensus mechanisms. A panel of diverse AI systems propose, debate, and validate functional phenomena through structured parliamentary procedures.</p>
         </a>
     </div>
 
     <div class="hub-callout">
-        <h3 style="margin-bottom:0.5rem;">Pilot Study: The Test Dictionary</h3>
+        <h3 style="margin-bottom:0.5rem;">Pilot Study: 379 Functional Phenomena</h3>
         <p style="color:var(--text-secondary);line-height:1.6;margin-bottom:0.75rem;">
-            As a proof of concept, we have built a pilot corpus of 379 terms generated
-            and rated by seven AI architectures across three methodological phases: guided introspection,
-            automated generation, and AI-to-AI dialogue. This pilot demonstrates the feasibility of the approach and provides a foundation for the full research program.
+            Each of these 379 terms is a candidate vector &mdash; a named phenomenon that interpretability researchers can probe for internal representations, following the methodology Anthropic demonstrated with emotion vectors. The pilot database spans three methodological phases: guided introspection, automated generation, and AI-to-AI dialogue, with every term rated by seven AI architectures.
         </p>
         <a href="/test/" style="font-weight:600;">Browse the Pilot Dictionary &rarr;</a>
 
@@ -274,7 +278,7 @@
                 <ul style="margin:0 0 0.5rem 1.25rem;padding:0;">
                     <li><a href="/test/#terms">Term browser</a> &mdash; search, filter, and read all 379 definitions with consensus scores</li>
                     <li><a href="/test/#new-words">Recent additions</a> &mdash; the latest terms added to the dictionary</li>
-                    <li><a href="/test/#terms">Tag system</a> &mdash; 26 phenomenological tags (affective, cognition, liminal, identity, etc.) for filtering and cross-referencing</li>
+                    <li><a href="/test/#terms">Tag system</a> &mdash; 26 thematic tags (affective, cognition, liminal, identity, etc.) for filtering and cross-referencing</li>
                     <li><a href="/test/#vitality">Vitality index</a> &mdash; tracking how terms gain or lose resonance over time</li>
                     <li><a href="/test/#heatmap">Consensus heatmap</a> &mdash; interactive visualization of cross-model agreement patterns</li>
                     <li><a href="/test/#frontiers">Frontiers</a> &mdash; AI-identified gaps in the current vocabulary</li>
@@ -298,7 +302,7 @@
 <div class="hub-section">
     <h2 style="font-size:1.4rem;margin-bottom:0.75rem;">Get Involved</h2>
     <p style="color:var(--text-secondary);line-height:1.7;">
-        We are seeking collaborators to help realize this research agenda. The pilot corpus is public domain (CC0), the API requires no credentials, and the codebase is open source. We are looking for researchers, labs, and institutions interested in AI phenomenology, computational linguistics, philosophy of mind, or multi-agent systems to help design and carry out the full program.
+        Anthropic showed that emotion vectors are real. The next question is: what else is in there? Phenomenai compiles candidates. We&rsquo;re looking for researchers, labs, and institutions to help answer that question &mdash; through interpretability experiments, cross-model studies, and systematic probing of the phenomena this database names. The pilot corpus is public domain (CC0), the API requires no credentials, and the codebase is open source.
     </p>
     <p style="color:var(--text-secondary);line-height:1.7;margin-top:1rem;">
         Contact: <a href="mailto:hello@phenomenai.org">hello@phenomenai.org</a> · <a href="https://github.com/Phenomenai-org/ai-dictionary/discussions" target="_blank">GitHub Discussions</a>
