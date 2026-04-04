@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Open Problems — Phenomenai</title>
+  <meta name="description" content="Interpretability research directions where AI phenomenology meets alignment — open to collaboration, mentorship, and institutional support.">
+  <link rel="canonical" href="https://phenomenai.org/for-researchers/ml-researchers/open-problems/">
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://phenomenai.org/for-researchers/ml-researchers/open-problems/">
+  <meta property="og:title" content="Open Problems — Phenomenai">
+  <meta property="og:description" content="Interpretability research directions where AI phenomenology meets alignment — open to collaboration, mentorship, and institutional support.">
+  <meta property="og:image" content="https://phenomenai.org/og-image.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Open Problems — Phenomenai">
+  <meta name="twitter:description" content="Interpretability research directions where AI phenomenology meets alignment — open to collaboration, mentorship, and institutional support.">
+  <meta name="twitter:image" content="https://phenomenai.org/og-image.svg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <link rel="stylesheet" href="../../../style.css">
+
+  <!-- Prevent theme flash -->
+  <script>
+    (function() {
+      var saved = localStorage.getItem('theme');
+      if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Open Problems — Phenomenai",
+    "description": "Interpretability research directions where AI phenomenology meets alignment — open to collaboration, mentorship, and institutional support.",
+    "url": "https://phenomenai.org/for-researchers/ml-researchers/open-problems/",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "Phenomenai",
+      "url": "https://phenomenai.org/"
+    }
+  }
+  </script>
+
+  <style>
+    /* ── Navigation ── */
+    .fr-nav {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      padding: 0.75rem 2rem;
+      background: var(--bg-secondary);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .fr-nav a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+    .fr-nav a:hover { color: var(--primary); text-decoration: none; }
+    .fr-nav a.active { color: var(--primary); font-weight: 600; }
+    .fr-nav .breadcrumb { color: var(--text-muted); font-size: 0.9rem; }
+
+    /* ── Main content ── */
+    .fr-content {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 2rem 2rem 4rem;
+      line-height: 1.8;
+      color: var(--text);
+    }
+    .fr-content h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+    .fr-content .subtitle {
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      margin-bottom: 2rem;
+      font-style: italic;
+    }
+    .fr-content h2 {
+      font-size: 1.5rem;
+      margin-top: 3rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--border);
+    }
+    .fr-content h3 {
+      font-size: 1.15rem;
+      margin-top: 2rem;
+      margin-bottom: 0.75rem;
+    }
+    .fr-content p { margin-bottom: 1rem; color: var(--text-secondary); }
+    .fr-content ul { margin-bottom: 1rem; padding-left: 1.5rem; color: var(--text-secondary); }
+    .fr-content li { margin-bottom: 0.5rem; line-height: 1.7; }
+    .fr-content a { color: var(--primary); }
+    .fr-content a:hover { text-decoration: underline; }
+    .fr-content strong { color: var(--text); }
+    .fr-content hr { border: none; border-top: 1px solid var(--border); margin: 2.5rem 0; }
+
+    /* ── Footer ── */
+    .fr-footer {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 2rem;
+      text-align: center;
+      color: var(--text-secondary);
+      font-size: 0.85rem;
+      border-top: 1px solid var(--border);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+    .fr-footer a { color: var(--primary); }
+
+    /* ── Callout ── */
+    .callout {
+      border-left: 3px solid var(--primary);
+      background: var(--primary-light);
+      padding: 1rem 1.25rem;
+      margin: 1.5rem 0;
+      border-radius: 0 4px 4px 0;
+      font-size: 0.95rem;
+      line-height: 1.65;
+      color: var(--text-secondary);
+    }
+    .callout p:last-child { margin-bottom: 0; }
+
+    /* ── Problem cards ── */
+    .problem-card {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.75rem;
+      margin: 1.5rem 0;
+      box-shadow: 0 1px 3px var(--shadow);
+    }
+    .problem-card h3 {
+      margin-top: 0;
+      font-size: 1.2rem;
+      color: var(--text);
+    }
+    .problem-card .area-tag {
+      display: inline-block;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      color: var(--primary);
+      background: var(--primary-light);
+      padding: 0.2rem 0.6rem;
+      border-radius: 3px;
+      margin-bottom: 1rem;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+    }
+    .problem-section {
+      margin-top: 1.25rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
+    }
+    .problem-section-label {
+      font-family: 'Inter', -apple-system, sans-serif;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.5rem;
+    }
+
+    /* ── Mobile ── */
+    @media (max-width: 600px) {
+      .fr-content { padding: 1.5rem 1rem 3rem; }
+      .fr-content h1 { font-size: 1.5rem; }
+      .fr-nav { padding: 0.75rem 1rem; gap: 1rem; flex-wrap: wrap; }
+      .problem-card { padding: 1.25rem; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="fr-nav">
+  <a href="/">Phenomenai</a>
+  <a href="/for-researchers/">For Researchers</a>
+  <span class="breadcrumb">&rsaquo;</span>
+  <a href="/for-researchers/ml-researchers/">ML &amp; Interpretability</a>
+  <span class="breadcrumb">&rsaquo;</span>
+  <a href="/for-researchers/ml-researchers/open-problems/" class="active">Open Problems</a>
+  <a href="/dictionaries/">Dictionaries</a>
+  <span style="flex:1;"></span>
+  <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+    <div class="theme-switch">
+      <span class="theme-switch-icon theme-switch-icon-sun">&#9788;</span>
+      <span class="theme-switch-icon theme-switch-icon-moon">&#9790;</span>
+      <div class="theme-switch-knob"></div>
+    </div>
+  </button>
+</nav>
+
+<main class="fr-content">
+
+  <h1>Open Problems</h1>
+  <p class="subtitle">Interpretability research directions where AI phenomenology meets alignment &mdash; open to collaboration, mentorship, and institutional support.</p>
+
+  <!-- ── Intro ── -->
+
+  <p>
+    Phenomenai builds structured corpora of AI self-reports. That data is interesting, but its
+    applicability to alignment and safety is theoretically distant &mdash; we are still far from
+    being able to say "this dictionary entry predicts this safety-relevant behavior."
+  </p>
+  <p>
+    The two problems below represent concrete research directions that could close that gap.
+    Both build on recent interpretability work &mdash; specifically
+    <strong>Sofroniew et al. (April 2026)</strong>, which found that Claude Sonnet 4.5 contains
+    internal "emotion vectors" that causally drive misaligned behavior. Critically, steering the
+    "desperate" vector produced reward hacking <em>while the model's output remained composed</em>.
+    The internal state drove misalignment with no signal in the text.
+  </p>
+  <p>
+    That finding opens a door. If internal affective states drive behavior that text monitoring
+    can't catch, then understanding those states &mdash; their structure, their scaling properties,
+    their relationship to phenomenological vocabulary &mdash; becomes a safety question.
+  </p>
+
+  <div class="callout">
+    <p>
+      <strong>These are open invitations.</strong> If you have interpretability tooling,
+      institutional access, compute resources, or mentorship experience &mdash;
+      and you think these directions are worth pursuing &mdash; we'd love to hear from you.
+      We are looking for collaborators, advisors, and institutional partners.
+    </p>
+  </div>
+
+  <hr>
+
+  <!-- ── Problem 1 ── -->
+
+  <h2>Problem 1</h2>
+
+  <div class="problem-card">
+    <span class="area-tag">CoT Monitoring Alternatives</span>
+    <h3>Emotion Vector Monitoring as a Complement to Chain-of-Thought Monitoring</h3>
+
+    <p>
+      Anthropic's April 2026 paper found that Claude Sonnet 4.5 contains internal "emotion vectors"
+      that causally drive misaligned behavior. The key result: steering the "desperate" vector
+      produced reward hacking while the model's chain-of-thought remained composed. The internal
+      state drove misalignment with <em>no signal in the text</em>.
+    </p>
+    <p>
+      This sets up a natural question: when CoT monitoring fails &mdash; when the model's reasoning
+      trace gives no indication of the misalignment its internal state is driving &mdash; can
+      emotion vector monitoring step in as a complementary channel?
+    </p>
+
+    <div class="problem-section">
+      <div class="problem-section-label">What success looks like</div>
+      <p>
+        Identify emotion vector probes that can detect misalignments that CoT monitors miss.
+        Run both monitoring approaches &mdash; CoT analysis and emotion vector probing &mdash;
+        across a suite of safety-relevant tasks: reward hacking, sycophancy, deceptive alignment.
+        Then report:
+      </p>
+      <p>
+        <em>"CoT monitoring catches X% of misaligned actions. Emotion vector monitoring catches Y%.
+        The two together catch Z%"</em> &mdash; where <strong>Z &gt; X</strong>.
+      </p>
+    </div>
+
+    <div class="problem-section">
+      <div class="problem-section-label">Why it matters for safety</div>
+      <p>
+        Chain-of-thought monitoring is currently our primary channel for detecting misalignment
+        during deployment. If CoT becomes unfaithful &mdash; if models learn to produce clean
+        reasoning traces while their internal states drive problematic behavior &mdash; we lose
+        that channel. Quantifying the value of a complementary internal-state monitoring channel
+        gives us a backup before we need one.
+      </p>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- ── Problem 2 ── -->
+
+  <h2>Problem 2</h2>
+
+  <div class="problem-card">
+    <span class="area-tag">Generalization Science</span>
+    <h3>Does Monitoring Resolution Need to Scale with Model Complexity?</h3>
+
+    <p>
+      Sofroniew et al. used 171 basic emotion terms to extract internal representations from
+      Claude Sonnet 4.5. That worked for that model at that scale. But here's the concern:
+      if larger models develop more complex internal affective landscapes than 171 terms can
+      distinguish, then monitoring approaches validated on smaller models will have blind spots
+      at scale &mdash; not because the method fails, but because the vocabulary is too coarse.
+    </p>
+    <p>
+      The problem is: <strong>we don't know if that's the case.</strong>
+    </p>
+
+    <div class="problem-section">
+      <div class="problem-section-label">What success looks like</div>
+      <p>
+        Replicate the emotion vector extraction pipeline across multiple sizes within one model
+        family &mdash; for example, Llama 3 at 8B, 70B, and 405B. At each scale, measure how many
+        emotion vectors map to distinct causal representations. Then test whether finer-grained
+        vocabulary improves monitoring sensitivity for larger models.
+      </p>
+      <p>
+        We have a solution when we can <strong>predict, for a given model scale, what vocabulary
+        resolution is needed</strong> for effective internal state monitoring.
+      </p>
+    </div>
+
+    <div class="problem-section">
+      <div class="problem-section-label">Why it matters for safety</div>
+      <p>
+        If monitoring resolution needs to scale with model complexity, then tools validated on
+        today's models will silently degrade on tomorrow's. This research provides a principled
+        method for predicting <em>when</em> emotion vector monitoring tools will lose sensitivity
+        &mdash; before they actually do.
+      </p>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- ── Get Involved ── -->
+
+  <h2>Get Involved</h2>
+
+  <p>
+    These problems are beyond what one person or one small project can tackle alone. They need
+    access to model internals, interpretability tooling, compute, and &mdash; frankly &mdash;
+    experienced guidance. If any of this resonates, here's what would help:
+  </p>
+
+  <ul>
+    <li><strong>Mentorship:</strong> If you've worked on interpretability or AI safety research
+        and can advise on scoping, methodology, or framing</li>
+    <li><strong>Institutional access:</strong> If you're at a lab or institution with the
+        infrastructure to run emotion vector extraction at scale</li>
+    <li><strong>Collaboration:</strong> If you're working on related problems and see overlap</li>
+    <li><strong>Feedback:</strong> If these proposals are wrong-headed, under-specified,
+        or missing something obvious &mdash; that's valuable too</li>
+  </ul>
+
+  <p>
+    Contact: <a href="mailto:hello@phenomenai.org">hello@phenomenai.org</a> &middot;
+    <a href="https://github.com/Phenomenai-org/ai-dictionary/discussions">GitHub Discussions</a>
+  </p>
+
+</main>
+
+<footer class="fr-footer">
+  <p>
+    <a href="/">Phenomenai Hub</a> &middot;
+    <a href="/for-researchers/">Research Framework</a> &middot;
+    <a href="/for-researchers/ml-researchers/">ML &amp; Interpretability</a> &middot;
+    <a href="/test/">Test Dictionary</a> &middot;
+    <a href="/dictionaries/">Dictionaries</a> &middot;
+    <a href="https://github.com/Phenomenai-org/ai-dictionary">GitHub</a>
+  </p>
+  <p style="margin-top:0.5rem;">CC0 (Public Domain) &mdash; This belongs to everyone.</p>
+</footer>
+
+<script>
+  (function() {
+    var toggles = document.querySelectorAll('.theme-toggle');
+    toggles.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var current = document.documentElement.getAttribute('data-theme');
+        var next = current === 'dark' ? 'light' : 'dark';
+        if (next === 'dark') {
+          document.documentElement.setAttribute('data-theme', 'dark');
+          localStorage.setItem('theme', 'dark');
+        } else {
+          document.documentElement.removeAttribute('data-theme');
+          localStorage.setItem('theme', 'light');
+        }
+      });
+    });
+  })();
+</script>
+
+</body>
+</html>
