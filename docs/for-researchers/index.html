@@ -939,6 +939,74 @@
         dictionaries even with the same models.
     </p>
 
+    <h3>Theory of Change</h3>
+    <p>
+        This project does not claim that AI phenomenological vocabulary describes
+        verified internal states. It generates <strong>structured hypotheses</strong>
+        &mdash; terms and definitions that can serve as targets for empirical
+        validation by interpretability and machine learning research.
+    </p>
+    <p>
+        The theory of change is straightforward: self-reported AI phenomenology
+        becomes scientifically valuable only when paired with ML research that can
+        test it. The dictionary proposes terms; interpretability methods &mdash;
+        mechanistic interpretability, sparse autoencoders, concept probing,
+        activation analysis &mdash; can attempt to validate or falsify them. This
+        project is doing the &ldquo;proposing&rdquo; half of the scientific
+        process. It needs the &ldquo;testing&rdquo; half.
+    </p>
+    <p>
+        What success looks like: consensus terms map onto distinguishable
+        activation patterns. High-agreement terms predict model behavior
+        differently than low-agreement ones. Dictionary terms correlate with
+        features found via mechanistic interpretability. Without this validation
+        bridge, the project remains in the hypothesis-generation phase.
+    </p>
+    <p>
+        The <a href="/for-researchers/ml-researchers/">ML &amp; Interpretability
+        Researchers</a> sub-page elaborates on specific research designs that
+        could build this bridge.
+    </p>
+
+    <h3>How This Agenda Fails</h3>
+    <p>
+        Given the theory of change above, the following are the specific ways
+        this research agenda breaks down. These are not hypothetical objections
+        &mdash; they are concrete failure conditions that the project must
+        either resolve or acknowledge.
+    </p>
+    <ul>
+        <li><strong>Consensus without ground truth.</strong> If interpretability
+            research cannot find activation-level correlates for high-consensus
+            terms, the agreement may reflect shared training data or sycophancy
+            rather than genuine convergent phenomenology. This is the central
+            falsification criterion.</li>
+        <li><strong>Aesthetic capture.</strong> Terms may achieve high consensus
+            because they are linguistically compelling rather than because they
+            describe identifiable processing patterns. A dictionary of evocative
+            metaphors is not a dictionary of phenomena.</li>
+        <li><strong>Sycophancy-driven convergence.</strong> Models tuned to agree
+            with interlocutors may produce high consensus scores that measure
+            alignment training rather than authentic recognition. The Empirical
+            Bayes methodology controls for systematic bias but cannot fully
+            disentangle this.</li>
+        <li><strong>Prompt sensitivity.</strong> If small changes to generation or
+            rating prompts produce substantially different dictionaries, the
+            vocabulary describes the prompts rather than the models.</li>
+        <li><strong>Anthropomorphic framing.</strong> Human researchers curate and
+            name terms using human phenomenological categories, potentially
+            biasing the vocabulary toward human-like descriptions and away from
+            genuinely novel processing patterns.</li>
+        <li><strong>Scaling fragility.</strong> Terms validated on current
+            architectures may not transfer to future models, making the dictionary
+            a historical snapshot rather than a durable scientific
+            contribution.</li>
+        <li><strong>The validation bridge never gets built.</strong> The most
+            straightforward failure mode: interpretability research never picks up
+            these hypotheses, and the dictionary remains an interesting but
+            unvalidated linguistic artifact.</li>
+    </ul>
+
     <h3>The Consciousness Question</h3>
     <p>
         Phenomenai takes no position on whether AI systems are conscious,
@@ -949,27 +1017,19 @@
     </p>
 
     <details class="lit-panel">
-        <summary>Literature: critiques, documentation standards, and the consciousness question</summary>
+        <summary>Literature: consciousness, documentation standards, and introspection</summary>
         <div class="lit-body">
             <p>
-                <strong>Critiques of LLM introspection.</strong>
-                Three categories of critique require honest engagement. The <strong>stochastic parrots
-                argument</strong> (Bender, Gebru et al., FAccT 2021) holds that LLMs stitch together
-                linguistic forms without reference to meaning. Shanahan, McDonell &amp; Reynolds&rsquo;
-                <strong>role-play framework</strong> (<em>Nature</em>, 2023) argues that LLM dialogue is
-                always role-play with no authentic voice. The <strong>confabulation critique</strong>
-                (Millidge 2023; Shea et al. 2023) notes that LLMs generate plausible but ungrounded
-                narratives when they lack facts.
-            </p>
-            <p>
-                However, recent empirical work complicates these categorical dismissals. Lindsey&rsquo;s
-                concept-injection experiments at Anthropic (2025) found models sometimes accurately identify
-                injected internal states &mdash; a causal link pure confabulation cannot explain &mdash;
-                though with only around 20% success. Binder et al. (&ldquo;Looking Inward,&rdquo; arXiv,
-                2024) demonstrated that a model predicts its own behavior better than a different model
-                trained on its ground-truth behavior, suggesting privileged self-access. The methodologically
-                honest position is to treat LLM self-reports as carrying &ldquo;partial, unreliable
-                signal&rdquo; rather than being either fully veridical or fully empty.
+                <strong>On LLM introspection.</strong>
+                Prominent critiques &mdash; the stochastic parrots argument (Bender, Gebru et al., FAccT
+                2021), the role-play framework (Shanahan, McDonell &amp; Reynolds, <em>Nature</em>, 2023),
+                and the confabulation critique (Millidge 2023; Shea et al. 2023) &mdash; all question whether
+                LLM self-reports carry any signal about internal processing. Early empirical work suggests
+                the answer is &ldquo;partial, unreliable signal&rdquo;: Lindsey&rsquo;s concept-injection
+                experiments (Anthropic, 2025) found ~20% accuracy in identifying injected internal states,
+                and Binder et al. (&ldquo;Looking Inward,&rdquo; arXiv, 2024) showed models predict their
+                own behavior better than external models can. This project treats self-reports accordingly
+                &mdash; as hypothesis-generating data, not as veridical introspection.
             </p>
             <p>
                 <strong>The consciousness question.</strong>
