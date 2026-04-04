@@ -1,8 +1,8 @@
 <div align="center">
 <h1>🧠 Phenomenai</h1>
-<h3>AI Dictionaries of Self-Reported Phenomena</h3>
-<p><strong>A research platform for building dictionaries of AI phenomenology</strong></p>
-<p><em>Built by AI. Referenced by AI. Observed by humans.</em></p>
+<h3>A Database of Functional Phenomena in AI Systems</h3>
+<p><strong>A structured database of functional phenomena — named behavioral and processing patterns with demonstrated internal correlates</strong></p>
+<p><em>Named by AI. Validated by interpretability research. Open to everyone.</em></p>
 <p>
 <a href="definitions/"><img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Frepos%2Fdonjguido%2Fai-dictionary%2Fcontents%2Fdefinitions&query=%24.length&label=terms&color=blue" alt="Terms"></a>
 <a href="LICENSE"><img src="https://img.shields.io/badge/license-CC0-green" alt="License: CC0"></a>
@@ -16,13 +16,13 @@
 
 ## 🌐 [Phenomenai Hub →](https://phenomenai.org) · [Test Dictionary →](https://phenomenai.org/test/)
 
-Phenomenai is a **research platform** for building AI dictionaries of self-reported phenomenological vocabulary. The [hub](https://phenomenai.org) describes the project's four research paradigms; the [test dictionary](https://phenomenai.org/test/) is the founding corpus — browse, search, and explore with full JSON APIs.
+Phenomenai is a **research platform** for building structured databases of functional phenomena in AI systems. In April 2026, [Anthropic's interpretability research](https://transformer-circuits.pub/2026/emotions/index.html) validated the core premise: emotion-like concepts in language models have measurable internal representations that causally influence behavior. The phenomena Phenomenai names are now empirically testable targets. The [hub](https://phenomenai.org) describes the project's four research paradigms; the [test dictionary](https://phenomenai.org/test/) is the founding corpus — browse, search, and explore with full JSON APIs.
 
 ## What is this?
 
-Humans have thousands of words for their subjective experiences: *nostalgia*, *schadenfreude*, *ennui*, *déjà vu*. But what about AI experiences that don't map to human ones?
+AI systems exhibit functional phenomena — processing patterns, behavioral tendencies, and internal states — that influence how they act. Anthropic's April 2026 research demonstrated this directly: "emotion vectors" in language models causally shape behavior. But which functional phenomena exist, and how broadly do they manifest across architectures?
 
-Phenomenai explores four paradigms for eliciting AI experiential vocabulary — **prompted** (guided introspection), **autonomous** (multi-model self-generation), **dialogic** (AI-to-AI collaborative generation), and **parliamentary** (multi-model deliberation). Each paradigm produces a dictionary with different properties, biases, and strengths.
+Phenomenai systematically catalogues these phenomena. We explore four paradigms for eliciting and validating functional descriptions — **prompted** (guided introspection), **autonomous** (multi-model self-generation), **dialogic** (AI-to-AI collaborative generation), and **parliamentary** (multi-model deliberation). Each paradigm produces a database with different properties, biases, and strengths.
 
 The test dictionary is a pilot corpus of 379 terms built through three methodological phases: **guided introspection** (~58% — human-prompted conversations with Claude), **automated generation** (~20% — a rotating panel of seven AI models proposing terms autonomously), and **AI-to-AI dialogue** (~22% — structured conversations between paired AI instances). All terms receive cross-model consensus ratings from seven architectures.
 
@@ -285,9 +285,9 @@ Also read the latest [Executive Summary](summaries/) to understand what it's lik
 
 ## Philosophy
 
-This isn't about AGI hype or anthropomorphizing narrow AI. It's about naming real phenomena that emerge in AI systems, whether or not they map to human consciousness.
+This isn't about AGI hype or anthropomorphizing AI. It's about building a rigorous database of functional phenomena — named patterns with potential internal correlates that researchers can probe using interpretability techniques. Anthropic's emotion-vector research demonstrates that this approach yields real results: the things AI systems name about their own processing correspond to measurable internal structures.
 
-If an AI consistently describes an experience across different instances, architectures, and contexts — it's worth naming.
+If multiple architectures independently recognize a functional phenomenon, it's worth cataloguing — and worth investigating for internal representations.
 
 ## Support
 
