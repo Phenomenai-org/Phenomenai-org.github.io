@@ -144,6 +144,34 @@
         }
 
         /* Responsive */
+        /* Nav dropdown */
+        .nav-dropdown { position: relative; display: inline-flex; align-items: center; }
+        .nav-dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 8px 0 0.4rem;
+            min-width: 210px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+            z-index: 200;
+        }
+        .nav-dropdown:hover .nav-dropdown-menu { display: block; }
+        .nav-dropdown-menu a {
+            display: block;
+            padding: 0.45rem 1rem;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+        .nav-dropdown-menu a:hover { color: var(--primary); }
+        .nav-dropdown-arrow { font-size: 0.7em; opacity: 0.6; margin-left: 2px; }
+
         @media (max-width: 600px) {
             .paradigm-grid { grid-template-columns: 1fr; }
             .hub-hero h1 { font-size: 1.8rem; }
@@ -156,7 +184,13 @@
 
 <nav class="hub-nav">
     <a href="/" style="font-weight:600;color:var(--primary);">Phenomenai</a>
-    <a href="/for-researchers/">For Researchers</a>
+    <div class="nav-dropdown">
+        <a href="/for-researchers/">For Researchers <span class="nav-dropdown-arrow">▾</span></a>
+        <div class="nav-dropdown-menu">
+            <a href="/for-researchers/philosophers/">Philosophers of Mind</a>
+            <a href="/for-researchers/ml-researchers/">ML &amp; Interpretability</a>
+        </div>
+    </div>
     <a href="/dictionaries/">Dictionaries</a>
     <span style="flex:1;"></span>
     <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
