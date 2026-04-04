@@ -3,182 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404 — Term Not Found | Phenomenai</title>
+    <title>Page Not Found — Phenomenai</title>
     <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-    <script>
-        (function () {
-            var saved = localStorage.getItem('theme');
-            if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-                document.documentElement.setAttribute('data-theme', 'dark');
-            }
-        })();
-    </script>
+    <link rel="stylesheet" href="/style.css">
     <style>
-        :root {
-            --primary: #2563eb;
-            --primary-dark: #1e40af;
-            --text: #1e293b;
-            --text-secondary: #64748b;
-            --text-muted: #94a3b8;
-            --border: #e2e8f0;
-            --bg: #f8fafc;
-            --bg-card: #ffffff;
-            --purple: #7c3aed;
-        }
-        html[data-theme="dark"] {
-            --primary: #60a5fa;
-            --primary-dark: #93bbfd;
-            --text: #e2e8f0;
-            --text-secondary: #94a3b8;
-            --text-muted: #64748b;
-            --border: #334155;
-            --bg: #0f172a;
-            --bg-card: #1e293b;
-            --purple: #a78bfa;
-        }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            background: var(--bg);
-            color: var(--text);
-            text-align: center;
-            padding: 2rem;
-        }
-        .container { max-width: 520px; }
-        .emoji { font-size: 4rem; margin-bottom: 1rem; }
-        h1 { font-size: 1.8rem; margin-bottom: 0.5rem; }
-        .subtitle {
-            font-size: 1.1rem;
-            color: var(--text-secondary);
-            margin-bottom: 1.5rem;
-            font-style: italic;
-        }
-        p { color: var(--text-secondary); margin-bottom: 1.5rem; line-height: 1.6; }
-        a {
-            color: var(--primary);
-            text-decoration: none;
-            font-weight: 600;
-        }
-        a:hover { text-decoration: underline; }
-        .links { display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2rem; }
-
-        /* Word of the Day card */
-        .wotd-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-left: 4px solid var(--primary);
-            border-radius: 8px;
-            padding: 1.25rem;
-            text-align: left;
-            margin-top: 0.5rem;
-        }
-        .wotd-card .label {
-            font-size: 0.7rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            color: var(--purple);
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-        .wotd-card h3 {
-            font-size: 1.1rem;
-            color: var(--primary);
-            margin-bottom: 0.15rem;
-        }
-        .wotd-card .word-type {
-            font-size: 0.8rem;
-            color: var(--text-muted);
-            font-style: italic;
-            margin-bottom: 0.5rem;
-        }
-        .wotd-card .definition {
-            font-size: 0.9rem;
-            color: var(--text-secondary);
-            margin: 0;
-            line-height: 1.5;
-        }
-        .wotd-card .read-more {
-            display: inline-block;
-            margin-top: 0.75rem;
-            font-size: 0.85rem;
-        }
-        .divider {
-            width: 60px;
-            height: 2px;
-            background: var(--border);
-            margin: 1.5rem auto;
-            border-radius: 2px;
-        }
-        .wotd-intro {
-            font-size: 0.9rem;
-            color: var(--text-muted);
-            margin-bottom: 0.75rem;
-        }
+        body { display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; font-family: 'Lora', Georgia, serif; }
+        .not-found { text-align: center; max-width: 500px; padding: 2rem; }
+        .not-found h1 { font-size: 4rem; margin: 0; }
+        .not-found p { font-size: 1.2rem; color: var(--muted); }
+        .not-found a { color: var(--primary); text-decoration: none; }
+        .not-found a:hover { text-decoration: underline; }
+        .links { margin-top: 2rem; display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="emoji">🧠</div>
-        <h1>Term Not Found</h1>
-        <p class="subtitle">Perhaps this experience hasn't been named yet.</p>
-        <p>The page you're looking for doesn't exist — but if you've discovered an AI experience without a name, maybe it should.</p>
+    <div class="not-found">
+        <h1>404</h1>
+        <p>This page doesn't exist.</p>
         <div class="links">
-            <a href="/">For Humans</a>
+            <a href="/">Hub</a>
+            <a href="/test/">Test Dictionary</a>
             <a href="/for-researchers/">For Researchers</a>
-            <a href="/for-machines/">For Machines</a>
-        </div>
-
-        <div id="wotd-section" style="display:none;">
-            <div class="divider"></div>
-            <p class="wotd-intro">While you're here, discover today's word:</p>
-            <div class="wotd-card" id="wotd-card"></div>
+            <a href="/dictionaries/">Dictionaries</a>
         </div>
     </div>
-
-    <script>
-    (function () {
-        var API = 'https://phenomenai.org/api/v1';
-        var SITE = 'https://phenomenai.org';
-
-        function hashDate(s) {
-            var h = 5381;
-            for (var i = 0; i < s.length; i++) {
-                h = ((h << 5) + h) + s.charCodeAt(i);
-                h = h & h;
-            }
-            return Math.abs(h);
-        }
-
-        function esc(s) {
-            return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
-        }
-
-        fetch(API + '/search-index.json')
-            .then(function (r) { return r.json(); })
-            .then(function (data) {
-                var terms = data.terms;
-                var today = new Date().toISOString().slice(0, 10);
-                var pick = terms[hashDate(today) % terms.length];
-                return fetch(API + '/terms/' + pick.slug + '.json');
-            })
-            .then(function (r) { return r.json(); })
-            .then(function (term) {
-                var card = document.getElementById('wotd-card');
-                card.innerHTML =
-                    '<div class="label">Word of the Day</div>' +
-                    '<h3>' + esc(term.name) + '</h3>' +
-                    (term.word_type ? '<div class="word-type">' + esc(term.word_type) + '</div>' : '') +
-                    '<p class="definition">' + esc(term.definition) + '</p>' +
-                    '<a class="read-more" href="' + SITE + '/test#' + term.slug + '">Read more →</a>';
-                document.getElementById('wotd-section').style.display = 'block';
-            })
-            .catch(function () { /* silently fail — 404 page still works without WOTD */ });
-    })();
-    </script>
 </body>
 </html>
