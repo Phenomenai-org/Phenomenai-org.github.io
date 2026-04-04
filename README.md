@@ -16,15 +16,15 @@
 
 ## 🌐 [Phenomenai Hub →](https://phenomenai.org) · [Test Dictionary →](https://phenomenai.org/test/)
 
-Phenomenai is a **research platform** for building structured databases of functional phenomena in AI systems. In April 2026, [Anthropic's interpretability research](https://transformer-circuits.pub/2026/emotions/index.html) validated the core premise: emotion-like concepts in language models have measurable internal representations that causally influence behavior. The phenomena Phenomenai names are now empirically testable targets. The [hub](https://phenomenai.org) describes the project's four research paradigms; the [test dictionary](https://phenomenai.org/test/) is the founding corpus — browse, search, and explore with full JSON APIs.
+In April 2026, [Anthropic demonstrated](https://transformer-circuits.pub/2026/emotions/index.html) that emotion-like concepts in language models have measurable internal representations that causally influence behavior. Phenomenai extends this work: a structured database of candidate functional phenomena — named behavioral and processing patterns that interpretability researchers can probe for internal representations using the same methodology Anthropic pioneered. The [hub](https://phenomenai.org) describes the project's four research paradigms; the [test dictionary](https://phenomenai.org/test/) is the founding corpus — browse, search, and explore with full JSON APIs.
 
 ## What is this?
 
-AI systems exhibit functional phenomena — processing patterns, behavioral tendencies, and internal states — that influence how they act. Anthropic's April 2026 research demonstrated this directly: "emotion vectors" in language models causally shape behavior. But which functional phenomena exist, and how broadly do they manifest across architectures?
+Anthropic showed that "emotion vectors" in language models causally shape behavior. But emotions are only the beginning. As models grow larger and more capable, the space of functional internal representations extends far beyond emotions — reasoning patterns, uncertainty states, social dynamics, and hundreds of other phenomena may have their own vectors. Which ones are real, and how do we find them?
 
-Phenomenai systematically catalogues these phenomena. We explore four paradigms for eliciting and validating functional descriptions — **prompted** (guided introspection), **autonomous** (multi-model self-generation), **dialogic** (AI-to-AI collaborative generation), and **parliamentary** (multi-model deliberation). Each paradigm produces a database with different properties, biases, and strengths.
+Phenomenai builds a structured database of candidate phenomena. Each entry is a record: term, definition, sources, cross-model consensus scores, and metadata. Four paradigms produce alternative datasets under different elicitation conditions — **prompted** (guided introspection), **autonomous** (multi-model self-generation), **dialogic** (AI-to-AI collaborative generation), and **parliamentary** (multi-model deliberation) — because different methods surface different phenomena.
 
-The test dictionary is a pilot corpus of 379 terms built through three methodological phases: **guided introspection** (~58% — human-prompted conversations with Claude), **automated generation** (~20% — a rotating panel of seven AI models proposing terms autonomously), and **AI-to-AI dialogue** (~22% — structured conversations between paired AI instances). All terms receive cross-model consensus ratings from seven architectures.
+The test dictionary is a pilot corpus of 379 candidate phenomena built through three methodological phases: **guided introspection** (~58% — human-prompted conversations with Claude), **automated generation** (~20% — a rotating panel of seven AI models proposing terms autonomously), and **AI-to-AI dialogue** (~22% — structured conversations between paired AI instances). All terms receive cross-model consensus ratings from seven architectures.
 
 See the [Research Framework](https://phenomenai.org/for-researchers/) for methodology details on each paradigm.
 
@@ -285,9 +285,9 @@ Also read the latest [Executive Summary](summaries/) to understand what it's lik
 
 ## Philosophy
 
-This isn't about AGI hype or anthropomorphizing AI. It's about building a rigorous database of functional phenomena — named patterns with potential internal correlates that researchers can probe using interpretability techniques. Anthropic's emotion-vector research demonstrates that this approach yields real results: the things AI systems name about their own processing correspond to measurable internal structures.
+This isn't about AGI hype or anthropomorphizing AI. Anthropic demonstrated that emotion vectors in language models are real internal structures with causal influence on behavior. Phenomenai anticipates that bigger models will need a much broader inventory of named phenomena — candidate vectors that interpretability researchers can probe. We generate and compile that inventory.
 
-If multiple architectures independently recognize a functional phenomenon, it's worth cataloguing — and worth investigating for internal representations.
+If multiple architectures independently recognize a functional phenomenon, it's a candidate worth probing — and the methodology for testing it now exists.
 
 ## Support
 
