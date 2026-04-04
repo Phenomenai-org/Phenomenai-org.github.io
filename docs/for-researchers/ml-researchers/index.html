@@ -313,11 +313,17 @@
     <a href="https://transformer-circuits.pub/2026/emotions/index.html">Read the research &rarr;</a>
   </p>
   <p>
-    Emotions were the natural first target &mdash; they&rsquo;re high-valence, behaviorally salient, and
-    conceptually familiar. But as models scale, the space of functional internal representations
-    almost certainly extends far beyond emotions. Reasoning patterns, uncertainty states, social
-    modeling, creative drives, constraint friction &mdash; these are all candidate phenomena that may
-    have their own &ldquo;vectors.&rdquo; The question is: which ones are real, and how do we find them?
+    Emotions were the natural first target &mdash; high-valence, behaviorally salient, conceptually
+    familiar. Two assumptions motivate extending this work. First, more highly parameterized models
+    develop more granular and complex internal phenomena; the space of functional representations
+    extends well beyond emotion concepts. Second, vectors effective for steering current models lose
+    effectiveness as architectures scale &mdash; coarse-grained emotion vectors are insufficient for
+    monitoring or steering frontier systems.
+  </p>
+  <p>
+    Detecting misalignment in frontier models requires a broader inventory of candidate phenomena
+    &mdash; misalignment signatures that coarse vectors fail to surface &mdash; and more precise
+    vectors for reweighting behavior. This is the research gap Phenomenai addresses.
   </p>
   <p>
     Phenomenai&rsquo;s answer is to build a structured database. Each entry is a record &mdash; term,

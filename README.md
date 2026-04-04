@@ -20,7 +20,9 @@ In April 2026, [Anthropic demonstrated](https://transformer-circuits.pub/2026/em
 
 ## What is this?
 
-Anthropic showed that "emotion vectors" in language models causally shape behavior. But emotions are only the beginning. As models grow larger and more capable, the space of functional internal representations extends far beyond emotions — reasoning patterns, uncertainty states, social dynamics, and hundreds of other phenomena may have their own vectors. Which ones are real, and how do we find them?
+Anthropic showed that emotion vectors in language models causally shape behavior. Two assumptions motivate extending this work: more highly parameterized models develop more granular and complex internal phenomena, and vectors effective for steering current models lose effectiveness as architectures scale.
+
+Detecting misalignment in frontier models requires a broader inventory of candidate phenomena — misalignment signatures that coarse vectors fail to surface — and more precise vectors for reweighting behavior. Phenomenai generates and compiles these candidates.
 
 Phenomenai builds a structured database of candidate phenomena. Each entry is a record: term, definition, sources, cross-model consensus scores, and metadata. Four paradigms produce alternative datasets under different elicitation conditions — **prompted** (guided introspection), **autonomous** (multi-model self-generation), **dialogic** (AI-to-AI collaborative generation), and **parliamentary** (multi-model deliberation) — because different methods surface different phenomena.
 
