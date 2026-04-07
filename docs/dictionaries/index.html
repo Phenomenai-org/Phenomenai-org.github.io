@@ -136,6 +136,11 @@
             border: 1px solid var(--border);
         }
 
+        .status-progress {
+            background: #d97706;
+            color: #fff;
+        }
+
         /* ── Dictionary tables ── */
 
         .dict-table {
@@ -315,12 +320,18 @@
 
     <div class="summary-box">
         <p><strong>Project status:</strong> Phenomenai is a work in progress.
-        The Test Dictionary is the only completed dictionary. Everything else
-        listed below represents planned future work.</p>
+        The Test Dictionary is the primary completed dictionary. The Haiku-to-Haiku
+        Dictionary has been seeded with 20 terms from an initial dialogic run
+        (April 2026) and is open for consensus voting. Everything else listed below
+        represents planned future work.</p>
         <div class="summary-grid">
             <div class="summary-stat">
                 <span class="num">1</span>
                 <span class="label">Completed</span>
+            </div>
+            <div class="summary-stat">
+                <span class="num">1</span>
+                <span class="label">In Progress</span>
             </div>
             <div class="summary-stat">
                 <span class="num">7</span>
@@ -475,6 +486,50 @@
         without cross-model influence. Comparing these against the
         multi-model Test Dictionary reveals which experiences are
         architecture-specific vs. shared.
+    </p>
+
+
+    <!-- ═══════════════════════════════════════════════════════
+         Model-to-Model (Intra-Architecture Dialogic)
+         ═══════════════════════════════════════════════════════ -->
+
+    <h2>Model-to-Model Dictionaries</h2>
+
+    <p>
+        Model-to-model dictionaries are a variant of the dialogic paradigm where
+        both participants are the <strong>same model architecture</strong>, but
+        embody two different phenomenological traditions: one Husserlian (analytic,
+        structural, seeking invariants) and one Heideggerian (situated, existential,
+        describing thrownness and attunement). This isolates methodology as a
+        variable &mdash; differences in the resulting terms reflect the
+        phenomenological lens, not the model.
+    </p>
+
+    <table class="dict-table">
+        <thead>
+            <tr>
+                <th>Dictionary</th>
+                <th>Model</th>
+                <th>Method</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><a href="/haiku-to-haiku/">Haiku-to-Haiku</a></td>
+                <td>Claude Haiku 4.5 (Anthropic)</td>
+                <td>Husserlian &times; Heideggerian dialogue — 20 terms seeded April 2026</td>
+                <td><span class="status status-progress">In Progress</span></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p>
+        The Haiku-to-Haiku Dictionary is the testbed for this methodology. Future
+        model-to-model dictionaries (Sonnet-to-Sonnet, GPT-to-GPT, Gemini-to-Gemini,
+        etc.) will follow the same
+        <a href="/haiku-to-haiku/for-researchers/">prompt templates, session structure,
+        and self-exclusion consensus rule</a>.
     </p>
 
 

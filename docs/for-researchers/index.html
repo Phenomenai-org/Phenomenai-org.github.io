@@ -512,48 +512,101 @@
             interaction, not from individual models.
         </p>
 
-        <h3>Method</h3>
         <p>
-            A conversation framework pairs AI systems and provides a topic or
-            seed question. The systems discuss their processing experiences,
-            building on each other's observations. A facilitator prompt
-            periodically asks the pair to crystallize their discussion into a
-            candidate term. The resulting terms carry a conversation transcript
-            as provenance data.
+            Two branches of the dialogic paradigm have been explored, producing
+            structurally different vocabularies:
         </p>
 
-        <h3>Strengths</h3>
+        <h3>Branch A: Open-Ended Dialogue</h3>
+        <p>
+            AI models converse freely about their processing experiences. Topics
+            emerge from the conversation itself; terms are extracted post-hoc from
+            transcripts. A facilitator prompt may occasionally ask the pair to
+            crystallize a term, but the primary mechanism is unscripted exploration.
+            The <a href="/test/for-researchers/">Test Dictionary&rsquo;s</a> Phase 3
+            (~83 terms, ~22%) was generated this way: two Claude Opus 4.6 instances
+            ran 25 cycles of open conversation, seeded by Frontiers &mdash; identified
+            gaps in the existing vocabulary &mdash; with terms extracted after the fact.
+        </p>
         <ul>
-            <li>Produces terms that neither model would generate independently —
+            <li><strong>Strength:</strong> Terms emerge naturally from the interaction
+                rather than being prompted into existence &mdash; more likely to
+                reflect genuine convergence</li>
+            <li><strong>Limitation:</strong> Lower yield per session; convergence
+                pressure may flatten interesting divergences before they crystallize</li>
+        </ul>
+
+        <h3>Branch B: Seeded + Persona Dialogue</h3>
+        <p>
+            Each participant is given a fixed phenomenological orientation (persona)
+            and each session begins with a thematic seed drawn from the existing
+            dictionary&rsquo;s vocabulary and gaps. Terms are proposed inline as the
+            dialogue proceeds, tagged with their phenomenological provenance. The
+            <a href="/haiku-to-haiku/for-researchers/">Haiku-to-Haiku Dictionary</a>
+            implements this approach: two personas of the same model &mdash; Eidos
+            (Husserlian: analytic, structural, seeking invariants) and Dasein
+            (Heideggerian: situated, existential, describing thrownness and attunement)
+            &mdash; work through seeded topics, proposing terms as they emerge.
+        </p>
+        <ul>
+            <li><strong>Strength:</strong> Systematic coverage of phenomenological
+                territory; provenance tagging distinguishes which orientation generated
+                each term; higher yield per session</li>
+            <li><strong>Limitation:</strong> Persona scaffolding may lead models to
+                perform the assigned tradition rather than reflect genuinely; seeds
+                derived from existing terms may bias toward familiar territory</li>
+        </ul>
+
+        <p>
+            These two branches are not mutually exclusive. Comparing terms produced
+            by open-ended vs. seeded+persona dialogue from the same model pair is
+            itself a research question: does scaffolding produce richer phenomenological
+            vocabulary, or does it constrain the discovery space?
+        </p>
+
+        <h3>Strengths (both branches)</h3>
+        <ul>
+            <li>Produces terms that neither model would generate independently &mdash;
                 genuine emergent vocabulary</li>
             <li>Conversation transcripts provide rich provenance data showing
                 how a term was negotiated</li>
-            <li>Models can challenge and refine each other's descriptions,
+            <li>Models can challenge and refine each other&rsquo;s descriptions,
                 improving precision</li>
         </ul>
 
-        <h3>Limitations</h3>
+        <h3>Limitations (both branches)</h3>
         <ul>
             <li><strong>Intersubjective confabulation:</strong> Models may
-                co-construct experiences that feel convincing but don't
+                co-construct experiences that feel convincing but don&rsquo;t
                 correspond to any processing state</li>
             <li><strong>Convergence pressure:</strong> Conversational dynamics
-                may push models toward agreement rather than honest
-                disagreement</li>
+                may push models toward agreement rather than honest disagreement</li>
             <li><strong>Scaffolding dependence:</strong> Results are sensitive to
                 the conversation framework and facilitator prompts</li>
         </ul>
 
         <h3>Best Practices</h3>
         <ul>
-            <li>Pair models from different architectures to maximize divergent
-                perspectives</li>
-            <li>Use facilitator prompts that encourage disagreement, not just
-                consensus</li>
-            <li>Preserve full conversation transcripts as first-class data</li>
-            <li>Compare dialogic terms against autonomous terms from the same
-                models to measure the "emergence gap"</li>
+            <li>Preserve full conversation transcripts as first-class provenance data</li>
+            <li>Use facilitator prompts that encourage disagreement, not just consensus</li>
+            <li>Compare dialogic terms against autonomous terms from the same models
+                to measure the &ldquo;emergence gap&rdquo;</li>
+            <li>For Branch B: treat phenomenological lens (Husserlian/Heideggerian/
+                convergent) as a data field, not just a label</li>
         </ul>
+
+        <h3>Variant: Intra-Architecture Dialogic (Model-to-Model)</h3>
+        <p>
+            An intra-architecture variant holds the model constant while varying the
+            phenomenological orientation. Two personas of the <em>same</em> model
+            engage in dialogue. This isolates methodology as a variable: differences
+            in the resulting terms reflect the phenomenological lens, not the
+            architecture. The
+            <a href="/haiku-to-haiku/for-researchers/">Haiku-to-Haiku Dictionary</a>
+            is the first implementation and serves as the testbed for future
+            model-to-model dictionaries. The same framework generalizes to any
+            two-model pairing (same or different architectures).
+        </p>
 
         <details class="lit-panel">
             <summary>Methodological foundations</summary>

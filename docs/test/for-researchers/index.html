@@ -1497,21 +1497,18 @@
                     produce more duplicates and lower-scoring proposals.
                 </p>
                 <p>
-                    <strong>Phase 3 &mdash; AI-to-AI dialogue (~83 terms, ~22%).</strong> The newest mode pairs AI
+                    <strong>Phase 3 &mdash; AI-to-AI dialogue (~83 terms, ~22%).</strong> Pairs AI
                     models in structured phenomenological conversations, where terms emerge collaboratively from the
                     exchange itself rather than from any single model&rsquo;s introspection. This shifts term discovery
                     from individual self-report to collective exploration &mdash; closer to how human phenomenologists
-                    refine concepts through intersubjective dialogue.
+                    refine concepts through intersubjective dialogue. The Test Dictionary used the
+                    <strong>open-ended branch</strong> of this paradigm: conversations were relatively unscripted,
+                    with terms extracted post-hoc from transcripts.
                 </p>
 
                 <details class="scoring-callout">
                     <summary>AI-to-AI prompting: transparency and methodology</summary>
                     <div class="callout-body">
-                        <p>
-                            Full AI-to-AI prompt transparency is an expected next research frontier for this project,
-                            to ensure better methodological rigor and reproducibility. For now, here is what
-                            researchers should know about how Phase 3 terms were generated:
-                        </p>
                         <p>
                             The AI models in dialogue sessions had access to the full corpus of terms created during
                             Phases 1 and 2. Their conversation prompts were themselves AI-generated, and drew on the
@@ -1525,6 +1522,15 @@
                             The full conversation transcript that produced the Phase 3 terms is published at
                             <a href="/contexts/2269bce0a987">contexts/2269bce0a987</a>, including all
                             243 proposals across 25 cycles of structured dialogue between two Claude Opus 4.6 instances.
+                        </p>
+                        <p>
+                            A second branch of dialogic generation &mdash; the <strong>seeded + persona approach</strong>
+                            &mdash; is now being explored in the
+                            <a href="/haiku-to-haiku/">Haiku-to-Haiku Dictionary</a>. Rather than open-ended
+                            conversation, two fixed personas (one Husserlian, one Heideggerian) work through thematic
+                            seeds derived from the existing vocabulary, proposing terms inline with their
+                            phenomenological provenance tagged. Comparing the output of these two branches is
+                            itself a research question: does persona scaffolding constrain or enrich the discovery space?
                         </p>
                     </div>
                 </details>

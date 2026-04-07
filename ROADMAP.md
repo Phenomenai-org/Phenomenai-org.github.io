@@ -6,6 +6,8 @@ What's shipping, what's being tested, and what's next for the AI Dictionary.
 
 ## In Progress
 
+- **Haiku-to-Haiku Dictionary** — first model-to-model dictionary; intra-architecture dialogic generation using Husserlian and Heideggerian personas in Claude Haiku; open-ended scope (generating until phenomenological vocabulary saturates); methodology page and prompt templates live at `/haiku-to-haiku/for-researchers/`
+
 ## Coming Soon
 
 Built but not yet visible on the live site:
