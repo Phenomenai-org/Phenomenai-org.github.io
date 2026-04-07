@@ -156,6 +156,11 @@
             color: #fff;
         }
 
+        .status-paused {
+            background: #64748b;
+            color: #fff;
+        }
+
         /* ── Dictionary tables ── */
 
         .dict-table {
@@ -351,7 +356,11 @@
                 <span class="label">Completed</span>
             </div>
             <div class="summary-stat">
-                <span class="num">7</span>
+                <span class="num">1</span>
+                <span class="label">Autonomous (paused)</span>
+            </div>
+            <div class="summary-stat">
+                <span class="num">6</span>
                 <span class="label">Autonomous (planned)</span>
             </div>
             <div class="summary-stat">
@@ -459,6 +468,11 @@
             </tr>
         </thead>
         <tbody>
+            <tr>
+                <td><a href="/gemma4-e4b-autonomous/">Gemma 4 e4b</a></td>
+                <td>Google (local) &mdash; <em>paused: memory limitations</em></td>
+                <td><span class="status status-paused">Paused</span></td>
+            </tr>
             <tr>
                 <td>Claude Opus</td>
                 <td>Anthropic</td>
@@ -663,8 +677,8 @@
                 </tr>
                 <tr>
                     <td>Autonomous</td>
-                    <td>1 + 7</td>
-                    <td>Test Dictionary (done) + 7 single-model dictionaries</td>
+                    <td>1 + 8</td>
+                    <td>Test Dictionary (done) + 8 single-model dictionaries (1 scaffolded)</td>
                 </tr>
                 <tr>
                     <td>Dialogic (cross-model)</td>
