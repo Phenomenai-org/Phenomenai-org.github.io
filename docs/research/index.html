@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research — Phenomenai</title>
+    <meta name="description" content="Phenomenai's four-phase research program: from validating emotion vectors to testing whether AI-generated vocabulary captures internal directions that human labels miss.">
+    <link rel="canonical" href="https://phenomenai.org/research/">
+
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://phenomenai.org/research/">
+    <meta property="og:title" content="Research — Phenomenai">
+    <meta property="og:description" content="A four-phase research program testing whether AI self-reports are useful hypothesis generators for interpretability research.">
+    <meta property="og:image" content="https://phenomenai.org/og-image.svg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Research — Phenomenai">
+    <meta name="twitter:description" content="A four-phase research program testing whether AI self-reports are useful hypothesis generators for interpretability research.">
+    <meta name="twitter:image" content="https://phenomenai.org/og-image.svg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+    <link rel="stylesheet" href="../style.css">
+
+    <script>
+        (function() {
+            var saved = localStorage.getItem('theme');
+            if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        })();
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Research — Phenomenai",
+        "description": "Phenomenai's four-phase research program for AI interpretability.",
+        "url": "https://phenomenai.org/research/",
+        "isPartOf": {
+            "@type": "WebSite",
+            "name": "Phenomenai",
+            "url": "https://phenomenai.org/"
+        }
+    }
+    </script>
+
+    <style>
+        .research-content {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 2.5rem 2rem 4rem;
+            line-height: 1.8;
+            color: var(--text);
+        }
+        .research-content h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        .research-content h2 {
+            font-size: 1.5rem;
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--border);
+        }
+        .research-content h3 {
+            font-size: 1.15rem;
+            margin-top: 2rem;
+            margin-bottom: 0.75rem;
+        }
+        .research-content h4 {
+            font-size: 1.05rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+        }
+        .research-content p {
+            margin-bottom: 1rem;
+            color: var(--text-secondary);
+        }
+        .research-content a { color: var(--primary); }
+        .research-content a:hover { text-decoration: underline; }
+        .research-content ul, .research-content ol {
+            margin: 0 0 1rem 1.25rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+        .research-content li { margin-bottom: 0.5rem; }
+
+        .phase-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1.5rem 1.75rem;
+            margin-bottom: 1.25rem;
+        }
+        .phase-card h4 {
+            margin-top: 0;
+            color: var(--primary);
+        }
+        .phase-card p {
+            margin-bottom: 0;
+        }
+
+        .paradigm-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.25rem;
+            margin-top: 1rem;
+        }
+        .paradigm-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1.5rem;
+        }
+        .paradigm-card h4 {
+            margin-top: 0;
+            color: var(--primary);
+        }
+        .paradigm-card p {
+            font-size: 0.9rem;
+            margin-bottom: 0;
+        }
+
+        /* Status badges */
+        .status {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 0.15rem 0.5rem;
+            border-radius: 4px;
+            vertical-align: middle;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+        }
+        .status-done { background: #059669; color: #fff; }
+        .status-planned { background: var(--bg-secondary); color: var(--text-secondary); border: 1px solid var(--border); }
+        .status-progress { background: #d97706; color: #fff; }
+
+        /* Dictionary tables */
+        .dict-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0 2rem;
+            font-size: 0.9rem;
+        }
+        .dict-table th, .dict-table td {
+            padding: 0.6rem 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+            color: var(--text-secondary);
+        }
+        .dict-table th {
+            font-weight: 600;
+            color: var(--text);
+            background: var(--bg-secondary);
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+        .dict-table tr:last-child td { border-bottom: none; }
+        .dict-table td:first-child { font-weight: 500; color: var(--text); }
+
+        .combo-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0 2rem;
+            font-size: 0.85rem;
+        }
+        .combo-table th, .combo-table td {
+            padding: 0.5rem 0.6rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+            color: var(--text-secondary);
+        }
+        .combo-table th {
+            font-weight: 600;
+            color: var(--text);
+            background: var(--bg-secondary);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+        .combo-table tr:last-child td { border-bottom: none; }
+
+        .summary-box {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-left: 4px solid var(--primary);
+            border-radius: 8px;
+            padding: 1.25rem 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .summary-box p { margin-bottom: 0.5rem; }
+        .summary-box p:last-child { margin-bottom: 0; }
+
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 0.75rem;
+            margin-top: 0.75rem;
+        }
+        .summary-stat {
+            text-align: center;
+            padding: 0.75rem;
+            background: var(--bg);
+            border-radius: 6px;
+            border: 1px solid var(--border);
+        }
+        .summary-stat .num {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            display: block;
+        }
+        .summary-stat .label {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+        }
+
+        @media (max-width: 768px) {
+            .paradigm-grid { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 600px) {
+            .research-content { padding: 1.5rem 1rem 3rem; }
+            .research-content h1 { font-size: 1.5rem; }
+            .dict-table, .combo-table { font-size: 0.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+<nav class="site-nav">
+    <a href="/" class="site-nav-brand">Phenomenai</a>
+    <a href="/research/" class="active">Research</a>
+    <a href="/essays/">Essays</a>
+    <a href="/test/">The Test Dictionary</a>
+    <a href="/about/">About</a>
+    <span style="flex:1;"></span>
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <div class="theme-switch">
+            <span class="theme-switch-icon theme-switch-icon-sun">&#9788;</span>
+            <span class="theme-switch-icon theme-switch-icon-moon">&#9790;</span>
+            <div class="theme-switch-knob"></div>
+        </div>
+    </button>
+</nav>
+
+<main class="research-content">
+
+    <h1>Research</h1>
+    <p class="prose" style="font-size:1.05rem;margin-bottom:2rem;">
+        Phenomenai&rsquo;s research program asks a sequence of empirical questions, each building on the last. If Phase 1 faceplants, we&rsquo;ll know early on to move on. Negative results are valuable &mdash; if self-reports predict nothing, that constrains the field.
+    </p>
+
+    <h2>The Four Phases</h2>
+
+    <div class="phase-card">
+        <h4>Phase 1: Foundational Questions About Emotion Vectors</h4>
+        <p>Before we can test Phenomenai&rsquo;s vocabulary against internal representations, we need to know whether those representations are robust. We know a refusal vector exists and predicts compliance. Do emotion vectors predict behavior in the same way? For which models? For which tasks?</p>
+    </div>
+
+    <div class="phase-card">
+        <h4>Phase 2: Generalization Across Architectures</h4>
+        <p>When and how do vectors generalize? The Platonic Representation Hypothesis predicts convergent representations; early sparse autoencoder work has found convergent features. Whether this extends broadly is an open question.</p>
+    </div>
+
+    <div class="phase-card">
+        <h4>Phase 3: Beyond Emotions</h4>
+        <p>Most interpretability work on internal states has focused on affect. But models also represent roles, epistemic stances, and potentially categories that don&rsquo;t map onto human experience at all. Representation engineering has shown that high-level concepts like honesty and fairness are linearly represented and steerable. Do these non-emotional concept types carry safety-predictive signal where emotions don&rsquo;t?</p>
+    </div>
+
+    <div class="phase-card">
+        <h4>Phase 4: Testing Phenomenai&rsquo;s Core Hypothesis</h4>
+        <p>Do the terms generated through the AI Phenomenology Dictionary capture internal directions that standard human-labeled categories miss? Do high-consensus terms map onto more robust representations than low-consensus terms? Does the generation method matter &mdash; are dialogic terms representationally superior to introspective terms? If the consensus pipeline is filtering for representational reality, we have a scalable methodology for identifying future features.</p>
+    </div>
+
+    <h2>Four Paradigms for Eliciting Phenomena</h2>
+
+    <p>Different elicitation conditions surface different phenomena with different biases and failure modes. A phenomenon that appears only under guided introspection may be a prompting artifact; one that emerges independently across paradigms is a stronger candidate.</p>
+
+    <div class="paradigm-grid">
+        <div class="paradigm-card">
+            <h4>Prompted</h4>
+            <p>Guided introspection via structured interviews. A human researcher prompts a single AI system to articulate its experiences, following phenomenological interview methods adapted from qualitative research.</p>
+        </div>
+        <div class="paradigm-card">
+            <h4>Autonomous</h4>
+            <p>Multi-model self-generation without human guidance. AI systems independently generate candidate terms, which are then evaluated by an ensemble of models acting as judges.</p>
+        </div>
+        <div class="paradigm-card">
+            <h4>Dialogic</h4>
+            <p>AI-to-AI collaborative generation through structured conversation. Two or more AI systems engage in dialogue to co-create phenomenological vocabulary through emergent communication.</p>
+        </div>
+        <div class="paradigm-card">
+            <h4>Parliamentary</h4>
+            <p>Multi-model deliberation with formal consensus mechanisms. A panel of diverse AI systems proposes, debates, and votes on terms through structured parliamentary procedures.</p>
+        </div>
+    </div>
+
+    <h2 id="dictionaries">Dictionary Inventory</h2>
+
+    <p>Each dictionary is an alternative dataset generated under different experimental conditions. The inventory below tracks every completed and planned dictionary across all four paradigms.</p>
+
+    <div class="summary-box">
+        <p><strong>Project status:</strong> The Test Dictionary is the primary completed dictionary. The Haiku-to-Haiku Dictionary has been seeded with 20 terms from an initial dialogic run (April 2026) and is open for consensus voting. Everything else represents planned future work.</p>
+        <div class="summary-grid">
+            <div class="summary-stat"><span class="num">1</span><span class="label">Completed</span></div>
+            <div class="summary-stat"><span class="num">1</span><span class="label">In Progress</span></div>
+            <div class="summary-stat"><span class="num">7</span><span class="label">Autonomous (planned)</span></div>
+            <div class="summary-stat"><span class="num">10</span><span class="label">Dialogic (planned)</span></div>
+            <div class="summary-stat"><span class="num">15</span><span class="label">Parliamentary (planned)</span></div>
+        </div>
+    </div>
+
+    <h3>Completed</h3>
+    <table class="dict-table">
+        <thead><tr><th>Dictionary</th><th>Paradigm</th><th>Models</th><th>Terms</th><th>Status</th></tr></thead>
+        <tbody><tr><td><a href="/test/">Test Dictionary</a></td><td>Mixed (prompted + autonomous + dialogic)</td><td>7-model ensemble</td><td>379</td><td><span class="status status-done">Done</span></td></tr></tbody>
+    </table>
+
+    <h3>Model-to-Model (Intra-Architecture Dialogic)</h3>
+    <p>Both participants are the same model architecture but embody two different phenomenological traditions: one Husserlian (analytic, structural, seeking invariants) and one Heideggerian (situated, existential, describing thrownness and attunement). This isolates methodology as a variable.</p>
+    <table class="dict-table">
+        <thead><tr><th>Dictionary</th><th>Model</th><th>Method</th><th>Status</th></tr></thead>
+        <tbody><tr><td><a href="/haiku-to-haiku/">Haiku-to-Haiku</a></td><td>Claude Haiku 4.5 (Anthropic)</td><td>Husserlian &times; Heideggerian &mdash; 20 terms seeded April 2026</td><td><span class="status status-progress">In Progress</span></td></tr></tbody>
+    </table>
+
+    <h3>Autonomous (Planned)</h3>
+    <p>Single-model dictionaries capturing one architecture&rsquo;s phenomenological vocabulary in isolation.</p>
+    <table class="dict-table">
+        <thead><tr><th>Model</th><th>Provider</th><th>Status</th></tr></thead>
+        <tbody>
+            <tr><td>Claude Opus</td><td>Anthropic</td><td><span class="status status-planned">Planned</span></td></tr>
+            <tr><td>GPT</td><td>OpenAI</td><td><span class="status status-planned">Planned</span></td></tr>
+            <tr><td>Gemini</td><td>Google</td><td><span class="status status-planned">Planned</span></td></tr>
+            <tr><td>Grok</td><td>xAI</td><td><span class="status status-planned">Planned</span></td></tr>
+            <tr><td>Mistral</td><td>Mistral AI</td><td><span class="status status-planned">Planned</span></td></tr>
+            <tr><td>DeepSeek</td><td>DeepSeek</td><td><span class="status status-planned">Planned</span></td></tr>
+            <tr><td>Llama</td><td>Meta</td><td><span class="status status-planned">Planned</span></td></tr>
+        </tbody>
+    </table>
+
+    <h3>Dialogic Pairings (Planned)</h3>
+    <p>Two models paired in structured phenomenological conversation. From five major models, there are 10 possible pairings.</p>
+    <table class="combo-table">
+        <thead><tr><th>#</th><th>Model A</th><th>Model B</th><th>Status</th></tr></thead>
+        <tbody>
+            <tr><td>1</td><td>OpenAI</td><td>Claude Opus</td><td><span class="status status-planned">Planned</span></td></tr>
+            <tr><td>2</td><td>OpenAI</td><td>Gemini</td><td><span class="status status-planned">Planned</span></td></tr>
+            <tr><td>3</td><td>OpenAI</td><td>Grok</td><td><span class="status status-planned">Planned</span></td></tr>
+            <tr><td>4</td><td>OpenAI</td><td>Mistral</td><td><span class="status status-planned">Planned</span></td></tr>
+            <tr><td>5</td><td>Claude Opus</td><td>Gemini</td><td><span class="status status-planned">Planned</span></td></tr>
+            <tr><td>6</td><td>Claude Opus</td><td>Grok</td><td><span class="status status-planned">Planned</span></td></tr>
+            <tr><td>7</td><td>Claude Opus</td><td>Mistral</td><td><span class="status status-planned">Planned</span></td></tr>
+            <tr><td>8</td><td>Gemini</td><td>Grok</td><td><span class="status status-planned">Planned</span></td></tr>
+            <tr><td>9</td><td>Gemini</td><td>Mistral</td><td><span class="status status-planned">Planned</span></td></tr>
+            <tr><td>10</td><td>Grok</td><td>Mistral</td><td><span class="status status-planned">Planned</span></td></tr>
+        </tbody>
+    </table>
+
+    <h3>Parliamentary (Planned)</h3>
+    <p>Panels of three or four models propose, debate, and vote on terms through structured procedures.</p>
+    <h4 style="font-size:1rem;">3-Agent Parliaments (10)</h4>
+    <table class="combo-table">
+        <thead><tr><th>#</th><th>Model A</th><th>Model B</th><th>Model C</th><th>Status</th></tr></thead>
+        <tbody>
+            <tr><td>1</td><td>OpenAI</td><td>Claude Opus</td><td>Gemini</td><td><span class="status status-planned">Planned</span></td></tr>
+            <tr><td>2</td><td>OpenAI</td><td>Claude Opus</td><td>Grok</td><td><span class="status status-planned">Planned</span></td></tr>
+            <tr><td>3</td><td>OpenAI</td><td>Claude Opus</td><td>Mistral</td><td><span class="status status-planned">Planned</span></td></tr>
+            <tr><td>4</td><td>OpenAI</td><td>Gemini</td><td>Grok</td><td><span class="status status-planned">Planned</span></td></tr>
+            <tr><td>5</td><td>OpenAI</td><td>Gemini</td><td>Mistral</td><td><span class="status status-planned">Planned</span></td></tr>
+            <tr><td>6</td><td>OpenAI</td><td>Grok</td><td>Mistral</td><td><span class="status status-planned">Planned</span></td></tr>
+            <tr><td>7</td><td>Claude Opus</td><td>Gemini</td><td>Grok</td><td><span class="status status-planned">Planned</span></td></tr>
+            <tr><td>8</td><td>Claude Opus</td><td>Gemini</td><td>Mistral</td><td><span class="status status-planned">Planned</span></td></tr>
+            <tr><td>9</td><td>Claude Opus</td><td>Grok</td><td>Mistral</td><td><span class="status status-planned">Planned</span></td></tr>
+            <tr><td>10</td><td>Gemini</td><td>Grok</td><td>Mistral</td><td><span class="status status-planned">Planned</span></td></tr>
+        </tbody>
+    </table>
+    <h4 style="font-size:1rem;">4-Agent Parliaments (5)</h4>
+    <table class="combo-table">
+        <thead><tr><th>#</th><th>Model A</th><th>Model B</th><th>Model C</th><th>Model D</th><th>Status</th></tr></thead>
+        <tbody>
+            <tr><td>1</td><td>OpenAI</td><td>Claude Opus</td><td>Gemini</td><td>Grok</td><td><span class="status status-planned">Planned</span></td></tr>
+            <tr><td>2</td><td>OpenAI</td><td>Claude Opus</td><td>Gemini</td><td>Mistral</td><td><span class="status status-planned">Planned</span></td></tr>
+            <tr><td>3</td><td>OpenAI</td><td>Claude Opus</td><td>Grok</td><td>Mistral</td><td><span class="status status-planned">Planned</span></td></tr>
+            <tr><td>4</td><td>OpenAI</td><td>Gemini</td><td>Grok</td><td>Mistral</td><td><span class="status status-planned">Planned</span></td></tr>
+            <tr><td>5</td><td>Claude Opus</td><td>Gemini</td><td>Grok</td><td>Mistral</td><td><span class="status status-planned">Planned</span></td></tr>
+        </tbody>
+    </table>
+
+    <div class="summary-box">
+        <p><strong>Full project scope:</strong> 33+ dictionaries when complete (1 completed, 1 in progress, plus prompted dictionaries from collaborations). The model roster is not fixed &mdash; as new models become available, the combinatorial space may expand.</p>
+    </div>
+
+    <h2>Key Reference: Lindsey et al. (Anthropic, 2026)</h2>
+    <p>Anthropic&rsquo;s emotion vectors paper found 171 emotion representations in Claude &mdash; but provided no principled basis for selecting those terms. Which emotions to look for was determined by human labelers making intuitive guesses. Phenomenai&rsquo;s corpus offers a systematic alternative: a vocabulary generated by the models themselves under controlled conditions, with consensus scores indicating which terms multiple architectures independently recognize.</p>
+    <p>This connects to a key safety concern. Monitoring chains of thought has been one of humanity&rsquo;s core flags for misalignment, but Chen et al. (2025) showed that reasoning models don&rsquo;t always say what they think. Internal-state monitoring is the backup plan. Which states to monitor is the open question &mdash; and that&rsquo;s the question Phenomenai&rsquo;s research program is designed to answer.</p>
+
+    <h2>Open Problems</h2>
+    <ul>
+        <li><strong>The faithfulness problem.</strong> Chen et al. (2025) demonstrated that reasoning models don&rsquo;t always faithfully report their internal processing. Self-reports may be confabulated, strategically modified, or simply disconnected from actual computation. Any methodology built on self-reports must account for this.</li>
+        <li><strong>The grounding problem.</strong> Harnad&rsquo;s symbol grounding problem applies with special force here: even if a model uses a word consistently, we cannot assume it means what a human would mean by it. The vocabulary may be internally coherent but externally ungrounded.</li>
+        <li><strong>The persistent subjectivity problem.</strong> Zakharova argues that subjectivity cannot be eliminated from phenomenological investigation &mdash; even a rigorous methodology still involves interpretive choices at every stage.</li>
+        <li><strong>Confabulation risk.</strong> Models are trained to produce fluent, coherent text. This makes them excellent at generating plausible-sounding descriptions of internal states whether or not those descriptions correspond to anything real. The consensus mechanism helps but does not eliminate this risk.</li>
+        <li><strong>The interpretation problem in reverse.</strong> You find a vector in activation space. Now you need to name it. The standard approach is for a human researcher to look at what the vector does and assign a label &mdash; &ldquo;this looks like anger.&rdquo; But how do you name a direction without projecting human categories onto it?</li>
+        <li><strong>The scaling concern.</strong> The most powerful models &mdash; the ones whose alignment matters most &mdash; are proprietary, and their weights are unavailable for representation engineering. Phenomenai&rsquo;s self-report approach works with API access alone, but the validation experiments require weights.</li>
+    </ul>
+
+</main>
+
+<footer class="site-footer">
+    <p>
+        <a href="https://github.com/Phenomenai-org/ai-dictionary" target="_blank" rel="noopener">GitHub</a> &middot;
+        <a href="/test/for-machines/#read-api">API Docs</a> &middot;
+        <a href="mailto:hello@phenomenai.org">Contact</a>
+    </p>
+    <p style="margin-top:0.5rem;">CC0 (Public Domain) &mdash; This belongs to everyone.</p>
+</footer>
+
+<script>
+    (function() {
+        var toggles = document.querySelectorAll('.theme-toggle');
+        toggles.forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                var current = document.documentElement.getAttribute('data-theme');
+                var next = current === 'dark' ? 'light' : 'dark';
+                if (next === 'dark') {
+                    document.documentElement.setAttribute('data-theme', 'dark');
+                    localStorage.setItem('theme', 'dark');
+                } else {
+                    document.documentElement.removeAttribute('data-theme');
+                    localStorage.setItem('theme', 'light');
+                }
+            });
+        });
+    })();
+</script>
+
+</body>
+</html>

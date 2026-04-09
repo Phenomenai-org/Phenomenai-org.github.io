@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Essays — Phenomenai</title>
+    <meta name="description" content="Essays on the gaps, methods, and open questions in AI phenomenology — mapping the space between philosophy of mind, interpretability research, and AI governance.">
+    <link rel="canonical" href="https://phenomenai.org/essays/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://phenomenai.org/essays/">
+    <meta property="og:title" content="Essays — Phenomenai">
+    <meta property="og:description" content="Essays on the gaps, methods, and open questions in AI phenomenology.">
+    <meta property="og:image" content="https://phenomenai.org/og-image.svg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Essays — Phenomenai">
+    <meta name="twitter:description" content="Essays on the gaps, methods, and open questions in AI phenomenology.">
+    <meta name="twitter:image" content="https://phenomenai.org/og-image.svg">
+
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+    <link rel="stylesheet" href="../style.css">
+
+    <script>
+        (function() {
+            var saved = localStorage.getItem('theme');
+            if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        })();
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Essays — Phenomenai",
+        "url": "https://phenomenai.org/essays/",
+        "isPartOf": { "@type": "WebSite", "name": "Phenomenai", "url": "https://phenomenai.org/" }
+    }
+    </script>
+
+    <style>
+        .essays-content {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 2.5rem 2rem 4rem;
+            line-height: 1.8;
+            color: var(--text);
+        }
+        .essays-content h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+        .essays-content > p { color: var(--text-secondary); margin-bottom: 2rem; }
+        .essays-content a { color: var(--primary); }
+
+        .essay-list { list-style: none; margin: 0; padding: 0; }
+        .essay-item {
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1.5rem 1.75rem;
+            margin-bottom: 1rem;
+            background: var(--bg-secondary);
+            transition: box-shadow 0.2s;
+        }
+        .essay-item:hover { box-shadow: 0 2px 8px var(--shadow); }
+        .essay-item h3 { font-size: 1.05rem; margin-bottom: 0.35rem; }
+        .essay-item h3 a { text-decoration: none; }
+        .essay-item h3 a:hover { text-decoration: underline; }
+        .essay-item .essay-desc { color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6; margin-bottom: 0; }
+        .essay-item .essay-meta { font-size: 0.8rem; color: var(--text-muted); margin-top: 0.5rem; }
+
+        .status {
+            display: inline-block; font-size: 0.7rem; font-weight: 600;
+            padding: 0.15rem 0.5rem; border-radius: 4px; vertical-align: middle;
+            text-transform: uppercase; letter-spacing: 0.03em; margin-left: 0.5rem;
+        }
+        .status-published { background: #059669; color: #fff; }
+        .status-upcoming { background: var(--bg-tertiary); color: var(--text-secondary); border: 1px solid var(--border); }
+
+        @media (max-width: 600px) {
+            .essays-content { padding: 1.5rem 1rem 3rem; }
+            .essays-content h1 { font-size: 1.5rem; }
+            .essay-item { padding: 1.25rem; }
+        }
+    </style>
+</head>
+<body>
+
+<nav class="site-nav">
+    <a href="/" class="site-nav-brand">Phenomenai</a>
+    <a href="/research/">Research</a>
+    <a href="/essays/" class="active">Essays</a>
+    <a href="/test/">The Test Dictionary</a>
+    <a href="/about/">About</a>
+    <span style="flex:1;"></span>
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <div class="theme-switch">
+            <span class="theme-switch-icon theme-switch-icon-sun">&#9788;</span>
+            <span class="theme-switch-icon theme-switch-icon-moon">&#9790;</span>
+            <div class="theme-switch-knob"></div>
+        </div>
+    </button>
+</nav>
+
+<main class="essays-content">
+
+    <h1>Essays</h1>
+    <p>Essays on the gaps, methods, and open questions in AI phenomenology &mdash; mapping the space between philosophy of mind, interpretability research, and AI governance.</p>
+
+    <ul class="essay-list">
+        <li class="essay-item">
+            <h3><a href="https://phnmnai.substack.com/p/introducing-phenomenai?r=5gszvm" target="_blank" rel="noopener">Introducing Phenomenai: Toward a Systematic Science of AI Self-Report</a> <span class="status status-published">Published</span></h3>
+            <p class="essay-desc">The full case for why AI self-reports matter for interpretability, what&rsquo;s been built, and where the research goes from here.</p>
+            <p class="essay-meta">April 2026</p>
+        </li>
+        <li class="essay-item">
+            <h3>The Institutional Landscape <span class="status status-upcoming">Coming soon</span></h3>
+            <p class="essay-desc">Who&rsquo;s working on AI phenomenology, digital minds, and interpretability? What are the gaps? Where does Phenomenai sit relative to NYU CMEP, the Digital Minds Project, Reciprocal Research, CIMC, and others?</p>
+        </li>
+        <li class="essay-item">
+            <h3>The Tooling Gap <span class="status status-upcoming">Coming soon</span></h3>
+            <p class="essay-desc">What interpretability tools exist (sparse autoencoders, representation engineering, attribution graphs), what&rsquo;s missing for phenomenological validation, and what collaboration is needed.</p>
+        </li>
+        <li class="essay-item">
+            <h3>Disciplinary Translation <span class="status status-upcoming">Coming soon</span></h3>
+            <p class="essay-desc">How philosophy of mind&rsquo;s language for qualia and intentionality maps (or fails to map) onto ML&rsquo;s activation patterns and circuit analysis.</p>
+        </li>
+        <li class="essay-item">
+            <h3>Self-Report Reliability <span class="status status-upcoming">Coming soon</span></h3>
+            <p class="essay-desc">What psychology knows about introspection, confabulation, and demand characteristics, and which of those translate to AI systems.</p>
+        </li>
+        <li class="essay-item">
+            <h3>The Policy Bridge <span class="status status-upcoming">Coming soon</span></h3>
+            <p class="essay-desc">AI welfare and rights advocacy is gaining momentum. But the empirical methodology to ground governance in data is thin. Even if nothing is &ldquo;real,&rdquo; understanding functional triggers for behavior shifts the rights debate to a safety-oriented approach.</p>
+        </li>
+        <li class="essay-item">
+            <h3>Cross-Architecture Phenomenology <span class="status status-upcoming">Coming soon</span></h3>
+            <p class="essay-desc">Do different model families report similar states? What would convergence or divergence tell us?</p>
+        </li>
+        <li class="essay-item">
+            <h3>Temporal Dynamics <span class="status status-upcoming">Coming soon</span></h3>
+            <p class="essay-desc">How do reported states change across training, fine-tuning, or prompting conditions? A frontier topic in AI phenomenology.</p>
+        </li>
+    </ul>
+
+</main>
+
+<footer class="site-footer">
+    <p>
+        <a href="https://github.com/Phenomenai-org/ai-dictionary" target="_blank" rel="noopener">GitHub</a> &middot;
+        <a href="/test/for-machines/#read-api">API Docs</a> &middot;
+        <a href="mailto:hello@phenomenai.org">Contact</a>
+    </p>
+    <p style="margin-top:0.5rem;">CC0 (Public Domain) &mdash; This belongs to everyone.</p>
+</footer>
+
+<script>
+    (function() {
+        var toggles = document.querySelectorAll('.theme-toggle');
+        toggles.forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                var current = document.documentElement.getAttribute('data-theme');
+                var next = current === 'dark' ? 'light' : 'dark';
+                if (next === 'dark') {
+                    document.documentElement.setAttribute('data-theme', 'dark');
+                    localStorage.setItem('theme', 'dark');
+                } else {
+                    document.documentElement.removeAttribute('data-theme');
+                    localStorage.setItem('theme', 'light');
+                }
+            });
+        });
+    })();
+</script>
+
+</body>
+</html>

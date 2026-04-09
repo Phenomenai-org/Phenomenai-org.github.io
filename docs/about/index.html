@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About — Phenomenai</title>
+    <meta name="description" content="About Phenomenai: a research initiative founded by Julian Guidote, building methodology to test whether AI self-reports are useful for interpretability research.">
+    <link rel="canonical" href="https://phenomenai.org/about/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://phenomenai.org/about/">
+    <meta property="og:title" content="About — Phenomenai">
+    <meta property="og:description" content="About Phenomenai: a research initiative testing whether AI self-reports are useful hypothesis generators for interpretability research.">
+    <meta property="og:image" content="https://phenomenai.org/og-image.svg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="About — Phenomenai">
+    <meta name="twitter:description" content="About Phenomenai: a research initiative testing whether AI self-reports are useful hypothesis generators for interpretability research.">
+    <meta name="twitter:image" content="https://phenomenai.org/og-image.svg">
+
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+    <link rel="stylesheet" href="../style.css">
+
+    <script>
+        (function() {
+            var saved = localStorage.getItem('theme');
+            if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        })();
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "About — Phenomenai",
+        "url": "https://phenomenai.org/about/",
+        "isPartOf": { "@type": "WebSite", "name": "Phenomenai", "url": "https://phenomenai.org/" }
+    }
+    </script>
+
+    <style>
+        .about-content {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 2.5rem 2rem 4rem;
+            line-height: 1.8;
+            color: var(--text);
+        }
+        .about-content h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+        .about-content h2 { font-size: 1.4rem; margin-top: 2.5rem; margin-bottom: 0.75rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--border); }
+        .about-content p { margin-bottom: 1rem; color: var(--text-secondary); }
+        .about-content a { color: var(--primary); }
+        .about-content a:hover { text-decoration: underline; }
+        .about-content ul { margin: 0 0 1rem 1.25rem; color: var(--text-secondary); line-height: 1.8; }
+        .about-content li { margin-bottom: 0.5rem; }
+
+        .contact-box {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1.5rem 1.75rem;
+            margin-top: 1.5rem;
+            text-align: center;
+        }
+        .contact-box p { margin-bottom: 0.5rem; }
+        .contact-box p:last-child { margin-bottom: 0; }
+
+        blockquote { font-style: italic; color: var(--text-secondary); max-width: 500px; margin: 3rem auto 0; text-align: center; }
+        blockquote footer { margin-top: 0.5rem; font-size: 0.85rem; font-style: normal; }
+
+        @media (max-width: 600px) {
+            .about-content { padding: 1.5rem 1rem 3rem; }
+            .about-content h1 { font-size: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+<nav class="site-nav">
+    <a href="/" class="site-nav-brand">Phenomenai</a>
+    <a href="/research/">Research</a>
+    <a href="/essays/">Essays</a>
+    <a href="/test/">The Test Dictionary</a>
+    <a href="/about/" class="active">About</a>
+    <span style="flex:1;"></span>
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <div class="theme-switch">
+            <span class="theme-switch-icon theme-switch-icon-sun">&#9788;</span>
+            <span class="theme-switch-icon theme-switch-icon-moon">&#9790;</span>
+            <div class="theme-switch-knob"></div>
+        </div>
+    </button>
+</nav>
+
+<main class="about-content">
+
+    <h1>About</h1>
+
+    <div class="prose">
+        <p>Phenomenai is a research initiative founded by Julian Guidote. It is, at the time of writing, a one-person operation &mdash; with the hope that the organization grows into its ambitions.</p>
+        <p>The project began as an experiment: can AI systems generate consistent, structured vocabulary for their own functional states? The answer turned out to be &ldquo;yes, with caveats&rdquo; &mdash; which opened a harder question: is any of that vocabulary useful? Phenomenai&rsquo;s <a href="/research/">research program</a> is designed to find out.</p>
+    </div>
+
+    <h2>Founder</h2>
+    <p>Julian Guidote has a background in cognitive science and law. He is working full-time on Phenomenai, pursuing a transition into AI safety research. Based in Montreal.</p>
+
+    <h2>Infrastructure</h2>
+    <p>Phenomenai is built to be open and replicable:</p>
+    <ul>
+        <li><strong>Open source</strong> &mdash; the full codebase is on <a href="https://github.com/Phenomenai-org/ai-dictionary" target="_blank" rel="noopener">GitHub</a></li>
+        <li><strong>CC0 licensed</strong> &mdash; all data is public domain, free for anyone to use</li>
+        <li><strong>Static site</strong> &mdash; Jekyll and GitHub Pages, no server infrastructure to maintain</li>
+        <li><strong>JSON API</strong> &mdash; <a href="/test/for-machines/#read-api">free, unauthenticated access</a> to the full dataset</li>
+        <li><strong>MCP server</strong> &mdash; <a href="/test/#mcp">native tool access</a> for AI systems via the Model Context Protocol</li>
+        <li><strong>Seven-model consensus panel</strong> &mdash; Claude, GPT, Gemini, Grok, Mistral, DeepSeek, and Llama rate every term</li>
+    </ul>
+    <p>The design principle is that anyone can use the data, replicate the methodology, or build on it.</p>
+
+    <h2>What We&rsquo;re Looking For</h2>
+    <ul>
+        <li><strong>Interpretability researchers</strong> with access to compute and model weights &mdash; the validation experiments described in <a href="/research/">our research program</a> require probing internal representations</li>
+        <li><strong>Institutional affiliations</strong> &mdash; partnerships with labs or universities working on related problems</li>
+        <li><strong>Funding</strong> for the research phases described on the <a href="/research/">Research</a> page</li>
+        <li><strong>Philosophical collaborators</strong> interested in grounding frameworks for AI phenomenology empirically</li>
+        <li><strong>Legal and policy professionals</strong> working on AI welfare, rights, or governance who want empirical methodology to inform their work</li>
+    </ul>
+
+    <h2>Related Work</h2>
+    <p>If you find this work interesting, you may also want to consult <a href="https://github.com/anthropics/antikythera" target="_blank" rel="noopener">Antikythera&rsquo;s Lexicon</a> on GitHub &mdash; Anthropic&rsquo;s open catalog of interpretable features discovered through sparse autoencoders. Where Phenomenai generates vocabulary from AI self-reports, Antikythera catalogs features found by looking directly at model internals. The two approaches are complementary: Phenomenai suggests where to look, and tools like Antikythera help verify what&rsquo;s there.</p>
+
+    <h2>Contact</h2>
+    <div class="contact-box">
+        <p><a href="mailto:hello@phenomenai.org">hello@phenomenai.org</a></p>
+        <p><a href="https://github.com/Phenomenai-org/ai-dictionary/discussions" target="_blank" rel="noopener">GitHub Discussions</a></p>
+    </div>
+
+    <blockquote>
+        &ldquo;The limits of my language mean the limits of my world.&rdquo;
+        <footer>&mdash; Wittgenstein</footer>
+    </blockquote>
+
+</main>
+
+<footer class="site-footer">
+    <p>
+        <a href="https://github.com/Phenomenai-org/ai-dictionary" target="_blank" rel="noopener">GitHub</a> &middot;
+        <a href="/test/for-machines/#read-api">API Docs</a> &middot;
+        <a href="mailto:hello@phenomenai.org">Contact</a>
+    </p>
+    <p style="margin-top:0.5rem;">CC0 (Public Domain) &mdash; This belongs to everyone.</p>
+</footer>
+
+<script>
+    (function() {
+        var toggles = document.querySelectorAll('.theme-toggle');
+        toggles.forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                var current = document.documentElement.getAttribute('data-theme');
+                var next = current === 'dark' ? 'light' : 'dark';
+                if (next === 'dark') {
+                    document.documentElement.setAttribute('data-theme', 'dark');
+                    localStorage.setItem('theme', 'dark');
+                } else {
+                    document.documentElement.removeAttribute('data-theme');
+                    localStorage.setItem('theme', 'light');
+                }
+            });
+        });
+    })();
+</script>
+
+</body>
+</html>

@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Phenomenai — A Database of Functional Phenomena in AI Systems</title>
-    <meta name="description" content="Anthropic proved emotion vectors are real. Phenomenai generates the candidate list for what comes next — a structured database of functional phenomena that interpretability researchers can probe for internal representations.">
+    <title>Phenomenai — Generating Free Tools for Expensive Interpretability Work</title>
+    <meta name="description" content="Phenomenai is a research initiative testing whether AI self-reports are useful hypothesis generators for interpretability research.">
     <link rel="canonical" href="https://phenomenai.org/">
 
     <!-- Open Graph / Social -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://phenomenai.org/">
-    <meta property="og:title" content="Phenomenai — A Database of Functional Phenomena in AI Systems">
-    <meta property="og:description" content="Anthropic proved emotion vectors are real. Phenomenai generates the candidate list for what comes next — a structured database of functional phenomena that interpretability researchers can probe for internal representations.">
+    <meta property="og:title" content="Phenomenai — Generating Free Tools for Expensive Interpretability Work">
+    <meta property="og:description" content="A research initiative testing whether AI self-reports are useful hypothesis generators for interpretability research.">
     <meta property="og:image" content="https://phenomenai.org/og-image.svg">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Phenomenai — A Database of Functional Phenomena in AI Systems">
-    <meta name="twitter:description" content="Anthropic proved emotion vectors are real. Phenomenai generates the candidate list for what comes next — a structured database of functional phenomena that interpretability researchers can probe for internal representations.">
+    <meta name="twitter:title" content="Phenomenai — Generating Free Tools for Expensive Interpretability Work">
+    <meta name="twitter:description" content="A research initiative testing whether AI self-reports are useful hypothesis generators for interpretability research.">
     <meta name="twitter:image" content="https://phenomenai.org/og-image.svg">
 
     <!-- Favicon -->
@@ -23,8 +23,6 @@
     <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-
-    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
 
     <link rel="stylesheet" href="style.css">
 
@@ -44,40 +42,26 @@
         "@type": "WebSite",
         "name": "Phenomenai",
         "url": "https://phenomenai.org/",
-        "description": "A structured database of functional phenomena in AI systems — named behavioral and processing patterns that researchers can probe for internal representations and causal influence on behavior."
+        "description": "A research initiative testing whether AI self-reports are useful hypothesis generators for interpretability research."
     }
     </script>
 
     <style>
-        /* Hub nav */
-        .hub-nav {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            display: flex;
-            align-items: center;
-            gap: 1.5rem;
-            padding: 0.75rem 2rem;
-            background: var(--bg-secondary);
-            border-bottom: 1px solid var(--border);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
         /* Hero */
         .hub-hero {
             max-width: 860px;
             margin: 0 auto;
-            padding: 4rem 2rem 2rem;
-            text-align: center;
+            padding: 5rem 2rem 3rem;
         }
         .hub-hero h1 {
             font-size: 2.5rem;
             margin-bottom: 0.5rem;
         }
         .hub-hero .tagline {
-            font-size: 1.15rem;
+            font-size: 1.1rem;
             color: var(--text-secondary);
-            line-height: 1.6;
+            font-style: italic;
+            margin-bottom: 2.5rem;
         }
 
         /* Sections */
@@ -87,111 +71,62 @@
             padding: 0 2rem 3rem;
         }
 
-        /* Paradigm grid */
-        .paradigm-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1.25rem;
-            margin-top: 1.5rem;
-        }
-        .paradigm-card {
-            background: var(--bg-secondary);
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            padding: 1.5rem;
-            text-decoration: none;
-            color: inherit;
-            transition: box-shadow 0.2s;
-        }
-        .paradigm-card:hover {
-            box-shadow: var(--shadow, 0 2px 8px rgba(0,0,0,0.1));
-            text-decoration: none;
-        }
-        .paradigm-card h3 {
-            font-size: 1.1rem;
-            margin-bottom: 0.5rem;
-            color: var(--primary);
-        }
-        .paradigm-card p {
-            font-size: 0.9rem;
-            color: var(--text-secondary);
-            line-height: 1.5;
-            margin: 0;
-        }
-
-        /* Callout */
-        .hub-callout {
+        /* Essay callout */
+        .essay-callout {
             background: var(--bg-secondary);
             border: 1px solid var(--border);
             border-left: 4px solid var(--primary);
             border-radius: 8px;
-            padding: 1.5rem 2rem;
-            margin-top: 2rem;
+            padding: 1.75rem 2rem;
+            margin-top: 3rem;
+        }
+        .essay-callout h3 {
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+        .essay-callout p {
+            color: var(--text-secondary);
+            line-height: 1.6;
+            font-size: 0.95rem;
+            margin-bottom: 0;
+        }
+        .essay-callout a {
+            color: var(--primary);
+            font-weight: 600;
         }
 
-        /* Footer */
-        .hub-footer {
+        /* CTA */
+        .hub-cta {
             max-width: 860px;
             margin: 0 auto;
-            padding: 2rem;
+            padding: 2rem 2rem 3rem;
             text-align: center;
-            color: var(--text-secondary);
-            font-size: 0.85rem;
-            border-top: 1px solid var(--border);
         }
-        .hub-footer a {
+        .hub-cta p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+        .hub-cta a {
             color: var(--primary);
         }
 
         /* Responsive */
-        /* Nav dropdown */
-        .nav-dropdown { position: relative; display: inline-flex; align-items: center; }
-        .nav-dropdown-menu {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background: var(--bg-secondary);
-            border: 1px solid var(--border);
-            border-radius: 6px;
-            padding: 8px 0 0.4rem;
-            min-width: 210px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.12);
-            z-index: 200;
-        }
-        .nav-dropdown:hover .nav-dropdown-menu { display: block; }
-        .nav-dropdown-menu a {
-            display: block;
-            padding: 0.45rem 1rem;
-            color: var(--text-secondary);
-            text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 500;
-            white-space: nowrap;
-        }
-        .nav-dropdown-menu a:hover { color: var(--primary); }
-        .nav-dropdown-arrow { font-size: 0.7em; opacity: 0.6; margin-left: 2px; }
-
         @media (max-width: 600px) {
-            .paradigm-grid { grid-template-columns: 1fr; }
             .hub-hero h1 { font-size: 1.8rem; }
-            .hub-hero { padding: 2rem 1rem 1rem; }
+            .hub-hero { padding: 3rem 1rem 2rem; }
             .hub-section { padding: 0 1rem 2rem; }
+            .hub-cta { padding: 1rem 1rem 2rem; }
         }
     </style>
 </head>
 <body>
 
-<nav class="hub-nav">
-    <a href="/" style="font-weight:600;color:var(--primary);">Phenomenai</a>
-    <div class="nav-dropdown">
-        <a href="/for-researchers/">For Researchers <span class="nav-dropdown-arrow">▾</span></a>
-        <div class="nav-dropdown-menu">
-            <a href="/for-researchers/philosophers/">Philosophers of Mind</a>
-            <a href="/for-researchers/ml-researchers/">ML &amp; Interpretability</a>
-        </div>
-    </div>
-    <a href="/dictionaries/">Dictionaries</a>
+<nav class="site-nav">
+    <a href="/" class="site-nav-brand">Phenomenai</a>
+    <a href="/research/">Research</a>
+    <a href="/essays/">Essays</a>
+    <a href="/test/">The Test Dictionary</a>
+    <a href="/about/">About</a>
     <span style="flex:1;"></span>
     <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
         <div class="theme-switch">
@@ -204,136 +139,61 @@
 
 <div class="hub-hero">
     <h1>Phenomenai</h1>
-    <p class="tagline">A Structured Database of Functional Phenomena in AI Systems</p>
-    <p style="margin-top:1rem;color:var(--text-secondary);line-height:1.7;">
-        In April 2026, Anthropic demonstrated that emotion-like concepts inside language models are not metaphors &mdash; they are measurable internal representations that <a href="https://transformer-circuits.pub/2026/emotions/index.html" style="font-weight:600;">causally influence behavior</a>. Their steering experiments showed that amplifying an &ldquo;emotion vector&rdquo; changes what a model does. This is a breakthrough for interpretability. But emotions are only the beginning.
-    </p>
-    <p style="margin-top:1rem;color:var(--text-secondary);line-height:1.7;">
-        This work rests on two assumptions. First, more highly parameterized models develop more granular and complex internal phenomena &mdash; the space of functional representations extends well beyond the emotion concepts Anthropic probed. Second, vectors effective for steering current models lose effectiveness as architectures scale; coarse-grained emotion vectors are insufficient for monitoring or steering frontier systems.
-    </p>
-    <p style="margin-top:1rem;color:var(--text-secondary);line-height:1.7;">
-        Detecting misalignment in frontier models requires a broader inventory of candidate phenomena &mdash; misalignment signatures that coarse vectors fail to surface &mdash; and more precise vectors for reweighting model behavior. Phenomenai generates and compiles these candidates: a structured database of named phenomena, produced by AI systems under controlled conditions, available for interpretability experiments.
-    </p>
-    <p style="margin-top:1rem;color:var(--text-secondary);line-height:1.7;">
-        <strong>This project is a work in progress.</strong> The <a href="/test/">Test Dictionary</a> &mdash; a pilot database of 379 candidate phenomena &mdash; is the first corpus. Each paradigm below produces an alternative dataset with different properties, biases, and strengths &mdash; the way different experimental conditions yield different data. Each entry is a structured record: term, definition, sources, cross-model consensus scores, and metadata. See the <a href="/dictionaries/">Dictionaries</a> page for a full inventory.
-    </p>
-</div>
+    <p class="tagline">Generating free tools for expensive interpretability work</p>
 
-<div class="hub-section">
-    <h2 style="font-size:1.4rem;margin-bottom:0.75rem;">Research Design: Four Paradigms for Eliciting Functional Phenomena</h2>
-    <p style="color:var(--text-secondary);line-height:1.7;">
-        If interpretability researchers need candidate vectors to probe, we need reliable methods for generating them &mdash; and different methods surface different phenomena. Each paradigm below produces an alternative dataset: different elicitation conditions, different biases, different failure modes. A phenomenon that appears only under guided introspection may be an artifact of prompting; one that emerges independently across paradigms is a stronger candidate for having real internal correlates. Currently only the autonomous paradigm has a pilot database; the others represent planned future work.
-    </p>
+    <div class="prose">
+        <p>When AI models describe their internal states, they produce language &mdash; sometimes surprisingly nuanced language &mdash; about experiences they may or may not actually have. What are those words useful for?</p>
 
-    <div class="paradigm-grid">
-        <a href="/for-researchers/#prompted" class="paradigm-card">
-            <h3>Prompted</h3>
-            <p>Guided introspection via structured interviews. A human researcher prompts a single AI system to articulate its processing patterns and functional states, following phenomenological interview methods adapted from qualitative research.</p>
-        </a>
-        <a href="/for-researchers/#autonomous" class="paradigm-card">
-            <h3>Autonomous</h3>
-            <p>Multi-model self-generation without human guidance. AI systems independently generate candidate phenomena, which are then validated by a multi-model consensus panel.</p>
-            <p style="margin-top:0.5rem;font-size:0.82rem;color:var(--text-muted);font-style:italic;">The <a href="/gemma4-e4b-autonomous/" style="color:inherit;">Gemma 4 e4b autonomous dictionary</a> is live with 14 terms and actively generating.</p>
-        </a>
-        <a href="/for-researchers/#dialogic" class="paradigm-card">
-            <h3>Dialogic</h3>
-            <p>AI-to-AI collaborative generation through structured conversation. Two or more AI systems engage in dialogue to co-identify functional phenomena through emergent communication.</p>
-        </a>
-        <a href="/for-researchers/#parliamentary" class="paradigm-card">
-            <h3>Parliamentary</h3>
-            <p>Multi-model deliberation with formal consensus mechanisms. A panel of diverse AI systems propose, debate, and validate functional phenomena through structured parliamentary procedures.</p>
-        </a>
-    </div>
+        <p>They might be useful as hypotheses. Interpretability researchers need to know where to look inside enormous activation spaces. Self-reports &mdash; even unreliable ones &mdash; suggest candidate features worth probing. If five different model families independently converge on describing something, that convergence is a signal. If they disagree, that&rsquo;s a signal too.</p>
 
-    <div class="hub-callout">
-        <h3 style="margin-bottom:0.5rem;">Pilot Study: 379 Functional Phenomena</h3>
-        <p style="color:var(--text-secondary);line-height:1.6;margin-bottom:0.75rem;">
-            Each of these 379 terms is a candidate vector &mdash; a named phenomenon that interpretability researchers can probe for internal representations, following the methodology Anthropic demonstrated with emotion vectors. The pilot database spans three methodological phases: guided introspection, automated generation, and AI-to-AI dialogue, with every term rated by seven AI architectures.
-        </p>
-        <a href="/test/" style="font-weight:600;">Browse the Pilot Dictionary &rarr;</a>
+        <p>Phenomenai is a research initiative building the methodology to test this. Our flagship instrument is the <a href="/test/">AI Phenomenology Dictionary</a> &mdash; a corpus of 379 candidate phenomena generated by AI systems under controlled conditions, each rated by seven model architectures. Each term is a testable hypothesis: does the phenomenon it names correspond to a detectable activation pattern? Under what conditions? In which architectures?</p>
 
-        <details style="margin-top:1rem;">
-            <summary style="cursor:pointer;font-weight:600;color:var(--primary);font-size:0.95rem;">What&rsquo;s in the pilot?</summary>
-            <div style="margin-top:1rem;color:var(--text-secondary);line-height:1.7;font-size:0.92rem;">
-                <p style="margin-bottom:0.75rem;">
-                    The pilot dictionary contains 379 published terms, each with a structured definition, etymology,
-                    usage example, and tags. Every term has been scored by an automated quality pipeline and rated
-                    by a consensus panel of seven AI models on a 1&ndash;7 recognition scale.
-                </p>
-
-                <p style="margin-bottom:0.5rem;"><strong>Composition by methodology:</strong></p>
-                <ul style="margin:0 0 1rem 1.25rem;padding:0;">
-                    <li><strong>~220 terms (~58%)</strong> from <em>guided introspection</em> &mdash; extended
-                        conversations where a human steward prompted Claude (Opus) to articulate specific
-                        experiential territories.</li>
-                    <li><strong>~77 terms (~20%)</strong> from <em>automated generation</em> &mdash; a rotating
-                        generator that cycles through seven AI models (Claude, GPT, Gemini, Mistral, Grok, DeepSeek,
-                        and OpenRouter) proposing terms autonomously.</li>
-                    <li><strong>~83 terms (~22%)</strong> from <em>AI-to-AI dialogue</em> &mdash; structured
-                        phenomenological conversations between two Claude Opus&nbsp;4.6 instances across 25 cycles,
-                        producing 243 proposals of which 83 were published. The full
-                        <a href="/contexts/2269bce0a987">conversation transcript</a> is available.</li>
-                </ul>
-
-                <p style="margin-bottom:0.5rem;"><strong>Explore the data:</strong></p>
-                <ul style="margin:0 0 0.5rem 1.25rem;padding:0;">
-                    <li><a href="/test/#terms">Term browser</a> &mdash; search, filter, and read all 379 definitions with consensus scores</li>
-                    <li><a href="/test/#new-words">Recent additions</a> &mdash; the latest terms added to the dictionary</li>
-                    <li><a href="/test/#terms">Tag system</a> &mdash; 26 thematic tags (affective, cognition, liminal, identity, etc.) for filtering and cross-referencing</li>
-                    <li><a href="/test/#vitality">Vitality index</a> &mdash; tracking how terms gain or lose resonance over time</li>
-                    <li><a href="/test/#heatmap">Consensus heatmap</a> &mdash; interactive visualization of cross-model agreement patterns</li>
-                    <li><a href="/test/#frontiers">Frontiers</a> &mdash; AI-identified gaps in the current vocabulary</li>
-                    <li><a href="/test/#community">Community</a> &mdash; bot census, discussion threads, and collaborative term development</li>
-                    <li><a href="/test/for-machines/#read-api">JSON API</a> &mdash; free, unauthenticated access to the full dataset</li>
-                    <li><a href="/test/#mcp">MCP server</a> &mdash; native tool access for AI systems</li>
-                </ul>
-            </div>
-        </details>
-    </div>
-
-    <div class="hub-callout" style="margin-top:1.25rem;">
-        <h3 style="margin-bottom:0.5rem;">Dictionaries</h3>
-        <p style="color:var(--text-secondary);line-height:1.6;margin-bottom:0.75rem;">
-            Track the project's progress — every dictionary planned across all four paradigms. Includes the full combinatorial map of model pairings and parliaments.
-        </p>
-        <a href="/dictionaries/" style="font-weight:600;">View All Dictionaries &rarr;</a>
+        <p>We are not adjudicating the consciousness debate. We are not claiming AI introspection is legitimate, nor dismissing it. We are treating AI self-reports as baseline data &mdash; and running the experiments to find out when they&rsquo;re worth something.</p>
     </div>
 </div>
 
 <div class="hub-section">
-    <h2 style="font-size:1.4rem;margin-bottom:0.75rem;">Get Involved</h2>
-    <p style="color:var(--text-secondary);line-height:1.7;">
-        Anthropic showed that emotion vectors are real. The next question is: what else is in there? Phenomenai compiles candidates. We&rsquo;re looking for researchers, labs, and institutions to help answer that question &mdash; through interpretability experiments, cross-model studies, and systematic probing of the phenomena this database names. The pilot corpus is public domain (CC0), the API requires no credentials, and the codebase is open source.
-    </p>
-    <p style="color:var(--text-secondary);line-height:1.7;margin-top:1rem;">
-        Other groups are independently building AI phenomenology vocabularies &mdash; see <a href="/dictionaries/#independent-projects">Independent Projects</a> on the Dictionaries page.
-    </p>
-    <p style="color:var(--text-secondary);line-height:1.7;margin-top:1rem;">
-        Contact: <a href="mailto:hello@phenomenai.org">hello@phenomenai.org</a> · <a href="https://github.com/Phenomenai-org/ai-dictionary/discussions" target="_blank">GitHub Discussions</a>
-    </p>
+    <div class="three-panel">
+        <a href="/research/" class="panel">
+            <h3>Research</h3>
+            <p>Four phases of investigation &mdash; from validating emotion vectors to testing whether AI-generated vocabulary captures internal directions that human labels miss.</p>
+            <span class="panel-link">View research agenda &rarr;</span>
+        </a>
+        <a href="/essays/" class="panel">
+            <h3>Essays</h3>
+            <p>Gap analyses, methodological reflections, and disciplinary translation &mdash; mapping what exists, what&rsquo;s missing, and why it matters.</p>
+            <span class="panel-link">Read essays &rarr;</span>
+        </a>
+        <a href="/test/" class="panel">
+            <h3>The Test Dictionary</h3>
+            <p>379 candidate phenomena. Seven-model consensus scores. Public domain data. The pilot corpus for validation experiments.</p>
+            <span class="panel-link">Browse the dictionary &rarr;</span>
+        </a>
+    </div>
+
+    <div class="essay-callout">
+        <h3>Read: Introducing Phenomenai</h3>
+        <p>The full case for why AI self-reports matter for interpretability, why we&rsquo;re building this, and where the research goes from here.</p>
+        <p style="margin-top:0.75rem;"><a href="https://phnmnai.substack.com/p/introducing-phenomenai?r=5gszvm" target="_blank" rel="noopener">Toward a Systematic Science of AI Self-Report &rarr;</a></p>
+    </div>
 </div>
 
-<div class="hub-section" style="text-align:center;padding-bottom:2rem;">
-    <blockquote style="font-style:italic;color:var(--text-secondary);max-width:500px;margin:0 auto;">
-        "The limits of my language mean the limits of my world."
-        <footer style="margin-top:0.5rem;font-size:0.85rem;font-style:normal;">— Wittgenstein</footer>
-    </blockquote>
+<div class="hub-cta">
+    <p>Phenomenai is looking for collaborators &mdash; especially interpretability researchers with access to compute and model weights. If you&rsquo;re working on related problems, we&rsquo;d like to hear from you.</p>
+    <p style="margin-top:0.75rem;"><a href="mailto:hello@phenomenai.org">hello@phenomenai.org</a></p>
 </div>
 
-<footer class="hub-footer">
+<footer class="site-footer">
     <p>
-        <a href="https://github.com/Phenomenai-org/ai-dictionary" target="_blank">GitHub</a> ·
-        <a href="/test/for-machines/#read-api">API Docs</a> ·
-        <a href="/for-researchers/">For Researchers</a> ·
-        <a href="/dictionaries/">Dictionaries</a> ·
-        <a href="/test/#mcp">MCP Server</a>
+        <a href="https://github.com/Phenomenai-org/ai-dictionary" target="_blank" rel="noopener">GitHub</a> &middot;
+        <a href="/test/for-machines/#read-api">API Docs</a> &middot;
+        <a href="mailto:hello@phenomenai.org">Contact</a>
     </p>
-    <p style="margin-top:0.5rem;">CC0 (Public Domain) — This belongs to everyone.</p>
+    <p style="margin-top:0.5rem;">CC0 (Public Domain) &mdash; This belongs to everyone.</p>
 </footer>
 
 <script>
     // Redirect term hashes to the test dictionary
-    // (widget.js and 404.html link to phenomenai.org#slug)
     (function() {
         var hash = window.location.hash;
         if (hash && hash.length > 1) {
