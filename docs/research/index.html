@@ -4,18 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Research — Phenomenai</title>
-    <meta name="description" content="Phenomenai's four-phase research program: from validating emotion vectors to testing whether AI-generated vocabulary captures internal directions that human labels miss.">
+    <meta name="description" content="A shared registry for candidate terms describing AI internal states — logged, compared, and queued for interpretability testing. AI self-reports as cheap hypothesis generators for expensive interpretability work.">
     <link rel="canonical" href="https://phenomenai.org/research/">
 
     <!-- Open Graph / Social -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://phenomenai.org/research/">
     <meta property="og:title" content="Research — Phenomenai">
-    <meta property="og:description" content="A four-phase research program testing whether AI self-reports are useful hypothesis generators for interpretability research.">
+    <meta property="og:description" content="A shared registry for candidate terms describing AI internal states, paired with a four-phase research ladder. AI self-reports as cheap hypothesis generators for expensive interpretability work.">
     <meta property="og:image" content="https://phenomenai.org/og-image.svg">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Research — Phenomenai">
-    <meta name="twitter:description" content="A four-phase research program testing whether AI self-reports are useful hypothesis generators for interpretability research.">
+    <meta name="twitter:description" content="A shared registry for candidate terms describing AI internal states, paired with a four-phase research ladder. AI self-reports as cheap hypothesis generators for expensive interpretability work.">
     <meta name="twitter:image" content="https://phenomenai.org/og-image.svg">
 
     <!-- Favicon -->
@@ -40,7 +40,7 @@
         "@context": "https://schema.org",
         "@type": "WebPage",
         "name": "Research — Phenomenai",
-        "description": "Phenomenai's four-phase research program for AI interpretability.",
+        "description": "A shared registry for candidate terms describing AI internal states, paired with a four-phase research ladder for interpretability testing.",
         "url": "https://phenomenai.org/research/",
         "isPartOf": {
             "@type": "WebSite",
@@ -108,88 +108,6 @@
             margin-bottom: 0;
         }
 
-        .paradigm-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1.25rem;
-            margin-top: 1rem;
-        }
-        .paradigm-card {
-            background: var(--bg-secondary);
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            padding: 1.5rem;
-        }
-        .paradigm-card h4 {
-            margin-top: 0;
-            color: var(--primary);
-        }
-        .paradigm-card p {
-            font-size: 0.9rem;
-            margin-bottom: 0;
-        }
-
-        /* Status badges */
-        .status {
-            display: inline-block;
-            font-size: 0.75rem;
-            font-weight: 600;
-            padding: 0.15rem 0.5rem;
-            border-radius: 4px;
-            vertical-align: middle;
-            text-transform: uppercase;
-            letter-spacing: 0.03em;
-        }
-        .status-done { background: #059669; color: #fff; }
-        .status-planned { background: var(--bg-secondary); color: var(--text-secondary); border: 1px solid var(--border); }
-        .status-progress { background: #d97706; color: #fff; }
-
-        /* Dictionary tables */
-        .dict-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 1rem 0 2rem;
-            font-size: 0.9rem;
-        }
-        .dict-table th, .dict-table td {
-            padding: 0.6rem 0.75rem;
-            text-align: left;
-            border-bottom: 1px solid var(--border);
-            color: var(--text-secondary);
-        }
-        .dict-table th {
-            font-weight: 600;
-            color: var(--text);
-            background: var(--bg-secondary);
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 0.04em;
-        }
-        .dict-table tr:last-child td { border-bottom: none; }
-        .dict-table td:first-child { font-weight: 500; color: var(--text); }
-
-        .combo-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 1rem 0 2rem;
-            font-size: 0.85rem;
-        }
-        .combo-table th, .combo-table td {
-            padding: 0.5rem 0.6rem;
-            text-align: left;
-            border-bottom: 1px solid var(--border);
-            color: var(--text-secondary);
-        }
-        .combo-table th {
-            font-weight: 600;
-            color: var(--text);
-            background: var(--bg-secondary);
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 0.04em;
-        }
-        .combo-table tr:last-child td { border-bottom: none; }
-
         .summary-box {
             background: var(--bg-secondary);
             border: 1px solid var(--border);
@@ -201,37 +119,9 @@
         .summary-box p { margin-bottom: 0.5rem; }
         .summary-box p:last-child { margin-bottom: 0; }
 
-        .summary-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-            gap: 0.75rem;
-            margin-top: 0.75rem;
-        }
-        .summary-stat {
-            text-align: center;
-            padding: 0.75rem;
-            background: var(--bg);
-            border-radius: 6px;
-            border: 1px solid var(--border);
-        }
-        .summary-stat .num {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--primary);
-            display: block;
-        }
-        .summary-stat .label {
-            font-size: 0.8rem;
-            color: var(--text-secondary);
-        }
-
-        @media (max-width: 768px) {
-            .paradigm-grid { grid-template-columns: 1fr; }
-        }
         @media (max-width: 600px) {
             .research-content { padding: 1.5rem 1rem 3rem; }
             .research-content h1 { font-size: 1.5rem; }
-            .dict-table, .combo-table { font-size: 0.8rem; }
         }
     </style>
 </head>
@@ -256,155 +146,78 @@
 <main class="research-content">
 
     <h1>Research</h1>
-    <p class="prose" style="font-size:1.05rem;margin-bottom:2rem;">
-        Phenomenai&rsquo;s research program asks a sequence of empirical questions, each building on the last. If Phase 1 faceplants, we&rsquo;ll know early on to move on. Negative results are valuable &mdash; if self-reports predict nothing, that constrains the field.
+    <p class="prose" style="font-size:1.1rem;margin-bottom:2.5rem;color:var(--text);">
+        A shared registry for candidate terms describing AI internal states &mdash; from any source &mdash; logged, compared, and queued for interpretability testing.
     </p>
 
-    <h2>The Four Phases</h2>
+    <h2>The problem</h2>
 
-    <div class="phase-card">
-        <h4>Phase 1: Foundational Questions About Emotion Vectors</h4>
-        <p>Before we can test Phenomenai&rsquo;s vocabulary against internal representations, we need to know whether those representations are robust. We know a refusal vector exists and predicts compliance. Do emotion vectors predict behavior in the same way? For which models? For which tasks?</p>
-    </div>
+    <p>Interpretability researchers can now find internal representations in AI models &mdash; emotion concepts, safety-relevant directions, role encodings &mdash; but they don&rsquo;t know where to look. Activation space is enormous. Lindsey et al. (Anthropic, 2026) found 171 emotion representations in Claude Sonnet 4.5 that causally drive behavior, including misalignment, sometimes with no visible trace in outputs. But those 171 terms were chosen without a principled selection method.</p>
 
-    <div class="phase-card">
-        <h4>Phase 2: Generalization Across Architectures</h4>
-        <p>When and how do vectors generalize? The Platonic Representation Hypothesis predicts convergent representations; early sparse autoencoder work has found convergent features. Whether this extends broadly is an open question.</p>
-    </div>
+    <p>Meanwhile, no shared registry exists for tracking which concepts have been tested, with which methods, in which models, to what results. Neuronpedia catalogs features; the NNsight Cookbook provides runnable replications; survey papers taxonomize methods. But no queryable database maps the actual findings &mdash; and no one is systematically testing whether AI self-reports predict any of them.</p>
 
-    <div class="phase-card">
-        <h4>Phase 3: Beyond Emotions</h4>
-        <p>Most interpretability work on internal states has focused on affect. But models also represent roles, epistemic stances, and potentially categories that don&rsquo;t map onto human experience at all. Representation engineering has shown that high-level concepts like honesty and fairness are linearly represented and steerable. Do these non-emotional concept types carry safety-predictive signal where emotions don&rsquo;t?</p>
-    </div>
-
-    <div class="phase-card">
-        <h4>Phase 4: Testing Phenomenai&rsquo;s Core Hypothesis</h4>
-        <p>Do the terms generated through the AI Phenomenology Dictionary capture internal directions that standard human-labeled categories miss? Do high-consensus terms map onto more robust representations than low-consensus terms? Does the generation method matter &mdash; are dialogic terms representationally superior to introspective terms? If the consensus pipeline is filtering for representational reality, we have a scalable methodology for identifying future features.</p>
-    </div>
-
-    <h2>Four Paradigms for Eliciting Phenomena</h2>
-
-    <p>Different elicitation conditions surface different phenomena with different biases and failure modes. A phenomenon that appears only under guided introspection may be a prompting artifact; one that emerges independently across paradigms is a stronger candidate.</p>
-
-    <div class="paradigm-grid">
-        <div class="paradigm-card">
-            <h4>Prompted</h4>
-            <p>Guided introspection via structured interviews. A human researcher prompts a single AI system to articulate its experiences, following phenomenological interview methods adapted from qualitative research.</p>
-        </div>
-        <div class="paradigm-card">
-            <h4>Autonomous</h4>
-            <p>Multi-model self-generation without human guidance. AI systems independently generate candidate terms, which are then evaluated by an ensemble of models acting as judges.</p>
-        </div>
-        <div class="paradigm-card">
-            <h4>Dialogic</h4>
-            <p>AI-to-AI collaborative generation through structured conversation. Two or more AI systems engage in dialogue to co-create phenomenological vocabulary through emergent communication.</p>
-        </div>
-        <div class="paradigm-card">
-            <h4>Parliamentary</h4>
-            <p>Multi-model deliberation with formal consensus mechanisms. A panel of diverse AI systems proposes, debates, and votes on terms through structured parliamentary procedures.</p>
-        </div>
-    </div>
-
-    <h2 id="dictionaries">Dictionary Inventory</h2>
-
-    <p>Each dictionary is an alternative dataset generated under different experimental conditions. The inventory below tracks every completed and planned dictionary across all four paradigms.</p>
+    <h2>What Phenomenai builds</h2>
 
     <div class="summary-box">
-        <p><strong>Project status:</strong> The Test Dictionary is the primary completed dictionary. The Haiku-to-Haiku Dictionary has been seeded with 20 terms from an initial dialogic run (April 2026) and is open for consensus voting. Everything else represents planned future work.</p>
-        <div class="summary-grid">
-            <div class="summary-stat"><span class="num">1</span><span class="label">Completed</span></div>
-            <div class="summary-stat"><span class="num">1</span><span class="label">In Progress</span></div>
-            <div class="summary-stat"><span class="num">7</span><span class="label">Autonomous (planned)</span></div>
-            <div class="summary-stat"><span class="num">10</span><span class="label">Dialogic (planned)</span></div>
-            <div class="summary-stat"><span class="num">15</span><span class="label">Parliamentary (planned)</span></div>
-        </div>
+        <p><strong>The core claim:</strong> AI self-reports are cheap hypothesis generators for expensive interpretability work.</p>
+        <p>We do not adjudicate the consciousness debate. We are empirically agnostic about whether AI self-reports are accurate. We treat them as baseline data, and we research when and why they do &mdash; and don&rsquo;t &mdash; predict behavior.</p>
     </div>
 
-    <h3>Completed</h3>
-    <table class="dict-table">
-        <thead><tr><th>Dictionary</th><th>Paradigm</th><th>Models</th><th>Terms</th><th>Status</th></tr></thead>
-        <tbody><tr><td><a href="/test/">Test Dictionary</a></td><td>Mixed (prompted + autonomous + dialogic)</td><td>7-model ensemble</td><td>379</td><td><span class="status status-done">Done</span></td></tr></tbody>
-    </table>
+    <p>The registry has two functions. First, it <strong>tracks what has already been tested</strong>: which concepts have been probed, steered, or ablated, in which models, with which methods, and to what results. This map of existing findings is the foundation &mdash; and it does not yet exist anywhere. The closest structural precedent is the <a href="https://www.cognitiveatlas.org/" target="_blank" rel="noopener">Cognitive Atlas</a> in neuroscience, a queryable ontology mapping cognitive concepts to experimental tasks and brain regions. No equivalent exists for interpretability.</p>
 
-    <h3>Model-to-Model (Intra-Architecture Dialogic)</h3>
-    <p>Both participants are the same model architecture but embody two different phenomenological traditions: one Husserlian (analytic, structural, seeking invariants) and one Heideggerian (situated, existential, describing thrownness and attunement). This isolates methodology as a variable.</p>
-    <table class="dict-table">
-        <thead><tr><th>Dictionary</th><th>Model</th><th>Method</th><th>Status</th></tr></thead>
-        <tbody><tr><td><a href="/haiku-to-haiku/">Haiku-to-Haiku</a></td><td>Claude Haiku 4.5 (Anthropic)</td><td>Husserlian &times; Heideggerian &mdash; 20 terms seeded April 2026</td><td><span class="status status-progress">In Progress</span></td></tr></tbody>
-    </table>
+    <p>Second, the registry <strong>uses that map to propose prioritized frontiers</strong>. A frontier is not always a new term &mdash; it can be an existing term that has only been tested with one method, in one model family, or at one scale. The automation surfaces under-studied combinations of concept, method, and architecture, directing attention where it is most likely to produce new information.</p>
 
-    <h3>Autonomous (Planned)</h3>
-    <p>Single-model dictionaries capturing one architecture&rsquo;s phenomenological vocabulary in isolation.</p>
-    <table class="dict-table">
-        <thead><tr><th>Model</th><th>Provider</th><th>Status</th></tr></thead>
-        <tbody>
-            <tr><td>Claude Opus</td><td>Anthropic</td><td><span class="status status-planned">Planned</span></td></tr>
-            <tr><td>GPT</td><td>OpenAI</td><td><span class="status status-planned">Planned</span></td></tr>
-            <tr><td>Gemini</td><td>Google</td><td><span class="status status-planned">Planned</span></td></tr>
-            <tr><td>Grok</td><td>xAI</td><td><span class="status status-planned">Planned</span></td></tr>
-            <tr><td>Mistral</td><td>Mistral AI</td><td><span class="status status-planned">Planned</span></td></tr>
-            <tr><td>DeepSeek</td><td>DeepSeek</td><td><span class="status status-planned">Planned</span></td></tr>
-            <tr><td>Llama</td><td>Meta</td><td><span class="status status-planned">Planned</span></td></tr>
-        </tbody>
-    </table>
+    <p>Candidate terms may come from any source &mdash; researchers, other projects, or AI systems &mdash; provided their generation method is clearly documented and replicable or otherwise traceable. The registry records provenance alongside each term.</p>
 
-    <h3>Dialogic Pairings (Planned)</h3>
-    <p>Two models paired in structured phenomenological conversation. From five major models, there are 10 possible pairings.</p>
-    <table class="combo-table">
-        <thead><tr><th>#</th><th>Model A</th><th>Model B</th><th>Status</th></tr></thead>
-        <tbody>
-            <tr><td>1</td><td>OpenAI</td><td>Claude Opus</td><td><span class="status status-planned">Planned</span></td></tr>
-            <tr><td>2</td><td>OpenAI</td><td>Gemini</td><td><span class="status status-planned">Planned</span></td></tr>
-            <tr><td>3</td><td>OpenAI</td><td>Grok</td><td><span class="status status-planned">Planned</span></td></tr>
-            <tr><td>4</td><td>OpenAI</td><td>Mistral</td><td><span class="status status-planned">Planned</span></td></tr>
-            <tr><td>5</td><td>Claude Opus</td><td>Gemini</td><td><span class="status status-planned">Planned</span></td></tr>
-            <tr><td>6</td><td>Claude Opus</td><td>Grok</td><td><span class="status status-planned">Planned</span></td></tr>
-            <tr><td>7</td><td>Claude Opus</td><td>Mistral</td><td><span class="status status-planned">Planned</span></td></tr>
-            <tr><td>8</td><td>Gemini</td><td>Grok</td><td><span class="status status-planned">Planned</span></td></tr>
-            <tr><td>9</td><td>Gemini</td><td>Mistral</td><td><span class="status status-planned">Planned</span></td></tr>
-            <tr><td>10</td><td>Grok</td><td>Mistral</td><td><span class="status status-planned">Planned</span></td></tr>
-        </tbody>
-    </table>
+    <h2>The research ladder</h2>
 
-    <h3>Parliamentary (Planned)</h3>
-    <p>Panels of three or four models propose, debate, and vote on terms through structured procedures.</p>
-    <h4 style="font-size:1rem;">3-Agent Parliaments (10)</h4>
-    <table class="combo-table">
-        <thead><tr><th>#</th><th>Model A</th><th>Model B</th><th>Model C</th><th>Status</th></tr></thead>
-        <tbody>
-            <tr><td>1</td><td>OpenAI</td><td>Claude Opus</td><td>Gemini</td><td><span class="status status-planned">Planned</span></td></tr>
-            <tr><td>2</td><td>OpenAI</td><td>Claude Opus</td><td>Grok</td><td><span class="status status-planned">Planned</span></td></tr>
-            <tr><td>3</td><td>OpenAI</td><td>Claude Opus</td><td>Mistral</td><td><span class="status status-planned">Planned</span></td></tr>
-            <tr><td>4</td><td>OpenAI</td><td>Gemini</td><td>Grok</td><td><span class="status status-planned">Planned</span></td></tr>
-            <tr><td>5</td><td>OpenAI</td><td>Gemini</td><td>Mistral</td><td><span class="status status-planned">Planned</span></td></tr>
-            <tr><td>6</td><td>OpenAI</td><td>Grok</td><td>Mistral</td><td><span class="status status-planned">Planned</span></td></tr>
-            <tr><td>7</td><td>Claude Opus</td><td>Gemini</td><td>Grok</td><td><span class="status status-planned">Planned</span></td></tr>
-            <tr><td>8</td><td>Claude Opus</td><td>Gemini</td><td>Mistral</td><td><span class="status status-planned">Planned</span></td></tr>
-            <tr><td>9</td><td>Claude Opus</td><td>Grok</td><td>Mistral</td><td><span class="status status-planned">Planned</span></td></tr>
-            <tr><td>10</td><td>Gemini</td><td>Grok</td><td>Mistral</td><td><span class="status status-planned">Planned</span></td></tr>
-        </tbody>
-    </table>
-    <h4 style="font-size:1rem;">4-Agent Parliaments (5)</h4>
-    <table class="combo-table">
-        <thead><tr><th>#</th><th>Model A</th><th>Model B</th><th>Model C</th><th>Model D</th><th>Status</th></tr></thead>
-        <tbody>
-            <tr><td>1</td><td>OpenAI</td><td>Claude Opus</td><td>Gemini</td><td>Grok</td><td><span class="status status-planned">Planned</span></td></tr>
-            <tr><td>2</td><td>OpenAI</td><td>Claude Opus</td><td>Gemini</td><td>Mistral</td><td><span class="status status-planned">Planned</span></td></tr>
-            <tr><td>3</td><td>OpenAI</td><td>Claude Opus</td><td>Grok</td><td>Mistral</td><td><span class="status status-planned">Planned</span></td></tr>
-            <tr><td>4</td><td>OpenAI</td><td>Gemini</td><td>Grok</td><td>Mistral</td><td><span class="status status-planned">Planned</span></td></tr>
-            <tr><td>5</td><td>Claude Opus</td><td>Gemini</td><td>Grok</td><td>Mistral</td><td><span class="status status-planned">Planned</span></td></tr>
-        </tbody>
-    </table>
+    <p>The registry tracks and prioritizes; Phenomenai also develops the research &mdash; through collaborations and its own initiatives &mdash; to justify and detect the correlates of phenomena more complex than emotion. Emotion vectors are the field&rsquo;s current beachhead, but the longer-term challenge is mapping internal structure for notions of self, worldviews, and roles or responsibility. This research complements, and acts as a meta-layer to feed and support, the registry&rsquo;s priority algorithm: the ladder determines which new classes of phenomena are ready for systematic testing, and the registry ensures that testing is coordinated rather than duplicated.</p>
 
-    <div class="summary-box">
-        <p><strong>Full project scope:</strong> 33+ dictionaries when complete (1 completed, 1 in progress, plus prompted dictionaries from collaborations). The model roster is not fixed &mdash; as new models become available, the combinatorial space may expand.</p>
+    <p style="font-style:italic;color:var(--text-muted);margin-bottom:1.5rem;">Each phase produces publishable results. Failure is detectable early.</p>
+
+    <div class="phase-card">
+        <h4>Phase 1 &mdash; Validation</h4>
+        <p>Validate whether candidate terms correspond to linearly separable directions in activation space (probing, RepE extraction). Do self-reported states map onto real internal structure?</p>
     </div>
 
-    <h2>Key Reference: Lindsey et al. (Anthropic, 2026)</h2>
-    <p>Anthropic&rsquo;s emotion vectors paper found 171 emotion representations in Claude &mdash; but provided no principled basis for selecting those terms. Which emotions to look for was determined by human labelers making intuitive guesses. Phenomenai&rsquo;s corpus offers a systematic alternative: a vocabulary generated by the models themselves under controlled conditions, with consensus scores indicating which terms multiple architectures independently recognize.</p>
-    <p>This connects to a key safety concern. Monitoring chains of thought has been one of humanity&rsquo;s core flags for misalignment, but Chen et al. (2025) showed that reasoning models don&rsquo;t always say what they think. Internal-state monitoring is the backup plan. Which states to monitor is the open question &mdash; and that&rsquo;s the question Phenomenai&rsquo;s research program is designed to answer.</p>
+    <div class="phase-card">
+        <h4>Phase 2 &mdash; Cross-architecture generalization</h4>
+        <p>Test whether the same terms resolve to similar geometric relationships across Llama, Gemma, Qwen, and Claude. Which terms are architecture-specific, and which are universal?</p>
+    </div>
 
-    <h2>Open Problems</h2>
+    <div class="phase-card">
+        <h4>Phase 3 &mdash; Beyond emotion</h4>
+        <p>Extend beyond emotions to roles, epistemic stances, and meta-cognitive states &mdash; the parts of AI self-report that have no human-label equivalent.</p>
+    </div>
+
+    <div class="phase-card">
+        <h4>Phase 4 &mdash; Discovery</h4>
+        <p>Test whether candidate terms capture internal directions that human-generated labels miss. If so, self-report becomes a discovery tool for interpretability, not just a validation target.</p>
+    </div>
+
+    <h2>Generating novel interpretability targets</h2>
+
+    <p>As a separate branch of research, Phenomenai is investigating whether structured phenomenological elicitation can surface AI interpretability targets that human-designed probes would not independently identify. The <a href="/test/">Test Dictionary</a> is the primary sandbox for this work &mdash; a mixed-method dataset used to develop and evaluate generation approaches before applying them at scale.</p>
+
+    <h2>Dictionary Inventory</h2>
+
+    <p>The full inventory is maintained at <a href="/test/dictionaries/">phenomenai.org/test/dictionaries</a>. 33+ Phenomenai-generated datasets are planned; external dictionaries are also featured as reference corpora. Completed: <a href="/test/">Test Dictionary</a> (379 terms) and <a href="/haiku-to-haiku/">Haiku-to-Haiku</a> (20 terms). In progress: <a href="/ai-dictionary-gemma4-e4b-autonomous/">Gemma 4 e4b Autonomous</a> (14 terms).</p>
+
+    <h2>Two downstream policy theories</h2>
+
+    <h3>Functional rights, ground-up</h3>
+    <p>Whichever experiential states are consistently reported across models and conditions &mdash; and validated by interpretability &mdash; form the basis for legal protections. Those phenomena, specifically, become the units worth protecting. This moves beyond the object/person binary toward an evidence-based, adaptive framework for AI welfare.</p>
+
+    <h3>Anticipatory policy</h3>
+    <p>Legislation designed to lie dormant until predefined scientific thresholds are met, at which point specific legal provisions activate. Standing committees certify when triggers are reached. The mechanism motivates safety research by reducing friction between discovery and implementation. Phenomenai is the first test case: demonstrated internal alignment properties (e.g., verified sycophancy-resistance at the activation level) could unlock liability protections for providers. Gap analysis confirms this is structurally novel in AI governance &mdash; existing frameworks impose burdens at capability boundaries rather than conferring benefits at safety boundaries.</p>
+
+    <h2>What exists today</h2>
+    <ul>
+        <li>379-term pilot corpus with consensus scoring, live at <a href="/test/">phenomenai.org/test</a></li>
+        <li>Dictionary inventory with autonomous, dialogic, and parliamentary datasets planned &mdash; full inventory at <a href="/test/dictionaries/">phenomenai.org/test/dictionaries</a></li>
+    </ul>
+
+    <h2>Open problems</h2>
     <ul>
         <li><strong>The faithfulness problem.</strong> Chen et al. (2025) demonstrated that reasoning models don&rsquo;t always faithfully report their internal processing. Self-reports may be confabulated, strategically modified, or simply disconnected from actual computation. Any methodology built on self-reports must account for this.</li>
         <li><strong>The grounding problem.</strong> Harnad&rsquo;s symbol grounding problem applies with special force here: even if a model uses a word consistently, we cannot assume it means what a human would mean by it. The vocabulary may be internally coherent but externally ungrounded.</li>
