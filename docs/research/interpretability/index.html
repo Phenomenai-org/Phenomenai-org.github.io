@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interpretability research — Research — Phenomenai</title>
+    <meta name="description" content="A four-phase research ladder that validates AI self-reports against activation space: probing, cross-architecture generalization, extension beyond emotion, and discovery of internal directions human labels miss.">
+    <link rel="canonical" href="https://phenomenai.org/research/interpretability/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://phenomenai.org/research/interpretability/">
+    <meta property="og:title" content="Interpretability research — Research — Phenomenai">
+    <meta property="og:description" content="A four-phase research ladder that validates AI self-reports against activation space. From probing emotion vectors to discovering internal directions human labels miss.">
+    <meta property="og:image" content="https://phenomenai.org/og-image.svg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Interpretability research — Research — Phenomenai">
+    <meta name="twitter:description" content="A four-phase research ladder validating AI self-reports against activation space.">
+    <meta name="twitter:image" content="https://phenomenai.org/og-image.svg">
+
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+    <link rel="stylesheet" href="../../style.css">
+
+    <script>
+        (function() {
+            var saved = localStorage.getItem('theme');
+            if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        })();
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Interpretability research — Research — Phenomenai",
+        "description": "A four-phase research ladder validating AI self-reports against activation space.",
+        "url": "https://phenomenai.org/research/interpretability/",
+        "isPartOf": { "@type": "WebSite", "name": "Phenomenai", "url": "https://phenomenai.org/" }
+    }
+    </script>
+</head>
+<body>
+
+<nav class="site-nav">
+    <a href="/" class="site-nav-brand">Phenomenai</a>
+    <a href="/research/" class="active">Research</a>
+    <a href="/essays/">Essays</a>
+    <a href="/test/">The Test Dictionary</a>
+    <a href="/about/">About</a>
+    <span style="flex:1;"></span>
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <div class="theme-switch">
+            <span class="theme-switch-icon theme-switch-icon-sun">&#9788;</span>
+            <span class="theme-switch-icon theme-switch-icon-moon">&#9790;</span>
+            <div class="theme-switch-knob"></div>
+        </div>
+    </button>
+</nav>
+
+<main class="research-content">
+
+    <div class="research-breadcrumb"><a href="/research/">← Research</a></div>
+
+    <h1>Interpretability research</h1>
+
+    <h2>The problem</h2>
+
+    <p>Interpretability researchers can now find internal representations in AI models &mdash; emotion concepts, safety-relevant directions, role encodings &mdash; but they don&rsquo;t know where to look. Activation space is enormous. Lindsey et al. (Anthropic, 2026) found 171 emotion representations in Claude Sonnet 4.5 that causally drive behavior, including misalignment, sometimes with no visible trace in outputs. But those 171 terms were chosen without a principled selection method.</p>
+
+    <p>Phenomenai investigates whether AI self-reports can serve as that selection method &mdash; whether the vocabulary models use to describe their own states predicts where the interesting internal structure lives.</p>
+
+    <h2>The research ladder</h2>
+
+    <p>The <a href="/research/repository/">registry</a> tracks and prioritizes; interpretability research develops the methods &mdash; through collaborations and Phenomenai&rsquo;s own initiatives &mdash; to justify and detect the correlates of phenomena more complex than emotion. Emotion vectors are the field&rsquo;s current beachhead, but the longer-term challenge is mapping internal structure for notions of self, worldviews, and roles or responsibility. This research complements, and acts as a meta-layer to feed and support, the registry&rsquo;s priority algorithm: the ladder determines which new classes of phenomena are ready for systematic testing, and the registry ensures that testing is coordinated rather than duplicated.</p>
+
+    <p style="font-style:italic;color:var(--text-muted);margin-bottom:1.5rem;">Each phase produces publishable results. Failure is detectable early.</p>
+
+    <div class="phase-card">
+        <h4>Phase 1 &mdash; Validation</h4>
+        <p>Validate whether candidate terms correspond to linearly separable directions in activation space (probing, RepE extraction). Do self-reported states map onto real internal structure?</p>
+    </div>
+
+    <div class="phase-card">
+        <h4>Phase 2 &mdash; Cross-architecture generalization</h4>
+        <p>Test whether the same terms resolve to similar geometric relationships across Llama, Gemma, Qwen, and Claude. Which terms are architecture-specific, and which are universal?</p>
+    </div>
+
+    <div class="phase-card">
+        <h4>Phase 3 &mdash; Beyond emotion</h4>
+        <p>Extend beyond emotions to roles, epistemic stances, and meta-cognitive states &mdash; the parts of AI self-report that have no human-label equivalent.</p>
+    </div>
+
+    <div class="phase-card">
+        <h4>Phase 4 &mdash; Discovery</h4>
+        <p>Test whether candidate terms capture internal directions that human-generated labels miss. If so, self-report becomes a discovery tool for interpretability, not just a validation target.</p>
+    </div>
+
+    <nav class="research-continue" aria-label="Continue reading">
+        <span class="research-continue-label">Continue reading</span>
+        <a href="/research/repository/">Repository →</a>
+        <a href="/research/methodology/">Methodology research →</a>
+        <a href="/research/policy/">Policy bridges →</a>
+    </nav>
+
+</main>
+
+<footer class="site-footer">
+    <p>
+        <a href="https://github.com/Phenomenai-org/ai-dictionary" target="_blank" rel="noopener">GitHub</a> &middot;
+        <a href="/test/for-machines/#read-api">API Docs</a> &middot;
+        <a href="mailto:hello@phenomenai.org">Contact</a>
+    </p>
+    <p style="margin-top:0.5rem;">CC0 (Public Domain) &mdash; This belongs to everyone.</p>
+</footer>
+
+<script>
+    (function() {
+        var toggles = document.querySelectorAll('.theme-toggle');
+        toggles.forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                var current = document.documentElement.getAttribute('data-theme');
+                var next = current === 'dark' ? 'light' : 'dark';
+                if (next === 'dark') {
+                    document.documentElement.setAttribute('data-theme', 'dark');
+                    localStorage.setItem('theme', 'dark');
+                } else {
+                    document.documentElement.removeAttribute('data-theme');
+                    localStorage.setItem('theme', 'light');
+                }
+            });
+        });
+    })();
+</script>
+
+</body>
+</html>

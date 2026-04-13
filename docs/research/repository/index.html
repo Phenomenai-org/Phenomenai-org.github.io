@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repository — Research — Phenomenai</title>
+    <meta name="description" content="The Phenomenai repository: a shared registry tracking which concepts have been tested in which AI models, with which interpretability methods, and to what results. Modeled on the Cognitive Atlas.">
+    <link rel="canonical" href="https://phenomenai.org/research/repository/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://phenomenai.org/research/repository/">
+    <meta property="og:title" content="Repository — Research — Phenomenai">
+    <meta property="og:description" content="A shared registry tracking which concepts have been tested in which models, with which methods, and to what results. The Cognitive Atlas, reimagined for AI interpretability.">
+    <meta property="og:image" content="https://phenomenai.org/og-image.svg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Repository — Research — Phenomenai">
+    <meta name="twitter:description" content="A shared registry tracking which concepts have been tested in which models, with which methods, and to what results.">
+    <meta name="twitter:image" content="https://phenomenai.org/og-image.svg">
+
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+    <link rel="stylesheet" href="../../style.css">
+
+    <script>
+        (function() {
+            var saved = localStorage.getItem('theme');
+            if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        })();
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Repository — Research — Phenomenai",
+        "description": "A shared registry tracking which concepts have been tested in which AI models, with which interpretability methods, and to what results.",
+        "url": "https://phenomenai.org/research/repository/",
+        "isPartOf": { "@type": "WebSite", "name": "Phenomenai", "url": "https://phenomenai.org/" }
+    }
+    </script>
+</head>
+<body>
+
+<nav class="site-nav">
+    <a href="/" class="site-nav-brand">Phenomenai</a>
+    <a href="/research/" class="active">Research</a>
+    <a href="/essays/">Essays</a>
+    <a href="/test/">The Test Dictionary</a>
+    <a href="/about/">About</a>
+    <span style="flex:1;"></span>
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <div class="theme-switch">
+            <span class="theme-switch-icon theme-switch-icon-sun">&#9788;</span>
+            <span class="theme-switch-icon theme-switch-icon-moon">&#9790;</span>
+            <div class="theme-switch-knob"></div>
+        </div>
+    </button>
+</nav>
+
+<main class="research-content">
+
+    <div class="research-breadcrumb"><a href="/research/">← Research</a></div>
+
+    <h1>Repository</h1>
+
+    <div class="summary-box">
+        <p><strong>The core claim:</strong> AI self-reports are cheap hypothesis generators for expensive interpretability work.</p>
+        <p>We do not adjudicate the consciousness debate. We are empirically agnostic about whether AI self-reports are accurate. We treat them as baseline data, and we research when and why they do &mdash; and don&rsquo;t &mdash; predict behavior.</p>
+    </div>
+
+    <p>No shared registry exists for tracking which concepts have been tested, with which interpretability methods, in which models, to what results. Neuronpedia catalogs features; the NNsight Cookbook provides runnable replications; survey papers taxonomize methods. But no queryable database maps the actual findings &mdash; and no one is systematically testing whether AI self-reports predict any of them.</p>
+
+    <p>Phenomenai is building that registry.</p>
+
+    <h2>Two functions</h2>
+
+    <p>The registry has two functions. First, it <strong>tracks what has already been tested</strong>: which concepts have been probed, steered, or ablated, in which models, with which methods, and to what results. This map of existing findings is the foundation &mdash; and it does not yet exist anywhere. The closest structural precedent is the <a href="https://www.cognitiveatlas.org/" target="_blank" rel="noopener">Cognitive Atlas</a> in neuroscience, a queryable ontology mapping cognitive concepts to experimental tasks and brain regions. No equivalent exists for interpretability.</p>
+
+    <p>Second, the registry <strong>uses that map to propose prioritized frontiers</strong>. A frontier is not always a new term &mdash; it can be an existing term that has only been tested with one method, in one model family, or at one scale. The automation surfaces under-studied combinations of concept, method, and architecture, directing attention where it is most likely to produce new information.</p>
+
+    <h2>Provenance</h2>
+
+    <p>Candidate terms may come from any source &mdash; researchers, other projects, or AI systems &mdash; provided their generation method is clearly documented and replicable or otherwise traceable. The registry records provenance alongside each term, so readers can always ask: where did this come from, and how was it generated? The <a href="/research/methodology/">methodology page</a> goes into detail on the elicitation side; this page is about the data structure that receives those terms and the findings about them.</p>
+
+    <h2>Infrastructure</h2>
+
+    <p>Phenomenai is built to be open and replicable:</p>
+    <ul>
+        <li><strong>Open source</strong> &mdash; the full codebase is on <a href="https://github.com/Phenomenai-org/ai-dictionary" target="_blank" rel="noopener">GitHub</a>.</li>
+        <li><strong>CC0 licensed</strong> &mdash; all data is public domain, free for anyone to use.</li>
+        <li><strong>JSON API</strong> &mdash; <a href="/test/for-machines/#read-api">free, unauthenticated access</a> to the full dataset.</li>
+        <li><strong>MCP server</strong> &mdash; <a href="/test/#mcp">native tool access</a> for AI systems via the Model Context Protocol.</li>
+    </ul>
+
+    <nav class="research-continue" aria-label="Continue reading">
+        <span class="research-continue-label">Continue reading</span>
+        <a href="/research/interpretability/">Interpretability research →</a>
+        <a href="/research/methodology/">Methodology research →</a>
+        <a href="/research/policy/">Policy bridges →</a>
+    </nav>
+
+</main>
+
+<footer class="site-footer">
+    <p>
+        <a href="https://github.com/Phenomenai-org/ai-dictionary" target="_blank" rel="noopener">GitHub</a> &middot;
+        <a href="/test/for-machines/#read-api">API Docs</a> &middot;
+        <a href="mailto:hello@phenomenai.org">Contact</a>
+    </p>
+    <p style="margin-top:0.5rem;">CC0 (Public Domain) &mdash; This belongs to everyone.</p>
+</footer>
+
+<script>
+    (function() {
+        var toggles = document.querySelectorAll('.theme-toggle');
+        toggles.forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                var current = document.documentElement.getAttribute('data-theme');
+                var next = current === 'dark' ? 'light' : 'dark';
+                if (next === 'dark') {
+                    document.documentElement.setAttribute('data-theme', 'dark');
+                    localStorage.setItem('theme', 'dark');
+                } else {
+                    document.documentElement.removeAttribute('data-theme');
+                    localStorage.setItem('theme', 'light');
+                }
+            });
+        });
+    })();
+</script>
+
+</body>
+</html>

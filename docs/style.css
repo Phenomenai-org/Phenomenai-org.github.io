@@ -2736,3 +2736,197 @@ html[data-theme="dark"] .theme-toggle:active .theme-switch-knob {
     text-decoration: none;
 }
 .bayes-link:hover { text-decoration: underline; }
+
+/* ── Research section: hub + sub-pages ─────────────────────── */
+
+.research-content {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 2.5rem 2rem 4rem;
+    line-height: 1.8;
+    color: var(--text);
+}
+.research-content h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+.research-content h2 {
+    font-size: 1.5rem;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--border);
+}
+.research-content h3 {
+    font-size: 1.15rem;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+}
+.research-content h4 {
+    font-size: 1.05rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary);
+}
+.research-content p {
+    margin-bottom: 1rem;
+    color: var(--text-secondary);
+}
+.research-content a { color: var(--primary); }
+.research-content a:hover { text-decoration: underline; }
+.research-content ul,
+.research-content ol {
+    margin: 0 0 1rem 1.25rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+}
+.research-content li { margin-bottom: 0.5rem; }
+
+.phase-card {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.5rem 1.75rem;
+    margin-bottom: 1.25rem;
+}
+.phase-card h4 {
+    margin-top: 0;
+    color: var(--primary);
+}
+.phase-card p { margin-bottom: 0; }
+
+.summary-box {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--primary);
+    border-radius: 8px;
+    padding: 1.25rem 1.5rem;
+    margin: 1.5rem 0;
+}
+.summary-box p { margin-bottom: 0.5rem; }
+.summary-box p:last-child { margin-bottom: 0; }
+
+/* 2×2 card grid on the research hub (variant of .three-panel) */
+.research-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+    margin: 2.5rem 0 3rem;
+}
+.research-grid .panel {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.75rem;
+    text-decoration: none;
+    color: inherit;
+    transition: box-shadow 0.2s, transform 0.2s;
+    display: flex;
+    flex-direction: column;
+}
+.research-grid .panel:hover {
+    box-shadow: 0 2px 12px var(--shadow);
+    transform: translateY(-2px);
+}
+.research-grid .panel h3 {
+    font-size: 1.1rem;
+    margin: 0 0 0.5rem;
+    color: var(--primary);
+}
+.research-grid .panel p {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin: 0 0 1rem;
+    flex: 1;
+}
+.research-grid .panel .panel-link {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--primary);
+}
+@media (max-width: 768px) {
+    .research-grid { grid-template-columns: 1fr; }
+}
+
+/* Folded "Open problems" callout on the hub */
+.open-problems {
+    margin: 2.5rem 0 1rem;
+    border-top: 1px solid var(--border);
+    padding-top: 1.5rem;
+}
+.open-problems > summary {
+    cursor: pointer;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text);
+    list-style: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.25rem 0;
+}
+.open-problems > summary::-webkit-details-marker { display: none; }
+.open-problems > summary::before {
+    content: "▸";
+    color: var(--primary);
+    transition: transform 0.15s;
+    display: inline-block;
+}
+.open-problems[open] > summary::before {
+    transform: rotate(90deg);
+}
+.open-problems > summary:hover { color: var(--primary); }
+.open-problems ul {
+    margin-top: 1rem;
+    margin-left: 1.25rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+}
+.open-problems li { margin-bottom: 0.75rem; }
+.open-problems strong { color: var(--text); }
+
+/* Breadcrumb at the top of each research sub-page */
+.research-breadcrumb {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+.research-breadcrumb a {
+    color: var(--text-secondary);
+    text-decoration: none;
+}
+.research-breadcrumb a:hover { color: var(--primary); }
+
+/* "Continue reading" footer on each sub-page */
+.research-continue {
+    margin-top: 4rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 0.9rem;
+}
+.research-continue-label {
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    margin-bottom: 0.5rem;
+}
+.research-continue a {
+    color: var(--primary);
+    text-decoration: none;
+    margin-right: 1.5rem;
+    font-weight: 600;
+}
+.research-continue a:hover { text-decoration: underline; }
+
+@media (max-width: 600px) {
+    .research-content { padding: 1.5rem 1rem 3rem; }
+    .research-content h1 { font-size: 1.5rem; }
+}

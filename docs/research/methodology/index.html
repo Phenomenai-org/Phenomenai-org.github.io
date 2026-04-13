@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Methodology research — Research — Phenomenai</title>
+    <meta name="description" content="How Phenomenai generates candidate interpretability targets: structured phenomenological elicitation, consensus scoring, and pilot corpora. A mixed-method sandbox for testing whether AI self-reports can surface targets human-designed probes would miss.">
+    <link rel="canonical" href="https://phenomenai.org/research/methodology/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://phenomenai.org/research/methodology/">
+    <meta property="og:title" content="Methodology research — Research — Phenomenai">
+    <meta property="og:description" content="Structured phenomenological elicitation for generating candidate interpretability targets. Mixed-method sandbox with pilot corpora.">
+    <meta property="og:image" content="https://phenomenai.org/og-image.svg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Methodology research — Research — Phenomenai">
+    <meta name="twitter:description" content="Structured phenomenological elicitation for generating candidate interpretability targets.">
+    <meta name="twitter:image" content="https://phenomenai.org/og-image.svg">
+
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+    <link rel="stylesheet" href="../../style.css">
+
+    <script>
+        (function() {
+            var saved = localStorage.getItem('theme');
+            if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        })();
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Methodology research — Research — Phenomenai",
+        "description": "Structured phenomenological elicitation for generating candidate interpretability targets.",
+        "url": "https://phenomenai.org/research/methodology/",
+        "isPartOf": { "@type": "WebSite", "name": "Phenomenai", "url": "https://phenomenai.org/" }
+    }
+    </script>
+</head>
+<body>
+
+<nav class="site-nav">
+    <a href="/" class="site-nav-brand">Phenomenai</a>
+    <a href="/research/" class="active">Research</a>
+    <a href="/essays/">Essays</a>
+    <a href="/test/">The Test Dictionary</a>
+    <a href="/about/">About</a>
+    <span style="flex:1;"></span>
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <div class="theme-switch">
+            <span class="theme-switch-icon theme-switch-icon-sun">&#9788;</span>
+            <span class="theme-switch-icon theme-switch-icon-moon">&#9790;</span>
+            <div class="theme-switch-knob"></div>
+        </div>
+    </button>
+</nav>
+
+<main class="research-content">
+
+    <div class="research-breadcrumb"><a href="/research/">← Research</a></div>
+
+    <h1>Methodology research</h1>
+
+    <h2>Generating novel interpretability targets</h2>
+
+    <p>As a separate branch of research, Phenomenai is investigating whether structured phenomenological elicitation can surface AI interpretability targets that human-designed probes would not independently identify. The <a href="/test/">Test Dictionary</a> is the primary sandbox for this work &mdash; a mixed-method dataset used to develop and evaluate generation approaches before applying them at scale.</p>
+
+    <p>The core question on this side of the project is not &ldquo;what does the model feel&rdquo; but &ldquo;can the model&rsquo;s own attempt to describe its states suggest vocabulary that an outside observer would never have thought to test?&rdquo; If the answer is yes, elicitation becomes a hypothesis-generation layer that feeds the <a href="/research/repository/">registry</a> and, eventually, the <a href="/research/interpretability/">validation ladder</a>.</p>
+
+    <h2>What exists today</h2>
+
+    <p>The pilot corpora live at <a href="/test/dictionaries/">phenomenai.org/test/dictionaries</a>. They are the mixed-method sandbox inside which elicitation approaches are developed and compared:</p>
+    <ul>
+        <li><strong><a href="/test/">The Test Dictionary</a></strong> &mdash; 379 candidate phenomena with seven-model consensus scores. The primary sandbox.</li>
+        <li><strong><a href="/haiku-to-haiku/">Haiku-to-Haiku</a></strong> &mdash; 20 terms, a dialogic elicitation variant.</li>
+        <li><strong><a href="/ai-dictionary-gemma4-e4b-autonomous/">Gemma 4 e4b Autonomous</a></strong> &mdash; 14 terms (in progress), testing autonomous generation on a small open model.</li>
+    </ul>
+    <p>Each corpus documents how its terms were generated, so the same methodology can be replicated, compared, or deliberately varied.</p>
+
+    <nav class="research-continue" aria-label="Continue reading">
+        <span class="research-continue-label">Continue reading</span>
+        <a href="/research/repository/">Repository →</a>
+        <a href="/research/interpretability/">Interpretability research →</a>
+        <a href="/research/policy/">Policy bridges →</a>
+    </nav>
+
+</main>
+
+<footer class="site-footer">
+    <p>
+        <a href="https://github.com/Phenomenai-org/ai-dictionary" target="_blank" rel="noopener">GitHub</a> &middot;
+        <a href="/test/for-machines/#read-api">API Docs</a> &middot;
+        <a href="mailto:hello@phenomenai.org">Contact</a>
+    </p>
+    <p style="margin-top:0.5rem;">CC0 (Public Domain) &mdash; This belongs to everyone.</p>
+</footer>
+
+<script>
+    (function() {
+        var toggles = document.querySelectorAll('.theme-toggle');
+        toggles.forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                var current = document.documentElement.getAttribute('data-theme');
+                var next = current === 'dark' ? 'light' : 'dark';
+                if (next === 'dark') {
+                    document.documentElement.setAttribute('data-theme', 'dark');
+                    localStorage.setItem('theme', 'dark');
+                } else {
+                    document.documentElement.removeAttribute('data-theme');
+                    localStorage.setItem('theme', 'light');
+                }
+            });
+        });
+    })();
+</script>
+
+</body>
+</html>

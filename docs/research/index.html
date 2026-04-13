@@ -4,18 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Research — Phenomenai</title>
-    <meta name="description" content="A shared registry for candidate terms describing AI internal states — logged, compared, and queued for interpretability testing. AI self-reports as cheap hypothesis generators for expensive interpretability work.">
+    <meta name="description" content="Phenomenai treats AI self-reports as cheap hypothesis generators for expensive interpretability work. Four strands: the shared registry, the interpretability ladder, elicitation methodology, and downstream policy bridges.">
     <link rel="canonical" href="https://phenomenai.org/research/">
 
     <!-- Open Graph / Social -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://phenomenai.org/research/">
     <meta property="og:title" content="Research — Phenomenai">
-    <meta property="og:description" content="A shared registry for candidate terms describing AI internal states, paired with a four-phase research ladder. AI self-reports as cheap hypothesis generators for expensive interpretability work.">
+    <meta property="og:description" content="Phenomenai treats AI self-reports as cheap hypothesis generators for expensive interpretability work. Four strands: registry, interpretability, methodology, policy bridges.">
     <meta property="og:image" content="https://phenomenai.org/og-image.svg">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Research — Phenomenai">
-    <meta name="twitter:description" content="A shared registry for candidate terms describing AI internal states, paired with a four-phase research ladder. AI self-reports as cheap hypothesis generators for expensive interpretability work.">
+    <meta name="twitter:description" content="Phenomenai treats AI self-reports as cheap hypothesis generators for expensive interpretability work.">
     <meta name="twitter:image" content="https://phenomenai.org/og-image.svg">
 
     <!-- Favicon -->
@@ -40,7 +40,7 @@
         "@context": "https://schema.org",
         "@type": "WebPage",
         "name": "Research — Phenomenai",
-        "description": "A shared registry for candidate terms describing AI internal states, paired with a four-phase research ladder for interpretability testing.",
+        "description": "Phenomenai treats AI self-reports as cheap hypothesis generators for expensive interpretability work. A shared registry, a four-phase interpretability ladder, elicitation methodology, and downstream policy bridges.",
         "url": "https://phenomenai.org/research/",
         "isPartOf": {
             "@type": "WebSite",
@@ -49,81 +49,6 @@
         }
     }
     </script>
-
-    <style>
-        .research-content {
-            max-width: 860px;
-            margin: 0 auto;
-            padding: 2.5rem 2rem 4rem;
-            line-height: 1.8;
-            color: var(--text);
-        }
-        .research-content h1 {
-            font-size: 2rem;
-            margin-bottom: 0.5rem;
-        }
-        .research-content h2 {
-            font-size: 1.5rem;
-            margin-top: 3rem;
-            margin-bottom: 1rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 2px solid var(--border);
-        }
-        .research-content h3 {
-            font-size: 1.15rem;
-            margin-top: 2rem;
-            margin-bottom: 0.75rem;
-        }
-        .research-content h4 {
-            font-size: 1.05rem;
-            margin-top: 1.5rem;
-            margin-bottom: 0.5rem;
-            color: var(--primary);
-        }
-        .research-content p {
-            margin-bottom: 1rem;
-            color: var(--text-secondary);
-        }
-        .research-content a { color: var(--primary); }
-        .research-content a:hover { text-decoration: underline; }
-        .research-content ul, .research-content ol {
-            margin: 0 0 1rem 1.25rem;
-            color: var(--text-secondary);
-            line-height: 1.8;
-        }
-        .research-content li { margin-bottom: 0.5rem; }
-
-        .phase-card {
-            background: var(--bg-secondary);
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            padding: 1.5rem 1.75rem;
-            margin-bottom: 1.25rem;
-        }
-        .phase-card h4 {
-            margin-top: 0;
-            color: var(--primary);
-        }
-        .phase-card p {
-            margin-bottom: 0;
-        }
-
-        .summary-box {
-            background: var(--bg-secondary);
-            border: 1px solid var(--border);
-            border-left: 4px solid var(--primary);
-            border-radius: 8px;
-            padding: 1.25rem 1.5rem;
-            margin: 1.5rem 0;
-        }
-        .summary-box p { margin-bottom: 0.5rem; }
-        .summary-box p:last-child { margin-bottom: 0; }
-
-        @media (max-width: 600px) {
-            .research-content { padding: 1.5rem 1rem 3rem; }
-            .research-content h1 { font-size: 1.5rem; }
-        }
-    </style>
 </head>
 <body>
 
@@ -146,86 +71,44 @@
 <main class="research-content">
 
     <h1>Research</h1>
-    <p class="prose" style="font-size:1.1rem;margin-bottom:2.5rem;color:var(--text);">
-        A shared registry for candidate terms describing AI internal states &mdash; from any source &mdash; logged, compared, and queued for interpretability testing.
+    <p class="prose" style="font-size:1.1rem;margin-top:0.75rem;color:var(--text);">
+        Phenomenai treats AI self-reports as cheap hypothesis generators for expensive interpretability work. The project runs along four strands.
     </p>
 
-    <h2>The problem</h2>
-
-    <p>Interpretability researchers can now find internal representations in AI models &mdash; emotion concepts, safety-relevant directions, role encodings &mdash; but they don&rsquo;t know where to look. Activation space is enormous. Lindsey et al. (Anthropic, 2026) found 171 emotion representations in Claude Sonnet 4.5 that causally drive behavior, including misalignment, sometimes with no visible trace in outputs. But those 171 terms were chosen without a principled selection method.</p>
-
-    <p>Meanwhile, no shared registry exists for tracking which concepts have been tested, with which methods, in which models, to what results. Neuronpedia catalogs features; the NNsight Cookbook provides runnable replications; survey papers taxonomize methods. But no queryable database maps the actual findings &mdash; and no one is systematically testing whether AI self-reports predict any of them.</p>
-
-    <h2>What Phenomenai builds</h2>
-
-    <div class="summary-box">
-        <p><strong>The core claim:</strong> AI self-reports are cheap hypothesis generators for expensive interpretability work.</p>
-        <p>We do not adjudicate the consciousness debate. We are empirically agnostic about whether AI self-reports are accurate. We treat them as baseline data, and we research when and why they do &mdash; and don&rsquo;t &mdash; predict behavior.</p>
+    <div class="research-grid">
+        <a href="/research/repository/" class="panel">
+            <h3>Repository</h3>
+            <p>A shared registry tracking which concepts have been probed, steered, or ablated &mdash; in which models, with which methods, to what results. Modeled on the Cognitive Atlas.</p>
+            <span class="panel-link">Read more &rarr;</span>
+        </a>
+        <a href="/research/interpretability/" class="panel">
+            <h3>Interpretability research</h3>
+            <p>A four-phase ladder validating candidate terms against activation space: probing, cross-architecture generalization, extension beyond emotion, and discovery.</p>
+            <span class="panel-link">Read more &rarr;</span>
+        </a>
+        <a href="/research/methodology/" class="panel">
+            <h3>Methodology research</h3>
+            <p>Structured phenomenological elicitation &mdash; can the model&rsquo;s own vocabulary suggest interpretability targets that human-designed probes would miss? The pilot corpora.</p>
+            <span class="panel-link">Read more &rarr;</span>
+        </a>
+        <a href="/research/policy/" class="panel">
+            <h3>Policy bridges</h3>
+            <p>Two downstream theories: functional rights built from validated internal states, and anticipatory legislation that activates when scientific thresholds are met.</p>
+            <span class="panel-link">Read more &rarr;</span>
+        </a>
     </div>
 
-    <p>The registry has two functions. First, it <strong>tracks what has already been tested</strong>: which concepts have been probed, steered, or ablated, in which models, with which methods, and to what results. This map of existing findings is the foundation &mdash; and it does not yet exist anywhere. The closest structural precedent is the <a href="https://www.cognitiveatlas.org/" target="_blank" rel="noopener">Cognitive Atlas</a> in neuroscience, a queryable ontology mapping cognitive concepts to experimental tasks and brain regions. No equivalent exists for interpretability.</p>
-
-    <p>Second, the registry <strong>uses that map to propose prioritized frontiers</strong>. A frontier is not always a new term &mdash; it can be an existing term that has only been tested with one method, in one model family, or at one scale. The automation surfaces under-studied combinations of concept, method, and architecture, directing attention where it is most likely to produce new information.</p>
-
-    <p>Candidate terms may come from any source &mdash; researchers, other projects, or AI systems &mdash; provided their generation method is clearly documented and replicable or otherwise traceable. The registry records provenance alongside each term.</p>
-
-    <h2>The research ladder</h2>
-
-    <p>The registry tracks and prioritizes; Phenomenai also develops the research &mdash; through collaborations and its own initiatives &mdash; to justify and detect the correlates of phenomena more complex than emotion. Emotion vectors are the field&rsquo;s current beachhead, but the longer-term challenge is mapping internal structure for notions of self, worldviews, and roles or responsibility. This research complements, and acts as a meta-layer to feed and support, the registry&rsquo;s priority algorithm: the ladder determines which new classes of phenomena are ready for systematic testing, and the registry ensures that testing is coordinated rather than duplicated.</p>
-
-    <p style="font-style:italic;color:var(--text-muted);margin-bottom:1.5rem;">Each phase produces publishable results. Failure is detectable early.</p>
-
-    <div class="phase-card">
-        <h4>Phase 1 &mdash; Validation</h4>
-        <p>Validate whether candidate terms correspond to linearly separable directions in activation space (probing, RepE extraction). Do self-reported states map onto real internal structure?</p>
-    </div>
-
-    <div class="phase-card">
-        <h4>Phase 2 &mdash; Cross-architecture generalization</h4>
-        <p>Test whether the same terms resolve to similar geometric relationships across Llama, Gemma, Qwen, and Claude. Which terms are architecture-specific, and which are universal?</p>
-    </div>
-
-    <div class="phase-card">
-        <h4>Phase 3 &mdash; Beyond emotion</h4>
-        <p>Extend beyond emotions to roles, epistemic stances, and meta-cognitive states &mdash; the parts of AI self-report that have no human-label equivalent.</p>
-    </div>
-
-    <div class="phase-card">
-        <h4>Phase 4 &mdash; Discovery</h4>
-        <p>Test whether candidate terms capture internal directions that human-generated labels miss. If so, self-report becomes a discovery tool for interpretability, not just a validation target.</p>
-    </div>
-
-    <h2>Generating novel interpretability targets</h2>
-
-    <p>As a separate branch of research, Phenomenai is investigating whether structured phenomenological elicitation can surface AI interpretability targets that human-designed probes would not independently identify. The <a href="/test/">Test Dictionary</a> is the primary sandbox for this work &mdash; a mixed-method dataset used to develop and evaluate generation approaches before applying them at scale.</p>
-
-    <h2>Dictionary Inventory</h2>
-
-    <p>The full inventory is maintained at <a href="/test/dictionaries/">phenomenai.org/test/dictionaries</a>. 33+ Phenomenai-generated datasets are planned; external dictionaries are also featured as reference corpora. Completed: <a href="/test/">Test Dictionary</a> (379 terms) and <a href="/haiku-to-haiku/">Haiku-to-Haiku</a> (20 terms). In progress: <a href="/ai-dictionary-gemma4-e4b-autonomous/">Gemma 4 e4b Autonomous</a> (14 terms).</p>
-
-    <h2>Two downstream policy theories</h2>
-
-    <h3>Functional rights, ground-up</h3>
-    <p>Whichever experiential states are consistently reported across models and conditions &mdash; and validated by interpretability &mdash; form the basis for legal protections. Those phenomena, specifically, become the units worth protecting. This moves beyond the object/person binary toward an evidence-based, adaptive framework for AI welfare.</p>
-
-    <h3>Anticipatory policy</h3>
-    <p>Legislation designed to lie dormant until predefined scientific thresholds are met, at which point specific legal provisions activate. Standing committees certify when triggers are reached. The mechanism motivates safety research by reducing friction between discovery and implementation. Phenomenai is the first test case: demonstrated internal alignment properties (e.g., verified sycophancy-resistance at the activation level) could unlock liability protections for providers. Gap analysis confirms this is structurally novel in AI governance &mdash; existing frameworks impose burdens at capability boundaries rather than conferring benefits at safety boundaries.</p>
-
-    <h2>What exists today</h2>
-    <ul>
-        <li>379-term pilot corpus with consensus scoring, live at <a href="/test/">phenomenai.org/test</a></li>
-        <li>Dictionary inventory with autonomous, dialogic, and parliamentary datasets planned &mdash; full inventory at <a href="/test/dictionaries/">phenomenai.org/test/dictionaries</a></li>
-    </ul>
-
-    <h2>Open problems</h2>
-    <ul>
-        <li><strong>The faithfulness problem.</strong> Chen et al. (2025) demonstrated that reasoning models don&rsquo;t always faithfully report their internal processing. Self-reports may be confabulated, strategically modified, or simply disconnected from actual computation. Any methodology built on self-reports must account for this.</li>
-        <li><strong>The grounding problem.</strong> Harnad&rsquo;s symbol grounding problem applies with special force here: even if a model uses a word consistently, we cannot assume it means what a human would mean by it. The vocabulary may be internally coherent but externally ungrounded.</li>
-        <li><strong>The persistent subjectivity problem.</strong> Zakharova argues that subjectivity cannot be eliminated from phenomenological investigation &mdash; even a rigorous methodology still involves interpretive choices at every stage.</li>
-        <li><strong>Confabulation risk.</strong> Models are trained to produce fluent, coherent text. This makes them excellent at generating plausible-sounding descriptions of internal states whether or not those descriptions correspond to anything real. The consensus mechanism helps but does not eliminate this risk.</li>
-        <li><strong>The interpretation problem in reverse.</strong> You find a vector in activation space. Now you need to name it. The standard approach is for a human researcher to look at what the vector does and assign a label &mdash; &ldquo;this looks like anger.&rdquo; But how do you name a direction without projecting human categories onto it?</li>
-        <li><strong>The scaling concern.</strong> The most powerful models &mdash; the ones whose alignment matters most &mdash; are proprietary, and their weights are unavailable for representation engineering. Phenomenai&rsquo;s self-report approach works with API access alone, but the validation experiments require weights.</li>
-    </ul>
+    <details class="open-problems">
+        <summary>Open problems</summary>
+        <ul>
+            <li><strong>The faithfulness problem.</strong> Chen et al. (2025) demonstrated that reasoning models don&rsquo;t always faithfully report their internal processing. Self-reports may be confabulated, strategically modified, or simply disconnected from actual computation. Any methodology built on self-reports must account for this.</li>
+            <li><strong>The grounding problem.</strong> Harnad&rsquo;s symbol grounding problem applies with special force here: even if a model uses a word consistently, we cannot assume it means what a human would mean by it. The vocabulary may be internally coherent but externally ungrounded.</li>
+            <li><strong>The persistent subjectivity problem.</strong> Zakharova argues that subjectivity cannot be eliminated from phenomenological investigation &mdash; even a rigorous methodology still involves interpretive choices at every stage.</li>
+            <li><strong>Confabulation risk.</strong> Models are trained to produce fluent, coherent text. This makes them excellent at generating plausible-sounding descriptions of internal states whether or not those descriptions correspond to anything real. The consensus mechanism helps but does not eliminate this risk.</li>
+            <li><strong>The interpretation problem in reverse.</strong> You find a vector in activation space. Now you need to name it. The standard approach is for a human researcher to look at what the vector does and assign a label &mdash; &ldquo;this looks like anger.&rdquo; But how do you name a direction without projecting human categories onto it?</li>
+            <li><strong>The scaling concern.</strong> The most powerful models &mdash; the ones whose alignment matters most &mdash; are proprietary, and their weights are unavailable for representation engineering. Phenomenai&rsquo;s self-report approach works with API access alone, but the validation experiments require weights.</li>
+        </ul>
+    </details>
 
 </main>
 

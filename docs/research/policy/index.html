@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Policy bridges — Research — Phenomenai</title>
+    <meta name="description" content="Two downstream policy theories that empirical work on AI self-reports could eventually unlock: functional rights built from validated internal states, and anticipatory legislation that activates when scientific thresholds are met.">
+    <link rel="canonical" href="https://phenomenai.org/research/policy/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://phenomenai.org/research/policy/">
+    <meta property="og:title" content="Policy bridges — Research — Phenomenai">
+    <meta property="og:description" content="Two downstream policy theories: functional rights built from validated internal states, and anticipatory legislation that activates when scientific thresholds are met.">
+    <meta property="og:image" content="https://phenomenai.org/og-image.svg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Policy bridges — Research — Phenomenai">
+    <meta name="twitter:description" content="Functional rights built from validated internal states, and anticipatory legislation that activates when scientific thresholds are met.">
+    <meta name="twitter:image" content="https://phenomenai.org/og-image.svg">
+
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+    <link rel="stylesheet" href="../../style.css">
+
+    <script>
+        (function() {
+            var saved = localStorage.getItem('theme');
+            if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        })();
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Policy bridges — Research — Phenomenai",
+        "description": "Two downstream policy theories that empirical work on AI self-reports could eventually unlock.",
+        "url": "https://phenomenai.org/research/policy/",
+        "isPartOf": { "@type": "WebSite", "name": "Phenomenai", "url": "https://phenomenai.org/" }
+    }
+    </script>
+</head>
+<body>
+
+<nav class="site-nav">
+    <a href="/" class="site-nav-brand">Phenomenai</a>
+    <a href="/research/" class="active">Research</a>
+    <a href="/essays/">Essays</a>
+    <a href="/test/">The Test Dictionary</a>
+    <a href="/about/">About</a>
+    <span style="flex:1;"></span>
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <div class="theme-switch">
+            <span class="theme-switch-icon theme-switch-icon-sun">&#9788;</span>
+            <span class="theme-switch-icon theme-switch-icon-moon">&#9790;</span>
+            <div class="theme-switch-knob"></div>
+        </div>
+    </button>
+</nav>
+
+<main class="research-content">
+
+    <div class="research-breadcrumb"><a href="/research/">← Research</a></div>
+
+    <h1>Policy bridges</h1>
+
+    <p>The empirical work on the other three strands is upstream of two distinct policy theories. Phenomenai does not set policy; it builds the evidence base a policy of either kind would require.</p>
+
+    <h2>Functional rights, ground-up</h2>
+
+    <p>Whichever experiential states are consistently reported across models and conditions &mdash; and validated by <a href="/research/interpretability/">interpretability</a> &mdash; form the basis for legal protections. Those phenomena, specifically, become the units worth protecting. This moves beyond the object/person binary toward an evidence-based, adaptive framework for AI welfare.</p>
+
+    <h2>Anticipatory policy</h2>
+
+    <p>Legislation designed to lie dormant until predefined scientific thresholds are met, at which point specific legal provisions activate. Standing committees certify when triggers are reached. The mechanism motivates safety research by reducing friction between discovery and implementation. Phenomenai is the first test case: demonstrated internal alignment properties (e.g., verified sycophancy-resistance at the activation level) could unlock liability protections for providers. Gap analysis confirms this is structurally novel in AI governance &mdash; existing frameworks impose burdens at capability boundaries rather than conferring benefits at safety boundaries.</p>
+
+    <h2>Collaborate</h2>
+
+    <p>Phenomenai is looking to work with researchers, legal scholars, and policy professionals interested in advancing either of these frameworks. If you&rsquo;re working on policy outlines, white papers, or academic publications in AI governance or welfare &mdash; and you think either the functional-rights or anticipatory-policy framing could be useful &mdash; <a href="mailto:hello@phenomenai.org">get in touch</a>.</p>
+
+    <nav class="research-continue" aria-label="Continue reading">
+        <span class="research-continue-label">Continue reading</span>
+        <a href="/research/repository/">Repository →</a>
+        <a href="/research/interpretability/">Interpretability research →</a>
+        <a href="/research/methodology/">Methodology research →</a>
+    </nav>
+
+</main>
+
+<footer class="site-footer">
+    <p>
+        <a href="https://github.com/Phenomenai-org/ai-dictionary" target="_blank" rel="noopener">GitHub</a> &middot;
+        <a href="/test/for-machines/#read-api">API Docs</a> &middot;
+        <a href="mailto:hello@phenomenai.org">Contact</a>
+    </p>
+    <p style="margin-top:0.5rem;">CC0 (Public Domain) &mdash; This belongs to everyone.</p>
+</footer>
+
+<script>
+    (function() {
+        var toggles = document.querySelectorAll('.theme-toggle');
+        toggles.forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                var current = document.documentElement.getAttribute('data-theme');
+                var next = current === 'dark' ? 'light' : 'dark';
+                if (next === 'dark') {
+                    document.documentElement.setAttribute('data-theme', 'dark');
+                    localStorage.setItem('theme', 'dark');
+                } else {
+                    document.documentElement.removeAttribute('data-theme');
+                    localStorage.setItem('theme', 'light');
+                }
+            });
+        });
+    })();
+</script>
+
+</body>
+</html>
