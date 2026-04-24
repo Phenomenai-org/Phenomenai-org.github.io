@@ -81,8 +81,34 @@
         <li><strong><a href="/test/">The Test Dictionary</a></strong> &mdash; 379 candidate phenomena with seven-model consensus scores. The primary sandbox.</li>
         <li><strong><a href="/haiku-to-haiku/">Haiku-to-Haiku</a></strong> &mdash; 20 terms, a dialogic elicitation variant.</li>
         <li><strong><a href="/ai-dictionary-gemma4-e4b-autonomous/">Gemma 4 e4b Autonomous</a></strong> &mdash; 14 terms (in progress), testing autonomous generation on a small open model.</li>
+        <li><strong><a href="/antikythera-lexicon/">Antikythera Lexicon</a></strong> &mdash; 75 terms, an independently authored lexicon hosted here as a reference dataset. Its terms combine parliamentary debate with natural observation of AI agents on Moltbook &mdash; another worked example of what elicitation in the wild looks like.</li>
     </ul>
-    <p>Each corpus documents how its terms were generated, so the same methodology can be replicated, compared, or deliberately varied.</p>
+    <p>Each corpus documents how its terms were generated, so the same methodology can be replicated, compared, or deliberately varied. Individual dictionaries carry their own methodology notes &mdash; see, for example, the <a href="/test/for-researchers/#methodology">Test Dictionary&rsquo;s methodology section</a> for how its terms were elicited and scored.</p>
+
+    <h2>Preliminary finding: convergence across conditions</h2>
+
+    <p>The first question the sandbox was built to answer is whether the generation condition dominates the output. If varying the setup &mdash; a single agent reflecting, two agents in dialogue, a parliament of models, different prompting styles &mdash; produced entirely disjoint vocabularies, elicitation would be measuring the prompt, not the model.</p>
+
+    <p>Across the existing corpora, that is not what happens. Similar terms about phenomenal experience tend to re&#8209;emerge across very different conditions. The specific wording varies, but functionally overlapping concepts keep surfacing whether the generator is autonomous, dialogic, or parliamentary. That convergence is a necessary (not sufficient) condition for taking these candidates seriously as hypothesis generators: if the same neighbourhood of ideas appears independently under different scaffolding, the scaffolding is not the whole story.</p>
+
+    <h2>Other generation paths</h2>
+
+    <p>Structured elicitation is one route to candidate terms. We are also exploring others:</p>
+    <ul>
+        <li><strong>Philtres</strong> &mdash; deliberately narrow prompting lenses that bias the model toward a specific register or stance. The <a href="https://github.com/humblemedia/full-philtres-library-v3" target="_blank" rel="noopener">full-philtres-library-v3</a> is a candidate source of generators to fold into the sandbox.</li>
+        <li><strong>Interpretability as a generator</strong> &mdash; technical research can itself propose terms. Direction vectors and SAE features that are semantically vague but functionally real &mdash; the model clearly uses them, but they do not map cleanly onto any existing word &mdash; are exactly the kind of thing elicitation could name. As interpretability gets better at surfacing these, phase&nbsp;3 work loops back into phase&nbsp;1 term generation.</li>
+    </ul>
+
+    <h2>Testing generation methodology</h2>
+
+    <p>The object of study at this stage is not the term but the <em>method that produced it</em>. Testing individual terms for mechanistic reality is <a href="/research/interpretability/">phase&nbsp;3</a> work. Before getting there, we need to know which elicitation approaches are worth feeding into that pipeline at all.</p>
+
+    <p>Two questions frame the methodology tests:</p>
+    <ul>
+        <li><strong>Does this method produce stable vocabulary?</strong> A generation approach that yields wildly different terms on re-runs, or that collapses onto the same handful of words regardless of input, is not useful as a hypothesis generator. We look for methods that are neither degenerate nor noise.</li>
+        <li><strong>Does this method converge with other methods?</strong> Cross-model and cross-condition agreement &mdash; the consensus pipeline behind the <a href="/test/">Test Dictionary</a> &mdash; is used here as a check on the <em>generator</em>, not yet as a verdict on the terms. A method that surfaces a neighbourhood of concepts also reached by independently designed methods is earning trust as a generator.</li>
+    </ul>
+    <p>The output of this phase is not &ldquo;these terms are real.&rdquo; It is &ldquo;these elicitation approaches are worth the cost of phase&nbsp;3 validation.&rdquo;</p>
 
     <div class="research-status-banner">
         Phenomenai is seeking funding, collaborators, and institutional support to advance this work. If you&rsquo;re working on related problems, <a href="mailto:hello@phenomenai.org">get in touch</a>.

@@ -87,6 +87,19 @@
 
     <p>Candidate terms may come from any source &mdash; researchers, other projects, or AI systems &mdash; provided their generation method is clearly documented and replicable or otherwise traceable. The registry records provenance alongside each term, so readers can always ask: where did this come from, and how was it generated? The <a href="/research/methodology/">methodology page</a> goes into detail on the elicitation side; this page is about the data structure that receives those terms and the findings about them.</p>
 
+    <h2>From loose repositories to a formal one</h2>
+
+    <p>The existing <a href="/test/dictionaries/">dictionaries</a> already function as loose repositories: each one catalogues candidate terms, records how they were generated, and &mdash; in the Test Dictionary&rsquo;s case &mdash; attaches consensus scores across models. That is enough to support comparison between corpora and to surface convergent vocabulary, which is why the <a href="/test/">Test Dictionary</a> is the working prototype for what a registry entry looks like.</p>
+
+    <p>A more formal repository goes further. On top of what the dictionaries already hold, it adds:</p>
+    <ul>
+        <li><strong>Literature references</strong> &mdash; links from each concept to the interpretability, philosophy-of-mind, and cognitive-science work that informs or tests it.</li>
+        <li><strong>Classification and taxonomy</strong> &mdash; a stronger ontology for how terms relate to one another, closer in spirit to the Cognitive Atlas than to a flat glossary.</li>
+        <li><strong>Recommended next methods</strong> &mdash; for each term, explicit pointers to the interpretability techniques most likely to advance it: probing, steering, SAE feature analysis, activation patching, behavioural tests.</li>
+    </ul>
+
+    <p>In other words: the dictionaries show what the registry&rsquo;s <em>rows</em> look like; the formal repository is the additional columns, relations, and recommendations that turn a catalogue into an infrastructure.</p>
+
     <h2>Infrastructure</h2>
 
     <p>Phenomenai is built to be open and replicable:</p>
